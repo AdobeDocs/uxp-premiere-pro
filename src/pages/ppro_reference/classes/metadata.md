@@ -130,7 +130,6 @@ ___
 
 Get project panel metadata
 
-
 ___
 
 ### setProjectPanelMetadata

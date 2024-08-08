@@ -36,7 +36,6 @@ keywords:
 
 Gets temporal interpolation mode of a keyframe
 
-
 ___
 
 ### setTemporalInterpolationMode

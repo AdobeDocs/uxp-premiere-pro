@@ -29,7 +29,6 @@ keywords:
 
 Get all the graphics white luminance as array of values
 
-
 ___
 
 ### getGraphicsWhiteLuminance
@@ -39,6 +38,5 @@ ___
 *number*
 
 Get the graphics white luminance value
-
 
 ___

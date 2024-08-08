@@ -37,7 +37,6 @@ keywords:
 
 Get the active sequence of the project
 
-
 ___
 
 ### setActiveSequence
@@ -99,7 +98,6 @@ ___
 
 Get project color settings object
 
-
 ___
 
 ### deleteSequence
@@ -126,7 +124,6 @@ ___
 
 Get current insertion bin
 
-
 ___
 
 ### openSequence
@@ -152,7 +149,6 @@ ___
 *boolean*
 
 
-
 #### Parameters
 
 | Name | Type | Description |
@@ -167,7 +163,6 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
 
 
 #### Parameters
@@ -185,7 +180,6 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
 
 
 #### Parameters
@@ -273,7 +267,6 @@ ___
 
 Save the project
 
-
 ___
 
 ### saveAs
@@ -316,7 +309,6 @@ ___
 
 Currently active project.
 
-
 ___
 
 ### getProject
@@ -343,7 +335,6 @@ ___
 
 Get an array of all sequences in this project.
 
-
 ___
 
 ### getRootItem
@@ -353,7 +344,6 @@ ___
 *ProjectItem*
 
 The root item of the project which contains all items of the project on the lowest level.
-
 
 ___
 

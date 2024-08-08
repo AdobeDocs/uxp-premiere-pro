@@ -36,7 +36,6 @@ keywords:
 
 Get video time display format of this sequence
 
-
 ___
 
 ### getSequenceAudioTimeDisplayFormat
@@ -47,7 +46,6 @@ ___
 
 Get audio time display format of this sequence
 
-
 ___
 
 ### getPlayerPosition
@@ -57,7 +55,6 @@ ___
 *TickTime*
 
 Get the player's current position
-
 
 ___
 
@@ -85,7 +82,6 @@ ___
 
 Clears TrackItem Selection
 
-
 ___
 
 ### setSelection
@@ -112,7 +108,6 @@ ___
 
 Get video track count from this sequence
 
-
 ___
 
 ### getAudioTrackCount
@@ -123,7 +118,6 @@ ___
 
 Get audio track count from this sequence
 
-
 ___
 
 ### getCaptionTrackCount
@@ -133,7 +127,6 @@ ___
 *number*
 
 Get caption track count from this sequence
-
 
 ___
 
@@ -193,7 +186,6 @@ ___
 
 Get sequence settings object
 
-
 ___
 
 ### setSettings
@@ -219,7 +211,6 @@ ___
 *Action*
 
 Creates an action to clone the given sequence
-
 
 ___
 
@@ -247,7 +238,6 @@ ___
 
 Returns whether or not the sequence is done analyzing for video effects
 
-
 ___
 
 ### getZeroPoint
@@ -257,7 +247,6 @@ ___
 *TickTime*
 
 Time representing the zero point of the sequence.
-
 
 ___
 
@@ -269,7 +258,6 @@ ___
 
 Time representing the end of the sequence
 
-
 ___
 
 ### getInPoint
@@ -280,7 +268,6 @@ ___
 
 Get time representing the inPoint of sequence.
 
-
 ___
 
 ### getOutPoint
@@ -290,7 +277,6 @@ ___
 *TickTime*
 
 Get time representing the inPoint of sequence.
-
 
 ___
 
@@ -318,7 +304,6 @@ ___
 
 Get the associated projectItem of the sequence.
 
-
 ___
 
 ### getSelection
@@ -328,7 +313,6 @@ ___
 *TrackItemSelection*
 
 Returns the current selection group of the sequence.
-
 
 ___
 
@@ -340,7 +324,6 @@ ___
 
 Gets the size of the frame
 
-
 ___
 
 ### getTimebase
@@ -350,6 +333,5 @@ ___
 *string*
 
 Gets the time base of sequence
-
 
 ___

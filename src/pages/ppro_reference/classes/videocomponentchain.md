@@ -94,5 +94,4 @@ ___
 
 Gets the number of components in the component chain
 
-
 ___

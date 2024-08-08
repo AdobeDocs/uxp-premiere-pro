@@ -29,7 +29,6 @@ keywords:
 
 Get comments of the marker.
 
-
 ___
 
 ### getDuration
@@ -39,7 +38,6 @@ ___
 *object*
 
 Get duration time of the marker.
-
 
 ___
 
@@ -51,7 +49,6 @@ ___
 
 Get name of the marker.
 
-
 ___
 
 ### getUrl
@@ -61,7 +58,6 @@ ___
 *string*
 
 Get url of the marker.
-
 
 ___
 
@@ -73,7 +69,6 @@ ___
 
 Get target of the marker. Used together with url for web targets.
 
-
 ___
 
 ### getType
@@ -84,7 +79,6 @@ ___
 
 Get type of the marker. e.g. Cue / Track / Subclip / Cart
 
-
 ___
 
 ### getStart
@@ -94,7 +88,6 @@ ___
 *object*
 
 Get start time of the marker.
-
 
 ___
 

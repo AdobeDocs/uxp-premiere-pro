@@ -93,7 +93,6 @@ ___
 
 Create an action to set a named value through scripting. The parameters are <name, value (number, boolean or string), persistence flag>. This method can fail if e.g. the underlying properties object does not support action based setting of properties.
 
-
 ___
 
 ### hasValue

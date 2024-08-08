@@ -45,5 +45,4 @@ ___
 
 Return a promise which will be fullfilled with an array of video transition matchnames
 
-
 ___

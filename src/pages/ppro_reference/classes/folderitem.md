@@ -103,7 +103,6 @@ ___
 
 Get the root item of the project which contains all items of the project on the lowest level
 
-
 ___
 
 ### getProject
@@ -114,7 +113,6 @@ ___
 
 Get the root item of the project which contains all items of the project on the lowest level.
 
-
 ___
 
 ### getItems
@@ -124,7 +122,6 @@ ___
 *Array*
 
 Collection of child items of this folder.
-
 
 ___
 

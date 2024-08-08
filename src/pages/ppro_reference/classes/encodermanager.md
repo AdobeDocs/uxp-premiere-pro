@@ -55,7 +55,6 @@ ___
 
 Get the Encoder Manager object.
 
-
 ___
 
 ### subscribeToEvent

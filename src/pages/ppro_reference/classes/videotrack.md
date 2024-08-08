@@ -68,7 +68,6 @@ ___
 
 UUID representing the underlying media type of this track
 
-
 ___
 
 ### getIndex
@@ -79,7 +78,6 @@ ___
 
 Index representing the track index of this track within the track group.
 
-
 ___
 
 ### isMuted
@@ -89,7 +87,6 @@ ___
 *boolean*
 
 Get mute state of the track
-
 
 ___
 

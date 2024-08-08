@@ -29,7 +29,6 @@ keywords:
 
 Returns the value of internal matchname for this trackItem
 
-
 ___
 
 ### getSpeed
@@ -39,7 +38,6 @@ ___
 *number*
 
 Returns the value of speed of the trackItem
-
 
 ___
 
@@ -51,7 +49,6 @@ ___
 
 Returns true if the trackitem is an adjustment layer
 
-
 ___
 
 ### isSpeedReversed
@@ -61,7 +58,6 @@ ___
 *number*
 
 Returns true if the trackitem is reversed
-
 
 ___
 
@@ -89,7 +85,6 @@ ___
 
 Get timecode representing the inPoint of sequence.
 
-
 ___
 
 ### getOutPoint
@@ -99,7 +94,6 @@ ___
 *TickTime*
 
 Get timecode representing the inPoint of sequence.
-
 
 ___
 
@@ -143,7 +137,6 @@ ___
 
 Timecode representing the start of this track item relative to the sequence start.
 
-
 ___
 
 ### getEndTime
@@ -153,7 +146,6 @@ ___
 *TickTime*
 
 Timecode representing the end of this track item relative to the sequence start.
-
 
 ___
 
@@ -165,7 +157,6 @@ ___
 
 Timecode representing the duration of this track item relative to the sequence start.
 
-
 ___
 
 ### getType
@@ -176,7 +167,6 @@ ___
 
 Index representing the type of this track item.
 
-
 ___
 
 ### isMuted
@@ -186,7 +176,6 @@ ___
 *boolean*
 
 Returns true if rackitem is muted/disabled
-
 
 ___
 
@@ -214,7 +203,6 @@ ___
 
 UUID representing the underlying media type of this track item
 
-
 ___
 
 ### getTrackIndex
@@ -224,7 +212,6 @@ ___
 *number*
 
 Index representing the track index of the track this track item belongs to
-
 
 ___
 
@@ -236,7 +223,6 @@ ___
 
 The project item for this track item.
 
-
 ___
 
 ### getComponentChain
@@ -244,8 +230,6 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *any*
-
-
 
 
 ___
