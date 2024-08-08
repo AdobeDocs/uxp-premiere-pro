@@ -26,7 +26,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Execute a transaction against the Backend. The compound action to be executed against the backend should be populated by the callback parameter.
 
 #### Parameters
@@ -44,7 +44,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Execute a transaction against the Backend. The compound action to be executed against the backend should be populated by the callback parameter.
 
 #### Parameters

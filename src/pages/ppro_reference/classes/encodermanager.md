@@ -32,7 +32,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Export a sequence. If no output file and preset is specified, the sequence will be exported with the applied export settings or standard export rules will be applied.
 
 #### Parameters
@@ -52,7 +52,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *EncoderManager*
-
+  
 Get the Encoder Manager object.
 
 ___
@@ -62,7 +62,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Propagates the given event on this object.
 
 #### Parameters

@@ -33,7 +33,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Propagates the given event on this object.
 
 #### Parameters
@@ -49,7 +49,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 sets the mute state of the track to muted/unmuted
 
 #### Parameters
@@ -65,7 +65,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Guid*
-
+  
 UUID representing the underlying media type of this track
 
 ___
@@ -75,7 +75,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *number*
-
+  
 Index representing the track index of this track within the track group.
 
 ___
@@ -85,7 +85,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Get mute state of the track
 
 ___
@@ -95,7 +95,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *any*
-
+  
 Returns array of VideoClipTrackItem from the track item type
 
 #### Parameters

@@ -26,7 +26,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get project metadata
 
 #### Parameters
@@ -42,7 +42,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get project XMP metadata
 
 #### Parameters
@@ -58,7 +58,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Get set project metadata action
 
 #### Parameters
@@ -76,7 +76,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Get set project XMP metadata action
 
 #### Parameters
@@ -93,7 +93,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Add name and label property to project metadata schema
 
 #### Parameters
@@ -111,7 +111,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get project column metadata from project item
 
 #### Parameters
@@ -127,7 +127,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get project panel metadata
 
 ___
@@ -137,7 +137,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Set project panel metadata
 
 #### Parameters

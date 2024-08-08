@@ -26,7 +26,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Exports from a sequence. Supported formats are bmp, dpx, gif, jpg, exr, png, tga and tif
 
 #### Parameters

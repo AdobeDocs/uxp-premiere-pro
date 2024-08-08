@@ -35,7 +35,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *CloseProjectOptions*
-
+  
 Set whether to prompt if a project is dirty on project open/close
 
 #### Parameters
@@ -51,7 +51,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *CloseProjectOptions*
-
+  
 Set whether to show the cancel button on project open/close
 
 #### Parameters
@@ -67,7 +67,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *CloseProjectOptions*
-
+  
 Set whether the app should be prepared to quit when open/closing a project
 
 #### Parameters
@@ -83,7 +83,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *CloseProjectOptions*
-
+  
 Set whether to save your workspaces when opening/closing a project
 
 #### Parameters

@@ -35,7 +35,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *AddTransitionOptions*
-
+  
 Set whether to apply transition to the start or end of trackitem
 
 #### Parameters
@@ -51,7 +51,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *AddTransitionOptions*
-
+  
 Set whether transition should be applied one/both sides
 
 #### Parameters
@@ -67,7 +67,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *AddTransitionOptions*
-
+  
 Sets the transitionAlignment of transition
 
 #### Parameters
@@ -83,7 +83,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *AddTransitionOptions*
-
+  
 Sets the duration of transition
 
 #### Parameters

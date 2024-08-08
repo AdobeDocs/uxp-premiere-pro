@@ -26,7 +26,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Array*
-
+  
 Get all markers
 
 #### Parameters
@@ -42,7 +42,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Remove the given marker
 
 #### Parameters
@@ -58,7 +58,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Move the given marker at new time value
 
 #### Parameters
@@ -75,7 +75,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Add a new marker
 
 #### Parameters
@@ -95,7 +95,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Markers*
-
+  
 Returns the Markers object for Sequence Or ProjectItem
 
 #### Parameters

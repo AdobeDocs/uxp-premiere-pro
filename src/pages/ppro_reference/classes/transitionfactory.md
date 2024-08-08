@@ -26,7 +26,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *VideoTransition*
-
+  
 Creates a new video filter component based on the input matchName
 
 #### Parameters
@@ -42,7 +42,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Array*
-
+  
 Return a promise which will be fullfilled with an array of video transition matchnames
 
 ___

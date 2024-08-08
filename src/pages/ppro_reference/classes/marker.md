@@ -26,7 +26,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get comments of the marker.
 
 ___
@@ -36,7 +36,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Get duration time of the marker.
 
 ___
@@ -46,7 +46,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get name of the marker.
 
 ___
@@ -56,7 +56,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get url of the marker.
 
 ___
@@ -66,7 +66,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get target of the marker. Used together with url for web targets.
 
 ___
@@ -76,7 +76,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get type of the marker. e.g. Cue / Track / Subclip / Cart
 
 ___
@@ -86,7 +86,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Get start time of the marker.
 
 ___
@@ -96,7 +96,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Return an action to set the name of the marker.
 
 #### Parameters
@@ -112,7 +112,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Return an action to set the duration of the marker.
 
 #### Parameters
@@ -128,7 +128,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Return an action to set the type of the marker.
 
 #### Parameters
@@ -144,7 +144,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Return an action to set the comments of the marker.
 
 #### Parameters

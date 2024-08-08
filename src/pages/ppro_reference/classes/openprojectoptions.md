@@ -35,7 +35,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *OpenProjectOptions*
-
+  
 Set whether to show the convert project dialog on project open/close
 
 #### Parameters
@@ -51,7 +51,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *OpenProjectOptions*
-
+  
 Set whether to show the locate file dialog on project open/close
 
 #### Parameters
@@ -67,7 +67,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *OpenProjectOptions*
-
+  
 Set whether to show the warning file dialog on project open/close
 
 #### Parameters
@@ -83,7 +83,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *OpenProjectOptions*
-
+  
 Set whether to add to MRU list after project changes
 
 #### Parameters

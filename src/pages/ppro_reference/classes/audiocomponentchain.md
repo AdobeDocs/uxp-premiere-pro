@@ -26,7 +26,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Creates and returns an insert component action
 
 #### Parameters
@@ -43,7 +43,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Creates and returns an append component action
 
 #### Parameters
@@ -59,7 +59,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Creates and returns an remove component action
 
 #### Parameters
@@ -75,7 +75,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *VideoComponentChain*
-
+  
 Returns the component at the given index
 
 #### Parameters
@@ -91,7 +91,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *number*
-
+  
 Gets the number of components in the component chain
 
 ___

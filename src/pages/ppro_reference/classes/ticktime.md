@@ -34,7 +34,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TickTime*
-
+  
 Constructs a TickTime object with a frame and a frame rate.
 
 #### Parameters
@@ -51,7 +51,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TickTime*
-
+  
 Constructs a TickTime object with seconds.
 
 #### Parameters
@@ -67,7 +67,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TickTime*
-
+  
 Constructs a TickTime object with ticks as a string.
 
 #### Parameters
@@ -83,7 +83,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Returns true if the given TickTime is equal to the TickTime object
 
 #### Parameters

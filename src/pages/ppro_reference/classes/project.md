@@ -34,7 +34,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Sequence*
-
+  
 Get the active sequence of the project
 
 ___
@@ -44,7 +44,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Set the active sequence of the project
 
 #### Parameters
@@ -60,7 +60,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Sequence*
-
+  
 Create a new sequence with the default preset path - Parameter presetPath is deprecated, instead use createSequenceWithPresetPath()
 
 #### Parameters
@@ -77,7 +77,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Sequence*
-
+  
 Create a new sequence with a given name and medias
 
 #### Parameters
@@ -95,7 +95,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *ProjectColorSettings*
-
+  
 Get project color settings object
 
 ___
@@ -105,7 +105,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Delete a given sequence from the project
 
 #### Parameters
@@ -121,7 +121,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *ProjectItem*
-
+  
 Get current insertion bin
 
 ___
@@ -131,7 +131,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Open a sequence and return true if successful. Additionally, attempt to open the active sequence also return true.
 
 #### Parameters
@@ -148,7 +148,6 @@ ___
 
 *boolean*
 
-
 #### Parameters
 
 | Name | Type | Description |
@@ -163,7 +162,6 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
 
 #### Parameters
 
@@ -181,7 +179,6 @@ ___
 
 *boolean*
 
-
 #### Parameters
 
 | Name | Type | Description |
@@ -196,7 +193,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Project*
-
+  
 Create a new project
 
 #### Parameters
@@ -212,7 +209,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Import files in root/target bin of the project
 
 #### Parameters
@@ -231,7 +228,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Project*
-
+  
 Open a project
 
 #### Parameters
@@ -248,7 +245,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Close a project
 
 #### Parameters
@@ -264,7 +261,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Save the project
 
 ___
@@ -274,7 +271,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Save the project at the provided path
 
 #### Parameters
@@ -290,7 +287,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Sequence*
-
+  
 Get sequence by id from the project
 
 #### Parameters
@@ -306,7 +303,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Project*
-
+  
 Currently active project.
 
 ___
@@ -316,7 +313,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Project*
-
+  
 Get project referenced by given UID
 
 #### Parameters
@@ -332,7 +329,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Array*
-
+  
 Get an array of all sequences in this project.
 
 ___
@@ -342,7 +339,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *ProjectItem*
-
+  
 The root item of the project which contains all items of the project on the lowest level.
 
 ___
@@ -352,7 +349,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Pause growing of files instead swap the files
 
 #### Parameters
@@ -368,7 +365,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *any*
-
+  
 Execute undoable transaction by passing compound action
 
 #### Parameters
@@ -385,7 +382,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *any*
-
+  
 Get a read/upgrade locked access to Project, project state will not change during the execution of callback function. Can call executeTransaction while having locked access.
 
 #### Parameters

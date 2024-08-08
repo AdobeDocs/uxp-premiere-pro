@@ -33,7 +33,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TimeDisplay*
-
+  
 Get video time display format of this sequence
 
 ___
@@ -43,7 +43,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TimeDisplay*
-
+  
 Get audio time display format of this sequence
 
 ___
@@ -53,7 +53,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TickTime*
-
+  
 Get the player's current position
 
 ___
@@ -63,7 +63,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Set the player's current position
 
 #### Parameters
@@ -79,7 +79,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Clears TrackItem Selection
 
 ___
@@ -89,7 +89,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Updates sequence selection using the given track item selection.
 
 #### Parameters
@@ -105,7 +105,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *number*
-
+  
 Get video track count from this sequence
 
 ___
@@ -115,7 +115,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *number*
-
+  
 Get audio track count from this sequence
 
 ___
@@ -125,7 +125,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *number*
-
+  
 Get caption track count from this sequence
 
 ___
@@ -135,7 +135,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *VideoTrack*
-
+  
 Get video track from track index
 
 #### Parameters
@@ -151,7 +151,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *AudioTrack*
-
+  
 Get audio track from track index
 
 #### Parameters
@@ -167,7 +167,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *CaptionTrack*
-
+  
 Get caption track from track index
 
 #### Parameters
@@ -183,7 +183,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *SequenceSettings*
-
+  
 Get sequence settings object
 
 ___
@@ -193,7 +193,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Set sequence settings
 
 #### Parameters
@@ -209,7 +209,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Creates an action to clone the given sequence
 
 ___
@@ -219,7 +219,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Sequence*
-
+  
 Returns a new sequence, which is a sub-sequence of the existing sequence
 
 #### Parameters
@@ -235,7 +235,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Returns whether or not the sequence is done analyzing for video effects
 
 ___
@@ -245,7 +245,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TickTime*
-
+  
 Time representing the zero point of the sequence.
 
 ___
@@ -255,7 +255,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TickTime*
-
+  
 Time representing the end of the sequence
 
 ___
@@ -265,7 +265,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TickTime*
-
+  
 Get time representing the inPoint of sequence.
 
 ___
@@ -275,7 +275,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TickTime*
-
+  
 Get time representing the inPoint of sequence.
 
 ___
@@ -285,7 +285,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Create an action to set an InPoint for the sequence
 
 #### Parameters
@@ -301,7 +301,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *ProjectItem*
-
+  
 Get the associated projectItem of the sequence.
 
 ___
@@ -311,7 +311,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TrackItemSelection*
-
+  
 Returns the current selection group of the sequence.
 
 ___
@@ -321,7 +321,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *RectF*
-
+  
 Gets the size of the frame
 
 ___
@@ -331,7 +331,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Gets the time base of sequence
 
 ___

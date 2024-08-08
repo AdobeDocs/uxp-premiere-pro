@@ -32,7 +32,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *ColorSpace*
-
+  
 Get color space object of the project item
 
 ___
@@ -42,7 +42,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Array*
-
+  
 Get the override color space list
 
 ___
@@ -52,7 +52,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get Guid of Input LUT overridden on media
 
 ___
@@ -62,7 +62,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Create action for setting Guid of Input LUT on media. This applies for Video Clips only.
 
 #### Parameters
@@ -78,7 +78,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Returns true if the project item is sequence
 
 ___
@@ -88,7 +88,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Returns true if Premiere Pro can change the path, associated with this project item; otherwise, returns false
 
 ___
@@ -98,7 +98,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Returns true if the media is offline
 
 ___
@@ -108,7 +108,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Indicates whether it is possible to attach a proxy, to this project item.
 
 ___
@@ -118,7 +118,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Returns the proxy path if the project item has a proxy attached
 
 ___
@@ -128,7 +128,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Indicates whether a proxy has already been attached, to the project item.
 
 ___
@@ -138,7 +138,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Array*
-
+  
 Returns array of projects items with media paths containing match string
 
 #### Parameters
@@ -155,7 +155,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Updates representation of the media associated with the project item
 
 ___
@@ -165,7 +165,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Returns an action which sets the media offline
 
 ___
@@ -175,7 +175,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *ProjectItem*
-
+  
 Get the root item of the project which contains all items of the project on the lowest level
 
 ___
@@ -185,7 +185,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Project*
-
+  
 Get the root item of the project which contains all items of the project on the lowest level.
 
 ___
@@ -195,7 +195,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Returns true if the clip Project item is a merged clip
 
 ___
@@ -205,7 +205,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Returns true if the clip Project item is a multicam clip
 
 ___
@@ -215,7 +215,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get GUID of LUT embedded in media
 
 ___
@@ -225,7 +225,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Returns an action which sets the scale to frame to true
 
 ___
@@ -235,7 +235,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *any*
-
+  
 Get content type of the Project item
 
 ___
@@ -245,7 +245,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Sequence*
-
+  
 Get the sequence of the Project item
 
 ___
@@ -255,7 +255,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TickTime*
-
+  
 Get the in point of the Project item
 
 #### Parameters
@@ -271,7 +271,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *TickTime*
-
+  
 Get the out point of the Project item
 
 #### Parameters
@@ -287,7 +287,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get the media file path of the Project item.
 
 ___
@@ -297,7 +297,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get the media file path of the Project item.
 
 #### Parameters
@@ -313,7 +313,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Returns an action which Sets the in point of the Project item
 
 #### Parameters
@@ -329,7 +329,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Returns an action which sets Override pixel aspect ratio
 
 #### Parameters
@@ -346,7 +346,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Returns an action which sets the override frame rate
 
 #### Parameters
@@ -362,7 +362,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Returns an action which Sets the in point of the Project item
 
 #### Parameters
@@ -378,7 +378,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Set the in or out point of the Project item
 
 #### Parameters
@@ -395,7 +395,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Clear the in or out point of the Project item
 
 ___

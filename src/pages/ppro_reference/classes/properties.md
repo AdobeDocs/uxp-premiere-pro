@@ -26,7 +26,7 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *number*
-
+  
 Get named value as integer number
 
 #### Parameters
@@ -42,7 +42,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *number*
-
+  
 Get named value as float number
 
 #### Parameters
@@ -58,7 +58,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Get named value as boolean
 
 #### Parameters
@@ -74,7 +74,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *string*
-
+  
 Get named value in native string form
 
 #### Parameters
@@ -90,7 +90,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Create an action to set a named value through scripting. The parameters are <name, value (number, boolean or string), persistence flag>. This method can fail if e.g. the underlying properties object does not support action based setting of properties.
 
 ___
@@ -100,7 +100,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Check if a named value exists under this name.
 
 #### Parameters
@@ -116,7 +116,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Clear the value with the given name
 
 #### Parameters
@@ -132,7 +132,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *object*
-
+  
 Create an action to clear the value with the given name. This method can fail if e.g. the underlying properties object does not support action based setting of properties.
 
 #### Parameters
@@ -148,7 +148,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Properties*
-
+  
 If property owner is not provided, it return application properties, else return the properties of the passed on object.
 
 #### Parameters
