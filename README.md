@@ -15,6 +15,20 @@ For local development, simply use :
 ```shell
 $ yarn install
 $ yarn dev
+$ yarn gatsby build
+```
+
+## Generate HTML output files for hosting
+
+```shell
+$ yarn gatsby build
+```
+
+## Install and host documentation
+
+```shell
+$ npm install -g http-server
+$ http-server -p 8001 #run from output directory (/PPRO-UXP/public)
 ```
 
 For the developer documentation, read the following sections on how to:
