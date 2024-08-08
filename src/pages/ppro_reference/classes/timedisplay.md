@@ -17,14 +17,11 @@ keywords:
   - Premiere Pro
 ---
 
-# TimeDisplay  ## Properties
+# TimeDisplay  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
 | type | *number* | W | 23.0 | Read/Write property to get/set the time display type numeric code |
-
-
-
-
-
 

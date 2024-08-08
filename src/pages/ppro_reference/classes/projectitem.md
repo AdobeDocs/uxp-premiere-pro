@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# ProjectItem  ## Properties
+# ProjectItem  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -46,7 +48,3 @@ Get the root item of the project which contains all items of the project on the 
 
 
 ___
-
-
-
-

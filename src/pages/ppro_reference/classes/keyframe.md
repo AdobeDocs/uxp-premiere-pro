@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# Keyframe  ## Properties
+# Keyframe  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -52,7 +54,3 @@ Sets temporal interpolation mode of a keyframe
 | temporalInterpolationMode | *number* | - |
 
 ___
-
-
-
-

@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# ClipProjectItem  ## Properties
+# ClipProjectItem  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -418,7 +420,3 @@ Clear the in or out point of the Project item
 
 
 ___
-
-
-
-

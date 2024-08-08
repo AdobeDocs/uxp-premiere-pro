@@ -161,7 +161,3 @@ Return an action to set the comments of the marker.
 | comments | *string* | - |
 
 ___
-
-
-
-

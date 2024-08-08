@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# FolderItem  ## Properties
+# FolderItem  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -191,7 +193,3 @@ Moves the given project item to the provided folder item and returns a promise
 | newParent | [*FolderItem*](/ppro_reference/classes/folderitem/) | - |
 
 ___
-
-
-
-

@@ -159,7 +159,3 @@ If property owner is not provided, it return application properties, else return
 | propertyOwnerObject | *any* | - |
 
 ___
-
-
-
-

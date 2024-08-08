@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# CloseProjectOptions  ## Properties
+# CloseProjectOptions  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -91,7 +93,3 @@ Set whether to save your workspaces when opening/closing a project
 | isAppBeingPreparedToQuit | *boolean* | - |
 
 ___
-
-
-
-

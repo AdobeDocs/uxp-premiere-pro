@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# ProjectClosedEvent  ## Properties
+# ProjectClosedEvent  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -26,11 +28,7 @@ keywords:
 | id | *string* | R | 23.0 | The unique identifier of the project. |
 
 
-
-
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ |
-| EVENT_CLOSED | 23.0 | Event occurs when project was closed. |
-
+| :------ | :------ | :------ || EVENT_CLOSED | 23.0 | Event occurs when project was closed. |

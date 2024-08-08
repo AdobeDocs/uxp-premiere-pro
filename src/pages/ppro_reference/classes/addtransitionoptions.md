@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# AddTransitionOptions  ## Properties
+# AddTransitionOptions  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -91,7 +93,3 @@ Sets the duration of transition
 | tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
-
-
-
-

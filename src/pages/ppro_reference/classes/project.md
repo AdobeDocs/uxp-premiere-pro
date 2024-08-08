@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# Project  ## Properties
+# Project  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -403,7 +405,3 @@ Get a read/upgrade locked access to Project, project state will not change durin
 | callback | *any* | - |
 
 ___
-
-
-
-

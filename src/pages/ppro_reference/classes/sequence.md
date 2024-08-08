@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# Sequence  ## Properties
+# Sequence  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -351,7 +353,3 @@ Gets the time base of sequence
 
 
 ___
-
-
-
-

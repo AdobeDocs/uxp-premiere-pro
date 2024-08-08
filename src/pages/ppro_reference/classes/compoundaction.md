@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# CompoundAction  ## Properties
+# CompoundAction  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -40,7 +42,3 @@ Add an action to the compound action
 | action | [*Action*](/ppro_reference/classes/action/) | - |
 
 ___
-
-
-
-

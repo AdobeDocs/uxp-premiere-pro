@@ -138,7 +138,7 @@ export declare type ClipProjectItem = {
   createSetScaleToFrameSizeAction(): Action	//Returns an action which sets the scale to frame to true
   getContentType(): any	//Get content type of the Project item
   getSequence(): Sequence	//Get the sequence of the Project item
-  getInPoint(mediaType: typeof Constants.MediaType): TickTime	//Get the in point of the Project item
+  getInPoint(mediaType: object): TickTime	//Get the in point of the Project item
   getOutPoint(mediaType: object): TickTime	//Get the out point of the Project item
   getMediaFilePath(): string	//Get the media file path of the Project item.
   getComponentChain(mediaType: any): string	//Get the media file path of the Project item.
@@ -570,81 +570,65 @@ export declare type VideoTransitionStatic = {
 export declare type VideoTransition = {
 }
 
-//Enums are defined below
 
-declare enum MediaType {
-	ANY,
-	DATA,
-	VIDEO,
-	AUDIO
+export namespace Constants {
+	export enum MediaType {
+		ANY,
+		DATA,
+		VIDEO,
+		AUDIO
+	}
+
+	export enum ContentType {
+		ANY,
+		SEQUENCE,
+		MEDIA
+	}
+
+	export enum TransitionPosition {
+		START,
+		END
+	}
+
+	export enum TrackItemType {
+		EMPTY,
+		CLIP,
+		TRANSITION,
+		PREVIEW,
+		FEEDBACK
+	}
+
+	export enum ProjectEvent {
+		OPENED,
+		CLOSED,
+		DIRTY,
+		ACTIVATED
+	}
+
+	export enum InterpolationMode {
+		BEZIER,
+		HOLD,
+		LINEAR,
+		TIME,
+		TIME_TRANSITION_END,
+		TIME_TRANSITION_START
+	}
+
+	export enum SequenceOperation {
+		APPLYCUT,
+		CREATEMARKER,
+		CREATESUBCLIP
+	}
+
+	export enum PropertyType {
+		PERSISTENT,
+		NON_PERSISTENT
+	}
+
+	export enum SequenceEvent {
+		ACTIVATED,
+		CLOSED
+	}
 }
-
-declare enum ContentType {
-	ANY,
-	SEQUENCE,
-	MEDIA
-}
-
-declare enum TransitionPosition {
-	START,
-	END
-}
-
-declare enum TrackItemType {
-	EMPTY,
-	CLIP,
-	TRANSITION,
-	PREVIEW,
-	FEEDBACK
-}
-
-declare enum ProjectEventType {
-	OPENED,
-	CLOSED,
-	DIRTY,
-	ACTIVATED
-}
-
-declare enum InterpolationMode {
-	BEZIER,
-	HOLD,
-	LINEAR,
-	TIME,
-	TIME_TRANSITION_END,
-	TIME_TRANSITION_START
-}
-
-declare enum SequenceOperation {
-	APPLYCUT,
-	CREATEMARKER,
-	CREATESUBCLIP
-}
-
-declare enum PropertyType {
-	PERSISTENT,
-	NON_PERSISTENT
-}
-
-declare enum SequenceEvent {
-	ACTIVATED,
-	CLOSED
-}
-
-export interface Constants {
-	MediaType: typeof MediaType;
-	ContentType: typeof ContentType;
-	TransitionPosition: typeof TransitionPosition;
-	TrackItemType: typeof TrackItemType;
-	ProjectEvent: typeof ProjectEventType;
-	InterpolationMode: typeof InterpolationMode;
-	SequenceOperation: typeof SequenceOperation;
-	PropertyType: typeof PropertyType;
-	SequenceEvent: typeof SequenceEvent
-}
-
-export const Constants: Constants;
 
 export default premierepro
-
-const clip: ClipProjectItem = require("sd");
-clip.getInPoint(MediaType.ANY)

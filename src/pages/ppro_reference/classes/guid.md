@@ -36,7 +36,3 @@ Create a guid from a string
 | stringValue | *string* | - |
 
 ___
-
-
-
-

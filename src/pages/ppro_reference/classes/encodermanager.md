@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# EncoderManager  ## Properties
+# EncoderManager  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -72,10 +74,7 @@ Propagates the given event on this object.
 
 ___
 
-
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ |
-| EVENT_RENDER_COMPLETE | 23.0 | Broadcast when AME is finished rendering |
-
+| :------ | :------ | :------ || EVENT_RENDER_COMPLETE | 23.0 | Broadcast when AME is finished rendering |

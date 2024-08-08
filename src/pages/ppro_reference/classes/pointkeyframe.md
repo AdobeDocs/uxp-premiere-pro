@@ -17,15 +17,12 @@ keywords:
   - Premiere Pro
 ---
 
-# PointKeyframe  ## Properties
+# PointKeyframe  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
 | value | *object* | W | 23.0 | - |
 | position | *object* | W | 23.0 | Get/Set position of a keyframe |
-
-
-
-
-
 

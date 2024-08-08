@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# TickTime  ## Properties
+# TickTime  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -91,7 +93,3 @@ Returns true if the given TickTime is equal to the TickTime object
 | tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
-
-
-
-

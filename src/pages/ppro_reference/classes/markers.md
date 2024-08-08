@@ -105,7 +105,3 @@ Returns the Markers object for Sequence Or ProjectItem
 | markerOwnerObject | *any* | - |
 
 ___
-
-
-
-

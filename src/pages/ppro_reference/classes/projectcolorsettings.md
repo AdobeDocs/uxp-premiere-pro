@@ -42,7 +42,3 @@ Get the graphics white luminance value
 
 
 ___
-
-
-
-

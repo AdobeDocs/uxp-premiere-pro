@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# PointF  ## Properties
+# PointF  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -41,7 +43,3 @@ Get the distance from one point to another point
 | point | *object* | - |
 
 ___
-
-
-
-

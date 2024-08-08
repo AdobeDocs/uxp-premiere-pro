@@ -37,7 +37,3 @@ Performs cut detection on the sequence selection
 | TrackItemSelection | [*trackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
 
 ___
-
-
-
-

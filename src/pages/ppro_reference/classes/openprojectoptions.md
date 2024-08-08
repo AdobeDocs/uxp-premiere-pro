@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# OpenProjectOptions  ## Properties
+# OpenProjectOptions  
+
+## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -91,7 +93,3 @@ Set whether to add to MRU list after project changes
 | addToMRUList | *boolean* | - |
 
 ___
-
-
-
-
