@@ -17,9 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# AddTransitionOptions
-
-## Properties
+# AddTransitionOptions  ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -34,15 +32,15 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
+*AddTransitionOptions*
 
 Set whether to apply transition to the start or end of trackitem
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| ApplyToStart | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| applyToStart | *boolean* | - |
 
 ___
 
@@ -50,15 +48,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
+*AddTransitionOptions*
 
 Set whether transition should be applied one/both sides
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| ForceSingleSided | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| forceSingleSided | *boolean* | - |
 
 ___
 
@@ -66,15 +64,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
+*AddTransitionOptions*
 
 Sets the transitionAlignment of transition
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| undefined | *number* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| transitionAlignment | *number* | - |
 
 ___
 
@@ -82,14 +80,18 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
+*AddTransitionOptions*
 
 Sets the duration of transition
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| TickTime | *object* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
+
+
+
+

@@ -17,9 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# CaptionTrack
-
-## Properties
+# CaptionTrack  ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -37,9 +35,13 @@ This returns the track items of the specified media type from the given track
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| TrackItemType | *number* |
-| includeEmptyTrackItems | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| trackItemType | *number* | - |
+| includeEmptyTrackItems | *boolean* | - |
 
 ___
+
+
+
+

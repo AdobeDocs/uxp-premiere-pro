@@ -1,7 +1,7 @@
 ---
-id: "compoundaction"
-title: "CompoundAction"
-sidebar_label: "CompoundAction"
+id: "sequenceutils"
+title: "SequenceUtils"
+sidebar_label: "SequenceUtils"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,27 +17,24 @@ keywords:
   - Premiere Pro
 ---
 
-# CompoundAction  ## Properties
-
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| empty | *boolean* | R | 23.0 | Is the compound action empty? |
+# SequenceUtils  
 
 ## Methods
 
-### addAction
+### performSceneEditDetectionOnSelection
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
 
-Add an action to the compound action
+Performs cut detection on the sequence selection
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| action | [*Action*](/ppro_reference/classes/action/) | - |
+| clipOperation | *string* | - |
+| TrackItemSelection | [*trackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
 
 ___
 

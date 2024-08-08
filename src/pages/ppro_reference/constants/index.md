@@ -22,6 +22,7 @@ To use any constant, import the `constants` object from the premiere pro module 
 
 ## Enumerations
 
+
 ### MediaType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
@@ -84,3 +85,53 @@ ___
 | ACTIVATED | - |
 
 ___
+
+### InterpolationMode
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| BEZIER | - |
+| HOLD | - |
+| LINEAR | - |
+| TIME | - |
+| TIME_TRANSITION_END | - |
+| TIME_TRANSITION_START | - |
+
+___
+
+### SequenceOperation
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| APPLYCUT | - |
+| CREATEMARKER | - |
+| CREATESUBCLIP | - |
+
+___
+
+### PropertyType
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| PERSISTENT | - |
+| NON_PERSISTENT | - |
+
+___
+
+### SequenceEvent
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| ACTIVATED | - |
+| CLOSED | - |
+
+___
+

@@ -1,7 +1,7 @@
 ---
-id: "videocomponentchain"
-title: "VideoComponentChain"
-sidebar_label: "VideoComponentChain"
+id: "audiocomponentchain"
+title: "AudioComponentChain"
+sidebar_label: "AudioComponentChain"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,7 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# VideoComponentChain  
+# AudioComponentChain  
 
 ## Methods
 

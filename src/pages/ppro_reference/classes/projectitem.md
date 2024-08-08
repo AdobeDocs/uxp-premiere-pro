@@ -17,9 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# ProjectItem
-
-## Properties
+# ProjectItem  ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -31,9 +29,10 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
+*ProjectItem*
 
 Get the root item of the project which contains all items of the project on the lowest level
+
 
 ___
 
@@ -41,8 +40,13 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
+*Project*
 
 Get the root item of the project which contains all items of the project on the lowest level.
 
+
 ___
+
+
+
+

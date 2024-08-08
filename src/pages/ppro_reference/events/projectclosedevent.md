@@ -17,9 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# ProjectClosedEvent
-
-## Properties
+# ProjectClosedEvent  ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
@@ -27,8 +25,12 @@ keywords:
 | path | *string* | R | 23.0 | The absolute file path to the project file. |
 | id | *string* | R | 23.0 | The unique identifier of the project. |
 
+
+
+
 ## Events
 
 | Name | Version | Description |
 | :------ | :------ | :------ |
 | EVENT_CLOSED | 23.0 | Event occurs when project was closed. |
+

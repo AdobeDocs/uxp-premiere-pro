@@ -15,7 +15,6 @@ For local development, simply use :
 ```shell
 $ yarn install
 $ yarn dev
-$ yarn gatsby build
 ```
 
 ## Generate HTML output files for hosting

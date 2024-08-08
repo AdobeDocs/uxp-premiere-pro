@@ -1,7 +1,7 @@
 ---
-id: "videocliptrackitem"
-title: "VideoClipTrackItem"
-sidebar_label: "VideoClipTrackItem"
+id: "audiocliptrackitem"
+title: "AudioClipTrackItem"
+sidebar_label: "AudioClipTrackItem"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,42 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# VideoClipTrackItem  
+# AudioClipTrackItem  
 
 ## Methods
-
-### createAddVideoTransitionAction
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
-
-*Action*
-
-Create add transition action for sequence
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| videoTransition | [*VideoTransition*](/ppro_reference/classes/videotransition/) | - |
-| addTransitionOptionsProperties | [*AddTransitionOptions*](/ppro_reference/classes/addtransitionoptions/) | - |
-
-___
-
-### createRemoveVideoTransitionAction
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
-
-*Action*
-
-Returns true if trackItem has transition
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| transitionPosition | *number* | - |
-
-___
 
 ### getMatchName
 

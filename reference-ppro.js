@@ -12,6 +12,14 @@ module.exports = [{
           "path": "/ppro_reference/classes/application/"
         },
         {
+          "title": "AudioClipTrackItem",
+          "path": "/ppro_reference/classes/audiocliptrackitem/"
+        },
+        {
+          "title": "AudioComponentChain",
+          "path": "/ppro_reference/classes/audiocomponentchain/"
+        },
+        {
           "title": "AudioTrack",
           "path": "/ppro_reference/classes/audiotrack/"
         },
@@ -28,12 +36,16 @@ module.exports = [{
           "path": "/ppro_reference/classes/compoundaction/"
         },
         {
+          "title": "EncoderManager",
+          "path": "/ppro_reference/classes/encodermanager/"
+        },
+        {
           "title": "Executor",
           "path": "/ppro_reference/classes/executor/"
         },
         {
-          "title": "FilterFactory",
-          "path": "/ppro_reference/classes/filterfactory/"
+          "title": "Exporter",
+          "path": "/ppro_reference/classes/exporter/"
         },
         {
           "title": "FolderItem",
@@ -46,6 +58,18 @@ module.exports = [{
         {
           "title": "Keyframe",
           "path": "/ppro_reference/classes/keyframe/"
+        },
+        {
+          "title": "Marker",
+          "path": "/ppro_reference/classes/marker/"
+        },
+        {
+          "title": "Markers",
+          "path": "/ppro_reference/classes/markers/"
+        },
+        {
+          "title": "Metadata",
+          "path": "/ppro_reference/classes/metadata/"
         },
         {
           "title": "PointF",
@@ -71,20 +95,48 @@ module.exports = [{
           ]
         },
         {
+          "title": "ProjectColorSettings",
+          "path": "/ppro_reference/classes/projectcolorsettings/"
+        },
+        {
           "title": "ProjectItem",
           "path": "/ppro_reference/classes/projectitem/"
+        },
+        {
+          "title": "Properties",
+          "path": "/ppro_reference/classes/properties/"
+        },
+        {
+          "title": "RectF",
+          "path": "/ppro_reference/classes/rectf/"
         },
         {
           "title": "Sequence",
           "path": "/ppro_reference/classes/sequence/"
         },
         {
+          "title": "SequenceUtils",
+          "path": "/ppro_reference/classes/sequenceutils/"
+        },
+        {
           "title": "TickTime",
           "path": "/ppro_reference/classes/ticktime/"
         },
         {
+          "title": "TimeDisplay",
+          "path": "/ppro_reference/classes/timedisplay/"
+        },
+        {
+          "title": "TrackItemSelection",
+          "path": "/ppro_reference/classes/trackitemselection/"
+        },
+        {
           "title": "TransitionFactory",
           "path": "/ppro_reference/classes/transitionfactory/"
+        },
+        {
+          "title": "Utils",
+          "path": "/ppro_reference/classes/utils/"
         },
         {
           "title": "VideoClipTrackItem",
@@ -93,6 +145,10 @@ module.exports = [{
         {
           "title": "VideoComponentChain",
           "path": "/ppro_reference/classes/videocomponentchain/"
+        },
+        {
+          "title": "VideoFilterFactory",
+          "path": "/ppro_reference/classes/videofilterfactory/"
         },
         {
           "title": "VideoTrack",

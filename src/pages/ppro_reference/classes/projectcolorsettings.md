@@ -1,7 +1,7 @@
 ---
-id: "filterfactory"
-title: "FilterFactory"
-sidebar_label: "FilterFactory"
+id: "projectcolorsettings"
+title: "ProjectColorSettings"
+sidebar_label: "ProjectColorSettings"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,32 +17,32 @@ keywords:
   - Premiere Pro
 ---
 
-# FilterFactory
+# ProjectColorSettings  
 
 ## Methods
 
-### createVideoFilterComponent
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
-
-*VideoFilterComponent*
-
-Creates a new video filter component based on the input matchName
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| matchName | *string* |
-
-___
-
-### getVideoFilterComponentMatchNames
+### getSupportedGraphicsWhiteLuminances
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Array*
 
-Return a promise which will be fullfilled with an array of video filter matchNames
+Get all the graphics white luminance as array of values
+
 
 ___
+
+### getGraphicsWhiteLuminance
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+*number*
+
+Get the graphics white luminance value
+
+
+___
+
+
+
+

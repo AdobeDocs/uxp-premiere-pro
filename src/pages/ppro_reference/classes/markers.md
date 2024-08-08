@@ -1,7 +1,7 @@
 ---
-id: "videocomponentchain"
-title: "VideoComponentChain"
-sidebar_label: "VideoComponentChain"
+id: "markers"
+title: "Markers"
+sidebar_label: "Markers"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,83 +17,92 @@ keywords:
   - Premiere Pro
 ---
 
-# VideoComponentChain  
+# Markers  
 
 ## Methods
 
-### createInsertComponentAction
+### getMarkers
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*Action*
+*Array*
 
-Creates and returns an insert component action
+Get all markers
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | *object* | - |
-| componentInsertionIndex | *number* | - |
+| filters | *Array* | - |
 
 ___
 
-### createAppendComponentAction
+### createRemoveMarkerAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*Action*
+*object*
 
-Creates and returns an append component action
+Remove the given marker
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | *object* | - |
+| marker | [*Marker*](/ppro_reference/classes/marker/) | - |
 
 ___
 
-### createRemoveComponentAction
+### createMoveMarkerAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*Action*
+*object*
 
-Creates and returns an remove component action
+Move the given marker at new time value
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | *object* | - |
+| marker | [*Marker*](/ppro_reference/classes/marker/) | - |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
 
-### getComponentAtIndex
+### createAddMarkerAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*VideoComponentChain*
+*object*
 
-Returns the component at the given index
+Add a new marker
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| componentIndex | *number* | - |
+| Name | *string* | - |
+| markerType | *string* | - |
+| startTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| duration | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| comments | *string* | - |
 
 ___
 
-### getComponentCount
+### getMarkers
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*number*
+*Markers*
 
-Gets the number of components in the component chain
+Returns the Markers object for Sequence Or ProjectItem
 
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| markerOwnerObject | *any* | - |
 
 ___
 
