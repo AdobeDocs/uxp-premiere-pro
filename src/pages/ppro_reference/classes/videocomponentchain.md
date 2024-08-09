@@ -17,7 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# VideoComponentChain
+# VideoComponentChain  
 
 ## Methods
 
@@ -26,15 +26,15 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Creates and returns an insert component action
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| Component | *object* |
-| componentInsertionIndex | *number* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| component | *object* | - |
+| componentInsertionIndex | *number* | - |
 
 ___
 
@@ -43,14 +43,14 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Creates and returns an append component action
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| Component | *object* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| component | *object* | - |
 
 ___
 
@@ -59,14 +59,14 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Action*
-
+  
 Creates and returns an remove component action
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| Component | *object* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| component | *object* | - |
 
 ___
 
@@ -74,15 +74,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*VideoComponentChain*
+  
 Returns the component at the given index
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| componentIndex | *number* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| componentIndex | *number* | - |
 
 ___
 
@@ -91,7 +91,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *number*
-
+  
 Gets the number of components in the component chain
 
 ___

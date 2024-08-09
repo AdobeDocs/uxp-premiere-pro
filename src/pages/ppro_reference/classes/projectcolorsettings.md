@@ -1,7 +1,7 @@
 ---
-id: "transitionfactory"
-title: "TransitionFactory"
-sidebar_label: "TransitionFactory"
+id: "projectcolorsettings"
+title: "ProjectColorSettings"
+sidebar_label: "ProjectColorSettings"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,32 +17,26 @@ keywords:
   - Premiere Pro
 ---
 
-# TransitionFactory  
+# ProjectColorSettings  
 
 ## Methods
 
-### createVideoTransition
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
-
-*VideoTransition*
-  
-Creates a new video filter component based on the input matchName
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| matchName | *string* | - |
-
-___
-
-### getVideoTransitionMatchNames
+### getSupportedGraphicsWhiteLuminances
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Array*
   
-Return a promise which will be fullfilled with an array of video transition matchnames
+Get all the graphics white luminance as array of values
+
+___
+
+### getGraphicsWhiteLuminance
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+*number*
+  
+Get the graphics white luminance value
 
 ___

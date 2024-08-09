@@ -45,6 +45,6 @@ And you can get the active sequence from the project like this:
 const sequence = await project.getActiveSequence();
 ```
 
-## UXP Scripting
+## Useful links
 
-UXP is not just for plugins anymore.  Individual JavaScript files may be developed and executed.
+ - [Typescript Definition File](./types.d.ts)

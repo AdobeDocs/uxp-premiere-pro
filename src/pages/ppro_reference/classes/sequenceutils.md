@@ -1,7 +1,7 @@
 ---
-id: "guid"
-title: "Guid"
-sidebar_label: "Guid"
+id: "sequenceutils"
+title: "SequenceUtils"
+sidebar_label: "SequenceUtils"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,22 +17,23 @@ keywords:
   - Premiere Pro
 ---
 
-# Guid  
+# SequenceUtils  
 
 ## Methods
 
-### fromString
+### performSceneEditDetectionOnSelection
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*Guid*
+*boolean*
   
-Create a guid from a string
+Performs cut detection on the sequence selection
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| stringValue | *string* | - |
+| clipOperation | *string* | - |
+| TrackItemSelection | [*trackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
 
 ___

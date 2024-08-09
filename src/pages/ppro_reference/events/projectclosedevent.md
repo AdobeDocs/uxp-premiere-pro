@@ -17,7 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# ProjectClosedEvent
+# ProjectClosedEvent  
 
 ## Properties
 
@@ -30,5 +30,4 @@ keywords:
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ |
-| EVENT_CLOSED | 23.0 | Event occurs when project was closed. |
+| :------ | :------ | :------ || EVENT_CLOSED | 23.0 | Event occurs when project was closed. |

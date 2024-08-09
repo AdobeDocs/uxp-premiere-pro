@@ -17,7 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# CompoundAction
+# CompoundAction  
 
 ## Properties
 
@@ -32,13 +32,13 @@ keywords:
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
-
+  
 Add an action to the compound action
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| Action | *object* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| action | [*Action*](/ppro_reference/classes/action/) | - |
 
 ___

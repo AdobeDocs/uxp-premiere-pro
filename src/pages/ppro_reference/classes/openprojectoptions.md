@@ -17,7 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# OpenProjectOptions
+# OpenProjectOptions  
 
 ## Properties
 
@@ -34,15 +34,15 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*OpenProjectOptions*
+  
 Set whether to show the convert project dialog on project open/close
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| inShowConvertProjectDialog | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| showConvertProjectDialog | *boolean* | - |
 
 ___
 
@@ -50,15 +50,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*OpenProjectOptions*
+  
 Set whether to show the locate file dialog on project open/close
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| inShowLocateFileDialog | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| showLocateFileDialog | *boolean* | - |
 
 ___
 
@@ -66,15 +66,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*OpenProjectOptions*
+  
 Set whether to show the warning file dialog on project open/close
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| inShowConvertProjectDialog | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| showConvertProjectDialog | *boolean* | - |
 
 ___
 
@@ -82,14 +82,14 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*OpenProjectOptions*
+  
 Set whether to add to MRU list after project changes
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| inAddToMRUList | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| addToMRUList | *boolean* | - |
 
 ___

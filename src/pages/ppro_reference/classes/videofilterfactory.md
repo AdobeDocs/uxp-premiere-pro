@@ -1,7 +1,7 @@
 ---
-id: "filterfactory"
-title: "FilterFactory"
-sidebar_label: "FilterFactory"
+id: "videofilterfactory"
+title: "VideoFilterFactory"
+sidebar_label: "VideoFilterFactory"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,32 +17,32 @@ keywords:
   - Premiere Pro
 ---
 
-# FilterFactory
+# VideoFilterFactory  
 
 ## Methods
 
-### createVideoFilterComponent
+### createComponent
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *VideoFilterComponent*
-
+  
 Creates a new video filter component based on the input matchName
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| matchName | *string* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| matchName | *string* | - |
 
 ___
 
-### getVideoFilterComponentMatchNames
+### getMatchNames
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Array*
-
-Return a promise which will be fullfilled with an array of video filter matchNames
+  
+Returns an array of video filter matchNames
 
 ___

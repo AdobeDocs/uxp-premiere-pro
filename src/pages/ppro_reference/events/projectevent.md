@@ -17,7 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# ProjectEvent
+# ProjectEvent  
 
 ## Properties
 
@@ -31,7 +31,6 @@ keywords:
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ |
-| EVENT_OPENED | 23.0 | Event occurs when project was opened. |
+| :------ | :------ | :------ || EVENT_OPENED | 23.0 | Event occurs when project was opened. |
 | EVENT_ACTIVATED | 23.0 | Event occurs when the active project has changed |
 | EVENT_DIRTY | 23.0 | Event occurs when the project dirty state changed. |

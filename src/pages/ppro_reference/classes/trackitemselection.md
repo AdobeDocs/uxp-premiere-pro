@@ -1,7 +1,7 @@
 ---
-id: "executor"
-title: "Executor"
-sidebar_label: "Executor"
+id: "trackitemselection"
+title: "TrackItemSelection"
+sidebar_label: "TrackItemSelection"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,40 +17,55 @@ keywords:
   - Premiere Pro
 ---
 
-# Executor  
+# TrackItemSelection  
 
 ## Methods
 
-### executeUndoableTransaction
+### createEmptySelection
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
   
-Execute a transaction against the Backend. The compound action to be executed against the backend should be populated by the callback parameter.
+Create empty selection
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *( compoundAction: CompoundAction ): void* | - |
-| transactionIdentifier | *string* | - |
-| undoText | *string* | - |
+| undefined | *(selection: TrackItemSelection) => void* | - |
 
 ___
 
-### scopeBackendAccess
+### addItem
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *boolean*
   
-Execute a transaction against the Backend. The compound action to be executed against the backend should be populated by the callback parameter.
+Add a track item to this selection
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *(): void* | - |
+| trackItem | *object* | - |
+| skipDuplicateCheck | *boolean* | - |
+
+___
+
+### removeItem
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+*boolean*
+  
+Remove a track item from this selection
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| trackItem | *object* | - |
 
 ___

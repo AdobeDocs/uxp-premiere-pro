@@ -17,12 +17,13 @@ keywords:
   - Premiere Pro
 ---
 
-# FolderItem
+# FolderItem  
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
+| parent | *object* | R | 23.0 | The root item of the project which contains all items of the project on the lowest level. |
 | name | *string* | R | 23.0 | Get name of project item object |
 
 ## Methods
@@ -31,16 +32,16 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*Action*
+  
 Returns an action that lets users create a new bin.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| name | *string* |
-| makeUnique | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| name | *string* | - |
+| makeUnique | *boolean* | - |
 
 ___
 
@@ -48,16 +49,16 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*ProjectItem*
+  
 Creates a new bin with given name and returns the Folder object. If second param (makeUnique) is true, we make sure the newly created bin has a unique name.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| name | *string* |
-| makeUnique | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| name | *string* | - |
+| makeUnique | *boolean* | - |
 
 ___
 
@@ -65,16 +66,16 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*Action*
+  
 Creates a smart bin with given name and returns the Folder object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| name | *string* |
-| searchQuery | *string* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| name | *string* | - |
+| searchQuery | *string* | - |
 
 ___
 
@@ -82,15 +83,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*Action*
+  
 Rename the Bin and return true if it's successful
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| undefined | *string* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| undefined | *string* | - |
 
 ___
 
@@ -98,8 +99,8 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*ProjectItem*
+  
 Get the root item of the project which contains all items of the project on the lowest level
 
 ___
@@ -108,8 +109,8 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*Project*
+  
 Get the root item of the project which contains all items of the project on the lowest level.
 
 ___
@@ -119,7 +120,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Array*
-
+  
 Collection of child items of this folder.
 
 ___
@@ -128,15 +129,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*Action*
+  
 Creates an action that removes the given item from this folder.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
 
 ___
 
@@ -144,15 +145,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*boolean*
+  
 Removes the given item from provided folder and returns a promise
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
 
 ___
 
@@ -160,16 +161,16 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*Action*
+  
 Creates an action that moves the given item to the provided folder item newParent.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) |
-| newParent | [*FolderItem*](/ppro_reference/classes/folderitem/) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| newParent | [*FolderItem*](/ppro_reference/classes/folderitem/) | - |
 
 ___
 
@@ -177,15 +178,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*boolean*
+  
 Moves the given project item to the provided folder item and returns a promise
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) |
-| newParent | [*FolderItem*](/ppro_reference/classes/folderitem/) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| newParent | [*FolderItem*](/ppro_reference/classes/folderitem/) | - |
 
 ___

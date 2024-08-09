@@ -1,7 +1,7 @@
 ---
-id: "application"
-title: "Application"
-sidebar_label: "Application"
+id: "timedisplay"
+title: "TimeDisplay"
+sidebar_label: "TimeDisplay"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,10 +17,10 @@ keywords:
   - Premiere Pro
 ---
 
-# Application  
+# TimeDisplay  
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| version | *string* | R | 23.0 | - |
+| type | *number* | W | 23.0 | Read/Write property to get/set the time display type numeric code |

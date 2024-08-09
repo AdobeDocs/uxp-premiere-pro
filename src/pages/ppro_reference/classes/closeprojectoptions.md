@@ -17,7 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# CloseProjectOptions
+# CloseProjectOptions  
 
 ## Properties
 
@@ -34,15 +34,15 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*CloseProjectOptions*
+  
 Set whether to prompt if a project is dirty on project open/close
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| inPromptIfDirty | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| promptIfDirty | *boolean* | - |
 
 ___
 
@@ -50,15 +50,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*CloseProjectOptions*
+  
 Set whether to show the cancel button on project open/close
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| inShowCancelButton | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| showCancelButton | *boolean* | - |
 
 ___
 
@@ -66,15 +66,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*CloseProjectOptions*
+  
 Set whether the app should be prepared to quit when open/closing a project
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| inIsAppBeingPreparedToQuit | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| isAppBeingPreparedToQuit | *boolean* | - |
 
 ___
 
@@ -82,14 +82,14 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*object*
-
+*CloseProjectOptions*
+  
 Set whether to save your workspaces when opening/closing a project
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| inIsAppBeingPreparedToQuit | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| isAppBeingPreparedToQuit | *boolean* | - |
 
 ___

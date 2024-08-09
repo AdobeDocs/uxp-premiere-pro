@@ -1,7 +1,7 @@
 ---
-id: "guid"
-title: "Guid"
-sidebar_label: "Guid"
+id: "utils"
+title: "Utils"
+sidebar_label: "Utils"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,22 +17,16 @@ keywords:
   - Premiere Pro
 ---
 
-# Guid  
+# Utils  
 
 ## Methods
 
-### fromString
+### isAEInstalled
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*Guid*
+*boolean*
   
-Create a guid from a string
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| stringValue | *string* | - |
+Check if AE is installed.
 
 ___

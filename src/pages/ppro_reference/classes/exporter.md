@@ -1,7 +1,7 @@
 ---
-id: "guid"
-title: "Guid"
-sidebar_label: "Guid"
+id: "exporter"
+title: "Exporter"
+sidebar_label: "Exporter"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,22 +17,27 @@ keywords:
   - Premiere Pro
 ---
 
-# Guid  
+# Exporter  
 
 ## Methods
 
-### fromString
+### exportSequenceFrame
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*Guid*
+*boolean*
   
-Create a guid from a string
+Exports from a sequence. Supported formats are bmp, dpx, gif, jpg, exr, png, tga and tif
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| stringValue | *string* | - |
+| sequence | *object* | - |
+| time | *object* | - |
+| filename | *string* | - |
+| filepath | *string* | - |
+| width | *number* | - |
+| height | *number* | - |
 
 ___

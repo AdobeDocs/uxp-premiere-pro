@@ -1,7 +1,7 @@
 ---
-id: "application"
-title: "Application"
-sidebar_label: "Application"
+id: "rectf"
+title: "RectF"
+sidebar_label: "RectF"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,10 +17,11 @@ keywords:
   - Premiere Pro
 ---
 
-# Application  
+# RectF  
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| version | *string* | R | 23.0 | - |
+| width | *number* | W | 23.0 | Get/Set the width of a rect |
+| height | *number* | W | 23.0 | Get/Set the height of a rect |

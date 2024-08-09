@@ -17,7 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# Keyframe
+# Keyframe  
 
 ## Properties
 
@@ -25,3 +25,31 @@ keywords:
 | :------ | :------ | :------ | :------ | :------ |
 | value | *object* | W | 23.0 | - |
 | position | *object* | W | 23.0 | Get/Set position of a keyframe |
+
+## Methods
+
+### getTemporalInterpolationMode
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+*number*
+  
+Gets temporal interpolation mode of a keyframe
+
+___
+
+### setTemporalInterpolationMode
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+*boolean*
+  
+Sets temporal interpolation mode of a keyframe
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| temporalInterpolationMode | *number* | - |
+
+___
