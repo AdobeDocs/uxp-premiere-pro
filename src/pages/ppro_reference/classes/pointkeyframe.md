@@ -25,4 +25,3 @@ keywords:
 | :------ | :------ | :------ | :------ | :------ |
 | value | *object* | W | 23.0 | - |
 | position | *object* | W | 23.0 | Get/Set position of a keyframe |
-

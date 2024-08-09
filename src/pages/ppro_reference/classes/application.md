@@ -24,4 +24,3 @@ keywords:
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
 | version | *string* | R | 23.0 | - |
-

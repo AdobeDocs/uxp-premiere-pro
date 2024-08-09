@@ -27,7 +27,6 @@ keywords:
 | path | *string* | R | 23.0 | The absolute file path to the project file. |
 | id | *string* | R | 23.0 | The unique identifier of the project. |
 
-
 ## Events
 
 | Name | Version | Description |
