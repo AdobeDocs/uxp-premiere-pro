@@ -11,7 +11,7 @@
  */
 
 module.exports = {
-  pathPrefix: process.env.PATH_PREFIX || '/premiere-pro/UXP-API/docs/',
+  pathPrefix: process.env.PATH_PREFIX || '/premiere-pro/uxp/',
   siteMetadata: {
     versions: [
       {
