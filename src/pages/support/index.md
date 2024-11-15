@@ -3,48 +3,49 @@ title: Support - Cat Analytics
 description: This is the support page of Cat Analytics 
 ---
 
-<Hero slots="heading, text" background="rgb(19, 93, 183)"/>
+# Developer Support
 
-# Support
+Additional Premiere Pro Developer Resources
 
-Learn where to ask questions, report bugs, make feature requests, and spark discussions.
+## Sample Files and Resources
 
-## Feedback
+Code samples and developer resources can all be found on our [github repo](https://github.com/Adobe-CEP).
 
-You've got a place to start discussions.
+## UXP Developer Tools
 
-<DiscoverBlock slots="image, heading, link, text" width="25%"/>
+The UXP Developer Tools (UDT) application is the bridge between your IDE and Premiere Pro.  Write code in whichever editor is your favorite.  When you're ready to launch your UXP panel in Premiere Pro, UDT provides a streamlined path to load, launch and debug your panel directly in Premiere Pro.  You can even revise your code back in your IDE and reload these revisions to continue testing without having to close and relaunch Premiere Pro.
 
-![Cat Experience Cloud](experience_cloud.png)
+More informaion on using UDT with Premiere Pro is also available in the [Sample Files and Resources](#sample-files-and-resources) above.
 
-### Developer forum
+<ProductCard slots="icon, heading, text, buttons" theme="lightest" width="50%" />
 
-[Get started](https://adobe.io)
+![UDT Icon](./udt.png)
 
-Open discussion and support with community experts and Adobe staff.
+#### UXP Developer Tools
 
-<DiscoverBlock slots="link, text" width="25%"/>
+The UDT can be installed through Creative Cloud when viewing all applications.
 
-[Experience league](https://adobe.io)
+ - [Login to Adobe.com to View](https://www.adobe.com/home/search?query=uxp%20developer)
 
-Tutorials and videos for the whole community.
+<!-- The UDT can be installed through Creative Cloud when viewing *All Apps*.  -->
 
-<DiscoverBlock slots="link, text" width="25%"/>
 
-[Experience forum](https://adobe.io)
+<ProductCard slots="icon, heading, text, buttons" theme="lightest" width="50%" />
 
-Forum to get help and help others
+![Photoshop Icon](./photoshop.svg)
 
-## Community
+#### Photoshop Developer Site
 
-You've got a place to join the conversation.
+Additional UDT installation and use guides can be found on the Photoshop Developer Site.  Click the button below view that documentation.
 
-<DiscoverBlock slots="image, heading, link, text" width="100%"/>
+- [Jump to Photoshop Documentation](https://developer.adobe.com/photoshop/uxp/2022/guides/devtool/)
 
-![Stack Overflow](stack-overflow.png)
+<!-- Additional installation and use guides can be found on the [Photoshop Developer Site here](https://developer.adobe.com/photoshop/uxp/2022/guides/devtool/). -->
 
-### Stack Overflow
+<InlineAlert variant="warning" slots="text1[n]"/>
 
-[Explore](https://adobe.io)
+**Note:** By following the Photoshop Developer Site link above, you will exit the Premiere Pro Developer Site.
 
-Developer Q&A using a specific tag.
+## Contact
+
+We monitor the [Premiere Pro Community Forums](https://community.adobe.com/t5/premiere-pro/ct-p/ct-premiere-pro?page=1&sort=latest_replies&lang=all&tabid=all) daily, as do many active users in the Adobe community, who can often provide creative solutions to difficult questions.  Post a question there if you're stuck!

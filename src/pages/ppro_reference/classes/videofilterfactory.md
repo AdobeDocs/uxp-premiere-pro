@@ -1,7 +1,7 @@
 ---
-id: "transitionfactory"
-title: "TransitionFactory"
-sidebar_label: "TransitionFactory"
+id: "videofilterfactory"
+title: "VideoFilterFactory"
+sidebar_label: "VideoFilterFactory"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,15 +17,15 @@ keywords:
   - Premiere Pro
 ---
 
-# TransitionFactory  
+# VideoFilterFactory  
 
 ## Static Methods
 
-### createVideoTransition
+### createComponent
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*VideoTransition*
+*VideoFilterComponent*
   
 Creates a new video filter component based on the input matchName
 
@@ -33,17 +33,17 @@ Creates a new video filter component based on the input matchName
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| matchName | *string* | - |
+| matchName | *string* | The match name of the component to create, example 'PR.ADBE Solarize', 'AE.ADBE Mosaic' etc.. |
 
 ___
 
-### getVideoTransitionMatchNames
+### getMatchNames
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *Array*
   
-Return a promise which will be fullfilled with an array of video transition matchnames
+Returns an array of video filter matchNames
 
 ___
 

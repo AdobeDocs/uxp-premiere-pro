@@ -17,29 +17,77 @@ keywords:
   - Premiere Pro
 ---
 
-# CaptionTrack
+# CaptionTrack  
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| name | *string* | R | 23.0 | Get the name of the track |
+| name | *string* | R | 25.0 | Get the name of the track |
+| id | *number* | R | 25.0 | The ID of the track within the TrackGroup |
 
-## Methods
+
+## Instance Methods
+
+### getIndex
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*number*
+  
+Index representing the track index of this track within the track group.
+
+___
+
+### getMediaType
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Guid*
+  
+UUID representing the underlying media type of this track
+
+___
 
 ### getTrackItems
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *Array*
-
+  
 This returns the track items of the specified media type from the given track
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| TrackItemType | *number* |
-| includeEmptyTrackItems | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| trackItemType | *number* | - |
+| includeEmptyTrackItems | *boolean* | - |
+
+___
+
+### isMuted
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Get mute state of the track
+
+___
+
+### setMute
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+sets the mute state of the track to muted/unmuted
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| mute | *boolean* | - |
 
 ___

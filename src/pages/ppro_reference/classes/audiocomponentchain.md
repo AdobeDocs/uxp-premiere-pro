@@ -1,7 +1,7 @@
 ---
-id: "ticktime"
-title: "TickTime"
-sidebar_label: "TickTime"
+id: "audiocomponentchain"
+title: "AudioComponentChain"
+sidebar_label: "AudioComponentChain"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,81 +17,82 @@ keywords:
   - Premiere Pro
 ---
 
-# TickTime  
+# AudioComponentChain  
 
-## Properties
-
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| seconds | *number* | R | 25.0 | Get the TickTime in seconds |
-| ticks | *string* | R | 25.0 | Get the TickTime in ticks as a string |
-| ticksNumber | *number* | R | 25.0 | Get the TickTime in ticks as a number |
-
-## Static Methods
-
-### createWithFrameAndFrameRate
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*TickTime*
-  
-Constructs a TickTime object with a frame and a frame rate.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| frameCount | *number* | - |
-| frameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
-
-___
-
-### createWithSeconds
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*TickTime*
-  
-Constructs a TickTime object with seconds.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| seconds | *number* | - |
-
-___
-
-### createWithTicks
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*TickTime*
-  
-Constructs a TickTime object with ticks as a string.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| ticks | *string* | - |
-
-___
 
 ## Instance Methods
 
-### equals
+### createAppendComponentAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
+*Action*
   
-Returns true if the given TickTime is equal to the TickTime object
+Creates and returns an append component action
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| component | *object* | Video filter component |
+
+___
+
+### createInsertComponentAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Creates and returns an insert component action
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| component | *object* | Video filter component |
+| componentInsertionIndex | *number* | Index which the component shall be inserted |
+
+___
+
+### createRemoveComponentAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Creates and returns an remove component action
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| component | *object* | Video filter component |
+
+___
+
+### getComponentAtIndex
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*VideoComponentChain*
+  
+Returns the component at the given index
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| componentIndex | *number* | - |
+
+___
+
+### getComponentCount
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*number*
+  
+Gets the number of components in the component chain
 
 ___
