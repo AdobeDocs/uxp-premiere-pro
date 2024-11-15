@@ -11,82 +11,61 @@
  */
 
 module.exports = {
-  pathPrefix: process.env.PATH_PREFIX || '/premiere-pro/uxp/',
+  pathPrefix: process.env.PATH_PREFIX || '/premiere-pro-uxp/',
   siteMetadata: {
+    githubIssue: {
+      removeLogIssue: true,
+    },
     versions: [
-      {
-        title: 'v2.0',
-        selected: true
-      },
-      {
-        title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/dev-site'
-      }
+
+
     ],
     pages: [
       {
-        title: 'Cat Analytics',
-        path: '/'
+        title: 'UXP for Premiere Pro',
+        description: 'Introduction to the Premiere Pro UXP API',
+        path: 'index.md'
+      },
+      // {
+      //   title: 'Documentation',
+      //   menu: [
+      //     {
+      //       title: 'Classes',
+      //       // description: 'Classes',
+      //       path: 'ppro_reference/classes/index.md'
+      //     },
+      //     {
+      //       title: 'Constants',
+      //       // description: 'Constants',
+      //       path: 'ppro_reference/constants/index.md'
+      //     },
+      //     {
+      //       title: 'Events',
+      //       // description: 'Events',
+      //       path: 'ppro_reference/events/index.md'
+      //     },
+      //   ]
+      // },     
+      {
+        title: 'Premiere Pro API Documentation',
+        description: 'Premiere Pro specific UXP documentation',
+        path: 'ppro_reference/index.md'
       },
       {
-        title: 'Premiere Pro API',
-        path: '/ppro_reference/'
-      },
-      {
-        title: 'API Reference',
-        menu: [
-          {
-            title: 'Cat Reference v2.0',
-            description: 'Cat Reporting API',
-            path: '/api/index.md'
-          },
-          {
-            title: 'Cat Reference v1.4',
-            description: 'Cat API Spec',
-            path: '/api/1.4.md'
-          }
-        ]
+        title: 'Base UXP API Documentation',
+        description: 'Cross-Application UXP documentation',
+        path: 'uxp_reference/index.md'
       },
       {
         title: 'Support',
-        path: '/support/'
+        path: 'support/index.md'
       }
     ],
     subPages: [
       {
-        title: 'Premiere Pro API',
-        path: '/ppro_reference/',
+        title: 'API Reference',
+        path: '/ppro_reference',
         pages: require("./reference-ppro.js"),
-      },
-      {
-        title: 'Overview',
-        path: '/support/',
-        header: true,
-        pages: [
-          {
-            title: 'Help',
-            path: '/support/'
-          },
-          {
-            title: 'FAQ',
-            path: '/support/FAQ/'
-          },
-          {
-            title: 'How to contribute',
-            path: '/support/contribute/'
-          }
-        ]
-      },
-      {
-        title: 'Community',
-        path: '/support/community/',
-        header: true,
-        pages: [
-          {
-            title: 'Information',
-            path: '/support/community/'
-          }
-        ]
       }
     ]
   },

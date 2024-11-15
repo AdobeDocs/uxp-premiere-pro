@@ -1,7 +1,7 @@
 ---
-id: "videocomponentchain"
-title: "VideoComponentChain"
-sidebar_label: "VideoComponentChain"
+id: "markers"
+title: "Markers"
+sidebar_label: "Markers"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,82 +17,93 @@ keywords:
   - Premiere Pro
 ---
 
-# VideoComponentChain  
+# Markers  
 
+## Static Methods
+
+### getMarkers
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Markers*
+  
+Returns the Markers object for Sequence Or ProjectItem
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| markerOwnerObject | *any* | - |
+
+___
 
 ## Instance Methods
 
-### createAppendComponentAction
+### createAddMarkerAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
+*object*
   
-Creates and returns an append component action
+Add a new marker
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | *object* | - |
+| Name | *string* | - |
+| markerType | *string* | - |
+| startTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| duration | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| comments | *string* | - |
 
 ___
 
-### createInsertComponentAction
+### createMoveMarkerAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
+*object*
   
-Creates and returns an insert component action
+Move the given marker at new time value
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | *object* | - |
-| componentInsertionIndex | *number* | - |
+| marker | [*Marker*](/ppro_reference/classes/marker/) | - |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
 
-### createRemoveComponentAction
+### createRemoveMarkerAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
+*object*
   
-Creates and returns an remove component action
+Remove the given marker
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | *object* | - |
+| marker | [*Marker*](/ppro_reference/classes/marker/) | - |
 
 ___
 
-### getComponentAtIndex
+### getMarkers
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*VideoComponentChain*
+*Array*
   
-Returns the component at the given index
+Get all markers
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| componentIndex | *number* | - |
-
-___
-
-### getComponentCount
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*number*
-  
-Gets the number of components in the component chain
+| filters | *Array* | Marker Type Filter (Optional) |
 
 ___

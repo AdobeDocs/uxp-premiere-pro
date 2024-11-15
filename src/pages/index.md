@@ -1,32 +1,53 @@
 ---
-title: Overview - Cat Analytics
-description: This is the overview page of Cat Analytics
+title: Scripting in Premiere Pro
+description: An introduction into scripting in Premiere Pro
 contributors:
   - https://github.com/icaraps 
 ---
 
-<Hero slots="heading, text"/>
+<Hero slots="heading, text" background = "rgb(200, 10, 10)"/>
 
-# Cat Analytics API
+# Premiere Pro UXP API
 
-Cat Product API offers limitless ways to integrate your most important customer data into key business processes. Cat Product API offer limitless ways.
+Modern extensibility powering the design of custom tools and features, allowing unparalleled workflow efficiency to be introduced into any unique Premiere Pro environments.
 
-<Resources slots="heading, links"/>
+<!-- <Resources slots="heading, links"/>
 
 #### Resources
 
 * [Quickstart Guide](https://developer.adobe.com)
-* [Cat Analytics Github Repo](https://github.com/AdobeDocs/dev-site)
+* [Cat Analytics Github Repo](https://github.com/AdobeDocs/dev-site) -->
 
 ## Overview
 
-This documentation provides instructions for Catt Analytics 2.0 APIs. For working with Cat Analytics APIs, see [Cat Analytics API Documentation](https://github.com/AdobeDocs/dev-site).
+UXP (**U**nified E**x**tensibility **P**latform) is a scrpting platform built into Premiere Pro.  It is powered by a modern JavaScript engine and offeres the ability to access many Premiere Pro functions at a programatic level.  With UXP, unique tools can be built to integrate with and optimize the most precise and demanding workflows, reducing repitition, maximizing efficiency and leveraging Premiere Pro into a bespoke application customized for the needs of any project.
 
-The Cat Analytics APIs are a collection of APIs that power Cat Analytics products like Cat Workspace.
-The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data.
-You can also create reports to explore, get insights, or answer important questions about your data.
+Best of all, UXP Plugins run right in Premiere Pro.
 
-## Discover
+Premiere Pro offers a specific set of UXP functionality that extends the base UXP API common across all UXP-capible Adobe Applications.  Documentation for both the Premiere Pro API and the base UXP API can be accessed via this site.
+
+![UDT Interface](./UDT_sample_image_01_cropped.png)
+
+<DiscoverBlock slots="heading, text"/>
+
+## Features
+
+**Fast, Interactive Development.** Load, launch and update panels directly without having to relaunch Premiere Pro.
+
+
+<DiscoverBlock slots="text"/>
+
+**Built In Debuggger.**  Trace code quickly using the built-in debugger that attaches natively to Premiere Pro.
+
+<DiscoverBlock slots="text"/>
+
+**Threaded Execution.**  UXP operates in parallel with other Premiere Pro processes.  Continue working in Preimere Pro while UXP Plugin functions are running.   
+
+## Updates
+
+The Premiere Pro UXP API, along with this documentation website, will be updated periodically to further expand functionality as new versions of Premiere Pro are released and new features are developed.
+
+<!-- ## Discover
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
@@ -81,4 +102,4 @@ request with your contribution. For more information, refer to the [contributing
 The timeout for API requests through adobe.io is currently *60 seconds*.
 
 The default rate limit for an Cat Analytics Company is *120 requests per minute*. (The limit is enforced as *12 requests every 6 seconds*).
-When rate limiting is being enforced you will get `429` HTTP response codes with the following response body: `{"error_code":"429050","message":"Too many requests"}`.
+When rate limiting is being enforced you will get `429` HTTP response codes with the following response body: `{"error_code":"429050","message":"Too many requests"}`. -->

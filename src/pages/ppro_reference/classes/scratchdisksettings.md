@@ -1,7 +1,7 @@
 ---
-id: "transitionfactory"
-title: "TransitionFactory"
-sidebar_label: "TransitionFactory"
+id: "scratchdisksettings"
+title: "ScratchDiskSettings"
+sidebar_label: "ScratchDiskSettings"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,33 +17,40 @@ keywords:
   - Premiere Pro
 ---
 
-# TransitionFactory  
+# ScratchDiskSettings  
 
-## Static Methods
 
-### createVideoTransition
+## Instance Methods
+
+### getScratchDiskPath
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*VideoTransition*
+*string*
   
-Creates a new video filter component based on the input matchName
+Gets the scratchDisk location for specific disktype
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| matchName | *string* | - |
+| ScratchDiskType | *string* | - |
 
 ___
 
-### getVideoTransitionMatchNames
+### setScratchDiskPath
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Array*
+*boolean*
   
-Return a promise which will be fullfilled with an array of video transition matchnames
+Sets project ScratchDisk Path
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| ScratchDiskType | *string* | - |
+| ScratchDiskValue | *string* | - |
 
 ___
-

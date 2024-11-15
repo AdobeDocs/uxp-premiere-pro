@@ -17,32 +17,33 @@ keywords:
   - Premiere Pro
 ---
 
-# ProjectItem
+# ProjectItem  
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| name | *string* | R | 23.0 | Get name of project item object |
+| name | *string* | R | 25.0 | Get name of project item object |
 
-## Methods
+
+## Instance Methods
 
 ### getParent
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
-
+*ProjectItem*
+  
 Get the root item of the project which contains all items of the project on the lowest level
 
 ___
 
 ### getProject
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
-
+*Project*
+  
 Get the root item of the project which contains all items of the project on the lowest level.
 
 ___

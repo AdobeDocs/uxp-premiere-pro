@@ -17,10 +17,12 @@ keywords:
   - Premiere Pro
 ---
 
-# Application
+# Application  
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| version | *string* | R | 23.0 | - |
+| version | *string* | R | 25.0 |  |
+
+

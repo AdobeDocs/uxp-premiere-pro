@@ -17,22 +17,34 @@ keywords:
   - Premiere Pro
 ---
 
-# Guid
+# Guid  
 
-## Methods
+## Static Methods
 
 ### fromString
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *Guid*
-
+  
 Create a guid from a string
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| undefined | *string* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| stringValue | *string* | - |
+
+___
+
+## Instance Methods
+
+### toString
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*string*
+  
+Return string representation of the GUID
 
 ___
