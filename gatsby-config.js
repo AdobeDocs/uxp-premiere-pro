@@ -26,35 +26,28 @@ module.exports = {
         description: 'Introduction to the Premiere Pro UXP API',
         path: 'index.md'
       },
-      // {
-      //   title: 'Documentation',
-      //   menu: [
-      //     {
-      //       title: 'Classes',
-      //       // description: 'Classes',
-      //       path: 'ppro_reference/classes/index.md'
-      //     },
-      //     {
-      //       title: 'Constants',
-      //       // description: 'Constants',
-      //       path: 'ppro_reference/constants/index.md'
-      //     },
-      //     {
-      //       title: 'Events',
-      //       // description: 'Events',
-      //       path: 'ppro_reference/events/index.md'
-      //     },
-      //   ]
-      // },     
       {
-        title: 'Premiere Pro API Documentation',
-        description: 'Premiere Pro specific UXP documentation',
-        path: 'ppro_reference/index.md'
+        title: 'Introduction',
+        path: 'introduction/index.md'
       },
-      {
-        title: 'Base UXP API Documentation',
-        description: 'Cross-Application UXP documentation',
-        path: 'uxp_reference/index.md'
+      {    
+        title: 'References',
+        menu: [
+          {
+            title: 'What\'s New?',
+            path: 'changelog/index.md'
+          },
+          {
+            title: 'Premiere UXP API',
+            //description: 'Premiere Pro specific UXP documentation',
+            path: 'ppro_reference/index.md'
+          },
+          {
+            title: 'Common UXP API',
+            // description: 'Cross-Application UXP documentation',
+            path: 'uxp_reference/index.md'
+          },
+        ]
       },
       {
         title: 'Support',
@@ -62,6 +55,20 @@ module.exports = {
       }
     ],
     subPages: [
+      {
+        title: 'Essentials',
+        header: true,
+        pages: [
+          {
+            title: 'Programming languages',
+            path: '/introduction/essentials/prog_lang/'
+          },
+          {
+            title: 'Developer Tools',
+            path: '/introduction/essentials/dev-tools/'
+          }
+        ]
+      },
       {
         title: 'API Reference',
         path: '/ppro_reference',

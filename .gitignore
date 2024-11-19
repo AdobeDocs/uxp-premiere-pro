@@ -31,3 +31,6 @@ cypress/screenshots
 
 # lerna
 lerna-debug.log
+
+# tracking reports
+*.blockreport
