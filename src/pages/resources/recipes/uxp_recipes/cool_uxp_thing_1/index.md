@@ -1,3 +1,0 @@
-# Cool UXP Thing 1
-
-Stuff goes here...

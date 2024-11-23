@@ -11,7 +11,7 @@
  */
 
 module.exports = {
-  pathPrefix: process.env.PATH_PREFIX || '/premiere-pro-uxp/',
+  pathPrefix: process.env.PATH_PREFIX || '/premiere-pro/uxp/',
   siteMetadata: {
     githubIssue: {
       removeLogIssue: true,
@@ -46,14 +46,13 @@ module.exports = {
             path: 'changelog/'
           },
           {
-            title: 'Premiere UXP API',
+            title: 'Premiere API',
             //description: 'Premiere Pro specific UXP documentation',
             path: 'ppro_reference/'
           },
           {
-            title: 'Common UXP API',
-            // description: 'Cross-Application UXP documentation',
-            path: 'uxp_reference/'
+            title: 'UXP API',
+            path: 'uxp-api/'
           },
         ]
       },
@@ -70,11 +69,11 @@ module.exports = {
         pages: [
           {
             title: 'Programming languages',
-            path: '/introduction/essentials/prog_lang/'
+            path: '/introduction/essentials/tech-stack/'
           },
           {
             title: 'Developer Tools',
-            path: '/introduction/essentials/dev_tools/'
+            path: '/introduction/essentials/dev-tools/'
           }
         ]
       },
@@ -85,7 +84,7 @@ module.exports = {
         pages: [
           {
             title: 'Getting Started',
-            path: 'plugins/getting_started/'
+            path: 'plugins/getting-started/'
           },
           {
             title: 'Concepts',
@@ -93,7 +92,7 @@ module.exports = {
             pages: [
               {
                 title: 'Entry points',
-                path: 'plugins/concepts/entry_points/'
+                path: 'plugins/concepts/entry-points/'
               },
               {
                 title: 'Manifest',
@@ -106,13 +105,39 @@ module.exports = {
             path: 'plugins/tutorials/',
             pages: [
               {
-                title: 'My First Tutorial',
-                path: '/plugins/tutorials/my_first_tutorial/'
+                title: "Developing plugins with UDT",
+                path: "/plugins/tutorials/udt-deep-dive/",
+                pages: [
+                  {
+                    title: 'Plugin Management',
+                    path: '/plugins/tutorials/udt-deep-dive/plugin-management/'
+                  },
+                  {
+                    title: 'Plugin Workflows',
+                    path: '/plugins/tutorials/udt-deep-dive/plugin-workflows/'
+                  },
+                  {
+                    title: 'Working with React',
+                    path: '/plugins/tutorials/udt-deep-dive/working-with-react/'
+                  },
+                ],
               },
               {
-                title: 'My Second Tutorial',
-                path: '/plugins/tutorials/my_second_tutorial/'
+                title: 'Adding command entrypoints',
+                path: '/plugins/tutorials/adding-command-entrypoints/'
               },
+              {
+                title: "Lifecycle hooks",
+                path: "/plugins/tutorials/plugin-lifecycle-hooks/"
+              },
+              {
+                title: "Communicate with other plugins",
+                path: "/plugins/tutorials/inter-plugin-comm/"
+              },
+              {
+                title: "Modularizing code",
+                path: "/plugins/tutorials/importing-modules/"
+              }
             ]
           },
           {
@@ -132,12 +157,12 @@ module.exports = {
             header: true,
             pages: [
               {
-                title: 'Concept One',
-                path: 'resources/fundamentals/concept_1/'
+                title: 'APIs',
+                path: '/resources/fundamentals/apis/'
               },
               {
-                title: 'Concept Two',
-                path: 'resources/fundamentals/concept_2/'
+                title: "Create UI",
+                path: "/resources/fundamentals/create-ui/"
               },
             ]
           },
@@ -162,19 +187,7 @@ module.exports = {
           {
             title: 'Recipes',
             path: 'resources/recipes/',
-            pages: [
-              {
-                title: 'Premiere Pro Recipes',
-                path: 'resources/recipes/ppro_recipes',
-                pages: require('./reference_recipes_ppro.js'),
-              },
-              {
-                title: 'UXP Recipes',
-                path: 'resources/recipes/uxp_recipes',
-                pages: require('./reference_recipes_uxp.js'),
-              }
-
-            ]
+            pages: require("./reference-recipes.js"),
           },
         ]
       },
