@@ -778,7 +778,7 @@ window.addEventListener("message", (event) => \{
     </tbody>
 </table>
 
-<p>Find the detailed <a href="../../../reference/uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement/">WebView API reference</a> or use the webview-starter template plugin in UDT.</p>
+<p>Find the detailed <a href="../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement/">WebView API reference</a> or use the webview-starter template plugin in UDT.</p>
 
 #### LaunchProcessPermission
 
@@ -908,7 +908,7 @@ window.addEventListener("message", (event) => \{
         <td><inlineCode>boolean</inlineCode></td>
         <td>optional</td>
         <td>
-            <p>Enables the plugin to use <a href="https://developer.adobe.com/premiere-pro/uxp/reference/uxp-api/reference-spectrum/swc/">Spectrum Web Components</a> (requires installing and importing the components separately)</p>
+            <p>Enables the plugin to use <a href="https://developer.adobe.com/premiere-pro/uxp/uxp-api/reference-spectrum/swc/">Spectrum Web Components</a> (requires installing and importing the components separately)</p>
             <p><strong>Example</strong></p>
             <code class="language-html">{`<sp-button variant="primary">
     Click me

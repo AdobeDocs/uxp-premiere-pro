@@ -259,10 +259,10 @@ async function readFileUsingTokensInLocalFileSystem() {
 ```
 
 #### Reference material
-- Instance of [localFileSystem](../../../reference/uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider/)
-- [Entry](../../../reference/uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Entry/) and [Entry metadata](../../../reference/uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/EntryMetadata/)
-- [File](../../../reference/uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/File/) and [Folder](../../../reference/uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Folder/)
-- [Path](../../../reference/uxp-api/reference-js/Global%20Members/Path/)
+- Instance of [localFileSystem](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider/)
+- [Entry](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Entry/) and [Entry metadata](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/EntryMetadata/)
+- [File](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/File/) and [Folder](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Folder/)
+- [Path](../../../uxp-api/reference-js/Global%20Members/Path/)
 
 ### FS Module
 Based on NodeJS file system APIs, these provide direct access to file locations with the help of schema.
@@ -322,8 +322,8 @@ async function foo() {
 ```
 
 #### Reference material
-- [FS module](../../../reference/uxp-api/reference-js/Modules/fs/)
-- [Path](../../../reference/uxp-api/reference-js/Global%20Members/Path/)
+- [FS module](../../../uxp-api/reference-js/Modules/fs/)
+- [Path](../../../uxp-api/reference-js/Global%20Members/Path/)
 
 
 ## Additional Notes

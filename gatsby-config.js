@@ -52,7 +52,7 @@ module.exports = {
           },
           {
             title: 'UXP API',
-            path: 'reference/uxp-api/'
+            path: 'uxp-api/'
           },
         ]
       },
@@ -198,15 +198,15 @@ module.exports = {
       },
       {
         title: 'UXP API Referencee',
-        path: 'reference/uxp-api/',
+        path: 'uxp-api/',
         pages: [{
           title: "JavaScript Reference",
-          path: "/reference/uxp-api/reference-js/",
+          path: "/uxp-api/reference-js/",
           pages: require("./reference-js.js"),
         },
         {
           title: "CSS Reference",
-          path: "/reference/uxp-api/reference-css/",
+          path: "/uxp-api/reference-css/",
           pages: require("./reference-css.js"),
         },
         {
@@ -221,7 +221,7 @@ module.exports = {
         },
         {
           title: "Known Issues",
-          path: "/reference/uxp-api/known-issues/",
+          path: "/uxp-api/known-issues/",
         }]
       }
     ]

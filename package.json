@@ -34,12 +34,12 @@
     "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1",
     "predev": "npm run prepare-uxp",
     "prebuild": "npm run prepare-uxp",
-    "_copy-uxp-html": "rm -rf src/pages/reference/uxp-api/reference-html && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-html src/pages/reference/uxp-api/ && cp node_modules/uxp-documentation/reference-html.js reference-html.js",
-    "_copy-uxp-spectrum": "rm -rf src/pages/reference/uxp-api/reference-spectrum && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-spectrum src/pages/reference/uxp-api/ && cp node_modules/uxp-documentation/reference-spectrum.js reference-spectrum.js",
-    "_copy-uxp-js": "rm -rf src/pages/reference/uxp-api/reference-js && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-js src/pages/reference/uxp-api/ && cp node_modules/uxp-documentation/reference-js.js reference-js.js",
-    "_copy-uxp-css": "rm -rf src/pages/reference/uxp-api/reference-css && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-css src/pages/reference/uxp-api/ && cp node_modules/uxp-documentation/reference-css.js reference-css.js",
+    "_copy-uxp-html": "rm -rf src/pages/uxp-api/reference-html && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-html src/pages/uxp-api/ && cp node_modules/uxp-documentation/reference-html.js reference-html.js",
+    "_copy-uxp-spectrum": "rm -rf src/pages/uxp-api/reference-spectrum && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-spectrum src/pages/uxp-api/ && cp node_modules/uxp-documentation/reference-spectrum.js reference-spectrum.js",
+    "_copy-uxp-js": "rm -rf src/pages/uxp-api/reference-js && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-js src/pages/uxp-api/ && cp node_modules/uxp-documentation/reference-js.js reference-js.js",
+    "_copy-uxp-css": "rm -rf src/pages/uxp-api/reference-css && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-css src/pages/uxp-api/ && cp node_modules/uxp-documentation/reference-css.js reference-css.js",
     "_copy-uxp": "npm run _copy-uxp-js && npm run _copy-uxp-css && npm run _copy-uxp-html && npm run _copy-uxp-spectrum",
-    "_copy-uxp-misc-files": "cp node_modules/uxp-documentation/src/pages/uxp-api/*.md src/pages/reference/uxp-api/",
+    "_copy-uxp-misc-files": "cp node_modules/uxp-documentation/src/pages/uxp-api/*.md src/pages/uxp-api/",
     "prepare-uxp": "npm run _copy-uxp && npm run _copy-uxp-misc-files"
   },
   "remarkConfig": {

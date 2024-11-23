@@ -186,6 +186,6 @@ async function foo() {
 
 
 ## Reference material
-- [fetch API](../../../reference/uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch/)
-- [XHR API](../../../reference/uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest/)
-- [WebSocket API](../../../reference/uxp-api/reference-js/Global%20Members/Data%20Transfers/WebSocket/)
+- [fetch API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch/)
+- [XHR API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest/)
+- [WebSocket API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/WebSocket/)

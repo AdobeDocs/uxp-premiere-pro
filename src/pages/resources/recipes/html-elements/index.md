@@ -122,6 +122,6 @@ function showDialog() {
 - You can also use `document.createElement` to createSpectrum Widgets `sp-*` in UXP. However, it will not work for Spectrum Web Components.
 
 ## Reference material
-- [Dialog Element](../../../reference/uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/)
-- [Other HTML Elements](../../../reference/uxp-api/reference-js/Global%20Members/HTML%20Elements/)
+- [Dialog Element](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/)
+- [Other HTML Elements](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/)
 

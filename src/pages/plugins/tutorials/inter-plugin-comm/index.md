@@ -138,4 +138,4 @@ function doThing(args) {
     
 
 ## Reference docs
-- [Plugin Manager](../../../reference/uxp-api/reference-js/Modules/uxp/Plugin%20Manager/PluginManager/)
+- [Plugin Manager](../../../uxp-api/reference-js/Modules/uxp/Plugin%20Manager/PluginManager/)
