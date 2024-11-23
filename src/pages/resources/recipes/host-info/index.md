@@ -40,7 +40,7 @@ Application: Premiere Pro v25.1.0 powered by uxp-7.1.0
 
 
 ## Reference material
-- [Host](/premiere-pro/uxp/reference/uxp-api/reference-js/Modules/uxp/Host%20Information/Host/) APIs
-- [Versions](/premiere-pro/uxp/reference/uxp-api/reference-js/Modules/uxp/Versions/Versions/) APIs
-- [OS](/premiere-pro/uxp/reference/uxp-api/reference-js/Modules/os/OS/) APIs
+- [Host](../../../reference/uxp-api/reference-js/Modules/uxp/Host%20Information/Host/) APIs
+- [Versions](../../../reference/uxp-api/reference-js/Modules/uxp/Versions/Versions/) APIs
+- [OS](../../../reference/uxp-api/reference-js/Modules/os/OS/) APIs
 

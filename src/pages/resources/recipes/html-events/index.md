@@ -86,4 +86,4 @@ function foo(event) {
 
 
 ## Reference material
-- [HTML Events](/premiere-pro/uxp/reference/uxp-api/reference-js/Global%20Members/HTML%20Events/)
+- [HTML Events](../../../reference/uxp-api/reference-js/Global%20Members/HTML%20Events/)

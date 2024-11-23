@@ -62,8 +62,8 @@ exampleDiv.style.backgroundColor = 'orange';
 
 
 ## Reference material
-- [CSS reference](/premiere-pro/uxp/reference/uxp-api/reference-css/)
-- [Spectrum-styled components](/premiere-pro/uxp/reference/uxp-api/reference-spectrum/) 
+- [CSS reference](../../../reference/uxp-api/reference-css/)
+- [Spectrum-styled components](../../../reference/uxp-api/reference-spectrum/) 
 <!-- [Sample]() // TODO link to kitchen sink plugin -->
 <!-- [Webpack template]() // TODO link to webpack template -->
 

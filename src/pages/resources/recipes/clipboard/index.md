@@ -70,6 +70,6 @@ async function foo() {
 
 
 ## Reference material
-- [Clipboard](/premiere-pro/uxp/reference/uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard/) APIs
+- [Clipboard](../../../references/uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard/) APIs
 
 

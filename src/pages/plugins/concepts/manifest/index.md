@@ -778,7 +778,7 @@ window.addEventListener("message", (event) => \{
     </tbody>
 </table>
 
-<p>Find the detailed <a href="/premiere-pro/uxp/uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement/">WebView API reference</a> or use the webview-starter template plugin in UDT.</p>
+<p>Find the detailed <a href="../../../reference/uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement/">WebView API reference</a> or use the webview-starter template plugin in UDT.</p>
 
 #### LaunchProcessPermission
 

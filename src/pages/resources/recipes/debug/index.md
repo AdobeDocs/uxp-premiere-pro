@@ -58,5 +58,5 @@ async function foo() {
 ```
 
 ## Additional notes
-- [UXP Alerts](/premiere-pro/uxp/reference/uxp-api/reference-js/Global%20Members/HTML%20DOM/alert/) are currently not supported in InDesign.
+- [UXP Alerts](../../../reference/uxp-api/reference-js/Global%20Members/HTML%20DOM/alert/) are currently not supported in InDesign.
 
