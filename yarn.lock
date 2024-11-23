@@ -33,7 +33,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:^4.11.0, @adobe/gatsby-theme-aio@npm:^4.14.10":
+"@adobe/gatsby-theme-aio@npm:^4.14.10":
   version: 4.14.12
   resolution: "@adobe/gatsby-theme-aio@npm:4.14.12"
   dependencies:
@@ -8296,7 +8296,7 @@ __metadata:
     react-dom: ^17.0.2
     remark-cli: ^11.0.0
     remark-validate-links: ^12.1.0
-    uxp-ppro-documentation: "github:adobedocs/PPro-UXP"
+    uxp-documentation: "github:adobedocs/uxp#v8.0.1"
   languageName: unknown
   linkType: soft
 
@@ -21014,15 +21014,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uxp-ppro-documentation@github:adobedocs/PPro-UXP":
-  version: 1.0.0
-  resolution: "uxp-ppro-documentation@https://github.com/adobedocs/PPro-UXP.git#commit=413fe3c662a14fc4085a78ac22bbe91e2727658f"
-  dependencies:
-    "@adobe/gatsby-theme-aio": ^4.11.0
-    gatsby: 4.22.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  checksum: dec9868b2f2ca349bed8c1e8154d7be86d91b6032ff9d6d26059fb6ad39c5a227008f81bac4060f2bfcb8c844bcbb0db8fb65087d62e04f48f3ce65ccdf4387c
+"uxp-documentation@github:adobedocs/uxp#v8.0.1":
+  version: 8.0.0
+  resolution: "uxp-documentation@https://github.com/adobedocs/uxp.git#commit=5fd9006c15768dfc26e5b414f9d5b866d86c9fbd"
+  checksum: 17b3de1e5003c8e2de9e0bd7924b3e1213beb5048310de6cb201377ab630d640d2949c4046a3036e4fc680e8850d999cc3d0fc2b58788aefa4600ae1521fbef6
   languageName: node
   linkType: hard
 

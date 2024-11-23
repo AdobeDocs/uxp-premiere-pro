@@ -1,3 +1,4 @@
 # Recipes
 
-Stuff goes here...
+This section presents bite-size examples of common use cases.
+
