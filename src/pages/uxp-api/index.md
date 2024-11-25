@@ -1,32 +1,8 @@
----
-id: "Cross-Application UXP API"
-title: Cross-Application UXP API
-description: Generic UXP documentation that is avaialable across many Adobe applications
----
+# UXP API Reference
 
-# Cross-Appliction UXP API Reference
+* [JavaScript Reference](reference-js/index.md) : Technical documentation regarding the functions, classes, and modules available globally (on window, for example) and via `require`.
+* [CSS Reference](reference-css/index.md) : Technical documentation regarding the kinds of CSS styles and features available in UXP.
+* [HTML Reference](reference-html/index.md) : Technical documentation regarding some of the HTML elements and attributes that are supported.
+* [Spectrum UXP Reference](reference-spectrum/index.md) : Information on the Spectrum UXP Widgets and Spectrum Web Components, and their capabilities.
+* [Known Issues](known-issues.md): List of known issues in UXP
 
-## There's More!
-
-Premiere Pro's UXP API extends functionality of the base UXP API shared across many Adobe applications.  Documentation for this shared API is currently hosted on the Photoshop Developer Site.
-
-<ProductCard slots="icon, heading, text, buttons" theme="lightest" width="100%" />
-
-![Photoshop icon](./photoshop.svg)
-
-#### Photoshop Developer Site
-
-Click the button below to access the base UXP API documentation included on the Photoshop Developer Site.
-
-- [Jump to Photoshop Documentation](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/)
-
-<!-- ## There's more!
-
-Premiere Pro's UXP API extends functionality of the base UXP API shared across many Adobe applications.  Documentation for this shared API is currently hosted on the Photoshop Developer Site.
-
-
-Please follow [this link to the Photoshop Developer Site](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/) to explore the additonal cross-applictaion UXP documentation. -->
-
-<InlineAlert variant="warning" slots="text1[n]"/>
-
-**Note:** By following the Photoshop Developer Site link above, you will exit the Premiere Pro Developer Site.
