@@ -22,10 +22,6 @@ Additionally, UDT also provides a few templates that you can choose from while c
 
 ![Templates in UDT](create-plugin-template.png)
 
-## In-app helpers
-InDesign has a bunch of sample UXP Scripts readily available within the app. Find them under Windows-> Utilities -> Scripts panel. <br></br>
-
-![Packaged sample scripts](scripts-panel.png)
 
 ## Recipes
 The next section of [recipes](../recipes/) also has examples of common use cases. 
