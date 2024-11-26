@@ -10,6 +10,7 @@ contributors:
 
 
 # Launch process
+
 UXP core APIs also offer `shell` APIs to launch processes in the user's system.
 
 
@@ -30,6 +31,7 @@ IMPORTANT: Please read about the [manifest permissions](../../../plugins/concept
 -->
 
 ## System requirements
+
 Please make sure your local environment uses the following application versions before proceeding.
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
@@ -68,6 +70,7 @@ async function foo() {
 ![User consent for open-path](open-path.png)
 
 ## Launch a process
+
 You can open an application in the user's system with the help of URL Schemes
 
 ### Example
@@ -99,11 +102,13 @@ async function foo() {
 ![User consent for open external](open-external.png)
 
 ## Additional notes
+
 - The user will be asked to provide their consent for such operations. Give more context to the user by adding a note. For example the message "Opening browser for testing purpose." in the above example.
 - Be prepared in case the user denies the request.
 - While using `openExternal`, keep in mind, that URL schemes are operating system specific. For example, `facetime` is not available in Windows. Same with custom schemes. Add pre-checks and use standard URL schemes to avoid unexpected errors.
 
 
 ## Reference material
+
 - [Shell API](../../../uxp-api/reference-js/Modules/shell/Shell/)
 

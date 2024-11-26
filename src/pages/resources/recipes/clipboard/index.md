@@ -9,10 +9,11 @@ contributors:
 ---
 
 # Clipboard
+
 Read and write content from and to the clipboard.
 
-
 ## System requirements
+
 Please make sure your local environment uses the following application versions before proceeding.
 - Premiere Pro v25.1 or higher
 - UXP version v7.1 or higher
@@ -66,10 +67,12 @@ async function foo() {
 ```
 
 ## Additional notes
+
 - Set the permission to "read" if your script/plugin only intends to read from the clipboard.
 
 
 ## Reference material
+
 - [Clipboard](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard/) APIs
 
 

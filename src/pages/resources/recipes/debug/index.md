@@ -13,6 +13,7 @@ contributors:
 While writing complex logic, you might be in the cycle of testing/debugging your code. Although UDT -> Debug lets you set breakpoints and debug your code using Chrome Debug Tool, these couple of techniques may also prove handy.
 
 ## System requirements
+
 Please make sure your local environment uses the following application versions before proceeding.
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
@@ -32,12 +33,12 @@ async function foo() {
 ```
 
 ## Alerts
+
 Create a modal dialog that pauses the execution of your script/plugin until you dismiss it.
 
 <CodeBlock slots="heading, code" repeat="1" languages="JavaScript" />
 
 #### JavaScript
-
 ```js
 function alert(msg) {
     const { app } = require("indesign");
@@ -58,5 +59,6 @@ async function foo() {
 ```
 
 ## Additional notes
+
 - [UXP Alerts](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert/) are currently not supported in InDesign.
 

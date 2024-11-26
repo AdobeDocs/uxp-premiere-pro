@@ -49,6 +49,7 @@ As mentioned earlier, UXP has `fetch`, `XHR (XML HTTP Request)`, and `WebSocket`
 
 
 ## System requirements
+
 Please make sure your local environment uses the following application versions before proceeding.
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
@@ -56,6 +57,7 @@ Please make sure your local environment uses the following application versions 
 
 
 ## Examples
+
 Now, let's look at some examples.
 
 ### fetch
@@ -179,6 +181,7 @@ async function foo() {
 ```
 
 ## Additional notes
+
 - These APIs are available in the global scope. Observe that you didn't have to mount them using `require`.
 - The `domains` in the plugin's manifest also let you configure variations of the endpoints. For example, your plugin may like to access 'api.dev.example.com', 'api.stage.example.com' or 'api.prod.example.com' depending upon the environment. You can configure the domains with `["https://api.*.example.com"]` to manage all three.
 - While using `http` domains, keep in mind that Photoshop only allows http protocol on Win32 but not on macOS. InDesign has no such restrictions.
@@ -186,6 +189,7 @@ async function foo() {
 
 
 ## Reference material
+
 - [fetch API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch/)
 - [XHR API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest/)
 - [WebSocket API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/WebSocket/)

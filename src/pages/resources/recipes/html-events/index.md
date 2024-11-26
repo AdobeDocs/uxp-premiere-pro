@@ -10,6 +10,7 @@ contributors:
 
 
 # HTML events and event listeners
+
 There are different techniques to capture an HTML event and add `eventlisteners` to an element.
 
 The technique you choose is simply your preference. Pick the method you feel most comfortable with. However, you need to configure one particular permission for inline event handlers, such as `<button onclick="btnClick()">Click Me</button>` 
@@ -26,6 +27,7 @@ IMPORTANT: Please read about the [manifest permissions](../../../plugins/concept
 
 
 ## System requirements
+
 Please make sure your local environment uses the following application versions before proceeding.
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
@@ -82,8 +84,10 @@ function foo(event) {
 ```
  
 ## Additional notes
+
 - The above examples will also work for Spectrum Widgets and Spectrum Web Components in UXP.
 
 
 ## Reference material
+
 - [HTML Events](../../../uxp-api/reference-js/Global%20Members/HTML%20Events/)

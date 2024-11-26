@@ -24,12 +24,14 @@ UXP core APIs let you create renditions but depending on whether you are writing
 Let's take 'dialog' as an example and demonstrate both ways. You can extend the same principle to other HTML Elements
 
 ## System requirements
+
 Please make sure your local environment uses the following application versions before proceeding.
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
 - Manifest version v5 or higher
 
 ## Using HTML
+
 <!-- Provide a simple example using code snippets -->
 
 <CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, CSS" />
@@ -118,10 +120,12 @@ function showDialog() {
 ![Sample dialog](sample-dialog.png)
 
 ## Additional notes
+
 - Creating dialogs within scripts can sometimes be a little tricky requiring you to handle the showing/hiding with async/promises. Check out the script tutorial on modal dialogs.<!--// TODO add linkI>
 - You can also use `document.createElement` to createSpectrum Widgets `sp-*` in UXP. However, it will not work for Spectrum Web Components.
 
 ## Reference material
+
 - [Dialog Element](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/)
 - [Other HTML Elements](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/)
 

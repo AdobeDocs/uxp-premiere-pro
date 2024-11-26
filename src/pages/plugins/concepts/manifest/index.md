@@ -12,6 +12,7 @@ contributors:
 import './table-styles.css';
 
 # UXP Manifest
+
 The manifest is a JSON file that is located at the root of the plugin bundle. It is named `manifest.json` and is
 required for all plugins.
 
@@ -88,6 +89,7 @@ Properties marked with an asterisk (\*) are required.
 Properties marked with an asterisk (\*) are required.
 
 <h4>Properties</h4>
+
 <table className="manifest-table" columnWidths="10,20,10,60">
     <thead>
     <tr>

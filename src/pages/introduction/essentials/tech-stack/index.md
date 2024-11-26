@@ -24,9 +24,11 @@ Please remember that since JavaScript, HTML or CSS are the foundational web tech
 UXP is **not** a full-blown browser or server-side JS engine like NodeJS. Though it allows you to use the same syntax, it does not intend to behave like a browser and consequently will support only a subset of the web APIs. This means, not all the HTML Elements or CSS classes or JavaScript APIs will be available in the UXP world. 
 
 ## System requirements
+
 Your system must meet these minimum requirements for [Premiere Pro](https://helpx.adobe.com/premiere-pro/system-requirements.html) application.
 
 ## Reading material
+
 Start by getting acquainted with the basics of JS, HTML, and CSS.
 
 - [Introduction to JavaScript](https://javascript.info/intro) and its [basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
@@ -45,11 +47,13 @@ Apart from the basics, the following additional topics will also come in handy. 
 - Different ways of declaring JS functions - [traditional style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function) vs using the [fat arrow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
 ## Chrome debug tool (CDT)
+
 One of the easiest ways to debug these technologies is by using the Chrome Debug Tool. We will be using the same within our developer tool called UDT, which stands for the UXP Developer Tool. A high-level understanding of CDT will be very useful for you later.
 
 Please familiarize yourself with the [Chrome Debug tool](https://developer.chrome.com/docs/devtools/overview/), especially the ways to [access DOM](https://developer.chrome.com/docs/devtools/dom/), [modify CSS](https://developer.chrome.com/docs/devtools/css/) and [debug JS](https://developer.chrome.com/docs/devtools/javascript/) by adding breakpoints.
 
 ## Frameworks
+
 So far we have spoken about plain JS, HTML, and CSS. However, the industry offers various frameworks that act as an abstract layer on top of these web technologies. These frameworks aim to provide you with a quicker, and more efficient way of writing reusable code.
  
 React, Vue, and Svelte are some of the popular frameworks, that developers often find useful. To use such frameworks is optional and is your personal choice. But, since these are one layer above the plain web technologies, you would require additional tools to run such projects.

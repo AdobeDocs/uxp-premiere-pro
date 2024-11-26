@@ -21,11 +21,13 @@ The UXP platform has two main constituents
 You will see a few examples of these APIs in the [recipes](../../recipes/) but for now, just try and understand the difference between them.
 
 ## UXP Core APIs
+
 These APIs enable you to create user interfaces, perform file operations, make network calls, etc. 
 
 The method to mount or use these APIs may vary. Many of them are directly available in the global scope, such as [Crypto](../../../uxp-api/reference-js/Global%20Members/Crypto/) and [Documents](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Document/). But for certain modules, you first need to seek permission in the manifest (for plugins) or mount it specifically using `require()`. For example, `require(os)` or `require('uxp').shell`.
 
 ## Host-specific APIs
+
 These APIs are meant for modifying or interacting with the document.
 
 <InlineAlert slots="text1, text2, text3" />

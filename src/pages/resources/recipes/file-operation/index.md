@@ -15,6 +15,7 @@ To perform any file operations including read, write, create, and delete, UXP pr
 
 
 ## System requirements
+
 Please make sure your local environment uses the following application versions before proceeding.
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
@@ -23,6 +24,7 @@ Please make sure your local environment uses the following application versions 
 ## Concepts
 
 ### Sandbox and other locations
+
 UXP, by default, only allows access to certain locations in the user's file system. These locations are referred to as the sandbox. 
 
 <!-- InlineAlert variant="info" slots="header, text1, text2"/-->
@@ -38,6 +40,7 @@ However, we understand that there are circumstances when you would like to acces
 
 
 ### Manifest permission
+
 For file system access you require permission for the `localFileSystem` module.
 
 <InlineAlert variant="info" slots="header, text1, text2"/>
@@ -66,6 +69,7 @@ Allowed values for `localFileSystem` are:
 *Protip*: Make sure you pick the most accurate permission for your use case because in the future we may ask users to provide their consent based on it. You may find 'fullAccess' to be the least restrictive and hence the safest to pick, but a user may not be comfortable giving full access to their system unless it's absolutely necessary and might deny the installation of your plugin. 
 
 ### Schemes
+
 UXP provides a shorthand representation of these locations via schemes.
 
 For sandbox, you can use `plugin:/`, `plugin-data:/`and `plugin-temp:/`.
@@ -90,9 +94,11 @@ You have two options to access the file system - `LocalFileSytem` and `FS` modul
 `LocalFileSytem` APIs work with an object reference called `Entry`. Having an object reference makes it easier to manage and perform multiple operations. Whereas the `FS` APIs are very similar to NodeJS path-based file system APIs which make them ideal for carrying out single operations. 
 
 ### LocalFileSytem API
+
 Available via `require('uxp').storage.localFileSystem` which returns an instance of `FileSystemProvider`.
 
 #### Nomenclature
+
 A file system is a conglomerate of files and folders. You can use the `File` and `Folder` classes to refer to them. However, these classes have a base class called `Entry`. The nomenclature of some of the APIs uses 'entry' in them typically when the output type can be either of the two - `File` or `Folder` and be determined only at runtime. Therefore, it's a good practice to check using `isfile` or `isFolder` before using specific APIs.
 
 ```js
@@ -259,12 +265,14 @@ async function readFileUsingTokensInLocalFileSystem() {
 ```
 
 #### Reference material
+
 - Instance of [localFileSystem](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider/)
 - [Entry](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Entry/) and [Entry metadata](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/EntryMetadata/)
 - [File](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/File/) and [Folder](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Folder/)
 - [Path](../../../uxp-api/reference-js/Global%20Members/Path/)
 
 ### FS Module
+
 Based on NodeJS file system APIs, these provide direct access to file locations with the help of schema.
 
 **Accessing sandbox**
@@ -322,9 +330,11 @@ async function foo() {
 ```
 
 #### Reference material
+
 - [FS module](../../../uxp-api/reference-js/Modules/fs/)
 - [Path](../../../uxp-api/reference-js/Global%20Members/Path/)
 
 
 ## Additional Notes
+
 - Despite the manifest setting `fullAccess`, certain files and folders may still not be accessible. It depends on the permission of the Operating System. For Win32 and Mac, these APIs can access anywhere in the file system. But, in UWP, accessing the system folder is prohibited.

@@ -26,6 +26,7 @@ Additionally, you will need
 - `enablePluginCommunication` permission for your plugin
 
 ## System requirements
+
 Please make sure your local environment uses the following application versions before proceeding.
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher

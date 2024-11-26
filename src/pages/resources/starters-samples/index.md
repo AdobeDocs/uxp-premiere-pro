@@ -10,20 +10,24 @@ contributors:
 ---
 
 # Starters and samples
+
 To help you start writing <!--scripts and -->plugins to solve real-world problems, you can use the samples and starter templates.
 
 Consider 'samples' to be a working example of a specific feature. Whereas, a 'starter' is meant to assist you with the framework setup.
 
 ## Git repo
+
 You can find samples and starters for scripts/plugins [here](https://github.com/AdobeDocs/uxp-indesign-samples). 
 
 ## UDT
+
 Additionally, UDT also provides a few templates that you can choose from while creating a new plugin. <br></br>
 
 ![Templates in UDT](create-plugin-template.png)
 
 
 ## Recipes
+
 The next section of [recipes](../recipes/) also has examples of common use cases. 
 
 <br></br> <br></br> 

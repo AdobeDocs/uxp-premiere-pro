@@ -18,6 +18,7 @@ Assuming that you already have successfully installed UDT and created your first
 
 
 ## Side pane
+
 The side pane lets you view some basic settings within UDT.
 
 

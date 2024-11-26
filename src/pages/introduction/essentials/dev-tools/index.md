@@ -14,6 +14,7 @@ contributors:
 While writing UXP<!--scripts--> and plugins, the following tools will make your job easier.
 
 ## Code Editor
+
 A good text editor is necessary for you to organize your project effectively. Any modern developer-friendly text editor should work, but one of the popular choices is [Visual Studio Code](https://code.visualstudio.com), which has deep integrations with the other pieces needed for UXP, and a wide variety of its plugins to help with code formatting, syntax checking, JSON parsing, and so on.
 
 
@@ -32,6 +33,7 @@ Additionally, for plugins,
 The Adobe UXP Developer Tool requires elevated privileges to function correctly. If your administrator does not enable your ability to elevate to Administrator privileges, you'll be unable to use this tool.
 
 ### Installation
+
 Install UDT by clicking [here](https://creativecloud.adobe.com/apps/download/uxp-developer-tools) or by following these steps:
 1. Launch Adobe Creative Cloud Application. If not installed, [download and install Creative Cloud](https://creativecloud.adobe.com/apps/download/creative-cloud).
 2. Sign in with your Adobe account if not already signed in.

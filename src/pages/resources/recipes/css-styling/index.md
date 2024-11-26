@@ -8,6 +8,7 @@ contributors:
 ---
 
 # CSS styling
+
 Spectrum is Adobe's design system, used across multiple applications. We recommend that you use Spectrum-based controls wherever possible for UI, for consistency. In fact, UXP offers a ready-made Spectrum-styled UI library. 
 
 While you are exploring importing a stylesheet or making tweaks, you should keep in mind that **UXP is not a browser**. Its architecture does not (and will not) support all the CSS properties. For example, UXP cannot support grid layout innately. The ones that are supported are listed in the [API reference docs](./#reference-material). 
@@ -16,12 +17,14 @@ While you are exploring importing a stylesheet or making tweaks, you should keep
 
 
 ## System requirements
+
 Please make sure your local environment uses the following application versions before proceeding.
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
 - Manifest version v5 or higher
 
 ## Example
+
 Example to add a background color to divs in three different ways:
 - CSS class
 - Inline style
@@ -58,10 +61,12 @@ exampleDiv.style.backgroundColor = 'orange';
 ```
 
 ## Additional notes
+
 - **CSS preprocessors**: UXP understands pure CSS only. Using CSS preprocessors such as SASS or SCSS is possible, provided you transpile your code to a CSS stylesheet before using it. Additionally, you will require a tool like Webpack to create your plugin bundle correctly and a slightly different way to [debug using UDT](../../../plugins/tutorials/udt-deep-dive/working-with-react/) (similar to React framework setup).
 
 
 ## Reference material
+
 - [CSS reference](../../../uxp-api/reference-css/)
 - [Spectrum-styled components](../../../uxp-api/reference-spectrum/) 
 <!-- [Sample]() // TODO link to kitchen sink plugin -->
