@@ -3,7 +3,7 @@ title: Host information
 description: Find the host info to determine locale, os etc
 keywords:
   - Host API
-  - code sample 
+  - code sample
   - locale
 contributors:
   - https://github.com/padmkris123
@@ -16,6 +16,7 @@ Sometimes it's necessary to find out the host environment where a plugin or scri
 ## System requirements
 
 Please make sure your local environment uses the following application versions before proceeding.
+
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
 - Manifest version v5 or higher
@@ -25,6 +26,7 @@ Please make sure your local environment uses the following application versions 
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript,text" />
 
 #### JavaScript
+
 ```js
 async function foo() {
     const { host, versions } = require('uxp');
@@ -37,15 +39,13 @@ async function foo() {
 
 #### Output
 
-```
+```text
 System information: darwin v21.1.0
 Application: Premiere Pro v25.1.0 powered by uxp-7.1.0
 ```
-
 
 ## Reference material
 
 - [Host](../../../uxp-api/reference-js/Modules/uxp/Host%20Information/Host/) APIs
 - [Versions](../../../uxp-api/reference-js/Modules/uxp/Versions/Versions/) APIs
 - [OS](../../../uxp-api/reference-js/Modules/os/OS/) APIs
-

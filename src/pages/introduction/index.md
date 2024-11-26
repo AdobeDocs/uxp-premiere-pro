@@ -21,6 +21,7 @@ UXP is a JavaScript ES6 (ECMA2015) based extensibility platform that helps you a
 An **IMPORTANT** thing to note is that though UXP enables you to use web technologies, it should not be mistaken as a browser. Certain concepts of the browser will never be available in the UXP world but the platform offers a plethora of capabilities that allows you to build powerful and creative solutions.
 
 With UXP you can, 
+
 1. Automate the myriad, small, annoying tasks that you face every day.
 2. Achieve creative effects that would be difficult or impossible to attain by other means.
 3. Customize Premiere Pro to match your work habits and layouts.

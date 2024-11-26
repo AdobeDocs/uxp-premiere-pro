@@ -8,26 +8,25 @@ contributors:
   - https://github.com/padmkris123
 ---
 
-
 # Launch process
 
 UXP core APIs also offer `shell` APIs to launch processes in the user's system.
 
-
 There are primarily two things you can do with the help of these APIs
+
 1. Open a file using the standard application. For example, open a PDF in Acrobat Reader.
 2. Launch applications. For example, open the mail client with an email address.
 
-Before we take a look at some examples, you must know that these APIs are associated with the `launchProcess` permission in the manifest. 
+Before we take a look at some examples, you must know that these APIs are associated with the `launchProcess` permission in the manifest.
 
 <!--InlineAlert variant="info" slots="header, text1, text2"/-->
 
 <!--Plugins and Scripts -->
 
-**In plugins**, you should specify the schemes and file extensions in the `launchProcess` permission in your manifest for it to work.<br></br> 
+**In plugins**, you should specify the schemes and file extensions in the `launchProcess` permission in your manifest for it to work.<br></br>
 IMPORTANT: Please read about the [manifest permissions](../../../plugins/concepts/manifest/#permissionsdefinition) module before you proceed.
 
-<!--**In scripts**, the permission for `launchProcess` is fixed. You can ignore the manifest details in the following examples. Learn about these values in the [manifest fundamentals section](../../fundamentals/manifest/). 
+<!--**In scripts**, the permission for `launchProcess` is fixed. You can ignore the manifest details in the following examples. Learn about these values in the [manifest fundamentals section](../../fundamentals/manifest/).
 -->
 
 ## System requirements
@@ -46,6 +45,7 @@ For opening a file, you must provide the full path of the file and specify the `
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JSON" />
 
 #### JavaScript
+
 ```js
 async function foo() {
     const { shell }  = require("uxp");
@@ -58,6 +58,7 @@ async function foo() {
 ```
 
 #### manifest
+
 ```json
 {
     "launchProcess": {
@@ -65,7 +66,6 @@ async function foo() {
     }
 }
 ```
-
 
 ![User consent for open-path](open-path.png)
 
@@ -78,6 +78,7 @@ You can open an application in the user's system with the help of URL Schemes
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JSON" />
 
 #### JavaScript
+
 ```js
 async function foo() {
     const { shell }  = require("uxp");
@@ -91,6 +92,7 @@ async function foo() {
 ```
 
 #### manifest
+
 ```json
 {
     "launchProcess": {
@@ -107,8 +109,6 @@ async function foo() {
 - Be prepared in case the user denies the request.
 - While using `openExternal`, keep in mind, that URL schemes are operating system specific. For example, `facetime` is not available in Windows. Same with custom schemes. Add pre-checks and use standard URL schemes to avoid unexpected errors.
 
-
 ## Reference material
 
 - [Shell API](../../../uxp-api/reference-js/Modules/shell/Shell/)
-

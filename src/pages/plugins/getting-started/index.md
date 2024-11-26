@@ -49,7 +49,7 @@ Then click **Select Folder** and choose a location on your machine where you wan
 
 The UXP Developer Tool will create a new folder with the name you specified in the location you specified. The folder will contain the following files:
 
-```
+```json
 My First Plugin
 ├── manifest.json
 ├── index.html
@@ -118,7 +118,6 @@ To see your changes, you'll need to reload the plugin in Premiere Pro. To do so,
 <InlineAlert slots="text" />
 
 If you make any changes to the `manifest.json` file, you'll need to fully unload and reload the plugin. To do so, in the UXP Developer Tool, in the row for your plugin, click **⋯ &rarr; Unload** and **⋯ &rarr; Load**:
-
 
 ## Next steps
 

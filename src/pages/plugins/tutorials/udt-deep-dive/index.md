@@ -16,11 +16,9 @@ UDT can help you manage, build and test your plugins more efficiently.
 
 Assuming that you already have successfully installed UDT and created your first plugin using it, let's deep-dive into other capabilities it offers.
 
-
 ## Side pane
 
 The side pane lets you view some basic settings within UDT.
-
 
 ### Connected apps
 
@@ -36,13 +34,11 @@ If for some reason you don't; it means UDT is unable to connect to the app. Make
 
 Update your preferences, should you need to change the Service Port, which UDT uses to communicate with host applications or switch to a different theme.
 
-
 ### Logs
 
 Open the logs panel to view logs from UDT and the host application.
 
 ![UDT logs](./images/udt-logs.png)
-
 
 ## Read more
 

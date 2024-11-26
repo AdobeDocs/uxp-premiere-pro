@@ -15,16 +15,17 @@ While writing complex logic, you might be in the cycle of testing/debugging your
 ## System requirements
 
 Please make sure your local environment uses the following application versions before proceeding.
+
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
 - Manifest version v5 or higher
-
 
 ## Console logs
 
 <CodeBlock slots="heading, code" repeat="1" languages="JavaScript" />
 
 #### JavaScript
+
 ```js
 async function foo() {
     console.log("foo"); // writes "foo" to the UXP Developer Tool console.
@@ -39,6 +40,7 @@ Create a modal dialog that pauses the execution of your script/plugin until you 
 <CodeBlock slots="heading, code" repeat="1" languages="JavaScript" />
 
 #### JavaScript
+
 ```js
 function alert(msg) {
     const { app } = require("indesign");
@@ -54,11 +56,10 @@ function alert(msg) {
 }
 
 async function foo() {
-    alert("foo"); 
+    alert("foo");
 }
 ```
 
 ## Additional notes
 
 - [UXP Alerts](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert/) are currently not supported in InDesign.
-

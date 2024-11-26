@@ -15,10 +15,10 @@ Read and write content from and to the clipboard.
 ## System requirements
 
 Please make sure your local environment uses the following application versions before proceeding.
+
 - Premiere Pro v25.1 or higher
 - UXP version v7.1 or higher
 - Manifest version v5 or higher
-
 
 <!-- InlineAlert variant="info" slots="header, text1, text2"/-->
 
@@ -28,12 +28,12 @@ Please make sure your local environment uses the following application versions 
 
 <!-- **In scripts**, the permission for `clipboard` is fixed. You can ignore the manifest details in the following examples. Learn about these values in the [manifest fundamentals section](../../fundamentals/manifest/). -->
 
-
 ## Example
 
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JSON" />
 
 #### JavaScript
+
 ```js
 async function foo() {
     const clipboard = navigator.clipboard;
@@ -58,6 +58,7 @@ async function foo() {
 ```
 
 #### manifest
+
 ```json
 {
     "requiredPermissions": {
@@ -70,9 +71,6 @@ async function foo() {
 
 - Set the permission to "read" if your script/plugin only intends to read from the clipboard.
 
-
 ## Reference material
 
 - [Clipboard](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard/) APIs
-
-

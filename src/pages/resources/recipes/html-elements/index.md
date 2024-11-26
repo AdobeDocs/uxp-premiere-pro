@@ -12,7 +12,6 @@ contributors:
 
 UXP core APIs let you create renditions but depending on whether you are writing scripts or plugins, you can create UI either by using HTML tags or just stick to JavaScript.
 
-
 <!--InlineAlert variant="info" slots="header, text1, text2"/-->
 
 <!--Scripts and plugins-->
@@ -26,6 +25,7 @@ Let's take 'dialog' as an example and demonstrate both ways. You can extend the 
 ## System requirements
 
 Please make sure your local environment uses the following application versions before proceeding.
+
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
 - Manifest version v5 or higher
@@ -37,6 +37,7 @@ Please make sure your local environment uses the following application versions 
 <CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, CSS" />
 
 #### HTML
+
 ```html
 <button id="showDialog">Show Dialog</button>
 <dialog id="sampleDialog">
@@ -48,6 +49,7 @@ Please make sure your local environment uses the following application versions 
 ```
 
 #### JavaScript
+
 ```js
 const showDialogBtn = document.getElementById("showDialog");
 showDialogBtn.addEventListener("click", showDialog);
@@ -61,6 +63,7 @@ function showDialog() {
 ```
 
 #### CSS
+
 ```css
 #sampleDialog > div {
     display: flex;
@@ -79,11 +82,13 @@ function showDialog() {
 <CodeBlock slots="heading, code" repeat="2" languages="HTML, JavaScript" />
 
 #### HTML
+
 ```html
 <button id="showDialog">Show Dialog</button>
 ```
 
 #### JavaScript
+
 ```js
 const showDialogBtn = document.getElementById("showDialog");
 showDialogBtn.addEventListener("click", showDialog);
@@ -107,10 +112,10 @@ function showDialog() {
     div.appendChild(para);
   
     dialog.appendChild(div);
-    
+
     // show dialog
     document.body.appendChild(dialog).showModal();
-    
+
     dialog.addEventListener("cancel", () => {
         console.log("Dialog dismissed");
     });
@@ -128,4 +133,3 @@ function showDialog() {
 
 - [Dialog Element](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/)
 - [Other HTML Elements](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/)
-

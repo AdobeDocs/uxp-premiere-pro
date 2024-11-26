@@ -13,7 +13,6 @@ A flyout menu in Premiere Pro is shown when the user clicks on the hamburger ico
 
 ![Flyout Menu](./flyoutmenu.png)
 
-
 <!-- Difference in behavior between scripts and plugins and prerequisites -->
 <!-- InlineAlert variant="info" slots="header, text1, text2"/>
 
@@ -23,12 +22,11 @@ Plugins and Scripts
 
 **In scripts**, Not Supported.
 -->
-
 ## System requirements
 
 Please make sure your local environment uses the following application versions before proceeding.
-- Premiere Pro v25.1 or higher
 
+- Premiere Pro v25.1 or higher
 
 For flexibility, flyout menus are defined by supplying a JSON structure to UXP at runtime, as in the example below.
 

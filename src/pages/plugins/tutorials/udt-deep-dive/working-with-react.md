@@ -33,4 +33,3 @@ When using bundlers or frameworks, you'll typically have a build step that watch
 * **••• > Watch** the desired plugin from the Developer Tool
 
 When your `watch` build process detects a change, it'll rebuild the plugin, and this will cause the Developer Tool to see the resulting build changes and reload the plugin in the host.
-

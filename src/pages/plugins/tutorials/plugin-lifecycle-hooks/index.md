@@ -10,16 +10,17 @@ contributors:
 
 
 # Plugin Lifecycle events
+
 You can detect whether or not your plugin panel is visible with the help of UXP APIs
 
 <InlineAlert variant="warning" slots="text1, text2, text3"/>
 
 **IMPORTANT**
 
-This is only applicable to plugins with a panel. You cannot detect the execution of a command plugin via these hooks. 
+This is only applicable to plugins with a panel. You cannot detect the execution of a command plugin via these hooks.
 Familiarize yourself with [plugin entrypoints](../../concepts/entry-points/) to know the difference between a command and a panel plugin.
 
-Also, for plugins that have multiple panels, you cannot differentiate between them, at present. 
+Also, for plugins that have multiple panels, you cannot differentiate between them, at present.
 
 
 ## Example
@@ -27,6 +28,7 @@ Also, for plugins that have multiple panels, you cannot differentiate between th
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JSON" />
 
 #### JavaScript
+
 ```js
 const entrypoints = require("uxp").entrypoints;
 entrypoints.setup({
@@ -50,6 +52,7 @@ entrypoints.setup({
 ```
 
 #### manifest
+
 ```json
 {
   /**/
@@ -77,7 +80,7 @@ entrypoints.setup({
 }
 ```
 
-<!-- 
+<!--
 ## Reference material
-// TODO add links to API reference 
+// TODO add links to API reference
 -->

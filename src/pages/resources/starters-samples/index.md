@@ -17,7 +17,7 @@ Consider 'samples' to be a working example of a specific feature. Whereas, a 'st
 
 ## Git repo
 
-You can find samples and starters for scripts/plugins [here](https://github.com/AdobeDocs/uxp-indesign-samples). 
+You can find samples and starters for scripts/plugins [here](https://github.com/AdobeDocs/uxp-indesign-samples).
 
 ## UDT
 
@@ -28,13 +28,13 @@ Additionally, UDT also provides a few templates that you can choose from while c
 
 ## Recipes
 
-The next section of [recipes](../recipes/) also has examples of common use cases. 
+The next section of [recipes](../recipes/) also has examples of common use cases.
 
-<br></br> <br></br> 
+<br></br> <br></br>
 
 ---
 
-Remember, that examples within scripts can also be used within plugins, and vice versa. After all, you can think of UXP plugins as UXP scripts + rich UI controls + manifest configuration. 
+Remember, that examples within scripts can also be used within plugins, and vice versa. After all, you can think of UXP plugins as UXP scripts + rich UI controls + manifest configuration.
 
 We would love to add more samples that cover relevant use cases. Please contribute to the repo and share your work with the community. Create a pull request and tag us for review.
  

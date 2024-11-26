@@ -4,7 +4,7 @@ title: Advanced Topics
 
 # Advanced topics
 
-There's a lot more to plugin development than what we've covered so far. For more advanced topics, please have a look at the [resources section](). Among other things, you'll find information about:
+There's a lot more to plugin development than what we've covered so far. For more advanced topics, please have a look at the [resources section](../../resources/). Among other things, you'll find information about:
 
 <MiniResourceCard slots="image,heading,text,link" repeat="5" theme="lightest" inRow="3"/>
 
@@ -32,7 +32,7 @@ Add a variety of UI elements to your plugin
 
 [Adding User Interfaces](../../resources/fundamentals/create-ui/)
 
-<!-- 
+<!--
 ![Complex hierarchical component structure icon](react.jpg)
 
 #### React
@@ -49,4 +49,3 @@ Use React to build highly interactive user interfaces
 See all the resources available to you for plugin development
 
 [All resources](../../resources/)
-

@@ -8,13 +8,11 @@ contributors:
   - https://github.com/padmkris123
 ---
 
-
 # HTML events and event listeners
 
 There are different techniques to capture an HTML event and add `eventlisteners` to an element.
 
-The technique you choose is simply your preference. Pick the method you feel most comfortable with. However, you need to configure one particular permission for inline event handlers, such as `<button onclick="btnClick()">Click Me</button>` 
-
+The technique you choose is simply your preference. Pick the method you feel most comfortable with. However, you need to configure one particular permission for inline event handlers, such as `<button onclick="btnClick()">Click Me</button>`
 
 <!--InlineAlert variant="info" slots="header, text1, text2"/-->
 
@@ -24,7 +22,6 @@ The technique you choose is simply your preference. Pick the method you feel mos
 IMPORTANT: Please read about the [manifest permissions](../../../plugins/concepts/manifest/#permissionsdefinition) module before you proceed.
 
 <!--**In scripts**, since you cannot add inline event listeners, this permission is not applicable.-->
-
 
 ## System requirements
 
@@ -40,12 +37,14 @@ Please make sure your local environment uses the following application versions 
 <CodeBlock slots="heading, code" repeat="2" languages="HTML, JavaScript" />
 
 #### HTML
+
 ```html
 <button id="firstButton">Click me</button>
 <button id="secondButton">Click me</button>
 ```
 
 #### JavaScript
+
 ```js
 const firstButton = document.getElementById("firstButton");
 firstButton.addEventListener("click", foo);
@@ -63,11 +62,13 @@ function foo(event) {
 <CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, JSON" />
 
 #### HTML
+
 ```html
 <button id="thirdButton" onclick='foo(event)'>Click me</button>
 ```
 
 #### JavaScript
+
 ```js
 function foo(event) {
     console.log(`Button clicked ${event.target.id}`);
@@ -75,6 +76,7 @@ function foo(event) {
 ```
 
 #### manifest
+
 ```json
 {
     "requiredPermissions": {
@@ -82,7 +84,7 @@ function foo(event) {
     }
 }
 ```
- 
+
 ## Additional notes
 
 - The above examples will also work for Spectrum Widgets and Spectrum Web Components in UXP.
