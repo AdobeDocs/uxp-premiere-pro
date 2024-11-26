@@ -89,6 +89,7 @@ Plugins and Scripts
 **In scripts**, you can avail only `plugin-temp:/` to read/write from/to a temporary folder.
 
 ## Example
+
 You have two options to access the file system - `LocalFileSytem` and `FS` module. These modules are very similar in terms of the capabilities they offer, however, there is a difference in the way they carry out the task.
 
 `LocalFileSytem` APIs work with an object reference called `Entry`. Having an object reference makes it easier to manage and perform multiple operations. Whereas the `FS` APIs are very similar to NodeJS path-based file system APIs which make them ideal for carrying out single operations.
