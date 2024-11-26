@@ -145,7 +145,6 @@ function doThing(args) {
 - Passing methods in the argument object is also not possible
 - There is a possibility that the user might have disabled a particular plugin via Adobe Creative Cloud Desktop App. Check the plugin's availability by using `plugin.enabled` before invoking.
 
-
 ## Reference docs
 
 - [Plugin Manager](../../../uxp-api/reference-js/Modules/uxp/Plugin%20Manager/PluginManager/)

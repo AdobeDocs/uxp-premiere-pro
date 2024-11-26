@@ -17,7 +17,6 @@ While writing UXP<!--scripts--> and plugins, the following tools will make your 
 
 A good text editor is necessary for you to organize your project effectively. Any modern developer-friendly text editor should work, but one of the popular choices is [Visual Studio Code](https://code.visualstudio.com), which has deep integrations with the other pieces needed for UXP, and a wide variety of its plugins to help with code formatting, syntax checking, JSON parsing, and so on.
 
-
 ## UXP Developer Tool (UDT)
 
 The Adobe UXP Developer Tool (UDT) makes it easy to create, load, manage, and debug UXP-based plugins <!--and scripts-->for UXP-powered applications.

@@ -343,7 +343,6 @@ async function foo() {
 - [FS module](../../../uxp-api/reference-js/Modules/fs/)
 - [Path](../../../uxp-api/reference-js/Global%20Members/Path/)
 
-
 ## Additional Notes
 
 - Despite the manifest setting `fullAccess`, certain files and folders may still not be accessible. It depends on the permission of the Operating System. For Win32 and Mac, these APIs can access anywhere in the file system. But, in UWP, accessing the system folder is prohibited.

@@ -22,7 +22,6 @@ Familiarize yourself with [plugin entrypoints](../../concepts/entry-points/) to 
 
 Also, for plugins that have multiple panels, you cannot differentiate between them, at present.
 
-
 ## Example
 
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JSON" />

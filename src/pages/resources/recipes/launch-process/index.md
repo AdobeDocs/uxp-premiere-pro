@@ -32,6 +32,7 @@ IMPORTANT: Please read about the [manifest permissions](../../../plugins/concept
 ## System requirements
 
 Please make sure your local environment uses the following application versions before proceeding.
+
 - Premiere Pro v25.1 or higher
 - UDT v2.1.0 or higher
 - Manifest version v5 or higher

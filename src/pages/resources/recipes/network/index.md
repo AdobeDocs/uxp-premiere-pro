@@ -56,7 +56,6 @@ Please make sure your local environment uses the following application versions 
 - UDT v2.1.0 or higher
 - Manifest version v5 or higher
 
-
 ## Examples
 
 Now, let's look at some examples.

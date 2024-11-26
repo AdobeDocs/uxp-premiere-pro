@@ -12,7 +12,7 @@ contributors:
 
 # Adobe UXP Developer Tool
 
-UDT can help you manage, build and test your plugins more efficiently. 
+UDT can help you manage, build and test your plugins more efficiently.
 
 Assuming that you already have successfully installed UDT and created your first plugin using it, let's deep-dive into other capabilities it offers.
 
@@ -26,7 +26,7 @@ The left pane shows UXP-powered applications that are "connected" to the tool. U
 
 ![Example of connected apps](./images/connected-apps.png)
 
-If for some reason you don't; it means UDT is unable to connect to the app. Make sure you're running a version that supports UXP. 
+If for some reason you don't; it means UDT is unable to connect to the app. Make sure you're running a version that supports UXP.
 
 ### Preferences
 

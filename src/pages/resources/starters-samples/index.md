@@ -25,7 +25,6 @@ Additionally, UDT also provides a few templates that you can choose from while c
 
 ![Templates in UDT](create-plugin-template.png)
 
-
 ## Recipes
 
 The next section of [recipes](../recipes/) also has examples of common use cases.
@@ -37,4 +36,3 @@ The next section of [recipes](../recipes/) also has examples of common use cases
 Remember, that examples within scripts can also be used within plugins, and vice versa. After all, you can think of UXP plugins as UXP scripts + rich UI controls + manifest configuration.
 
 We would love to add more samples that cover relevant use cases. Please contribute to the repo and share your work with the community. Create a pull request and tag us for review.
- 

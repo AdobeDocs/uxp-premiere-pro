@@ -28,11 +28,13 @@ Scripts and plugins
 -->
 
 But before we proceed, it's important to understand some terminology
+
 - **Spectrum** - An open-source design language and guidelines provided by Adobe.
 - **Web components** - HTML5 Web technology lets you define custom HTML tags.
 - **Adobe Spectrum Web Components** (popularly known as SWC) - An open-source library that has Spectrum-styled web components.
 
 With that in mind, let's get into the details:
+
 - **HTML elements** <br></br>
    These are pure HTML elements following web standards. For example, `<img>`, `<dialog>` etc. You have the flexibility to style them with your custom stylesheet.
 
@@ -50,7 +52,7 @@ With that in mind, let's get into the details:
 
     To use them, you require to install the components individually and then `import` them before using the component tag. For example,
 
-    ```
+    ```js
     npm i @spectrum-web-components/button@0.19.8
     ```
 
@@ -75,7 +77,6 @@ Now that you know the various options, you must understand their differences and
 
 - **Spectrum UXP widgets**<br></br>
    Remember that these are built-in within UXP. Therefore, they may appear to be a black-box solution that does not allow you to peek into the details while debugging or altering their behavior easily.
-
 
 - **UXP Spectrum web components** <br></br>
    Requires basic knowledge of [Web Components](https://javascript.info/web-components). And since this is in the beta phase and we are working on supporting more components in the future, you may not find all the components you need.
@@ -121,7 +122,6 @@ We do not suggest that you use any particular library for your plugins but sugge
 See [react-starter](https://github.com/AdobeDocs/uxp-indesign-samples/plugins/react-starter) for the sample project.
 
 We soon will be adding more samples for other popular frameworks such as Vue, and Svelte.
-
 
 ### Vue
 
