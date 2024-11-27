@@ -161,8 +161,8 @@ module.exports = {
                 path: '/resources/fundamentals/apis/'
               },
               {
-                title: "Create UI",
-                path: "/resources/fundamentals/create-ui/"
+                title: "User Interface",
+                path: "/resources/fundamentals/creating-ui/"
               },
             ]
           },
@@ -182,7 +182,7 @@ module.exports = {
           },
           {
             title: 'Starters & Samples',
-            path: 'resources/starters_samples/',
+            path: 'resources/starters-samples/',
           },
           {
             title: 'Recipes',
