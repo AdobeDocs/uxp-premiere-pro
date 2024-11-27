@@ -1,3 +1,0 @@
-# Premiere Pro UXP Recipes
-
-Stuff goes here...

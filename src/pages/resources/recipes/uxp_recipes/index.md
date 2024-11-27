@@ -1,3 +1,0 @@
-# UXP Recipes
-
-Stuff goes here...
