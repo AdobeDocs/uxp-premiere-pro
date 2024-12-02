@@ -55,10 +55,6 @@ module.exports = {
             path: 'uxp-api/'
           },
         ]
-      },
-      {
-        title: 'Support',
-        path: 'support/'
       }
     ],
     subPages: [
