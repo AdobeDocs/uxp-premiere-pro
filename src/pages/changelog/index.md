@@ -12,7 +12,7 @@ keywords:
 ## Premiere Pro v25.1
 
 ### Initial Public Beta Release for UXP in Premiere Pro
-**Release Date:** December 5, 2024
+**Release Date:** December 4, 2024
 #### New Features
 - **Unified Extensibility Platform (UXP) Integration:** Premiere Pro Beta now supports UXP, providing a modern and streamlined approach to developing plugins.
 - **Enhanced Performance:** UXP integration aims to improve the performance and responsiveness of plugins within Premiere Pro.
