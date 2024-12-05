@@ -28,11 +28,11 @@ With UXP you can,
 3. Customize Premiere Pro to match your work habits and layouts.
 4. Create a fluent user interface for users to interact with.
 
-UXP is also available in other apps such as XD and Photoshop. And in the future, it will be added to more applications.
+UXP is also available in other apps such as Photoshop and InDesign. And in the future, it will be added to more applications.
 
 Developing in UXP requires you to have basic knowledge of JavaScript, HTML, and CSS. But don't worry if you aren't there yet. We have suggested a few courses and materials that will help you begin and understand our APIs.
 
-You can choose to write a single JavaScript file and execute them as scripts. Or, create something more complex and elaborate with persistent and fluent UI in the form of plugins. Within plugins too, you can either write a 'command' or a 'panel' plugin based on how you would like the users to interact with them. We will learn about all these in the subsequent section that will help you make the right choice suiting your needs.
+You can choose to <!--write a single JavaScript file and execute them as scripts. Or,--> create something more complex and elaborate with persistent and fluent UI in the form of plugins. Within plugins too, you can either write a 'command' or a 'panel' plugin based on how you would like the users to interact with them. We will learn about all these in the subsequent section that will help you make the right choice suiting your needs.
 
 Lastly, you can share your UXP plugin and <!--scripts-->with others as well. Plugins can also be distributed in Adobe's Marketplace giving you access to millions of application users at once. Alternatively, you can distribute them via your distribution channels.
 

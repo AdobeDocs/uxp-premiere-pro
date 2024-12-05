@@ -526,15 +526,15 @@ Represents a localized string. The key is the locale, and the value is the trans
     <tbody>
     <tr>
         <td><inlineCode>app</inlineCode> *</td>
-        <td><inlineCode>"PS" <wbr />| "ID" <wbr />| "XD"</inlineCode></td>
+        <td><inlineCode>"PS" <wbr />| "ID" <wbr />| "premierepro" <wbr />| "XD"</inlineCode></td>
         <td>required</td>
         <td>
             <p>The host app that the plugin supports.</p>
             <p>Possible values:</p>
             <ul>
                 <li><inlineCode>PS</inlineCode>: Adobe Photoshop</li>
-                <li><inlineCode></inlineCode>: Adobe InDesign</li>
-                <li><inlineCode>ID</inlineCode>: Adobe Premiere Pro</li>
+                <li><inlineCode>ID</inlineCode>: Adobe InDesign</li>
+                <li><inlineCode>premierepro</inlineCode>: Adobe Premiere Pro</li>
                 <li><inlineCode>XD</inlineCode>: Adobe XD</li>
             </ul>
         </td>
@@ -918,6 +918,14 @@ window.addEventListener("message", (event) => \{
             <p>Note that you will need to manually install the library, import it (for example <inlineCode>import '@spectrum-web-components/<wbr />button/sp-button.js'</inlineCode>), and bundle the code with a tool like webpack or esbuild so that it's included in your plugin.</p>
             <p><strong>Default value</strong></p>
             <p><inlineCode>false</inlineCode></p>
+        </td>
+    </tr>
+    <tr>
+        <td><inlineCode>enableAlerts</inlineCode></td>
+        <td><inlineCode>boolean</inlineCode></td>
+        <td>optional</td>
+        <td>
+            Enable [alert()](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt()](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md) and [confirm()](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)in UXP
         </td>
     </tr>
     </tbody>

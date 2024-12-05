@@ -30,20 +30,15 @@ Also, for plugins that have multiple panels, you cannot differentiate between th
 
 ```js
 const entrypoints = require("uxp").entrypoints;
+
 entrypoints.setup({
   panels: {
-    "mainPanel": {
-      create(rootNode) {
-        return new Promise(function (resolve, reject) {
-          console.log('Plugin panel created');
-          resolve();
-        });
+    starterpanel: {
+      create: async (rootNode) => {
+        console.log('Plugin panel created');
       },
-      destroy(rootNode) {
-        return new Promise(function (resolve, reject) {
-          console.log('Destroy panel');
-          resolve();
-        });
+      destroy: async (rootNode) => {
+        console.log('Destroy panel');
       }
     }
   }
