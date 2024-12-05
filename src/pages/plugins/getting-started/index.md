@@ -42,7 +42,7 @@ In the dialog, enter the following information:
 |--------------------------|-------------------|
 | Name                     | My First Plugin   |
 | Host Application         | Adobe Premiere Pro|
-| Host Application Version | 25.1              |
+| Host Application Version | 25.2              |
 | Template                 | quick-starter     |
 
 Then click **Select Folder** and choose a location on your machine where you want to create the plugin.

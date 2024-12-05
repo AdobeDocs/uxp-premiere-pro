@@ -8,7 +8,7 @@ index_desc: Changelog in UXP version
 
 ### New
 
-- Support for [UXP Plugins in Premiere Pro v25.1 (Beta)](https://developer.adobe.com/premiere-pro/uxp/)
+- Support for [UXP Plugins in Premiere Pro v25.2 (Beta)](https://developer.adobe.com/premiere-pro/uxp/)
 - [ResizeObserver APIs](../uxp-api/reference-js/Global%20Members/HTML%20DOM/ResizeObserver.md) to observe an element's dimension or border-box, allowing better management of automatic adjustments and providing a performant way of observing size changes of elements.
 - [IntersectionObserver APIs](../uxp-api/reference-js/Global%20Members/HTML%20DOM/IntersectionObserver.md) to observe changes in the intersection of a target element with an ancestor element, unblocking cases for lazy loading of assets and facilitating infinite scrolling.
 - Added support for `:first-child` and `:not(:first-child)` pseudo-classes to enhance the existing `Web Component` support by allowing targeting of the desired elements
@@ -21,7 +21,7 @@ index_desc: Changelog in UXP version
 
 ## UDT v2.1.0
 
-- Supports UXP Plugins for Premiere Pro v25.1 (Beta)
+- Supports UXP Plugins for Premiere Pro v25.2 (Beta)
 
 ## UXP v8.0.1
 

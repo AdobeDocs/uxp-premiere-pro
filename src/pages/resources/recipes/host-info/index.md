@@ -17,7 +17,7 @@ Sometimes it's necessary to find out the host environment where a plugin or scri
 
 Please make sure your local environment uses the following application versions before proceeding.
 
-- Premiere Pro v25.1 or higher
+- Premiere Pro v25.2 or higher
 - UDT v2.1.0 or higher
 - Manifest version v5 or higher
 
@@ -41,7 +41,7 @@ async function foo() {
 
 ```text
 System information: darwin v21.1.0
-Application: Premiere Pro v25.1.0 powered by uxp-7.1.0
+Application: Premiere Pro v25.2.0 powered by uxp-7.1.0
 ```
 
 ## Reference material

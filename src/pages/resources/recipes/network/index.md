@@ -52,7 +52,7 @@ As mentioned earlier, UXP has `fetch`, `XHR (XML HTTP Request)`, and `WebSocket`
 
 Please make sure your local environment uses the following application versions before proceeding.
 
-- Premiere Pro v25.1 or higher
+- Premiere Pro v25.2 or higher
 - UDT v2.1.0 or higher
 - Manifest version v5 or higher
 

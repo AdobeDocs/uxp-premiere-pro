@@ -198,7 +198,7 @@ Properties marked with an asterisk (\*) are required.
         <td><inlineCode>object</inlineCode></td>
         <td>optional</td>
         <td>
-            <p> <i>Not supported in Premiere Pro v25.1</i> <br></br>
+            <p> <i>Not supported in Premiere Pro v25.2</i> <br></br>
             Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that can access the power of C++ native libraries.</p>
             <p><strong>Default value</strong></p>
             <p><inlineCode>{'{'}{'}'}</inlineCode> (no addons)</p>

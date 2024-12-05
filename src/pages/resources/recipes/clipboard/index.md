@@ -16,7 +16,7 @@ Read and write content from and to the clipboard.
 
 Please make sure your local environment uses the following application versions before proceeding.
 
-- Premiere Pro v25.1 or higher
+- Premiere Pro v25.2 or higher
 - UXP version v7.1 or higher
 - Manifest version v5 or higher
 
