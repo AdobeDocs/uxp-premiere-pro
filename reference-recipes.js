@@ -34,9 +34,5 @@ module.exports = [
     {
         "title": `Host Information`,
         "path": "/resources/recipes/host-info/"
-    },
-    {
-        "title": `Flyout Menus`,
-        "path": "resources/recipes/flyout-menu"
     }
 ]

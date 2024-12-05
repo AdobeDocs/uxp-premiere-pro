@@ -29,7 +29,7 @@ The fastest way to try out a network call is by rendering an image from the web
 #### HTML
 
 ```html
-<img src='https://source.unsplash.com/random' />
+<img src='https://picsum.photos/200/300' />
 ```
 
 #### manifest
@@ -39,7 +39,7 @@ The fastest way to try out a network call is by rendering an image from the web
     "requiredPermissions": {
         "network": {
             "domains": [
-                "https://source.unsplash.com"
+                "https://picsum.photos/"
             ]
         }
     }
@@ -189,7 +189,7 @@ async function foo() {
 
 - These APIs are available in the global scope. Observe that you didn't have to mount them using `require`.
 - The `domains` in the plugin's manifest also let you configure variations of the endpoints. For example, your plugin may like to access 'api.dev.example.com', 'api.stage.example.com' or 'api.prod.example.com' depending upon the environment. You can configure the domains with `["https://api.*.example.com"]` to manage all three.
-- While using `http` domains, keep in mind that Photoshop only allows http protocol on Win32 but not on macOS. InDesign has no such restrictions.
+<!-- While using `http` domains, keep in mind that Photoshop only allows http protocol on Win32 but not on macOS. Premiere Pro has no such restrictions. -->
 
 ## Reference material
 

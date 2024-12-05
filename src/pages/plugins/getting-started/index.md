@@ -20,7 +20,7 @@ This tutorial will walk you through the process of building your first plugin. Y
 Before you start, make sure you have the following software installed on your machine:
 
 - **Premiere Pro (v25.1)** or later (can be installed from the _Creative Cloud Desktop_ app)
-- **UXP Developer Tool v1.9** (can be [installed from the _Creative Cloud Desktop_ app](https://creativecloud.adobe.com/apps/download/uxp-developer-tools))
+- **UXP Developer Tool v2.1** (can be [installed from the _Creative Cloud Desktop_ app](https://creativecloud.adobe.com/apps/download/uxp-developer-tools))
 - A **code editor** of your choice (for example, [Visual Studio Code](https://code.visualstudio.com/))
 
 ## Steps
@@ -42,7 +42,7 @@ In the dialog, enter the following information:
 |--------------------------|-------------------|
 | Name                     | My First Plugin   |
 | Host Application         | Adobe Premiere Pro|
-| Host Application Version | 18.5              |
+| Host Application Version | 25.1              |
 | Template                 | quick-starter     |
 
 Then click **Select Folder** and choose a location on your machine where you want to create the plugin.

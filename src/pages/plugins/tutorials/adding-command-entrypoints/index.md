@@ -9,11 +9,11 @@ In your `manifest.json` file, register a new `command`-type entrypoint:
 ```json
 {
     // ...
-    entrypoints: [
+    "entrypoints": [
         {
-            type: "command",
-            id: "myCommand",
-            label: "My Command",
+            "type": "command",
+            "id": "myCommand",
+            "label": "My Command"
         }
     ]
 }
