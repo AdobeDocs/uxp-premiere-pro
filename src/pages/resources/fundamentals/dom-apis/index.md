@@ -15,9 +15,8 @@ Premiere DOM is available only as a JavaScript module and should be retrieved on
 
 To access the Premiere DOM APIs, use
 ```js
-const myPremiere = require("premierepro");
-const app = myPremiere.app;
+const app = require("premierepro");
 ```
 
 ## DOM version
-Premiere Pro works similarly to Photoshop as it pertains to DOM versioning. As a result, the minimum DOM version needed for UXP development is the same as the minimum required version of Premiere Pro Beta that supports UXP development. 
+The minimum DOM version needed for UXP development is the same as the minimum required version of Premiere Pro Beta that supports UXP development. 
