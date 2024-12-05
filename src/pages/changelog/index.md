@@ -19,5 +19,8 @@ keywords:
 - **Developer Tools:** APIs are available for developers to create and manage UXP-based plugins.
 #### Known Issues
 - **Limited Third-Party Support:** Initial beta release may have limited support for specific third-party development workflows. Full support is expected in future updates.
+- SWC components should be marked as beta on Premiere
+- Command Plugins do not work in Premiere Pro
+- Unloading/Reloading a plugin while it's paused on a breakpoint doesn't work
 ####  Getting Started
 - **Community Support:** Join the [Creative Cloud developer forums](https://forums.creativeclouddeveloper.com/) to share feedback, ask questions, and collaborate with other developers.
