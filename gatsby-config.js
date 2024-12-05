@@ -55,10 +55,6 @@ module.exports = {
             path: 'uxp-api/'
           },
         ]
-      },
-      {
-        title: 'Support',
-        path: 'support/'
       }
     ],
     subPages: [
@@ -161,23 +157,17 @@ module.exports = {
                 path: '/resources/fundamentals/apis/'
               },
               {
+                title: 'DOM APIs',
+                path: '/resources/fundamentals/dom-apis/'
+              },
+              {
                 title: "User Interface",
                 path: "/resources/fundamentals/creating-ui/"
               },
-            ]
-          },
-          {
-            title: 'Migration guides',
-            path: 'resources/migration_guides/',
-            pages: [
               {
-                title: 'ExtendScript',
-                path: 'resources/migration_guides/extendscript/'
+                title: 'Nomenclature',
+                path: '/resources/fundamentals/nomenclature/'
               },
-              {
-                title: 'CEP',
-                path: 'resources/migration_guides/cep/'
-              }
             ]
           },
           {

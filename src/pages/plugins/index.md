@@ -10,7 +10,7 @@ contributors:
 
 # UXP Plugins
 
-Premiere Pro v25.1 introduces UXP plugins.
+Premiere Pro v25.2 introduces UXP plugins.
 
 With plugins, you can build extensive UI and more interacting components for the users. Read the [introduction to <!--scripts--> plugins](../introduction/next-steps/script-and-plugin/) to understand if plugins are the right fit for your use case before proceeding.
 

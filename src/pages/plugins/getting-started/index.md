@@ -19,7 +19,7 @@ This tutorial will walk you through the process of building your first plugin. Y
 
 Before you start, make sure you have the following software installed on your machine:
 
-- **Premiere Pro (v25.1)** or later (can be installed from the _Creative Cloud Desktop_ app)
+- **Premiere Pro (v25.2)** or later (can be installed from the _Creative Cloud Desktop_ app)
 - **UXP Developer Tool v2.1** (can be [installed from the _Creative Cloud Desktop_ app](https://creativecloud.adobe.com/apps/download/uxp-developer-tools))
 - A **code editor** of your choice (for example, [Visual Studio Code](https://code.visualstudio.com/))
 

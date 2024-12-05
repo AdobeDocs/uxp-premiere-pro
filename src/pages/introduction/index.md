@@ -8,11 +8,12 @@ keywords:
   - What is UXP
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/arsridhar_adobe
 ---
 
 # Premiere Pro and Unified Extensibility Platform (UXP)
 
-Premiere Pro supports UXP.
+Premiere Pro Beta now supports UXP.
 
 UXP is a JavaScript ES6 (ECMA2015) based extensibility platform that helps you automate, optimize and extend the capabilities of your favorite Adobe Creative Cloud products. It provides a comprehensive solution that lets you use web technologies to build controls for the desktop application.
 

@@ -11,13 +11,13 @@ contributors:
 
 # Starters and samples
 
-To help you start writing <!--scripts and -->plugins to solve real-world problems, you can use the samples and starter templates.
+To help you start writing <!--scripts and -->plugins to solve real-world problems, you can use the samples and starter templates available below.
 
 Consider 'samples' to be a working example of a specific feature. Whereas, a 'starter' is meant to assist you with the framework setup.
 
 ## Git repo
 
-You can find samples and starters for scripts/plugins [here](https://github.com/AdobeDocs/uxp-indesign-samples).
+You can find samples and starters for plugins [here](https://github.com/AdobeDocs/uxp-indesign-samples). Please note that though this link directs to UXP samples for InDesign, many of the resources are applicable to Premiere Pro as well. 
 
 ## UDT
 
@@ -33,6 +33,6 @@ The next section of [recipes](../recipes/) also has examples of common use cases
 
 ---
 
-Remember, that examples within scripts can also be used within plugins, and vice versa. After all, you can think of UXP plugins as UXP scripts + rich UI controls + manifest configuration.
+Remember, that the provided 'scripts' examples can also be used within plugins, even though Premiere Pro Beta does not yet officially support UXP scripts. After all, you can think of UXP plugins as UXP scripts + rich UI controls + manifest configuration.
 
 We would love to add more samples that cover relevant use cases. Please contribute to the repo and share your work with the community. Create a pull request and tag us for review.
