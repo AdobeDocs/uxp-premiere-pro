@@ -36,4 +36,3 @@ async function foo() {
 ## Alerts
 
 Use [alert()](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt()](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md) and [confirm()](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)in UXP
-
