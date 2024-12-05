@@ -33,9 +33,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:^4.11.0":
-  version: 4.14.12
-  resolution: "@adobe/gatsby-theme-aio@npm:4.14.12"
+"@adobe/gatsby-theme-aio@npm:^4.14.14":
+  version: 4.14.17
+  resolution: "@adobe/gatsby-theme-aio@npm:4.14.17"
   dependencies:
     "@adobe/focus-ring-polyfill": ^0.1.5
     "@adobe/gatsby-source-github-file-contributors": ^0.3.1
@@ -131,7 +131,7 @@ __metadata:
     gatsby: ^4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: 693712ced8c73c2366a21c61850518f06d805635c5bad3104e6adb79ec357769fc329609aa868bb554228f3f9a7193e95812ffad773f980559ac16b2c57eae3d
+  checksum: 929ed9cc32b048ec243dbcd75be3ee822294946e336600bf57b67490632fcd0a0e375e4683a2980eb756b80ee023d5e9605dd91a6a6ebc910d6dac08530aee13
   languageName: node
   linkType: hard
 
@@ -8398,7 +8398,7 @@ __metadata:
     react-dom: ^17.0.2
     remark-cli: ^11.0.0
     remark-validate-links: ^12.1.0
-    uxp-ppro-documentation: "github:adobedocs/PPro-UXP"
+    uxp-documentation: "github:adobedocs/uxp#v8.1.0"
   languageName: unknown
   linkType: soft
 
@@ -21116,15 +21116,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uxp-ppro-documentation@github:adobedocs/PPro-UXP":
-  version: 1.0.0
-  resolution: "uxp-ppro-documentation@https://github.com/adobedocs/PPro-UXP.git#commit=413fe3c662a14fc4085a78ac22bbe91e2727658f"
-  dependencies:
-    "@adobe/gatsby-theme-aio": ^4.11.0
-    gatsby: 4.22.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  checksum: dec9868b2f2ca349bed8c1e8154d7be86d91b6032ff9d6d26059fb6ad39c5a227008f81bac4060f2bfcb8c844bcbb0db8fb65087d62e04f48f3ce65ccdf4387c
+"uxp-documentation@github:adobedocs/uxp#v8.1.0":
+  version: 8.1.0
+  resolution: "uxp-documentation@https://github.com/adobedocs/uxp.git#commit=41eeda6e9ecb457f09b83efced198180b1cc9143"
+  checksum: 1d75f55d06b2af954cdc8c6bb944de18955dfc2c2fc8d524e37e96d05606a24e205fd0a4c13693c5d0036010108b97abfc21825d3d7d277c014c60ca8adc303a
   languageName: node
   linkType: hard
 

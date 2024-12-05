@@ -1,3 +1,0 @@
-# My Second Tutorial
-
-Stuff goes here...

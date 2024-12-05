@@ -11,7 +11,7 @@
  */
 
 module.exports = {
-  pathPrefix: process.env.PATH_PREFIX || '/premiere-pro-uxp/',
+  pathPrefix: process.env.PATH_PREFIX || '/premiere-pro/uxp/',
   siteMetadata: {
     githubIssue: {
       removeLogIssue: true,
@@ -38,7 +38,7 @@ module.exports = {
         title: 'Resources',
         path: 'resources/'
       },
-      {    
+      {
         title: 'References',
         menu: [
           {
@@ -46,14 +46,13 @@ module.exports = {
             path: 'changelog/'
           },
           {
-            title: 'Premiere UXP API',
+            title: 'Premiere API',
             //description: 'Premiere Pro specific UXP documentation',
             path: 'ppro_reference/'
           },
           {
-            title: 'Common UXP API',
-            // description: 'Cross-Application UXP documentation',
-            path: 'uxp_reference/'
+            title: 'UXP API',
+            path: 'uxp-api/'
           },
         ]
       },
@@ -70,11 +69,11 @@ module.exports = {
         pages: [
           {
             title: 'Programming languages',
-            path: '/introduction/essentials/prog_lang/'
+            path: '/introduction/essentials/tech-stack/'
           },
           {
             title: 'Developer Tools',
-            path: '/introduction/essentials/dev_tools/'
+            path: '/introduction/essentials/dev-tools/'
           }
         ]
       },
@@ -85,7 +84,7 @@ module.exports = {
         pages: [
           {
             title: 'Getting Started',
-            path: 'plugins/getting_started/'
+            path: 'plugins/getting-started/'
           },
           {
             title: 'Concepts',
@@ -93,7 +92,7 @@ module.exports = {
             pages: [
               {
                 title: 'Entry points',
-                path: 'plugins/concepts/entry_points/'
+                path: 'plugins/concepts/entry-points/'
               },
               {
                 title: 'Manifest',
@@ -106,13 +105,39 @@ module.exports = {
             path: 'plugins/tutorials/',
             pages: [
               {
-                title: 'My First Tutorial',
-                path: '/plugins/tutorials/my_first_tutorial/'
+                title: "Developing plugins with UDT",
+                path: "/plugins/tutorials/udt-deep-dive/",
+                pages: [
+                  {
+                    title: 'Plugin Management',
+                    path: '/plugins/tutorials/udt-deep-dive/plugin-management/'
+                  },
+                  {
+                    title: 'Plugin Workflows',
+                    path: '/plugins/tutorials/udt-deep-dive/plugin-workflows/'
+                  },
+                  {
+                    title: 'Working with React',
+                    path: '/plugins/tutorials/udt-deep-dive/working-with-react/'
+                  },
+                ],
               },
               {
-                title: 'My Second Tutorial',
-                path: '/plugins/tutorials/my_second_tutorial/'
+                title: 'Adding command entrypoints',
+                path: '/plugins/tutorials/adding-command-entrypoints/'
               },
+              {
+                title: "Lifecycle hooks",
+                path: "/plugins/tutorials/plugin-lifecycle-hooks/"
+              },
+              {
+                title: "Communicate with other plugins",
+                path: "/plugins/tutorials/inter-plugin-comm/"
+              },
+              {
+                title: "Modularizing code",
+                path: "/plugins/tutorials/importing-modules/"
+              }
             ]
           },
           {
@@ -132,12 +157,12 @@ module.exports = {
             header: true,
             pages: [
               {
-                title: 'Concept One',
-                path: 'resources/fundamentals/concept_1/'
+                title: 'APIs',
+                path: '/resources/fundamentals/apis/'
               },
               {
-                title: 'Concept Two',
-                path: 'resources/fundamentals/concept_2/'
+                title: "User Interface",
+                path: "/resources/fundamentals/creating-ui/"
               },
             ]
           },
@@ -157,31 +182,47 @@ module.exports = {
           },
           {
             title: 'Starters & Samples',
-            path: 'resources/starters_samples/',
+            path: 'resources/starters-samples/',
           },
           {
             title: 'Recipes',
             path: 'resources/recipes/',
-            pages: [
-              {
-                title: 'Premiere Pro Recipes',
-                path: 'resources/recipes/ppro_recipes',
-                pages: require('./reference_recipes_ppro.js'),
-              },
-              {
-                title: 'UXP Recipes',
-                path: 'resources/recipes/uxp_recipes',
-                pages: require('./reference_recipes_uxp.js'),
-              }
-
-            ]
+            pages: require("./reference-recipes.js"),
           },
         ]
       },
       {
-        title: 'API Reference',
+        title: 'Premiere Pro DOM API Reference',
         path: '/ppro_reference',
         pages: require("./reference-ppro.js"),
+      },
+      {
+        title: 'UXP API Referencee',
+        path: 'uxp-api/',
+        pages: [{
+          title: "JavaScript Reference",
+          path: "/uxp-api/reference-js/",
+          pages: require("./reference-js.js"),
+        },
+        {
+          title: "CSS Reference",
+          path: "/uxp-api/reference-css/",
+          pages: require("./reference-css.js"),
+        },
+        {
+          title: "HTML Reference",
+          path: "/reference//uxp-api//reference-html/",
+          pages: require("./reference-html.js"),
+        },
+        {
+          title: "Spectrum UXP Reference",
+          path: "/reference//uxp-api/reference-spectrum/",
+          pages: require("./reference-spectrum.js"),
+        },
+        {
+          title: "Known Issues",
+          path: "/uxp-api/known-issues/",
+        }]
       }
     ]
   },

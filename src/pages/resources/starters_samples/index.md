@@ -1,3 +1,0 @@
-# Starters & Samples
-
-Stuff goes here...
