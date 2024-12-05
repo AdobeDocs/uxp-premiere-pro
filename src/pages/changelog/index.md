@@ -9,7 +9,7 @@ keywords:
 
 # Change Log
 
-## Premiere Pro v25.1
+## Premiere Pro v25.2.0
 
 ### Initial Public Beta Release for UXP in Premiere Pro
 **Release Date:** December 4, 2024
