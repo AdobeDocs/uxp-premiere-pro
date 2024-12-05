@@ -160,6 +160,10 @@ module.exports = {
                 title: "User Interface",
                 path: "/resources/fundamentals/creating-ui/"
               },
+              {
+                title: 'Nomenclature',
+                path: '/resources/fundamentals/nomenclature/'
+              },
             ]
           },
           {
