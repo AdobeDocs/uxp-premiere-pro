@@ -8,6 +8,7 @@ keywords:
   - What is UXP
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/arsridhar_adobe
 ---
 
 # Premiere Pro and Unified Extensibility Platform (UXP)

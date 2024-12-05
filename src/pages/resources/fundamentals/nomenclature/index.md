@@ -8,8 +8,6 @@ keywords:
   - Extensions
 title: The usage of UXP Plugins
 description: Describes the shift in nomenclature 
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # UXP Plugins: Panel and Extensions

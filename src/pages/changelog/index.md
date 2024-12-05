@@ -1,3 +1,12 @@
+---
+title: Change Log
+description: What's New
+keywords:
+  - Changelog
+  - Update
+  - Release Notes
+---
+
 # Change Log
 
 ## Premiere Pro v25.1
