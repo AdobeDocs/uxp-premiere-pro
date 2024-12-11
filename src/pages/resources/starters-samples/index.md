@@ -17,7 +17,7 @@ Consider 'samples' to be a working example of a specific feature. Whereas, a 'st
 
 ## Git repo
 
-You can find samples and starters for plugins [here](https://github.com/AdobeDocs/uxp-indesign-samples). Please note that though this link directs to UXP samples for InDesign, many of the resources are applicable to Premiere Pro as well. 
+You can find samples and starters for plugins [here](https://github.com/AdobeDocs/uxp-premiere-pro-samples). Please note that though this link directs to UXP samples for InDesign, many of the resources are applicable to Premiere Pro as well. 
 
 ## UDT
 
