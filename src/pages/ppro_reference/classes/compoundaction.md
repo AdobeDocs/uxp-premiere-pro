@@ -40,6 +40,6 @@ Add an action to the compound action
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| action | [*Action*](/ppro_reference/classes/action/) | - |
+| action | *Action* | - |
 
 ___

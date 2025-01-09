@@ -34,7 +34,7 @@ Returns an action which sets ScratchDiskSetting
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | project | [*Project*](/ppro_reference/classes/project/) | - |
-| projectScratchDiskSettings | [*ProjectScratchDiskSettings*](/ppro_reference/classes/projectscratchdisksettings/) | - |
+| projectScratchDiskSettings | *ProjectScratchDiskSettings* | - |
 
 ___
 
