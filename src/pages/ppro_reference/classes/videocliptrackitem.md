@@ -34,7 +34,7 @@ Create add transition action for sequence
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| videoTransition | [*VideoTransition*](/ppro_reference/classes/videotransition/) | - |
+| videoTransition | *VideoTransition* | - |
 | addTransitionOptionsProperties | [*AddTransitionOptions*](/ppro_reference/classes/addtransitionoptions/) | - |
 
 ___

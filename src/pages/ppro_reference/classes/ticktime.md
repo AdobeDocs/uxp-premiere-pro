@@ -42,7 +42,7 @@ Constructs a TickTime object with a frame and a frame rate.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | frameCount | *number* | - |
-| frameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
+| frameRate | *FrameRate* | - |
 
 ___
 

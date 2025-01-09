@@ -333,6 +333,6 @@ Set sequence settings
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequenceSettings | [*SequenceSettings*](/ppro_reference/classes/sequencesettings/) | - |
+| sequenceSettings | *SequenceSettings* | - |
 
 ___
