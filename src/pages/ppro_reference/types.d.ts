@@ -1,4 +1,5 @@
 export declare type premierepro = {
+  AppPreference: AppPreferenceStatic
   AudioClipTrackItem: AudioClipTrackItemStatic
   AudioComponentChain: AudioComponentChainStatic
   AudioTrack: AudioTrackStatic
@@ -7,6 +8,7 @@ export declare type premierepro = {
   EncoderManager: EncoderManagerStatic
   Exporter: ExporterStatic
   FolderItem: FolderItemStatic
+  FrameRate: FrameRateStatic
   Guid: GuidStatic
   Keyframe: KeyframeStatic
   Marker: MarkerStatic
@@ -17,9 +19,11 @@ export declare type premierepro = {
   ProjectEvent: ProjectEventStatic
   ProjectItem: ProjectItemStatic
   ProjectSettings: ProjectSettingsStatic
+  ProjectUtils: ProjectUtilsStatic
   Properties: PropertiesStatic
   ScratchDiskSettings: ScratchDiskSettingsStatic
   SequenceUtils: SequenceUtilsStatic
+  SourceMonitor: SourceMonitorStatic
   TickTime: TickTimeStatic
   TrackItemSelection: TrackItemSelectionStatic
   TransitionFactory: TransitionFactoryStatic
@@ -46,6 +50,19 @@ export declare type AddTransitionOptions = {
   duration: TickTime	//Gets the duration of transition
 }
 
+export declare type AppPreferenceStatic = {
+  setValue(): boolean	//Set backend preference using given list of property keys. The parameters are <key, value (number, boolean or string), persistence flag>
+  getValue(preferenceKey: string): string	//Get preference value in native string form
+  KEY_AUTO_PEAK_GENERATION: string	//Preference string key used to modify auto-peak generation settings
+  KEY_IMPORT_WORKSPACE: string	//Preference string key used to modify import workspace settings
+  KEY_SHOW_QUICKSTART_DIALOG: string	//Preference string key used to modify show quickstart dialog settings
+  PROPERTY_PERSISTENT: number	//Property is persistent in backend and shared across cloud project.
+  PROPERTY_NON_PERSISTENT: number	//Property is not persisted and will be cleared when the project closes.
+}
+
+export declare type AppPreference = {
+}
+
 export declare type Application = {
   version: string
 }
@@ -65,19 +82,19 @@ export declare type AudioClipTrackItem = {
   isSpeedReversed(): number	//Returns true if the trackitem is reversed
   createMoveAction(tickTime: TickTime): Action	//Returns an action moves the inPoint of the track item to a new time, by shifting it by a number of seconds.
   getInPoint(): TickTime	//Get timecode representing the inPoint of sequence.
-  getOutPoint(): TickTime	//Get timecode representing the inPoint of sequence.
+  getOutPoint(): TickTime	//Get timecode representing the outPoint of sequence.
   createSetInPointAction(tickTime: TickTime): Action	//Create SetInPointAction for sequence
   createSetOutPointAction(tickTime: TickTime): Action	//Create SetInPointAction for sequence
   getStartTime(): TickTime	//Timecode representing the start of this track item relative to the sequence start.
   getEndTime(): TickTime	//Timecode representing the end of this track item relative to the sequence start.
   getDuration(): TickTime	//Timecode representing the duration of this track item relative to the sequence start.
   getType(): number	//Index representing the type of this track item.
-  isMuted(): boolean	//Returns true if rackitem is muted/disabled
-  createSetMutedAction(disabled: boolean): Action	//Returns an action that enables/disables the trackItem 
+  isDisabled(): boolean	//Returns true if rackitem is muted/disabled
+  createSetDisabledAction(disabled: boolean): Action	//Returns an action that enables/disables the trackItem 
   getMediaType(): Guid	//UUID representing the underlying media type of this track item
   getTrackIndex(): number	//Index representing the track index of the track this track item belongs to
   getProjectItem(): ProjectItem	//The project item for this track item.
-  getComponentChain(): any
+  getComponentChain(): AudioComponentChain	//Returns AudioComponentChain
 }
 
 export declare type AudioComponentChainStatic = {
@@ -138,14 +155,14 @@ export declare type ClipProjectItem = {
   findItemsMatchingMediaPath(matchString: string, ignoreSubclips?: boolean): []	//Returns array of projects items with media paths containing match string
   refreshMedia(): boolean	//Updates representation of the media associated with the project item
   createSetOfflineAction(): Action	//Returns an action which sets the media offline
-  getFootageInterpretation(): InterpretFootage	//Get the footage interpretation object for project item
-  createSetFootageInterpretationAction(InterpretFootage: object): Action	//Set the footage interpretation object for project item
-  getParent(): ProjectItem	//Get the root item of the project which contains all items of the project on the lowest level
-  getProject(): Project	//Get the root item of the project which contains all items of the project on the lowest level.
+  getFootageInterpretation(): FootageInterpretation	//Get the footage interpretation object for project item
+  createSetFootageInterpretationAction(footageInterpretation: FootageInterpretation): Action	//Set the footage interpretation object for project item
   isMergedClip(): boolean	//Returns true if the clip Project item is a merged clip
   isMulticamClip(): boolean	//Returns true if the clip Project item is a multicam clip
   getEmbeddedLUTID(): string	//Get GUID of LUT embedded in media
   createSetScaleToFrameSizeAction(): Action	//Returns an action which sets the scale to frame to true
+  getParent(): ProjectItem	//Get the root item of the project which contains all items of the project on the lowest level
+  getProject(): Project	//Get the root item of the project which contains all items of the project on the lowest level.
   getContentType(): any	//Get content type of the Project item
   getSequence(): Sequence	//Get the sequence of the Project item
   getInPoint(mediaType: Constants.MediaType): TickTime	//Get the in point of the Project item
@@ -170,6 +187,26 @@ export declare type CloseProjectOptions = {
   showCancelButton: boolean	//Get whether the cancel button is shown on project open/close
   isAppBeingPreparedToQuit: boolean	//Get whether the app is prepared to quit when open/closing a project
   saveWorkspace: boolean	//Get whether your workspaces are saved when opening/closing a project
+}
+
+export declare type ComponentParam = {
+  createKeyframe(): object	//Creates and returns a keyframe initialised with the ComponentParam's type and passed in value. This throws if the passed in value is not compatible with the component param type
+  getValueAtTime(): object	//Gets the value of component Param at the given time
+  findNearestKeyframe(TickTime: object, TickTime: object): Keyframe	//Find sthe nearest key for the given time
+  findNextKeyframe(TickTime: object): Keyframe	//find the next keyframe for the given time
+  findPreviousKeyframe(TickTime: object): Keyframe	//find the previous keyframe for the given time
+  createRemoveKeyframeAction(TickTime: object, UpdateUI?: boolean): Action	//Returns an action which removes keyframe at specific time
+  createRemoveKeyframeRangeAction(TickTime: object, TickTime: object, UpdateUI?: boolean): Action	//Returns an action which removes keyframe at specific time range
+  createSetValueAction(Keyframe: object, inSafeForPlayback?: boolean): Action	//Creates and returns an action object which can be used to set the value of a non-time varying component
+  createAddKeyframeAction(Keyframe: object): Action	//Creates and returns an action object which can be used to add a keyframe component
+  createSetTimeVaryingAction(inTimeVarying: boolean): Action	//Creates and returns an action object to set the component to be time varying
+  getStartValue(): Keyframe	//Returned promise will be fullfilled with the start value (keyframe) of the component param
+  getKeyframeListAsTickTimes(): []	//Get a list of tickTime for the keyframes of this component param
+  getKeyframePtr(time?: TickTime): Keyframe	//Get the Keyframe at the given tickTime postion
+  isTimeVarying(): boolean	//Returns true if the parameter value varies over time (for the duration of the item)
+  createSetInterpolationAtKeyframeAction(TickTime: object, InterpolationMode: number, UpdateUI?: boolean): Action	//Returns an action which sets the interpolation mode of keyframe at the given time
+  areKeyframesSupported(): boolean	//Returns bool whether keyframes are supported for this component parameter
+  displayName: string	//Returns the display name of the component param
 }
 
 export declare type CompoundAction = {
@@ -205,12 +242,11 @@ export declare type FolderItem = {
   createBinAction(name: string, makeUnique: boolean): Action	//Returns an action that lets users create a new bin.
   createSmartBinAction(name: string, searchQuery: string): Action	//Creates a smart bin with given name and returns the Folder object
   createRenameBinAction(arg0: string): Action	//Rename the Bin and return true if it's successful
-  getParent(): ProjectItem	//Get the root item of the project which contains all items of the project on the lowest level
-  getProject(): Project	//Get the root item of the project which contains all items of the project on the lowest level.
   getItems(): []	//Collection of child items of this folder.
   createRemoveItemAction(item: ProjectItem): Action	//Creates an action that removes the given item from this folder.
   createMoveItemAction(item: ProjectItem, newParent: FolderItem): Action	//Creates an action that moves the given item to the provided folder item newParent.
-  parent: object	//The root item of the project which contains all items of the project on the lowest level.
+  getParent(): ProjectItem	//Get the root item of the project which contains all items of the project on the lowest level
+  getProject(): Project	//Get the root item of the project which contains all items of the project on the lowest level.
   name: string	//Get name of project item object
 }
 
@@ -249,6 +285,16 @@ export declare type FootageInterpretation = {
   FIELD_TYPE_PROGRESSIVE: number	//field type progressive
   FIELD_TYPE_UPPERFIRST: number	//field type upperfirst
   FIELD_TYPE_LOWERFIRST: number	//field type lowerfirst
+}
+
+export declare type FrameRateStatic = {
+  createWithValue(value: number): FrameRate	//Create frame rate object with a value
+}
+
+export declare type FrameRate = {
+  equals(frameRate: FrameRate): boolean	//Returns true if the given FrameRate is equal to this FrameRate object
+  ticksPerFrame: number	//Read/Write property to get/set ticks per frame.
+  value: number	//Get the number of frames per second.
 }
 
 export declare type GuidStatic = {
@@ -372,7 +418,7 @@ export declare type Project = {
   saveAs(path: string): boolean	//Save the project at the provided path
   getSequence(guid: Guid): Sequence	//Get sequence by id from the project
   getSequences(): []	//Get an array of all sequences in this project.
-  getRootItem(): ProjectItem	//The root item of the project which contains all items of the project on the lowest level.
+  getRootItem(): FolderItem	//The root item of the project which contains all items of the project on the lowest level.
   pauseGrowing(pause: boolean): boolean	//Pause growing of files instead swap the files
   executeTransaction(callback: any, undoString?: any): any	//Execute undoable transaction by passing compound action
   lockedAccess(callback: any): any	//Get a read/upgrade locked access to Project, project state will not change during the execution of callback function. Can call executeTransaction while having locked access.
@@ -410,6 +456,7 @@ export declare type ProjectEvent = {
 }
 
 export declare type ProjectItemStatic = {
+  cast(item: any): any
 }
 
 export declare type ProjectItem = {
@@ -418,16 +465,26 @@ export declare type ProjectItem = {
   name: string	//Get name of project item object
 }
 
+export declare type ProjectItemSelection = {
+  getItems(): []	//Get the project items that is represented by this selection.
+}
+
 export declare type ProjectSettingsStatic = {
-  createSetScratchDiskSettingsAction(project: Project, projectScratchDiskSettings: ProjectScratchDiskSettings): Action	//Returns an action which sets ScratchDiskSetting
-  getScratchDiskSettings(project: Project): ProjectScratchDiskSettings	//Returns project ScratchDiskSettings
+  createSetScratchDiskSettingsAction(project: Project, scratchDiskSettings: ScratchDiskSettings): Action	//Returns an action which sets ScratchDiskSetting
+  getScratchDiskSettings(project: Project): ScratchDiskSettings	//Returns project ScratchDiskSettings
 }
 
 export declare type ProjectSettings = {
 }
 
+export declare type ProjectUtilsStatic = {
+  getSelection(project: Project): ProjectItemSelection	//Get array of selected project items in project view
+}
+
+export declare type ProjectUtils = {
+}
+
 export declare type PropertiesStatic = {
-  getProperties(propertyOwnerObject: any): Properties	//If property owner is not provided, it return application properties, else return the properties of the passed on object.
   PROPERTY_PERSISTENT: number	//Property is persistent in backend and shared across cloud project.
   PROPERTY_NON_PERSISTENT: number	//Property is not persisted and will be cleared when the project closes.
 }
@@ -439,7 +496,6 @@ export declare type Properties = {
   getValue(name: string): string	//Get named value in native string form
   createSetValueAction(): object	//Create an action to set a named value through scripting. The parameters are <name, value (number, boolean or string), persistence flag>. This method can fail if e.g. the underlying properties object does not support action based setting of properties.
   hasValue(name: string): boolean	//Check if a named value exists under this name.
-  clearValue(name: string): boolean	//Clear the value with the given name
   createClearValueAction(name: string): object	//Create an action to clear the value with the given name. This method can fail if e.g. the underlying properties object does not support action based setting of properties.
 }
 
@@ -471,7 +527,7 @@ export declare type Sequence = {
   getPlayerPosition(): TickTime	//Get the player's current position
   setPlayerPosition(positionTime?: TickTime): boolean	//Set the player's current position
   clearSelection(): boolean	//Clears TrackItem Selection
-  setSelection(TrackItemSelection: trackItemSelection): boolean	//Updates sequence selection using the given track item selection.
+  setSelection(trackItemSelection: TrackItemSelection): boolean	//Updates sequence selection using the given track item selection.
   getVideoTrackCount(): number	//Get video track count from this sequence
   getAudioTrackCount(): number	//Get audio track count from this sequence
   getCaptionTrackCount(): number	//Get caption track count from this sequence
@@ -497,13 +553,26 @@ export declare type Sequence = {
 }
 
 export declare type SequenceUtilsStatic = {
-  performSceneEditDetectionOnSelection(clipOperation: string, TrackItemSelection: trackItemSelection): boolean	//Performs cut detection on the sequence selection
+  performSceneEditDetectionOnSelection(clipOperation: string, trackItemSelection: TrackItemSelection): boolean	//Performs cut detection on the sequence selection
   SEQUENCE_OPERATION_APPLYCUT: string	//ApplyCuts
   SEQUENCE_OPERATION_CREATEMARKER: string	//CreateMarkers
   SEQUENCE_OPERATION_CREATESUBCLIP: string	//CreateSubclips
 }
 
 export declare type SequenceUtils = {
+}
+
+export declare type SourceMonitorStatic = {
+  openFilePath(filePath: string): boolean	//Open the item at the specified path and send to the Source Monitor for preview
+  openProjectItem(projectItem: ProjectItem): boolean	//Open input projectItem on Source Monitor
+  closeClip(): boolean	//Close clip on Source Monitor
+  closeAllClips(): boolean	//Close all clips on Source Monitor
+  getPosition(): TickTime	//Get position of source monitor in time
+  play(arg0?: number): boolean	//Play clip at source monitor with input speed
+  getProjectItem(): object	//Get projectItem at source monitor
+}
+
+export declare type SourceMonitor = {
 }
 
 export declare type TickTimeStatic = {
@@ -571,19 +640,19 @@ export declare type VideoClipTrackItem = {
   isSpeedReversed(): number	//Returns true if the trackitem is reversed
   createMoveAction(tickTime: TickTime): Action	//Returns an action moves the inPoint of the track item to a new time, by shifting it by a number of seconds.
   getInPoint(): TickTime	//Get timecode representing the inPoint of sequence.
-  getOutPoint(): TickTime	//Get timecode representing the inPoint of sequence.
+  getOutPoint(): TickTime	//Get timecode representing the outPoint of sequence.
   createSetInPointAction(tickTime: TickTime): Action	//Create SetInPointAction for sequence
   createSetOutPointAction(tickTime: TickTime): Action	//Create SetInPointAction for sequence
   getStartTime(): TickTime	//Timecode representing the start of this track item relative to the sequence start.
   getEndTime(): TickTime	//Timecode representing the end of this track item relative to the sequence start.
   getDuration(): TickTime	//Timecode representing the duration of this track item relative to the sequence start.
   getType(): number	//Index representing the type of this track item.
-  isMuted(): boolean	//Returns true if rackitem is muted/disabled
-  createSetMutedAction(disabled: boolean): Action	//Returns an action that enables/disables the trackItem 
+  isDisabled(): boolean	//Returns true if rackitem is muted/disabled
+  createSetDisabledAction(disabled: boolean): Action	//Returns an action that enables/disables the trackItem 
   getMediaType(): Guid	//UUID representing the underlying media type of this track item
   getTrackIndex(): number	//Index representing the track index of the track this track item belongs to
   getProjectItem(): ProjectItem	//The project item for this track item.
-  getComponentChain(): any
+  getComponentChain(): VideoComponentChain	//Returns VideoComponentChain
 }
 
 export declare type VideoComponentChainStatic = {
@@ -715,6 +784,19 @@ export namespace Constants {
 		REAL,
 		TEXT,
 		BOOLEAN
+	}
+
+	export enum ExportType {
+		QUEUE_TO_AME,
+		QUEUE_TO_APP,
+		IMMEDIATELY,
+		EVENT_RENDER_COMPLETE
+	}
+
+	export enum PreferenceKey {
+		AUTO_PEAK_GENERATION,
+		IMPORT_WORKSPACE,
+		SHOW_QUICKSTART_DIALOG
 	}
 }
 

@@ -8,6 +8,10 @@ module.exports = [{
           "path": "/ppro_reference/classes/addtransitionoptions/"
         },
         {
+          "title": "AppPreference",
+          "path": "/ppro_reference/classes/apppreference/"
+        },
+        {
           "title": "Application",
           "path": "/ppro_reference/classes/application/"
         },
@@ -32,6 +36,10 @@ module.exports = [{
           "path": "/ppro_reference/classes/clipprojectitem/"
         },
         {
+          "title": "ComponentParam",
+          "path": "/ppro_reference/classes/componentparam/"
+        },
+        {
           "title": "CompoundAction",
           "path": "/ppro_reference/classes/compoundaction/"
         },
@@ -50,6 +58,10 @@ module.exports = [{
         {
           "title": "FootageInterpretation",
           "path": "/ppro_reference/classes/footageinterpretation/"
+        },
+        {
+          "title": "FrameRate",
+          "path": "/ppro_reference/classes/framerate/"
         },
         {
           "title": "Guid",
@@ -103,8 +115,16 @@ module.exports = [{
           "path": "/ppro_reference/classes/projectitem/"
         },
         {
+          "title": "ProjectItemSelection",
+          "path": "/ppro_reference/classes/projectitemselection/"
+        },
+        {
           "title": "ProjectSettings",
           "path": "/ppro_reference/classes/projectsettings/"
+        },
+        {
+          "title": "ProjectUtils",
+          "path": "/ppro_reference/classes/projectutils/"
         },
         {
           "title": "Properties",
@@ -125,6 +145,10 @@ module.exports = [{
         {
           "title": "SequenceUtils",
           "path": "/ppro_reference/classes/sequenceutils/"
+        },
+        {
+          "title": "SourceMonitor",
+          "path": "/ppro_reference/classes/sourcemonitor/"
         },
         {
           "title": "TickTime",

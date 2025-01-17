@@ -1,7 +1,7 @@
 ---
-id: "projectsettings"
-title: "ProjectSettings"
-sidebar_label: "ProjectSettings"
+id: "framerate"
+title: "FrameRate"
+sidebar_label: "FrameRate"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,40 +17,47 @@ keywords:
   - Premiere Pro
 ---
 
-# ProjectSettings  
+# FrameRate  
+
+## Properties
+
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| ticksPerFrame | *number* | W | 25.0 | Read/Write property to get/set ticks per frame. |
+| value | *number* | R | 25.0 | Get the number of frames per second. |
 
 ## Static Methods
 
-### createSetScratchDiskSettingsAction
+### createWithValue
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
+*FrameRate*
   
-Returns an action which sets ScratchDiskSetting
+Create frame rate object with a value
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| project | [*Project*](/ppro_reference/classes/project/) | - |
-| scratchDiskSettings | [*ScratchDiskSettings*](/ppro_reference/classes/scratchdisksettings/) | - |
+| value | *number* | - |
 
 ___
 
-### getScratchDiskSettings
+## Instance Methods
+
+### equals
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ScratchDiskSettings*
+*boolean*
   
-Returns project ScratchDiskSettings
+Returns true if the given FrameRate is equal to this FrameRate object
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| project | [*Project*](/ppro_reference/classes/project/) | - |
+| frameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
 
 ___
-

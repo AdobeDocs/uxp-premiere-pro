@@ -317,7 +317,7 @@ Updates sequence selection using the given track item selection.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| TrackItemSelection | [*trackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
+| trackItemSelection | [*TrackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
 
 ___
 
@@ -333,6 +333,6 @@ Set sequence settings
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequenceSettings | *SequenceSettings* | - |
+| sequenceSettings | [*SequenceSettings*](/ppro_reference/classes/sequencesettings/) | - |
 
 ___

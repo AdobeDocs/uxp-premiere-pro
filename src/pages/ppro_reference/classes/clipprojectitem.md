@@ -85,7 +85,7 @@ Set the footage interpretation object for project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| InterpretFootage | *object* | - |
+| footageInterpretation | [*FootageInterpretation*](/ppro_reference/classes/footageinterpretation/) | - |
 
 ___
 
@@ -274,7 +274,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*InterpretFootage*
+*FootageInterpretation*
   
 Get the footage interpretation object for project item
 

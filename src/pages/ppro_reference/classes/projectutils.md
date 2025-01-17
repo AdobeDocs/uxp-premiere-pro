@@ -1,7 +1,7 @@
 ---
-id: "sequenceutils"
-title: "SequenceUtils"
-sidebar_label: "SequenceUtils"
+id: "projectutils"
+title: "ProjectUtils"
+sidebar_label: "ProjectUtils"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,24 +17,23 @@ keywords:
   - Premiere Pro
 ---
 
-# SequenceUtils  
+# ProjectUtils  
 
 ## Static Methods
 
-### performSceneEditDetectionOnSelection
+### getSelection
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
+*ProjectItemSelection*
   
-Performs cut detection on the sequence selection
+Get array of selected project items in project view
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| clipOperation | *string* | - |
-| trackItemSelection | [*TrackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
+| project | [*Project*](/ppro_reference/classes/project/) | - |
 
 ___
 
