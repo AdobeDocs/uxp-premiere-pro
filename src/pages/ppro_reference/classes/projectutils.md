@@ -36,4 +36,3 @@ Get array of selected project items in project view
 | project | [*Project*](/ppro_reference/classes/project/) | - |
 
 ___
-
