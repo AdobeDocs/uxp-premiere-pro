@@ -19,6 +19,24 @@ keywords:
 
 # Properties  
 
+## Static Methods
+
+### getProperties
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Properties*
+  
+Return Property Owner Object
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| propertyOwnerObject | *any* | This can also be object instance of Project, Sequence etc.. |
+
+___
+
 ## Instance Methods
 
 ### createClearValueAction
