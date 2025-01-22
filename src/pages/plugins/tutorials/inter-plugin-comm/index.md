@@ -17,7 +17,7 @@ This is particularly handy when you know a certain task is already automated by 
 The `Plugin Manager` module provides APIs that will help establish the connection. But before we take a look at an example, be sure to be well-versed in these topics
 
 - [Plugin entrypoints](../../concepts/entry-points/)
-- [Manifest permission module](../../concepts/manifest/#permissionsdefinition)
+- [Manifest permission module](../../concepts/manifest/index.md#permissionsdefinition)
 
 Additionally, you will need
 
@@ -147,4 +147,4 @@ function doThing(args) {
 
 ## Reference docs
 
-- [Plugin Manager](../../../uxp-api/reference-js/Modules/uxp/Plugin%20Manager/PluginManager/)
+- [Plugin Manager](../../../uxp-api/reference-js/Modules/uxp/Plugin Manager/PluginManager.md)

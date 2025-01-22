@@ -18,9 +18,8 @@ Modern extensibility powering the design of custom tools and features, allowing 
 - [What's new](./changelog/)
 - [UXP APIs](./uxp-api/)
 - [Premiere Pro DOM APIs](./ppro_reference/index.md)
-- [Plugins](./plugins/getting-started/)
+- [Plugins](./plugins/getting-started/index.md)
 - [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/)
-
 
 ## Overview
 
@@ -38,27 +37,26 @@ Premiere Pro offers a specific set of UXP functionality that extends the base UX
 
 **Fast, Interactive Development.** Load, launch and update panels directly without having to relaunch Premiere Pro.
 
-
 <DiscoverBlock slots="text"/>
 
 **Built In Debuggger.**  Trace code quickly using the built-in debugger that attaches natively to Premiere Pro.
 
 <DiscoverBlock slots="text"/>
 
-**Threaded Execution.**  UXP operates in parallel with other Premiere Pro processes.  Continue working in Preimere Pro while UXP Plugin functions are running.   
+**Threaded Execution.**  UXP operates in parallel with other Premiere Pro processes.  Continue working in Preimere Pro while UXP Plugin functions are running.
 
 ## Updates
 
 The Premiere Pro UXP API, along with this documentation website, will be updated periodically to further expand functionality as new versions of Premiere Pro are released and new features are developed.
 
 ## Join the community
+
 Join the worldwide community of Creative Cloud Developers who are building plugins and integrations to empower creativity!
 
 Here are a few other ways to get involved:
+
 - Join the [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/) to meet other developers, ask questions, and offer help.
 - Subscribe to the [Adobe Creative Cloud Developer Newsletter](https://www.adobe.com/subscription/ccdevnewsletter.html).
-
-##
 
 <!-- ## Discover
 

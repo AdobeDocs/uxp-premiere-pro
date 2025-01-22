@@ -34,7 +34,6 @@ Performs cut detection on the sequence selection
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | clipOperation | *string* | - |
-| TrackItemSelection | [*trackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
+| trackItemSelection | [*TrackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
 
 ___
-

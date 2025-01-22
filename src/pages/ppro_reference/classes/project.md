@@ -208,7 +208,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectItem*
+*FolderItem*
   
 The root item of the project which contains all items of the project on the lowest level.
 

@@ -1,7 +1,7 @@
 ---
-id: "transitionfactory"
-title: "TransitionFactory"
-sidebar_label: "TransitionFactory"
+id: "apppreference"
+title: "AppPreference"
+sidebar_label: "AppPreference"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,32 +17,32 @@ keywords:
   - Premiere Pro
 ---
 
-# TransitionFactory  
+# AppPreference  
 
 ## Static Methods
 
-### createVideoTransition
+### getValue
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*VideoTransition*
+*string*
   
-Creates a new video filter component based on the input matchName
+Get preference value in native string form
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| matchName | *string* | - |
+| preferenceKey | *string* | - |
 
 ___
 
-### getVideoTransitionMatchNames
+### setValue
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Array*
+*boolean*
   
-Return a promise which will be fullfilled with an array of video transition matchnames
+Set backend preference using given list of property keys. The parameters are <key, value (number, boolean or string), persistence flag>
 
 ___

@@ -22,7 +22,6 @@ To use any constant, import the `constants` object from the premiere pro module 
 
 ## Enumerations
 
-
 ### MediaType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -175,3 +174,27 @@ ___
 
 ___
 
+### ExportType
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| QUEUE_TO_AME | - |
+| QUEUE_TO_APP | - |
+| IMMEDIATELY | - |
+| EVENT_RENDER_COMPLETE | - |
+
+___
+
+### PreferenceKey
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| AUTO_PEAK_GENERATION | - |
+| IMPORT_WORKSPACE | - |
+| SHOW_QUICKSTART_DIALOG | - |
+
+___

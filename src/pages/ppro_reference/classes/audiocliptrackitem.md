@@ -19,7 +19,6 @@ keywords:
 
 # AudioClipTrackItem  
 
-
 ## Instance Methods
 
 ### createMoveAction
@@ -38,6 +37,22 @@ Returns an action moves the inPoint of the track item to a new time, by shifting
 
 ___
 
+### createSetDisabledAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Returns an action that enables/disables the trackItem
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| disabled | *boolean* | - |
+
+___
+
 ### createSetInPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -51,22 +66,6 @@ Create SetInPointAction for sequence
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | Sets the In-Point in TickTime |
-
-___
-
-### createSetMutedAction
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*Action*
-  
-Returns an action that enables/disables the trackItem 
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| disabled | *boolean* | - |
 
 ___
 
@@ -90,7 +89,9 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*any*
+*AudioComponentChain*
+  
+Returns AudioComponentChain
 
 ___
 
@@ -150,7 +151,7 @@ ___
 
 *TickTime*
   
-Get timecode representing the inPoint of sequence.
+Get timecode representing the outPoint of sequence.
 
 ___
 
@@ -214,7 +215,7 @@ Returns true if the trackitem is an adjustment layer
 
 ___
 
-### isMuted
+### isDisabled
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 

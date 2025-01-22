@@ -25,6 +25,21 @@ keywords:
 | :------ | :------ | :------ | :------ | :------ |
 | name | *string* | R | 25.0 | Get name of project item object |
 
+## Static Methods
+
+### cast
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*any*
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| item | *any* | - |
+
+___
 
 ## Instance Methods
 

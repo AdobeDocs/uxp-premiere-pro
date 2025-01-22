@@ -23,7 +23,6 @@ keywords:
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| parent | *object* | R | 25.0 | The root item of the project which contains all items of the project on the lowest level. |
 | name | *string* | R | 25.0 | Get name of project item object |
 
 ## Static Methods
@@ -40,7 +39,7 @@ keywords:
 | :------ | :------ | :------ |
 | projectItem | *any* | - |
 
-
+___
 
 ## Instance Methods
 

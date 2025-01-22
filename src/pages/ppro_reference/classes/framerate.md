@@ -1,7 +1,7 @@
 ---
-id: "keyframe"
-title: "Keyframe"
-sidebar_label: "Keyframe"
+id: "framerate"
+title: "FrameRate"
+sidebar_label: "FrameRate"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,39 +17,47 @@ keywords:
   - Premiere Pro
 ---
 
-# Keyframe  
+# FrameRate  
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| value | *object* | W | 25.0 |  |
-| position | *object* | W | 25.0 | Get/Set position of a keyframe |
+| ticksPerFrame | *number* | W | 25.0 | Read/Write property to get/set ticks per frame. |
+| value | *number* | R | 25.0 | Get the number of frames per second. |
 
-## Instance Methods
+## Static Methods
 
-### getTemporalInterpolationMode
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*number*
-  
-Gets temporal interpolation mode of a keyframe
-
-___
-
-### setTemporalInterpolationMode
+### createWithValue
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
+*FrameRate*
   
-Sets temporal interpolation mode of a keyframe
+Create frame rate object with a value
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| temporalInterpolationMode | *number* | - |
+| value | *number* | - |
+
+___
+
+## Instance Methods
+
+### equals
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Returns true if the given FrameRate is equal to this FrameRate object
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| frameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
 
 ___
