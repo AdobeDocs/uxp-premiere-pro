@@ -58,8 +58,6 @@ Here are a few other ways to get involved:
 - Join the [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/) to meet other developers, ask questions, and offer help.
 - Subscribe to the [Adobe Creative Cloud Developer Newsletter](https://www.adobe.com/subscription/ccdevnewsletter.html).
 
-##
-
 <!-- ## Discover
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
