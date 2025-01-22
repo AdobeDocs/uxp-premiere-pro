@@ -18,7 +18,7 @@ Modern extensibility powering the design of custom tools and features, allowing 
 - [What's new](./changelog/)
 - [UXP APIs](./uxp-api/)
 - [Premiere Pro DOM APIs](./ppro_reference/index.md)
-- [Plugins](./plugins/getting-started/)
+- [Plugins](./plugins/getting-started/index.md)
 - [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/)
 
 
