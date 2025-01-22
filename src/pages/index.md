@@ -21,7 +21,6 @@ Modern extensibility powering the design of custom tools and features, allowing 
 - [Plugins](./plugins/getting-started/index.md)
 - [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/)
 
-
 ## Overview
 
 UXP (**U**nified E**x**tensibility **P**latform) is a scripting platform built into Premiere Pro.  It is powered by a modern JavaScript engine and offeres the ability to access many Premiere Pro functions at a programatic level.  With UXP, unique tools can be built to integrate with and optimize the most precise and demanding workflows, reducing repitition, maximizing efficiency and leveraging Premiere Pro into a bespoke application customized for the needs of any project.
@@ -38,23 +37,24 @@ Premiere Pro offers a specific set of UXP functionality that extends the base UX
 
 **Fast, Interactive Development.** Load, launch and update panels directly without having to relaunch Premiere Pro.
 
-
 <DiscoverBlock slots="text"/>
 
 **Built In Debuggger.**  Trace code quickly using the built-in debugger that attaches natively to Premiere Pro.
 
 <DiscoverBlock slots="text"/>
 
-**Threaded Execution.**  UXP operates in parallel with other Premiere Pro processes.  Continue working in Preimere Pro while UXP Plugin functions are running.   
+**Threaded Execution.**  UXP operates in parallel with other Premiere Pro processes.  Continue working in Preimere Pro while UXP Plugin functions are running.
 
 ## Updates
 
 The Premiere Pro UXP API, along with this documentation website, will be updated periodically to further expand functionality as new versions of Premiere Pro are released and new features are developed.
 
 ## Join the community
+
 Join the worldwide community of Creative Cloud Developers who are building plugins and integrations to empower creativity!
 
 Here are a few other ways to get involved:
+
 - Join the [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/) to meet other developers, ask questions, and offer help.
 - Subscribe to the [Adobe Creative Cloud Developer Newsletter](https://www.adobe.com/subscription/ccdevnewsletter.html).
 
