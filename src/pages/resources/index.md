@@ -12,8 +12,8 @@ keywords:
 
 # Resources
 
-By now, we hope that you have already tried a simple plugin by following the getting-started guides. 
+By now, we hope that you have already tried a simple plugin by following the getting-started guides.
 
-The resources here are meant for you to deep dive into UXP and build something more useful for real-world scenarios. 
+The resources here are meant for you to deep dive into UXP and build something more useful for real-world scenarios.
 
-Start by reading the [fundamentals](./fundamentals/), and move to the [recipes](./recipes/) that aim to provide bite-size examples for common use cases. And then, explore the APIs in the [References](./changelog/) section. 
+Start by reading the [fundamentals](./fundamentals/), and move to the [recipes](./recipes/) that aim to provide bite-size examples for common use cases. And then, explore the APIs in the [References](../changelog/) section.

@@ -24,7 +24,7 @@ Please make sure your local environment uses the following application versions 
 
 <!-- Plugins and Scripts -->
 
-**In plugins**, you should seek permission for `clipboard` access in the manifest. <br></br> IMPORTANT: Read about the [manifest permissions](../../../plugins/concepts/manifest/#permissionsdefinition) before you proceed.
+**In plugins**, you should seek permission for `clipboard` access in the manifest. <br></br> IMPORTANT: Read about the [manifest permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition) before you proceed.
 
 <!-- **In scripts**, the permission for `clipboard` is fixed. You can ignore the manifest details in the following examples. Learn about these values in the [manifest fundamentals section](../../fundamentals/manifest/). -->
 
@@ -73,4 +73,4 @@ async function foo() {
 
 ## Reference material
 
-- [Clipboard](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard/) APIs
+- [Clipboard](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md) APIs

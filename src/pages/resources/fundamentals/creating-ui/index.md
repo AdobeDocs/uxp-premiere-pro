@@ -73,7 +73,7 @@ Now that you know the various options, you must understand their differences and
 - **HTML elements** <br></br>
    Keep in mind that UXP is not a browser. It's a platform that provides the ease of using web technologies to build plugins/scripts for desktop applications. Hence, it does not support all the HTML/CSS capabilities you can use in a browser. In fact, the tags that are _not_ supported are treated like simple `<div>`.
 
-   Do take a look at the list of HTML [elements](../../../uxp-api/reference-html/General/Unsupported%20Elements/), and [attributes](../../../uxp-api/reference-html/General/Unsupported%20Attributes/) that are _not_ supported.
+   Do take a look at the list of HTML [elements](../../../uxp-api/reference-html/General/Unsupported%20Elements), and [attributes](../../../uxp-api/reference-html/General/Unsupported%20Attributes) that are _not_ supported.
 
 - **Spectrum UXP widgets**<br></br>
    Remember that these are built-in within UXP. Therefore, they may appear to be a black-box solution that does not allow you to peek into the details while debugging or altering their behavior easily.
