@@ -26,9 +26,11 @@ index_desc: Changelog in UXP version
 ## UXP v8.0.1
 
 ### Breaking Changes
+
 - `enableFillAsCustomAttribute` feature flag, introduced in UXPv7.1.0, will be turned on by default.
 
 ### Deprecations
+
 - Changes to Clipboard
   - [Clipboard.setContent](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#setcontentdata) is deprecated. Please use [Clipboard.write](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
   - [Clipboard.getContent](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#getcontent) is deprecated. Please use [Clipboard.read](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#read) instead.
@@ -41,6 +43,7 @@ index_desc: Changelog in UXP version
   - Event `uxpvideopause` in [pause()](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#pause) is deprecated. Use `pause` instead.
 
 ### New
+
 - New components supported in Spectrum Web Components (SWC). More details [here](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers).
   - sp-asset
   - sp-meter
@@ -70,18 +73,20 @@ index_desc: Changelog in UXP version
 - [Beta] Support for form reset in [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 
 ### Updated
+
 - Upgraded Spectrum Web Components to v0.37.0. More details [here](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers).
 - [UXP Clipboard.writeText()](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) now accepts strings as input to meet standards
 
-
 ## UXP v7.4.0
+
 ### Updated
+
 - UXP Alerts ([alert](./reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt](./reference-js/Global%20Members/HTML%20DOM/prompt.md), [confirm](./reference-js/Global%20Members/HTML%20DOM/confirm.md)) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag `enableAlerts` in the manifest.json file. Also, note that UXP alerts will be `available only in Plugins` and `not in scripts`.
 - Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md), and network calls [XMLHttp](./reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md) [fetch](./reference-js/Global%20Members/Data%20Transfers/fetch.md)
 - New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](./reference-spectrum/Spectrum%20to%20SWC%20Mapping/index.md) in UXP
 
-
 ### Fixed
+
 - XMP in Scripts.
 - Plugin crashes while using [fit-content](https://forums.creativeclouddeveloper.com/t/ps-2024-crashes-when-opening-my-uxp-plugin/6840/7)
 - WebView support for [file selector](https://forums.creativeclouddeveloper.com/t/macos-uxp-webview-for-photoshop-is-missing-file-selector/6843) in MacOS
@@ -89,8 +94,10 @@ index_desc: Changelog in UXP version
 - Updated missing docs for pseudo-class [defined](./reference-css/Pseudo-classes/defined.md) (Available since UXP v6.0)
 
 ## UXP v7.3.0
+
 ### New
-- [GUID](./reference-js/Modules/uxp/User%20Information/UserInfo.md) for uniquely identifying a Creative Cloud User (Currently Supported only in `Photoshop`).
+
+- [GUID](./reference-js/Modules/uxp/User%20Information/index.md) for uniquely identifying a Creative Cloud User (Currently Supported only in `Photoshop`).
 - Multipart `FormData` support in [Request](./reference-js/Global%20Members/Data%20Transfers/Request.md) and [Response](./reference-js/Global%20Members/Data%20Transfers/Response.md) for `fetch`
 - [FormData](./reference-js/Global%20Members/Data%20Transfers/FormData.md) now supports the following APIs
     - delete()
@@ -101,12 +108,14 @@ index_desc: Changelog in UXP version
     - set()
     - values()
 
-
 ### Updated
+
 - [FormData's append](./reference-js/Global%20Members/Data%20Transfers/FormData.md#append--namevaluefilename) now supports `Blob` as additional parameter.
 - `Spectrum Web Components` support in `React` context is now available for all the 30 components.
     - Sample plugin for UXP-SWC plugin in React context can be referred [here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-react-starter)
+
 ### Fixed
+
 - Tab Navigation not working for several SWC Components is now fixed
 - Spacebar doesn't work on SWC Button component when reached via TAB navigation.
 - Support for `Alerts` in InDesign
@@ -115,20 +124,25 @@ index_desc: Changelog in UXP version
     - [confirm()](./reference-js/Global%20Members/HTML%20DOM/confirm.md)
 
 ## UDT v2.0
+
 ### New
+
 UXP Playground to experiment with APIs. Click on the 'Playground' tab next to 'Developer Workspace' to select an app and get started.
 
 ### Updated
+
 Plugin actions are surfaced based on the 'Status' of your plugin in the Developer Workspace
 
-
 ## UXP v7.2.0
+
 ### New
-- Adobe [Extensibility Metadata Platform (XMP)](./reference-js/Modules/uxp/XMP/getting-started/xmp.md) support
+
+- Adobe [Extensibility Metadata Platform (XMP)](./reference-js/Modules/uxp/XMP/getting-started/index.md) support
 - [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
 - Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](./reference-js/Global%20Members/HTML%20DOM/getComputedStyle.md) API
 
 ### Updated
+
 - `Spectrum Web Component` is promoted to `release` and has support for [additional list of components](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/).
 - The are updates to the support matrix for Spectrum web components and its variants which is mentioned in the [support matrix](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/#list-of-supported-swc)
 - `swc-uxp-wrappers` to be used to consume the components inside UXP. These wrappers are hosted on [npmjs](https://www.npmjs.com/search?q=swc-uxp-wrappers)
@@ -137,17 +151,22 @@ Plugin actions are surfaced based on the 'Status' of your plugin in the Develope
 ## UXP v7.1.0
 
 ### New
+
 HTMLElement now supports
+
 - [setPointerCapture](./reference-js/Global%20Members/HTML%20DOM/Element.md#setpointercapturepointerid)
 - [releasePointerCapture](./reference-js/Global%20Members/HTML%20DOM/Element.md#releasepointercapturepointerid)
 - [hasPointerCapture](./reference-js/Global%20Members/HTML%20DOM/Element.md#haspointercapturepointerid)
 - [dir](./reference-js/Global%20Members/HTML%20Elements/HTMLHtmlElement.md#dir--string)
 
 ### Updated
+
 - Documentation for `shell` moved to [new location](./reference-js/Modules/uxp/shell/)
 
 ### Fixed
+
 - `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release.
+
 ```
 // CSS variable
 html {
@@ -163,6 +182,7 @@ html {
 ## UXP v7.0.0
 
 ### New
+
 - Support for Web Components in UXP Plugins. Various HTML elements and methods have been added to support this feature.
     - Classes
         - [HTMLSlotElement](./reference-js/Global%20Members/HTML%20Elements/HTMLSlotElement.md)
@@ -198,28 +218,31 @@ html {
     - [prompt()](./reference-js/Global%20Members/HTML%20DOM/prompt.md)
     - [confirm()](./reference-js/Global%20Members/HTML%20DOM/confirm.md)
 - Support for [pipeThrough](./reference-js/Global%20Members/Streams/ReadableStream.md#pipeThroughtransform,-options) and [tee](./reference-js/Global%20Members/Streams/ReadableStream.md#tee) in ReadableStream](./reference-js/Global%20Members/Streams/ReadableStream.md). Refer to [Streams](./reference-js/Global%20Members/Streams/index.md) for more details
-- [ImageBlob](./reference-js/Global%20Members/ImageBlob/ImageBlob.md) to render an uncompressed image buffer in UXP
+- [ImageBlob](./reference-js/Global%20Members/ImageBlob.md) to render an uncompressed image buffer in UXP
 
 ### Changed
+
 - [HTMLVideoElement](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md): 'metadata' is the default value for `preload` attribute
 - [FS API](./reference-js/Modules/fs/): No need for the `file://` protocol
 
 ## UXP v6.5.0
 
 ### New
-- [UXP Hybrid plugins](../../guides/hybrid-plugins/)
+
+- [UXP Hybrid plugins](.)
 - Allow unrestricted relative paths in require from scripts
 - [getEntryWithUrl](./reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
-
 
 ## UXP v6.4
 
 ### New
+
 - [WebView](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md) for anels
-- [Path Module APIs](./reference-js/Global%20Members/Path/Path.md)
+- [Path Module APIs](./reference-js/Global%20Members/Path.md)
 - UXP Scripts can run fsapi with full access in localFileSystem
 
 ### Bugs Fixes
+
 - PluginManifest parsing / Load Plugin errors not logged in UDT
 - Error shown in UDT APP logs on Plugin UnLoad
 - UXP script : file session tokens are not getting created
@@ -237,13 +260,15 @@ html {
 ## UXP v6.3
 
 ### New
+
 - [Blob](./reference-js/Global%20Members/Data%20Transfers/Blob.md) APIs.
 - Blob support in Fetch API.
-- [Crypto APIs](./reference-js/Global%20Members/Crypto/Crypto.md)
+- [Crypto APIs](./reference-js/Global%20Members/Crypto.md)
 - UXP Developer Tools v1.7.0 has supports for Debugging UXP Scripts in Photoshop and InDesign, refer [here](https://developer.adobe.com/photoshop/uxp/2022/scripting/getting-started/) for more details
 - UXP Developer Tools has new templates in the Create Plugin Dialog. This includes examples for using WebView and Multiple Menus in a Plugin. For more details on Webview refer [HTMLWebViewElement](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md) module under `Global Members/HTML Elements` in JavaScript Reference
 
 ### Bugs Fixes
+
 - Plugin cannot open its own folders because version dots are rejected
 - PS crashes frequently during UDT watch reload
 - UDT Window / Bring all to Front does not work

@@ -131,5 +131,5 @@ function showDialog() {
 
 ## Reference material
 
-- [Dialog Element](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/)
+- [Dialog Element](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement.md)
 - [Other HTML Elements](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/)

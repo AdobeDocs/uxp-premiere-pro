@@ -18,7 +18,7 @@ You may be looking for ways to make network calls for various reasons such as fe
 <!--Plugins and Scripts-->
 
 **In plugins**, you should seek permission for `` access in the manifest and specify the `domains` of the endpoints. <br></br>
-IMPORTANT: Please read about the [manifest permissions](../../../plugins/concepts/manifest/#networkpermission) module before you proceed.
+IMPORTANT: Please read about the [manifest permissions](../../../plugins/concepts/manifest/index.md#networkpermission) module before you proceed.
 
 <!-- **In scripts**, the permission for `network` is fixed. You can ignore the manifest details in the following examples. Learn about these values in the [manifest fundamentals section](../../fundamentals/manifest/). -->
 
@@ -193,6 +193,6 @@ async function foo() {
 
 ## Reference material
 
-- [fetch API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch/)
-- [XHR API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest/)
-- [WebSocket API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/WebSocket/)
+- [fetch API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch.md)
+- [XHR API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md)
+- [WebSocket API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/WebSocket.md)
