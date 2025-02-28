@@ -102,6 +102,7 @@ class documentation_library:
                             dump_to_file = False
                             ) -> dict:
         # TODO include_context currently provides no functionality
+        # TODO allow user to set dump file target location
         '''
         Report all instances of a specific block type across the entire document
         library, organized per document file
@@ -464,6 +465,14 @@ def testing():
 
 if __name__ == '__main__':
 
+    # TODO Add CLI
+
+    '''
+    TODO If run from the root folder of the documentation, the below path variable will traverse the documentation
+    correctly. This should be a CLI option so that users can define their own "source" documentation library, or
+    use the existing one here.  May need checks in place so that, if this .py file is moved to a new location, it does
+    not traverse non-documentation files 
+    '''
     file_directory = os.path.split(os.path.abspath(__file__))[0]
 
     docs = documentation_library()
