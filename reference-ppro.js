@@ -143,6 +143,10 @@ module.exports = [{
           "path": "/ppro_reference/classes/sequence/"
         },
         {
+          "title": "SequenceEditor",
+          "path": "/ppro_reference/classes/sequenceeditor/"
+        },
+        {
           "title": "SequenceUtils",
           "path": "/ppro_reference/classes/sequenceutils/"
         },

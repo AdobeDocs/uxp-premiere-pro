@@ -25,6 +25,7 @@ keywords:
 | :------ | :------ | :------ | :------ | :------ |
 | displayName | *string* | R | 25.0 | Returns the display name of the component param |
 
+
 ## Instance Methods
 
 ### areKeyframesSupported

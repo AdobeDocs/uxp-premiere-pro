@@ -26,6 +26,7 @@ keywords:
 | x | *number* | W | 25.0 | Get/Set the x value of a point |
 | y | *number* | W | 25.0 | Get/Set the y value of a point |
 
+
 ## Instance Methods
 
 ### distanceTo

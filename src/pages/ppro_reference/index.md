@@ -47,7 +47,7 @@ const sequence = await project.getActiveSequence();
 
 ## UXP Scripting
 
-UXP is not just for plugins anymore.  Individual JavaScript files may be developed and executed as detailed in the [UXP Scripting section](../uxp-api/).
+UXP is not just for plugins anymore.  Individual JavaScript files may be developed and executed as detailed in the [UXP Scripting section](./media/uxpscripting).
 
 ## Useful links
 

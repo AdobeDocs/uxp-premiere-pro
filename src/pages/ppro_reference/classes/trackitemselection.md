@@ -56,6 +56,16 @@ Add a track item to this selection
 
 ___
 
+### getTrackItems
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Array*
+  
+return list of trackItems inside of trackItemSelection
+
+___
+
 ### removeItem
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>

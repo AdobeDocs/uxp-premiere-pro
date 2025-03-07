@@ -22,6 +22,7 @@ To use any constant, import the `constants` object from the premiere pro module 
 
 ## Enumerations
 
+
 ### MediaType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -198,3 +199,4 @@ ___
 | SHOW_QUICKSTART_DIALOG | - |
 
 ___
+

@@ -26,6 +26,7 @@ keywords:
 | guid | *Guid* | R | 25.0 | The unique identifier of the sequence. |
 | name | *string* | R | 25.0 | The sequence name. |
 
+
 ## Instance Methods
 
 ### clearSelection
