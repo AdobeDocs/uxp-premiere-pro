@@ -78,4 +78,3 @@ Get array of selected projectItem based on input view guid
 | guid | [*Guid*](/ppro_reference/classes/guid/) | - |
 
 ___
-

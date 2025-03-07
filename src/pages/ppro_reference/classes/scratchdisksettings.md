@@ -19,7 +19,6 @@ keywords:
 
 # ScratchDiskSettings  
 
-
 ## Instance Methods
 
 ### getScratchDiskPath

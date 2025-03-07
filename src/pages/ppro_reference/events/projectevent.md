@@ -28,8 +28,6 @@ keywords:
 | id | *string* | R | 25.0 | The unique identifier of the project. |
 | project | *object* | R | 25.0 | The project object. |
 
-
-
 ## Events
 
 | Name | Version | Description |

@@ -32,7 +32,6 @@ keywords:
 | FIELD_TYPE_UPPERFIRST | *number* | R | 25.0 | field type upperfirst |
 | FIELD_TYPE_LOWERFIRST | *number* | R | 25.0 | field type lowerfirst |
 
-
 ## Instance Methods
 
 ### getAlphaUsage
