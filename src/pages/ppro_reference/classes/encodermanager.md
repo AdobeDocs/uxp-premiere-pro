@@ -27,6 +27,23 @@ keywords:
 
 ## Static Methods
 
+### getExportFileExtension
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*string*
+  
+Get the Export File Extension of Input Preset file
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| presetFilePath | *string* | - |
+
+___
+
 ### getManager
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
