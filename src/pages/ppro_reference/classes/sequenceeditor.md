@@ -17,7 +17,9 @@ keywords:
   - Premiere Pro
 ---
 
-# SequenceEditor  
+# SequenceEditor
+
+Used to add projectItems as trackItems to sequences, clone trackItems, or remove trackItems from sequences.
 
 ## Static Methods
 
