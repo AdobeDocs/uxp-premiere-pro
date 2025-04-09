@@ -46,4 +46,3 @@ ___
 Returns an array of video filter matchNames
 
 ___
-

@@ -27,7 +27,7 @@ keywords:
 
 *Properties*
   
-If property owner is not provided, it return application properties, else return the properties of the passed on object.
+Return Property Owner Object
 
 #### Parameters
 
@@ -38,22 +38,6 @@ If property owner is not provided, it return application properties, else return
 ___
 
 ## Instance Methods
-
-### clearValue
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*boolean*
-  
-Clear the value with the given name
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| name | *string* | - |
-
-___
 
 ### createClearValueAction
 

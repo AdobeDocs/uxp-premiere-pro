@@ -26,7 +26,6 @@ keywords:
 | guid | *Guid* | R | 25.0 | The unique identifier of the sequence. |
 | name | *string* | R | 25.0 | The sequence name. |
 
-
 ## Instance Methods
 
 ### clearSelection
@@ -317,7 +316,7 @@ Updates sequence selection using the given track item selection.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| TrackItemSelection | [*trackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
+| trackItemSelection | [*TrackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
 
 ___
 

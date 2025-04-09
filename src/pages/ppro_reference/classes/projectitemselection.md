@@ -1,7 +1,7 @@
 ---
-id: "utils"
-title: "Utils"
-sidebar_label: "Utils"
+id: "projectitemselection"
+title: "ProjectItemSelection"
+sidebar_label: "ProjectItemSelection"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,16 +17,16 @@ keywords:
   - Premiere Pro
 ---
 
-# Utils  
+# ProjectItemSelection  
 
-## Static Methods
+## Instance Methods
 
-### isAEInstalled
+### getItems
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
+*Array*
   
-Check if AE is installed.
+Get the project items that is represented by this selection.
 
 ___

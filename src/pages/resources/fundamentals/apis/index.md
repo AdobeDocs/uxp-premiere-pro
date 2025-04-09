@@ -25,7 +25,7 @@ You will see a few examples of these APIs in the [recipes](../../recipes/) but f
 
 These APIs enable you to create user interfaces, perform file operations, make network calls, etc.
 
-The method to mount or use these APIs may vary. Many of them are directly available in the global scope, such as [Crypto](../../../uxp-api/reference-js/Global%20Members/Crypto/) and [Documents](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Document/). But for certain modules, you first need to seek permission in the manifest (for plugins) or mount it specifically using `require()`. For example, `require(os)` or `require('uxp').shell`.
+The method to mount or use these APIs may vary. Many of them are directly available in the global scope, such as [Crypto](../../../uxp-api/reference-js/Global%20Members/Crypto.md) and [Documents](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Document.md). But for certain modules, you first need to seek permission in the manifest (for plugins) or mount it specifically using `require()`. For example, `require(os)` or `require('uxp').shell`.
 
 ## Host-specific APIs
 
@@ -39,7 +39,7 @@ Note that these are also referred to as **Document Object Model (DOM) APIs**. Th
 
 Also, keep in mind that, these should **not** be confused with the HTML DOM which serves your plugin<!--/script--> UI.
 
-You will learn more about the mounting technique in the [Premiere Pro DOM API](../dom-versioning/) topic.
+You will learn more about the mounting technique in the [Premiere Pro DOM API](../dom-apis/index.md) topic.
 
 ## Example
 

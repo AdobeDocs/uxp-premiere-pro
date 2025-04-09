@@ -45,9 +45,9 @@ For file system access you require permission for the `localFileSystem` module.
 
 Plugins and Scripts
 
-**In plugins**, you should seek permission for `localFileSystem` in your manifest.<br></br> IMPORTANT: Please read about the [manifest permissions](../../../plugins/concepts/manifest/#permissionsdefinition) module before proceeding.
+**In plugins**, you should seek permission for `localFileSystem` in your manifest.<br></br> IMPORTANT: Please read about the [manifest permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition) module before proceeding.
 
-**In scripts**, the permission for `localFileSystem` is fixed. You can ignore the manifest details in the following examples. Learn about these values in the [manifest fundamentals section](../../fundamentals/manifest/).
+**In scripts**, the permission for `localFileSystem` is fixed. You can ignore the manifest details in the following examples. Learn about these values in the [manifest fundamentals section](../../fundamentals/apis/index.md).
 
 Let's understand the manifest settings a bit more in detail.
 
@@ -84,7 +84,7 @@ And, for other locations, use `file:/`.
 
 Plugins and Scripts
 
-**In plugins**, you should seek permission for `localFileSystem` in your manifest.<br></br> IMPORTANT: Please read about the [manifest permissions](../../../plugins/concepts/manifest/#permissionsdefinition) module before proceeding.
+**In plugins**, you should seek permission for `localFileSystem` in your manifest.<br></br> IMPORTANT: Please read about the [manifest permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition) module before proceeding.
 
 **In scripts**, you can avail only `plugin-temp:/` to read/write from/to a temporary folder.
 
@@ -250,7 +250,7 @@ If you would like to remember the user's choice for an extended period, you can 
 - Session token - has a shorter span. It lasts until the plugin is 'Unloaded' from UDT or the script finishes its execution or the application is closed.
 - Persistent token - is more permanent in nature, and can last for multiple sessions or until the plugin is 'Uninstalled'. (Since scripts only last for the time of their execution, you should not use persistent tokens in scripts.)
 
-The example below shows the essence of this usage but you should ideally save these tokens in the storage (more details covered in [Storage](./storage.md) section) for later use.
+The example below shows the essence of this usage but you should ideally save these tokens in the storage (more details covered in [Storage](../../../uxp-api/reference-js/Global%20Members/Data%20Storage/LocalStorage.md) section) for later use.
 
 ```js
 const fsProvider = require('uxp').storage.localFileSystem;
@@ -273,10 +273,10 @@ async function readFileUsingTokensInLocalFileSystem() {
 
 #### Reference material
 
-- Instance of [localFileSystem](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider/)
-- [Entry](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Entry/) and [Entry metadata](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/EntryMetadata/)
-- [File](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/File/) and [Folder](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Folder/)
-- [Path](../../../uxp-api/reference-js/Global%20Members/Path/)
+- Instance of [localFileSystem](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md)
+- [Entry](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Entry.md) and [Entry metadata](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/EntryMetadata.md)
+- [File](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/File.md) and [Folder](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Folder.md)
+- [Path](../../../uxp-api/reference-js/Global%20Members/Path.md)
 
 ### FS Module
 
@@ -342,7 +342,7 @@ async function foo() {
 #### Reference material
 
 - [FS module](../../../uxp-api/reference-js/Modules/fs/)
-- [Path](../../../uxp-api/reference-js/Global%20Members/Path/)
+- [Path](../../../uxp-api/reference-js/Global%20Members/Path.md)
 
 ## Additional Notes
 

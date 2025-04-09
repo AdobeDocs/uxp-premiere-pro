@@ -1,7 +1,7 @@
 ---
-id: "captiontrack"
-title: "CaptionTrack"
-sidebar_label: "CaptionTrack"
+id: "sourcemonitor"
+title: "SourceMonitor"
+sidebar_label: "SourceMonitor"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,76 +17,94 @@ keywords:
   - Premiere Pro
 ---
 
-# CaptionTrack  
+# SourceMonitor  
 
-## Properties
+## Static Methods
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| name | *string* | R | 25.0 | Get the name of the track |
-| id | *number* | R | 25.0 | The ID of the track within the TrackGroup |
-
-## Instance Methods
-
-### getIndex
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*number*
-  
-Index representing the track index of this track within the track group.
-
-___
-
-### getMediaType
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*Guid*
-  
-UUID representing the underlying media type of this track
-
-___
-
-### getTrackItems
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*Array*
-  
-This returns the track items of the specified media type from the given track
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| trackItemType | *number* | - |
-| includeEmptyTrackItems | *boolean* | - |
-
-___
-
-### isMuted
+### closeAllClips
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Get mute state of the track
+Close all clips on Source Monitor
 
 ___
 
-### setMute
+### closeClip
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-sets the mute state of the track to muted/unmuted
+Close clip on Source Monitor
+
+___
+
+### getPosition
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*TickTime*
+  
+Get position of source monitor in time
+
+___
+
+### getProjectItem
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*object*
+  
+Get projectItem at source monitor
+
+___
+
+### openFilePath
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Open the item at the specified path and send to the Source Monitor for preview
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| mute | *boolean* | - |
+| filePath | *string* | - |
+
+___
+
+### openProjectItem
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Open input projectItem on Source Monitor
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+
+___
+
+### play
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Play clip at source monitor with input speed
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| undefined | *number* | - |
 
 ___

@@ -43,6 +43,24 @@ ___
 
 ## Instance Methods
 
+### attachProxy
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Attach proxy or high resolution footage to projectItem and return if this non-undoable action is successful.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| mediaPath | *string* | - |
+| isHiRes | *boolean* | - |
+| inMakeAlternateLinkInTeamProjects | *boolean* | - |
+
+___
+
 ### canChangeMediaPath
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -60,6 +78,23 @@ ___
 *boolean*
   
 Indicates whether it is possible to attach a proxy, to this project item.
+
+___
+
+### changeMediaFilePath
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Change media file path of projectItem and return if non-undoable action is successful
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| newPath | *string* | - |
+| overrideCompatibilityCheck | *boolean* | - |
 
 ___
 
@@ -85,7 +120,7 @@ Set the footage interpretation object for project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| InterpretFootage | *object* | - |
+| footageInterpretation | [*FootageInterpretation*](/ppro_reference/classes/footageinterpretation/) | - |
 
 ___
 
@@ -274,7 +309,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*InterpretFootage*
+*FootageInterpretation*
   
 Get the footage interpretation object for project item
 
