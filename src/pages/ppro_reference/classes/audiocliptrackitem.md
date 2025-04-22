@@ -53,6 +53,22 @@ Returns an action that enables/disables the trackItem
 
 ___
 
+### createSetEndAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Create set end time action for sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+
+___
+
 ### createSetInPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -82,6 +98,22 @@ Create SetInPointAction for sequence
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | Sets the Out-Point in TickTime |
+
+___
+
+### createSetStartAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Create set start time action for sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
 
@@ -125,6 +157,16 @@ Get timecode representing the inPoint of sequence.
 
 ___
 
+### getIsSelected
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Returns if trackItem is selected or not
+
+___
+
 ### getMatchName
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -142,6 +184,16 @@ ___
 *Guid*
   
 UUID representing the underlying media type of this track item
+
+___
+
+### getName
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*string*
+  
+Returns the display name for trackItem
 
 ___
 

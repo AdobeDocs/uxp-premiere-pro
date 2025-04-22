@@ -82,6 +82,7 @@ ___
 | CLOSED | - |
 | DIRTY | - |
 | ACTIVATED | - |
+| PROJECT_ITEM_SELECTION_CHANGED | - |
 
 ___
 
@@ -131,6 +132,7 @@ ___
 | :------ | :------ |
 | ACTIVATED | - |
 | CLOSED | - |
+| SELECTION_CHANGED | - |
 
 ___
 
@@ -140,6 +142,7 @@ ___
 
 | Name | Description |
 | :------ | :------ |
+| CAPTURE | - |
 | AUDIO_CAPTURE | - |
 | VIDEO_CAPTURE | - |
 | AUDIO_PREVIEW | - |
@@ -183,7 +186,6 @@ ___
 | QUEUE_TO_AME | - |
 | QUEUE_TO_APP | - |
 | IMMEDIATELY | - |
-| EVENT_RENDER_COMPLETE | - |
 
 ___
 

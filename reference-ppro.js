@@ -68,6 +68,10 @@ module.exports = [{
           "path": "/ppro_reference/classes/guid/"
         },
         {
+          "title": "IngestSettings",
+          "path": "/ppro_reference/classes/ingestsettings/"
+        },
+        {
           "title": "Keyframe",
           "path": "/ppro_reference/classes/keyframe/"
         },
