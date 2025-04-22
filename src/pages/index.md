@@ -27,7 +27,7 @@ UXP (**U**nified E**x**tensibility **P**latform) is a scripting platform built i
 
 Best of all, UXP Plugins run right in Premiere Pro.
 
-Premiere Pro offers a specific set of UXP functionality that extends the base UXP API common across all UXP-capible Adobe Applications.  Documentation for both the Premiere Pro API and the base UXP API can be accessed via this site.
+Premiere Pro offers a specific set of UXP functionality that extends the base UXP API common across all UXP-capable Adobe Applications.  Documentation for both the Premiere Pro API and the base UXP API can be accessed via this site.
 
 ![UDT Interface](./UDT_sample_image_01_cropped.png)
 
