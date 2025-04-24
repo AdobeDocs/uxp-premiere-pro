@@ -31,16 +31,6 @@ Get whether or not ingest is enabled
 
 ___
 
-### getPresetPath
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*string*
-  
-Get preset path for ingest settings
-
-___
-
 ### setIngestEnabled
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -54,21 +44,5 @@ Set whether or not ingest is enabled
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | enabled | *boolean* | - |
-
-___
-
-### setPresetPath
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*boolean*
-  
-Set preset path for ingest settings
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| presetPath | *string* | - |
 
 ___
