@@ -473,11 +473,15 @@ if __name__ == '__main__':
     use the existing one here.  May need checks in place so that, if this .py file is moved to a new location, it does
     not traverse non-documentation files 
     '''
-    file_directory = os.path.split(os.path.abspath(__file__))[0]
+    # edited_docs_root_dir = os.path.split(os.path.abspath(__file__))[0]
+    edited_docs_root_dir = '/Users/binsler/Desktop/250428_Dan McS Documentation Edits/ppro_reference'
+    # edited_docs_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape/ppro_reference'
+
+    # new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape/ppro_reference'
 
     docs = documentation_library()
 
-    for item in os.walk(file_directory):
+    for item in os.walk(edited_docs_root_dir):
         for file in item[2]:
             if os.path.splitext(file)[1].lower() == '.md':
                 newfile = docs.add_file(os.path.join(item[0], file))
