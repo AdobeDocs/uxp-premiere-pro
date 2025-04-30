@@ -21,6 +21,7 @@ class documentation_library:
 
     def __init__(self):
         self.documentation_files = []
+        self._library_relative_path_root = ''
 
     # METHODS #
 
@@ -88,6 +89,8 @@ class documentation_library:
                 while doc_path.find(common_root) != 0:
                     common_root = os.path.split(common_root)[0]
                 
+        self._library_relative_path_root = common_root
+
         # Prune common root out of all document file paths to establish
         # relative paths
         for doc_path in self.documentation_files:
@@ -198,6 +201,31 @@ class documentation_library:
                 writeFile.close()
             
         return found_blocks
+    
+    def detect_and_inherit_documentation_revisions(self, edited_docs) -> bool: # TODO typehinting for documentation object arguments
+        '''
+        Given a second documentation_library object which differs from the current
+        documentation_library object (presumably with documentation and snipppet edits),
+        detect where these differences exist and absorb any documentation additions into
+        the current documentation_library object.
+
+        In other words...
+        merge changes (additions) in edited_docs into the existing documentation_library
+
+        AKA...
+        Merge all human-added stuff into the scraped documentation
+        '''
+
+        # Find matches based on filename
+        filepairs = []
+        target_orphans = [] # files in this documentation that appear to have no edited partner
+        
+        current_pair = []
+        for afile in edited_docs.documentation_files:
+            for bfile in self.documentation_files:
+                if afile.filepath_relative == bfile.filepath_relative:
+
+            if 
 
 
 class documentation_file:
@@ -473,22 +501,41 @@ if __name__ == '__main__':
     use the existing one here.  May need checks in place so that, if this .py file is moved to a new location, it does
     not traverse non-documentation files 
     '''
+
+    '''
+    TODO Read in documentation library should be a method, not main body functionality.
+    '''
+
     # edited_docs_root_dir = os.path.split(os.path.abspath(__file__))[0]
-    edited_docs_root_dir = '/Users/binsler/Desktop/250428_Dan McS Documentation Edits/ppro_reference'
+    edited_docs_root_dir = '/Users/binsler/Desktop/250428_Dan McS Documentation Edits_MINI/ppro_reference'
     # edited_docs_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape/ppro_reference'
 
-    # new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape/ppro_reference'
+    new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape_MINI/ppro_reference'
 
-    docs = documentation_library()
+    edited_docs = documentation_library()
 
     for item in os.walk(edited_docs_root_dir):
         for file in item[2]:
             if os.path.splitext(file)[1].lower() == '.md':
-                newfile = docs.add_file(os.path.join(item[0], file))
+                newfile = edited_docs.add_file(os.path.join(item[0], file))
                 newfile.parse_blocks_md()
 
-    docs.set_relative_path_for_library()
+    edited_docs.set_relative_path_for_library()
+
+
+    scraped_docs = documentation_library()
+
+    for item in os.walk(new_scrape_root_dir):
+        for file in item[2]:
+            if os.path.splitext(file)[1].lower() == '.md':
+                newfile = scraped_docs.add_file(os.path.join(item[0], file))
+                newfile.parse_blocks_md()
+
+    scraped_docs.set_relative_path_for_library()
+
+
+
     
-    snippet_report = docs.block_type_report(block_type_str = 'snippet', print_report = True, dump_to_file = True)
+    snippet_report = edited_docs.block_type_report(block_type_str = 'snippet', print_report = True, dump_to_file = True)
 
     print(os.path.abspath(__file__))
