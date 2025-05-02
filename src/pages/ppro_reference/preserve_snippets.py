@@ -202,6 +202,7 @@ class documentation_library:
             
         return found_blocks
     
+
     def detect_and_inherit_documentation_revisions(self, edited_docs) -> bool: # TODO typehinting for documentation object arguments
         '''
         Given a second documentation_library object which differs from the current
@@ -220,12 +221,18 @@ class documentation_library:
         filepairs = []
         target_orphans = [] # files in this documentation that appear to have no edited partner
         
+        ### TODO very much incomplete
         current_pair = []
         for afile in edited_docs.documentation_files:
             for bfile in self.documentation_files:
                 if afile.filepath_relative == bfile.filepath_relative:
+                    pass
 
-            if 
+            if True:
+                pass
+
+    ## STATIC METHODS ##
+
 
 
 class documentation_file:
@@ -484,6 +491,98 @@ def check_file_type(filepath: str, extension: List[str]) -> bool:
     else:
         raise TypeError(f"'{os.path.split(filepath)[1].lower()}' is not type: '{processed_extension_set}'")
 
+    
+def determine_docfile_alignment(docfile_to_read: documentation_file, docfile_receiving_inserts: documentation_file) -> List: # TODO typehinting of arguments
+    '''
+    
+    '''
+    line_alignment = {
+                'fileorder': [docfile_to_read, docfile_receiving_inserts], 
+                'line_index_alignment': []
+                }
+    line_orphansA = [] # lines found only in Doc A, not in Doc B
+    line_orphansB = [] # lines found only in Doc B, not in Doc A
+    
+    numlinesA = len(docfile_to_read.text_blocks)
+    numlinesB = len(docfile_receiving_inserts.text_blocks)
+
+    currentlineA = 0 # current comparison line in Doc A
+    currentlineB = 0 # current comparison line in Doc B
+
+    indexA = 0 # traverse pointer in Doc A
+    indexB = 0 # traverse pointer in Doc B
+
+    while currentlineA < numlinesA and currentlineB < numlinesB:
+
+        currentlineA_string = docfile_to_read.text_blocks[indexA].text
+        currentlineB_string = docfile_receiving_inserts.text_blocks[indexB].text
+
+        # Conditions for when lines between Doc A and B are considered to be matching
+        if (
+            # TODO Put more robust line equality evaluator function call here, and build line comparitor function!
+            currentlineA_string.strip() == currentlineB_string.strip()
+        ):
+            # if we've been skipped a bunch of lines in A or B, and now found a match, log the skipped lines lines
+            while indexA > currentlineA:
+                line_alignment['line_index_alignment'].append([
+                    [currentlineA, -1],
+                    [docfile_to_read.text_blocks[currentlineA].text, ""]
+                ])
+                currentlineA += 1
+
+            while indexB > currentlineB:
+                line_alignment['line_index_alignment'].append([
+                    [-1, currentlineB], 
+                    ["", docfile_receiving_inserts.text_blocks[currentlineB].text]
+                    ])
+                currentlineB += 1
+
+            # log the matching A == B line
+            line_alignment['line_index_alignment'].append([
+                [indexA, indexB], 
+                [docfile_to_read.text_blocks[indexA].text, docfile_receiving_inserts.text_blocks[indexB].text]
+                ])
+            
+            # Update the pointers and current line index
+            indexA += 1
+            indexB += 1
+
+            currentlineA = indexA
+            currentlineB = indexB
+        else:
+            # No match found, move the A pointer
+            indexA += 1
+
+        if indexA >= numlinesA and currentlineA < numlinesA:
+            # If a given A line returns no B line match during an entire traverse pass, log it as no parther
+            line_alignment['line_index_alignment'].append([
+                [currentlineA, -1],
+                [docfile_to_read.text_blocks[currentlineA].text,""]
+                ])
+            
+            # line_orphansA.append(currentlineA)
+            # line_orphansB.append(currentlineB)
+
+            currentlineA += 1
+            indexA = currentlineA
+
+            indexB = currentlineB + 1
+
+        if currentlineA >= numlinesA and currentlineB < numlinesB:
+            # If all A lines have been traversed and B lines remain, log them at the end of the list
+            while currentlineB < numlinesB:
+                line_alignment['line_index_alignment'].append([
+                        [-1, currentlineB], 
+                        ["", docfile_receiving_inserts.text_blocks[currentlineB].text]
+                        ])
+                # line_orphansB.append(currentlineB)
+
+                currentlineB += 1
+                indexB = currentlineB # TODO likely not necessary
+
+    x = 'break'
+    return line_alignment
+
 # TESTING BLOCK #
 
 def testing():
@@ -533,6 +632,7 @@ if __name__ == '__main__':
 
     scraped_docs.set_relative_path_for_library()
 
+    determine_docfile_alignment(edited_docs.documentation_files[0], scraped_docs.documentation_files[0])
 
 
     
