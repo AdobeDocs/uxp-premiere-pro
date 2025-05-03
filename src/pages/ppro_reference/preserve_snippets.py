@@ -7,6 +7,7 @@
 import os
 from typing import List
 import datetime
+import difflib
 
 # CLASSES #
 
@@ -492,9 +493,36 @@ def check_file_type(filepath: str, extension: List[str]) -> bool:
         raise TypeError(f"'{os.path.split(filepath)[1].lower()}' is not type: '{processed_extension_set}'")
 
     
-def determine_docfile_alignment(docfile_to_read: documentation_file, docfile_receiving_inserts: documentation_file) -> List: # TODO typehinting of arguments
+def determine_docfile_alignment(
+        docfile_to_read: documentation_file, 
+        docfile_receiving_inserts: documentation_file, 
+        confidence_threshold: float = 1.0) -> List:
     '''
+    Compare two documentation_file objects and determine their alignment:  Where they are the same, where they are
+    different, and where they match back up when differences are encounterd.
+
+    :documentation_file docfile_to_read:            representation of text file, likely edited by user, to read new edits from
+    :documentation_file docfile_receiving_inserts   representation of text file, likely unedited, to merge user edits into
+    :float confidence_threshold:                    confidence threshold beyond which two compared lines of text should be considered as matching
+                                                    this is a float from 0.0 - 1.0 representing a percentage of confidence
     
+    :return:            List demonstrating line alighment, formatted as:
+                            [{
+                            'fileorder': [documentation_file_1, documentation_file_2],
+                            'line_index_aligmnent: [[documentation_file_1_line_index, documentation_file_2_line_index],..]
+                            }]
+
+                        Details:
+                            fileorder: contains full documentation_file objects that can be referenced
+                            line_index_alignment: A list of sublists, where each sublist indicates two indices that represent
+                                a matching line string across two files.  Index order of each list item corresponds to the 
+                                order of the items in fileorder, i.e. the first index in the sublist matches to a line number
+                                index of the first file object in fileorder; the second index in the sublist matches to the
+                                line number index of the second file object in fileorder.
+
+                                An index of -1 indicates that there was no line match found.  For example, an index pair
+                                of [10, -1] indicates that line 10 from documentation_file_1 had no match in documentation_file_2
+
     '''
     line_alignment = {
                 'fileorder': [docfile_to_read, docfile_receiving_inserts], 
@@ -506,82 +534,121 @@ def determine_docfile_alignment(docfile_to_read: documentation_file, docfile_rec
     numlinesA = len(docfile_to_read.text_blocks)
     numlinesB = len(docfile_receiving_inserts.text_blocks)
 
-    currentlineA = 0 # current comparison line in Doc A
-    currentlineB = 0 # current comparison line in Doc B
+    currentlineA_index = 0 # current comparison line in Doc A
+    currentlineB_index = 0 # current comparison line in Doc B
 
-    indexA = 0 # traverse pointer in Doc A
-    indexB = 0 # traverse pointer in Doc B
+    pointerA_index = 0 # traverse pointer in Doc A
+    pointerB_index = 0 # traverse pointer in Doc B
 
-    while currentlineA < numlinesA and currentlineB < numlinesB:
+    while currentlineA_index < numlinesA and currentlineB_index < numlinesB:
 
-        currentlineA_string = docfile_to_read.text_blocks[indexA].text
-        currentlineB_string = docfile_receiving_inserts.text_blocks[indexB].text
+        currentlineA = docfile_to_read.text_blocks[pointerA_index]
+        currentlineB = docfile_receiving_inserts.text_blocks[pointerB_index]
+
+        currentlineA_string = docfile_to_read.text_blocks[pointerA_index].text #TODO remove
+        currentlineB_string = docfile_receiving_inserts.text_blocks[pointerB_index].text #TODO remove
 
         # Conditions for when lines between Doc A and B are considered to be matching
         if (
             # TODO Put more robust line equality evaluator function call here, and build line comparitor function!
-            currentlineA_string.strip() == currentlineB_string.strip()
+            do_text_blocks_match(currentlineA, currentlineB) >= confidence_threshold
         ):
             # if we've been skipped a bunch of lines in A or B, and now found a match, log the skipped lines lines
-            while indexA > currentlineA:
+            while pointerA_index > currentlineA_index:
                 line_alignment['line_index_alignment'].append([
-                    [currentlineA, -1],
-                    [docfile_to_read.text_blocks[currentlineA].text, ""]
+                    [currentlineA_index, -1],
+                    [docfile_to_read.text_blocks[currentlineA_index].text, ""]
                 ])
-                currentlineA += 1
+                currentlineA_index += 1
 
-            while indexB > currentlineB:
+            while pointerB_index > currentlineB_index:
                 line_alignment['line_index_alignment'].append([
-                    [-1, currentlineB], 
-                    ["", docfile_receiving_inserts.text_blocks[currentlineB].text]
+                    [-1, currentlineB_index], 
+                    ["", docfile_receiving_inserts.text_blocks[currentlineB_index].text]
                     ])
-                currentlineB += 1
+                currentlineB_index += 1
 
             # log the matching A == B line
             line_alignment['line_index_alignment'].append([
-                [indexA, indexB], 
-                [docfile_to_read.text_blocks[indexA].text, docfile_receiving_inserts.text_blocks[indexB].text]
+                [pointerA_index, pointerB_index], 
+                [docfile_to_read.text_blocks[pointerA_index].text, docfile_receiving_inserts.text_blocks[pointerB_index].text]
                 ])
             
             # Update the pointers and current line index
-            indexA += 1
-            indexB += 1
+            pointerA_index += 1
+            pointerB_index += 1
 
-            currentlineA = indexA
-            currentlineB = indexB
+            currentlineA_index = pointerA_index
+            currentlineB_index = pointerB_index
         else:
             # No match found, move the A pointer
-            indexA += 1
+            pointerA_index += 1
 
-        if indexA >= numlinesA and currentlineA < numlinesA:
+        if pointerA_index >= numlinesA and currentlineA_index < numlinesA:
             # If a given A line returns no B line match during an entire traverse pass, log it as no parther
             line_alignment['line_index_alignment'].append([
-                [currentlineA, -1],
-                [docfile_to_read.text_blocks[currentlineA].text,""]
+                [currentlineA_index, -1],
+                [docfile_to_read.text_blocks[currentlineA_index].text,""]
                 ])
             
             # line_orphansA.append(currentlineA)
             # line_orphansB.append(currentlineB)
 
-            currentlineA += 1
-            indexA = currentlineA
+            currentlineA_index += 1
+            pointerA_index = currentlineA_index
 
-            indexB = currentlineB + 1
+            pointerB_index = currentlineB_index + 1
 
-        if currentlineA >= numlinesA and currentlineB < numlinesB:
+        if currentlineA_index >= numlinesA and currentlineB_index < numlinesB:
             # If all A lines have been traversed and B lines remain, log them at the end of the list
-            while currentlineB < numlinesB:
+            while currentlineB_index < numlinesB:
                 line_alignment['line_index_alignment'].append([
-                        [-1, currentlineB], 
-                        ["", docfile_receiving_inserts.text_blocks[currentlineB].text]
+                        [-1, currentlineB_index], 
+                        ["", docfile_receiving_inserts.text_blocks[currentlineB_index].text]
                         ])
                 # line_orphansB.append(currentlineB)
 
-                currentlineB += 1
-                indexB = currentlineB # TODO likely not necessary
+                currentlineB_index += 1
+                pointerB_index = currentlineB_index # TODO likely not necessary
 
-    x = 'break'
     return line_alignment
+
+def do_text_blocks_match(blockA: text_block, blockB: text_block) -> float:
+    '''
+    Determine if two text blocks (lines) match based of of a series of factors 
+
+    :text_block blockA:  string to compare
+    :text_block blockB:  string to compare
+
+    :return:    float value representing percentage of matching confidence
+    '''
+
+    confidence = None
+
+    if blockA.text.strip() == blockB.text.strip():
+        confidence = 1.0
+    else:
+        blockA_words = blockA.text.split()
+        blockB_words = blockB.text.split()
+
+        words_ratio = min(len(blockA_words), len(blockB_words))/max(len(blockA_words), len(blockB_words))
+        confidence = words_ratio
+
+    '''
+    Items to check for determining confidence:
+
+    - number of words in A vs number of words in B
+    - percentage of the line that has been diffed
+    - number of diff sections vs non-diff sections (more sections = higher variablilty)
+    - are one of the adjacent diff sections inside the other (singular plural correction)
+    - is diff only additions? (seems like a merge)
+    - are there significant words in common between A and B suggesting line similarity (other than common words like "the")
+    - is line type the same
+    - is the line before and after the same in both A and B (suggest line replacement)
+    '''
+
+    return confidence
+    
 
 # TESTING BLOCK #
 
