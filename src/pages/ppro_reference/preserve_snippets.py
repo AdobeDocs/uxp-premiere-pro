@@ -615,7 +615,7 @@ def determine_docfile_alignment(
 
 def do_text_blocks_match(blockA: text_block, blockB: text_block) -> float:
     '''
-    Determine if two text blocks (lines) match based of of a series of factors 
+    Determine if two text blocks (lines) match based off of a series of factors 
 
     :text_block blockA:  string to compare
     :text_block blockB:  string to compare
@@ -624,11 +624,12 @@ def do_text_blocks_match(blockA: text_block, blockB: text_block) -> float:
     '''
 
     confidence = None
+    confidences_to_average = []
 
     if blockA.text.strip() == blockB.text.strip():
         confidence = 1.0
     else:
-        # setup for diff between two lines
+        # setup for diff between two lines # number of words in A vs B, expressed as a ration min/max
         blockA_words = blockA.text.split()
         blockB_words = blockB.text.split()
         
@@ -647,20 +648,38 @@ def do_text_blocks_match(blockA: text_block, blockB: text_block) -> float:
 
         # number of words in A vs B, expressed as a ration min/max
         words_ratio = min(len(blockA_words), len(blockB_words))/max(len(blockA_words), len(blockB_words))
-        confidence = words_ratio
+        confidences_to_average.append(words_ratio)
 
-        # percentage of the line that has changed
+        # Multiple diff-related checks - setup
+        lines_unchanged = []
+        lines_added = 0
+        lines_removed = 0
+        for line in lines_diff_result:
+            if line[0:2] == "  ":
+                lines_unchanged.append(line)
+            elif line[0:2] == "+ ":
+                lines_added += 1
+            elif line[0:2] == "- ":
+                lines_removed += 1
 
-
+        #   percentage of the line that has changed
+        unchanged_ratio = len(lines_unchanged)/len(blockA_words)
+        confidences_to_average.append(unchanged_ratio)
+        
+        #   is diff ONLY additions (likely merge if so)
+        # TODO need to add some flag logic here.  Possible that this should be at the top of the checks as an initial gate
+        
+        # evenly weighted confidence average
+        confidence = sum(confidences_to_average)/len(confidences_to_average)
 
     '''
     Items to check for determining confidence:
 
     - √ number of words in A vs number of words in B
-    - percentage of the line that has been diffed
+    - √ percentage of the line that has been diffed
     - number of diff sections vs non-diff sections (more sections = higher variablilty)
     - are one of the adjacent diff sections inside the other (singular plural correction)
-    - is diff only additions? (seems like a merge)
+    - √ is diff only additions? (seems like a merge)
     - are there significant words in common between A and B suggesting line similarity (other than common words like "the")
     - is line type the same
     - is the line before and after the same in both A and B (suggest line replacement)
