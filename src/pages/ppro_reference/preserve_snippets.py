@@ -628,16 +628,35 @@ def do_text_blocks_match(blockA: text_block, blockB: text_block) -> float:
     if blockA.text.strip() == blockB.text.strip():
         confidence = 1.0
     else:
+        # setup for diff between two lines
         blockA_words = blockA.text.split()
         blockB_words = blockB.text.split()
+        
+        blockA_words_stripped = [i.strip() for i in blockA_words]
+        blockB_words_stripped = [i.strip() for i in blockB_words]
 
+        D = difflib.Differ()
+        lines_diff = D.compare(blockA_words_stripped, blockB_words_stripped)
+        stripped_lines_diff = D.compare(blockA_words_stripped, blockB_words_stripped)
+
+        lines_diff_result = [i for i in lines_diff]
+        stripped_lines_diff_result = [i for i in stripped_lines_diff]
+
+        # TODO LEFT OFF HERE
+        # Compare length of blockA to number of unchanged lines in diff to get percentage of diffed/non-diffed
+
+        # number of words in A vs B, expressed as a ration min/max
         words_ratio = min(len(blockA_words), len(blockB_words))/max(len(blockA_words), len(blockB_words))
         confidence = words_ratio
+
+        # percentage of the line that has changed
+
+
 
     '''
     Items to check for determining confidence:
 
-    - number of words in A vs number of words in B
+    - √ number of words in A vs number of words in B
     - percentage of the line that has been diffed
     - number of diff sections vs non-diff sections (more sections = higher variablilty)
     - are one of the adjacent diff sections inside the other (singular plural correction)
