@@ -393,8 +393,9 @@ class text_block_type:
 
     # PROPERTIES #
 
+    # TODO this is honestly pretty clunky with .type.type.  Change to .type_string here?
     @property
-    def type(self) -> str:
+    def type(self) -> str: 
         return self._type
 
     # METHODS #
@@ -541,6 +542,8 @@ def determine_docfile_alignment(
     pointerB_index = 0 # traverse pointer in Doc B
 
     while currentlineA_index < numlinesA and currentlineB_index < numlinesB:
+        # Traverse all lines in A and B, looping through all unmatched B lines for each A line,
+        # until matches are found or all A lines are exhausted
 
         currentlineA = docfile_to_read.text_blocks[pointerA_index]
         currentlineB = docfile_receiving_inserts.text_blocks[pointerB_index]
@@ -548,11 +551,21 @@ def determine_docfile_alignment(
         currentlineA_string = docfile_to_read.text_blocks[pointerA_index].text #TODO remove
         currentlineB_string = docfile_receiving_inserts.text_blocks[pointerB_index].text #TODO remove
 
-        # Conditions for when lines between Doc A and B are considered to be matching
+        # start with the first line in A and B
         if (
+            # If current lines match, log matching lines, and all A/B lines that were skipped while finding a match
+
             # TODO Put more robust line equality evaluator function call here, and build line comparitor function!
             do_text_blocks_match(currentlineA, currentlineB) >= confidence_threshold
+            # currentlineA_string.strip() == currentlineB_string.strip()
         ):
+            
+            # log the matching A == B line
+            line_alignment['line_index_alignment'].append([
+                [pointerA_index, pointerB_index], 
+                [docfile_to_read.text_blocks[pointerA_index].text, docfile_receiving_inserts.text_blocks[pointerB_index].text]
+                ])
+            
             # if we've been skipped a bunch of lines in A or B, and now found a match, log the skipped lines lines
             while pointerA_index > currentlineA_index:
                 line_alignment['line_index_alignment'].append([
@@ -567,12 +580,6 @@ def determine_docfile_alignment(
                     ["", docfile_receiving_inserts.text_blocks[currentlineB_index].text]
                     ])
                 currentlineB_index += 1
-
-            # log the matching A == B line
-            line_alignment['line_index_alignment'].append([
-                [pointerA_index, pointerB_index], 
-                [docfile_to_read.text_blocks[pointerA_index].text, docfile_receiving_inserts.text_blocks[pointerB_index].text]
-                ])
             
             # Update the pointers and current line index
             pointerA_index += 1
@@ -581,23 +588,36 @@ def determine_docfile_alignment(
             currentlineA_index = pointerA_index
             currentlineB_index = pointerB_index
         else:
-            # No match found, move the A pointer
-            pointerA_index += 1
+            # If lines don't match, move to B pointer
+            pointerB_index += 1
 
-        if pointerA_index >= numlinesA and currentlineA_index < numlinesA:
-            # If a given A line returns no B line match during an entire traverse pass, log it as no parther
+        if pointerB_index >= numlinesB and currentlineA_index < numlinesA:
+            # if all B lines have been checked against the current A line with no match, log the A line as unmatched
             line_alignment['line_index_alignment'].append([
                 [currentlineA_index, -1],
                 [docfile_to_read.text_blocks[currentlineA_index].text,""]
-                ])
+            ])
+
+            pointerB_index = currentlineB_index
+
+            pointerA_index += 1
+            currentlineA_index = pointerA_index
+
+
+        # if pointerA_index >= numlinesA and currentlineA_index < numlinesA:
+        #     # If a given A line returns no B line match during an entire traverse pass, log it as no parther
+        #     line_alignment['line_index_alignment'].append([
+        #         [currentlineA_index, -1],
+        #         [docfile_to_read.text_blocks[currentlineA_index].text,""]
+        #         ])
             
-            # line_orphansA.append(currentlineA)
-            # line_orphansB.append(currentlineB)
+        #     # line_orphansA.append(currentlineA)
+        #     # line_orphansB.append(currentlineB)
 
-            currentlineA_index += 1
-            pointerA_index = currentlineA_index
+        #     currentlineA_index += 1
+        #     pointerA_index = currentlineA_index
 
-            pointerB_index = currentlineB_index + 1
+        #     pointerB_index = currentlineB_index + 1
 
         if currentlineA_index >= numlinesA and currentlineB_index < numlinesB:
             # If all A lines have been traversed and B lines remain, log them at the end of the list
@@ -613,12 +633,17 @@ def determine_docfile_alignment(
 
     return line_alignment
 
-def do_text_blocks_match(blockA: text_block, blockB: text_block) -> float:
+def do_text_blocks_match(
+        blockA: text_block, 
+        blockB: text_block, 
+        require_block_type_match: bool = False) -> float:
     '''
     Determine if two text blocks (lines) match based off of a series of factors 
 
     :text_block blockA:  string to compare
     :text_block blockB:  string to compare
+    :bool check_block_type: True will validate block type between two text_block object arguments
+                            False will ignore the text block type of two block arguments
 
     :return:    float value representing percentage of matching confidence
     '''
@@ -626,7 +651,9 @@ def do_text_blocks_match(blockA: text_block, blockB: text_block) -> float:
     confidence = None
     confidences_to_average = []
 
-    if blockA.text.strip() == blockB.text.strip():
+    if require_block_type_match and (blockA.type.type != blockB.type.type):
+        confidence = 0
+    elif blockA.text.strip() == blockB.text.strip():
         confidence = 1.0
     else:
         # setup for diff between two lines # number of words in A vs B, expressed as a ration min/max
@@ -643,46 +670,81 @@ def do_text_blocks_match(blockA: text_block, blockB: text_block) -> float:
         lines_diff_result = [i for i in lines_diff]
         stripped_lines_diff_result = [i for i in stripped_lines_diff]
 
-        # TODO LEFT OFF HERE
-        # Compare length of blockA to number of unchanged lines in diff to get percentage of diffed/non-diffed
-
-        # number of words in A vs B, expressed as a ration min/max
-        words_ratio = min(len(blockA_words), len(blockB_words))/max(len(blockA_words), len(blockB_words))
-        confidences_to_average.append(words_ratio)
-
         # Multiple diff-related checks - setup
-        lines_unchanged = []
-        lines_added = 0
-        lines_removed = 0
-        for line in lines_diff_result:
-            if line[0:2] == "  ":
-                lines_unchanged.append(line)
-            elif line[0:2] == "+ ":
-                lines_added += 1
-            elif line[0:2] == "- ":
-                lines_removed += 1
+        words_unchanged = []
+        words_added = 0
+        words_removed = 0
 
-        #   percentage of the line that has changed
-        unchanged_ratio = len(lines_unchanged)/len(blockA_words)
-        confidences_to_average.append(unchanged_ratio)
-        
-        #   is diff ONLY additions (likely merge if so)
-        # TODO need to add some flag logic here.  Possible that this should be at the top of the checks as an initial gate
-        
-        # evenly weighted confidence average
-        confidence = sum(confidences_to_average)/len(confidences_to_average)
+        unchanged_sections = 0
+        changed_sections = 0
+
+        lastline_prefix = ""
+        for word in lines_diff_result:
+            if word[0:2] == "  ":
+                words_unchanged.append(word)
+            elif word[0:2] == "+ ":
+                words_added += 1
+            elif word[0:2] == "- ":
+                words_removed += 1
+
+
+            if lastline_prefix != " " and word[0] == " ":
+                unchanged_sections += 1
+            elif lastline_prefix not in ("+", "-") and word[0] in ("+", "-"):
+                changed_sections += 1
+            
+            if word[0] != "?":
+                lastline_prefix = word[0]
+
+
+        #   is diff ONLY additions?  If so, assume no conflicts and do not evaluate confidence
+        if (
+            words_added > 0 and words_removed == 0 and
+            len(blockA_words) > 0 and len(blockB_words) > 0
+            ):
+            confidence = 1
+        else:
+            #   number of words in A vs B, expressed as a ration min/max
+            if len(blockA_words) == 0 or len(blockB_words) == 0:
+                confidences_to_average.append(0)
+            else:
+                words_ratio = min(len(blockA_words), len(blockB_words))/max(len(blockA_words), len(blockB_words))
+                confidences_to_average.append(words_ratio)
+
+            #   percentage of the line that has changed
+            if len(blockA_words) == 0:
+                confidences_to_average.append(0)
+            else:
+                unchanged_ratio = len(words_unchanged)/len(blockA_words)
+                confidences_to_average.append(unchanged_ratio)
+
+            #   do block types match
+            if blockA.type.type == blockB.type.type:
+                confidences_to_average.append(1.0)
+            else:
+                confidences_to_average.append(0.0)
+                        
+            # Calculate evenly weighted confidence average
+            if len(confidences_to_average) > 0:
+                confidence = sum(confidences_to_average)/len(confidences_to_average)
+            else:
+                confidence = 0
+
+            # TODO not sure exactly how to unevenly weight confidence
+            #   Is this a user defined thing?
+            #   Is that even necessary?
 
     '''
     Items to check for determining confidence:
 
-    - √ number of words in A vs number of words in B
-    - √ percentage of the line that has been diffed
-    - number of diff sections vs non-diff sections (more sections = higher variablilty)
-    - are one of the adjacent diff sections inside the other (singular plural correction)
-    - √ is diff only additions? (seems like a merge)
-    - are there significant words in common between A and B suggesting line similarity (other than common words like "the")
-    - is line type the same
-    - is the line before and after the same in both A and B (suggest line replacement)
+    - [√] number of words in A vs number of words in B
+    - [√] percentage of the line that has been diffed
+    - [x] number of diff sections vs non-diff sections (more sections = higher variablilty) - not sure this actually suggest anything valuable
+    - [x] are one of the adjacent diff sections inside the other (singular plural correction) - this is kinda caught by num words in A vs B.  If ONLY singular/plural changes, num words is the same
+    - [√] is diff only additions? (seems like a merge)
+    - [ ] are there significant words in common between A and B suggesting line similarity (other than common words like "the")
+    - [√] is line type the same
+    - [ ] is the line before and after the same in both A and B (suggest line replacement)
     '''
 
     return confidence
@@ -737,7 +799,11 @@ if __name__ == '__main__':
 
     scraped_docs.set_relative_path_for_library()
 
-    determine_docfile_alignment(edited_docs.documentation_files[0], scraped_docs.documentation_files[0])
+    determine_docfile_alignment(
+                            edited_docs.documentation_files[0],
+                            scraped_docs.documentation_files[0], 
+                            confidence_threshold=.7
+                            )
 
 
     
