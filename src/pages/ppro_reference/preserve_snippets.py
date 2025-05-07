@@ -282,7 +282,7 @@ class documentation_file:
             self._filepath_relative = pathstring
         else:
             raise ValueError(f"{pathstring} is type {type(pathstring)}. Expected type str or None.")
-    
+
     # METHODS #
 
     def parse_blocks_md(self) -> bool:
@@ -494,18 +494,126 @@ def check_file_type(filepath: str, extension: List[str]) -> bool:
         raise TypeError(f"'{os.path.split(filepath)[1].lower()}' is not type: '{processed_extension_set}'")
 
     
+def determine_files_to_compare(
+                            libraryA: documentation_library,
+                            libraryB: documentation_library,
+                            include_relpath_when_matching: bool = True
+                            ):
+    '''
+    Considering two documentation libraries that need to be compared/merged, determine which files within each libraray
+    match/correspond for comparison.  Each file should:
+        • at most, have one file partner
+        • any file that has more than one file partner on either side of the library cannot be compared
+        • any file that has no partner identified in the other library is potentially new or omitted, and will be flagged
+    
+    :bool include_relpath_when_matching:    True will match files both by their filename and relative path within each library
+                                            False will consider filename only when attempting to match files
+
+    :return:    dictionary of partner/matching files between two libraries:
+                {'matches': [[fileA, fileB],...], 'non_matchesA': [Afile1, Afile2,...], 'non_matchesB': [Bfile1, Bfile2,...], 'multiples': [[filepath1, filepath2,...],...]}
+    '''
+    matches = []
+    non_matchesA = []
+    non_matchesB = []
+    multiples = {} # {filename: {set of documentation_file objects},..}
+
+    file_listA = list(libraryA.documentation_files)
+    file_listB = list(libraryB.documentation_files)
+
+    # Prune out duplicates if they exist
+    # Theoretically, no duplicates can exist if filepaths are considered since
+    # this would break filesystem conventions
+    # 
+    # TODO 
+    # This section may be incomplete and also totally worthless and worth removing
+    # It occurrs to me after writing this that the documentation contains many
+    # index.md files, which will all trigger as duplicates, which would very much
+    # prevent any documenation automated management from operationg.  Thus, relative
+    # paths may ALWAYS be required, and make matching on filename alone moot
+    if not include_relpath_when_matching:
+        indices_to_removeA = set()
+        indices_to_removeB = set()
+
+
+        filenamesA = [os.path.split(x.filepath_absolute)[1] for x in file_listA]
+        filenamesB = [os.path.split(x.filepath_absolute)[1] for x in file_listB]
+
+        # detect and log duplicate file objects
+        for filelist in [file_listA, file_listB]:
+            for file in filelist:
+                filename = os.path.split(file.filepath_absolute)[1]
+
+                if (
+                    (filenamesA.count(filename) > 1 and filenamesB.count(filename) > 0) or
+                    (filenamesB.count(filename) > 1 and filenamesA.count(filename) > 0)
+                    ):
+                    if filename in multiples.keys():
+                        multiples[filename].add(file)
+                    else:
+                        multiples[filename] = {file}
+
+        # log and pop indices from file lists so they are not evaluated below
+        for index in range(0, len(file_listA)):
+            filename = os.path.split(file_listA[index].filepath_absolute)[1]
+            if filename in multiples.keys():
+                indices_to_removeA.add(index)
+
+        for index in range(0, len(file_listB)):
+            filename = os.path.split(file_listB[index].filepath_absolute)[1]
+            if filename in multiples.keys():
+                indices_to_removeB.add(index)
+
+        indices_to_removeA = list(indices_to_removeA)
+        indices_to_removeA.sort(reverse=True)
+        for index in indices_to_removeA:
+            file_listA.pop(index)
+
+        indices_to_removeB = list(indices_to_removeB)
+        indices_to_removeB.sort(reverse=True)
+        for index in indices_to_removeB:
+            file_listB.pop(index)
+
+    # find matching files between A and B
+    for pointerA in range(0, len(file_listA)):
+        for pointerB in range(0, len(file_listB)):
+            pathA = file_listA[pointerA].filepath_relative
+            pathB = file_listB[pointerB].filepath_relative
+
+            if pathA == pathB:
+                matches.append([file_listA[pointerA], file_listB[pointerB]])
+                file_listB.pop(pointerB)
+                break
+
+            # If no B match after all B paths have been examined, log A path as non-matched
+            if pointerB == len(file_listB) - 1:
+                non_matchesA.append(file_listA[pointerA])
+    
+    non_matchesB = file_listB
+
+    return {
+        'matches': matches,
+        'non_matchesA': non_matchesA,
+        'non_matchesB': non_matchesB,
+        'multiples': multiples
+    }
+
+
+
+
 def determine_docfile_alignment(
-        docfile_to_read: documentation_file, 
-        docfile_receiving_inserts: documentation_file, 
-        confidence_threshold: float = 1.0) -> List:
+                            docfileA: documentation_file, 
+                            docfileB: documentation_file, 
+                            confidence_threshold: float = 1.0,
+                            assume_newline_follows_additions: bool = True
+                            ) -> List:
     '''
     Compare two documentation_file objects and determine their alignment:  Where they are the same, where they are
     different, and where they match back up when differences are encounterd.
 
-    :documentation_file docfile_to_read:            representation of text file, likely edited by user, to read new edits from
-    :documentation_file docfile_receiving_inserts   representation of text file, likely unedited, to merge user edits into
-    :float confidence_threshold:                    confidence threshold beyond which two compared lines of text should be considered as matching
-                                                    this is a float from 0.0 - 1.0 representing a percentage of confidence
+    :documentation_file docfileA:           representation of text file, likely edited by user, to read new edits from
+    :documentation_file docfileB:           representation of text file, likely unedited, to merge user edits into
+    :float confidence_threshold:            confidence threshold beyond which two compared lines of text should be considered as matching
+                                            this is a float from 0.0 - 1.0 representing a percentage of confidence
     
     :return:            List demonstrating line alighment, formatted as:
                             [{
@@ -526,14 +634,14 @@ def determine_docfile_alignment(
 
     '''
     line_alignment = {
-                'fileorder': [docfile_to_read, docfile_receiving_inserts], 
+                'fileorder': [docfileA, docfileB], 
                 'line_index_alignment': []
                 }
     line_orphansA = [] # lines found only in Doc A, not in Doc B
     line_orphansB = [] # lines found only in Doc B, not in Doc A
     
-    numlinesA = len(docfile_to_read.text_blocks)
-    numlinesB = len(docfile_receiving_inserts.text_blocks)
+    numlinesA = len(docfileA.text_blocks)
+    numlinesB = len(docfileB.text_blocks)
 
     currentlineA_index = 0 # current comparison line in Doc A
     currentlineB_index = 0 # current comparison line in Doc B
@@ -545,11 +653,11 @@ def determine_docfile_alignment(
         # Traverse all lines in A and B, looping through all unmatched B lines for each A line,
         # until matches are found or all A lines are exhausted
 
-        currentlineA = docfile_to_read.text_blocks[pointerA_index]
-        currentlineB = docfile_receiving_inserts.text_blocks[pointerB_index]
+        currentlineA = docfileA.text_blocks[pointerA_index]
+        currentlineB = docfileB.text_blocks[pointerB_index]
 
-        currentlineA_string = docfile_to_read.text_blocks[pointerA_index].text #TODO remove
-        currentlineB_string = docfile_receiving_inserts.text_blocks[pointerB_index].text #TODO remove
+        currentlineA_string = docfileA.text_blocks[pointerA_index].text #TODO remove
+        currentlineB_string = docfileB.text_blocks[pointerB_index].text #TODO remove
 
         # start with the first line in A and B
         if (
@@ -563,21 +671,21 @@ def determine_docfile_alignment(
             # log the matching A == B line
             line_alignment['line_index_alignment'].append([
                 [pointerA_index, pointerB_index], 
-                [docfile_to_read.text_blocks[pointerA_index].text, docfile_receiving_inserts.text_blocks[pointerB_index].text]
+                [docfileA.text_blocks[pointerA_index].text, docfileB.text_blocks[pointerB_index].text]
                 ])
             
             # if we've been skipped a bunch of lines in A or B, and now found a match, log the skipped lines lines
             while pointerA_index > currentlineA_index:
                 line_alignment['line_index_alignment'].append([
                     [currentlineA_index, -1],
-                    [docfile_to_read.text_blocks[currentlineA_index].text, ""]
+                    [docfileA.text_blocks[currentlineA_index].text, ""]
                 ])
                 currentlineA_index += 1
 
             while pointerB_index > currentlineB_index:
                 line_alignment['line_index_alignment'].append([
                     [-1, currentlineB_index], 
-                    ["", docfile_receiving_inserts.text_blocks[currentlineB_index].text]
+                    ["", docfileB.text_blocks[currentlineB_index].text]
                     ])
                 currentlineB_index += 1
             
@@ -595,9 +703,28 @@ def determine_docfile_alignment(
             # if all B lines have been checked against the current A line with no match, log the A line as unmatched
             line_alignment['line_index_alignment'].append([
                 [currentlineA_index, -1],
-                [docfile_to_read.text_blocks[currentlineA_index].text,""]
+                [docfileA.text_blocks[currentlineA_index].text,""]
             ])
 
+            # If the current A line is unmatched and we assume all additions are followed by newlines,
+            # log the newline if it follows the logged A line
+            if (
+                assume_newline_follows_additions and
+                docfileA.text_blocks[currentlineA_index].text != "\n" and 
+                docfileB.text_blocks[currentlineB_index].text != "\n" and
+                currentlineA_index+1 < numlinesA and 
+                docfileA.text_blocks[currentlineA_index+1].text == "\n"
+                ):
+                
+                pointerA_index += 1
+                currentlineA_index = pointerA_index
+
+                line_alignment['line_index_alignment'].append([
+                    [currentlineA_index, -1],
+                    [docfileA.text_blocks[currentlineA_index].text,""]
+                ])
+                
+            # complete position incrementing from A line logging
             pointerB_index = currentlineB_index
 
             pointerA_index += 1
@@ -624,7 +751,7 @@ def determine_docfile_alignment(
             while currentlineB_index < numlinesB:
                 line_alignment['line_index_alignment'].append([
                         [-1, currentlineB_index], 
-                        ["", docfile_receiving_inserts.text_blocks[currentlineB_index].text]
+                        ["", docfileB.text_blocks[currentlineB_index].text]
                         ])
                 # line_orphansB.append(currentlineB)
 
@@ -773,10 +900,11 @@ if __name__ == '__main__':
     '''
 
     # edited_docs_root_dir = os.path.split(os.path.abspath(__file__))[0]
-    edited_docs_root_dir = '/Users/binsler/Desktop/250428_Dan McS Documentation Edits_MINI/ppro_reference'
-    # edited_docs_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape/ppro_reference'
+    # edited_docs_root_dir = '/Users/binsler/Desktop/250428_Dan McS Documentation Edits_MINI/ppro_reference'
+    edited_docs_root_dir = '/Users/binsler/Desktop/250428_Dan McS Documentation Edits/ppro_reference'
 
-    new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape_MINI/ppro_reference'
+    # new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape_MINI/ppro_reference'
+    new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape/ppro_reference'
 
     edited_docs = documentation_library()
 
@@ -799,12 +927,23 @@ if __name__ == '__main__':
 
     scraped_docs.set_relative_path_for_library()
 
-    determine_docfile_alignment(
-                            edited_docs.documentation_files[0],
-                            scraped_docs.documentation_files[0], 
-                            confidence_threshold=.7
-                            )
+    compare_list = determine_files_to_compare(edited_docs, scraped_docs)
 
+    for file in compare_list['matches']:
+        aligned = determine_docfile_alignment(
+                                file[0],
+                                file[1], 
+                                confidence_threshold=.7
+                                )
+        '''
+        stop here
+        '''
+
+    # aligned = determine_docfile_alignment(
+    #                         edited_docs.documentation_files[0],
+    #                         scraped_docs.documentation_files[0], 
+    #                         confidence_threshold=.7
+    #                         )
 
     
     snippet_report = edited_docs.block_type_report(block_type_str = 'snippet', print_report = True, dump_to_file = True)
