@@ -5,9 +5,16 @@
 '''
 
 import os
+import pathlib
+import shutil
 from typing import List
 import datetime
 import difflib
+
+
+# GLOBALS # 
+
+g_current_datetime = datetime.datetime.now()
 
 # CLASSES #
 
@@ -21,12 +28,13 @@ class documentation_library:
     '''
 
     def __init__(self):
-        self.documentation_files = []
+        self.documentation_files = [] # files that will be processed
+        self.supplemental_files = [] # files that will be copied without processing
         self._library_relative_path_root = ''
 
     # METHODS #
 
-    def add_file(self, path: str, relative_root: str = '', enforce_extension = ''): # -> documentation_file: #TODO add type hinting for class back in
+    def add_file(self, path: str, relative_root: str = '', enforce_extension = []): # -> documentation_file: #TODO add type hinting for class back in
         '''
         Create a new documentation library file object
         :str path:              path to the file             
@@ -38,9 +46,12 @@ class documentation_library:
         
         '''
         if check_file_exists(path):
-            if (enforce_extension == '' or check_file_type(path, enforce_extension)):
-                newFile = documentation_file(path, relative_root)
-                self.documentation_files.append(newFile)              
+            newFile = documentation_file(path, relative_root)
+
+            if (enforce_extension == [] or check_file_type(path, enforce_extension)):    
+                self.documentation_files.append(newFile)
+            else:
+                self.supplemental_files.append(newFile)
 
         return newFile
     
@@ -94,8 +105,10 @@ class documentation_library:
 
         # Prune common root out of all document file paths to establish
         # relative paths
-        for doc_path in self.documentation_files:
-            doc_path.filepath_relative = doc_path.filepath_absolute.replace(common_root, "")
+
+        for docs in [self.documentation_files, self.supplemental_files]:
+            for doc_path in docs:
+                doc_path.filepath_relative = doc_path.filepath_absolute.replace(common_root, "")
 
         return True
     
@@ -150,7 +163,7 @@ class documentation_library:
         
         # Generate report to print or dump to file
         if print_report or dump_to_file:
-            datetime_now = datetime.datetime.now()
+            datetime_now = g_current_datetime
 
             indent = 5
             files_with_no_found_blocks = []
@@ -193,7 +206,7 @@ class documentation_library:
                 print(f"\n\n{report_to_print}")
 
             if dump_to_file:
-                datetime_string = datetime_now.strftime("_%Y-%m-%d_at_%H-%M-%S")
+                datetime_string = g_current_datetime.strftime("_%Y-%m-%d_at_%H-%M-%S")
                 writeFile_name = f"documentation_{block_type_str}_block_report{datetime_string}.blockreport"
                 writeFile = open(writeFile_name, mode = "w")
                 
@@ -477,7 +490,7 @@ def check_file_type(filepath: str, extension: List[str]) -> bool:
     :[str] extension:   list of representative extensions to validate in filepath
                         '.ext' and 'ext' are both acceptable formats for this string
 
-    :return:            True if filepath is of type extension.  Otherwise raises Error.
+    :return bool:            True if filepath is of type extension.  Otherwise return False.
     '''
 
     processed_extension_set = set()
@@ -491,7 +504,7 @@ def check_file_type(filepath: str, extension: List[str]) -> bool:
     if os.path.splitext(filepath)[1].strip('.').lower() in processed_extension_set:
         return True
     else:
-        raise TypeError(f"'{os.path.split(filepath)[1].lower()}' is not type: '{processed_extension_set}'")
+        return False
 
     
 def determine_files_to_compare(
@@ -875,7 +888,92 @@ def do_text_blocks_match(
     '''
 
     return confidence
+
+def write_merged_library(
+                    aligned_library_list: list, 
+                    destination: str,
+                    original_libraryA: documentation_library,
+                    original_libraryB: documentation_library,
+                    ) -> bool:
+    '''
+    TODO comments
+    '''
+
+    # Build new root folder to inject into destination for current write pass
+    datetime_tag = datetime.datetime.now().strftime("%Y-%m-%d_%H%M")
+    foldername = "exported_docs_library"
+    combined_foldername = f"{foldername}_{datetime_tag}"
+
+    # Build the folders and write the files
+    for item in aligned_library_list:
+        if not os.path.exists(destination):
+            raise FileNotFoundError(f"Target destination {destination} does not exist.")
+        else:
+            # FIXME this is the part where the filepath is extracted from the alignment array
+            # This will likely be more functional as a class instead of an array
+            relpath = item['fileorder'][0].filepath_relative.strip(os.sep)
+
+            file_writepath = os.path.join(destination, combined_foldername, relpath)
+            if os.path.exists(destination):
+                makedirs_for_file(file_writepath)
+
+                # FIXME This is the part where the file is re-written from the alignment array
+                # This will liekly be more functinoal as a class instead of an array
+                writefile = open(file_writepath, mode = "w")
+                for line in item['line_index_alignment']:
+                    if line[0][0] == -1:
+                        writefile.write(line[1][1])
+                    elif line[0][1] == -1:
+                        writefile.write(line[1][0])
+                    else:
+                        writefile.write(line[1][1])
+            else:
+                raise FileNotFoundError(f"Target root path does not exist: {destination}")
+
+    # copy over supplemental files
+
+    for library in [original_libraryA, original_libraryB]:
+        for file in library.supplemental_files:
+            src_filepath = file.filepath_absolute
+            src_relpath = file.filepath_relative.strip(os.sep)
+
+            if os.path.exists(src_filepath):
+                shutil.copy(src_filepath, os.path.join(destination, combined_foldername, src_relpath))
+            else:
+                raise FileNotFoundError(f"File to copy does not exist: {src_filepath}.")
+        
+        # TODO add logging and reporting for which supplemental files were copied/skipped
+
+    # TODO add handling for file non-matches, multiples
+
+    return True
+
+def makedirs_for_file(filepath: str):
+    '''
+    Make all directories in path leading to file, if they don't exist
+
+    Tries to detect if a filename is included at the end of a filepath, or if the provided path
+    is a parent path with no file.
+
     
+    :str filepath:  Path to validate exists, and creaet if it does not.  May or may not contain \
+                    a file at the end of the path.
+    '''
+
+    split_path = os.path.split(filepath)
+    last_item_ext_split = os.path.splitext(split_path[-1])
+    
+    try:
+        if last_item_ext_split[1] != "" and last_item_ext_split[1][0] == ".":
+            filepath = os.path.split(filepath)[0]
+    except Exception as e:
+        raise TypeError(f"List components did not match expected split path item: {last_item_ext_split}.  Error: {e}")
+    # TODO would be helpful to have skip or error reporting logic rather than raising an exception
+
+    pathlib.Path(filepath).mkdir(parents=True, exist_ok=True)
+
+    return True
+
 
 # TESTING BLOCK #
 
@@ -906,12 +1004,17 @@ if __name__ == '__main__':
     # new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape_MINI/ppro_reference'
     new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape/ppro_reference'
 
+    library_write_root = '/Users/binsler/Desktop/library_output_test'
+
     edited_docs = documentation_library()
 
     for item in os.walk(edited_docs_root_dir):
         for file in item[2]:
+            newfile = edited_docs.add_file(
+                                    path = os.path.join(item[0], file),
+                                    enforce_extension = ['.md']
+                                    )
             if os.path.splitext(file)[1].lower() == '.md':
-                newfile = edited_docs.add_file(os.path.join(item[0], file))
                 newfile.parse_blocks_md()
 
     edited_docs.set_relative_path_for_library()
@@ -921,23 +1024,40 @@ if __name__ == '__main__':
 
     for item in os.walk(new_scrape_root_dir):
         for file in item[2]:
+            newfile = scraped_docs.add_file(
+                                path = os.path.join(item[0], file),
+                                enforce_extension = ['.md']
+                                )
             if os.path.splitext(file)[1].lower() == '.md':
-                newfile = scraped_docs.add_file(os.path.join(item[0], file))
                 newfile.parse_blocks_md()
 
     scraped_docs.set_relative_path_for_library()
 
     compare_list = determine_files_to_compare(edited_docs, scraped_docs)
 
+    aligned_list = []
     for file in compare_list['matches']:
         aligned = determine_docfile_alignment(
                                 file[0],
                                 file[1], 
                                 confidence_threshold=.7
                                 )
+    
+        aligned_list.append(aligned)
+
         '''
         stop here
         '''
+
+    write_merged_library(aligned_list, library_write_root, edited_docs, scraped_docs)
+    
+
+    # for item in scraped_docs.documentation_files:
+    #     newpath = os.path.join(library_write_root, item.filepath_relative.strip(os.sep))
+    #     if os.path.exists(library_write_root):
+    #         makedirs_for_file(newpath)
+    #     else:
+    #         raise FileNotFoundError(f"Target root path does not exist: {library_write_root}")
 
     # aligned = determine_docfile_alignment(
     #                         edited_docs.documentation_files[0],
@@ -946,6 +1066,6 @@ if __name__ == '__main__':
     #                         )
 
     
-    snippet_report = edited_docs.block_type_report(block_type_str = 'snippet', print_report = True, dump_to_file = True)
+    snippet_report = edited_docs.block_type_report(block_type_str = 'snippet', print_report = True, dump_to_file = False)
 
     print(os.path.abspath(__file__))
