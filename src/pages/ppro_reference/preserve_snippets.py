@@ -672,6 +672,9 @@ def determine_docfile_alignment(
         currentlineA_string = docfileA.text_blocks[pointerA_index].text #TODO remove
         currentlineB_string = docfileB.text_blocks[pointerB_index].text #TODO remove
 
+        if currentlineA.text == "### ExportType\n":
+            abc = 10 # DEBUG_DELETE
+
         # start with the first line in A and B
         if (
             # If current lines match, log matching lines, and all A/B lines that were skipped while finding a match
@@ -818,15 +821,20 @@ def do_text_blocks_match(
         unchanged_sections = 0
         changed_sections = 0
 
+        len_changed_chars_for_ratio = 0
+        len_unchanged_chars_for_ratio = 0
+
         lastline_prefix = ""
         for word in lines_diff_result:
             if word[0:2] == "  ":
                 words_unchanged.append(word)
+                len_unchanged_chars_for_ratio += len(word) - 2
             elif word[0:2] == "+ ":
                 words_added += 1
+                len_changed_chars_for_ratio += len(word) - 2
             elif word[0:2] == "- ":
                 words_removed += 1
-
+                len_changed_chars_for_ratio += len(word) - 2
 
             if lastline_prefix != " " and word[0] == " ":
                 unchanged_sections += 1
@@ -852,10 +860,12 @@ def do_text_blocks_match(
                 confidences_to_average.append(words_ratio)
 
             #   percentage of the line that has changed
-            if len(blockA_words) == 0:
+            if len_changed_chars_for_ratio == 0:
+            # if len(blockA_words) == 0:
                 confidences_to_average.append(0)
             else:
-                unchanged_ratio = len(words_unchanged)/len(blockA_words)
+                # unchanged_ratio = len(words_unchanged)/len(blockA_words)
+                unchanged_ratio = len_unchanged_chars_for_ratio/len_changed_chars_for_ratio
                 confidences_to_average.append(unchanged_ratio)
 
             #   do block types match
@@ -999,12 +1009,12 @@ if __name__ == '__main__':
 
     # edited_docs_root_dir = os.path.split(os.path.abspath(__file__))[0]
     # edited_docs_root_dir = '/Users/binsler/Desktop/250428_Dan McS Documentation Edits_MINI/ppro_reference'
-    edited_docs_root_dir = '/Users/binsler/Desktop/250428_Dan McS Documentation Edits/ppro_reference'
+    edited_docs_root_dir = '/Users/binsler/Desktop/20250508_debugging_trim_docs/Existing_Public_Docs/ppro_reference'
 
     # new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape_MINI/ppro_reference'
-    new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape/ppro_reference'
+    new_scrape_root_dir = '/Users/binsler/Desktop/20250508_debugging_trim_docs/Scrape_from_Cathy/ppro_reference'
 
-    library_write_root = '/Users/binsler/Desktop/library_output_test'
+    library_write_root = '/Users/binsler/Desktop/20250508_debugging_trim_docs/_New_Combined_Docs'
 
     edited_docs = documentation_library()
 
