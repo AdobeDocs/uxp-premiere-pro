@@ -94,6 +94,7 @@ ___
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ || EVENT_TRACK_CHANGED | 25.0 | Event Object for Track changed |
+| :------ | :------ | :------ |
+| EVENT_TRACK_CHANGED | 25.0 | Event Object for Track changed |
 | EVENT_TRACK_INFO_CHANGED | 25.0 | Event Object for Track Info Changed |
 | EVENT_TRACK_LOCK_CHANGED | 25.0 | Event Object for Track Lock Changed |

@@ -49,7 +49,7 @@ ___
 
 *boolean*
   
-Attach proxy or high resolution footage to projectItem and return if this non-undoable action is successful.
+Attach proxy or high resolution footage to projectItem and returns true if successful. Not undoable.
 
 #### Parameters
 
@@ -87,7 +87,7 @@ ___
 
 *boolean*
   
-Change media file path of projectItem and return if non-undoable action is successful
+Change media file path of projectItem and returns true if successful. Not undoable.
 
 #### Parameters
 

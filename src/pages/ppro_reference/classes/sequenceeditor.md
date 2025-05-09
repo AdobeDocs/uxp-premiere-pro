@@ -47,7 +47,7 @@ ___
 
 *Action*
   
-Create insert or overwrite to timeline with clone of input trackItem action. Input should be offset value in comparison to original input trackItem's time and track indexes
+Duplicate trackItem using an insert or overwrite edit method to a destination track. Target track and start time of trackItem is determined using an offset value from the original trackItem position.
 
 #### Parameters
 
