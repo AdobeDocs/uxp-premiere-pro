@@ -33,8 +33,7 @@ For a smooth transition between the ExtendScript DOM and the UXP DOM, all proper
 
 Through the [`app`](#overview) object, you can access the rest of PremierePro's objects and methods.
 
-The currently-active project is obtained like this:
-
+The currently-active project is obtained like this:asdfasdf
 ```javascript
 const project = await app.Project.getActiveProject();
 ```
