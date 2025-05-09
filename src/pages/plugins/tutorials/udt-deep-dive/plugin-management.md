@@ -14,7 +14,7 @@ contributors:
 
 The UXP Developer Tool allows you to create plugins from templates and add existing ones to your developer workspace.
 
-You can add as many plugins as you want in the UXP Developer Tool. You can either create the plugin folder structure and files from scratch and click the `Add Plugin` button in the Tool, or you can click the `Create Plugin` button to have it created for you, wizard-style.
+You can add as many plugins as you want in the UXP Developer Tool. You can either create the plugin folder structure and files from scratch, and then click the `Add Plugin` button in the tool, or you can click the `Create Plugin` button to have it created for you, wizard-style.
 
 ## Creating a new plugin
 

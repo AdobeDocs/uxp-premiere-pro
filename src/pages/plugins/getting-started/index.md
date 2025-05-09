@@ -117,7 +117,7 @@ To see your changes, you'll need to reload the plugin in Premiere Pro. To do so,
 
 <InlineAlert slots="text" />
 
-If you make any changes to the `manifest.json` file, you'll need to fully unload and reload the plugin. To do so, in the UXP Developer Tool, in the row for your plugin, click **⋯ &rarr; Unload** and **⋯ &rarr; Load**:
+If you make any changes to the `manifest.json` file, you'll need to fully unload and reload the plugin. To do so, in the UXP Developer Tool, in the row for your plugin, click **⋯ &rarr; Unload** and then **⋯ &rarr; Load**:
 
 ## Next steps
 

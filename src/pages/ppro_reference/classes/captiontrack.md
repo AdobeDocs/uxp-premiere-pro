@@ -23,7 +23,7 @@ keywords:
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| name | *string* | R | 25.0 | Get the name of the track |
+| name | *string* | R | 25.0 | Gets the name of the track |
 | id | *number* | R | 25.0 | The ID of the track within the TrackGroup |
 
 ## Instance Methods
@@ -54,7 +54,7 @@ ___
 
 *Array*
   
-This returns the track items of the specified media type from the given track
+Returns the track items of the specified media type from the given track
 
 #### Parameters
 

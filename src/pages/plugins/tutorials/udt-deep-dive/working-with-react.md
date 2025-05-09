@@ -23,7 +23,7 @@ You can load either one of these, but you need to be aware of the differences.
 * Adding a plugin using the distribution `manifest.json` means that you're loading the plugin from the distribution folder entirely. If your plugin build steps involve removing and recreating the distribution folder, or cleaning all the files within the folder, your plugin may not reload correctly in the developer tool.
 * Adding a plugin using the source `manifest.json` is the preferred option, but you'll also need to edit the plugin's options. Open **••• > Options**, click **Advanced**, and then enter the _relative_ path (from the `manifest.json` file you selected) to your plugin's distribution folder. This will load the plugin in the same manner as the previous point, but any build steps that remove or recreate the distribution folder won't impact reloading the plugin in the developer tool.
 
-Another important note is that if you're adding a plugin that uses a bundler or framework make sure you install its dependencies by running `npm install` or `yarn install`. The Developer Tool will not do this for you.
+Another important note is that if you're adding a plugin that uses a bundler or framework, make sure you install its dependencies by running `npm install` or `yarn install`. The Developer Tool will not do this for you.
 
 ## Watching your plugin
 

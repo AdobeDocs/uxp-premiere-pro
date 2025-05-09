@@ -27,7 +27,7 @@ keywords:
 
 *Action*
   
-Returns an action moves the inPoint of the track item to a new time, by shifting it by a number of seconds.
+Returns an action that moves the inPoint of the track item to a new time, by shifting it by a number of seconds.
 
 #### Parameters
 
@@ -133,7 +133,7 @@ ___
 
 *TickTime*
   
-Timecode representing the duration of this track item relative to the sequence start.
+Returns Timecode representing the duration of this track item relative to the sequence start.
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 *TickTime*
   
-Timecode representing the end of this track item relative to the sequence start.
+ReturnsTimecode representing the end of this track item relative to the sequence start.
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 *Guid*
   
-UUID representing the underlying media type of this track item
+Returns UUID representing the underlying media type of this track item
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 *ProjectItem*
   
-The project item for this track item.
+Returns the project item for this track item.
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 *TickTime*
   
-Timecode representing the start of this track item relative to the sequence start.
+Returns Timecode representing the start of this track item relative to the sequence start.
 
 ___
 
@@ -262,8 +262,14 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
+
+| Type | Description |
+| :------ | :------ |
+| boolean | Returns true if the trackitem is an adjustment layer |
+
+
   
-Returns true if the trackitem is an adjustment layer
+
 
 ___
 
@@ -273,7 +279,9 @@ ___
 
 *boolean*
   
-Returns true if rackitem is muted/disabled
+| Type | Description |
+| :------ | :------ |
+| boolean | Returns true if trackitem is muted/disabled |
 
 ___
 
@@ -281,8 +289,10 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
+*boolean*
   
-Returns true if the trackitem is reversed
-
+| Type | Description |
+| :------ | :------ |
+| boolean | Returns true if the trackitem is reversed
+ |
 ___
