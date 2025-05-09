@@ -23,7 +23,7 @@ keywords:
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| name | *string* | R | 25.0 | Get name of project item object |
+| name | *string* | R | 25.0 | Gets name of project item object |
 
 ## Static Methods
 
@@ -67,7 +67,7 @@ ___
 
 *boolean*
   
-Returns true if Premiere Pro can change the path, associated with this project item; otherwise, returns false
+Returns true if Premiere Pro can change the path associated with this project item; otherwise, returns false
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *boolean*
   
-Indicates whether it is possible to attach a proxy, to this project item.
+Indicates whether it is possible to attach a proxy to this project item.
 
 ___
 
@@ -189,7 +189,7 @@ ___
 
 *Action*
   
-Returns an action which Sets the in point of the Project item
+Returns an action which sets the out point of the Project item
 
 #### Parameters
 
@@ -248,7 +248,7 @@ ___
 
 *Array*
   
-Returns array of projects items with media paths containing match string
+Returns array of project's items with media paths containing match string
 
 #### Parameters
 
@@ -423,7 +423,7 @@ ___
 
 *boolean*
   
-Indicates whether a proxy has already been attached, to the project item.
+Indicates whether a proxy has already been attached to the project item.
 
 ___
 
@@ -463,7 +463,7 @@ ___
 
 *boolean*
   
-Returns true if the project item is sequence
+Returns true if the project item is a sequence
 
 ___
 

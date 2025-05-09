@@ -23,7 +23,7 @@ This will add a new command entrypoint with the ID `"myCommand"` (this will be i
 
 ## Adding a function to handle the command
 
-Now, we need some code that gets run when the command gets triggered. In your `index.js` file, add a function to handle the command:
+Now we need some code that will run when the command gets triggered. In your `index.js` file, add a function to handle the command:
 
 ```js
 function myCommandHandler() {
@@ -55,11 +55,11 @@ Note that `myCommand` is the ID of the command entrypoint we registered in the m
 
 <InlineAlert slots="text" />
 
-You can only call `entrypoints.setup()` once. If you call it more than once, it will throw an error. If you need to add more entrypoints, you need to add them all at once.
+It's important to know that `entrypoints.setup()` can only be called once. Calling it more than once will cause an error. To avoid this, add all entrypoints at once.
 
 ### Method 2: JavaScript-based main file
 
-Another method you can use that's especially useful for smaller plugins that only contain command entrypoints is to use a JavaScript-based main file (instead of an HTML file).
+Another method is to use a JavaScript-based main file (instead of an HTML file). This is especially useful for smaller plugins that only contain command entrypoints.
 
 To do so, in your `manifest.json` file, set the `main` property to the path of your `index.js` file:
 
@@ -83,11 +83,11 @@ module.exports = {
 
 Note that `myCommand` is the ID of the command entrypoint we registered in the manifest.
 
-Now, the HTML file is no longer needed. You can delete it. This is especially useful when converting scripts to plugins.
+Now the HTML file is no longer needed. You can delete it. This is especially useful when converting scripts to plugins.
 
 ## Conclusion
 
-That's it! You've added a command entrypoint to your plugin. When you now load your plugin, you should see a new command called _My Command_ in the **Plugins** menu:
+That's it! You've added a command entrypoint to your plugin. Now when you load your plugin, you should see a new command called _My Command_ in the **Plugins** menu:
 
 <figure>
   <img src="command-plugin.png" alt="Screenshot of the Plugins menu with the My Command menu item highlighted" />

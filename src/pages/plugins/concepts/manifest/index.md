@@ -35,7 +35,6 @@ which host the plugin is for. This is used to identify the plugin in the manifes
 
 <InlineAlert slots="text" />
 
-Properties marked with an asterisk (\*) are required.
 
 #### Example
 
@@ -113,7 +112,7 @@ Properties marked with an asterisk (\*) are required.
         <td><inlineCode>string</inlineCode></td>
         <td>required</td>
         <td>
-            <p>The id uniquely identifies a plugin and is used to disambiguate plugin contexts, storage, errors, etc. For plugins distributed through the plugin marketplace, the ID has to match the ID in <a href="https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/">the Developer Distribution portal</a>.</p>
+            <p>The id uniquely identifies a plugin and is used to disambiguate plugin contexts, storage, errors, etc. For plugins distributed through the Adobe plugin marketplace, the ID has to match the ID in <a href="https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/">the Developer Distribution portal</a>.</p>
         </td>
     </tr>
     <tr>
@@ -376,7 +375,8 @@ Represents a localized string. The key is the locale, and the value is the trans
     </tbody>
 </table>
 
-### EntrypointDefinition
+
+ <strong>EntrypointDefinition</strong>
 
 <p>Represents an entrypoint provided by the plugin, which can be invoked by the user.</p>
 <p>An entrypoint consists of an ID and a label at minimum.</p>
@@ -510,7 +510,7 @@ Represents a localized string. The key is the locale, and the value is the trans
     </tbody>
 </table>
 
-### HostDefinition
+ <strong>HostDefinition</strong>
 
 <p>UXP supports a number of different host applications. The host definition specifies which host app the plugin supports.</p>
 <h4>Properties</h4>
@@ -560,7 +560,7 @@ Represents a localized string. The key is the locale, and the value is the trans
     </tbody>
 </table>
 
-### PermissionsDefinition
+<strong>PermissionsDefinition</strong>
 
 <p>To ensure that plugins are secure, UXP requires that plugins declare the permissions they need to function.</p>
 
@@ -569,7 +569,7 @@ Represents a localized string. The key is the locale, and the value is the trans
 
 **Pro tip**
 
-Make sure you configure the most accurate permission for your use case because in the future we will ask users to provide their consent based on it. For example, for file operations, you may find 'fullAccess' to be the least restrictive and hence the easiest to pick, but a user may not be comfortable giving full access to their system unless it's absolutely necessary and might deny the installation of your plugin altogether. 
+Make sure you configure the most accurate permission for your use case, because in the future we will ask users to provide their consent based on it. For example, for file operations, you may find 'fullAccess' to be the least restrictive and hence the easiest to pick, but a user may not be comfortable giving full access to their system unless it's absolutely necessary, and might deny the installation of your plugin altogether. 
 
 <h4>Properties</h4>
 <table>
@@ -667,7 +667,7 @@ Make sure you configure the most accurate permission for your use case because i
     </tbody>
 </table>
 
-#### NetworkPermission
+<strong>NetworkPermission</strong>
 
 <p>Specifies the domains that the plugin can access in network requests.</p>
 <p><strong>Example</strong></p>
@@ -714,7 +714,7 @@ Make sure you configure the most accurate permission for your use case because i
 
 <p>The <a href="/premiere-pro/uxp/resources/recipes/network/">network recipe</a> has more details.</p>
 
-#### WebViewPermission
+<strong>WebViewPermission</strong>
 
 <p>Enables the plugin to use webviews in its UI to display web content or complex UI. </p>
 <p><strong>Example</strong></p>
@@ -782,7 +782,7 @@ window.addEventListener("message", (event) => \{
 
 <p>Find the detailed <a href="../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement/">WebView API reference</a> or use the webview-starter template plugin in UDT.</p>
 
-#### LaunchProcessPermission
+<strong>LaunchProcessPermission</strong>
 
 <p>Specifies the schemes and extensions that the plugin can launch.</p>
 <p>For example, if the plugin can launch a web browser, it should specify the <inlineCode>http</inlineCode> and <inlineCode>https</inlineCode> schemes.</p>
@@ -828,7 +828,7 @@ window.addEventListener("message", (event) => \{
 
 <p>The <a href="/premiere-pro/uxp/resources/recipes/launch-process/">launch process recipe</a> has more details.</p>
 
-#### IpcPermission
+<strong>IpcPermission</strong>
 
 <p>Allows communication with other plugins.</p>
 <p><strong>Example</strong></p>
@@ -862,7 +862,7 @@ window.addEventListener("message", (event) => \{
 <p>The <a href="/premiere-pro/uxp/plugins/tutorials/inter-plugin-comm/">inter-plugin communication example</a> has more details.</p>
 
 
-### FeatureFlags
+<strong>FeatureFlags</strong>
 
 <p>Specifies which experimental features the plugin uses.</p>
 
@@ -894,7 +894,7 @@ window.addEventListener("message", (event) => \{
             <code class="language-html">{`<svg width="100" height="100">
     <rect width="100" 
         height="100" 
-        fill="var(--iconColor, red)" 
+        fill="var(--iconColor, blue)" 
     />
 </svg>`}</code>
             <p>With the following CSS:</p>

@@ -12,7 +12,7 @@ There's a lot more to plugin development than what we've covered so far. For mor
 
 #### File I/O
 
-Save data to and load data from the file system
+Save data to, and load data from the file system
 
 [File I/O](../../resources/recipes/file-operation/)
 

@@ -19,7 +19,7 @@ Once you've added a plugin to your developer workspace, there are several things
 
 ## Load plugin
 
-Plugins added to the developer workspace do not automatically get added to their supported host application. Instead, once you launch the host application, you should tell the plugin (**••• > Load**) to launch in the host. This allows you to use the marketplace version of your plugin while you're not doing active development, but load up the development version when you need to make a new version of the plugin.
+Plugins added to the developer workspace do not automatically get added to their supported host application. Instead, once you launch the host application, load the plugin in the host application with (**••• > Load**) This allows you to use the marketplace version of your plugin while you're not doing active development, but load up the development version when you need to make a new version of the plugin.
 
 Plugins that load successfully will show a small green notification at the bottom of the screen indicating that the plugin was loaded.
 
@@ -33,7 +33,7 @@ Clicking the `Details` link in this message will show an error log indicating wh
 
 ![Failure Log](./images/udt-failure-log.png)
 
-Once your plugin is loaded, you'll typically use the **Reload** action if you need to see any changes in your plugin's behavior. However, if you make changes to your plugin's `manifest.json` file, you'll want to completely **Unload** and **Load** your plugin from scratch.
+Once your plugin is loaded, you'll typically use the **Reload** action if you need to see any changes in your plugin's behavior. However, if you make changes to your plugin's `manifest.json` file, you'll want to completely **Unload** and then **Load** your plugin from scratch.
 
 ## Watching and Reloading
 
@@ -50,7 +50,7 @@ You can also debug your plugin by choosing `Debug` from the Actions menu. This b
 
 ![Debug Window](./images/udt-debugger.png)
 
-In this debugger (which resembles the Chrome Developer tool) you can look at the console log, and do the usual debugger things such as setting breakpoints, stepping into and out of functions, walking through code, inspecting elements, and more.
+In this debugger (which resembles the Chrome Developer tool) you can look at the console log, and do the usual debugger things such as setting breakpoints, stepping into and out of functions, walking through code, and inspecting elements.
 
 You may also instruct to "break on start" when debugging your plugins. The plugin will immediately break into the debugger when it is loaded so that you can trace through the plugin's initialization routines. Select `More` from the Actions menu and check on 'Break on start'.
 
@@ -58,7 +58,7 @@ Once you're done with debugging, you can close the debugger window.
 
 ## Package your plugins for distribution
 
-Once you've got a plugin that's ready for sharing, after it's been thoroughly polished and debugged, you'll need to package it as a "ccx" file.
+Once you've got a thoroughly polished and debugged plugin, it's ready for sharing, and you'll need to package it as a "ccx" file.
 
 - First, make sure you get a plugin ID from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/) website before packaging your plugin for distribution.
 - Create a ccx file by choosing the `Package` option in the Actions menu.

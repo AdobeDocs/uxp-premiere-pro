@@ -71,7 +71,7 @@ ___
 
 *boolean*
   
-Get mute state of the track
+Gets the mute state of the track
 
 ___
 
