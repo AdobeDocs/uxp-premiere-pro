@@ -89,7 +89,7 @@ class documentation_library:
 
         common_root = ''
 
-        # Find coommon root directory across all files
+        # Find common root directory across all files
         for doc in self.documentation_files:
             doc_path = doc.filepath_absolute
             current_branch = os.path.split(doc_path)[0]
@@ -106,6 +106,7 @@ class documentation_library:
         # Prune common root out of all document file paths to establish
         # relative paths
 
+        # TODO why does this break with .DS_Store files?
         for docs in [self.documentation_files, self.supplemental_files]:
             for doc_path in docs:
                 doc_path.filepath_relative = doc_path.filepath_absolute.replace(common_root, "")
@@ -672,7 +673,7 @@ def determine_docfile_alignment(
         currentlineA_string = docfileA.text_blocks[pointerA_index].text #TODO remove
         currentlineB_string = docfileB.text_blocks[pointerB_index].text #TODO remove
 
-        if currentlineA.text == "### ExportType\n":
+        if pointerB_index == 203:
             abc = 10 # DEBUG_DELETE
 
         # start with the first line in A and B
@@ -705,7 +706,7 @@ def determine_docfile_alignment(
                     ])
                 currentlineB_index += 1
             
-            # Update the pointers and current line index
+            # Increment the pointers and update the current line index to match
             pointerA_index += 1
             pointerB_index += 1
 
@@ -722,30 +723,41 @@ def determine_docfile_alignment(
                 [docfileA.text_blocks[currentlineA_index].text,""]
             ])
 
-            # If the current A line is unmatched and we assume all additions are followed by newlines,
-            # log the newline if it follows the logged A line
-            if (
-                assume_newline_follows_additions and
-                docfileA.text_blocks[currentlineA_index].text != "\n" and 
-                docfileB.text_blocks[currentlineB_index].text != "\n" and
-                currentlineA_index+1 < numlinesA and 
-                docfileA.text_blocks[currentlineA_index+1].text == "\n"
-                ):
-                
-                pointerA_index += 1
-                currentlineA_index = pointerA_index
-
-                line_alignment['line_index_alignment'].append([
-                    [currentlineA_index, -1],
-                    [docfileA.text_blocks[currentlineA_index].text,""]
-                ])
-                
-            # complete position incrementing from A line logging
-            pointerB_index = currentlineB_index
-
             pointerA_index += 1
             currentlineA_index = pointerA_index
 
+            # If the current A line is unmatched and we assume all additions are followed by newlines,
+            # log the newline right away if it follows the logged A line
+            if (
+                assume_newline_follows_additions
+                ): 
+                # If the current A line is an addition, and not simply a blank newline,
+                # we check to see if corresponding newlines already exist to follow the added line.
+                # Consideration is added here for A and B pointers being the last line of the file, in which case
+                # checking for existing corresponding newlines will cause an INDEX OUT OF RANGE error.
+
+                # If B lines still remain, we want to check if it's a newline.  If no lines remain, we have nothing to check
+                b_line_not_newline = True
+                if (currentlineB_index < numlinesB and docfileB.text_blocks[currentlineB_index].text == "\n"):
+                    b_line_not_newline = False
+
+                # Validate that a corresponding A newline exists that is not matched on the B side
+                if (
+                    docfileA.text_blocks[currentlineA_index-1].text != "\n" and # line addition found was not a newline
+                    currentlineA_index < numlinesA and # line after found addition exists
+                    docfileA.text_blocks[currentlineA_index].text == "\n" and # line after found line is a newline
+                    b_line_not_newline # next line on B side is not a newline 
+                    ):
+
+                    line_alignment['line_index_alignment'].append([
+                        [currentlineA_index, -1],
+                        [docfileA.text_blocks[currentlineA_index].text,""]
+                    ])
+
+                    pointerA_index += 1
+                    currentlineA_index = pointerA_index
+                
+            pointerB_index = currentlineB_index
 
         # if pointerA_index >= numlinesA and currentlineA_index < numlinesA:
         #     # If a given A line returns no B line match during an entire traverse pass, log it as no parther
@@ -846,43 +858,45 @@ def do_text_blocks_match(
 
 
         #   is diff ONLY additions?  If so, assume no conflicts and do not evaluate confidence
-        if (
-            words_added > 0 and words_removed == 0 and
-            len(blockA_words) > 0 and len(blockB_words) > 0
-            ):
-            confidence = 1
-        else:
-            #   number of words in A vs B, expressed as a ration min/max
-            if len(blockA_words) == 0 or len(blockB_words) == 0:
-                confidences_to_average.append(0)
+        if require_block_type_match and blockA.type.type != blockB.type.type:
+            confidence = 0
+        else:            
+            if (
+                words_added > 0 and words_removed == 0 and
+                len(blockA_words) > 0 and len(blockB_words) > 0
+                ):
+                confidence = 1
             else:
-                words_ratio = min(len(blockA_words), len(blockB_words))/max(len(blockA_words), len(blockB_words))
-                confidences_to_average.append(words_ratio)
+                #   number of words in A vs B, expressed as a ration min/max
+                if len(blockA_words) == 0 or len(blockB_words) == 0:
+                    confidences_to_average.append(0)
+                else:
+                    words_ratio = min(len(blockA_words), len(blockB_words))/max(len(blockA_words), len(blockB_words))
+                    confidences_to_average.append(words_ratio)
 
-            #   percentage of the line that has changed
-            if len_changed_chars_for_ratio == 0:
-            # if len(blockA_words) == 0:
-                confidences_to_average.append(0)
-            else:
-                # unchanged_ratio = len(words_unchanged)/len(blockA_words)
-                unchanged_ratio = len_unchanged_chars_for_ratio/len_changed_chars_for_ratio
-                confidences_to_average.append(unchanged_ratio)
+                #   percentage of the line that has changed
+                if len_changed_chars_for_ratio == 0:
+                # if len(blockA_words) == 0:
+                    confidences_to_average.append(0)
+                else:
+                    # unchanged_ratio = len(words_unchanged)/len(blockA_words)
+                    unchanged_ratio = len_unchanged_chars_for_ratio/len_changed_chars_for_ratio
+                    confidences_to_average.append(unchanged_ratio)              
 
-            #   do block types match
-            if blockA.type.type == blockB.type.type:
-                confidences_to_average.append(1.0)
-            else:
-                confidences_to_average.append(0.0)
-                        
-            # Calculate evenly weighted confidence average
-            if len(confidences_to_average) > 0:
-                confidence = sum(confidences_to_average)/len(confidences_to_average)
-            else:
-                confidence = 0
+                # if block types don't match, this contributes to lower confidence
+                # matching block type does not contibute to higher confidence
+                if blockA.type.type != blockB.type.type:
+                    confidences_to_average.append(0)
 
-            # TODO not sure exactly how to unevenly weight confidence
-            #   Is this a user defined thing?
-            #   Is that even necessary?
+                # Calculate evenly weighted confidence average
+                if len(confidences_to_average) > 0:
+                    confidence = sum(confidences_to_average)/len(confidences_to_average)
+                else:
+                    confidence = 0
+
+                # TODO not sure exactly how to unevenly weight confidence
+                #   Is this a user defined thing?
+                #   Is that even necessary?
 
     '''
     Items to check for determining confidence:
