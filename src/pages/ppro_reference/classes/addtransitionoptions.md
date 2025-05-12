@@ -24,7 +24,7 @@ keywords:
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
 | applyToStart | *boolean* | R | 25.0 | Get whether to apply transition to the start or end of trackitem |
-| forceSingleSided | *boolean* | R | 25.0 | Get whether transition should be applied to one/both sides |
+| forceSingleSided | *boolean* | R | 25.0 | Get whether transition should be applied one/both sides |
 | transitionAlignment | *number* | R | 25.0 | Gets the transitionAlignment of transition |
 | duration | *TickTime* | R | 25.0 | Gets the duration of transition |
 
@@ -68,7 +68,7 @@ ___
 
 *AddTransitionOptions*
   
-Set whether transition should be applied to one/both sides
+Set whether transition should be applied one/both sides
 
 #### Parameters
 
@@ -84,7 +84,7 @@ ___
 
 *AddTransitionOptions*
   
-Sets the transitionAlignment of the transition
+Sets the transitionAlignment of transition
 
 #### Parameters
 

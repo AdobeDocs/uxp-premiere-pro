@@ -33,9 +33,7 @@ Get preference value in native string form
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| preferenceKey | *string* | Specify entry of preference we’d like to update (ex. auto peak generation preference settings) |
-| value | *string/number/boolean* | |
-| persistentFlag | *string* | Mark if this change is persistent or not |
+| preferenceKey | *string* | - |
 
 ___
 
@@ -45,16 +43,6 @@ ___
 
 *boolean*
   
-Set backend preference using given list of property keys.
-
-#### Parameters
-
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| preferenceKey | *string* | - |
-| value | *string/number/boolean* | |
-| persistentFlag | *string* | Mark if this change is persistent or not |
-
+Set backend preference using given list of property keys. The parameters are <key, value (number, boolean or string), persistence flag>
 
 ___

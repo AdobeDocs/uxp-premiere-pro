@@ -50,7 +50,7 @@ Creates and returns an insert component action
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | component | *object* | Video filter component |
-| componentInsertionIndex | *number* | Index at which the component is to be inserted |
+| componentInsertionIndex | *number* | Index which the component shall be inserted |
 
 ___
 
@@ -93,9 +93,5 @@ ___
 *number*
   
 Gets the number of components in the component chain
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| componentCount | *number* | - |
 
 ___

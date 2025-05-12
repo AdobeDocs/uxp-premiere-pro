@@ -19,14 +19,13 @@ From here, you can open documents, modify them, run menu items, and more.
 ### Minimum Version
 
 You will now find minimum version information on properties and methods.  This version tag corresponds to the version of Premiere Pro where the member was introduced or last updated significantly.
-
 For properties, you will find a column "MIN VERSION".  For methods, the version number appears as a tag to the right of the name.
 
 ## Synchronous vs Asynchronous
 
-An important difference between ExtendScript and UXP in Premiere Pro is that all ExtendScript calls to Premiere Pro are synchronous. This means they block the Premiere Pro UI while executing. In UXP, a method call is *asynchronous*, and does not block the UI thread.
+An important difference between ExtendScript (and CEP) and UXP in Premiere Pro is that all ExtendScript calls to Premiere Pro were synchronous. This means they blocked the Premiere Pro UI while they were executing. In UXP, a method call is *asynchronous*, and does not block the UI thread.
 
-For a smooth transition between the ExtendScript DOM and the UXP DOM, all properties (get and set) in the API are designed to be *synchronous* and do not need to be awaited. It is worth noting that they are, in the background, asynchronous in nature.
+For a smooth transition between the ExtendScript DOM and the UXP DOM, all properties (get and set) in the API were designed to be *synchronous* and do not need to be awaited. It is worth noting that they are, in the background, asynchronous in nature.
 
 ## Working with Premiere Pro Objects
 
