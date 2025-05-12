@@ -4,7 +4,6 @@ The beauty of plugins is that they allow you to have more than one JavaScript fi
 
 To make use of modules within your code, you will need a mechanism to include the modules within other files. JavaScript has never had the `#include` syntax of C and its descendants, nor the `import` of Python. Instead, the `require` statement is used.
 
-
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
 
 #### index.js

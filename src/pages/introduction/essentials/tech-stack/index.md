@@ -15,7 +15,7 @@ contributors:
 
 As mentioned earlier, UXP is a modern JavaScript (ECMA2015 or ES6) based extensibility platform.
 
-In order to get started,  some knowledge of web technologies, such as JavaScript, HTML, and CSS, is required. There are materials available on the web that can teach you the basics. Below are links to some of our recommendations. 
+In order to get started,  some knowledge of web technologies, such as JavaScript, HTML, and CSS, is required. There are materials available on the web that can teach you the basics. Below are links to some of our recommendations.
 <InlineAlert slots="text1, text2" />
 
 Remember that since JavaScript, HTML and CSS are foundational web technologies, online tutorials often assume that you plan to use them in a browser, or a server-side JS engine.

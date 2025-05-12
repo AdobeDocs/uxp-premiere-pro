@@ -53,7 +53,6 @@ The Premiere Pro UXP API, along with this documentation website, will be updated
 
 Join the worldwide community of Creative Cloud Developers who are building plugins and integrations to empower creativity!
 
-
 - Join the [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/) to meet other developers, ask questions, and offer help.
 - Subscribe to the [Adobe Creative Cloud Developer Newsletter](https://www.adobe.com/subscription/ccdevnewsletter.html).
 

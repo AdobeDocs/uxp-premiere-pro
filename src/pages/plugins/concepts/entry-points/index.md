@@ -11,7 +11,7 @@ contributors:
 
 # UXP Entry Points
 
-An entry point is a way for a plugin to be invoked. Plugins can have multiple entry points. 
+An entry point is a way for a plugin to be invoked. Plugins can have multiple entry points.
 
 There are two types of entry points: `commands` and `panels`.
 
