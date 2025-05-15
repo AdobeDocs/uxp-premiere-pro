@@ -2,14 +2,21 @@
 
 ! WORK IN PROGRESS !
 
+# TODO Add CLI
+# TODO In the CLI, add user interaction for questionable additions/deletions
+# TODO Add/Enhance reporting
+# TODO Add further handling for discerning between Human and Scraped additions/deletions (for example, table rows)
+# FIXME If I point Library A to '/uxp-premiere-pro/src/pages/resources' and Library B to '/ppro_reference', why do I get the output library results that I do?  Shouldn't I get NO file matches at all?
 '''
 
+from __future__ import annotations
 import os
 import pathlib
 import shutil
 from typing import List
 import datetime
 import difflib
+
 
 
 # GLOBALS # 
@@ -34,7 +41,7 @@ class documentation_library:
 
     # METHODS #
 
-    def add_file(self, path: str, relative_root: str = '', enforce_extension = []): # -> documentation_file: #TODO add type hinting for class back in
+    def add_file(self, path: str, relative_root: str = '', enforce_extension = []) -> documentation_file:
         '''
         Create a new documentation library file object
         :str path:              path to the file             
@@ -45,6 +52,7 @@ class documentation_library:
         :return bool:           True if file path existed and file object created 
         
         '''
+        
         if check_file_exists(path):
             newFile = documentation_file(path, relative_root)
 
@@ -56,26 +64,29 @@ class documentation_library:
         return newFile
     
     def add_folder(self):
-        # TODO build in a structure (possibly a dictionary) that can represent folders and subfolders
+        '''
+        
+        '''
+        # LATER Build in a structure (possibly a dictionary) that can represent folders and subfolders
+        # This function would add folder/directory representations to that structure
+        # 
+        # This is a placeholder for a future version of the documementation_library class that
+        #   has the capacity to describe folders and file structure.  Currently implementation
+        #   only describes files, with the folder structure of the library described in the
+        #   file paths themselves.
         pass
 
     def get_on_disk_structure_tree(self) -> str:
         '''
         
         '''
-        # TODO LATER
-        # !!! This function is incomplete
-        class treeItem():
-            def __init__(self):
-                depth = 0
-                self.isDir = None
-                self.name = None
-                self.parent = None
-                self.children = []
-
-        for file in self.documentation_files:
-            pass
-        # !!! This function is incomplete
+        # LATER Build in a function that can read the on disk file structure of a documentation library
+        # and represent it in a data structure.
+        # 
+        # This is a placeholder for a future version of the documementation_library class that
+        #   has the capacity to describe folders and file structure.  Currently implementation
+        #   only describes files, with the folder structure of the library described in the
+        #   file paths themselves.
 
     def set_relative_path_for_library(self) -> bool:
         '''
@@ -90,7 +101,7 @@ class documentation_library:
         common_root = ''
 
         # Find common root directory across all files
-        for doc in self.documentation_files:
+        for doc in (self.documentation_files + self.supplemental_files):
             doc_path = doc.filepath_absolute
             current_branch = os.path.split(doc_path)[0]
             if common_root == '':
@@ -106,10 +117,12 @@ class documentation_library:
         # Prune common root out of all document file paths to establish
         # relative paths
 
-        # TODO why does this break with .DS_Store files?
         for docs in [self.documentation_files, self.supplemental_files]:
             for doc_path in docs:
-                doc_path.filepath_relative = doc_path.filepath_absolute.replace(common_root, "")
+                if doc_path.filepath_absolute.find(common_root) == -1:
+                    raise RuntimeError(f"Cannot set common filepath.  Common root path '{common_root}' not found in target file path '{doc_path.filepath_absolute}'.")
+                else:
+                    doc_path.filepath_relative = doc_path.filepath_absolute.replace(common_root, "")
 
         return True
     
@@ -119,8 +132,7 @@ class documentation_library:
                             print_report = False,
                             dump_to_file = False
                             ) -> dict:
-        # TODO include_context currently provides no functionality
-        # TODO allow user to set dump file target location
+        
         '''
         Report all instances of a specific block type across the entire document
         library, organized per document file
@@ -143,6 +155,11 @@ class documentation_library:
                             }
         
         '''
+        
+        # TODO include_context currently provides no functionality
+
+        # TODO Allow user to set report dump file target destination
+        
         found_blocks = {
                         'count': 0,
                         'files': []
@@ -218,7 +235,10 @@ class documentation_library:
         return found_blocks
     
 
-    def detect_and_inherit_documentation_revisions(self, edited_docs) -> bool: # TODO typehinting for documentation object arguments
+    def detect_and_inherit_documentation_revisions(self, edited_docs) -> bool:
+        # REMOVE I'm pretty sure that this function does nothing and can be deleted.  It was probably the start of something one night
+        # which I then forgot about the next morning, and proceeded to build the library compariton toolset WITHOUT this
+        # infant of a function. 
         '''
         Given a second documentation_library object which differs from the current
         documentation_library object (presumably with documentation and snipppet edits),
@@ -236,7 +256,8 @@ class documentation_library:
         filepairs = []
         target_orphans = [] # files in this documentation that appear to have no edited partner
         
-        ### TODO very much incomplete
+        # This section is very much incomplete, but don't expect it to ever get done ad the above suggest this function
+        # should be removed
         current_pair = []
         for afile in edited_docs.documentation_files:
             for bfile in self.documentation_files:
@@ -245,8 +266,6 @@ class documentation_library:
 
             if True:
                 pass
-
-    ## STATIC METHODS ##
 
 
 
@@ -303,6 +322,7 @@ class documentation_file:
         '''
         parse a .md file into component blocks       
         '''
+
         md_file_types = [
                         '.md',
                         ]
@@ -356,6 +376,7 @@ class text_block:
     The text blocks are made up of text that represents paragraphs, headings, documentation or snippets
     Text blocks are assigned a text_block_type() type upon construction.
     '''
+
     def __init__(self, textStr: str):
         self._type = text_block_type()
         self._text = ''
@@ -389,7 +410,9 @@ class text_block_type:
 
     # TODO there should probably be a more dynamic line-type detection algorithm in place than simply
     #  looking at the first letter of the first line of a text block.
+    
     # TODO There's probably a more dynamic way to cover both allowed types, and the subset of multi line block types...
+
     allowed_types = {
                     # 'text' is the default type if no other type applies
                     # it is not designated in the allowed type list
@@ -407,7 +430,7 @@ class text_block_type:
 
     # PROPERTIES #
 
-    # TODO this is honestly pretty clunky with .type.type.  Change to .type_string here?
+    # FIXME this is honestly pretty clunky with .type.type.  Change to .type_string here?
     @property
     def type(self) -> str: 
         return self._type
@@ -475,7 +498,10 @@ class text_block_type:
 
 def check_file_exists(filepath: str) -> bool:
     '''
-    replaces os.path.exists() to provide consistent Exception message when os.path.exists() is needed
+    Replaces os.path.exists() to provide consistent Exception message when os.path.exists() is needed
+    
+    :str filepath: string path to to file
+    :return bool:   True if filepath exists.  False if not.
     '''
 
     if not os.path.exists(filepath):
@@ -523,7 +549,7 @@ def determine_files_to_compare(
     :bool include_relpath_when_matching:    True will match files both by their filename and relative path within each library
                                             False will consider filename only when attempting to match files
 
-    :return:    dictionary of partner/matching files between two libraries:
+    :return dict:    dictionary of partner/matching files between two libraries:
                 {'matches': [[fileA, fileB],...], 'non_matchesA': [Afile1, Afile2,...], 'non_matchesB': [Bfile1, Bfile2,...], 'multiples': [[filepath1, filepath2,...],...]}
     '''
     matches = []
@@ -538,12 +564,11 @@ def determine_files_to_compare(
     # Theoretically, no duplicates can exist if filepaths are considered since
     # this would break filesystem conventions
     # 
-    # TODO 
-    # This section may be incomplete and also totally worthless and worth removing
+    # REMOVE This section may be incomplete and also totally worthless and worth removing
     # It occurrs to me after writing this that the documentation contains many
     # index.md files, which will all trigger as duplicates, which would very much
     # prevent any documenation automated management from operationg.  Thus, relative
-    # paths may ALWAYS be required, and make matching on filename alone moot
+    # paths may ALWAYS be required, and make matching on filename alone moot.
     if not include_relpath_when_matching:
         indices_to_removeA = set()
         indices_to_removeB = set()
@@ -629,7 +654,7 @@ def determine_docfile_alignment(
     :float confidence_threshold:            confidence threshold beyond which two compared lines of text should be considered as matching
                                             this is a float from 0.0 - 1.0 representing a percentage of confidence
     
-    :return:            List demonstrating line alighment, formatted as:
+    :return List:           List demonstrating line alighment, formatted as:
                             [{
                             'fileorder': [documentation_file_1, documentation_file_2],
                             'line_index_aligmnent: [[documentation_file_1_line_index, documentation_file_2_line_index],..]
@@ -670,11 +695,8 @@ def determine_docfile_alignment(
         currentlineA = docfileA.text_blocks[pointerA_index]
         currentlineB = docfileB.text_blocks[pointerB_index]
 
-        currentlineA_string = docfileA.text_blocks[pointerA_index].text #TODO remove
-        currentlineB_string = docfileB.text_blocks[pointerB_index].text #TODO remove
-
-        if pointerB_index == 203:
-            abc = 10 # DEBUG_DELETE
+        currentlineA_string = docfileA.text_blocks[pointerA_index].text # DEBUG
+        currentlineB_string = docfileB.text_blocks[pointerB_index].text # DEBUG
 
         # start with the first line in A and B
         if (
@@ -682,7 +704,6 @@ def determine_docfile_alignment(
 
             # TODO Put more robust line equality evaluator function call here, and build line comparitor function!
             do_text_blocks_match(currentlineA, currentlineB) >= confidence_threshold
-            # currentlineA_string.strip() == currentlineB_string.strip()
         ):
             
             # log the matching A == B line
@@ -759,21 +780,6 @@ def determine_docfile_alignment(
                 
             pointerB_index = currentlineB_index
 
-        # if pointerA_index >= numlinesA and currentlineA_index < numlinesA:
-        #     # If a given A line returns no B line match during an entire traverse pass, log it as no parther
-        #     line_alignment['line_index_alignment'].append([
-        #         [currentlineA_index, -1],
-        #         [docfile_to_read.text_blocks[currentlineA_index].text,""]
-        #         ])
-            
-        #     # line_orphansA.append(currentlineA)
-        #     # line_orphansB.append(currentlineB)
-
-        #     currentlineA_index += 1
-        #     pointerA_index = currentlineA_index
-
-        #     pointerB_index = currentlineB_index + 1
-
         if currentlineA_index >= numlinesA and currentlineB_index < numlinesB:
             # If all A lines have been traversed and B lines remain, log them at the end of the list
             while currentlineB_index < numlinesB:
@@ -781,10 +787,9 @@ def determine_docfile_alignment(
                         [-1, currentlineB_index], 
                         ["", docfileB.text_blocks[currentlineB_index].text]
                         ])
-                # line_orphansB.append(currentlineB)
 
                 currentlineB_index += 1
-                pointerB_index = currentlineB_index # TODO likely not necessary
+                pointerB_index = currentlineB_index
 
     return line_alignment
 
@@ -857,7 +862,7 @@ def do_text_blocks_match(
                 lastline_prefix = word[0]
 
 
-        #   is diff ONLY additions?  If so, assume no conflicts and do not evaluate confidence
+        #   Is diff ONLY additions?  If so, assume no conflicts and do not evaluate confidence
         if require_block_type_match and blockA.type.type != blockB.type.type:
             confidence = 0
         else:            
@@ -894,22 +899,9 @@ def do_text_blocks_match(
                 else:
                     confidence = 0
 
-                # TODO not sure exactly how to unevenly weight confidence
+                # LATER not sure exactly how to unevenly weight confidence
                 #   Is this a user defined thing?
                 #   Is that even necessary?
-
-    '''
-    Items to check for determining confidence:
-
-    - [√] number of words in A vs number of words in B
-    - [√] percentage of the line that has been diffed
-    - [x] number of diff sections vs non-diff sections (more sections = higher variablilty) - not sure this actually suggest anything valuable
-    - [x] are one of the adjacent diff sections inside the other (singular plural correction) - this is kinda caught by num words in A vs B.  If ONLY singular/plural changes, num words is the same
-    - [√] is diff only additions? (seems like a merge)
-    - [ ] are there significant words in common between A and B suggesting line similarity (other than common words like "the")
-    - [√] is line type the same
-    - [ ] is the line before and after the same in both A and B (suggest line replacement)
-    '''
 
     return confidence
 
@@ -920,7 +912,20 @@ def write_merged_library(
                     original_libraryB: documentation_library,
                     ) -> bool:
     '''
-    TODO comments
+    After two documentation libraries have been compared and merged, write the
+    resulting library to a new destination.
+
+    Note:  Neither existing library is modified in place.  This is intentional
+    as a safety to the user, as usually at least one of these libraryes will
+    exist in a git repository.  We want the resulting changes to be explicitly
+    and deliberately added back to the repository by the user.
+
+    :list aligned_library_list: list of processed and aligned library file objects
+    :str destination: string filepath target destination for written library
+    :documentation_library original_libraryA:   Compared library, like including user edits, for reference
+    :documentation_library original_libraryB:   Compared library, likely the new documentation scrape, for reference
+
+    :return bool:   True indicates success!
     '''
 
     # Build new root folder to inject into destination for current write pass
@@ -962,17 +967,21 @@ def write_merged_library(
             src_relpath = file.filepath_relative.strip(os.sep)
 
             if os.path.exists(src_filepath):
+                dest_filepath = os.path.join(destination, combined_foldername, src_relpath)
+                if not os.path.exists(os.path.split(dest_filepath)[0]):
+                    makedirs_for_file(dest_filepath)
+
                 shutil.copy(src_filepath, os.path.join(destination, combined_foldername, src_relpath))
             else:
                 raise FileNotFoundError(f"File to copy does not exist: {src_filepath}.")
         
         # TODO add logging and reporting for which supplemental files were copied/skipped
 
-    # TODO add handling for file non-matches, multiples
+    # QUESTION do we need to add handling for file non-matches, multiples?
 
     return True
 
-def makedirs_for_file(filepath: str):
+def makedirs_for_file(filepath: str) -> bool:
     '''
     Make all directories in path leading to file, if they don't exist
 
@@ -982,13 +991,20 @@ def makedirs_for_file(filepath: str):
     
     :str filepath:  Path to validate exists, and creaet if it does not.  May or may not contain \
                     a file at the end of the path.
+
+    :return bool:   True indicates success!
     '''
 
     split_path = os.path.split(filepath)
     last_item_ext_split = os.path.splitext(split_path[-1])
     
     try:
-        if last_item_ext_split[1] != "" and last_item_ext_split[1][0] == ".":
+        if (
+            # file has a .ext
+            (last_item_ext_split[1] != "" and last_item_ext_split[1][0] == ".") or
+            # file is a hidden file that begins with . and has no other extension
+            (last_item_ext_split[0][0] == "." and last_item_ext_split[1] == '')
+            ):
             filepath = os.path.split(filepath)[0]
     except Exception as e:
         raise TypeError(f"List components did not match expected split path item: {last_item_ext_split}.  Error: {e}")
@@ -997,7 +1013,6 @@ def makedirs_for_file(filepath: str):
     pathlib.Path(filepath).mkdir(parents=True, exist_ok=True)
 
     return True
-
 
 # TESTING BLOCK #
 
@@ -1008,8 +1023,6 @@ def testing():
 
 if __name__ == '__main__':
 
-    # TODO Add CLI
-
     '''
     TODO If run from the root folder of the documentation, the below path variable will traverse the documentation
     correctly. This should be a CLI option so that users can define their own "source" documentation library, or
@@ -1017,18 +1030,20 @@ if __name__ == '__main__':
     not traverse non-documentation files 
     '''
 
-    '''
-    TODO Read in documentation library should be a method, not main body functionality.
-    '''
+    # FIXME Currently, all script execution happens here.  Filepath variables below need to be changed manually to process documentation
 
-    # edited_docs_root_dir = os.path.split(os.path.abspath(__file__))[0]
-    # edited_docs_root_dir = '/Users/binsler/Desktop/250428_Dan McS Documentation Edits_MINI/ppro_reference'
-    edited_docs_root_dir = '/Users/binsler/Desktop/20250508_debugging_trim_docs/Existing_Public_Docs/ppro_reference'
+    # Path to Library A (human edited library with code snippets, etc)
+    edited_docs_root_dir = '/Users/binsler/Desktop/20250508_Official_Docs_Migration_for_Release/Existing_Public_Docs/uxp-premiere-pro/src/pages/ppro_reference'
 
-    # new_scrape_root_dir = '/Users/binsler/Desktop/250428_Raw_Scrape_MINI/ppro_reference'
-    new_scrape_root_dir = '/Users/binsler/Desktop/20250508_debugging_trim_docs/Scrape_from_Cathy/ppro_reference'
+    # Path to Library B (new code scrape)
+    new_scrape_root_dir = '/Users/binsler/Desktop/20250508_Official_Docs_Migration_for_Release/Scrape_from_Cathy/ppro_reference'
 
-    library_write_root = '/Users/binsler/Desktop/20250508_debugging_trim_docs/_New_Combined_Docs'
+    # Destination path for writing the new merged library
+    library_write_root = '/Users/binsler/Desktop/20250508_Official_Docs_Migration_for_Release/_New_Combined_Docs'
+
+    ### Script Execution ###
+
+    # TODO Read in documentation library should be a method, not main body functionality.
 
     edited_docs = documentation_library()
 
@@ -1069,26 +1084,7 @@ if __name__ == '__main__':
     
         aligned_list.append(aligned)
 
-        '''
-        stop here
-        '''
-
     write_merged_library(aligned_list, library_write_root, edited_docs, scraped_docs)
-    
-
-    # for item in scraped_docs.documentation_files:
-    #     newpath = os.path.join(library_write_root, item.filepath_relative.strip(os.sep))
-    #     if os.path.exists(library_write_root):
-    #         makedirs_for_file(newpath)
-    #     else:
-    #         raise FileNotFoundError(f"Target root path does not exist: {library_write_root}")
-
-    # aligned = determine_docfile_alignment(
-    #                         edited_docs.documentation_files[0],
-    #                         scraped_docs.documentation_files[0], 
-    #                         confidence_threshold=.7
-    #                         )
-
     
     snippet_report = edited_docs.block_type_report(block_type_str = 'snippet', print_report = True, dump_to_file = False)
 
