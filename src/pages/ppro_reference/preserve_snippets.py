@@ -1032,14 +1032,23 @@ if __name__ == '__main__':
 
     # FIXME Currently, all script execution happens here.  Filepath variables below need to be changed manually to process documentation
 
+    # TODO There are currently no checks for whehter or not the path variables below exist, except in the respective methods
+    #   that process them.  This means that if Library A and Library B do not exist (as with the placeholder text below),
+    #   documentation_library objects will still be successfully created for each library, with 0 documentation_file entries.
+    #   In that state, this script will be executed successfully, since there are no documentation_file items between the
+    #   two libraries to compare.  No merged library will attempt to be written since no documentat_file objects exist, so
+    #   there will be no failures when attempting to write to the non-existent output destination.  As such, the script will
+    #   complete successfully without failure.  This is false feedback and should be corrected (likely in the methods that
+    #   process these destinations/libraries)
+
     # Path to Library A (human edited library with code snippets, etc)
-    edited_docs_root_dir = '/Users/binsler/Desktop/20250508_Official_Docs_Migration_for_Release/Existing_Public_Docs/uxp-premiere-pro/src/pages/ppro_reference'
+    edited_docs_root_dir = 'path/to/library/a/goes/here'
 
     # Path to Library B (new code scrape)
-    new_scrape_root_dir = '/Users/binsler/Desktop/20250508_Official_Docs_Migration_for_Release/Scrape_from_Cathy/ppro_reference'
+    new_scrape_root_dir = 'path/to/library/b/goes/here'
 
     # Destination path for writing the new merged library
-    library_write_root = '/Users/binsler/Desktop/20250508_Official_Docs_Migration_for_Release/_New_Combined_Docs'
+    library_write_root = 'output/path/for/merged/library/goes/here'
 
     ### Script Execution ###
 
