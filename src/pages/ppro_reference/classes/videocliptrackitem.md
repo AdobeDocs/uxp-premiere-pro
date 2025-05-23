@@ -306,7 +306,7 @@ ___
 
 *boolean*
   
-Returns true if rackitem is muted/disabled
+Returns true if trackitem is muted/disabled
 
 ___
 
