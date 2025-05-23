@@ -12,14 +12,14 @@ contributors:
 
 UXP allows communication between plugins that are installed in the same application.
 
-This is particularly handy when you know a certain task is already automated by another plugin and you would like to invoke it instead of duplicating the effort. But make sure the user is not caught by surprise. Your plugin should call out such dependencies to ensure flawless functioning of your plugin.
+This is particularly handy when you know a certain task is already automated by another plugin, and you would like to invoke it instead of duplicating its functionality. In order not to confuse users, your plugin should call out such dependencies to ensure flawless function.
 
-The `Plugin Manager` module provides APIs that will help establish the connection. But before we take a look at an example, be sure to be well-versed in these topics
+The `Plugin Manager` module provides APIs that will help establish the connection. Before we look at an example, understand these topics:
 
 - [Plugin entrypoints](../../concepts/entry-points/)
 - [Manifest permission module](../../concepts/manifest/index.md#permissionsdefinition)
 
-Additionally, you will need
+Additionally, you will need:
 
 - A basic knowledge of the plugin you are going to communicate with. This includes:
     - the plugin `id`
@@ -105,7 +105,7 @@ function communicateWithAnotherPlugin() {
         {
             "type": "command",
             "id": "commandWithInput",
-            "label": "Do you thing with inputs"
+            "label": "Do your thing with inputs"
         },
         {
             "type": "panel",
@@ -141,9 +141,9 @@ function doThing(args) {
 ## Additional notes
 
 - You may not see any error if the entrypoint is not found. Therefore, we advise you to use `plugin.manifest.commands` and `plugin.manifest.panels` to select from the complete list of entrypoints.
-- Invoking a plugin installed/running on a different application is not possible
+- Invoking a plugin which is installed/running in a different application is not possible
 - Passing methods in the argument object is also not possible
-- There is a possibility that the user might have disabled a particular plugin via Adobe Creative Cloud Desktop App. Check the plugin's availability by using `plugin.enabled` before invoking.
+- There is a possibility that the user might have disabled a particular plugin via the Adobe Creative Cloud Desktop App. Check the plugin’s availability by using `plugin.enabled` before invoking.
 
 ## Reference docs
 
