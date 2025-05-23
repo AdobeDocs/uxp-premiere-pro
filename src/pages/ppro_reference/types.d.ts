@@ -95,7 +95,7 @@ export declare type AudioClipTrackItem = {
   createSetEndAction(tickTime: TickTime): Action	//Create set end time action for sequence
   getDuration(): Promise<TickTime>	//Timecode representing the duration of this track item relative to the sequence start.
   getType(): Promise<number>	//Index representing the type of this track item.
-  isDisabled(): Promise<boolean>	//Returns true if rackitem is muted/disabled
+  isDisabled(): Promise<boolean>	//Returns true if trackitem is muted/disabled
   createSetDisabledAction(disabled: boolean): Action	//Returns an action that enables/disables the trackItem 
   getMediaType(): Promise<Guid>	//UUID representing the underlying media type of this track item
   getTrackIndex(): Promise<number>	//Index representing the track index of the track this track item belongs to
@@ -688,7 +688,7 @@ export declare type VideoClipTrackItem = {
   createSetEndAction(tickTime: TickTime): Action	//Create set end time action for sequence
   getDuration(): Promise<TickTime>	//Timecode representing the duration of this track item relative to the sequence start.
   getType(): Promise<number>	//Index representing the type of this track item.
-  isDisabled(): Promise<boolean>	//Returns true if rackitem is muted/disabled
+  isDisabled(): Promise<boolean>	//Returns true if trackitem is muted/disabled
   createSetDisabledAction(disabled: boolean): Action	//Returns an action that enables/disables the trackItem 
   getMediaType(): Promise<Guid>	//UUID representing the underlying media type of this track item
   getTrackIndex(): Promise<number>	//Index representing the track index of the track this track item belongs to
