@@ -23,11 +23,11 @@ Modern extensibility powering the design of custom tools and features, allowing 
 
 ## Overview
 
-UXP (**U**nified E**x**tensibility **P**latform) is a scripting platform built into Premiere Pro.  It is powered by a modern JavaScript engine and offeres the ability to access many Premiere Pro functions at a programatic level.  With UXP, unique tools can be built to integrate with and optimize the most precise and demanding workflows, reducing repitition, maximizing efficiency and leveraging Premiere Pro into a bespoke application customized for the needs of any project.
+UXP (**U**nified E**x**tensibility **P**latform) is a scripting platform built into Premiere Pro.  It is powered by a modern JavaScript engine and offers the ability to access many Premiere Pro functions at a programatic level.  With UXP, unique tools can be built to integrate with and optimize the most precise and demanding workflows, reducing repetition, maximizing efficiency and leveraging Premiere Pro into a bespoke application customized for the needs of any project.
 
 Best of all, UXP Plugins run right in Premiere Pro.
 
-Premiere Pro offers a specific set of UXP functionality that extends the base UXP API common across all UXP-capable Adobe Applications.  Documentation for both the Premiere Pro API and the base UXP API can be accessed via this site.
+Premiere Pro offers a specific set of UXP functionality that extends the common base UXP API across all UXP-capable Adobe Applications.  Documentation for both the Premiere Pro API and the base UXP API can be accessed via this site.
 
 ![UDT Interface](./UDT_sample_image_01_cropped.png)
 
