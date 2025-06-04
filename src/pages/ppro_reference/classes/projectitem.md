@@ -42,7 +42,7 @@ keywords:
 It may be desirable to access attributes associated with ProjectItem after a ClipProjectItem object has been retrieved.  This can be achieved by casting a ClipProjectItem to a ProjectItem.
 
 ```typescript
-var myProjItem = await ppro.ProjectItem.cast(myClipProjItem);
+let myProjItem = await ppro.ProjectItem.cast(myClipProjItem);
 ```
 
 ___
