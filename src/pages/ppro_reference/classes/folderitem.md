@@ -23,7 +23,7 @@ keywords:
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| name | *string* | R | 25.0 | Get name of project item object |
+| name | *string* | R | 25.0 | The name of this project item. |
 
 ## Static Methods
 
@@ -31,13 +31,15 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*any*
+*FolderItem*
+  
+Cast ProjectItem in to FolderItem
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | *any* | - |
+| projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
 
 ___
 
@@ -105,7 +107,23 @@ Rename the Bin and return true if it's successful
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *string* | - |
+| name | *string* | - |
+
+___
+
+### createSetNameAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Returns action that renames projectItem
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inName | *string* | - |
 
 ___
 
@@ -130,7 +148,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Array*
+*ProjectItem[]*
   
 Collection of child items of this folder.
 
@@ -142,7 +160,7 @@ ___
 
 *ProjectItem*
   
-Get the root item of the project which contains all items of the project on the lowest level
+Get the parent project item of this project item.
 
 ___
 
@@ -152,6 +170,6 @@ ___
 
 *Project*
   
-Get the root item of the project which contains all items of the project on the lowest level.
+Get the parent Project of this projectItem.
 
 ___

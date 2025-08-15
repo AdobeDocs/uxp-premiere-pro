@@ -80,6 +80,70 @@ ___
 
 ## Instance Methods
 
+### add
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*TickTime*
+  
+Add another TickTime to this one and return it. This TickTime is not modified.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+
+___
+
+### alignToFrame
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*TickTime*
+  
+alignToFrame will return a TickTime that is aligned to the nearest frame boundary less than the given time, for a given frame rate by rounding any fractional portion.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| frameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
+
+___
+
+### alignToNearestFrame
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*TickTime*
+  
+AlignToNearestFrame will return a TickTime that is aligned to the nearest frame boundary greater than or less than the given time, for a given frame rate by rounding any fractional portion.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| frameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
+
+___
+
+### divide
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*TickTime*
+  
+Divide this TickTime by a divisor and return it. In case of a division by zero, TIME_INVALID is returned. This TickTime is not modified.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| divisor | *number* | - |
+
+___
+
 ### equals
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -87,6 +151,38 @@ ___
 *boolean*
   
 Returns true if the given TickTime is equal to the TickTime object
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+
+___
+
+### multiply
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*TickTime*
+  
+Multiply this TickTime with a factor and return it. This TickTime is not modified.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| factor | *number* | - |
+
+___
+
+### subtract
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*TickTime*
+  
+Subtract another TickTime from this one and return it. This TickTime is not modified.
 
 #### Parameters
 

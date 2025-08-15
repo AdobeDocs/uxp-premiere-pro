@@ -27,13 +27,13 @@ keywords:
 
 *string*
   
-Gets the scratchDisk location for specific disktype
+Gets the scratchDisk location for specific disktype - may return symbolic paths for reserved types like 'MyDocuments'
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| ScratchDiskType | *string* | - |
+| ScratchDiskType | [*Constants.ScratchDiskFolderType*](/ppro_reference/constants) | - |
 
 ___
 
@@ -49,7 +49,7 @@ Sets project ScratchDisk Path
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| ScratchDiskType | *string* | - |
-| ScratchDiskValue | *string* | - |
+| ScratchDiskType | [*Constants.ScratchDiskFolderType*](/ppro_reference/constants) | - |
+| ScratchDiskValue | [*Constants.ScratchDiskFolder*](/ppro_reference/constants) | - |
 
 ___

@@ -33,7 +33,7 @@ Return Property Owner Object
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| propertyOwnerObject | *any* | This can also be object instance of Project, Sequence etc.. |
+| propertyOwnerObject | [*Project*](/ppro_reference/classes/project/) or [*Sequence*](/ppro_reference/classes/sequence/) | This can also be object instance of Project, Sequence etc.. |
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Action*
   
 Create an action to clear the value with the given name. This method can fail if e.g. the underlying properties object does not support action based setting of properties.
 
@@ -59,9 +59,17 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Action*
   
 Create an action to set a named value through scripting. The parameters are <name, value (number, boolean or string), persistence flag>. This method can fail if e.g. the underlying properties object does not support action based setting of properties.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| name | *string* | property name |
+| value | *boolean* or *string* or *number* | Value to set for the property key |
+| persistenceFlag | [*Constants.PropertyType*](/ppro_reference/constants) | Indicates whether the property should be persisted or not |
 
 ___
 

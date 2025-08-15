@@ -17,7 +17,7 @@ keywords:
   - Premiere Pro
 ---
 
-# ProjectUtils
+# ProjectUtils  
 
 ## Definition of Terms
 
@@ -31,7 +31,7 @@ Given the Premiere Pro User Interface, a **project view** is defined as a projec
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Project*
   
 Get project based on input view guid
 
@@ -47,7 +47,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Array*
+*Guid[]*
   
 Get array of project view ids
 

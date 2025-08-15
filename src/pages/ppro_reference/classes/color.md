@@ -1,7 +1,7 @@
 ---
-id: "keyframe"
-title: "Keyframe"
-sidebar_label: "Keyframe"
+id: "color"
+title: "Color"
+sidebar_label: "Color"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,39 +17,31 @@ keywords:
   - Premiere Pro
 ---
 
-# Keyframe  
+# Color  
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| value | *object* | W | 25.0 |  |
-| position | *TickTime* | W | 25.0 | Get/Set position of a keyframe |
+| red | *number* | W | 25.0 | Read/Write property to get/set red value of color object |
+| green | *number* | W | 25.0 | Read/Write property to get/set green value of color object |
+| blue | *number* | W | 25.0 | Read/Write property to get/set blue value of color object |
+| alpha | *number* | W | 25.0 | Read/Write property to get/set alpha value of color object |
 
 ## Instance Methods
 
-### getTemporalInterpolationMode
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*number*
-  
-Gets temporal interpolation mode of a keyframe
-
-___
-
-### setTemporalInterpolationMode
+### equals
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Sets temporal interpolation mode of a keyframe
+Returns true if the given ColorObject is equal to this ColorObject
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| temporalInterpolationMode | *number* | - |
+| colorObject | [*Color*](/ppro_reference/classes/color/) | - |
 
 ___

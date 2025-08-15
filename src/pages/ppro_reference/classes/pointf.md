@@ -40,6 +40,6 @@ Get the distance from one point to another point
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| point | *object* | - |
+| point | [*PointF*](/ppro_reference/classes/pointf/) | - |
 
 ___

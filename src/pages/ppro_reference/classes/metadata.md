@@ -53,7 +53,7 @@ Get set project metadata action
 | :------ | :------ | :------ |
 | projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
 | metadata | *string* | - |
-| updatedFields | *Array* | - |
+| updatedFields | [*string[]*](/ppro_reference/classes/string[]/) | - |
 
 ___
 
@@ -144,6 +144,6 @@ Set project panel metadata
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *string* | - |
+| metadata | *string* | - |
 
 ___

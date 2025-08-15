@@ -48,6 +48,54 @@ Creates an action to clone the given sequence
 
 ___
 
+### createSetInPointAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Create SetInPointAction for sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+
+___
+
+### createSetOutPointAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Create SetOutPointAction for sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+
+___
+
+### createSetSettingsAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Returns action that set sequence settings
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| sequenceSettings | [*SequenceSettings*](/ppro_reference/classes/sequencesettings/) | - |
+
+___
+
 ### createSetZeroPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -317,21 +365,5 @@ Updates sequence selection using the given track item selection.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | trackItemSelection | [*TrackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
-
-___
-
-### setSettings
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*boolean*
-  
-Set sequence settings
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| sequenceSettings | [*SequenceSettings*](/ppro_reference/classes/sequencesettings/) | - |
 
 ___

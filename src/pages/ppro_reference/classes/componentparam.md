@@ -49,7 +49,7 @@ Creates and returns an action object which can be used to add a keyframe compone
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| Keyframe | *object* | - |
+| inKeyFrame | [*Keyframe*](/ppro_reference/classes/keyframe/) | - |
 
 ___
 
@@ -57,9 +57,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Keyframe*
   
 Creates and returns a keyframe initialised with the ComponentParam's type and passed in value. This throws if the passed in value is not compatible with the component param type
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inValue | *number* or *string* or *boolean* or [*PointF*](/ppro_reference/classes/pointf/) or [*Color*](/ppro_reference/classes/color/) | Input could be number, string, boolean, PointF, or Color depend on effect param type |
 
 ___
 
@@ -75,7 +81,7 @@ Returns an action which removes keyframe at specific time
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| TickTime | *object* | - |
+| inTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 | UpdateUI | *boolean* | - |
 
 ___
@@ -92,8 +98,8 @@ Returns an action which removes keyframe at specific time range
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| TickTime | *object* | - |
-| TickTime | *object* | - |
+| inTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| outTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 | UpdateUI | *boolean* | - |
 
 ___
@@ -110,7 +116,7 @@ Returns an action which sets the interpolation mode of keyframe at the given tim
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| TickTime | *object* | - |
+| inTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 | InterpolationMode | *number* | - |
 | UpdateUI | *boolean* | - |
 
@@ -144,7 +150,7 @@ Creates and returns an action object which can be used to set the value of a non
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| Keyframe | *object* | - |
+| inKeyFrame | [*Keyframe*](/ppro_reference/classes/keyframe/) | - |
 | inSafeForPlayback | *boolean* | - |
 
 ___
@@ -161,8 +167,8 @@ Find sthe nearest key for the given time
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| TickTime | *object* | - |
-| TickTime | *object* | - |
+| inTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| outTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
 
@@ -178,7 +184,7 @@ find the next keyframe for the given time
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| TickTime | *object* | - |
+| inTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
 
@@ -194,7 +200,7 @@ find the previous keyframe for the given time
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| TickTime | *object* | - |
+| inTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
 
@@ -202,7 +208,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Array*
+*TickTime[]*
   
 Get a list of tickTime for the keyframes of this component param
 
@@ -238,9 +244,15 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*number | string | boolean | PointF | Color*
   
 Gets the value of component Param at the given time
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| time | [*TickTime*](/ppro_reference/classes/ticktime/) | The time at which to get the value of the component param |
 
 ___
 

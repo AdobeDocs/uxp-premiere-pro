@@ -33,7 +33,7 @@ Returns the Markers object for Sequence Or ProjectItem
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| markerOwnerObject | *any* | - |
+| markerOwnerObject | [*Sequence*](/ppro_reference/classes/sequence/) or [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Action*
   
 Add a new marker
 
@@ -63,7 +63,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Action*
   
 Move the given marker at new time value
 
@@ -80,7 +80,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Action*
   
 Remove the given marker
 
@@ -96,7 +96,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Array*
+*Marker[]*
   
 Get all markers
 
@@ -104,6 +104,6 @@ Get all markers
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| filters | *Array* | Marker Type Filter (Optional) |
+| filters | [*string[]*](/ppro_reference/classes/string[]/) | Marker Type Filter (Optional) |
 
 ___

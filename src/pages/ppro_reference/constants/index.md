@@ -136,6 +136,44 @@ ___
 
 ___
 
+### VideoTrackEvent
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| TRACK_CHANGED | - |
+| INFO_CHANGED | - |
+| LOCK_CHANGED | - |
+
+___
+
+### AudioTrackEvent
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| TRACK_CHANGED | - |
+| INFO_CHANGED | - |
+| LOCK_CHANGED | - |
+
+___
+
+### EncoderEvent
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| RENDER_COMPLETE | - |
+| RENDER_ERROR | - |
+| RENDER_CANCEL | - |
+| RENDER_QUEUE | - |
+| RENDER_PROGRESS | - |
+
+___
+
 ### ScratchDiskFolderType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -198,5 +236,114 @@ ___
 | AUTO_PEAK_GENERATION | - |
 | IMPORT_WORKSPACE | - |
 | SHOW_QUICKSTART_DIALOG | - |
+
+___
+
+### SnapEvent
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| KEYFRAME | - |
+| RAZOR_PLAYHEAD | - |
+| RAZOR_MARKER | - |
+| TRACKITEM | - |
+| GUIDES | - |
+
+___
+
+### OperationCompleteEvent
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| CLIP_EXTEND_REACHED | - |
+| EFFECT_DROP_COMPLETE | - |
+| EXPORT_MEDIA_COMPLETE | - |
+| GENERATIVE_EXTEND_COMPLETE | - |
+| IMPORT_MEDIA_COMPLETE | - |
+
+___
+
+### OperationCompleteState
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| SUCCESS | - |
+| CANCELLED | - |
+| FAILED | - |
+
+___
+
+### PixelAspectRatio
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| SQUARE | - |
+| DVNTSC | - |
+| DVNTSCWide | - |
+| DVPAL | - |
+| DVPALWide | - |
+| Anamorphic | - |
+| HDAnamorphic1080 | - |
+| DVCProHD | - |
+
+___
+
+### VideoFieldType
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| PROGRESSIVE | - |
+| UPPER_FIRST | - |
+| LOWER_FIRST | - |
+
+___
+
+### VideoDisplayFormatType
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| FPS_23_976 | - |
+| FPS_25 | - |
+| FPS_29_97 | - |
+| FPS_29_97_NON_DROP | - |
+| FEET_FRAME_16mm | - |
+| FEET_FRAME_35mm | - |
+| FRAMES | - |
+
+___
+
+### AudioChannelType
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| MONO | - |
+| STEREO | - |
+| SURROUND_51 | - |
+| MULTI | - |
+
+___
+
+### AudioDisplayFormatType
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| SAMPLE_RATE | - |
+| MILLISECONDS | - |
 
 ___

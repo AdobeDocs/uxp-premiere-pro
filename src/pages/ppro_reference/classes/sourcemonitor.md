@@ -55,7 +55,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*ProjectItem*
   
 Get projectItem at source monitor
 
@@ -105,6 +105,6 @@ Play clip at source monitor with input speed
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *number* | - |
+| speed | *number* | - |
 
 ___

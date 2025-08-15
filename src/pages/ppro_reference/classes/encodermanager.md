@@ -68,7 +68,7 @@ Export a sequence. If no output file and preset is specified, the sequence will 
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequence | *object* | - |
+| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
 | exportType | [*Constants.ExportType*](/ppro_reference/constants) | Constants.ExportType.IMMEDIATELY, Constants.ExportType.QUEUE_TO_AME etc..  |
 | outputFile | *string* | - |
 | presetFile | *string* | - |
