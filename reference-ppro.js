@@ -24,6 +24,10 @@ module.exports = [{
           "path": "/ppro_reference/classes/audiocomponentchain/"
         },
         {
+          "title": "AudioFilterFactory",
+          "path": "/ppro_reference/classes/audiofilterfactory/"
+        },
+        {
           "title": "AudioTrack",
           "path": "/ppro_reference/classes/audiotrack/"
         },
@@ -34,6 +38,14 @@ module.exports = [{
         {
           "title": "ClipProjectItem",
           "path": "/ppro_reference/classes/clipprojectitem/"
+        },
+        {
+          "title": "Color",
+          "path": "/ppro_reference/classes/color/"
+        },
+        {
+          "title": "Component",
+          "path": "/ppro_reference/classes/component/"
         },
         {
           "title": "ComponentParam",
@@ -82,6 +94,10 @@ module.exports = [{
         {
           "title": "Markers",
           "path": "/ppro_reference/classes/markers/"
+        },
+        {
+          "title": "Media",
+          "path": "/ppro_reference/classes/media/"
         },
         {
           "title": "Metadata",
@@ -151,6 +167,10 @@ module.exports = [{
           "path": "/ppro_reference/classes/sequenceeditor/"
         },
         {
+          "title": "SequenceSettings",
+          "path": "/ppro_reference/classes/sequencesettings/"
+        },
+        {
           "title": "SequenceUtils",
           "path": "/ppro_reference/classes/sequenceutils/"
         },
@@ -194,6 +214,10 @@ module.exports = [{
           "title": "VideoTrack",
           "path": "/ppro_reference/classes/videotrack/"
         },
+        {
+          "title": "EventManager",
+          "path": "/ppro_reference/classes/eventmanager/"
+        },
 	]
 },
 {
@@ -206,6 +230,10 @@ module.exports = [{
 	"path": "/ppro_reference/events/",
 	"header": true,
 	"pages": [
+      {
+        "title": "OperationCompleteEvent",
+        "path": "/ppro_reference/events/operationcompleteevent/"
+      },
       {
         "title": "ProjectClosedEvent",
         "path": "/ppro_reference/events/projectclosedevent/"
