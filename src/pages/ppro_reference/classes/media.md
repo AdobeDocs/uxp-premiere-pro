@@ -1,7 +1,7 @@
 ---
-id: "keyframe"
-title: "Keyframe"
-sidebar_label: "Keyframe"
+id: "media"
+title: "Media"
+sidebar_label: "Media"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,39 +17,29 @@ keywords:
   - Premiere Pro
 ---
 
-# Keyframe  
+# Media  
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| value | *object* | W | 25.0 |  |
-| position | *TickTime* | W | 25.0 | Get/Set position of a keyframe |
+| start | *TickTime* | R | 25.0 | Get the media start time |
+| duration | *TickTime* | R | 25.0 | Get the media duration |
 
 ## Instance Methods
 
-### getTemporalInterpolationMode
+### createSetStartAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
+*Action*
   
-Gets temporal interpolation mode of a keyframe
-
-___
-
-### setTemporalInterpolationMode
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*boolean*
-  
-Sets temporal interpolation mode of a keyframe
+Returns action that set start of media
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| temporalInterpolationMode | *number* | - |
+| time | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___

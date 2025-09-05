@@ -44,7 +44,7 @@ ___
 
 *Action*
   
-Returns an action moves the inPoint of the track item to a new time, by shifting it by a number of seconds.
+Returns an action that moves the inPoint of the track item to a new time, by shifting it by a number of seconds.
 
 #### Parameters
 
@@ -66,7 +66,7 @@ Returns true if trackItem has transition
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| transitionPosition | *number* | - |
+| transitionPosition | [*Constants.TransitionPosition*](/ppro_reference/constants) | Start or end position of transition |
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 *Action*
   
-Create SetInPointAction for sequence
+Create SetInPointAction for setting the track item in point relative to the start time of the project item referenced by this track item
 
 #### Parameters
 
@@ -118,13 +118,29 @@ Create SetInPointAction for sequence
 
 ___
 
+### createSetNameAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Returns an action that renames the trackItem
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inName | *string* | - |
+
+___
+
 ### createSetOutPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *Action*
   
-Create SetInPointAction for sequence
+Create SetOutPointAction for setting the track item out point relative to the start time of the project item referenced by this track item
 
 #### Parameters
 
@@ -166,7 +182,7 @@ ___
 
 *TickTime*
   
-Timecode representing the duration of this track item relative to the sequence start.
+Returns timecode representing the duration of this track item relative to the sequence start.
 
 ___
 
@@ -176,7 +192,7 @@ ___
 
 *TickTime*
   
-Timecode representing the end of this track item relative to the sequence start.
+Returns a TickTime object representing the ending sequence time of this track item relative to the sequence start time.
 
 ___
 
@@ -186,7 +202,7 @@ ___
 
 *TickTime*
   
-Get timecode representing the inPoint of sequence.
+Returns a TickTime object representing the track item in point relative to the start time of the project item referenced by this track item.
 
 ___
 
@@ -216,7 +232,7 @@ ___
 
 *Guid*
   
-UUID representing the underlying media type of this track item
+Returns UUID representing the underlying media type of this track item
 
 ___
 
@@ -236,7 +252,7 @@ ___
 
 *TickTime*
   
-Get timecode representing the outPoint of sequence.
+Returns a TickTime object representing the track item out point relative to the start time of the project item referenced by this track item.
 
 ___
 
@@ -246,7 +262,7 @@ ___
 
 *ProjectItem*
   
-The project item for this track item.
+Returns the project item for this track item.
 
 ___
 
@@ -266,7 +282,7 @@ ___
 
 *TickTime*
   
-Timecode representing the start of this track item relative to the sequence start.
+Returns a TickTime object representing the starting sequence time of this track item relative to the sequence start time.
 
 ___
 
@@ -306,7 +322,7 @@ ___
 
 *boolean*
   
-Returns true if rackitem is muted/disabled
+Returns true if trackitem is muted/disabled
 
 ___
 

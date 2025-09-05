@@ -33,7 +33,7 @@ Exports from a sequence. Supported formats are bmp, dpx, gif, jpg, exr, png, tga
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequence | *object* | - |
+| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
 | time | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 | filename | *string* | Filename to be exported , example 'C:/temp/exportedFrame.png' |
 | filepath | *string* | Directory to be exported, example 'C:/temp/' |

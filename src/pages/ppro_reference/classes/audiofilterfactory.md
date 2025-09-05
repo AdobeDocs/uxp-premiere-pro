@@ -1,7 +1,7 @@
 ---
-id: "videofilterfactory"
-title: "VideoFilterFactory"
-sidebar_label: "VideoFilterFactory"
+id: "audiofilterfactory"
+title: "AudioFilterFactory"
+sidebar_label: "AudioFilterFactory"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,23 +17,24 @@ keywords:
   - Premiere Pro
 ---
 
-# VideoFilterFactory  
+# AudioFilterFactory  
 
 ## Static Methods
 
-### createComponent
+### createComponentByDisplayName
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*VideoFilterComponent*
+*AudioFilterComponent*
   
-Creates a new video filter component based on the input matchName
+Creates a new audio filter component based on the input display name and trackItem for applying the audio filter
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| matchName | *string* | The match name of the component to create, example 'PR.ADBE Solarize', 'AE.ADBE Mosaic' etc.. |
+| displayName | *string* | - |
+| inAudioClipTrackItem | [*AudioClipTrackItem*](/ppro_reference/classes/audiocliptrackitem/) | - |
 
 ___
 
@@ -43,16 +44,6 @@ ___
 
 *string[]*
   
-Returns an array of video filter display names
-
-___
-
-### getMatchNames
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*string[]*
-  
-Returns an array of video filter matchNames
+Returns an array of audio filter displayNames
 
 ___

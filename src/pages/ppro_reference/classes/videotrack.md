@@ -52,7 +52,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*any*
+*VideoClipTrackItem[]*
   
 Returns array of VideoClipTrackItem from the track item type
 
@@ -60,7 +60,7 @@ Returns array of VideoClipTrackItem from the track item type
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItemType | *number* | This values can be Empty (0), Clip (1), Transition (2), Preview (3) or Feedback (4) |
+| trackItemType | [*Constants.TrackItemType*](/ppro_reference/constants) | This values can be Empty (0), Clip (1), Transition (2), Preview (3) or Feedback (4) |
 | includeEmptyTrackItems | *boolean* | - |
 
 ___

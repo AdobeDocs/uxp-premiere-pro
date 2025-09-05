@@ -44,16 +44,6 @@ Get alpha usage type property of footage
 
 ___
 
-### getColorSpace
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*ColorSpace*
-  
-Get colorspace of footage
-
-___
-
 ### getFieldType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -176,23 +166,7 @@ Set alpha usage type property of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *number* | - |
-
-___
-
-### setColorSpace
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*boolean*
-  
-Set colorspace of footage
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| ColorSpace | *object* | - |
+| alphaUsage | *number* | - |
 
 ___
 
@@ -208,7 +182,7 @@ Set field type of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *number* | - |
+| fieldType | *number* | - |
 
 ___
 
@@ -224,7 +198,7 @@ Set frame rate of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *number* | - |
+| frameRate | *number* | - |
 
 ___
 
@@ -240,7 +214,7 @@ Set ignore alpha property of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *boolean* | - |
+| ignoreAlpha | *boolean* | - |
 
 ___
 
@@ -256,7 +230,7 @@ Set input LUTID of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *string* | - |
+| inputLUTID | *string* | - |
 
 ___
 
@@ -272,7 +246,7 @@ Set invert alpha property of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *boolean* | - |
+| invertAlpha | *boolean* | - |
 
 ___
 
@@ -288,7 +262,7 @@ Set pixel aspect ratio of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *number* | - |
+| pixelAspectRatio | *number* | - |
 
 ___
 
@@ -304,7 +278,7 @@ Set removePullDown property of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *boolean* | - |
+| removePulldown | *boolean* | - |
 
 ___
 
@@ -320,7 +294,7 @@ Set vr conform projection type of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *number* | - |
+| vrConform | *number* | - |
 
 ___
 
@@ -336,7 +310,7 @@ Set vr horizontal view of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *number* | - |
+| vrHorzView | *number* | - |
 
 ___
 
@@ -352,7 +326,7 @@ Set vr layout type of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *number* | - |
+| vrLayOut | *number* | - |
 
 ___
 
@@ -368,6 +342,6 @@ Set vr horizontal view of footage
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *number* | - |
+| vrVertView | *number* | - |
 
 ___

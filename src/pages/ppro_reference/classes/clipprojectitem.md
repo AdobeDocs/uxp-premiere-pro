@@ -23,7 +23,7 @@ keywords:
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| name | *string* | R | 25.0 | Get name of project item object |
+| name | *string* | R | 25.0 | The name of this project item. |
 
 ## Static Methods
 
@@ -31,13 +31,15 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*any*
+*ClipProjectItem*
+  
+Cast ProjectItem in to ClipProjectItem
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | *any* | - |
+| projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
 
 It may be desirable to access attributes associated with ClipProjectItem after a ProjectItem object has been retrieved.  This can be achieved by casting a ProjectItem to a ClipProjectItem.
 
@@ -74,7 +76,7 @@ ___
 
 *boolean*
   
-Returns true if Premiere Pro can change the path, associated with this project item; otherwise, returns false
+Returns true if Premiere Pro can change the path associated with this project item; otherwise, returns false
 
 ___
 
@@ -84,7 +86,7 @@ ___
 
 *boolean*
   
-Indicates whether it is possible to attach a proxy, to this project item.
+Indicates whether it is possible to attach a proxy to this project item.
 
 ___
 
@@ -135,7 +137,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*any*
+*Action*
   
 Set the in or out point of the Project item
 
@@ -160,7 +162,7 @@ Returns an action which Sets the in point of the Project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | *any* | - |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
 
@@ -177,6 +179,22 @@ Create action for setting Guid of Input LUT on media. This applies for Video Cli
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | stringLUTID | *string* | - |
+
+___
+
+### createSetNameAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Returns action that renames projectItem
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inName | *string* | - |
 
 ___
 
@@ -202,7 +220,7 @@ Returns an action which Sets the in point of the Project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | *any* | - |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
 ___
 
@@ -218,7 +236,7 @@ Returns an action which sets the override frame rate
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inOverriddenFrameRateValue | *any* | - |
+| inOverriddenFrameRateValue | *number* | - |
 
 ___
 
@@ -234,8 +252,8 @@ Returns an action which sets Override pixel aspect ratio
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inNumerator | *any* | - |
-| inDenominator | *any* | - |
+| inNumerator | *number* | - |
+| inDenominator | *number* | - |
 
 ___
 
@@ -253,9 +271,9 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Array*
+*ProjectItem[]*
   
-Returns array of projects items with media paths containing match string
+Returns array of project's items with media paths containing match string
 
 #### Parameters
 
@@ -263,16 +281,6 @@ Returns array of projects items with media paths containing match string
 | :------ | :------ | :------ |
 | matchString | *string* | - |
 | ignoreSubclips | *boolean* | - |
-
-___
-
-### getColorSpace
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*ColorSpace*
-  
-Get color space object of the project item
 
 ___
 
@@ -296,7 +304,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*any*
+*Constants.ContentType*
   
 Get content type of the Project item
 
@@ -348,6 +356,16 @@ Get Guid of Input LUT overridden on media
 
 ___
 
+### getMedia
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Media*
+  
+Return media associated with clipProjectItem
+
+___
+
 ### getMediaFilePath
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -374,23 +392,13 @@ Get the out point of the Project item
 
 ___
 
-### getOverrideColorSpaceList
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*Array*
-  
-Get the override color space list
-
-___
-
 ### getParent
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *ProjectItem*
   
-Get the root item of the project which contains all items of the project on the lowest level
+Get the parent project item of this project item.
 
 ___
 
@@ -400,7 +408,7 @@ ___
 
 *Project*
   
-Get the root item of the project which contains all items of the project on the lowest level.
+Get the parent Project of this projectItem.
 
 ___
 
@@ -430,7 +438,7 @@ ___
 
 *boolean*
   
-Indicates whether a proxy has already been attached, to the project item.
+Indicates whether a proxy has already been attached to the project item.
 
 ___
 
@@ -470,7 +478,7 @@ ___
 
 *boolean*
   
-Returns true if the project item is sequence
+Returns true if the project item is a sequence
 
 ___
 

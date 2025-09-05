@@ -33,7 +33,7 @@ Creates and returns an append component action
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | *object* | Video filter component |
+| component | [*Component*](/ppro_reference/classes/component/) or [*AudioFilterComponent*](/ppro_reference/classes/audiofiltercomponent/) | Audio filter component |
 
 ___
 
@@ -49,7 +49,7 @@ Creates and returns an insert component action
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | *object* | Video filter component |
+| component | [*Component*](/ppro_reference/classes/component/) or [*AudioFilterComponent*](/ppro_reference/classes/audiofiltercomponent/) | Audio filter component |
 | componentInsertionIndex | *number* | Index which the component shall be inserted |
 
 ___
@@ -66,7 +66,7 @@ Creates and returns an remove component action
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | *object* | Video filter component |
+| component | [*Component*](/ppro_reference/classes/component/) or [*AudioFilterComponent*](/ppro_reference/classes/audiofiltercomponent/) | Audio filter component |
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*VideoComponentChain*
+*Component*
   
 Returns the component at the given index
 

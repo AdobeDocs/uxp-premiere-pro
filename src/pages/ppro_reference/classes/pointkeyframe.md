@@ -24,4 +24,4 @@ keywords:
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
 | value | *object* | W | 25.0 |  |
-| position | *object* | W | 25.0 | Get/Set position of a keyframe |
+| position | *TickTime* | W | 25.0 | Get/Set position of a keyframe |

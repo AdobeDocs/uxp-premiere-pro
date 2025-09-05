@@ -51,7 +51,7 @@ Add a track item to this selection
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItem | *object* | - |
+| trackItem | [*VideoClipTrackItem*](/ppro_reference/classes/videocliptrackitem/) or [*AudioClipTrackItem*](/ppro_reference/classes/audiocliptrackitem/) | trackItem to be added to selection |
 | skipDuplicateCheck | *boolean* | - |
 
 ___
@@ -60,7 +60,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Array*
+*(VideoClipTrackItem | AudioClipTrackItem)[]*
   
 return list of trackItems inside of trackItemSelection
 
@@ -78,6 +78,6 @@ Remove a track item from this selection
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItem | *object* | - |
+| trackItem | [*VideoClipTrackItem*](/ppro_reference/classes/videocliptrackitem/) or [*AudioClipTrackItem*](/ppro_reference/classes/audiocliptrackitem/) | trackItem to be removed from selection |
 
 ___

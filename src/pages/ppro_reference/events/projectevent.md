@@ -26,7 +26,7 @@ keywords:
 | name | *string* | R | 25.0 | The project name. |
 | path | *string* | R | 25.0 | The absolute file path to the project file. |
 | id | *string* | R | 25.0 | The unique identifier of the project. |
-| project | *object* | R | 25.0 | The project object. |
+| project | *Project* | R | 25.0 | The project object. |
 
 ## Events
 

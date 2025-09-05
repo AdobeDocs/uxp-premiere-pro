@@ -33,7 +33,7 @@ Get preference value in native string form
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| preferenceKey | *string* | - |
+| preferenceKey | [*Constants.PreferenceKey*](/ppro_reference/constants) | App preference key to get |
 
 ___
 
@@ -44,5 +44,13 @@ ___
 *boolean*
   
 Set backend preference using given list of property keys. The parameters are <key, value (number, boolean or string), persistence flag>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| key | [*Constants.PreferenceKey*](/ppro_reference/constants) | App preference key to set |
+| value | *boolean* or *string* or *number* | Value to set for the preference key |
+| persistenceFlag | [*Constants.PropertyType*](/ppro_reference/constants) | Indicates whether the preference should be persisted or not |
 
 ___

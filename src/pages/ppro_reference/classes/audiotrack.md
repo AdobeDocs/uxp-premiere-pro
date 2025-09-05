@@ -52,7 +52,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*any*
+*AudioClipTrackItem[]*
   
 Returns array of AudioClipTrackItem from the track item type
 
@@ -60,7 +60,7 @@ Returns array of AudioClipTrackItem from the track item type
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItemType | *number* | Constants.TrackItemType.CLIP, Constants.TrackItemType.TRANSITION etc..  |
+| trackItemType | [*Constants.TrackItemType*](/ppro_reference/constants) | Constants.TrackItemType.CLIP, Constants.TrackItemType.TRANSITION etc..  |
 | includeEmptyTrackItems | *boolean* | - |
 
 ___

@@ -25,7 +25,7 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Action*
   
 Return an action to set the comments of the marker.
 
@@ -41,7 +41,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Action*
   
 Return an action to set the duration of the marker.
 
@@ -57,7 +57,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Action*
   
 Return an action to set the name of the marker.
 
@@ -73,7 +73,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*Action*
   
 Return an action to set the type of the marker.
 
@@ -82,6 +82,16 @@ Return an action to set the type of the marker.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | markerType | *string* | This values can be Scale (0), AnchorToInPoint (1) or AnchorToOutPoint (2) |
+
+___
+
+### getColor
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Color*
+  
+Get color code of the marker.
 
 ___
 
@@ -99,7 +109,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*TickTime*
   
 Get duration time of the marker.
 
@@ -119,7 +129,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*TickTime*
   
 Get start time of the marker.
 

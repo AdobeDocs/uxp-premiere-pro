@@ -1,7 +1,7 @@
 ---
-id: "project"
-title: "Project"
-sidebar_label: "Project"
+id: "sequencesettings"
+title: "SequenceSettings"
+sidebar_label: "SequenceSettings"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,380 +17,364 @@ keywords:
   - Premiere Pro
 ---
 
-# Project  
-
-## Properties
-
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| guid | *Guid* | R | 25.0 | The unique identifier of the project. |
-| name | *string* | R | 25.0 | The project name. |
-| path | *string* | R | 25.0 | The absolute file path to the project file. |
-
-## Static Methods
-
-### createProject
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*Project*
-  
-Create a new project
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| path | *string* | - |
-
-___
-
-### getActiveProject
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*Project*
-  
-Currently active project.
-
-___
-
-### getProject
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*Project*
-  
-Get project referenced by given UID
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectGuid | [*Guid*](/ppro_reference/classes/guid/) | - |
-
-___
-
-### open
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*Project*
-  
-Open a project
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| path | *string* | - |
-| openProjectOptions | [*OpenProjectOptions*](/ppro_reference/classes/openprojectoptions/) | - |
-
-___
+# SequenceSettings  
 
 ## Instance Methods
 
-### close
+### getAudioChannelCount
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*number*
+  
+Get number of channels in the sequence
+
+___
+
+### getAudioChannelType
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*number*
+  
+Get Audio channel type of sequence. Could be 0 (Mono), 1 (Stereo), 2 (5.1), or 3 (multichannel)
+
+___
+
+### getAudioDisplayFormat
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*TimeDisplay*
+  
+Get Audio display format
+
+___
+
+### getAudioSampleRate
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*FrameRate*
+  
+Get audio sample rate
+
+___
+
+### getCompositeInLinearColor
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Close a project
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| closeProjectOptions | [*CloseProjectOptions*](/ppro_reference/classes/closeprojectoptions/) | - |
+Get if composite in linear color is checked
 
 ___
 
-### createSequence
+### getEditingMode
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence*
+*string*
   
-Create a new sequence with the default preset path - Parameter presetPath is deprecated, instead use createSequenceWithPresetPath()
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| name | *string* | - |
-| presetPath | *string* | - |
+Get editing mode of sequence
 
 ___
 
-### createSequenceFromMedia
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*Sequence*
-  
-Create a new sequence with a given name and medias
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| name | *string* | - |
-| clipProjectItems | [*ClipProjectItem[]*](/ppro_reference/classes/clipprojectitem[]/) | - |
-| targetBin | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
-
-___
-
-### deleteSequence
+### getMaximumBitDepth
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Delete a given sequence from the project
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+Find if maximum bit depth is set
 
 ___
 
-### executeTransaction
+### getMaxRenderQuality
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Execute undoable transaction by passing compound action
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| callback | *(compoundAction: CompoundAction) => void* | - |
-| undoString? | *string* | - |
+Find if maximum render quality is set
 
 ___
 
-### getActiveSequence
+### getPreviewCodec
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence*
+*string*
   
-Get the active sequence of the project
+Get preview codec of sequence
 
 ___
 
-### getColorSettings
+### getPreviewFileFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectColorSettings*
+*string*
   
-Get project color settings object
+Get preview file format of sequence
 
 ___
 
-### getInsertionBin
+### getPreviewFrameRect
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectItem*
+*RectF*
   
-Get current insertion bin
+Get preview video frame rect in the sequence
 
 ___
 
-### getRootItem
+### getVideoDisplayFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*FolderItem*
+*TimeDisplay*
   
-The root item of the project which contains all items of the project on the lowest level.
+Get Video display format
 
 ___
 
-### getSequence
+### getVideoFieldType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence*
+*number*
   
-Get sequence by id from the project
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| guid | [*Guid*](/ppro_reference/classes/guid/) | - |
+Get video field type in the sequence
 
 ___
 
-### getSequences
+### getVideoFrameRect
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence[]*
+*RectF*
   
-Get an array of all sequences in this project.
+Get video frame rect in the sequence
 
 ___
 
-### importAEComps
+### getVideoPixelAspectRatio
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| aepPath | *string* | - |
-| compNames | [*string[]*](/ppro_reference/classes/string[]/) | - |
-| TargetBin | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+*string*
+  
+Get Video display format
 
 ___
 
-### importAllAEComps
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*boolean*
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| aepPath | *string* | - |
-| TargetBin | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
-
-___
-
-### importFiles
+### setAudioDisplayFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Import files in root/target bin of the project
+Set audio display format of sequence.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| filePaths | [*string[]*](/ppro_reference/classes/string[]/) | - |
-| suppressUI | *boolean* | - |
-| targetBin | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
-| asNumberedStills | *boolean* | - |
+| audioDisplay | [*TimeDisplay*](/ppro_reference/classes/timedisplay/) | - |
 
 ___
 
-### importSequences
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*boolean*
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectPath | *string* | - |
-| sequenceIds | [*Guid[]*](/ppro_reference/classes/guid[]/) | - |
-
-___
-
-### lockedAccess
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*void*
-  
-Get a read/upgrade locked access to Project, project state will not change during the execution of callback function. Can call executeTransaction while having locked access.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| callback | *() => void* | - |
-
-___
-
-### openSequence
+### setAudioSampleRate
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Open a sequence and return true if successful.
+Set audio sample rate
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| inRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
 
 ___
 
-### pauseGrowing
+### setCompositeInLinearColor
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Pause growing of files instead swap the files
+Set if composite in linear color is checked
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| pause | *boolean* | - |
+| useCompositeInLinearColor | *boolean* | - |
 
 ___
 
-### save
+### setEditingMode
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Save the project
-
-___
-
-### saveAs
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*boolean*
-  
-Save the project at the provided path
+Set editing mode of sequence
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| path | *string* | - |
+| inEditingModeName | *string* | - |
 
 ___
 
-### setActiveSequence
+### setMaximumBitDepth
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Set the active sequence of the project
+Set maximum bit depth to true/false
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| useMaxBitDepth | *boolean* | - |
+
+___
+
+### setMaxRenderQuality
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Set maximum render quality to true/false
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| useMaxRenderQuality | *boolean* | - |
+
+___
+
+### setPreviewCodec
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Set preview codec of sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inPreviewCodec | *string* | - |
+
+___
+
+### setPreviewFileFormat
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Set preview file format of sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inPreviewCodec | *string* | - |
+
+___
+
+### setPreviewFrameRect
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Set preview video frame rect in sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inPreviewVideoRect | [*RectF*](/ppro_reference/classes/rectf/) | - |
+
+___
+
+### setVideoDisplayFormat
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Set video display format of sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| audioDisplay | [*TimeDisplay*](/ppro_reference/classes/timedisplay/) | - |
+
+___
+
+### setVideoFieldType
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Set video field type in sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| videoFiledType | *number* | - |
+
+___
+
+### setVideoFrameRect
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Set video frame rect in sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inVideoFrameRect | [*RectF*](/ppro_reference/classes/rectf/) | - |
+
+___
+
+### setVideoPixelAspectRatio
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Set video display format of sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inPixelAspectRatio | *string* | - |
 
 ___
