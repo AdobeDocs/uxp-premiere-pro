@@ -16,7 +16,6 @@ The Manifest file is a JSON file located at the root of the plugin bundle that c
 
 ## Overview
 
-In addition to core metadata such as the plugin’s name,
 Each UXP plugin must have one `manifest.json` file that the host application uses to **load and manage** the plugin. In addition to core metadata such as the plugin's name, version, icons, and entry points, the manifest specifies permissions, compatibility details, and other definitions that shape how the plugin integrates with the host environment.
 
 Most importantly, it contains your **plugin ID**, which uniquely identifies your plugin when it's installed in the host application. Valid plugin IDs are required for distributing in Adobe's Marketplace—read more [in the Developer Distribution documentation](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/).
