@@ -7,35 +7,33 @@ keywords:
   - manifest.json
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
-
-import './table-styles.css';
 
 # UXP Manifest
 
-The manifest is a JSON file that is located at the root of the plugin bundle. It is named `manifest.json` and is
-required for all plugins.
+The Manifest file is a JSON file located at the root of the plugin bundle that contains metadata about the plugin.
 
 ## Overview
 
-Each UXP plugin has one `manifest.json` file that describes the plugin. It contains metadata such as the plugin's name,
-version, icons, and entry points.
+Each UXP plugin must have one `manifest.json` file that the host application uses to **load and manage** the plugin. It defines metadata such as the plugin's name, version, icons, and entry points, or the required permissions to access the network, file system, etc.
 
-The manifest file also contains the permissions that the plugin requires. Most importantly, it contains your plugin ID which is used to identify your plugin. (Valid plugin IDs are required for distributing in Adobe's Marketplace, read more [in the docmentation](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/).)
+Most importantly, it contains your **plugin ID**, to uniquely identify your plugin when it's installed in the host application. Valid plugin IDs are required for distributing in Adobe's Marketplace—read more [in the documentation](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/).
 
+## Manifest Keys
 
-Since UXP plugins can be run in a number of different hosts, the manifest also contains a `host` field that specifies
-which host the plugin is for. This is used to identify the plugin in the manifest and in the plugin bundle.
+<br/><br/>
 
-## Reference
+| Required properties                   | Optional properties   |
+| :------------------------------------ | :-------------------- |
+| [`manifestVersion`](#manifestversion) | `main`                |
+| [`id`](#id)                           | `icons`               |
+| [`name`](#name)                       | `strings`             |
+| [`version`](#version)                 | `requiredPermissions` |
+| [`host`](#host)                       | `featureFlags`        |
+| [`entrypoints`](#entrypoints)         | `addon`               |
 
-### Manifest
-
-<p>The object at the root of the manifest file.</p>
-
-<InlineAlert slots="text" />
-
-Properties marked with an asterisk (\*) are required.
+The object at the root of the manifest file is called the `manifest` object. An example is shown below.
 
 #### Example
 
@@ -84,849 +82,715 @@ Properties marked with an asterisk (\*) are required.
 	}
 }
 ```
-<InlineAlert slots="text" />
 
-Properties marked with an asterisk (\*) are required.
+## Required properties
 
-<h4>Properties</h4>
+#### `manifestVersion`
 
-<table className="manifest-table" columnWidths="10,20,10,60">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>manifestVersion</inlineCode> *</td>
-        <td><inlineCode>"5"</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The manifestVersion indicates the version of the manifest schema. This document describes version 5 of the manifest schema.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>id</inlineCode> *</td>
-        <td><inlineCode>string</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The id uniquely identifies a plugin and is used to disambiguate plugin contexts, storage, errors, etc. For plugins distributed through the plugin marketplace, the ID has to match the ID in <a href="https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/">the Developer Distribution portal</a>.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>name</inlineCode> *</td>
-        <td><inlineCode>string | Localized<wbr />String</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The name visually identifies the plugin in the user interface. It is usually used in a plugin menu listing or launcher for top-level action items. The name can be a string, a key from the StringsDefinition object, or a localized string.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>strings</inlineCode></td>
-        <td><inlineCode>StringsDefinition</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>A set of strings used to localize the plugin name and other user-facing strings. It can also be a path to a JSON file containing the StringsDefinition object.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>{'{'}{'}'}</inlineCode> (no strings)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>version</inlineCode> *</td>
-        <td><inlineCode>string</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The version indicates the plugin's version. The string has a format of major.minor.patch.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>main</inlineCode></td>
-        <td><inlineCode>string</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Indicates the primary JavaScript or HTML file, relative to the plugin's installation directory. Supports HTML and JS files, such as <inlineCode>index.html</inlineCode> and <inlineCode>index.js</inlineCode>. If not specified (for deprecations), <inlineCode>main.js</inlineCode> is used.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>"main.js"</inlineCode></p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>icons</inlineCode></td>
-        <td><inlineCode>IconDefinition[]</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>An array of icons representing the overall plugin or panel icon. The host application uses these icons to present the plugin to the user. If the icons array is missing, a default icon will be used.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>[]</inlineCode> (no icons)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>host</inlineCode> *</td>
-        <td><inlineCode>HostDefinition</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The host object indicates the plugin's compatibility with the host. Incompatible plugins will:</p>
-            <ul>
-                <li>fail to install if attempted in the given host</li>
-                <li>be invisible in the in-app plugin marketplace for the given host</li>
-                <li>be unavailable for update if the update is no longer compatible.</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>entrypoints</inlineCode> *</td>
-        <td><inlineCode>EntrypointDefinition[]</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The entrypoints array defines the entrypoints that the plugin provides.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>requiredPermissions</inlineCode></td>
-        <td><inlineCode>PermissionsDefinition</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Indicates the various permissions this plugin requires. These permissions are required before accessing certain API surfaces. Without these permissions in the manifest, API access may fail or throw an error. Some permissions require user consent.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>{'{'}{'}'}</inlineCode> (no permissions)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>addon</inlineCode></td>
-        <td><inlineCode>object</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p> <i>Not supported in Premiere Pro v25.2</i> <br></br>
-            Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that can access the power of C++ native libraries.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>{'{'}{'}'}</inlineCode> (no addons)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>featureFlags</inlineCode></td>
-        <td><inlineCode>FeatureFlags</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>
-                A set of feature flags that can be used to enable or disable certain features of the plugin. These flags are used to gate features that are not yet ready for general availability. 
-            </p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>{'{'}{'}'}</inlineCode> (no additional feature flags)</p>
-        </td>
-    </tr>
-    </tbody>
-</table>
+| Name              | Type     | Default |
+| :---------------- | :------- | :------ |
+| `manifestVersion` | `string` | -       |
 
-### StringsDefinition
+Indicates the version of the manifest schema. Premiere Pro supports version `"5"` only.
 
-Represents a set of strings used to localize the plugin name and other user-facing strings.
+### `id`
 
-`StringsDefinition` keys can be used anywhere where `LocalizedString` is supported.
+| Name | Type     | Default |
+| :--- | :------- | :------ |
+| `id` | `string` | -       |
 
-**Example**
+Uniquely identifies a plugin and is used to disambiguate plugin contexts, storage, errors, etc. For plugins distributed through the plugin marketplace, the `id` has to match the one set in the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/).
 
-Your manifest.json file might look like this:
+### `name`
+
+| Name   | Type                          | Default |
+| :----- | :---------------------------- | :------ |
+| `name` | `string` or `LocalizedString` | -       |
+
+Visually identifies the plugin in the user interface. It is usually used in a plugin menu listing or launcher for top-level action items. The name can be a string, a key from the `StringsDefinition` object, or a localized string.
+
+### `version`
+
+| Name      | Type     | Default |
+| :-------- | :------- | :------ |
+| `version` | `string` | -       |
+
+Indicates the plugin's version. The string has a format of `major.minor.patch`.
+
+### `host`
+
+| Name   | Type             | Default |
+| :----- | :--------------- | :------ |
+| `host` | `HostDefinition` | -       |
+
+The host object indicates the plugin's compatibility with the host. Incompatible plugins will:
+
+- fail to install if attempted in the given host
+- be invisible in the in-app plugin marketplace for the given host
+- be unavailable for update if the update is no longer compatible.
+
+Check the [HostDefinition](#hostdefinition) section for more details.
+
+### `entrypoints`
+
+| Name          | Type                     | Default |
+| :------------ | :----------------------- | :------ |
+| `entrypoints` | `EntrypointDefinition[]` | -       |
+
+The entrypoints array defines the entrypoints that the plugin provides; currently only Commands and Panels are supported. Check the [EntrypointDefinition](#entrypointdefinition) section for more details.
+
+## Optional properties
+
+### `main`
+
+| Name   | Type     | Default   |
+| :----- | :------- | :-------- |
+| `main` | `string` | `main.js` |
+
+Indicates the primary JavaScript or HTML file, relative to the plugin's installation directory. Supports HTML and JS files, such as `index.html` and `index.js`. If not specified (for deprecations), `main.js` is used.
+
+### `icons`
+
+| Name    | Type               | Default |
+| :------ | :----------------- | :------ |
+| `icons` | `IconDefinition[]` | `[]`    |
+
+An array of icons representing the overall plugin or panel icon. The host application uses these icons to present the plugin to the user. If the icons array is missing, a default icon will be used. See the [IconDefinition](#icondefinition) section for more details.
+
+### `strings`
+
+| Name      | Type                                      | Default |
+| :-------- | :---------------------------------------- | :------ |
+| `strings` | [`StringsDefinition`](#stringsdefinition) | `{}`    |
+
+A set of strings used to localize the plugin name and other user-facing strings. It can also be a path to a JSON file containing the StringsDefinition object. See the [StringsDefinition](#stringsdefinition) section for more details.
+
+### `requiredPermissions`
+
+| Name                  | Type                                              | Default |
+| :-------------------- | :------------------------------------------------ | :------ |
+| `requiredPermissions` | [`PermissionsDefinition`](#permissionsdefinition) | `{}`    |
+
+Indicates the various permissions this plugin requires before accessing certain API surfaces. Without them, access may fail or throw an error. **Some permissions require user consent**. See the [PermissionsDefinition](#permissionsdefinition) section for more details.
+
+### `featureFlags`
+
+| Name           | Type                            | Default |
+| :------------- | :------------------------------ | :------ |
+| `featureFlags` | [`FeatureFlags`](#featureflags) | `{}`    |
+
+A set of feature flags that can be used to enable or disable certain features of the plugin. These flags are used to gate features that are not yet ready for general availability. See the [FeatureFlags](#featureflags) section for more details.
+
+### `addon`
+
+| Name    | Type     | Default |
+| :------ | :------- | :------ |
+| `addon` | `object` | `{}`    |
+
+Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that can access the power of C++ native libraries. **Premiere Pro doesn't support hybrid plugins yet**.
+
+## Supporting Definitions
+
+### `StringsDefinition`
+
+Represents a set of strings used to localize the plugin name and other user-facing strings. `StringsDefinition` keys can be used anywhere where [`LocalizedString`](#localizedstring) is supported.
 
 ```json
 {
-	"name": "my-plugin",
-	"strings": {
-		"my-plugin": {
-			"default": "My Plugin",
-			"de": "Mein Plugin"
-		}
-	}
+  "name": "my-plugin",
+    "strings": {
+      "my-plugin": {
+        "default": "My Plugin",
+        "it": "Il mio Plugin",
+        "fr": "Mon Plugin"
+      }
+  }
 }
 ```
 
-### LocalizedString
+### `LocalizedString`
 
 Represents a localized string. The key is the locale, and the value is the translated string.
 
-**Example**
-
 ```json
 {
-	"default": "Hello",
-	"en": "Hello",
-	"de": "Hallo"
+  "default": "Settings",
+  "it": "Impostazioni",
+  "fr": "Paramètres"
 }
 ```
 
+#### Required Properties
+
+| Name      | Type     | Default |
+| :-------- | :------- | :------ |
+| `default` | `string` | -       |
+
+The default string used when no translation is available for the current locale.
+
+### `IconDefinition`
+
+Represents an icon used by the plugin or specific entry point. The icon may be used in the plugin list, toolbar, or other places.
+
+| Required Properties | Optional Properties |
+| :------------------ | :------------------ |
+| `width`             | `scale`             |
+| `height`            | `theme`             |
+| `path`              | `species`           |
+
 #### Properties
 
-<table columnWidths="10,20,10,60">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>default</inlineCode> *</td>
-        <td><inlineCode>string</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The default string used when no translation is available for the current locale.</p>
-        </td>
-    </tr>
-    </tbody>
-</table>
+##### `width`
 
-### IconDefinition
+| Name    | Type     | Required | Default |
+| :------ | :------- | :------- | ------- |
+| `width` | `number` | required | -       |
 
-<p>Represents an icon used by the plugin or specific entry point. The icon may be used in the plugin list, toolbar, or other places.</p>
-<h4>Properties</h4>
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>width</inlineCode> *</td>
-        <td><inlineCode>number</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The width of the icon in pixels.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>height</inlineCode> *</td>
-        <td><inlineCode>number</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The height of the icon in pixels.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>path</inlineCode> *</td>
-        <td><inlineCode>string</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The path to the icon, relative to the plugin's installation directory. Supports PNG (<inlineCode>.png</inlineCode>), JPG (<inlineCode>.jpg</inlineCode> or <inlineCode>.jpeg</inlineCode>), and SVG (<inlineCode>.svg</inlineCode>) files.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>scale</inlineCode></td>
-        <td><inlineCode>number[]</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Specifies the scaling factors that the icon supports.</p>
-            <p><strong>Example</strong></p>
-<code class="language-json">{`{
+The width of the icon in pixels.
+
+##### `height`
+
+| Name     | Type     | Required | Default |
+| :------- | :------- | :------- | ------- |
+| `height` | `number` | required | -       |
+
+The height of the icon in pixels.
+
+##### `path`
+
+| Name   | Type     | Required | Default |
+| :----- | :------- | :------- | ------- |
+| `path` | `string` | required | -       |
+
+The path to the icon, relative to the plugin's installation directory. Supports PNG (`.png`), JPG (`.jpg` or `.jpeg`), and SVG (`.svg`) files.
+
+##### `scale`
+
+| Name    | Type       | Required | Default |
+| :------ | :--------- | :------- | ------- |
+| `scale` | `number[]` | optional | [1]     |
+
+Specifies the scaling factors that the icon supports.
+
+```json
+{
     "path": "icon.png",
     "width": 24,
     "height": 24,
     "scale": [1, 2, 2.5]
-}`}</code>
-            <p>Results in the following icon files being used:</p>
-            <ul>
-                <li><inlineCode>icon.png</inlineCode> or <inlineCode>icon@1x.png</inlineCode> (24x24px) for 100% scaling</li>
-                <li><inlineCode>icon@2x.png</inlineCode> (48x48px) for 200% scaling</li>
-                <li><inlineCode>icon@2.5x.png</inlineCode> (60x60px) for 250% scaling</li>
-            </ul>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>[1]</inlineCode> (only supports 100% scaling)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>theme</inlineCode></td>
-        <td><inlineCode>("all" | "lightest" | "light" | "medium" | "dark" | "darkest")[]</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Specifies the themes that the icon supports.</p>
-            <p><strong>Example</strong></p>
-            <code class="language-json">{`{
-    "path": "icon.png",
+}
+```
+
+Results in the following icon files being used (if available):
+
+- `icon.png` or `icon@1x.png` (24x24px) for 100% scaling
+- `icon@2x.png` (48x48px) for 200% scaling
+- `icon@2.5x.png` (60x60px) for 250% scaling
+
+##### `theme`
+
+| Name    | Type       | Required | Default |
+| :------ | :--------- | :------- | ------- |
+| `theme` | `string[]` | optional | ["all"] |
+
+Specifies the themes that the icon supports. Available themes in UXP are: `"all"` (default), `"lightest"`, `"light"`, `"medium"`, `"dark"`, `"darkest"`.
+
+```json
+{
+    "path": "icon-light.png",
     "width": 24,
     "height": 24,
     "theme": ["lightest", "light"]
+},
+{
+    "path": "icon-dark.png",
+    "width": 24,
+    "height": 24,
+    "theme": ["darkest", "dark"]
 }
-`}</code>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>["all"]</inlineCode> (supports all themes)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>species</inlineCode></td>
-        <td><inlineCode>("generic" | "toolbar" | "pluginList")[]</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Indicates the suitable use of this icon. The default species is generic, meaning that the icon is suitable for display anywhere.</p>
-            <p>Options:</p>
-            <ul>
-                <li>generic: suitable for display anywhere</li>
-                <li>toolbar: suitable for display in a toolbar. Icon sizes are 23x23px for 100% scaling and 46x46px for 200% scaling.</li>
-                <li>pluginList: suitable for display in a plugin list. Icon sizes are 24x24px for 100% scaling and 48x48px for 200% scaling.</li>
-            </ul>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>["generic"]</inlineCode> (suitable for display anywhere)</p>
-        </td>
-    </tr>
-    </tbody>
-</table>
+```
 
-### EntrypointDefinition
+##### `species`
 
-<p>Represents an entrypoint provided by the plugin, which can be invoked by the user.</p>
-<p>An entrypoint consists of an ID and a label at minimum.</p>
-<p><strong>Example</strong></p>
-<code class="language-json">{`{
-    "id": "myPlugin.myEntrypoint",
-    "label": "My Entrypoint"
-}`}</code>
-<h4>Properties</h4>
-<table >
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>type</inlineCode> *</td>
-        <td><inlineCode>"command" | "panel"</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The type of entrypoint. Currently, only <inlineCode>command</inlineCode> and <inlineCode>panel</inlineCode> are supported.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>id</inlineCode> *</td>
-        <td><inlineCode>string</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The ID of the entrypoint. This ID must be unique within the plugin. It is used to identify the code that implements the entrypoint.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>label</inlineCode> *</td>
-        <td><inlineCode>string | Localized<wbr />String</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The label of the entrypoint. This label is used to display the entrypoint to the user, such as in the plugin menu.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>description</inlineCode></td>
-        <td><inlineCode>string | Localized<wbr />String</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>A description of the entrypoint. This description is used in tooltips and other places where a longer description is appropriate, depending on the host app.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>undefined</inlineCode> (uses the plugin's name)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>shortcut</inlineCode></td>
-        <td><inlineCode>{'{'} mac: string, win: string {'}'}</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>A keyboard shortcut that can be used to invoke the entrypoint.</p>
-            <p>Keyboard shortcuts are specified separately for Windows and macOS platforms. If the shortcut is not available in the host application, it will be ignored.</p>
-            <p><strong>Please note:</strong> <em>Currently, keyboard shortcuts are only supported in Adobe XD.</em></p>
-            <p><strong>Example</strong></p>
-            <code class="language-json">{`"shortcut": {
-    "mac": "Cmd+Shift+P", 
-    "win": "Ctrl+Shift+P" 
+| Name      | Type       | Required | Default     |
+| :-------- | :--------- | :------- | ----------- |
+| `species` | `string[]` | optional | ["generic"] |
+
+Specifies the species that the icon supports. Indicates the suitable use of this icon. Available species are:
+
+- `"generic"`: suitable for display anywhere
+- `"toolbar"`: suitable for display in a toolbar. Icon sizes are 23x23px for 100% scaling and 46x46px for 200% scaling.
+- `"pluginList"`: suitable for display in a plugin list. Icon sizes are 24x24px for 100% scaling and 48x48px for 200% scaling.
+
+### `EntrypointDefinition`
+
+Represents an entrypoint that the plugin provides. An entrypoint is a point of entry for the plugin. It is used to identify the code that implements the entrypoint.
+
+| Required Properties | Optional Properties     |
+| :------------------ | :---------------------- |
+| `type`              | `description`           |
+| `id`                | `shortcut`              |
+| `label`             | `icon`                  |
+|                     | `minimumSize`           |
+|                     | `maximumSize`           |
+|                     | `preferredDockedSize`   |
+|                     | `preferredFloatingSize` |
+
+#### Properties
+
+##### `type`
+
+| Name   | Type                     | Required | Default |
+| :----- | :----------------------- | :------- | ------- |
+| `type` | `"command"` or `"panel"` | required | -       |
+
+The type of entrypoint. Currently, only Commands and Panels are supported.
+
+##### `id`
+
+| Name | Type     | Required | Default |
+| :--- | :------- | :------- | ------- |
+| `id` | `string` | required | -       |
+
+The ID of the entrypoint. This ID must be unique within the plugin. It is used to identify the code that implements the entrypoint.
+
+##### `label`
+
+| Name    | Type     | Required | Default |
+| :------ | :------- | :------- | ------- |
+| `label` | `string` | required | -       |
+
+The label of the entrypoint. This label is used to display the entrypoint to the user, such as in the plugin menu.
+
+##### `description`
+
+| Name          | Type                          | Required | Default     |
+| :------------ | :---------------------------- | :------- | ----------- |
+| `description` | `string` or `LocalizedString` | optional | `undefined` |
+
+A description of the entrypoint. This description is used in tooltips and other places where a longer description is appropriate, depending on the host app. Default value is the plugin's name.
+
+##### `shortcut`
+
+| Name       | Type                           | Required | Default     |
+| :--------- | :----------------------------- | :------- | ----------- |
+| `shortcut` | `{ mac: string, win: string }` | optional | `undefined` |
+
+<InlineAlert variant="info"slots="text" />
+
+Keyboard shortcuts are not available in Premiere Pro yet.
+
+A keyboard shortcut that can be used to invoke the entrypoint. They are specified separately for Windows and macOS platforms. If the shortcut is not available in the host application, it will be ignored.
+
+```json
+"shortcut": {
+    "mac": "Cmd+Shift+P",
+    "win": "Ctrl+Shift+P"
 }
-`}</code>
-            <p>Keyboard shortcuts are defined separately for each platform. Each definition is a string that follows this syntax:</p>
-            <ul>
-                <li>One or more modifier keys, in any order, each one followed by "+"</li>
-                <li>Mac: modifiers may be Cmd, Ctrl, Opt/Alt, or Shift. The shortcut must contain at least one of Cmd or Ctrl.</li>
-                <li>Win: modifiers may be Ctrl, Alt, or Shift. The shortcut must contain Ctrl.</li>
-                <li>A letter or number key.</li>
-            </ul>
-            <p>Letters are case-insensitive (e.g., "Cmd+P" and "Cmd+p" mean the same thing and neither requires pressing Shift). Other keys (including punctuation, arrow keys, or F1-F12) are currently not supported.</p>
-            <p><strong>Please note:</strong><em> If your shortcut collides with a built-in command in the host app, or another plugin's shortcut, your shortcut will be ignored, and you"ll see a warning printed to the developer console.</em></p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>undefined</inlineCode> (no shortcut)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>icon</inlineCode></td>
-        <td><inlineCode>Icon<wbr />Definition[]</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>An icon specific to the entrypoint. If specified, this icon overrides the plugin icon in places where the entrypoint is specifically displayed.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>[]</inlineCode> (plugin icon)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>minimumSize</inlineCode></td>
-        <td><inlineCode>{'{'} width: number, height: number {'}'}</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Indicates the desired minimum size of the view. The host may not be able to guarantee the minimum size. The size is defined by width and height in pixels. If no minimum size is specified, the host will use its own default minimum size.</p>
-            <p><strong>Default value</strong></p>
-            <p>(host-specific default)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>maximumSize</inlineCode></td>
-        <td><inlineCode>{'{'} width: number, height: number {'}'}</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>The maximum desired size of the view. The host may not be able to guarantee the maximum size. If the view is hosted in a dialog, resizing can be prevented by setting minimumSize = maximumSize.</p>
-            <p><strong>Default value</strong></p>
-            <p>(host-specific default)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>preferred<wbr />DockedSize</inlineCode></td>
-        <td><inlineCode>{'{'} width: number, height: number {'}'}</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>The preferred size of the view when docked, if it can be docked, or for modal dialogs that have no reference_node_id. The host may not be able to guarantee this size.</p>
-            <p><strong>Default value</strong></p>
-            <p>(host-specific default)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>preferred<wbr />FloatingSize</inlineCode></td>
-        <td><inlineCode>{'{'} width: number, height: number {'}'}</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>The preferred size of the panel when floating. The host may not be able to guarantee this size. See minimumSize for the format.</p>
-            <p><strong>Default value</strong></p>
-            <p>(host-specific default)</p>
-        </td>
-    </tr>
-    </tbody>
-</table>
+```
 
-### HostDefinition
+Keyboard shortcuts are defined separately for each platform. Each definition is a string that follows this syntax:
 
-<p>UXP supports a number of different host applications. The host definition specifies which host app the plugin supports.</p>
-<h4>Properties</h4>
-<table >
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>app</inlineCode> *</td>
-        <td><inlineCode>"PS" <wbr />| "ID" <wbr />| "premierepro" <wbr />| "XD"</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The host app that the plugin supports.</p>
-            <p>Possible values:</p>
-            <ul>
-                <li><inlineCode>PS</inlineCode>: Adobe Photoshop</li>
-                <li><inlineCode>ID</inlineCode>: Adobe InDesign</li>
-                <li><inlineCode>premierepro</inlineCode>: Adobe Premiere Pro</li>
-                <li><inlineCode>XD</inlineCode>: Adobe XD</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>minVersion</inlineCode> *</td>
-        <td><inlineCode>string</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The minimum version of the host app that the plugin supports. The version string follows the format of <inlineCode>x.y.z</inlineCode>.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>maxVersion</inlineCode></td>
-        <td><inlineCode>string</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>The maximum version of the host app that the plugin supports.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>undefined</inlineCode> (the latest version of the host app)</p>
-        </td>
-    </tr>
-    </tbody>
-</table>
+- One or more modifier keys, in any order, each one followed by `+`.
+- Mac: modifiers may be Cmd, Ctrl, Opt/Alt, or Shift. The shortcut must contain at least one of Cmd or Ctrl.
+- Win: modifiers may be Ctrl, Alt, or Shift. The shortcut must contain Ctrl.
+- A letter or number key.
 
-### PermissionsDefinition
+Letters are case-insensitive (e.g., `"Cmd+P"` and `"Cmd+p"` mean the same thing and neither requires pressing Shift). Other keys (including punctuation, arrow keys, or F1-F12) are currently not supported.
 
-<p>To ensure that plugins are secure, UXP requires that plugins declare the permissions they need to function.</p>
+<InlineAlert variant="warning"slots="text" />
 
+If your shortcut collides with a built-in command in the host app, or another plugin's shortcut, your shortcut will be ignored, and you'll see a warning printed to the developer console.
 
-<InlineAlert variant="info" slots="header, text"/>
+##### `icon`
 
-**Pro tip**
+| Name   | Type                                | Required | Default |
+| :----- | :---------------------------------- | :------- | ------- |
+| `icon` | [`IconDefinition`](#icondefinition) | optional | `[]`    |
 
-Make sure you configure the most accurate permission for your use case because in the future we will ask users to provide their consent based on it. For example, for file operations, you may find 'fullAccess' to be the least restrictive and hence the easiest to pick, but a user may not be comfortable giving full access to their system unless it's absolutely necessary and might deny the installation of your plugin altogether. 
+An icon specific to the entrypoint. If specified, this icon overrides the plugin icon in places where the entrypoint is specifically displayed. Default value is the plugin icon.
 
-<h4>Properties</h4>
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>clipboard</inlineCode></td>
-        <td><inlineCode>"read" | "readAndWrite"</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Enables the plugin to read and write to the clipboard. The <a href="/premiere-pro/uxp/resources/recipes/clipboard/">clipboard recipe</a> has more examples.</p>
-            <p>Possible values:</p>
-            <ul>
-                <li><inlineCode>read</inlineCode>: enables the plugin to read from the clipboard.</li>
-                <li><inlineCode>readAndWrite</inlineCode>: enables the plugin to read from and write to the clipboard.</li>
-            </ul>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>undefined</inlineCode> (no clipboard access)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>localFileSystem</inlineCode></td>
-        <td><inlineCode>"plugin" | "request" | "fullAccess"</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Enables the plugin to access the file system. The <a href="/premiere-pro/uxp/resources/recipes/file-operation/">file-operation recipe</a> has a detailed example.</p>
-            <p>Possible values:</p>
-            <ul>
-                <li><inlineCode>plugin</inlineCode>: enables the plugin to access the file system in the plugin folder.</li>
-                <li><inlineCode>request</inlineCode>: enables the plugin to request access to the file system (user consent).</li>
-                <li><inlineCode>fullAccess</inlineCode>: enables the plugin to access the file system without requesting access.</li>
-            </ul>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>"plugin"</inlineCode></p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>network</inlineCode></td>
-        <td><inlineCode>NetworkPermission</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Enables the plugin to access the network.</p>
-            <p>For example, to make HTTP requests (XHR, fetch, etc.), load images (<inlineCode>&lt;img src="" /&gt;</inlineCode>), etc.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>undefined</inlineCode> (no network access)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>webview</inlineCode></td>
-        <td><inlineCode>WebviewPermission</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Enables the plugin to use webviews in its UI to display web content or complex UI.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>undefined</inlineCode> (no webview usage)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>launchProcess</inlineCode></td>
-        <td><inlineCode>LaunchProcessPermission</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Enables the plugin to launch processes using APIs like <inlineCode>require("uxp").shell.openPath()</inlineCode> or <inlineCode>shell.openExternal()</inlineCode>.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>undefined</inlineCode> (no process launching)</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>allowCodeGenerationFromStrings</inlineCode></td>
-        <td><inlineCode>boolean</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Allows you to generate code from strings. You will need this while using inline event handlers for HTML elements, <inlineCode>eval()</inlineCode>, and <inlineCode>new Function()</inlineCode> syntax.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>false</inlineCode></p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>ipc</inlineCode></td>
-        <td><inlineCode>IpcPermission</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Enables the plugin to communicate with other plugins.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>undefined</inlineCode></p>
-        </td>
-    </tr>
-    </tbody>
-</table>
+##### `minimumSize` and `maximumSize`
 
-#### NetworkPermission
+| Name          | Type                                | Required | Default |
+| :------------ | :---------------------------------- | :------- | ------- |
+| `minimumSize` | `{ width: number, height: number }` | optional | -       |
+| `maximumSize` | `{ width: number, height: number }` | optional | -       |
 
-<p>Specifies the domains that the plugin can access in network requests.</p>
-<p><strong>Example</strong></p>
-<code class="language-json">{`{
-    "domains": [
-        "https://example.com",
-        "https://*.adobe.com/",
-        "wss://*.myplugin.com"
-    ]
+Indicates the desired minimum and maximum size of the panel, defined by `width` and `height` in pixels, although the host application may not be able to honor them. When not specified, default values will be used.
+
+Panel size can be **locked to a specific size** by setting `minimumSize` equal to `maximumSize`.
+
+##### `preferredDockedSize` and `preferredFloatingSize`
+
+| Name                    | Type                                | Required | Default |
+| :---------------------- | :---------------------------------- | :------- | ------- |
+| `preferredDockedSize`   | `{ width: number, height: number }` | optional | -       |
+| `preferredFloatingSize` | `{ width: number, height: number }` | optional | -       |
+
+Indicates the preferred size of the panel when docked (for panels or modal dialogs without a `reference_node_id`) or floating. The host application may not be able to honor them. When not specified, default values will be used.
+
+### `HostDefinition`
+
+Represents the host application that the plugin is compatible with.
+
+| Required Properties | Optional Properties |
+| :------------------ | :------------------ |
+| `app`               | `maxVersion`        |
+| `minVersion`        |                     |
+
+#### Properties
+
+##### `app`
+
+| Name  | Type                                          | Required | Default |
+| :---- | :-------------------------------------------- | :------- | ------- |
+| `app` | `"PS"` or `"ID"` or `"premierepro"` or `"XD"` | required | -       |
+
+The host app that the plugin supports. Possible values are:
+
+- `"PS"`: Adobe Photoshop
+- `"ID"`: Adobe InDesign
+- `"premierepro"`: Adobe Premiere Pro
+- `"XD"`: Adobe XD
+
+##### `minVersion`
+
+| Name         | Type     | Required | Default |
+| :----------- | :------- | :------- | ------- |
+| `minVersion` | `string` | required | -       |
+
+The minimum version of the host app that the plugin supports in the `x.y.z` format.
+
+##### `minVersion`
+
+| Name         | Type     | Required | Default     |
+| :----------- | :------- | :------- | ----------- |
+| `minVersion` | `string` | optional | `undefined` |
+
+The maximum version of the host app that the plugin supports in the `x.y.z` format. Default value is the latest version of the host app.
+
+### `PermissionsDefinition`
+
+To ensure that plugins are secure, UXP requires that plugins declare the permissions they need to function.
+
+<InlineAlert variant="info" slots="header, text1, text2"/>
+
+Best practices
+
+Make sure you **configure the most accurate permission** for your use case because in the future we will ask users to provide their consent based on it.
+
+For example, for file operations, you may find `"fullAccess"` to be the least restrictive and hence the easiest to pick, but a user may not be comfortable giving full access to their system unless it's absolutely necessary; they might deny the installation of your plugin altogether.
+
+| Required Properties | Optional Properties              |
+| :------------------ | :------------------------------- |
+|                     | `clipboard`                      |
+|                     | `localFileSystem`                |
+|                     | `network`                        |
+|                     | `webview`                        |
+|                     | `launchProcess`                  |
+|                     | `allowCodeGenerationFromStrings` |
+|                     | `ipc`                            |
+
+#### Properties
+
+##### `clipboard`
+
+| Name        | Type                         | Required | Default     |
+| :---------- | :--------------------------- | :------- | ----------- |
+| `clipboard` | `"read"` or `"readAndWrite"` | optional | `undefined` |
+
+Enables the plugin to read and write to the clipboard. The [clipboard recipe](../../../resources/recipes/clipboard/index.md) has more examples.
+
+- `read`: enables the plugin to read from the clipboard.
+- `readAndWrite`: enables the plugin to read from and write to the clipboard.
+
+Default value is `undefined` (no clipboard access).
+
+##### `localFileSystem`
+
+| Name              | Type                                        | Required | Default     |
+| :---------------- | :------------------------------------------ | :------- | ----------- |
+| `localFileSystem` | `"plugin"` or `"request"` or `"fullAccess"` | optional | `undefined` |
+
+Enables the plugin to access the file system. The [file-operation recipe](../../../resources/recipes/file-operation/index.md) has a detailed example.
+
+- `"plugin"`: enables the plugin to access the file system in the plugin folder.
+- `"request"`: enables the plugin to request access to the file system.
+- `"fullAccess"`: enables the plugin to access the file system without requesting access.
+
+Default value is `undefined` (no file system access).
+
+##### `network`
+
+| Name      | Type                                      | Required | Default     |
+| :-------- | :---------------------------------------- | :------- | ----------- |
+| `network` | [`NetworkPermission`](#networkpermission) | optional | `undefined` |
+
+Enables the plugin to access the network—for example, to make HTTP requests (XHR, fetch, etc.), load images (`<img src="" />`), etc.
+
+- `"all"`: enables the plugin to access all domains.
+- `"domains"`: enables the plugin to access the specified domains.
+
+Default value is `undefined` (no network access). See the [`NetworkPermission`](#networkpermission) section for more details, or the [network recipe](../../../resources/recipes/network/index.md) for examples.
+
+##### `webview`
+
+| Name      | Type                                      | Required | Default     |
+| :-------- | :---------------------------------------- | :------- | ----------- |
+| `webview` | [`WebviewPermission`](#webviewpermission) | optional | `undefined` |
+
+Enables the plugin to use webviews in its UI to display web content or complex UI.
+
+Default value is `undefined` (no webview usage). See the [`WebviewPermission`](#webviewpermission) section for more Details.
+
+##### `launchProcess`
+
+| Name            | Type                                                  | Required | Default     |
+| :-------------- | :---------------------------------------------------- | :------- | ----------- |
+| `launchProcess` | [`LaunchProcessPermission`](#launchprocesspermission) | optional | `undefined` |
+
+Enables the plugin to launch processes using APIs like `require("uxp").shell.openPath()` or `shell.openExternal()`.
+
+Default value is `undefined` (no process launching). See the [`LaunchProcessPermission`](#launchprocesspermission) section for more details.
+
+##### `allowCodeGenerationFromStrings`
+
+| Name                             | Type      | Required | Default |
+| :------------------------------- | :-------- | :------- | ------- |
+| `allowCodeGenerationFromStrings` | `boolean` | optional | `false` |
+
+Enables the plugin to generate code from strings. You will need this while using inline event handlers for HTML elements, `eval()`, and `new Function()` syntax.
+
+Default value is `false`.
+
+##### `ipc`
+
+| Name  | Type                              | Required | Default     |
+| :---- | :-------------------------------- | :------- | ----------- |
+| `ipc` | [`IpcPermission`](#ipcpermission) | optional | `undefined` |
+
+Enables the plugin to communicate with other plugins.
+
+Default value is `undefined` (no IPC). See the [`IpcPermission`](#ipcpermission) section for more details.
+
+##### `NetworkPermission`
+
+Specifies the domains that the plugin can access in network requests.
+
+```json
+{
+  "domains": [
+    "https://example.com",
+    "https://*.adobe.com/",
+    "wss://*.myplugin.com"
+  ]
 }
-`}</code>
-<p>Then, in your plugin code, you can make network requests like this:</p>
-<code class="language-javascript">{`const response = await fetch("https://example.com");
-`}</code>
-<p>Or load images like this:</p>
-<code class="language-html">&lt;img src="https://example.com/image.png" /&gt;
-</code>
-<p>You can also allow access to all domains by setting <inlineCode>domains</inlineCode> to <inlineCode>"all"</inlineCode>.</p>
-<code class="language-json">{`{
-    "domains": "all"
+```
+
+Then, in your plugin code, you can make network requests like this:
+
+```javascript
+const response = await fetch("https://example.com");
+```
+
+Or load images like this:
+
+```html
+<img src="https://example.com/image.png" />
+```
+
+You can also allow access to all domains by setting `domains` to `"all"`.
+
+```json
+{
+  "domains": "all"
 }
-`}</code>
-<h4>Properties</h4>
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>domains</inlineCode> *</td>
-        <td><inlineCode>string[] | "all"</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The domains that the plugin can access. Can be a list of domains, or the string "all" to allow access to all domains.</p>
-        </td>
-    </tr>
-    </tbody>
-</table>
+```
 
-<p>The <a href="/premiere-pro/uxp/resources/recipes/network/">network recipe</a> has more details.</p>
+The [network recipe](../../../resources/recipes/network/index.md) has more details.
 
-#### WebViewPermission
+##### `WebviewPermission`
 
-<p>Enables the plugin to use webviews in its UI to display web content or complex UI. </p>
-<p><strong>Example</strong></p>
-<code class="language-json">{`{
-    "allow": "yes",
-    "domains": ["https://example.com"],
-    "enableMessageBridge": "localAndRemote"
+Enables the plugin to use webviews in its UI to display web content or complex UI.
+
+```json
+{
+  "allow": "yes",
+  "domains": ["https://example.com"],
+  "enableMessageBridge": "localAndRemote"
 }
-`}</code>
-<p>Then, in your plugin code, you can use a webview like this:</p>
-<code class="language-html">{`<webview src="https://example.com" />
-`}</code>
-<p>To communicate between the webview and the plugin, you can use the message API:</p>
-<code class="language-javascript">{`// In the plugin:
+```
+
+Then, in your plugin code, you can use a webview like this:
+
+```html
+<webview src="https://example.com" />
+```
+
+To communicate between the webview and the plugin, you can use the message API:
+
+```javascript
+// In the plugin:
 const webview = document.querySelector("webview");
-webview.addEventListener("message", (event) => \{
-    console.log("Received message from webview:", event.data);
-    webview.postMessage("Hello from the plugin!");
-\});\n
+webview.addEventListener("message", (event) => {
+  console.log("Received message from webview:", event.data);
+  webview.postMessage("Hello from the plugin!");
+});
+
 // In the webview:
-window.addEventListener("message", (event) => \{
-    console.log("Received message from plugin:", event.data);
-    window.uxpHost.postMessage("Hello from the webview!");
-\});
-`}</code>
-<h4>Properties</h4>
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>allow</inlineCode> *</td>
-        <td><inlineCode>"yes"</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>Must be set to "yes" to enable webviews.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>domains</inlineCode> *</td>
-        <td><inlineCode>string[] | "all"</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>The domains that the plugin can access. Can be a list of domains, or the string "all" to allow access to all domains.</p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>enableMessageBridge</inlineCode></td>
-        <td><inlineCode>"no" | "localAndRemote"</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Specifies whether the plugin can communicate with the webview using the message API.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>"no"</inlineCode></p>
-        </td>
-    </tr>
-    </tbody>
-</table>
+window.addEventListener("message", (event) => {
+  console.log("Received message from plugin:", event.data);
+  window.uxpHost.postMessage("Hello from the webview!");
+});
+```
 
-<p>Find the detailed <a href="../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement/">WebView API reference</a> or use the webview-starter template plugin in UDT.</p>
+| Required Properties | Optional Properties   |
+| :------------------ | :-------------------- |
+| `allow`             | `enableMessageBridge` |
+| `domains`           |                       |
 
-#### LaunchProcessPermission
+##### `allow`
 
-<p>Specifies the schemes and extensions that the plugin can launch.</p>
-<p>For example, if the plugin can launch a web browser, it should specify the <inlineCode>http</inlineCode> and <inlineCode>https</inlineCode> schemes.</p>
-<p><strong>Example</strong></p>
-<code class="language-json">{`{
-    "schemes": ["http", "https"],
-    "extensions": []
+| Name    | Type              | Required | Default |
+| :------ | :---------------- | :------- | ------- |
+| `allow` | `"yes"` or `"no"` | required | -       |
+
+Must be set to `"yes"` to enable webviews.
+
+##### `domains`
+
+| Name      | Type                  | Required | Default |
+| :-------- | :-------------------- | :------- | ------- |
+| `domains` | `string[]` or `"all"` | required | -       |
+
+The domains that the plugin can access. Can be a list of domains, or the string `"all"` to allow access to all domains.
+
+##### `enableMessageBridge`
+
+| Name                  | Type                         | Required | Default |
+| :-------------------- | :--------------------------- | :------- | ------- |
+| `enableMessageBridge` | `"no"` or `"localAndRemote"` | optional | `"no"`  |
+
+Specifies whether the plugin can communicate with the webview using the message API.
+
+Find the detailed [WebView API reference](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement/) or use the `webview-starter` template plugin in UDT.
+
+##### `LaunchProcessPermission`
+
+Specifies the schemes and extensions that the plugin can launch. For example, if the plugin can launch a web browser, it should specify the `"http"` and `"https"` schemes.
+
+```json
+{
+  "schemes": ["http", "https"],
+  "extensions": ["pdf"]
 }
-`}</code>
-<h4>Properties</h4>
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>schemes</inlineCode> *</td>
-        <td><inlineCode>string[]</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>A set of schemes that the plugin can launch.</p>
-            <p><strong>Example</strong></p>
-            <p><inlineCode>["http", "https", "mailto"]</inlineCode></p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>extensions</inlineCode> *</td>
-        <td><inlineCode>string[]</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>A set of extensions that the plugin can launch. Only relevant for local files (using the <inlineCode>file://</inlineCode> schema)</p>
-            <p><strong>Example</strong></p>
-            <p><inlineCode>["pdf", "png", "jpg"]</inlineCode></p>
-        </td>
-    </tr>
-    </tbody>
-</table>
+```
 
-<p>The <a href="/premiere-pro/uxp/resources/recipes/launch-process/">launch process recipe</a> has more details.</p>
+| Required Properties | Optional Properties |
+| :------------------ | :------------------ |
+| `schemes`           |                     |
+| `extensions`        |                     |
 
-#### IpcPermission
+##### `schemes`
 
-<p>Allows communication with other plugins.</p>
-<p><strong>Example</strong></p>
-<code class="language-json">{`{
-    "enablePluginCommunication": true
+| Name      | Type       | Required | Default |
+| :-------- | :--------- | :------- | ------- |
+| `schemes` | `string[]` | required | -       |
+
+A set of schemes that the plugin can launch, for example `["http", "https", "mailto"]`.
+
+##### `extensions`
+
+| Name         | Type       | Required | Default |
+| :----------- | :--------- | :------- | ------- |
+| `extensions` | `string[]` | required | -       |
+
+A set of extensions that the plugin can launch, for example `["pdf", "png", "jpg"]`. Only relevant for local files (using the `file://` schema).
+
+The [launch process recipe](../../../resources/recipes/launch-process/index.md) has more details.
+
+##### `IpcPermission`
+
+Specifies the IPC channels that the plugin can use.
+
+```json
+{
+  "enablePluginCommunication": true
 }
-`}</code>
+```
 
-<h4>Properties</h4>
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>enablePluginCommunication</inlineCode> *</td>
-        <td><inlineCode>boolean</inlineCode></td>
-        <td>required</td>
-        <td>
-            <p>Enables plugin communication.</p>
-        </td>
-    </tr>
-    </tbody>
-</table>
+##### `enablePluginCommunication`
 
-<p>The <a href="/premiere-pro/uxp/plugins/tutorials/inter-plugin-comm/">inter-plugin communication example</a> has more details.</p>
+| Name                        | Type      | Required | Default |
+| :-------------------------- | :-------- | :------- | ------- |
+| `enablePluginCommunication` | `boolean` | required | -       |
 
+Enables the plugin to communicate with other plugins. The [inter plugin communication tutorial](../../../plugins/tutorials/inter-plugin-comm/index.md) has more details.
 
-### FeatureFlags
+### `FeatureFlags`
 
-<p>Specifies which experimental features the plugin uses.</p>
+Specifies which experimental features the plugin can use.
 
-<p><strong>Example</strong></p>
-<code class="language-json">{`{
-    "enableFillAsCustomAttribute": true,
-    "enableSWCSupport": true
-}`}</code>
+```json
+{
+  "enableFillAsCustomAttribute": true,
+  "enableSWCSupport": true
+}
+```
 
-<h4>Properties</h4>
+| Required Properties | Optional Properties           |
+| :------------------ | :---------------------------- |
+|                     | `enableFillAsCustomAttribute` |
+|                     | `enableSWCSupport`            |
+|                     | `enableAlerts`                |
 
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><inlineCode>enableFillAs<wbr />CustomAttribute</inlineCode></td>
-        <td><inlineCode>boolean</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Enables the plugin to use CSS variable in the <inlineCode>fill</inlineCode> attribute on SVG elements.</p>
-            <p><strong>Example</strong></p>
-            <code class="language-html">{`<svg width="100" height="100">
-    <rect width="100" 
-        height="100" 
-        fill="var(--iconColor, red)" 
-    />
-</svg>`}</code>
-            <p>With the following CSS:</p>
-            <code class="language-css">{`:root {
-    --iconColor: blue;
-}`}</code>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>false</inlineCode></p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>enableSWCSupport</inlineCode></td>
-        <td><inlineCode>boolean</inlineCode></td>
-        <td>optional</td>
-        <td>
-            <p>Enables the plugin to use <a href="https://developer.adobe.com/premiere-pro/uxp/uxp-api/reference-spectrum/swc/">Spectrum Web Components</a> (requires installing and importing the components separately)</p>
-            <p><strong>Example</strong></p>
-            <code class="language-html">{`<sp-button variant="primary">
+#### Properties
+
+##### `enableFillAsCustomAttribute`
+
+| Name                          | Type      | Required | Default |
+| :---------------------------- | :-------- | :------- | ------- |
+| `enableFillAsCustomAttribute` | `boolean` | optional | `false` |
+
+Enables the plugin to use CSS variable in the fill attribute on SVG elements.
+
+```html
+<svg width="100" height="100">
+  <rect width="100" height="100"
+        fill="var(--iconColor, red)"
+  />
+</svg>
+```
+
+With the following CSS:
+
+```css
+:root {
+  --iconColor: blue;
+}
+```
+
+##### `enableSWCSupport`
+
+| Name               | Type      | Required | Default |
+| :----------------- | :-------- | :------- | ------- |
+| `enableSWCSupport` | `boolean` | optional | `false` |
+
+Enables the plugin to use [Spectrum Web Components](../../../uxp-api/reference-spectrum/swc/index.md). Requires installing and importing the components separately.
+
+```html
+<sp-button variant="primary">
     Click me
-</sp-button>`}</code>
-            <p>Note that you will need to manually install the library, import it (for example <inlineCode>import '@spectrum-web-components/<wbr />button/sp-button.js'</inlineCode>), and bundle the code with a tool like webpack or esbuild so that it's included in your plugin.</p>
-            <p><strong>Default value</strong></p>
-            <p><inlineCode>false</inlineCode></p>
-        </td>
-    </tr>
-    <tr>
-        <td><inlineCode>enableAlerts</inlineCode></td>
-        <td><inlineCode>boolean</inlineCode></td>
-        <td>optional</td>
-        <td>
-            Enable [alert()](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt()](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md) and [confirm()](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)in UXP
-        </td>
-    </tr>
-    </tbody>
-</table>
+</sp-button>
+```
+
+Note that you will need to **manually install** the library (via `npm` or `yarn`), **import** the components (for example, `import '@spectrum-web-components/button/sp-button.js'), and **bundle** the code with a tool like Webpack or Esbuild so that it's included in your plugin.
+
+##### `enableAlerts`
+
+| Name           | Type      | Required | Default |
+| :------------- | :-------- | :------- | ------- |
+| `enableAlerts` | `boolean` | optional | `false` |
+
+Enable the plugin to use create simple dialogs via [`alert()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [`prompt()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md) and [`confirm()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)
