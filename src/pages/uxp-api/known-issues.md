@@ -14,7 +14,7 @@ The following issues are known. Please check this page with future updates, as k
 
 ## User Interface
 
-* While `z-index` is supported, no element can overlay a widget that has text editing capabilities. Text fields and areas will always render the text editor _above_ everything else in the same panel or dialog. As such, you can use popovers to render content above them, _or_ hide the element if you need to render some content above it. 
+* While `z-index` is supported, no element can overlay a widget that has text editing capabilities. Text fields and areas will always render the text editor _above_ everything else in the same panel or dialog. As such, you can use popovers to render content above them, _or_ hide the element if you need to render some content above it.
 * `window.devicePixelRatio` (and corresponding `element.uxpContainer.devicePixelRatio`) always returns `1`. This is incorrect and will be fixed in the future. Note that `window.devicePixelRatio` may not always match an element's pixel ratio if the element is visible on a screen with a different pixel ratio from the primary screen.
 * Not all SVG files are supported by UXP. UXP's SVG renderer is targeted for simple icons and the like; complex SVGs may fail to render completely, or may render in unexpected ways. The SVG renderer will improve in the future.
 * Images formatted in a grayscale mode will fail to render. They will take up space in the DOM, but will not be visible to the user.
@@ -23,12 +23,11 @@ The following issues are known. Please check this page with future updates, as k
 * Many SVGs are known to render in odd ways in the UI. These issues will be addressed in the future, but we would love to hear your reports of any SVGs that don't work, and how you fixed it.
 * When tabbing in a scroll view, the scroll view is not automatically scrolled to ensure the target control is in view (macOS Only).
 * Emojis are rendered in the font color on Windows 10, instead of using the emoji's colors.
-* When a control in a panel is disabled and enabled, it is no longer reachable via TAB. This may also impact controls added *after* a panel is shown for the first time.
+* When a control in a panel is disabled and enabled, it is no longer reachable via TAB. This may also impact controls added _after_ a panel is shown for the first time.
 * Drag and Drop is not currently supported.
 * The `Save` dialog that appears when using `getFileForSaving` appears _behind_ the plugin panels. The `Open` and `Folder` dialogs may also do this on occasion on both macOS and Windows. This will be fixed in a future release. (PS-57708)
 * When using `<img>` tags inside a `<dialog>`, you should ensure that the images have an explicit `width` and `height` on either the image or the dialog. Otherwise, the dialog will attempt to resize to the smallest possible size, and images initially have a 0x0 dimension until at least one frame has been rendered to the display. This can cause the dialog to display at the wrong size.
 * `<img>` tags do not currently handle embedded rotation information.
-
 
 ## Spectrum UXP Components
 
@@ -49,7 +48,7 @@ The following issues are known. Please check this page with future updates, as k
 
 ## HTML Elements
 
-* `<option>` tags *must* have a `value` attribute, or referencing the `select`'s `value` property will return `undefined`.
+* `<option>` tags _must_ have a `value` attribute, or referencing the `select`'s `value` property will return `undefined`.
 * `<select value="…"/>` does not show the value as selected. Instead, get a reference to the element and call `setAttribute("value", …)` or use the `selected` attribute on the `option` tags.
 * If you don’t specify a width for your `form`, block elements inside may not take up the entire width. Workaround: always set a width for your `form` elements.
 * `form`s only support `method="dialog"`. They do not submit to a URL automatically.

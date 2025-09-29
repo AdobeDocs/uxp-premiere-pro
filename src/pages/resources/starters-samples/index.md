@@ -17,7 +17,7 @@ Consider 'samples' to be a working example of a specific feature. Whereas, a 'st
 
 ## Git repo
 
-You can find samples and starters for Premiere Pro plugins [here](https://github.com/AdobeDocs/uxp-premiere-pro-samples). 
+You can find samples and starters for Premiere Pro plugins [here](https://github.com/AdobeDocs/uxp-premiere-pro-samples).
 
 ## UDT
 
