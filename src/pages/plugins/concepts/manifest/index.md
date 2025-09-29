@@ -16,24 +16,23 @@ The Manifest file is a JSON file located at the root of the plugin bundle that c
 
 ## Overview
 
-Each UXP plugin must have one `manifest.json` file that the host application uses to **load and manage** the plugin. It defines metadata such as the plugin's name, version, icons, and entry points, or the required permissions to access the network, file system, etc.
+In addition to core metadata such as the plugin’s name,
+Each UXP plugin must have one `manifest.json` file that the host application uses to **load and manage** the plugin. In addition to core metadata such as the plugin's name, version, icons, and entry points, the manifest specifies permissions, compatibility details, and other definitions that shape how the plugin integrates with the host environment.
 
-Most importantly, it contains your **plugin ID**, to uniquely identify your plugin when it's installed in the host application. Valid plugin IDs are required for distributing in Adobe's Marketplace—read more [in the documentation](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/).
+Most importantly, it contains your **plugin ID**, which uniquely identifies your plugin when it's installed in the host application. Valid plugin IDs are required for distributing in Adobe's Marketplace—read more [in the Developer Distribution documentation](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/).
 
 ## Manifest Keys
 
 <br/><br/>
 
-| Required properties                   | Optional properties   |
-| :------------------------------------ | :-------------------- |
-| [`manifestVersion`](#manifestversion) | `main`                |
-| [`id`](#id)                           | `icons`               |
-| [`name`](#name)                       | `strings`             |
-| [`version`](#version)                 | `requiredPermissions` |
-| [`host`](#host)                       | `featureFlags`        |
-| [`entrypoints`](#entrypoints)         | `addon`               |
-
-The object at the root of the manifest file is called the `manifest` object. An example is shown below.
+| Required properties                   | Optional properties                           |
+| :------------------------------------ | :-------------------------------------------- |
+| [`manifestVersion`](#manifestversion) | [`main`](#main)                               |
+| [`id`](#id)                           | [`icons`](#icons)                             |
+| [`name`](#name)                       | [`strings`](#strings)                         |
+| [`version`](#version)                 | [`requiredPermissions`](#requiredpermissions) |
+| [`host`](#host)                       | [`featureFlags`](#featureflags)               |
+| [`entrypoints`](#entrypoints)         | [`addon`](#addon)                             |
 
 #### Example
 
@@ -91,7 +90,7 @@ The object at the root of the manifest file is called the `manifest` object. An 
 | :---------------- | :------- | :------ |
 | `manifestVersion` | `string` | -       |
 
-Indicates the version of the manifest schema. Premiere Pro supports version `"5"` only.
+Indicates the version of the manifest schema. Premiere Pro supports version `"5"`.
 
 ### `id`
 
@@ -103,11 +102,11 @@ Uniquely identifies a plugin and is used to disambiguate plugin contexts, storag
 
 ### `name`
 
-| Name   | Type                          | Default |
-| :----- | :---------------------------- | :------ |
-| `name` | `string` or `LocalizedString` | -       |
+| Name   | Type                                              | Default |
+| :----- | :------------------------------------------------ | :------ |
+| `name` | `string` or [`LocalizedString`](#localizedstring) | -       |
 
-Visually identifies the plugin in the user interface. It is usually used in a plugin menu listing or launcher for top-level action items. The name can be a string, a key from the `StringsDefinition` object, or a localized string.
+Visually identifies the plugin in the user interface. It is usually used in a plugin menu listing or launcher for top-level action items. The name can be a string, a key from the [`StringsDefinition`](#stringsdefinition) object, or a localized string.
 
 ### `version`
 
@@ -119,9 +118,9 @@ Indicates the plugin's version. The string has a format of `major.minor.patch`.
 
 ### `host`
 
-| Name   | Type             | Default |
-| :----- | :--------------- | :------ |
-| `host` | `HostDefinition` | -       |
+| Name   | Type                                | Default |
+| :----- | :---------------------------------- | :------ |
+| `host` | [`HostDefinition`](#hostdefinition) | -       |
 
 The host object indicates the plugin's compatibility with the host. Incompatible plugins will:
 
@@ -133,11 +132,11 @@ Check the [HostDefinition](#hostdefinition) section for more details.
 
 ### `entrypoints`
 
-| Name          | Type                     | Default |
-| :------------ | :----------------------- | :------ |
-| `entrypoints` | `EntrypointDefinition[]` | -       |
+| Name          | Type                                              | Default |
+| :------------ | :------------------------------------------------ | :------ |
+| `entrypoints` | [`EntrypointDefinition[]`](#entrypointdefinition) | -       |
 
-The entrypoints array defines the entrypoints that the plugin provides; currently only Commands and Panels are supported. Check the [EntrypointDefinition](#entrypointdefinition) section for more details.
+This array defines the entrypoints that the plugin provides; currently, only Commands and Panels are supported. Check the [EntrypointDefinition](#entrypointdefinition) section for more details.
 
 ## Optional properties
 
@@ -147,13 +146,13 @@ The entrypoints array defines the entrypoints that the plugin provides; currentl
 | :----- | :------- | :-------- |
 | `main` | `string` | `main.js` |
 
-Indicates the primary JavaScript or HTML file, relative to the plugin's installation directory. Supports HTML and JS files, such as `index.html` and `index.js`. If not specified (for deprecations), `main.js` is used.
+Indicates the primary JavaScript or HTML file, relative to the plugin's installation directory. It supports HTML and JS files, such as `index.html` and `index.js`. If not specified (for deprecations), `main.js` is used.
 
 ### `icons`
 
-| Name    | Type               | Default |
-| :------ | :----------------- | :------ |
-| `icons` | `IconDefinition[]` | `[]`    |
+| Name    | Type                                  | Default |
+| :------ | :------------------------------------ | :------ |
+| `icons` | [`IconDefinition[]`](#icondefinition) | `[]`    |
 
 An array of icons representing the overall plugin or panel icon. The host application uses these icons to present the plugin to the user. If the icons array is missing, a default icon will be used. See the [IconDefinition](#icondefinition) section for more details.
 
@@ -163,7 +162,7 @@ An array of icons representing the overall plugin or panel icon. The host applic
 | :-------- | :---------------------------------------- | :------ |
 | `strings` | [`StringsDefinition`](#stringsdefinition) | `{}`    |
 
-A set of strings used to localize the plugin name and other user-facing strings. It can also be a path to a JSON file containing the StringsDefinition object. See the [StringsDefinition](#stringsdefinition) section for more details.
+A set of strings used to localize the plugin name and other user-facing strings. It can also be a path to a JSON file containing them. See the [StringsDefinition](#stringsdefinition) section for more details.
 
 ### `requiredPermissions`
 
@@ -171,7 +170,7 @@ A set of strings used to localize the plugin name and other user-facing strings.
 | :-------------------- | :------------------------------------------------ | :------ |
 | `requiredPermissions` | [`PermissionsDefinition`](#permissionsdefinition) | `{}`    |
 
-Indicates the various permissions this plugin requires before accessing certain API surfaces. Without them, access may fail or throw an error. **Some permissions require user consent**. See the [PermissionsDefinition](#permissionsdefinition) section for more details.
+Indicates the various permissions this plugin requires before accessing certain API surfaces. Without them, access may fail or throw an error. **Users will be asked for their consent** when your plugin attempts to use `openExternal()`, `openPath()`, and `<sp-link>` anchor tags. For everything else, it is given at install time. See the [PermissionsDefinition](#permissionsdefinition) section for more details.
 
 ### `featureFlags`
 
@@ -187,7 +186,11 @@ A set of feature flags that can be used to enable or disable certain features of
 | :------ | :------- | :------ |
 | `addon` | `object` | `{}`    |
 
-Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that can access the power of C++ native libraries. **Premiere Pro doesn't support hybrid plugins yet**.
+Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that can access the power of C++ native libraries.
+
+<InlineAlert variant="warning"slots="text" />
+
+Premiere Pro **doesn't support hybrid plugins** yet.
 
 ## Supporting Definitions
 
@@ -232,11 +235,11 @@ The default string used when no translation is available for the current locale.
 
 Represents an icon used by the plugin or specific entry point. The icon may be used in the plugin list, toolbar, or other places.
 
-| Required Properties | Optional Properties |
-| :------------------ | :------------------ |
-| `width`             | `scale`             |
-| `height`            | `theme`             |
-| `path`              | `species`           |
+| Required Properties | Optional Properties   |
+| :------------------ | :-------------------- |
+| [`width`](#width)   | [`scale`](#scale)     |
+| [`height`](#height) | [`theme`](#theme)     |
+| [`path`](#path)     | [`species`](#species) |
 
 #### Properties
 
@@ -326,15 +329,15 @@ Specifies the species that the icon supports. Indicates the suitable use of this
 
 Represents an entrypoint that the plugin provides. An entrypoint is a point of entry for the plugin. It is used to identify the code that implements the entrypoint.
 
-| Required Properties | Optional Properties     |
-| :------------------ | :---------------------- |
-| `type`              | `description`           |
-| `id`                | `shortcut`              |
-| `label`             | `icon`                  |
-|                     | `minimumSize`           |
-|                     | `maximumSize`           |
-|                     | `preferredDockedSize`   |
-|                     | `preferredFloatingSize` |
+| Required Properties | Optional Properties                                                       |
+| :------------------ | :------------------------------------------------------------------------ |
+| [`type`](#type)     | [`description`](#description)                                             |
+| [`id`](#id-1)       | [`shortcut`](#shortcut)                                                   |
+| [`label`](#label)   | [`icon`](#icon)                                                           |
+|                     | [`minimumSize`](#minimumsize-and-maximumsize)                             |
+|                     | [`maximumSize`](#minimumsize-and-maximumsize)                             |
+|                     | [`preferredDockedSize`](#preferreddockedsize-and-preferredfloatingsize)   |
+|                     | [`preferredFloatingSize`](#preferreddockedsize-and-preferredfloatingsize) |
 
 #### Properties
 
@@ -376,9 +379,9 @@ A description of the entrypoint. This description is used in tooltips and other 
 | :--------- | :----------------------------- | :------- | ----------- |
 | `shortcut` | `{ mac: string, win: string }` | optional | `undefined` |
 
-<InlineAlert variant="info"slots="text" />
+<InlineAlert variant="warning" slots="text" />
 
-Keyboard shortcuts are not available in Premiere Pro yet.
+Keyboard shortcuts are **not available in Premiere Pro** yet.
 
 A keyboard shortcut that can be used to invoke the entrypoint. They are specified separately for Windows and macOS platforms. If the shortcut is not available in the host application, it will be ignored.
 
@@ -412,40 +415,40 @@ An icon specific to the entrypoint. If specified, this icon overrides the plugin
 
 ##### `minimumSize` and `maximumSize`
 
-| Name          | Type                                | Required | Default |
-| :------------ | :---------------------------------- | :------- | ------- |
-| `minimumSize` | `{ width: number, height: number }` | optional | -       |
-| `maximumSize` | `{ width: number, height: number }` | optional | -       |
+| Name          | Type                                | Required |
+| :------------ | :---------------------------------- | :------- |
+| `minimumSize` | `{ width: number, height: number }` | optional |
+| `maximumSize` | `{ width: number, height: number }` | optional |
 
-Indicates the desired minimum and maximum size of the panel, defined by `width` and `height` in pixels, although the host application may not be able to honor them. When not specified, default values will be used.
+Indicates the desired minimum and maximum size of the panel, defined by `width` and `height` in pixels, although the host application _may not_ be able to honor them. When not specified, default values will be used.
 
 Panel size can be **locked to a specific size** by setting `minimumSize` equal to `maximumSize`.
 
 ##### `preferredDockedSize` and `preferredFloatingSize`
 
-| Name                    | Type                                | Required | Default |
-| :---------------------- | :---------------------------------- | :------- | ------- |
-| `preferredDockedSize`   | `{ width: number, height: number }` | optional | -       |
-| `preferredFloatingSize` | `{ width: number, height: number }` | optional | -       |
+| Name                    | Type                                | Required |
+| :---------------------- | :---------------------------------- | :------- |
+| `preferredDockedSize`   | `{ width: number, height: number }` | optional |
+| `preferredFloatingSize` | `{ width: number, height: number }` | optional |
 
-Indicates the preferred size of the panel when docked (for panels or modal dialogs without a `reference_node_id`) or floating. The host application may not be able to honor them. When not specified, default values will be used.
+Indicates the preferred size of the panel when docked (for panels or modal dialogs without a `reference_node_id`) or floating. The host application _may not_ be able to honor them. When not specified, default values will be used.
 
 ### `HostDefinition`
 
 Represents the host application that the plugin is compatible with.
 
-| Required Properties | Optional Properties |
-| :------------------ | :------------------ |
-| `app`               | `maxVersion`        |
-| `minVersion`        |                     |
+| Required Properties         | Optional Properties         |
+| :-------------------------- | :-------------------------- |
+| [`app`](#app)               | [`maxVersion`](#maxversion) |
+| [`minVersion`](#minversion) |                             |
 
 #### Properties
 
 ##### `app`
 
-| Name  | Type                                          | Required | Default |
-| :---- | :-------------------------------------------- | :------- | ------- |
-| `app` | `"PS"` or `"ID"` or `"premierepro"` or `"XD"` | required | -       |
+| Name  | Type                                          | Required |
+| :---- | :-------------------------------------------- | :------- |
+| `app` | `"PS"` or `"ID"` or `"premierepro"` or `"XD"` | required |
 
 The host app that the plugin supports. Possible values are:
 
@@ -462,17 +465,17 @@ The host app that the plugin supports. Possible values are:
 
 The minimum version of the host app that the plugin supports in the `x.y.z` format.
 
-##### `minVersion`
+##### `maxVersion`
 
 | Name         | Type     | Required | Default     |
 | :----------- | :------- | :------- | ----------- |
-| `minVersion` | `string` | optional | `undefined` |
+| `maxVersion` | `string` | optional | `undefined` |
 
 The maximum version of the host app that the plugin supports in the `x.y.z` format. Default value is the latest version of the host app.
 
 ### `PermissionsDefinition`
 
-To ensure that plugins are secure, UXP requires that plugins declare the permissions they need to function.
+To ensure that plugins are secure, UXP requires that plugins declare the permissions they need to function. Permissions not explicitly declared will be denied by default.
 
 <InlineAlert variant="info" slots="header, text1, text2"/>
 
@@ -482,15 +485,16 @@ Make sure you **configure the most accurate permission** for your use case becau
 
 For example, for file operations, you may find `"fullAccess"` to be the least restrictive and hence the easiest to pick, but a user may not be comfortable giving full access to their system unless it's absolutely necessary; they might deny the installation of your plugin altogether.
 
-| Required Properties | Optional Properties              |
-| :------------------ | :------------------------------- |
-|                     | `clipboard`                      |
-|                     | `localFileSystem`                |
-|                     | `network`                        |
-|                     | `webview`                        |
-|                     | `launchProcess`                  |
-|                     | `allowCodeGenerationFromStrings` |
-|                     | `ipc`                            |
+| Required Properties | Optional Properties                                                 |
+| :------------------ | :------------------------------------------------------------------ |
+|                     | [`clipboard`](#clipboard)                                           |
+|                     | [`localFileSystem`](#localfilesystem)                               |
+|                     | [`network`](#network)                                               |
+|                     | [`webview`](#webview)                                               |
+|                     | [`launchProcess`](#launchprocess)                                   |
+|                     | [`allowCodeGenerationFromStrings`](#allowcodegenerationfromstrings) |
+|                     | [`enableUserInfo`](#enableUserInfo)                                 |
+|                     | [`ipc`](#ipc)                                                       |
 
 #### Properties
 
@@ -552,7 +556,7 @@ Default value is `undefined` (no webview usage). See the [`WebviewPermission`](#
 
 Enables the plugin to launch processes using APIs like `require("uxp").shell.openPath()` or `shell.openExternal()`.
 
-Default value is `undefined` (no process launching). See the [`LaunchProcessPermission`](#launchprocesspermission) section for more details.
+Default value is `undefined` (no process launching). See the [`LaunchProcessPermission`](#launchprocesspermission) section for more details and the [launch process recipe](../../../resources/recipes/launch-process/index.md) for examples.
 
 ##### `allowCodeGenerationFromStrings`
 
@@ -563,6 +567,22 @@ Default value is `undefined` (no process launching). See the [`LaunchProcessPerm
 Enables the plugin to generate code from strings. You will need this while using inline event handlers for HTML elements, `eval()`, and `new Function()` syntax.
 
 Default value is `false`.
+
+##### `enableUserInfo`
+
+| Name             | Type      | Required | Default |
+| :--------------- | :-------- | :------- | ------- |
+| `enableUserInfo` | `boolean` | optional | `false` |
+
+Enables the plugin to access the user's anonymized GUID information. Default value is `false`.
+
+```javascript
+// set "enableUserInfo" to true in the manifest
+
+let userId = require('uxp').userInfo.userId(); // Get the GUID of user
+console.log(userId);
+// "dad8483a3682a0c3e0fa990281142353901a69fc371254edde8b7dd38ca604c6"
+```
 
 ##### `ipc`
 
@@ -645,24 +665,24 @@ window.addEventListener("message", (event) => {
 });
 ```
 
-| Required Properties | Optional Properties   |
-| :------------------ | :-------------------- |
-| `allow`             | `enableMessageBridge` |
-| `domains`           |                       |
+| Required Properties   | Optional Properties                           |
+| :-------------------- | :-------------------------------------------- |
+| [`allow`](#allow)     | [`enableMessageBridge`](#enablemessagebridge) |
+| [`domains`](#domains) |                                               |
 
 ##### `allow`
 
-| Name    | Type              | Required | Default |
-| :------ | :---------------- | :------- | ------- |
-| `allow` | `"yes"` or `"no"` | required | -       |
+| Name    | Type              | Required |
+| :------ | :---------------- | :------- |
+| `allow` | `"yes"` or `"no"` | required |
 
 Must be set to `"yes"` to enable webviews.
 
 ##### `domains`
 
-| Name      | Type                  | Required | Default |
-| :-------- | :-------------------- | :------- | ------- |
-| `domains` | `string[]` or `"all"` | required | -       |
+| Name      | Type                  | Required |
+| :-------- | :-------------------- | :------- |
+| `domains` | `string[]` or `"all"` | required |
 
 The domains that the plugin can access. Can be a list of domains, or the string `"all"` to allow access to all domains.
 
@@ -674,7 +694,7 @@ The domains that the plugin can access. Can be a list of domains, or the string 
 
 Specifies whether the plugin can communicate with the webview using the message API.
 
-Find the detailed [WebView API reference](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement/) or use the `webview-starter` template plugin in UDT.
+Find the detailed [WebView API reference](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md) or use the `webview-starter` template plugin in UDT.
 
 ##### `LaunchProcessPermission`
 
@@ -687,24 +707,24 @@ Specifies the schemes and extensions that the plugin can launch. For example, if
 }
 ```
 
-| Required Properties | Optional Properties |
-| :------------------ | :------------------ |
-| `schemes`           |                     |
-| `extensions`        |                     |
+| Required Properties         | Optional Properties |
+| :-------------------------- | :------------------ |
+| [`schemes`](#schemes)       |                     |
+| [`extensions`](#extensions) |                     |
 
 ##### `schemes`
 
-| Name      | Type       | Required | Default |
-| :-------- | :--------- | :------- | ------- |
-| `schemes` | `string[]` | required | -       |
+| Name      | Type       | Required |
+| :-------- | :--------- | :------- |
+| `schemes` | `string[]` | required |
 
 A set of schemes that the plugin can launch, for example `["http", "https", "mailto"]`.
 
 ##### `extensions`
 
-| Name         | Type       | Required | Default |
-| :----------- | :--------- | :------- | ------- |
-| `extensions` | `string[]` | required | -       |
+| Name         | Type       | Required |
+| :----------- | :--------- | :------- |
+| `extensions` | `string[]` | required |
 
 A set of extensions that the plugin can launch, for example `["pdf", "png", "jpg"]`. Only relevant for local files (using the `file://` schema).
 
@@ -722,9 +742,9 @@ Specifies the IPC channels that the plugin can use.
 
 ##### `enablePluginCommunication`
 
-| Name                        | Type      | Required | Default |
-| :-------------------------- | :-------- | :------- | ------- |
-| `enablePluginCommunication` | `boolean` | required | -       |
+| Name                        | Type      | Required |
+| :-------------------------- | :-------- | :------- |
+| `enablePluginCommunication` | `boolean` | required |
 
 Enables the plugin to communicate with other plugins. The [inter plugin communication tutorial](../../../plugins/tutorials/inter-plugin-comm/index.md) has more details.
 
@@ -736,14 +756,15 @@ Specifies which experimental features the plugin can use.
 {
   "enableFillAsCustomAttribute": true,
   "enableSWCSupport": true
+  "enableAlerts": true
 }
 ```
 
-| Required Properties | Optional Properties           |
-| :------------------ | :---------------------------- |
-|                     | `enableFillAsCustomAttribute` |
-|                     | `enableSWCSupport`            |
-|                     | `enableAlerts`                |
+| Required Properties | Optional Properties                                           |
+| :------------------ | :------------------------------------------------------------ |
+|                     | [`enableFillAsCustomAttribute`](#enablefillascustomattribute) |
+|                     | [`enableSWCSupport`](#enableswcsupport)                       |
+|                     | [`enableAlerts`](#enablealerts)                               |
 
 #### Properties
 
@@ -785,7 +806,7 @@ Enables the plugin to use [Spectrum Web Components](../../../uxp-api/reference-s
 </sp-button>
 ```
 
-Note that you will need to **manually install** the library (via `npm` or `yarn`), **import** the components (for example, `import '@spectrum-web-components/button/sp-button.js'), and **bundle** the code with a tool like Webpack or Esbuild so that it's included in your plugin.
+Note that you will need to **manually install** the library (via `npm` or `yarn`), **import** the components (for example, `import '@spectrum-web-components/button/sp-button.js'`), and **bundle** the code with a tool like [Webpack](https://webpack.js.org/) or [Esbuild](https://esbuild.github.io/) so that it's included in your plugin.
 
 ##### `enableAlerts`
 
