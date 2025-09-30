@@ -181,8 +181,12 @@ module.exports = {
                 path: "/resources/distribution/overview/",
               },
               {
-                title: "Package your plugin",
+                title: "Package a plugin",
                 path: "/resources/distribution/package/",
+              },
+              {
+                title: "Install a plugin",
+                path: "/resources/distribution/install/",
               },
               {
                 title: "Options for Distribution",
