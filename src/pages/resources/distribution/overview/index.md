@@ -12,20 +12,20 @@ contributors:
 
 # Distribution Overview
 
-Congratulations! You've built a great UXP plugin and you're ready to release it to the world or share it with your team.
+Congratulations on building your UXP plugin! You're now ready to release it to the world or share it with your team.
 
-The UXP ecosystem gives you freedom to share your plugin via different platforms, most commonly:
+The UXP ecosystem gives you flexibility to distribute your plugin across multiple platforms. Most commonly:
 
 1. **Creative Cloud Marketplace** (recommended for broad reach)
 
    - Requires submitting your plugin to Adobe for **review and approval**.
-   - Once published, your plugin is **discoverable** directly within Creative Cloud applications.
+   - Once published, your plugin is **discoverable** directly within the Creative Cloud Desktop application.
    - Plugins published to the Marketplace are available for **free or paid** use.
 
 2. **Direct Distribution** (best for Enterprise use or independent marketplaces)
    - **No review or approval** is required if you share your plugin independently.
-   - You can **host your plugin anywhere**—for example, your own website, GitHub, or a third-party store.
+   - You can **host your plugin** on platforms such as your own website, GitHub, or a third-party store.
 
-Regardless of where you distribute—whether free or paid—the plugin must be packaged as a `.ccx` file. This format ensures users can install it seamlessly via the Creative Cloud desktop in the supported host applications.
+Regardless of where you distribute them, plugins must be packaged. UXP introduces a new package format called `.ccx`, which provides a seamless installation experience via the Creative Cloud desktop in all supported host applications.
 
-The process is remarkably simple, and the following sections will guide you through the steps.
+The process is straightforward; read on to learn more about how to package and distribute your plugin.
