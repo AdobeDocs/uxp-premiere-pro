@@ -1,9 +1,12 @@
 ---
 title: Our Review Process
 description: Review process
+keywords:
   - UXP Plugins
   - Distribution
   - Review process
+  - Branding Guidelines
+  - Submission Checklist
 contributors:
   - https://github.com/undavide
 ---

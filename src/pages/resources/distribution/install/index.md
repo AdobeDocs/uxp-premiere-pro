@@ -5,8 +5,12 @@ keywords:
   - UXP Plugins
   - Distribution
   - Creative Cloud Marketplace
+  - Creative Cloud Desktop
   - Packaging
+  - UXP Installer
   - CCX
+  - Plugin Installation
+  - UPIA Tool
 contributors:
   - https://github.com/undavide
 ---

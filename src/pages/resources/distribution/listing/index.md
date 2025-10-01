@@ -6,6 +6,11 @@ keywords:
   - Distribution
   - Creative Cloud Marketplace
   - CCX
+  - Plugin Submission
+  - Developer Distribution Portal
+  - Marketplace Listing
+  - Plugin Metadata
+  - FastSpring Integration
 contributors:
   - https://github.com/undavide
 ---

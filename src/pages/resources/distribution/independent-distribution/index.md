@@ -6,6 +6,8 @@ keywords:
   - Distribution
   - Creative Cloud Marketplace
   - CCX
+  - Independent Publishing
+  - Direct Distribution
 contributors:
   - https://github.com/undavide
 ---

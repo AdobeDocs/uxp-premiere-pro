@@ -5,8 +5,13 @@ keywords:
   - UXP Plugins
   - Distribution
   - Creative Cloud Marketplace
+  - Creative Cloud Desktop
+  - UXP Developer Tool
   - Packaging
   - CCX
+  - Plugin ID Management
+  - Multi-channel Distribution
+  - Digital Signature
 contributors:
   - https://github.com/undavide
 ---

@@ -6,6 +6,10 @@ keywords:
   - Distribution
   - Creative Cloud Marketplace
   - CCX
+  - Plugin Publishing
+  - Plugin Packaging
+  - Distribution Channels
+  - Creative Cloud Desktop
 contributors:
   - https://github.com/undavide
 ---
