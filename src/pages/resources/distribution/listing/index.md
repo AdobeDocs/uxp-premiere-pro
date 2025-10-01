@@ -86,7 +86,7 @@ In case you see a **Permission Required error** message when loading the Develop
 
 ![Developer Distribution - permission required](./img/listing--dev-role.png)
 
-In the Publisher Profile page, you'll need to provide the **Public name**, **Marketing website**, **Description**, and a **Publisher logo**. Make sure to adhere to the [branding guidelines](../review/index.md#branding-guidelines) for this information.
+In the Publisher Profile page, you'll need to provide the **Public name**, **Marketing website**, **Description**, and a **Publisher logo**. Make sure to adhere to the [branding guidelines](../review/index.md#4-branding-guidelines) for this information.
 
 ![Developer Distribution - publisher profile](./img/listing--publisher-profile.png)
 

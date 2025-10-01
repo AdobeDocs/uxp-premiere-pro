@@ -43,7 +43,7 @@ Check off the tasks in this list before submitting. If you have any questions, f
 
 ### 1. Assets
 
-Ensure that all required assets are included and named correctly in your plugin submission, as per the [Creating a public listing documentation](#), including:
+Ensure that all required assets are included and named correctly in your plugin submission, as per the [Create Listing guide](../listing/index.md), including:
 
 - Files
 - Assets
