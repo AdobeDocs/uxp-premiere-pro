@@ -172,7 +172,7 @@ module.exports = {
             path: "resources/starters-samples/",
           },
           {
-            title: "Share and Distribute",
+            title: "Share & Distribute",
             path: "resources/distribution/overview/",
             pages: [
               {
@@ -208,6 +208,10 @@ module.exports = {
               {
                 title: "Independent Distribution",
                 path: "/resources/distribution/independent-distribution/",
+              },
+              {
+                title: "Enterprise Distribution",
+                path: "/resources/distribution/enterprise/",
               },
             ],
           },
