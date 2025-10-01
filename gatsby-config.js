@@ -174,7 +174,6 @@ module.exports = {
           {
             title: "Share and Distribute",
             path: "resources/distribution/overview/",
-            header: true,
             pages: [
               {
                 title: "Overview",
@@ -189,12 +188,26 @@ module.exports = {
                 path: "/resources/distribution/install/",
               },
               {
-                title: "Options for Distribution",
-                path: "/resources/distribution/options/",
+                title: "Adobe Marketplace",
+                path: "/resources/distribution/adobe-marketplace/",
+                pages: [
+                  {
+                    title: "Overview",
+                    path: "/resources/distribution/adobe-marketplace/",
+                  },
+                  {
+                    title: "Create a Listing",
+                    path: "/resources/distribution/listing/",
+                  },
+                  {
+                    title: "Review process",
+                    path: "/resources/distribution/review/",
+                  },
+                ],
               },
               {
-                title: "Review process",
-                path: "/resources/distribution/review/",
+                title: "Independent Distribution",
+                path: "/resources/distribution/independent-distribution/",
               },
             ],
           },
