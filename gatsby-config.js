@@ -211,7 +211,7 @@ module.exports = {
               },
               {
                 title: "Enterprise Distribution",
-                path: "/resources/distribution/enterprise/",
+                path: "/resources/distribution/enterprise-distribution/",
               },
             ],
           },
