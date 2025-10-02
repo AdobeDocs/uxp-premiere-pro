@@ -1,15 +1,22 @@
 ---
-title: Scripting in Premiere Pro
-description: An introduction into scripting in Premiere Pro
+title: The Premiere Pro UXP API
+description: An introduction into the Premiere Pro UXP API
+keywords:
+  - Premiere Pro UXP API
+  - Premiere Pro
+  - UXP
+  - Scripting
+  - Extensibility
 contributors:
   - https://github.com/icaraps 
+  - https://github.com/undavide
 ---
 
 <Hero slots="heading, text" background = "rgb(200, 10, 10)"/>
 
 # Premiere Pro UXP API
 
-Modern extensibility powering the design of custom tools and features, allowing unparalleled workflow efficiency to be introduced into any unique Premiere Pro environments.
+A modern extensibility platform for building Custom Tools and Features that streamline workflows in any unique Premiere Pro environment.
 
 <Resources slots="heading, links"/>
 
@@ -23,11 +30,11 @@ Modern extensibility powering the design of custom tools and features, allowing 
 
 ## Overview
 
-UXP (**U**nified E**x**tensibility **P**latform) is a scripting platform built into Premiere Pro.  It is powered by a modern JavaScript engine and offers the ability to access many Premiere Pro functions at a programatic level.  With UXP, unique tools can be built to integrate with and optimize the most precise and demanding workflows, reducing repetition, maximizing efficiency and leveraging Premiere Pro into a bespoke application customized for the needs of any project.
+UXP (**U**nified e**X**tensibility **P**latform) is a scripting platform built into Premiere Pro and other Adobe Creative Cloud applications. It is powered by a modern JavaScript engine and offers the ability to access many Premiere Pro functions at a programmatic level. With UXP, you can build unique tools that integrate with and optimize the most precise, demanding workflows. These tools reduce repetition, maximize efficiency, and transform Premiere Pro into a bespoke application tailored to the needs of any project.
 
 Best of all, UXP Plugins run right in Premiere Pro.
 
-Premiere Pro offers a specific set of UXP functionality that extends the common base UXP API across all UXP-capable Adobe Applications.  Documentation for both the Premiere Pro API and the base UXP API can be accessed via this site.
+Premiere Pro adds its own set of APIs on top of the base UXP functionality shared across the supported Adobe applications. This website provides documentation for both the Premiere Pro API and the base UXP API.
 
 ![UDT Interface](./UDT_sample_image_01_cropped.png)
 
@@ -35,19 +42,19 @@ Premiere Pro offers a specific set of UXP functionality that extends the common 
 
 ## Features
 
-**Fast, Interactive Development.** Load, launch and update panels directly without having to relaunch Premiere Pro.
+**Fast and Interactive Development.** Load, run, and update panels directly without restarting Premiere Pro.
 
 <DiscoverBlock slots="text"/>
 
-**Built In Debuggger.**  Trace code quickly using the built-in debugger that attaches natively to Premiere Pro.
+**Built-in Debugger.** Quickly trace code using the built-in debugger that natively attaches to Premiere Pro.
 
 <DiscoverBlock slots="text"/>
 
-**Threaded Execution.**  UXP operates in parallel with other Premiere Pro processes.  Continue working in Preimere Pro while UXP Plugin functions are running.
+**Threaded Execution.** UXP operates concurrently with other Premiere Pro processes. You can continue working in Premiere Pro while the UXP Plugin functions are running.
 
 ## Updates
 
-The Premiere Pro UXP API, along with this documentation website, will be updated periodically to further expand functionality as new versions of Premiere Pro are released and new features are developed.
+The Premiere Pro UXP API and this documentation website will be updated regularly as new versions are released and new features are introduced.
 
 ## Join the community
 

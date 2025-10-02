@@ -1,17 +1,20 @@
 ---
-title: Prerequisites for UXP
-description: Set of tools and programming languages developers should know before developing in UXP
+title: UXP Development Tech Stack
+description: Essential tools, technologies, and programming languages you need to master for successful UXP plugin development
 keywords:
-  - Tech stack
-  - UXP Prerequisites
-  - Programming languages
+  - Learning resources
+  - JavaScript
+  - HTML
+  - CSS
   - System requirements
-  - Frameworks setup
+  - JavaScript frameworks
+  - Debugging
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
-# Programming languages
+# Tech Stack Foundations
 
 As mentioned earlier, UXP is a modern JavaScript (ECMA2015 or ES6) based extensibility platform.
 

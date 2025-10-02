@@ -1,70 +1,74 @@
 ---
-title: UXP developer tools
-description: Tools used for effectively developing in UXP
+title: Essential Development Tools for UXP
+description: Key tools to streamline your UXP plugin development workflow
 keywords:
   - Code Editor
   - UDT
   - UXP Developer Tool
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
-# Developer Tools
+# Essential Development Tools for UXP
 
-While writing UXP<!--scripts--> and plugins, the following tools will make your job easier.
+Let's explore the essential tools to start building UXP plugins
 
 ## Code Editor
 
-A good text editor is necessary for you to organize your project effectively. Any modern developer-friendly text editor should work, but one of the popular choices is [Visual Studio Code](https://code.visualstudio.com), which has deep integrations with the other pieces needed for UXP, and a wide variety of its plugins to help with code formatting, syntax checking, JSON parsing, and so on.
+A reliable Code Editor helps you stay organized and productive. Any modern editor will work, but [Visual Studio Code](https://code.visualstudio.com) is a popular choice thanks to its strong ecosystem, extensions for formatting and linting, and seamless integration with UXP-related workflows. [Cursor](https://www.cursor.com/) is also a great option for developers who prefer a more AI-driven development experience.
 
 ## UXP Developer Tool (UDT)
 
-The Adobe UXP Developer Tool (UDT) makes it easy to create, load, manage, and debug UXP-based plugins <!--and scripts-->for UXP-powered applications.
+The UXP Developer Tool (UDT) simplifies the process of creating, loading, managing, and debugging plugins for Adobe's UXP-powered applications. UXP plugins are supported in **Premiere Pro v25.6** and later since **UDT v2.2**.
 
-Additionally, for plugins,
+![UDT](./img/dev-tools--udt.png)
 
-- It has a playground where you can try out and experiment with APIs
-- It lets you create a `.ccx` - A UXP plugin package ready for distribution.
-- And offers a variety of easy-to-use templates and samples, to begin with.
+In addition, the UXP Developer Tool:
 
-<InlineAlert variant="info" slots="text"/>
+- Includes a **Code Playground** to quickly test and explore APIs.
+- Lets you **package plugins** into a `.ccx` [installable file](../../../resources/distribution/package/index.md), ready for distribution.
+- Provides **Starter Templates** and Sample Projects to help you get moving faster
 
-**IMPORTANT**:
-The Adobe UXP Developer Tool requires elevated privileges to function correctly. If your administrator does not enable your ability to elevate to Administrator privileges, you'll be unable to use this tool.
+<InlineAlert variant="info" slots="header,text"/>
+
+Admin privileges are required to use UDT.
+
+The UXP Developer Tool requires administrator-level privileges to run correctly. If you cannot elevate permissions on your system, you may not be able to use this tool.
 
 ### Installation
 
-Install UDT by clicking [here](https://creativecloud.adobe.com/apps/download/uxp-developer-tools) or by following these steps:
+You can install UDT directly [from Creative Cloud](https://creativecloud.adobe.com/apps/download/uxp-developer-tools) or by following these steps:
 
-1. Launch Adobe Creative Cloud Application. If not installed, [download and install Creative Cloud](https://creativecloud.adobe.com/apps/download/creative-cloud).
-2. Sign in with your Adobe account if not already signed in.
-3. Click on `All apps` section, and you should see "UXP Developer Tools" listed.
-  ![Creative cloud](./ccd-allapps-udt.png)
-4. Click on the `Install` button for the `UXP Developer Tools` card to start the installation.
+1. Open the Adobe Creative Cloud desktop app. If you don't have it installed, [download and install it here](https://creativecloud.adobe.com/apps/download/creative-cloud).
+2. Sign in with your Adobe ID if you haven't already.
+3. Go to the **All apps** section, where you'll find "UXP Developer Tools" listed; type "UXP Developer Tools" in the search bar for easier access.
+4. Click **Install** on the UXP Developer Tools card to begin installation.
+   ![Creative cloud](./img/dev-tools--ccd-udt.png)
 
-### Launching for the first time
+<InlineAlert variant="warning" slots="text"/>
 
-When you launch the Developer Tool for the first time, you'll be prompted to enable Developer Mode. This is required for you to load plugins in development into the application.
+The UXP Developer Tool is not yet available as a Package in the Adobe **Admin Console** for Team and Enterprise customers.
 
-![Enable Developer Mode](./devmode.png)
+### First launch
 
-Once you click `Enable`, elevated permissions will be requested, and you may be required to enter your password or approve an action from the Developer Tool.
+When you launch the Developer Tool for the first time, you'll be prompted to enable Developer Mode. This is required for you to load plugins in development into the application. Once you click **Enable**, elevated permissions will be requested, and you may be required to enter your password or approve an action from the Developer Tool.
 
-![Elevated Permissions request](./macos-elevated-permissions.png)
+![Enable Developer Mode](./img/dev-tools--enable-developer-mode.png)
 
-If you have problems with this step, you can also configure Developer Mode manually, although you must have Administrative privileges to do so:
+If you have problems with this step, you can also configure Developer Mode manually, although you must have Administrative privileges to do so.
 
 1. Quit the UXP Developer Tool
-2. Navigate to `/Library/Application Support/Adobe/UXP/Developer` on macOS, or `%CommonProgramFiles%/Adobe/UXP/Developer` on Windows. (If the folder does not exist, you can create it -- you'll need administrative rights.)
-3. Create a new file named `settings.json` with the following contents (You'll need administrative rights to save the file):
+2. Navigate to `/Library/Application Support/Adobe/UXP/Developer` on macOS, or `%CommonProgramFiles%/Adobe/UXP/Developer` on Windows. If the folder does not exist, you can create it—you'll need administrative rights.
+3. Create a new file named `settings.json` with the following content—you'll need administrative rights to save the file:
 
-    ```json
-    {"developer" : true}
-    ```
+   ```json
+   {"developer" : true}
+   ```
 
 4. Launch the UXP Developer Tool again.
 
-For now, successfully installing UDT is sufficient. We will understand UDT in more depth, once you write your first script or plugin.
+For now, successfully installing UDT is sufficient. We will understand UDT in more depth, once you build your first plugin.
 
 <!--
 TODO Add this section once details are available

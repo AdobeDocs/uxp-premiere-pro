@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         title: "Introduction",
-        path: "introduction/",
+        path: "introduction",
       },
       {
         title: "Plugins",
@@ -56,17 +56,21 @@ module.exports = {
     ],
     subPages: [
       {
+        title: "Overview",
+        path: "introduction/",
+      },
+      {
         title: "Essentials",
         header: true,
-        path: "introduction/",
+        path: "introduction/essentials/tech-stack/",
         pages: [
-          {
-            title: "Programming languages",
-            path: "/introduction/essentials/tech-stack/",
-          },
           {
             title: "Developer Tools",
             path: "/introduction/essentials/dev-tools/",
+          },
+          {
+            title: "Tech Stack Foundations",
+            path: "/introduction/essentials/tech-stack/",
           },
         ],
       },
