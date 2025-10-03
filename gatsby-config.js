@@ -76,12 +76,12 @@ module.exports = {
       },
       {
         title: "Plugins",
-        path: "plugins/getting-started",
+        path: "plugins/",
         header: true,
         pages: [
           {
             title: "Getting Started",
-            path: "plugins/getting-started/",
+            path: "plugins/",
           },
           {
             title: "Concepts",
