@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         title: "Plugins",
-        path: "plugins/getting-started",
+        path: "plugins/",
       },
       {
         title: "Resources",
