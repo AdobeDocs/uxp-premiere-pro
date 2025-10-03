@@ -232,7 +232,7 @@ module.exports = {
         pages: require("./reference-ppro.js"),
       },
       {
-        title: "UXP API Referencee",
+        title: "UXP API References",
         path: "uxp-api/",
         pages: [
           {
@@ -247,12 +247,12 @@ module.exports = {
           },
           {
             title: "HTML Reference",
-            path: "/reference//uxp-api//reference-html/",
+            path: "/uxp-api/reference-html/",
             pages: require("./reference-html.js"),
           },
           {
             title: "Spectrum UXP Reference",
-            path: "/reference//uxp-api/reference-spectrum/",
+            path: "/uxp-api/reference-spectrum/",
             pages: require("./reference-spectrum.js"),
           },
           {
