@@ -1,124 +1,129 @@
 ---
-title: Get started - UXP plugin
-description: Steps to create a simple UXP plugin
+title: Building your first UXP plugin
+description: Building your first UXP plugin
 keywords:
   - UXP Plugin
+  - UXP Developer Tool
   - Getting started
-  - First plugin
-  - Simple plugin
+  - Quick start
   - Hello world
+  - Plugin scaffolding
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
-# Building your first plugin
+# Building your first UXP plugin
 
-This tutorial will walk you through the process of building your first plugin. You will learn how to create a plugin, add a command to it, and then run it in Premiere Pro.
+This tutorial will walk you through building your very first UXP plugin. You will learn to scaffold one from an existing template, customize it, and run it in Premiere Pro.
 
 ## Prerequisites
 
 Before you start, make sure you have the following software installed on your machine:
 
-- **Premiere Pro (v25.2)** or later (can be installed from the _Creative Cloud Desktop_ app)
-- **UXP Developer Tool v2.1** (can be [installed from the _Creative Cloud Desktop_ app](https://creativecloud.adobe.com/apps/download/uxp-developer-tools))
-- A **code editor** of your choice (for example, [Visual Studio Code](https://code.visualstudio.com/))
+- [**Premiere Pro (v25.6)**](https://creativecloud.adobe.com/apps/download/premiere-pro) or later.
+- [**UXP Developer Tool (v2.2)**](https://creativecloud.adobe.com/apps/download/.uxp-developer-tools) or later.
+- A **Code Editor** of your choice—for example, [Visual Studio Code](https://code.visualstudio.com/) or [Cursor](https://www.cursor.com/).
 
-## Steps
+## Development Workflow
 
-### Step 1: Create a plugin
+### 1. Scaffold your Plugin
 
-You can create your plugin directly in the UXP Developer Tool. To do so, open the UXP Developer Tool and click **Create Plugin**.
+The [UXP Developer Tool](../../introduction/essentials/dev-tools/index.md#uxp-developer-tool-udt) (UDT) provides a quick way to scaffold your plugin project from a set of starter templates. Open the UDT and click **Create Plugin**.
 
-This opens a dialog where you can enter the details for your plugin:
+![UXP Developer Tool - Create Plugin](./img/getting-started--udt.png)
 
-<figure>
-  <img src="create-plugin.png" alt="Screenshot of the create plugin dialog" />
-  <figcaption>The create plugin dialog</figcaption>
-</figure>
+A dialog appears, allowing you to set the project details:
 
-In the dialog, enter the following information:
+![UXP Developer Tool - Create Plugin Dialog](./img/getting-started--udt-create-plugin.png)
 
-| Field                    | Value             |
-|--------------------------|-------------------|
-| Name                     | My First Plugin   |
-| Host Application         | Adobe Premiere Pro|
-| Host Application Version | 25.2              |
-| Template                 | quick-starter     |
+Please enter the following information:
 
-Then click **Select Folder** and choose a location on your machine where you want to create the plugin.
+| Field                        | Value                     |
+| ---------------------------- | ------------------------- |
+| **Name**                     | My first UXP Plugin       |
+| **Plugin ID**                | _Leave it as is_          |
+| **Host Application**         | Adobe Premiere Pro        |
+| **Host Application Version** | 25.6                      |
+| **Template**                 | premierepro-quick-starter |
 
-The UXP Developer Tool will create a new folder with the name you specified in the location you specified. The folder will contain the following files:
+Then click **Select Folder** and choose a location on your computer where you want to scaffold the plugin. The UXP Developer Tool will create a new folder named after the Plugin ID in the desired location. The folder will contain the following files:
 
 ```json
-My First Plugin
-├── manifest.json
-├── index.html
-└── index.js
+Test-fm0dom
+├── manifest.json     🔧 Plugin configuration
+├── index.html        🌐 User Interface
+├── index.js          💻 Logic
+└── README.md         📝 Documentation
 ```
 
-### Step 2: Run the plugin
+### 2. Test in Premiere Pro
 
-Now that you have created your plugin, you can run it in Premiere Pro.
+Now that you have scaffolded your plugin, you can load it in Premiere Pro. Make sure the application is running and the UXP Developer Tool is connected to it; it should appear in the left pane.
 
-First things first, you'll need to run Premiere Pro. You can verify that UDT is connected to the app by checking the connected apps panel.
+In UDT, click **Load & Watch** in your plugin's row:
 
-Then, in the UXP Developer Tool, in the row for your plugin, click **⋯ &rarr; Load**:
+![UXP Developer Tool - Load & Watch](./img/getting-started--udt-load-and-watch.png)
 
-<figure>
-  <img src="load-plugin.png" alt="Screenshot of the UXP Developer Tool with the load button highlighted" />
-  <figcaption>The load button</figcaption>
-</figure>
+This shortcut is for the **Load** and **Watch** actions, which you can perform separately. The result will be the same; the plugin will be loaded in Premiere Pro, and UDT will watch for changes in the plugin's source code and reload it automatically.
 
-This will load your plugin into Premiere Pro. You should see the plugin's panel appear in Premiere Pro:
+![Premiere Pro - Loaded Plugin](./img/getting-started--premiere-pro.png)
 
-<figure>
-  <img src="loaded-plugin.png" alt="Screenshot of Premiere Pro with the plugin panel open" />
-  <figcaption>The plugin panel</figcaption>
-</figure>
+<InlineAlert slots="text" />
 
-### Step 3: Make a change
+If you have closed the plugin, you can always show it again from Premiere Pro's **Window** > **UXP Plugins** menu.
 
-Now that you have your plugin running in Premiere Pro, let's make this plugin your own.
+### 3. Edit the plugin's UI
 
-Open the `index.html` file in your code editor. You should see the following code:
+Now that your plugin is running in Premiere Pro, let's make it your own. Open the `index.html` file in your code editor. This file contains the HTML code that defines the visual content of your plugin's panel.
 
 ```html
+<!DOCTYPE html>
 <html>
   <head>
-    <script src="./index.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <button id="btnCreateText">Create Text</button>
+    <h4>Application Info</h4>
+    <div class="main-div">
+      <sp-body id="plugin-body"> </sp-body>
+    </div>
+    <footer>
+      <sp-button id="btnPopulate">Populate Application Info</sp-button>
+      <sp-button id="clear-btn">Clear Application Info</sp-button>
+    </footer>
   </body>
 </html>
 ```
 
-This is the HTML code that defines the content of your plugin's panel. You can change it to whatever you want.
-
-For example, you could change the heading to say "My First Plugin":
+Let's change the heading to something slightly different:
 
 ```html
-<h1>My First Plugin</h1>
+<body>
+  <h4>Premiere Pro - Application Info</h4>
 ```
 
-Or you could add a paragraph below the heading:
+Thanks to the Watch & Reload feature, the changes will be automatically reflected in the host application—see the new heading in the plugin's panel below.
 
-```html
-<p>This is my first plugin.</p>
-```
+![Premiere Pro - Updated Plugin](./img/getting-started--edit-html.png)
 
-To see your changes, you'll need to reload the plugin in Premiere Pro. To do so, in the UXP Developer Tool, in the row for your plugin, click **⋯ &rarr; Reload**:
+<InlineAlert slots="header, text" />
 
-<figure>
-  <img src="reload-plugin.png" alt="Screenshot of the UXP Developer Tool with the reload button highlighted" />
-  <figcaption>The reload button</figcaption>
-</figure>
+Manifest changes
 
-<InlineAlert slots="text" />
+If you make any changes to the `manifest.json` file, you must manually unload and reload the plugin. In the UXP Developer Tool, in the row for your plugin, click **Unload** and then **Load & Watch** once more.
 
-If you make any changes to the `manifest.json` file, you'll need to fully unload and reload the plugin. To do so, in the UXP Developer Tool, in the row for your plugin, click **⋯ &rarr; Unload** and **⋯ &rarr; Load**:
+### 4. Test the plugin's logic
+
+Now let's check what this UXP plugin can do. Open a sample project in Premiere Pro; if you don't have one, go to the **Window** > **Learn** menu and download a sample from the **Tutorials** section.
+
+Now click the **Populate Application Info** button in the plugin's panel.
+
+![Premiere Pro - Populate Application Info](./img/getting-started--get-app-info.png)
+
+The plugin will fetch the active project and sequence information and display it in the panel. The implementation lives in the `index.js` file, and it uses the [Premiere Pro APIs](../../ppro_reference/index.md) to fetch the information. You can open the file and explore the code to see how it works.
 
 ## Next steps
 
-Congratulations! You have successfully created your first plugin. Next, we'll take a look at some of the concepts that are important for plugin development.
+Congratulations! You have successfully created your first plugin. Next, we'll take a look at some of the concepts that are important for UXP plugin development.
