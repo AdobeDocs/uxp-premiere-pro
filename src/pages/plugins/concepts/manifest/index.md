@@ -358,9 +358,9 @@ The ID of the entrypoint. This ID must be unique within the plugin. It is used t
 
 ##### `label`
 
-| Name    | Type     | Required | Default |
-| :------ | :------- | :------- | ------- |
-| `label` | `string` | required | -       |
+| Name    | Type                          | Required | Default |
+| :------ | :---------------------------- | :------- | ------- |
+| `label` | `string` or `LocalizedString` | required | -       |
 
 The label of the entrypoint. This label is used to display the entrypoint to the user, such as in the plugin menu.
 
