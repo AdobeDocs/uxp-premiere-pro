@@ -88,7 +88,7 @@ module.exports = {
             path: "plugins/concepts/",
             pages: [
               {
-                title: "Entry points",
+                title: "Entrypoints",
                 path: "plugins/concepts/entry-points/",
               },
               {
