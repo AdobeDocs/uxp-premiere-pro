@@ -102,9 +102,17 @@ module.exports = {
             path: "plugins/tutorials/",
             pages: [
               {
-                title: "Developing plugins with UDT",
-                path: "/plugins/tutorials/udt-deep-dive/",
+                title: "UDT plugin development",
+                path: "/plugins/tutorials/udt-deep-dive/index.md",
                 pages: [
+                  {
+                    title: "Overview",
+                    path: "/plugins/tutorials/udt-deep-dive/index.md",
+                  },
+                  {
+                    title: "The Playground",
+                    path: "/plugins/tutorials/udt-deep-dive/playground.md",
+                  },
                   {
                     title: "Plugin Management",
                     path: "/plugins/tutorials/udt-deep-dive/plugin-management/",
