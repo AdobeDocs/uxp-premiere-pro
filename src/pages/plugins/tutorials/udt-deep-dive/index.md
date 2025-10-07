@@ -62,9 +62,3 @@ Create or Add new plugins to your workspace
 [Plugin workflows](plugin-workflows.md)
 
 Load, debug, watch your plugins into the app.
-
-<DiscoverBlock slots="link, text"/>
-
-[Working with React](working-with-react.md)
-
-Advanced workflows when working with React-based plugins.

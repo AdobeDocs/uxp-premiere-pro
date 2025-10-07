@@ -121,10 +121,6 @@ module.exports = {
                     title: "Plugin Workflows",
                     path: "/plugins/tutorials/udt-deep-dive/plugin-workflows/",
                   },
-                  {
-                    title: "Working with React",
-                    path: "/plugins/tutorials/udt-deep-dive/working-with-react/",
-                  },
                 ],
               },
               {
