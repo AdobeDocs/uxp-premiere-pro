@@ -22,10 +22,10 @@ A modern extensibility platform for building Custom Tools and Features that stre
 
 #### Resources
 
-- [What's new](./changelog/)
-- [UXP APIs](./uxp-api/)
+- [What's new](./changelog/index.md)
+- [UXP APIs](./uxp-api/index.md)
 - [Premiere Pro DOM APIs](./ppro_reference/index.md)
-- [Plugins](./plugins/getting-started/index.md)
+- [Plugins](./plugins/index.md)
 - [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/)
 
 ## Overview

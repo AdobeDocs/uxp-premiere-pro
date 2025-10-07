@@ -29,7 +29,7 @@ Before you start, make sure you have the following software installed on your ma
 
 ### 1. Scaffold your Plugin
 
-The [UXP Developer Tool](../../introduction/essentials/dev-tools/index.md#uxp-developer-tool-udt) (UDT) provides a quick way to scaffold your plugin project from a set of starter templates. Open the UDT and click **Create Plugin**.
+The [UXP Developer Tool](../introduction/essentials/dev-tools/index.md#uxp-developer-tool-udt) (UDT) provides a quick way to scaffold your plugin project from a set of starter templates. Open the UDT and click **Create Plugin**.
 
 ![UXP Developer Tool - Create Plugin](./img/getting-started--udt.png)
 
@@ -122,7 +122,7 @@ Now click the **Populate Application Info** button in the plugin's panel.
 
 ![Premiere Pro - Populate Application Info](./img/getting-started--get-app-info.png)
 
-The plugin will fetch the active project and sequence information and display it in the panel. The implementation lives in the `index.js` file, and it uses the [Premiere Pro APIs](../../ppro_reference/index.md) to fetch the information. You can open the file and explore the code to see how it works.
+The plugin will fetch the active project and sequence information and display it in the panel. The implementation lives in the `index.js` file, and it uses the [Premiere Pro APIs](../ppro_reference/index.md) to fetch the information. You can open the file and explore the code to see how it works.
 
 ## Next steps
 

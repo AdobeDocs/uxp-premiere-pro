@@ -61,12 +61,13 @@ index_desc: Changelog in UXP version
   - `Box-shadow` property now supports `transform rotate`.
 - New feature flag `CSSNextSupport` in the manifest.json to gate the new and future CSS capability.
 
-  | Manifest setting | Description  |
-  | ---------------- | ------------ |
-  | `featureFlags: {"CSSNextSupport": true}` | Enables all the new CSS features. |
+  | Manifest setting                                                                                | Description                                    |
+  | ----------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+  | `featureFlags: {"CSSNextSupport": true}`                                                        | Enables all the new CSS features.              |
   | `featureFlags: {"CSSNextSupport": ["boxShadow", "transformFunctions", "transformProperties" ]}` | Enables only the named properties in the list. |
 
   Note that `"enableSWCSupport": true` will enable `CSSNextSupport` by default.
+
 - Video enhancements: Support added for [Seek Event](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md)
 - Support for [Navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) API
 - Support for new HTMLElement APIs - [append](./reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#appendnodes), [prepend](./reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#prependnodes) and [replaceChildren](./reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#replacechildrennodes)
@@ -82,7 +83,7 @@ index_desc: Changelog in UXP version
 ### Updated
 
 - UXP Alerts ([alert](./reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt](./reference-js/Global%20Members/HTML%20DOM/prompt.md), [confirm](./reference-js/Global%20Members/HTML%20DOM/confirm.md)) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag `enableAlerts` in the manifest.json file. Also, note that UXP alerts will be `available only in Plugins` and `not in scripts`.
-- Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md), and network calls [XMLHttp](./reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md) [fetch](./reference-js/Global%20Members/Data%20Transfers/fetch.md)
+- Wildcards (\*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md), and network calls [XMLHttp](./reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md) [fetch](./reference-js/Global%20Members/Data%20Transfers/fetch.md)
 - New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](./reference-spectrum/Spectrum%20to%20SWC%20Mapping/index.md) in UXP
 
 ### Fixed
@@ -100,28 +101,28 @@ index_desc: Changelog in UXP version
 - [GUID](./reference-js/Modules/uxp/User%20Information/UserInfo.md) for uniquely identifying a Creative Cloud User (Currently Supported only in `Photoshop`).
 - Multipart `FormData` support in [Request](./reference-js/Global%20Members/Data%20Transfers/Request.md) and [Response](./reference-js/Global%20Members/Data%20Transfers/Response.md) for `fetch`
 - [FormData](./reference-js/Global%20Members/Data%20Transfers/FormData.md) now supports the following APIs
-    - delete()
-    - get()
-    - getAll()
-    - has()
-    - keys()
-    - set()
-    - values()
+  - delete()
+  - get()
+  - getAll()
+  - has()
+  - keys()
+  - set()
+  - values()
 
 ### Updated
 
 - [FormData's append](./reference-js/Global%20Members/Data%20Transfers/FormData.md#append--namevaluefilename) now supports `Blob` as additional parameter.
 - `Spectrum Web Components` support in `React` context is now available for all the 30 components.
-    - Sample plugin for UXP-SWC plugin in React context can be referred [here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-react-starter)
+  - Sample plugin for UXP-SWC plugin in React context can be referred [here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-react-starter)
 
 ### Fixed
 
 - Tab Navigation not working for several SWC Components is now fixed
 - Spacebar doesn't work on SWC Button component when reached via TAB navigation.
 - Support for `Alerts` in InDesign
-    - [alert()](./reference-js/Global%20Members/HTML%20DOM/alert.md)
-    - [prompt()](./reference-js/Global%20Members/HTML%20DOM/prompt.md)
-    - [confirm()](./reference-js/Global%20Members/HTML%20DOM/confirm.md)
+  - [alert()](./reference-js/Global%20Members/HTML%20DOM/alert.md)
+  - [prompt()](./reference-js/Global%20Members/HTML%20DOM/prompt.md)
+  - [confirm()](./reference-js/Global%20Members/HTML%20DOM/confirm.md)
 
 ## UDT v2.0
 
@@ -167,12 +168,14 @@ HTMLElement now supports
 
 - `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release.
 
-```
+```css
 // CSS variable
 html {
   --iconColor: yellow;
 }
+```
 
+```html
 <svg height="100" width="100">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="var(--iconColor, red)" />
 </svg>
@@ -184,39 +187,39 @@ html {
 ### New
 
 - Support for Web Components in UXP Plugins. Various HTML elements and methods have been added to support this feature.
-    - Classes
-        - [HTMLSlotElement](./reference-js/Global%20Members/HTML%20Elements/HTMLSlotElement.md)
-        - [HTMLTemplateElement](./reference-js/Global%20Members/HTML%20Elements/HTMLTemplateElement.md)
-    - Methods
-        - [Element.assignedSlot](./reference-js/Global%20Members/HTML%20DOM/Element.md#assignedslot--htmlslotelement)
-        - [Element.slot](./reference-js/Global%20Members/HTML%20DOM/Element.md#slot--string)
-        - [Element.attachShadow](./reference-js/Global%20Members/HTML%20DOM/Element.md#attachshadowinit)
-        - [Element.shadowRoot](./reference-js/Global%20Members/HTML%20DOM/Element.md#shadowroot--shadowroot)
-        - [CustomElementRegistry.upgrade](./reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#upgraderoot)
-        - [CustomElementRegistry.whenDefined](./reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#whendefinedname)
+  - Classes
+    - [HTMLSlotElement](./reference-js/Global%20Members/HTML%20Elements/HTMLSlotElement.md)
+    - [HTMLTemplateElement](./reference-js/Global%20Members/HTML%20Elements/HTMLTemplateElement.md)
+  - Methods
+    - [Element.assignedSlot](./reference-js/Global%20Members/HTML%20DOM/Element.md#assignedslot--htmlslotelement)
+    - [Element.slot](./reference-js/Global%20Members/HTML%20DOM/Element.md#slot--string)
+    - [Element.attachShadow](./reference-js/Global%20Members/HTML%20DOM/Element.md#attachshadowinit)
+    - [Element.shadowRoot](./reference-js/Global%20Members/HTML%20DOM/Element.md#shadowroot--shadowroot)
+    - [CustomElementRegistry.upgrade](./reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#upgraderoot)
+    - [CustomElementRegistry.whenDefined](./reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#whendefinedname)
 - [Spectrum Web Components (Beta)](./reference-spectrum/swc/index.md) Support for Adobe SWC.
 - Several augmentations to the JS API set
-    - Properties
-        - [HTMLElement.lang](./reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#lang--string)
-    - Classes added to the global scope
-        - [TreeWalker](./reference-js/Global%20Members/HTML%20DOM/TreeWalker.md)
-        - [NodeFilter](./reference-js/Global%20Members/HTML%20DOM/NodeFilter.md)
-    - Methods
-        - [Element.hasAttributes](./reference-js/Global%20Members/HTML%20DOM/Element.md#hasattributes)
-        - [Element.getAttributeNames](./reference-js/Global%20Members/HTML%20DOM/Element.md#getattributenames)
-        - [Event.composed](./reference-js/Global%20Members/HTML%20Events/Event.md#composed--boolean)
-        - [Event.composedPath](./reference-js/Global%20Members/HTML%20Events/Event.md#composedpath)
-        - [DocumentFragment.append](./reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#appendargs)
-        - [DocumentFragment.querySelector](./reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#queryselectorselector)
-        - [DocumentFragment.querySelectorAll](./reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#queryselectorallselector)
+  - Properties
+    - [HTMLElement.lang](./reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#lang--string)
+  - Classes added to the global scope
+    - [TreeWalker](./reference-js/Global%20Members/HTML%20DOM/TreeWalker.md)
+    - [NodeFilter](./reference-js/Global%20Members/HTML%20DOM/NodeFilter.md)
+  - Methods
+    - [Element.hasAttributes](./reference-js/Global%20Members/HTML%20DOM/Element.md#hasattributes)
+    - [Element.getAttributeNames](./reference-js/Global%20Members/HTML%20DOM/Element.md#getattributenames)
+    - [Event.composed](./reference-js/Global%20Members/HTML%20Events/Event.md#composed--boolean)
+    - [Event.composedPath](./reference-js/Global%20Members/HTML%20Events/Event.md#composedpath)
+    - [DocumentFragment.append](./reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#appendargs)
+    - [DocumentFragment.querySelector](./reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#queryselectorselector)
+    - [DocumentFragment.querySelectorAll](./reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#queryselectorallselector)
 - New focus events to support React 16
-    - [Focusin Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event)
-    - [Focusout Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event)
+  - [Focusin Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event)
+  - [Focusout Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event)
 - HTML [2D Canvas Support](./reference-js/Global%20Members/HTML%20Elements/HTMLCanvasElement.md) for Basic Shapes and Styling.
 - Alerts
-    - [alert()](./reference-js/Global%20Members/HTML%20DOM/alert.md)
-    - [prompt()](./reference-js/Global%20Members/HTML%20DOM/prompt.md)
-    - [confirm()](./reference-js/Global%20Members/HTML%20DOM/confirm.md)
+  - [alert()](./reference-js/Global%20Members/HTML%20DOM/alert.md)
+  - [prompt()](./reference-js/Global%20Members/HTML%20DOM/prompt.md)
+  - [confirm()](./reference-js/Global%20Members/HTML%20DOM/confirm.md)
 - Support for [pipeThrough](./reference-js/Global%20Members/Streams/ReadableStream.md#pipeThroughtransform,-options) and [tee](./reference-js/Global%20Members/Streams/ReadableStream.md#tee) in ReadableStream](./reference-js/Global%20Members/Streams/ReadableStream.md). Refer to [Streams](./reference-js/Global%20Members/Streams/index.md) for more details
 - [ImageBlob](./reference-js/Global%20Members/ImageBlob/ImageBlob.md) to render an uncompressed image buffer in UXP
 

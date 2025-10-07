@@ -16,15 +16,15 @@ This is particularly handy when you know a certain task is already automated by 
 
 The `Plugin Manager` module provides APIs that will help establish the connection. But before we take a look at an example, be sure to be well-versed in these topics
 
-- [Plugin entrypoints](../../concepts/entry-points/)
+- [Plugin entrypoints](../../concepts/entrypoints/)
 - [Manifest permission module](../../concepts/manifest/index.md#permissionsdefinition)
 
 Additionally, you will need
 
 - A basic knowledge of the plugin you are going to communicate with. This includes:
-    - the plugin `id`
-    - available `entrypoints`
-    - the structure of arguments to be passed (if applicable)
+  - the plugin `id`
+  - available `entrypoints`
+  - the structure of arguments to be passed (if applicable)
 - `enablePluginCommunication` permission for your plugin
 
 ## System requirements
