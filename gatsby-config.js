@@ -89,7 +89,7 @@ module.exports = {
             pages: [
               {
                 title: "Entrypoints",
-                path: "plugins/concepts/entry-points/",
+                path: "plugins/concepts/entrypoints/",
               },
               {
                 title: "Manifest",
