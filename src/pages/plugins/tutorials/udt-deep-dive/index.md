@@ -1,46 +1,55 @@
 ---
-title: Adobe UXP Developer Tool
-description: The Adobe UXP Developer Tool makes it easy to create, load, debug, and package UXP-based plugins.
+title: Adobe UXP Developer Tool plugin development
+description: Overview of the Adobe UXP Developer Tool (UDT) settings
 keywords:
-  - Load plugins
-  - Debug plugins
-  - UDT for plugins
-  - UDT deep dive
+  - Adobe UXP Developer Tool
+  - UDT overview
+  - UDT workflow
+  - UDT settings
+  - UDT logs
+  - Host application logs
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
-# Adobe UXP Developer Tool
+# Adobe UXP Developer Tool plugin development
 
-UDT can help you manage, build and test your plugins more efficiently.
+Learn how to use all the Adobe UXP Developer Tool features to manage, build and test your plugins
 
-Assuming that you already have successfully installed UDT and created your first plugin using it, let's deep-dive into other capabilities it offers.
+## Prerequisites
 
-## Side pane
+We will assume that you have already [installed](../../../introduction/essentials/dev-tools/index.md#uxp-developer-tool-udt) the Adobe UXP Developer Tool (UDT v2.2 or later) and [scaffolded your first plugin](../../index.md#1-scaffold-your-plugin) with it.
 
-The side pane lets you view some basic settings within UDT.
+## Side panel
 
-### Connected apps
+### Connected Applications
 
-The left pane shows UXP-powered applications that are "connected" to the tool. UDT can only load plugins into applications that are up and running. As soon as you start or launch the apps you should be able to see them under 'Connected Applications'.
+The left panel shows the currently opened Creative Cloud desktop applications that support UXP and are _"connected"_ to UDT. Plugins can only be loaded when the application is running; as soon as you launch it, the **Connected Apps** section will populate.
 
-![Example of connected apps](./images/connected-apps.png)
+![UDT side panel](./img/overview--udt.png)
 
-If for some reason you don't; it means UDT is unable to connect to the app. Make sure you're running a version that supports UXP.
+If UDT is unable to connect, please ensure that the application version actually supports UXP extensibility. If you can't see the side panel altogether, click the dots grid icon in the top-right corner to open it.
 
 ### Preferences
 
-![UDT gear icon sheet](./images/udt-gear-icon.png)
+Click the gear icon to open the preferences panel and update the UDT **Theme** (Dark or Light), toggle **Auto Scroll Logs**, or change the **Service Port** that UDT uses to communicate with host applications.
 
-Update your preferences, should you need to change the Service Port, which UDT uses to communicate with host applications or switch to a different theme.
+![UDT preferences](./img/overview--preferences.png)
 
 ### Logs
 
-Open the logs panel to view logs from UDT and the host application.
+Click the document icon 📄 in the top-left corner to open the Logs panel. You can inspect the **UDT Logs**, where, among the rest, connection events and plugin loading status are listed, or the **App Logs**, to check for any issues in the host application.
 
-![UDT logs](./images/udt-logs.png)
+![UDT logs](./img/overview--logs.png)
 
 ## Read more
+
+<DiscoverBlock slots="link, text"/>
+
+[The Playground](playground.md)
+
+Experiment with a sandboxed Playground environment
 
 <DiscoverBlock slots="link, text"/>
 
