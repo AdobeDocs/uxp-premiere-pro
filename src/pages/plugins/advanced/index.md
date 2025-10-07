@@ -6,13 +6,13 @@ title: Advanced Topics
 
 There's a lot more to plugin development than what we've covered so far. For more advanced topics, please have a look at the [resources section](../../resources/). Among other things, you'll find information about:
 
-<MiniResourceCard slots="image,heading,text,link" repeat="5" theme="lightest" inRow="3"/>
+<MiniResourceCard slots="image,heading,text,link" repeat="5" theme="lightest" inRow="2"/>
 
 ![Folder icon](file.jpg)
 
 #### File I/O
 
-Save data to and load data from the file system
+Load/Save data from the FileSystem
 
 [File I/O](../../resources/recipes/file-operation/)
 
@@ -20,7 +20,7 @@ Save data to and load data from the file system
 
 #### Network I/O
 
-Make network requests to fetch data from the internet
+Make network requests to fetch data
 
 [Network I/O](../../resources/recipes/network/)
 
@@ -28,7 +28,7 @@ Make network requests to fetch data from the internet
 
 #### User Interface
 
-Add a variety of UI elements to your plugin
+Add UI elements to your plugin
 
 [Adding User Interfaces](../../resources/fundamentals/creating-ui/index.md)
 
@@ -46,6 +46,6 @@ Use React to build highly interactive user interfaces
 
 #### And much more
 
-See all the resources available to you for plugin development
+See all the resources available
 
 [All resources](../../resources/)
