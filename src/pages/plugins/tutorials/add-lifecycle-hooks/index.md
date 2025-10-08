@@ -51,7 +51,7 @@ Promises are allowed for most callbacks, as demonstrated in the following exampl
 
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JSON" />
 
-#### JavaScript
+#### index.js
 
 ```js
 const { entrypoints } = require("uxp");
@@ -95,14 +95,11 @@ entrypoints.setup({
       },
     },
   },
-  commands: {
-    firstCommand: commandHandler,
-  },
 });
 
 ```
 
-#### manifest
+#### manifest.json
 
 ```json
 {
