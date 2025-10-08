@@ -4,13 +4,15 @@ description: The Adobe UXP Developer Tool makes it easy to create, load, debug, 
 keywords:
   - Adobe UXP Developer Tool
   - Playground
+  - UXP APIs
+  - Prototyping
 contributors:
   - https://github.com/undavide
 ---
 
 # The Playground
 
-The Code Playground is a feature of the Adobe UXP Developer Tool that allows you to experiment with the UXP APIs in a sandboxed environment.
+The Playground is a feature of the Adobe UXP Developer Tool that allows you to experiment with the UXP APIs in a sandboxed environment.
 
 ## Overview
 
@@ -20,13 +22,11 @@ The Playground provides a low-barrier entry point for plugin prototyping, allowi
 
 ### Select the host application
 
-Make sure you have already [connected](index.md#connected-applications) a supported application to UDT. In the top toolbar, click the **Playground** tab to open the Playground panel; it should show you a code editor:
+Make sure you have already [connected](index.md#connected-applications) a supported application to UDT. In the top toolbar, click the **Playground** tab to open the Playground panel. It will show you a code editor; click on the languages dropdown to switch between HTML, CSS, JavaScript, and Manifest editors.
 
 ![Playground - HTML editor](./img/playground--html.png)
 
-You can click on the languages dropdown to switch between HTML, CSS, JavaScript, and Manifest editors. Make any changes you want to the code.
-
-If you have multiple Creative Cloud applications running at the same timeand UDT has hooked the Playground to the "wrong" one, you can always change it. In the top-right corner, click the blue **Change** link to select a different one and then **OK** to confirm.
+If you have multiple Creative Cloud applications running at the same time and UDT has hooked the Playground to the "wrong" one, you can always change it. In the top-right corner, click the blue **Change** link to select a different one and then **OK** to confirm.
 
 ![Playground - Select host application](./img/playground--select-host-app2.png)
 
@@ -40,7 +40,7 @@ This will launch the plugin in the host application, show a green **Plugin Load 
 
 ### Edit and Debug the code
 
-Whenever you edit the code in any of the tabs (HTML, CSS, and JavaScript), the Playground will automatically refresh the plugin in the host application to reflect the changes. If you want to get back to the initial state, you can click the **Reset** 🔄 button.
+Whenever you edit the code in any of the tabs (HTML, CSS, and JavaScript), **the Playground will automatically refresh the plugin** in the host application to reflect the changes. If you want to get back to the initial state, you can click the **Reset** 🔄 button.
 
 <InlineAlert slots="text" variant="info"/>
 
