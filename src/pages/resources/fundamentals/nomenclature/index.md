@@ -1,17 +1,29 @@
 ---
 keywords:
-  - UI
-  - User interface
+  - Extensibility
   - Nomenclature
   - Plugins
   - Panels
   - Extensions
-title: The usage of UXP Plugins
-description: Describes the shift in nomenclature 
+  - UXP
+  - CEP
+title: Extensibility Nomenclature
+description: The evolution of the ways we called extensibility artifacts over the years
+contributors:
+  - https://github.com/arsridhar1
+  - https://github.com/undavide
 ---
 
-# UXP Plugins: Panel and Extensions
+# Extensibility Nomenclature
 
-With the release of UXP in Premiere Pro public beta, you may notice that we universally refer to *panels* and *extensions* built with UXP as ***plugins***. This is a change compared to the previous use of this terminology in Premiere Pro, where plugins referred primarily to in-app or third party effects in Premiere Pro.
+The evolution of the ways we've been calling extensibility artifacts
 
-While this continues to be the case, ***plugins*** will also be used as an ecompassing word for UXP to describe *panels*, *extensions*, and eventually *scripts* as well. The primary reason for this is to maintain consistency with other Adobe Creative Cloud applications that refer to UXP extensions as plugins, including Photoshop and InDesign.
+Over the years, Adobe Creative Cloud applications have supported **Scripts**, Flash **Panels**, CEP **Extensions**, UXP **Plugins** (either regular or hybrid), and UXP **Scripts**. Uniquely, Adobe Express deals with **add-ons**, instead.
+
+Most desktop applications have been supporting a different kind of _compiled_ plugins, often spelled **Plug-ins**; for example, as Effects in Premiere Pro or Filters in Photoshop.
+
+While this continues to be the case, Premiere Pro will use **plugins**[^1] as a catch-all term for _panels_, _extensions_, and, eventually, _scripts_ as well. Primarily, this is to maintain consistency with the other Adobe Creative Cloud applications that have migrated—or are about to migrate—to the new UXP platform.
+
+<br/><br/><br/>
+
+[^1]: More precisely, in the UXP ecosystem, a _plugin_ is a container of either _panel(s)_, _command(s)_, or both. This mirrors—and extends—how the CEP ecosystem has been using _extensions_ to contain _panel(s)_.
