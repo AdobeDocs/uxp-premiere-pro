@@ -152,7 +152,7 @@ entrypoints.setup({
 
 <InlineAlert variant="warning" slots="text" />
 
-The `hide()` and `destroy()` hooks are **not working as expected yet**. This will be fixed in a future update.
+The `hide()` and `destroy()` hooks are **not working as expected yet** in Premiere Pro. This will be fixed in a future update.
 
 Panel handlers receive a `rootNode` parameter; it's the HTML document root node, which can be used to programmatically append or remove an appropriate container element in a multiple panels scenario.
 

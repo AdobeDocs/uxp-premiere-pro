@@ -128,8 +128,8 @@ module.exports = {
                 path: "/plugins/tutorials/add-commands/",
               },
               {
-                title: "Lifecycle hooks",
-                path: "/plugins/tutorials/plugin-lifecycle-hooks/",
+                title: "Add Lifecycle Hooks",
+                path: "/plugins/tutorials/add-lifecycle-hooks/",
               },
               {
                 title: "Communicate with other plugins",
