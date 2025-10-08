@@ -124,8 +124,8 @@ module.exports = {
                 ],
               },
               {
-                title: "Adding command entrypoints",
-                path: "/plugins/tutorials/adding-command-entrypoints/",
+                title: "Add Commands",
+                path: "/plugins/tutorials/add-commands/",
               },
               {
                 title: "Lifecycle hooks",

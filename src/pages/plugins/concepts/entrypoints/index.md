@@ -29,7 +29,7 @@ A UXP plugin is a self-contained application that is hosted in Premiere Pro; it 
 
 <InlineAlert variant="info" slots="header, text" />
 
-Modal dialogs
+#### Modal dialogs
 
 These are a special type of floating windows that **block the user** from interacting with the rest of the application **until the dialog is closed**. Modal dialogs are generally employed to get input data, confirm an action, or show a message.
 
