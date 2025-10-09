@@ -1,14 +1,52 @@
 ---
 title: Plugin tutorials
-description: Tutorials for UXP plugins
+description: Step-by-step guides for common UXP plugin development tasks
 keywords:
-  - UXP plugin tutorials 
+  - UXP plugin tutorials
+  - plugin development
+  - step-by-step guides
+  - JavaScript modules
+  - plugin commands
+  - lifecycle hooks
+  - inter-plugin communication
+  - UDT development
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
 # Tutorials
 
-This section contains tutorials that will help you get started with plugin development. They will walk you step by step through solving common tasks for plugin development.
-There is no need to follow the tutorials in order. You can jump around and follow the ones that interest you.
-Next to the tutorials, we also have more in-depth guides and resources on more advanced topics. You can find them in the [advanced topics section](../advanced/index.md).
+Step-by-step guides for common UXP plugin development tasks
+
+## Available Tutorials
+
+<DiscoverBlock slots="link, text"/>
+
+[UDT Deep Dive](udt-deep-dive/)
+
+Master the Adobe UXP Developer Tool for plugin development and testing
+
+<DiscoverBlock slots="link, text"/>
+
+[Add Commands](add-commands/)
+
+Create menu items in Premiere Pro that execute your plugin code
+
+<DiscoverBlock slots="link, text"/>
+
+[Add Lifecycle Hooks](add-lifecycle-hooks/)
+
+Respond to plugin and panel events with setup and teardown logic
+
+<DiscoverBlock slots="link, text"/>
+
+[Inter Plugin Communication](inter-plugin-comm/)
+
+Enable your plugin to communicate with other installed plugins
+
+<DiscoverBlock slots="link, text"/>
+
+[JavaScript Modules](importing-modules/)
+
+Learn how to organize your plugin code across multiple JavaScript files using modules
