@@ -3,7 +3,11 @@ title: Inter Plugin Communication
 description: Communicate with another plugin
 keywords:
   - UXP ipc
-  - inter plugin
+  - plugin communication
+  - pluginManager
+  - invokeCommand
+  - showPanel
+  - requester responder
 contributors:
   - https://github.com/padmkris123
   - https://github.com/undavide
