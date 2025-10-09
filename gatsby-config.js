@@ -102,7 +102,7 @@ module.exports = {
             path: "plugins/tutorials/",
             pages: [
               {
-                title: "UDT plugin development",
+                title: "UDT Plugin development",
                 path: "/plugins/tutorials/udt-deep-dive/index.md",
                 pages: [
                   {
@@ -132,7 +132,7 @@ module.exports = {
                 path: "/plugins/tutorials/add-lifecycle-hooks/",
               },
               {
-                title: "Communicate with other plugins",
+                title: "Inter-plugin communication",
                 path: "/plugins/tutorials/inter-plugin-comm/",
               },
               {
