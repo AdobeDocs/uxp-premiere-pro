@@ -22,7 +22,7 @@ Over the years, Adobe Creative Cloud applications have supported **Scripts**, Fl
 
 Most desktop applications have been supporting a different kind of _compiled_ plugins, often spelled **Plug-ins**; for example, as Effects in Premiere Pro or Filters in Photoshop.
 
-While this continues to be the case, Premiere Pro will use **plugins**[^1] as a catch-all term for _panels_, _extensions_, and, eventually, _scripts_ as well. Primarily, this is to maintain consistency with the other Adobe Creative Cloud applications that have migrated—or are about to migrate—to the new UXP platform.
+While this continues to be the case, Premiere Pro will use **plugins**[^1] as a catch-all term for _panels_, _extensions_, and, eventually, _scripts_ as well. Primarily, this is to maintain consistency with the other Adobe Creative Cloud applications that have migrated—or are about to migrate—to the new UXP standard.
 
 <br/><br/><br/>
 
