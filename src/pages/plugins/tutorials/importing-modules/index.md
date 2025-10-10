@@ -70,7 +70,7 @@ const answer = getAnswer(); // returns 42
 
 You can organize modules in subdirectories using relative paths:
 
-```
+```text
 my-plugin/
 ├── index.js
 ├── lib/

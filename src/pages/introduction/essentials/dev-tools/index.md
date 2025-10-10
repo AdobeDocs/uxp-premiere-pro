@@ -54,7 +54,7 @@ The UXP Developer Tool is not yet available as a Package in the Adobe **Admin Co
 
 When you launch the Developer Tool for the first time, you'll be prompted to enable Developer Mode. This is required for you to load plugins in development into the application. Once you click **Enable**, elevated permissions will be requested, and you may be required to enter your password or approve an action from the Developer Tool.
 
-![Enable Developer Mode](./img/dev-tools--enable-developer-mode.png)
+![Enable Developer Mode](./img/dev-tools--enable-developer-mode2.png)
 
 If you have problems with this step, you can also configure Developer Mode manually, although you must have Administrative privileges to do so.
 
@@ -68,7 +68,7 @@ If you have problems with this step, you can also configure Developer Mode manua
 
 4. Launch the UXP Developer Tool again.
 
-For now, successfully installing UDT is sufficient. We will understand UDT in more depth, once you build your first plugin.
+For now, successfully installing UDT is sufficient. We will understand UDT in more depth once you build your first plugin.
 
 <!--
 TODO Add this section once details are available

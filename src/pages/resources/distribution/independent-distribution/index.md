@@ -24,4 +24,4 @@ Once you have [packaged your plugin](../package/index.md), you can share the `.c
 
 Consider cloning your plugin with a different ID **only if _also_ you plan to distribute your plugin through the Creative Cloud Marketplace**, as explained in the [Packaging guide](../package/index.md#mind-your-plugins-id).
 
-When distributing your plugin outside the Creative Cloud Marketplace, users will have the same experience described [here](../install/index.md#installation)—including the warning dialog that suggests to only install plugins from trusted sources.
+When distributing your plugin outside the Creative Cloud Marketplace, users will have the same experience described [here](../install/index.md#use-a-ccx-installer-file)—including the warning dialog that suggests to only install plugins from trusted sources.

@@ -19,7 +19,7 @@ Learn how to use all the Adobe UXP Developer Tool features to manage, build and 
 
 ## Prerequisites
 
-We will assume that you have already [installed](../../../introduction/essentials/dev-tools/index.md#uxp-developer-tool-udt) the Adobe UXP Developer Tool (UDT v2.2 or later) and [scaffolded your first plugin](../../index.md#1-scaffold-your-plugin) with it.
+We will assume that you have already [installed](../../../introduction/essentials/dev-tools/index.md#uxp-developer-tool-udt) the Adobe UXP Developer Tool (UDT v2.2 or later), enabled Developer Mode in both [UDT](../../../introduction/essentials/dev-tools/index.md#first-launch) and [Premiere Pro](../../index.md#prerequisites), and [scaffolded your first plugin](../../index.md#1-scaffold-your-plugin).
 
 ## Side panel
 
