@@ -12,7 +12,7 @@
     "url": "https://github.com/icaraps"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^4.14.14",
+    "@adobe/gatsby-theme-aio": "^4.15.1",
     "gatsby": "4.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -32,6 +32,8 @@
     "clean": "gatsby clean",
     "test:links": "remark src/pages --quiet --frail",
     "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1",
+    "test:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdownlint.yml src",
+    "fix:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdownlint.yml src --fix",
     "predev": "npm run prepare-uxp",
     "prebuild": "npm run prepare-uxp",
     "_copy-uxp-html": "rm -rf src/pages/uxp-api/reference-html && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-html src/pages/uxp-api/ && cp node_modules/uxp-documentation/reference-html.js reference-html.js",
@@ -49,6 +51,8 @@
   },
   "packageManager": "yarn@3.2.1",
   "devDependencies": {
+    "markdownlint": "^0.35.0",
+    "markdownlint-cli": "^0.41.0",
     "remark-cli": "^11.0.0",
     "remark-validate-links": "^12.1.0"
   }

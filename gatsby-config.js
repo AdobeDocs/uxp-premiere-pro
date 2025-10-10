@@ -11,136 +11,141 @@
  */
 
 module.exports = {
-  pathPrefix: process.env.PATH_PREFIX || '/premiere-pro/uxp/',
+  pathPrefix: process.env.PATH_PREFIX || "/premiere-pro/uxp/",
   siteMetadata: {
     githubIssue: {
       removeLogIssue: true,
     },
-    versions: [
-
-
-    ],
+    versions: [],
     pages: [
       {
-        title: 'UXP for Premiere Pro',
-        description: 'Introduction to the Premiere Pro UXP API',
-        path: 'index.md'
+        title: "UXP for Premiere Pro",
+        description: "Introduction to the Premiere Pro UXP API",
+        path: "index.md",
       },
       {
-        title: 'Introduction',
-        path: 'introduction/'
+        title: "Introduction",
+        path: "introduction",
       },
       {
-        title: 'Plugins',
-        path: 'plugins/'
+        title: "Plugins",
+        path: "plugins/",
       },
       {
-        title: 'Resources',
-        path: 'resources/'
+        title: "Resources",
+        path: "resources/",
       },
       {
-        title: 'References',
+        title: "References",
         menu: [
           {
-            title: 'What\'s New?',
-            path: 'changelog/'
+            title: "What's New?",
+            path: "changelog/",
           },
           {
-            title: 'Premiere API',
+            title: "Premiere API",
             //description: 'Premiere Pro specific UXP documentation',
-            path: 'ppro_reference/'
+            path: "ppro_reference/",
           },
           {
-            title: 'UXP API',
-            path: 'uxp-api/'
+            title: "UXP API",
+            path: "uxp-api/",
           },
-        ]
-      }
+        ],
+      },
     ],
     subPages: [
       {
-        title: 'Essentials',
-        header: true,
-        path: 'introduction/',
-        pages: [
-          {
-            title: 'Programming languages',
-            path: '/introduction/essentials/tech-stack/'
-          },
-          {
-            title: 'Developer Tools',
-            path: '/introduction/essentials/dev-tools/'
-          }
-        ]
+        title: "Overview",
+        path: "introduction/",
       },
       {
-        title: 'Plugins',
-        path: 'plugins/',
+        title: "Essentials",
+        header: true,
+        path: "introduction/essentials/tech-stack/",
+        pages: [
+          {
+            title: "Developer Tools",
+            path: "/introduction/essentials/dev-tools/",
+          },
+          {
+            title: "Tech Stack Foundations",
+            path: "/introduction/essentials/tech-stack/",
+          },
+        ],
+      },
+      {
+        title: "Plugins",
+        path: "plugins/",
         header: true,
         pages: [
           {
-            title: 'Getting Started',
-            path: 'plugins/getting-started/'
+            title: "Getting Started",
+            path: "plugins/",
           },
           {
-            title: 'Concepts',
-            path: 'plugins/concepts/',
+            title: "Concepts",
+            path: "plugins/concepts/",
             pages: [
               {
-                title: 'Entry points',
-                path: 'plugins/concepts/entry-points/'
+                title: "Entrypoints",
+                path: "plugins/concepts/entrypoints/",
               },
               {
-                title: 'Manifest',
-                path: 'plugins/concepts/manifest/',
+                title: "Manifest",
+                path: "plugins/concepts/manifest/",
               },
-            ]
+            ],
           },
           {
-            title: 'Tutorials',
-            path: 'plugins/tutorials/',
+            title: "Tutorials",
+            path: "plugins/tutorials/",
             pages: [
               {
-                title: "Developing plugins with UDT",
-                path: "/plugins/tutorials/udt-deep-dive/",
+                title: "UDT Plugin development",
+                path: "/plugins/tutorials/udt-deep-dive/index.md",
                 pages: [
                   {
-                    title: 'Plugin Management',
-                    path: '/plugins/tutorials/udt-deep-dive/plugin-management/'
+                    title: "Overview",
+                    path: "/plugins/tutorials/udt-deep-dive/index.md",
                   },
                   {
-                    title: 'Plugin Workflows',
-                    path: '/plugins/tutorials/udt-deep-dive/plugin-workflows/'
+                    title: "The Playground",
+                    path: "/plugins/tutorials/udt-deep-dive/playground.md",
                   },
                   {
-                    title: 'Working with React',
-                    path: '/plugins/tutorials/udt-deep-dive/working-with-react/'
+                    title: "Plugin Management",
+                    path: "/plugins/tutorials/udt-deep-dive/plugin-management/",
+                  },
+                  {
+                    title: "Plugin Workflows",
+                    path: "/plugins/tutorials/udt-deep-dive/plugin-workflows/",
                   },
                 ],
               },
               {
-                title: 'Adding command entrypoints',
-                path: '/plugins/tutorials/adding-command-entrypoints/'
+                title: "Add Commands",
+                path: "/plugins/tutorials/add-commands/",
               },
               {
-                title: "Lifecycle hooks",
-                path: "/plugins/tutorials/plugin-lifecycle-hooks/"
+                title: "Add Lifecycle Hooks",
+                path: "/plugins/tutorials/add-lifecycle-hooks/",
               },
               {
-                title: "Communicate with other plugins",
-                path: "/plugins/tutorials/inter-plugin-comm/"
+                title: "Inter-plugin communication",
+                path: "/plugins/tutorials/inter-plugin-comm/",
               },
               {
                 title: "Modularizing code",
-                path: "/plugins/tutorials/importing-modules/"
-              }
-            ]
+                path: "/plugins/tutorials/importing-modules/",
+              },
+            ],
           },
           {
-            title: 'Advanced Topics',
-            path: 'plugins/advanced/'
+            title: "Advanced Topics",
+            path: "plugins/advanced/",
           },
-        ]
+        ],
       },
       {
         title: "Resources",
@@ -148,73 +153,123 @@ module.exports = {
         header: true,
         pages: [
           {
-            title: 'Fundamentals',
-            path: 'resources/fundamentals/',
+            title: "Fundamentals",
+            path: "resources/fundamentals/",
             header: true,
             pages: [
               {
-                title: 'APIs',
-                path: '/resources/fundamentals/apis/'
+                title: "APIs",
+                path: "/resources/fundamentals/apis/",
               },
               {
-                title: 'DOM APIs',
-                path: '/resources/fundamentals/dom-apis/'
+                title: "DOM APIs",
+                path: "/resources/fundamentals/dom-apis/",
               },
               {
                 title: "User Interface",
-                path: "/resources/fundamentals/creating-ui/"
+                path: "/resources/fundamentals/creating-ui/",
               },
               {
-                title: 'Nomenclature',
-                path: '/resources/fundamentals/nomenclature/'
+                title: "Nomenclature",
+                path: "/resources/fundamentals/nomenclature/",
               },
-            ]
+            ],
           },
           {
-            title: 'Starters & Samples',
-            path: 'resources/starters-samples/',
+            title: "Starters & Samples",
+            path: "resources/starters-samples/",
           },
           {
-            title: 'Recipes',
-            path: 'resources/recipes/',
+            title: "Share & Distribute",
+            path: "resources/distribution/overview/",
+            pages: [
+              {
+                title: "Overview",
+                path: "/resources/distribution/overview/",
+              },
+              {
+                title: "Package a plugin",
+                path: "/resources/distribution/package/",
+              },
+              {
+                title: "Install a plugin",
+                path: "/resources/distribution/install/",
+              },
+              {
+                title: "Adobe Marketplace",
+                path: "/resources/distribution/adobe-marketplace/",
+                pages: [
+                  {
+                    title: "Overview",
+                    path: "/resources/distribution/adobe-marketplace/",
+                  },
+                  {
+                    title: "Create a Listing",
+                    path: "/resources/distribution/listing/",
+                  },
+                  {
+                    title: "Review process",
+                    path: "/resources/distribution/review/",
+                  },
+                ],
+              },
+              {
+                title: "Independent Distribution",
+                path: "/resources/distribution/independent-distribution/",
+              },
+              {
+                title: "Enterprise Distribution",
+                path: "/resources/distribution/enterprise-distribution/",
+              },
+            ],
+          },
+          {
+            title: "Recipes",
+            path: "resources/recipes/",
             pages: require("./reference-recipes.js"),
           },
-        ]
+          {
+            title: "FAQ",
+            path: "resources/faq/",
+          },
+        ],
       },
       {
-        title: 'Premiere Pro DOM API Reference',
-        path: '/ppro_reference',
+        title: "Premiere Pro DOM API Reference",
+        path: "/ppro_reference",
         pages: require("./reference-ppro.js"),
       },
       {
-        title: 'UXP API Referencee',
-        path: 'uxp-api/',
-        pages: [{
-          title: "JavaScript Reference",
-          path: "/uxp-api/reference-js/",
-          pages: require("./reference-js.js"),
-        },
-        {
-          title: "CSS Reference",
-          path: "/uxp-api/reference-css/",
-          pages: require("./reference-css.js"),
-        },
-        {
-          title: "HTML Reference",
-          path: "/reference//uxp-api//reference-html/",
-          pages: require("./reference-html.js"),
-        },
-        {
-          title: "Spectrum UXP Reference",
-          path: "/reference//uxp-api/reference-spectrum/",
-          pages: require("./reference-spectrum.js"),
-        },
-        {
-          title: "Known Issues",
-          path: "/uxp-api/known-issues/",
-        }]
-      }
-    ]
+        title: "UXP API References",
+        path: "uxp-api/",
+        pages: [
+          {
+            title: "JavaScript Reference",
+            path: "/uxp-api/reference-js/",
+            pages: require("./reference-js.js"),
+          },
+          {
+            title: "CSS Reference",
+            path: "/uxp-api/reference-css/",
+            pages: require("./reference-css.js"),
+          },
+          {
+            title: "HTML Reference",
+            path: "/uxp-api/reference-html/",
+            pages: require("./reference-html.js"),
+          },
+          {
+            title: "Spectrum UXP Reference",
+            path: "/uxp-api/reference-spectrum/",
+            pages: require("./reference-spectrum.js"),
+          },
+          {
+            title: "Known Issues",
+            path: "/uxp-api/known-issues/",
+          },
+        ],
+      },
+    ],
   },
-  plugins: [`@adobe/gatsby-theme-aio`]
+  plugins: [`@adobe/gatsby-theme-aio`],
 };

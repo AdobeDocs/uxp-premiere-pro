@@ -12,7 +12,7 @@ contributors:
 
 # APIs within UXP
 
-We assume that you have been able to write your first <!--[script](../../../scripts/getting-started/) or -->[plugin](../../../plugins/getting-started/) successfully by now. For writing more complex tasks, you will need access to more APIs. But first, let's understand what types of APIs are available and where to find them.
+We assume that you have been able to write your first <!--[script](../../../scripts/getting-started/) or -->[plugin](../../../plugins/index.md) successfully by now. For writing more complex tasks, you will need access to more APIs. But first, let's understand what types of APIs are available and where to find them.
 
 The UXP platform has two main constituents
 

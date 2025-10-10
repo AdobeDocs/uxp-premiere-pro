@@ -66,11 +66,11 @@ exampleDiv.style.backgroundColor = 'orange';
 
 ## Additional notes
 
-- **CSS preprocessors**: UXP understands pure CSS only. Using CSS preprocessors such as SASS or SCSS is possible, provided you transpile your code to a CSS stylesheet before using it. Additionally, you will require a tool like Webpack to create your plugin bundle correctly and a slightly different way to [debug using UDT](../../../plugins/tutorials/udt-deep-dive/working-with-react.md) (similar to React framework setup).
+- **CSS preprocessors**: UXP understands pure CSS only. Using CSS preprocessors such as SASS or SCSS is possible, provided you transpile your code to a CSS stylesheet before using it. Additionally, you will require a tool like Webpack to create your plugin bundle correctly and a slightly different way to [debug using UDT](../../../plugins/tutorials/udt-deep-dive/plugin-workflows.md#working-with-bundlers) (similar to the React framework setup).
 
 ## Reference material
 
 - [CSS reference](../../../uxp-api/reference-css/)
 - [Spectrum-styled components](../../../uxp-api/reference-spectrum/)
-<!-- [Sample]() // TODO link to kitchen sink plugin -->
-<!-- [Webpack template]() // TODO link to webpack template -->
+  <!-- [Sample]() // TODO link to kitchen sink plugin -->
+  <!-- [Webpack template]() // TODO link to webpack template -->

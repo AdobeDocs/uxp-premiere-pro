@@ -5,4 +5,3 @@
 * [HTML Reference](reference-html/index.md) : Technical documentation regarding some of the HTML elements and attributes that are supported.
 * [Spectrum UXP Reference](reference-spectrum/index.md) : Information on the Spectrum UXP Widgets and Spectrum Web Components, and their capabilities.
 * [Known Issues](known-issues.md): List of known issues in UXP
-
