@@ -228,6 +228,10 @@ module.exports = {
             path: "resources/recipes/",
             pages: require("./reference-recipes.js"),
           },
+          {
+            title: "FAQ",
+            path: "resources/faq/",
+          },
         ],
       },
       {
