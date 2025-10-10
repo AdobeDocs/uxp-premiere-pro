@@ -17,10 +17,17 @@ This section contains frequently asked questions about UXP and Premiere Pro.
 
 ## Questions
 
+### 🛠️ Development Environment & Tooling
+
+- [How can I enable Developer Mode?](#how-can-i-enable-developer-mode)
+- [In UDT, I get the error "Plugin Load Failed, Host Application specified is not available. Make sure the host application is started."](#in-udt-i-get-the-error-plugin-load-failed-host-application-specified-is-not-available-make-sure-the-host-application-is-started)
+
 ### 📦 Installers and Packages
 
+- [I am unable to install a plugin.](#i-am-unable-to-install-a-plugin)
 - [My `.ccx` package is being rejected when submitted to the Creative Cloud Marketplace. What could be wrong?](#my-ccx-package-is-being-rejected-when-submitted-to-the-creative-cloud-marketplace-what-could-be-wrong)
 - [Should I use an Array or an Object for the `host` property in the `manifest.json`?](#should-i-use-an-array-or-an-object-for-the-host-property-in-the-manifestjson)
+-
 
 ### 🇪🇺 EU Compliance & DSA Requirements
 
@@ -32,7 +39,22 @@ This section contains frequently asked questions about UXP and Premiere Pro.
 ## Answers
 
 <!-- Let's keep the answers in the same order as the questions! -->
+
+<!-- ### 🛠️ Development Environment & Tooling -->
+
+#### How can I enable Developer Mode?
+
+You need to enable Developer mode in both the UXP Developer Tool and the host application. Follow the instructions in the [UXP Developer Tool](../../introduction/essentials/dev-tools/index.md#first-launch) and [Premiere Pro](../../plugins/index.md#prerequisites) guides.
+
+#### In UDT, I get the error "Plugin Load Failed, Host Application specified is not available. Make sure the host application is started."
+
+Ensure that Premiere Pro is running. If it is, check that the host application's Developer Mode is enabled; follow the instructions in the [this guide](../../plugins/index.md#prerequisites).
+
 <!-- 📦 Installers and Packages -->
+
+#### I am unable to install a plugin.
+
+Please refer to [these troubleshooting steps](../../resources/distribution/install/index.md#troubleshooting) for more details.
 
 #### My `.ccx` package is being rejected when submitted to the Creative Cloud Marketplace. What could be wrong?
 
