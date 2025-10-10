@@ -60,7 +60,7 @@ This is particularly important for paid plugins. When a user attempts to install
 
 Open the UXP Developer Tool and make sure the plugin you intend to package is listed in the workspace—it doesn't need to be loaded in the host application.
 
-Click on the `...` icon to open the flyout menu and select `Package`.
+Click on the **•••** icon to open the flyout menu and select **Package**.
 
 ![Package with the UXP Developer Tool](./img/package--package-menu.png)
 
@@ -77,3 +77,28 @@ A green toast notification will appear to confirm the success of the operation. 
 ![Package error](./img/package--error.png)
 
 Before distributing your package, test the installation to confirm it works as expected.
+
+### Host Applications
+
+UXP plugin `.ccx` installers can target only one host application at a time; in fact, the [`host`](../../../plugins/concepts/manifest/index.md#host) property in the `manifest.json` file must be a single object of type [`HostDefinition`](../../../plugins/concepts/manifest/index.md#hostdefinition).
+
+**Only during development**, for convenience, you can assign to the `host` property an array of `HostDefinition` objects, allowing the plugin to be loaded in multiple applications simultaneously.
+
+```json
+// host as one HostDefinition object
+// ✅ can be used in production
+"host": {
+  "app": "premierepro", "minVersion": "25.6.0"
+}
+
+// host as an array of HostDefinition objects
+// ⚠️ only for development! ⚠️
+"host": [
+  { "app": "premierepro", "minVersion": "25.6.0" },
+  { "app": "ps", "minVersion": "25.0.0" }
+]
+```
+
+<InlineAlert slots="text" variant="info"/>
+
+If an array is present, the **UXP Developer Tool will automatically package the plugin for the first host application**, by converting the array into a single `HostDefinition` object under the hood.
