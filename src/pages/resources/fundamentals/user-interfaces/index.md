@@ -180,7 +180,7 @@ While vanilla JavaScript, HTML, and CSS are sufficient for many plugins, complex
 
 These frameworks help you manage complex state, create reusable components, and build more maintainable code. However, they require additional setup including Node.js, package managers, and build tools.
 
-If you're already familiar with React or plan to build a complex plugin, check out the [Using Spectrum with React](../../../uxp-api/reference-spectrum/Spectrum%20UXP%20Widgets/Using%20with%20React.md) guide for tips on integrating Spectrum components with React.
+If you're already familiar with React or plan to build a complex plugin, check out the [Using Spectrum with React](../../../uxp-api/reference-spectrum/Spectrum%20UXP%20Widgets/Using%20with%20React.md) guide for tips on integrating Spectrum components with React. The most popular approach is to use [React Wrappers for Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/using-swc-react/).
 
 ## Reference Documentation
 

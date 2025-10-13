@@ -25,6 +25,7 @@ This section contains frequently asked questions about UXP and Premiere Pro.
 ### 🎨 User Interfaces
 
 - [How can I use Spectrum Web Components in my plugin?](#how-can-i-use-spectrum-web-components-in-my-plugin)
+- [Can I use React Spectrum instead of Spectrum Web Components?](#can-i-use-react-spectrum-instead-of-spectrum-web-components)
 
 ### 📦 Installers and Packages
 
@@ -59,6 +60,10 @@ Ensure that Premiere Pro is running. If it is, check that the host application's
 #### How can I use Spectrum Web Components in my plugin?
 
 You can use Spectrum Web Components in your plugin by following the instructions in the [Spectrum Web Components](../../uxp-api/reference-spectrum/swc/index.md) guide.
+
+#### Can I use React Spectrum instead of Spectrum Web Components?
+
+Given that UXP does not support the entire set of HTML Elements and CSS properties, [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) components may not work as expected. For this reason, we recommend using [React Wrappers for Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/using-swc-react/) instead. Make sure you have enabled the `enableSWCSupport` feature flag in your `manifest.json` file and installed the right version of the components.
 
 <!-- 📦 Installers and Packages -->
 
