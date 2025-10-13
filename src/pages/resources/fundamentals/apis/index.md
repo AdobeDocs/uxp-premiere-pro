@@ -8,60 +8,177 @@ keywords:
   - Premiere Pro APIs
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
-# APIs within UXP
+# Understanding UXP APIs
 
-We assume that you have been able to write your first <!--[script](../../../scripts/getting-started/) or -->[plugin](../../../plugins/index.md) successfully by now. For writing more complex tasks, you will need access to more APIs. But first, let's understand what types of APIs are available and where to find them.
+Learn about the two types of APIs available in UXP and when to use each one
 
-The UXP platform has two main constituents
+## Overview
 
-1. Core UXP APIs
-2. Host-specific APIs
+Now that you have successfully built your first [plugin](../../../plugins/index.md), you're ready to tackle more complex tasks. The key to building useful plugins is understanding which APIs to use and when.
 
-You will see a few examples of these APIs in the [recipes](../../recipes/) but for now, just try and understand the difference between them.
+The UXP platform provides two complementary sets of APIs:
+
+1. **UXP Core APIs**: for building user interfaces, file operations, network calls, and general functionality.
+2. **Premiere Pro APIs**: for interacting with and modifying Premiere Pro projects and sequences.
+
+Most often than not, you will need to use both APIs together to create the functionality you want. Let's explore each one and see how they work.
 
 ## UXP Core APIs
 
-These APIs enable you to create user interfaces, perform file operations, make network calls, etc.
+UXP Core APIs provide the fundamental building blocks for your plugin's functionality, and are **shared** across all Adobe Creative Cloud applications that support UXP. These APIs let you:
 
-The method to mount or use these APIs may vary. Many of them are directly available in the global scope, such as [Crypto](../../../uxp-api/reference-js/Global%20Members/Crypto.md) and [Documents](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Document.md). But for certain modules, you first need to seek permission in the manifest (for plugins) or mount it specifically using `require()`. For example, `require(os)` or `require('uxp').shell`.
+- **Create user interfaces** using HTML, CSS, and JavaScript
+- **Access the file system** to read and write files
+- **Make network requests** to communicate with external services
+- **Handle clipboard operations** for copy/paste functionality
+- **Work with system utilities** like shell commands and OS information
 
-## Host-specific APIs
+### Accessing UXP APIs
 
-These APIs are meant for modifying or interacting with the document.
+The way you access UXP APIs depends on the specific API itself:
 
-<InlineAlert slots="text1, text2, text3" />
+**Global APIs** are available immediately without any import. For example:
 
-**IMPORTANT** <br></br>
+```javascript
+// Crypto API is globally available
+const hash = crypto.randomUUID();
 
-Note that these are also referred to as **Document Object Model (DOM) APIs**. Throughout our documentation, we will use Premiere Pro APIs, DOM APIs or Premiere Pro DOM APIs interchangeably. <br></br>
+// Document API is globally available
+const button = document.createElement("sp-button");
+```
 
-Also, keep in mind that, these should **not** be confused with the HTML DOM which serves your plugin<!--/script--> UI.
+**Module-based APIs** require importing with `require()`. For example:
 
-You will learn more about the mounting technique in the [Premiere Pro DOM API](../dom-apis/index.md) topic.
+```javascript
+// Parent UXP module
+const uxp = require("uxp");
 
-## Example
+// File system access
+const fs = require("fs");
 
-Let's imagine you want to write a <!--script/-->plugin that
+// Operating system utilities
+const os = require("os");
+```
 
-1. Reads a text from a file in the user's system.
-2. Adds the text to the document.
-3. And, applies certain modifications to it.
+**Permission-based APIs** also need to be allow-listed in your plugin's `manifest.json`. For example, to use the file system or make network requests, you must declare the appropriate permissions. Learn more about permissions in the [Manifest guide](../../../plugins/concepts/manifest/index.md#requiredpermissions).
 
-For Step #1, since you would like to access the user's file system, you will use the UXP API's `localFileSystem` or `fs` module.<br></br>
-In Steps #2 and 3, since you need to update the document, you will use the DOM APIs.
+## Premiere Pro APIs
 
-## Updates and releases
+Premiere Pro APIs, also interchangeably called **DOM APIs** (Document Object Model) or **Premiere Pro DOM APIs**, give you direct access to Premiere Pro's document model. These APIs let you, among other things, to:
 
-We are still evolving the API surface and future releases will support more capabilities. Therefore, each release will have updates to both - DOM and UXP APIs.
+- **Access and modify projects** — sequences, tracks, clips, and markers
+- **Work with media** — import files, manage project items
+- **Control playback** — set in/out points, control the playhead
+- **Apply effects** — add video and audio effects to clips
+- **Export content** — configure and trigger exports
 
-The [What's new](../../../changelog) section, lists all the new features, changes, and fixes carried by the latest release. The DOM APIs are versioned as per the application version. However, you need to pay attention to the UXP version associated with each release.
+The entry point to Premiere Pro APIs is the `app` object, that you `require()` from the `"premierepro"` module.
 
-When your <!--script/-->plugin intends to use a specific UXP API, the host application must support that version of UXP. For example, Premiere Pro v25.2 supports UXP v8.1, but if you use an API from UXP v8.2, your plugin<!--/script--> will not work and lead to unexpected errors. Pay attention to the minimum compatible versions of UXP and the host application called out in the API references, examples and samples.
+```javascript
+const app = require("premierepro");
+```
 
-To determine the minimum UXP version supported by the application, you have a couple of options
+You'll learn how to access and use Premiere Pro APIs in the [Working with Premiere Pro APIs](../dom-apis/index.md) section and by browsing the [Premiere Pro API reference](../../../ppro_reference/index.md).
 
-1. In UDT, once you have Premiere Pro running and it appears under 'Connected apps', you will see the UXP version displayed along with the Premiere Pro version number.
-2. Programmatically, you can query the host information using UXP APIs. Use the example from [this recipe](../../recipes/host-info).
-3. [What's new](../../../changelog) section, will mention the UXP version number for each release.
+<InlineAlert variant="warning" slots="header, text" />
+
+Don't confuse the two DOMs
+
+The **Premiere Pro DOM** controls the Premiere Pro document (projects, sequences, clips). The **HTML DOM** controls your plugin's user interface (buttons, inputs, panels). They are completely separate systems.
+
+### Unified JavaScript Engine
+
+As the platform's name [suggests](../../../index.md), UXP provides a _unified_ JavaScript engine that has **direct access to both the Premiere Pro APIs and the UXP Core APIs**. This is a big advantage over the previous extensibility technology (CEP), where the communication between the extension logic and the host application happened through a bridge (CSInterface) that passed messages back and forth between the two runtimes.
+
+With UXP, everything runs natively in the same environment, and you just need to `require()` the appropriate modules to access the APIs you need.
+
+## Practical Example
+
+Let's see how both API types work together. Imagine you want to build a plugin that:
+
+1. Reads text content from a file on the user's computer
+2. Creates a new text layer in the active sequence
+3. Applies a specific style to the text layer
+
+Here's which APIs you would use for each step:
+
+**Step 1: Read file content** — Use UXP's `fs` module
+
+```javascript
+const fs = require("fs");
+const file = await fs.getFileForOpening();
+const content = await file.read();
+```
+
+**Step 2: Create text layer** — Use Premiere Pro APIs
+
+```javascript
+const app = require("premierepro");
+const sequence = app.project.activeSequence;
+// Add text layer to sequence
+```
+
+**Step 3: Apply styling** — Use both APIs
+
+```javascript
+// Premiere Pro APIs to modify the clip properties
+// UXP APIs to show progress in your plugin's UI
+```
+
+This demonstrates how UXP Core APIs handle the infrastructure, while Premiere Pro APIs handle the creative content manipulation.
+
+## API Versioning and Compatibility
+
+Both UXP and Premiere Pro APIs are actively evolving, with new capabilities added in each release. It's important to understand how versioning works to ensure your plugin functions correctly.
+
+### Host Application and UXP
+
+- **Premiere Pro version** (v25.6): determines which Premiere Pro DOM APIs are available.
+- **UXP version** (v8.1): determines which UXP Core APIs are available.
+
+Each Premiere Pro release integrates a specific UXP version. For example, Premiere Pro v25.6 includes UXP v8.1.
+
+<InlineAlert variant="info" slots="header, text, text2" />
+
+Handling Version Mismatches
+
+If your plugin relies on an API introduced in UXP v8.2, but the user is running Premiere Pro v25.6 (which only includes UXP v8.1), it will throw errors and fail to run. The same applies if your plugin depends on APIs added in Premiere Pro v25.7 but the user is still on v25.6.
+
+To avoid compatibility issues, make sure to target APIs common to both versions, or implement fallback logic for older releases when possible.
+
+### Checking Versions
+
+You can determine the UXP version in several ways:
+
+#### 1. In the UXP Developer Tool
+
+Once Premiere Pro is running and appears under "Connected apps", you'll see both the Premiere Pro version and UXP version displayed.
+
+![UXP version in the UXP Developer Tool](./img/apis--udt.png)
+
+If you only see the host application version (as in the case of Photoshop in the screenshot above), please click the arrow next to the product icon to expand the details.
+
+#### 2. Programmatically in your plugin
+
+```javascript
+const { host, version } = require("uxp");
+console.log(`Premiere Pro ${host.version}`); // Premiere Pro 25.6.0
+console.log(`UXP ${versions.uxp}`);          // UXP uxp-8.1.0-local
+```
+
+See the [host info recipe](../../recipes/host-info/index.md) for a complete example.
+
+#### 3. In the documentation
+
+The [What's new](../../../changelog/index.md) section lists the UXP version for each Premiere Pro release, along with all new features, changes, and fixes.
+
+## Next Steps
+
+Now that you understand the two types of APIs available, you're ready to:
+
+- Explore practical [code recipes](../../recipes/) that demonstrate common tasks
+- Learn how to [work with Premiere Pro APIs](../dom-apis/index.md) in depth
+- Browse the complete [UXP API reference](../../../uxp-api/) and [Premiere Pro API reference](../../../ppro_reference/)
