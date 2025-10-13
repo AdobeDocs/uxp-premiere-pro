@@ -38,9 +38,9 @@ UXP Core APIs provide the fundamental building blocks for your plugin's function
 
 ### Accessing UXP APIs
 
-The way you access UXP APIs depends on the specific API itself:
+The way you access UXP APIs depends on the specific API itself.
 
-**Global APIs** are available immediately without any import. For example:
+[**Global APIs**](../../../uxp-api/reference-js/Global%20Members/index.md) are available immediately without any import. For example:
 
 ```javascript
 // Crypto API is globally available
@@ -50,7 +50,7 @@ const hash = crypto.randomUUID();
 const button = document.createElement("sp-button");
 ```
 
-**Module-based APIs** require importing with `require()`. For example:
+[**Module-based APIs**](../../../uxp-api/reference-js/Modules/index.md) require importing with `require()`. For example:
 
 ```javascript
 // Parent UXP module
@@ -63,7 +63,7 @@ const fs = require("fs");
 const os = require("os");
 ```
 
-**Permission-based APIs** also need to be allow-listed in your plugin's `manifest.json`. For example, to use the file system or make network requests, you must declare the appropriate permissions. Learn more about permissions in the [Manifest guide](../../../plugins/concepts/manifest/index.md#requiredpermissions).
+**Permission-based APIs** also need to be allow-listed in your plugin's `manifest.json`. For example, to use the [file system](../../../plugins/concepts/manifest/index.md#localfilesystem) or make [network requests](../../../plugins/concepts/manifest/index.md#network), you must declare the appropriate permissions. Learn more about permissions in the [Manifest guide](../../../plugins/concepts/manifest/index.md#requiredpermissions).
 
 ## Premiere Pro APIs
 

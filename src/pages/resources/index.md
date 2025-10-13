@@ -29,7 +29,7 @@ If you haven't already, we recommend you to start by reading the [Overview](../i
 
 <DiscoverBlock slots="link, text"/>
 
-[Fundamentals](./fundamentals/index.md)
+[Fundamentals](./fundamentals/apis/index.md)
 
 The different kinds of APIs available in UXP, how to build User Interfaces and more.
 

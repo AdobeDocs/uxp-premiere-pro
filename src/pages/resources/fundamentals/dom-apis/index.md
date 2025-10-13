@@ -22,4 +22,4 @@ const app = require("premierepro");
 
 ## DOM version
 
-The minimum DOM version needed for UXP development is the same as the minimum required version of Premiere Pro Beta that supports UXP development.
+The minimum DOM version needed for UXP development is the same as the minimum required version of Premiere Pro that supports UXP development.
