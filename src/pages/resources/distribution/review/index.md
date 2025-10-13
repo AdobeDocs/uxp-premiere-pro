@@ -80,8 +80,21 @@ These guidelines regulate, among other things, the correct usage of:
 - Approved badges and icons
 - Social media presence
 
-<InlineAlert slots="text" variant="info"/>
+<InlineAlert slots="header, text" variant="info"/>
 
-**Do not underestimate the importance of adhering to these guidelines**. Any violation may result in an immediate rejection of your submission.
+Do not underestimate the importance of adhering to guidelines.
 
-If you have any questions about the branding guidelines, please contact us at [CCDeveloperMarketing@adobe.com](mailto:CCDeveloperMarketing@adobe.com).
+Any violation may result in an immediate rejection of your submission. If you have any questions about the branding guidelines, please contact us at [CCDeveloperMarketing@adobe.com](mailto:CCDeveloperMarketing@adobe.com).
+
+## Common Rejections Causes
+
+The following table lists frequent reasons for plugin submission rejections, along with recommended actions to resolve them.
+
+| Cause                                                                                                                                                                                             | Resolution                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Violation of Adobe Branding Guidelines**: your plugin, documentation, or marketing materials use Adobe trademarks or design elements in a way that conflicts with the official branding policy. | Review and align all assets with the Adobe Branding Guidelines. Remove or adjust any unapproved logos, icons, or references before resubmission.                  |
+| **Blank User Interface on Launch**: the plugin opens with no visible or interactive elements due to initialization errors or missing assets.                                                      | Verify that all UI components, scripts, and dependencies load correctly. Test the plugin in a clean installation of the host application.                         |
+| **Use of default/placeholder Icons**: the plugin includes default icons or missing variants for supported themes and sizes.                                                                       | Provide custom-designed icons for all required themes, resolutions, and display scales.                                                                           |
+| **Non-functional buttons or silent failures**: interactive elements such as buttons or menus do not trigger actions or feedback, resulting in unclear or broken user flows.                       | Ensure all interactive components trigger expected actions, provide user feedback and progress indicators. Implement proper error handling for failed operations. |
+| **AI-generated content contains inappropriate material**: AI features in the plugin generate or display explicit, offensive, or policy-violating content.                                         | Apply robust content filtering or moderation to comply with Adobe’s content safety policies.                                                                      |
+| **Missing test data or credentials**: reviewers cannot access the plugin’s features because required test datasets, demo accounts, or credentials are not provided.                               | Include valid test data and credentials in the submission package, along with any access or setup instructions needed for review.                                 |

@@ -22,6 +22,10 @@ This section contains frequently asked questions about UXP and Premiere Pro.
 - [How can I enable Developer Mode?](#how-can-i-enable-developer-mode)
 - [In UDT, I get the error "Plugin Load Failed, Host Application specified is not available. Make sure the host application is started."](#in-udt-i-get-the-error-plugin-load-failed-host-application-specified-is-not-available-make-sure-the-host-application-is-started)
 
+### 🎨 User Interfaces
+
+- [How can I use Spectrum Web Components in my plugin?](#how-can-i-use-spectrum-web-components-in-my-plugin)
+
 ### 📦 Installers and Packages
 
 - [I am unable to install a plugin.](#i-am-unable-to-install-a-plugin)
@@ -49,6 +53,12 @@ You need to enable Developer mode in both the UXP Developer Tool and the host ap
 #### In UDT, I get the error "Plugin Load Failed, Host Application specified is not available. Make sure the host application is started."
 
 Ensure that Premiere Pro is running. If it is, check that the host application's Developer Mode is enabled; follow the instructions in the [this guide](../../plugins/index.md#prerequisites).
+
+<!-- 🎨 User Interfaces -->
+
+#### How can I use Spectrum Web Components in my plugin?
+
+You can use Spectrum Web Components in your plugin by following the instructions in the [Spectrum Web Components](../../uxp-api/reference-spectrum/swc/index.md) guide.
 
 <!-- 📦 Installers and Packages -->
 

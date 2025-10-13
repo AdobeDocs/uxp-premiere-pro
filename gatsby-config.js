@@ -184,6 +184,11 @@ module.exports = {
             path: "resources/starters-samples/",
           },
           {
+            title: "Recipes",
+            path: "resources/recipes/",
+            pages: require("./reference-recipes.js"),
+          },
+          {
             title: "Share & Distribute",
             path: "resources/distribution/overview/",
             pages: [
@@ -226,11 +231,6 @@ module.exports = {
                 path: "/resources/distribution/enterprise-distribution/",
               },
             ],
-          },
-          {
-            title: "Recipes",
-            path: "resources/recipes/",
-            pages: require("./reference-recipes.js"),
           },
           {
             title: "FAQ",
