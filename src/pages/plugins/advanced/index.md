@@ -30,7 +30,7 @@ Make network requests to fetch data
 
 Add UI elements to your plugin
 
-[Adding User Interfaces](../../resources/fundamentals/creating-ui/index.md)
+[Adding User Interfaces](../../resources/fundamentals/user-interfaces/index.md)
 
 <!--
 ![Complex hierarchical component structure icon](react.jpg)

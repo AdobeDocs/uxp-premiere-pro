@@ -170,8 +170,8 @@ module.exports = {
                 path: "/resources/fundamentals/dom-apis/",
               },
               {
-                title: "User Interface",
-                path: "/resources/fundamentals/creating-ui/",
+                title: "User Interfaces",
+                path: "/resources/fundamentals/user-interfaces/",
               },
               {
                 title: "Nomenclature",
