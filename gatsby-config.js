@@ -153,8 +153,12 @@ module.exports = {
         header: true,
         pages: [
           {
+            title: "Overview",
+            path: "resources/",
+          },
+          {
             title: "Fundamentals",
-            path: "resources/fundamentals/",
+            path: "resources/fundamentals/apis/",
             header: true,
             pages: [
               {
