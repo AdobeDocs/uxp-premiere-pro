@@ -150,7 +150,7 @@ For larger codebases and development teams, TypeScript has become a standard. It
 2. **Install TypeScript** and create your source folder:
 
 ```bash
-npm install --save-dev typescript @types/node
+npm install --save-dev typescript
 mkdir src
 ```
 
