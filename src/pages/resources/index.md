@@ -41,15 +41,15 @@ Links to available Templates and Sample plugins to help you get started.
 
 <DiscoverBlock slots="link, text"/>
 
-[Share & Distribute](./distribution/overview/index.md)
-
-How to share and distribute your plugins across Marketplaces and Enterprise environments.
-
-<DiscoverBlock slots="link, text"/>
-
 [Recipes](./recipes/index.md)
 
 Bite-size examples for common use cases.
+
+<DiscoverBlock slots="link, text"/>
+
+[Share & Distribute](./distribution/overview/index.md)
+
+How to share and distribute your plugins across Marketplaces and Enterprise environments.
 
 <DiscoverBlock slots="link, text"/>
 

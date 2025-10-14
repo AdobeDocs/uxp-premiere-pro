@@ -170,6 +170,10 @@ module.exports = {
                 path: "/resources/fundamentals/dom-apis/",
               },
               {
+                title: "TypeScript Support",
+                path: "/resources/fundamentals/typescript-support/",
+              },
+              {
                 title: "User Interfaces",
                 path: "/resources/fundamentals/user-interfaces/",
               },
