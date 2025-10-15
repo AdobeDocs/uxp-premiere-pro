@@ -189,7 +189,7 @@ module.exports = {
           },
           {
             title: "Recipes",
-            path: "resources/recipes/",
+            path: "resources/recipes/filesystem-operations/",
             pages: require("./reference-recipes.js"),
           },
           {

@@ -520,7 +520,7 @@ Default value is `undefined` (no clipboard access).
 | :---------------- | :------------------------------------------ | :------- | ----------- |
 | `localFileSystem` | `"plugin"` or `"request"` or `"fullAccess"` | optional | `undefined` |
 
-Enables the plugin to access the file system. The [file-operation recipe](../../../resources/recipes/file-operation/index.md) has a detailed example.
+Enables the plugin to access the file system. The [filesystem-operations recipe](../../../resources/recipes/filesystem-operations/index.md) has a detailed example.
 
 - `"plugin"`: enables the plugin to access the file system in the plugin folder.
 - `"request"`: enables the plugin to request access to the file system.

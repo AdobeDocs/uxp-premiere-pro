@@ -14,7 +14,7 @@ There's a lot more to plugin development than what we've covered so far. For mor
 
 Load/Save data from the FileSystem
 
-[File I/O](../../resources/recipes/file-operation/)
+[File I/O](../../resources/recipes/filesystem-operations/)
 
 ![Network icon](network.jpg)
 
