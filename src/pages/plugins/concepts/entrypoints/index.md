@@ -183,12 +183,12 @@ entrypoints.setup({
 The handler function receives a single event parameter of type `uxpcommand`. It can be listened to at the `<body>` element level, if needed.
 
 ```javascript
-document.body.addEventListner("uxpcommand" (event) => { /* ... */ });
+document.body.addEventListener("uxpcommand" (event) => { /* ... */ });
 ```
 
 ## Using Promises
 
-Promise support in UXP entrypoints is enabled for.
+Promise support in UXP entrypoints is enabled for:
 
 - **Plugins**: `destroy()`.
 - **Panels**: `create()`, `show()`, `destroy()`, `hide()`.
