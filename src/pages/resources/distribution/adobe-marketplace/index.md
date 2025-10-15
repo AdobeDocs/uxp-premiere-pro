@@ -36,6 +36,6 @@ While the UXP ecosystem allows you to share your plugin independently, you can h
   - Sales are paid out as **Royalties** on software purchases.
 - **Non-exclusive distribution channel**; you can still sell your plugin through other channels and marketplaces (see [this page](../package/index.md#mind-your-plugins-id) for more details).
 
-In exchange for these features, you will need to submit your plugin for [review and approval](../review/index.md), as it must meet Adobe's quality standards. Once approved, your plugin will be listed in the Creative Cloud Marketplace and will be available to users.
+In exchange for these features, you will need to submit your plugin for [review and approval](../review-guidelines/index.md), as it must meet Adobe's quality standards. Once approved, your plugin will be listed in the Creative Cloud Marketplace and will be available to users.
 
-Read more about how to [create a listing](../listing/index.md) and [review process](../review/index.md).
+Read more about how to [create a listing](../listing/index.md) and [review process](../review-guidelines/index.md).

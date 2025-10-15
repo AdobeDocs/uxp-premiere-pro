@@ -21,7 +21,7 @@ How to create and submit a listing to the Adobe Developer Distribution portal
 
 ## Overview
 
-This guide helps you ensure your UXP plugin distribution process goes as smoothly as possible. We've provided a list of all of the things you can prepare in advance, as well as the steps to follow to submit your plugin for public distribution. Please note that public distribution is subject to a [quality review](../review/index.md) by our team according to our Guidelines.
+This guide helps you ensure your UXP plugin distribution process goes as smoothly as possible. We've provided a list of all of the things you can prepare in advance, as well as the steps to follow to submit your plugin for public distribution. Please note that public distribution is subject to a [quality review](../review-guidelines/index.md) by our team according to our Guidelines.
 
 ## Preparing for Submission
 
@@ -86,7 +86,7 @@ In case you see a **Permission Required error** message when loading the Develop
 
 ![Developer Distribution - permission required](./img/listing--dev-role.png)
 
-In the Publisher Profile page, you'll need to provide the **Public name**, **Marketing website**, **Description**, and a **Publisher logo**. Make sure to adhere to the [branding guidelines](../review/index.md#4-branding-guidelines) for this information.
+In the Publisher Profile page, you'll need to provide the **Public name**, **Marketing website**, **Description**, and a **Publisher logo**. Make sure to adhere to the [branding guidelines](../review-guidelines/index.md#4-branding-guidelines) for this information.
 
 ![Developer Distribution - publisher profile](./img/listing--publisher-profile.png)
 
@@ -144,4 +144,4 @@ You have the option to have your plugin automatically published after the review
 
 ![Developer Distribution - Submit for review](./img/listing--submit-for-review.png)
 
-Click on **Submit listing** to finally submit your plugin for review. We aim to review your plugin within **10 business days** of submission and will notify you whether it has been accepted or requires changes. Check the [Review process](../review/index.md) page for more details.
+Click on **Submit listing** to finally submit your plugin for review. We aim to review your plugin within **10 business days** of submission and will notify you whether it has been accepted or requires changes. Check the [Review process](../review-guidelines/index.md) page for more details.

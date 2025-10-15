@@ -221,8 +221,8 @@ module.exports = {
                     path: "/resources/distribution/listing/",
                   },
                   {
-                    title: "Review process",
-                    path: "/resources/distribution/review/",
+                    title: "Review & Guidelines",
+                    path: "/resources/distribution/review-guidelines/",
                   },
                 ],
               },
