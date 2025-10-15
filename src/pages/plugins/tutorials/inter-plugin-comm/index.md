@@ -322,7 +322,7 @@ entrypoints.setup({
     simpleCommand: () => doThing(),
     commandWithInput: (args) => doThing(args),
   },
-  panels: { simplePanel: { show({ node } = {}) {} },
+  panels: { simplePanel: { show(rootNode) {} },
   },
 });
 
