@@ -290,7 +290,7 @@ export declare type EncoderManagerStatic = {
 export declare type EncoderManager = {
   exportSequence(sequence: Sequence, exportType: Constants.ExportType, outputFile?: string, presetFile?: string, exportFull?: boolean): Promise<boolean>	//Export a sequence. If no output file and preset is specified, the sequence will be exported with the applied export settings or standard export rules will be applied.
   encodeProjectItem(clipProjectItem: ClipProjectItem, outputFile?: string, presetFile?: string, workArea?: number, removeUponCompletion?: boolean, startQueueImmediately?: boolean): Promise<boolean>	//Encode input clipProjectItem in AME
-  encodeFile(filePath: string, outputFile?: string, presetFile?: string, inPoint: TickTime, outPoint: TickTime, workArea?: number, removeUponCompletion?: boolean, startQueueImmediately?: boolean): Promise<boolean>	//Encode input media file in AME
+  encodeFile(filePath: string, inPoint: TickTime, outPoint: TickTime, outputFile?: string, presetFile?: string, workArea?: number, removeUponCompletion?: boolean, startQueueImmediately?: boolean): Promise<boolean>	//Encode input media file in AME
   isAMEInstalled: boolean	//Check if AME is installed.
 }
 
@@ -427,7 +427,7 @@ export declare type Marker = {
 }
 
 export declare type MarkersStatic = {
-  getMarkers(markerOwnerObject: Sequence | ProjectItem): Promise<Markers>	//Returns the Markers object for Sequence Or ProjectItem
+  getMarkers(markerOwnerObject: Sequence | ClipProjectItem): Promise<Markers>	//Returns the Markers object for Sequence Or ProjectItem
 }
 
 export declare type Markers = {
