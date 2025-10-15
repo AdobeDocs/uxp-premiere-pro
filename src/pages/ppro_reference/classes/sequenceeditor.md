@@ -78,7 +78,7 @@ ___
 
 *Action*
   
-Create insert ProjectItem into Sequence Action
+Create insert ProjectItem into Sequence Action. Note: If you pass a track index greater than the number of existing tracks, a new track will be created.
 
 #### Parameters
 
