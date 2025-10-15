@@ -33,7 +33,7 @@ Developing in UXP requires some basic knowledge of Web technologies, such as Jav
 
 <InlineAlert variant="info" slots="header, text"/>
 
-UXP is not a Browser
+#### UXP is not a Browser
 
 It's important to note that while UXP lets you use Web technologies, it is not conceived to be a standard browser environment or replacement; not all features that a browser natively supports will be available in UXP. However, the platform provides a wide range of capabilities tailored to building powerful and creative solutions for Desktop applications.
 

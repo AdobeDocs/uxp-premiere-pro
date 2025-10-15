@@ -23,11 +23,12 @@ Plugins and Scripts
 
 Please make sure your local environment uses the following application versions before proceeding.
 
-- Premiere Pro v25.2 or higher
-- UDT v2.1.0 or higher
-- Manifest version v5 or higher
+- **Premiere Pro v25.6** or higher
+- **UDT v2.2.0** or higher
+- **Manifest version v5** or higher
 
 ## Example
+
 <!-- Provide a simple example using code snippets -->
 
 <CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, JSON" />
@@ -35,6 +36,7 @@ Please make sure your local environment uses the following application versions 
 #### HTML
 
 ```html
+
 ```
 
 #### JavaScript
@@ -48,6 +50,7 @@ async function foo() {
 #### manifest
 
 ```json
+
 ```
 
 Screenshot illustrating the output (if applicable)
@@ -57,4 +60,5 @@ Screenshot illustrating the output (if applicable)
 ## Reference material
 
 <!-- Recipes should end with links to API docs used in the code above -->
+
 - <!-- <a href={`${siteConfig.uxpApiPath}`}>API</a> -->
