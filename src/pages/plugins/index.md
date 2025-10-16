@@ -25,6 +25,8 @@ Before you start, make sure you have the following software installed on your ma
 - [**UXP Developer Tool (v2.2)**](https://creativecloud.adobe.com/apps/download/.uxp-developer-tools) or later.
 - A **Code Editor** of your choice—for example, [Visual Studio Code](https://code.visualstudio.com/) or [Cursor](https://www.cursor.com/).
 
+<InlineAlert variant="info" slots="text"/>
+
 Premiere Pro's Developer Mode should be enabled. Open the **Settings** menu, select the **Plugins** tab and select the **Enable developer mode** checkbox. You will need to restart Premiere Pro for the changes to take effect.
 
 ![Enable Developer Mode](./img/getting-started--dev-mode.png)

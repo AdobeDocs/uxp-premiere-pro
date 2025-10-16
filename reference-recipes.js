@@ -12,8 +12,8 @@ module.exports = [
     path: "/resources/recipes/clipboard/",
   },
   {
-    title: "Processes",
-    path: "/resources/recipes/launch-process/",
+    title: "External Process",
+    path: "/resources/recipes/external-process/",
   },
   {
     title: "CSS Styling",
