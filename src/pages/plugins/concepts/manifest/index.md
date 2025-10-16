@@ -758,7 +758,7 @@ Specifies which experimental features the plugin can use.
 ```json
 {
   "enableFillAsCustomAttribute": true,
-  "enableSWCSupport": true
+  "enableSWCSupport": true,
   "enableAlerts": true
 }
 ```
