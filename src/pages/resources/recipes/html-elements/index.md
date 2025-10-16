@@ -1,135 +1,170 @@
 ---
-title: HTML elements
-description: Ways to create HTML elements
+title: Creating HTML Elements
+description: Build user interfaces using HTML markup or JavaScript DOM methods
 keywords:
-  - User interface
-  - UI in UXP
+  - HTML
+  - DOM
+  - UI
+  - createElement
+  - dialog
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
-# HTML Elements
+# Creating HTML Elements
 
-UXP core APIs let you create renditions but depending on whether you are writing scripts or plugins, you can create UI either by using HTML tags or just stick to JavaScript.
+Build user interfaces using HTML markup or JavaScript DOM methods
 
-<!--InlineAlert variant="info" slots="header, text1, text2"/-->
+UXP lets you create UI elements in two ways: **define them in HTML** or **create them dynamically with JavaScript**. Both approaches work for Panel plugins, while Command plugins can only create modal dialogs using JavaScript.
 
-<!--Scripts and plugins-->
+## Prerequisites
 
-<!--**In scripts**, you only have the option to create UI from the `.idjs` script (JavaScript) file. Moreover, remember that scripts only allow you to create UI within a modal dialog.-->
+Before you begin, make sure your development environment uses the following versions:
 
-**In plugins**, a panel can be created both ways - using HTML tags or JavaScript. However, command plugins behave similarly to <scripts and can create only modal dialogs from JavaScript.
+- **Premiere Pro v25.6** or higher
+- **UDT v2.2** or higher
+- **Manifest version v5** or higher
 
-Let's take 'dialog' as an example and demonstrate both ways. You can extend the same principle to other HTML Elements
+## Example: Using HTML Markup
 
-## System requirements
-
-Please make sure your local environment uses the following application versions before proceeding.
-
-- Premiere Pro v25.2 or higher
-- UDT v2.1.0 or higher
-- Manifest version v5 or higher
-
-## Using HTML
-
-<!-- Provide a simple example using code snippets -->
+Define your UI structure in HTML, then control it with JavaScript.
 
 <CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, CSS" />
 
-#### HTML
+#### index.html
 
 ```html
 <button id="showDialog">Show Dialog</button>
+
 <dialog id="sampleDialog">
-    <div>
-        <h1>Well hello!</h1>
-        <p>A dialog built using HTML tags</p>
-    </div>
+  <div>
+    <h1>Hello! 👋</h1>
+    <p>A dialog built using HTML tags</p>
+  </div>
 </dialog>
 ```
 
-#### JavaScript
+#### index.js
 
 ```js
 const showDialogBtn = document.getElementById("showDialog");
-showDialogBtn.addEventListener("click", showDialog);
-function showDialog() {
-    const dialog = document.getElementById("sampleDialog");
-    dialog.show();
-    dialog.addEventListener("cancel", () => {
-        console.log("Dialog dismissed");
-    });
-}
+showDialogBtn.addEventListener("click", () => {
+  const dialog = document.getElementById("sampleDialog");
+  dialog.show();
+
+  dialog.addEventListener("cancel", () => {
+    console.log("Dialog dismissed");
+  });
+});
 ```
 
-#### CSS
+#### styles.css
 
 ```css
 #sampleDialog > div {
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    width: 400px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 400px;
+  align-items: center;
+  color:#DDD;
 }
+
+h1 { color: #FFF; }
+
 #sampleDialog > div > p {
-    margin-top: 30px;
+  margin-top: 30px;
 }
+
 ```
 
-## Using only JavaScript
+![Sample dialog created with HTML markup](./img/html-elements--dialog-html.png)
+
+## Example: Using JavaScript Only
+
+Create and style elements dynamically using JavaScript DOM methods.
 
 <CodeBlock slots="heading, code" repeat="2" languages="HTML, JavaScript" />
 
-#### HTML
+#### index.html
 
 ```html
-<button id="showDialog">Show Dialog</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <button id="showDialog">Show Dialog</button>
+  </body>
+</html>
+
 ```
 
-#### JavaScript
+#### index.js
 
 ```js
 const showDialogBtn = document.getElementById("showDialog");
-showDialogBtn.addEventListener("click", showDialog);
-function showDialog() {
-    // create dialog 
-    const dialog = document.createElement("dialog");  
-  
-    const div = document.createElement("div");
-    div.style.display = "flex";
-    div.style.flexDirection = "column";
-    div.style.height = "300px";
-    div.style.width = "400px";
-    div.style.alignItems = "center";
-  
-    const header = document.createElement("h1");
-    header.textContent = "Well hello!!";
-    div.appendChild(header);
+showDialogBtn.addEventListener("click", () => {
+  // Create dialog element
+  const dialog = document.createElement("dialog");
 
-    const para = document.createElement("p");
-    para.textContent = "A dialog built using HTML tags";
-    div.appendChild(para);
-  
-    dialog.appendChild(div);
 
-    // show dialog
-    document.body.appendChild(dialog).showModal();
+  // Create container
+  const div = document.createElement("div");
+  div.style.display = "flex";
+  div.style.flexDirection = "column";
+  div.style.height = "300px";
+  div.style.width = "400px";
+  div.style.alignItems = "center";
+  div.style.color = "#DDD"; // Apply UXP host text color
 
-    dialog.addEventListener("cancel", () => {
-        console.log("Dialog dismissed");
-    });
-}
+  // Create header
+  const header = document.createElement("h1");
+  header.textContent = "Hello! 👋";
+  header.style.color = "#FFF";
+  div.appendChild(header);
+
+  // Create paragraph
+  const para = document.createElement("p");
+  para.textContent = "A dialog built dynamically with JavaScript";
+  para.style.marginTop = "30px";
+  div.appendChild(para);
+
+  // Assemble and show
+  dialog.appendChild(div);
+  document.body.appendChild(dialog);
+  dialog.showModal();
+
+  dialog.addEventListener("cancel", () => {
+    console.log("Dialog dismissed");
+  });
+});
 ```
 
-![Sample dialog](sample-dialog.png)
+![Sample dialog created with JavaScript](./img/html-elements--dialog-js.png)
 
-## Additional notes
+## Creating Spectrum Components
 
-- Creating dialogs within scripts can sometimes be a little tricky requiring you to handle the showing/hiding with async/promises. Check out the script tutorial on modal dialogs.<!--// TODO add linkI>
-- You can also use `document.createElement` to createSpectrum Widgets `sp-*` in UXP. However, it will not work for Spectrum Web Components.
+You can use `document.createElement()` to create Spectrum UI elements dynamically:
 
-## Reference material
+```js
+// Create a Spectrum button
+const button = document.createElement("sp-button");
+button.textContent = "Click me";
+button.setAttribute("variant", "cta");
+document.body.appendChild(button);
+```
 
-- [Dialog Element](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement.md)
-- [Other HTML Elements](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/)
+<InlineAlert variant="info" slots="text"/>
+
+This approach works for **Spectrum Widgets** (`sp-*` elements). For **Spectrum Web Components**, you must define them in HTML markup.
+
+## Reference Material
+
+- [HTMLDialogElement](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement.md): dialog-specific properties and methods.
+- [HTML Elements](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/): complete list of supported HTML elements.
+- [Spectrum Web Components](../../../uxp-api/reference-spectrum/): Adobe's UI component library.

@@ -1,76 +1,87 @@
 ---
-title: CSS styling
-description: Techniques to style UI in UXP
+title: CSS Styling
+description: Style your plugin's user interface using CSS classes, inline styles, or JavaScript
 keywords:
-  - CSS in UXP
+  - CSS
+  - styling
+  - UI
+  - Spectrum
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
-# CSS styling
+# CSS Styling
 
-Spectrum is Adobe's design system, used across multiple applications. We recommend that you use Spectrum-based controls wherever possible for UI, for consistency. In fact, UXP offers a ready-made Spectrum-styled UI library.
+Style your plugin's user interface using CSS classes, inline styles, or JavaScript
 
-While you are exploring importing a stylesheet or making tweaks, you should keep in mind that **UXP is not a browser**. Its architecture does not (and will not) support all the CSS properties. For example, UXP cannot support grid layout innately. The ones that are supported are listed in the [API reference docs](./index.md#reference-material).
+UXP supports standard CSS for styling your plugin's interface. You can apply styles using **CSS classes**, **inline styles**, or **JavaScript**—choose the approach that fits your workflow best.
 
-**In plugins**, you have a lot more flexibility to manage CSS styling. You can add it via CSS classes or use inline styling or add it via JavaScript.
+## Prerequisites
 
-## System requirements
+Before you begin, make sure your development environment uses the following versions:
 
-Please make sure your local environment uses the following application versions before proceeding.
+- **Premiere Pro v25.6** or higher
+- **UDT v2.2** or higher
+- **Manifest version v5** or higher
 
-- Premiere Pro v25.2 or higher
-- UDT v2.1.0 or higher
-- Manifest version v5 or higher
-
-## Example
-
-Example to add a background color to divs in three different ways:
-
-- CSS class
-- Inline style
-- Via JavaScript
+## Three Ways to Apply Styles
 
 <CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, CSS" />
 
-#### HTML
+#### index.html
 
 ```html
-<div class="green">
-  <h1>Styling from CSS class</h1>
+<!-- 1. Using CSS classes -->
+<div class="green-background">
+  <h1>Styled with CSS class</h1>
 </div>
 
+<!-- 2. Using inline styles -->
 <div style="background-color: yellow;">
-  <h1>Inline styling</h1>
+  <h1>Styled inline</h1>
 </div>
 
+<!-- 3. Using JavaScript -->
 <div id="exampleDiv">
-  <h1>Styling from JS</h1>
+  <h1>Styled with JavaScript</h1>
 </div>
 ```
 
-#### JavaScript
+#### index.js
 
 ```js
+// Apply styles via JavaScript
 const exampleDiv = document.getElementById("exampleDiv");
-exampleDiv.style.backgroundColor = 'orange';
+exampleDiv.style.backgroundColor = "orange";
 ```
 
-#### CSS
+#### styles.css
 
 ```css
-.green {
+/* Define styles in a stylesheet */
+.green-background {
   background-color: green;
 }
 ```
 
-## Additional notes
+## Important Considerations
 
-- **CSS preprocessors**: UXP understands pure CSS only. Using CSS preprocessors such as SASS or SCSS is possible, provided you transpile your code to a CSS stylesheet before using it. Additionally, you will require a tool like Webpack to create your plugin bundle correctly and a slightly different way to [debug using UDT](../../../plugins/tutorials/udt-deep-dive/plugin-workflows.md#working-with-bundlers) (similar to the React framework setup).
+<InlineAlert variant="warning" slots="header, text"/>
 
-## Reference material
+UXP is not a browser
 
-- [CSS reference](../../../uxp-api/reference-css/)
-- [Spectrum-styled components](../../../uxp-api/reference-spectrum/)
-  <!-- [Sample]() // TODO link to kitchen sink plugin -->
-  <!-- [Webpack template]() // TODO link to webpack template -->
+UXP does not support all CSS properties. For example, CSS Grid Layout is not available. Check the [CSS reference](../../../uxp-api/reference-css/) for a complete list of supported properties.
+
+### CSS Preprocessors
+
+UXP only understands standard CSS. If you want to use preprocessors like **Sass** or **SCSS**, you must transpile them to CSS before bundling your plugin. This requires build tools like Webpack and a slightly different [debugging workflow](../../../plugins/tutorials/udt-deep-dive/plugin-workflows.md#working-with-bundlers).
+
+### Use Spectrum for Consistency
+
+We recommend using [Spectrum](../../fundamentals/user-interfaces/index.md#spectrum-web-components-swc) for UI elements whenever possible. Spectrum is Adobe's design system and provides a consistent look and feel across all Adobe applications.
+
+## Reference Material
+
+- [CSS Reference](../../../uxp-api/reference-css/index.md): complete list of supported CSS properties.
+- [Spectrum Web Components](../../../uxp-api/reference-spectrum/index.md) Reference.

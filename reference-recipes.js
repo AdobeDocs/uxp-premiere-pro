@@ -32,7 +32,7 @@ module.exports = [
     path: "/resources/recipes/debug/",
   },
   {
-    title: `Host Information`,
+    title: `Host Environment`,
     path: "/resources/recipes/host-info/",
   },
 ];

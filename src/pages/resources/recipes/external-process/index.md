@@ -1,6 +1,6 @@
 ---
 title: Launch External Processes
-description: Open files in their default applications and launch external programs from your UXP plugin—enabling workflows that extend beyond Premiere Pro.
+description: Open files and folders in their default applications and launch external programs from your UXP plugin—enabling workflows that extend beyond Premiere Pro.
 keywords:
   - shell
   - external process
@@ -68,7 +68,7 @@ Both methods require user consent and return a [Promise](https://developer.mozil
 const { shell } = require("uxp");
 ```
 
-### Example: Open Files with Default Applications
+### Example: Open with Default Application
 
 Use `openPath()` to open any file on the user's system in its default application. For example, PDFs in a reader, videos in a player, or text files in an editor.
 
@@ -147,7 +147,7 @@ When using `openPath()`, you must **specify the file extensions** you intend to 
 
 If you attempt to open a file with an unlisted extension, the operation will fail.
 
-### Example: Launch Applications via URL Schemes
+### Example: Launch Application with URL Scheme
 
 Use `openExternal()` to launch applications via URL schemes—open websites in browsers, compose emails, or trigger platform-specific apps like Maps.
 
@@ -246,7 +246,7 @@ async function openLocationInMaps() {
 
 The `file:/` scheme is **not allowed** with `openExternal()`. Use `openPath()` instead for opening local files.
 
-### Platform-Specific URL Schemes
+### Platform-specific Schemes
 
 URL schemes vary between operating systems. Some schemes are platform-specific:
 
