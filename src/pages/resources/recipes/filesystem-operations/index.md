@@ -16,13 +16,13 @@ contributors:
 
 UXP provides powerful APIs for reading, writing, creating, and deleting files. This guide will walk you through the concepts, permissions, and practical examples you need to work with the file system in your plugins.
 
-## Prerequisites
+## System requirements
 
-Before you begin, make sure your development environment uses the following versions:
+Please make make sure your development environment uses the following **minimum versions** to avoid compatibility issues:
 
-- **Premiere Pro v25.2** or higher
-- **UDT v2.1.0** or higher
-- **Manifest version v5** or higher
+- **Premiere Pro v25.6**
+- **UDT v2.2**
+- **Manifest v5**
 
 ## Understand File System Access
 
@@ -68,6 +68,7 @@ Here's how to declare this permission in `manifest.json`:
   "requiredPermissions": {
     "localFileSystem": "plugin"
   }
+  // ...
 }
 ```
 
@@ -218,23 +219,27 @@ When your plugin needs unrestricted access to the file system, use the `"fullAcc
 const { localFileSystem } = require('uxp').storage;
 
 async function accessUserDocuments() {
-    // Access a specific location outside the sandbox
-    try {
-        // For macOS
-        const documentsFolder = await localFileSystem.getEntryWithUrl("file:/Users/user/Documents");
-        // For Windows, use: "file:/C:/Users/user/Documents"
+  // Access a specific location outside the sandbox
+  try {
+    // For macOS
+    const documentsFolder = await localFileSystem.getEntryWithUrl(
+      "file:/Users/user/Documents" // 👈 update with your user
+    );
+    // For Windows, use: "file:/C:/Users/user/Documents"
 
-        console.log(`Documents folder path: ${documentsFolder.nativePath}`);
+    console.log(`Documents folder path: ${documentsFolder.nativePath}`);
 
-        // Read a specific file
-        const configFile = await localFileSystem.getEntryWithUrl("file:/Users/user/Documents/config.json");
-        if (configFile.isFile) {
-            const content = await configFile.read();
-            console.log("Config file content:", content);
-        }
-    } catch (e) {
-        console.error("Failed to access documents folder:", e);
+    // Read a specific file
+    const configFile = await localFileSystem.getEntryWithUrl(
+      "file:/Users/user/Documents/config.json" // 👈 update with your user
+    );
+    if (configFile.isFile) {
+      const content = await configFile.read();
+      console.log("Config file content:", content);
     }
+  } catch (e) {
+    console.error("Failed to access documents folder:", e);
+  }
 }
 ```
 
@@ -345,6 +350,12 @@ async function selectFolderForExport() {
   // ...
 }
 ```
+
+<InlineAlert variant="info" slots="header,text"/>
+
+#### Domain tokens
+
+In the example above, we use the `domains.userDesktop` token to get the user's Desktop folder. You can use other domains tokens, such as `domains.userDocuments`, `domains.userDownloads`, etc. Check the [Domain Tokens](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/domains.md) reference for the full list.
 
 ### Example 4: Remembering User Selections with Tokens
 
@@ -484,6 +495,10 @@ async function writeToDataFolder() {
 }
 ```
 
+<InlineAlert variant="info" slots="text"/>
+
+As shown in the example above, you can use the `plugin:/` URL scheme in both `fs` and `localFileSystem` APIs .
+
 ### Example 6: Writing to Arbitrary Locations
 
 Write files to any location on the file system using absolute paths:
@@ -502,7 +517,7 @@ async function exportToDesktop() {
 
         // For macOS
         await fs.writeFile(
-            "/Users/user/Desktop/export.txt",
+            "/Users/user/Desktop/export.txt", // 👈 update with your user
             exportData,
             { encoding: "utf-8" }
         );
@@ -514,15 +529,15 @@ async function exportToDesktop() {
     }
 }
 
-async function readFromDocuments() {
-    // Read a file from the user's Documents folder
+async function readFromDesktop() {
+    // Read a file from the user's Desktop folder
     try {
         // For macOS
         const content = await fs.readFile(
-            "/Users/user/Documents/input.txt",
+            "/Users/user/Desktop/export.txt",  // 👈 update with your user
             "utf8"
         );
-        // For Windows, use: "C:/Users/user/Documents/input.txt"
+        // For Windows, use: "C:/Users/user/Desktop/export.txt"
 
         console.log("File content:", content);
     } catch (e) {

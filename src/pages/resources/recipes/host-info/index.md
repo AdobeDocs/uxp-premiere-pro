@@ -15,11 +15,11 @@ Sometimes it's necessary to find out the host environment where a plugin or scri
 
 ## System requirements
 
-Please make sure your local environment uses the following application versions before proceeding.
+Please make make sure your development environment uses the following **minimum versions** to avoid compatibility issues:
 
-- Premiere Pro v25.2 or higher
-- UDT v2.1.0 or higher
-- Manifest version v5 or higher
+- **Premiere Pro v25.6**
+- **UDT v2.2**
+- **Manifest v5**
 
 ## Example
 

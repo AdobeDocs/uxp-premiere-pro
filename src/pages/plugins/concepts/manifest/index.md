@@ -177,11 +177,11 @@ Indicates the various permissions this plugin requires before accessing certain 
 
 ### `featureFlags`
 
-| Name           | Type                            | Default |
-| :------------- | :------------------------------ | :------ |
-| `featureFlags` | [`FeatureFlags`](#featureflags) | `{}`    |
+| Name           | Type                              | Default |
+| :------------- | :-------------------------------- | :------ |
+| `featureFlags` | [`FeatureFlags`](#featureflags-1) | `{}`    |
 
-A set of feature flags that can be used to enable or disable certain features of the plugin. These flags are used to gate features that are not yet ready for general availability. See the [FeatureFlags](#featureflags) section for more details.
+A set of feature flags that can be used to enable or disable certain features of the plugin. These flags are used to gate features that are not yet ready for general availability. See the [FeatureFlags](#featureflags-1) section for more details.
 
 ### `addon`
 
@@ -559,7 +559,7 @@ Default value is `undefined` (no webview usage). See the [`WebviewPermission`](#
 
 Enables the plugin to launch processes using APIs like `require("uxp").shell.openPath()` or `shell.openExternal()`.
 
-Default value is `undefined` (no process launching). See the [`LaunchProcessPermission`](#launchprocesspermission) section for more details and the [launch process recipe](../../../resources/recipes/launch-process/index.md) for examples.
+Default value is `undefined` (no process launching). See the [`LaunchProcessPermission`](#launchprocesspermission) section for more details and the [launch process recipe](../../../resources/recipes/external-process/index.md) for examples.
 
 ##### `allowCodeGenerationFromStrings`
 
@@ -731,7 +731,7 @@ A set of schemes that the plugin can launch, for example `["http", "https", "mai
 
 A set of extensions that the plugin can launch, for example `["pdf", "png", "jpg"]`. Only relevant for local files (using the `file://` schema).
 
-The [launch process recipe](../../../resources/recipes/launch-process/index.md) has more details.
+The [launch process recipe](../../../resources/recipes/external-process/index.md) has more details.
 
 ##### `IpcPermission`
 

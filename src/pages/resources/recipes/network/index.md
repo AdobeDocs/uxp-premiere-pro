@@ -21,13 +21,13 @@ Learn how to connect your UXP plugin to the web
 
 UXP provides powerful network APIs that let your plugin **fetch data**, **access online services**, and **communicate in real time**—all while keeping users safe through a robust permission model. This guide covers how to use `fetch`, `XMLHttpRequest`, and `WebSocket` in UXP, how to declare network permissions properly, and how to handle errors.
 
-## Prerequisites
+## System requirements
 
-Before you begin, make sure your development environment uses the following versions:
+Please make make sure your development environment uses the following **minimum versions** to avoid compatibility issues:
 
-- **Premiere Pro v25.6** or higher
-- **UDT v2.2.0** or higher
-- **Manifest version v5** or higher
+- **Premiere Pro v25.6**
+- **UDT v2.2**
+- **Manifest v5**
 
 ## Network Security
 
@@ -328,7 +328,7 @@ async function safeFetch(url, options = {}, timeoutMs = 8000) {
 }
 ```
 
-### Troubleshooting Common Issues
+### Troubleshoot Common Issues
 
 | Symptom                                  | Likely Cause                       | Solution                                                                        |
 | ---------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------- |
