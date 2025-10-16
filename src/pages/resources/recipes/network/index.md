@@ -48,11 +48,11 @@ In your plugin's `manifest.json`, use the [`requiredPermissions.network`](../../
 }
 ```
 
-You may use wildcards for domain patterns, such as `"https://api.*.example.com"` to match multiple environments (for example, dev, staging, and production).
+You may use wildcards for domain patterns, such as `"https://api.*.example.com"` to match multiple environments (for example, dev, staging, and production). **Any request to an unlisted domain will fail** with a permission error.
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="warning" slots="text"/>
 
-Please note that **any request to an unlisted domain will fail** with a permission error.
+All APIs support both HTTP and HTTPS, but macOS restricts `http://` for security reasons. You should use `https://` instead.
 
 ## Choose the right Network API
 
@@ -64,7 +64,7 @@ UXP supports three primary ways to perform network communication:
 | XMLHttpRequest | Legacy compatibility                | Progress events, upload tracking   |
 | WebSocket      | Real-time communication             | Persistent bidirectional data flow |
 
-Let's explore each one in depth.
+Network APIs are available globally in UXP, you don't need to import them. Let's explore each one in depth.
 
 ### Using fetch()
 
@@ -337,17 +337,22 @@ async function safeFetch(url, options = {}, timeoutMs = 8000) {
 | Request blocked by CORS                  | Remote server missing CORS headers | Ensure your server allows requests from UXP (check Access-Control-Allow-Origin) |
 | WebSocket connection closed unexpectedly | Server-side disconnect             | Check for idle timeout or SSL misconfiguration                                  |
 
-### Additional Notes
+## Reference Material
 
-- Network APIs (fetch, XHR, and WebSocket) are **available globally** in UXP; you don't need to import them.
-- All APIs support both HTTP and HTTPS, but **macOS restricts `http://`** for security reasons.
-- For performance, reuse existing connections instead of reconnecting repeatedly.
-- Keep user data secure; don't log sensitive information in production.
+- [`fetch`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch.md) API Reference.
+- [`XMLHttpRequest`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md) Reference.
+- [`WebSocket`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/WebSocket.md) Reference.
+- [Manifest Permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition).
+- [Network Permission Details](../../../plugins/concepts/manifest/index.md#networkpermission).
 
-### Reference Material
+## Summary
 
-- [`fetch`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch.md) API Reference
-- [`XMLHttpRequest`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md) Reference
-- [`WebSocket`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/WebSocket.md) Reference
-- [Manifest Permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition)
-- [Network Permission Details](../../../plugins/concepts/manifest/index.md#networkpermission)
+1. **Network Security Model**: By default, UXP plugins cannot access the internet. All network operations require explicit declaration of permitted domains in the `manifest.json` file under `requiredPermissions` to prevent unwanted network activity.
+   - Add specific domains to the `domains` array (e.g., `"https://api.example.com"`).
+   - Use wildcards for flexible domain patterns (e.g., `"https://*.adobe.io"`),
+   - Any request to an unlisted domain will fail with a permission error,
+   - On macOS, `http://` URLs are restricted for security reasons; use `https://` instead.
+2. **Three Network APIs**: Choose based on your use case:
+   - **`fetch()`**: Modern, promise-based API for HTTP requests; supports JSON, text, binary data, and streaming; ideal for most use cases.
+   - **`XMLHttpRequest`**: Legacy, event-driven API; useful for progress events and upload tracking; provides compatibility with older code patterns.
+   - **`WebSocket`**: Real-time, bidirectional communication; maintains persistent connections to servers; client-only (plugins cannot host WebSocket servers).

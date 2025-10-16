@@ -585,11 +585,20 @@ Always handle file system errors gracefully and inform users when access is deni
 | Simple path-based operations         | FS Module       |
 | Familiarity with Node.js fs API      | FS Module       |
 
+## Reference Material
+
+- [FileSystemProvider](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md): main interface for file system operations.
+- [Entry](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Entry.md): base class for files and folders.
+- [File](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/File.md): file-specific operations.
+- [Folder](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Folder.md): folder-specific operations.
+- [EntryMetadata](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/EntryMetadata.md): file and folder metadata.
+- [`fs` module](../../../uxp-api/reference-js/Modules/fs/): complete file system API reference.
+- [Path](../../../uxp-api/reference-js/Global%20Members/Path.md): path manipulation utilities.
+- [LocalStorage](../../../uxp-api/reference-js/Global%20Members/Data%20Storage/LocalStorage.md): persistent data storage for tokens.
+- [Manifest Permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition): overview of all permissions.
+- [Local File System Permission](../../../plugins/concepts/manifest/index.md#localfilesystem): detailed permission documentation.
+
 ## Summary
-
-UXP provides powerful file system APIs that enable plugins to read, write, and manage files while maintaining security through a permission-based model.
-
-**Key Concepts:**
 
 1. **The Sandbox Model**: By default, plugins can only access safe locations (plugin folder, data folder, and temporary folder) without additional permissions. The plugin folder is read-only, while data and temporary folders are read-write but may be cleared automatically.
 
@@ -613,10 +622,10 @@ UXP provides powerful file system APIs that enable plugins to read, write, and m
 
 5. **Persistent Access with Tokens**: When users grant access to files or folders via `"request"` permission, create session tokens (temporary) or persistent tokens (survive across sessions) to remember these locations without repeatedly prompting users.
 
-**Common Patterns:**
+6. **Common Patterns**:
 
-- For configuration files in your plugin folder: Use `fs.readFile("plugin:/config.json")`
-- For saving plugin state: Use `fs.writeFile("plugin-data:/state.json")`
-- For user-selected files: Use `localFileSystem.getFileForOpening()` with `"request"` permission
-- For batch operations: Use `LocalFileSystem` API with folder traversal
-- For remembering user selections: Create persistent tokens and store them in `localStorage`
+   - For configuration files in your plugin folder: Use `fs.readFile("plugin:/config.json")`
+   - For saving plugin state: Use `fs.writeFile("plugin-data:/state.json")`
+   - For user-selected files: Use `localFileSystem.getFileForOpening()` with `"request"` permission
+   - For batch operations: Use `LocalFileSystem` API with folder traversal
+   - For remembering user selections: Create persistent tokens and store them in `localStorage`
