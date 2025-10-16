@@ -116,6 +116,9 @@ async function pasteFromClipboard() {
     console.error("❌ Failed to read from clipboard:", err);
   }
 }
+
+// Example usage
+pasteFromClipboard();
 ```
 
 #### manifest.json
@@ -163,6 +166,9 @@ async function transformClipboardText() {
     console.error("Failed to transform clipboard text:", err);
   }
 }
+
+// Example usage
+transformClipboardText();
 ```
 
 For this use case, your manifest would need `"readAndWrite"` permission.
