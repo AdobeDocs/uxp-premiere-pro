@@ -136,6 +136,10 @@ module.exports = {
                 path: "/plugins/tutorials/inter-plugin-comm/",
               },
               {
+                title: "Add Multiple Panels",
+                path: "/plugins/tutorials/add-panels/",
+              },
+              {
                 title: "Modularizing code",
                 path: "/plugins/tutorials/importing-modules/",
               },

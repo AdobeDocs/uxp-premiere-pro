@@ -35,6 +35,12 @@ Create menu items in Premiere Pro that execute your plugin code
 
 <DiscoverBlock slots="link, text"/>
 
+[Add Multiple Panels](add-panels/)
+
+Create plugins with multiple panel entrypoints and control their display programmatically
+
+<DiscoverBlock slots="link, text"/>
+
 [Add Lifecycle Hooks](add-lifecycle-hooks/)
 
 Respond to plugin and panel events with setup and teardown logic
