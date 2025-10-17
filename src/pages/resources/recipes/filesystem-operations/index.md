@@ -1,5 +1,5 @@
 ---
-title: Filesystem operations
+title: Filesystem Operations
 description: Learn how to read, write, and manage files & folders in UXP plugins
 keywords:
   - localFileSystem
@@ -12,9 +12,9 @@ contributors:
   - https://github.com/undavide
 ---
 
-# Filesystem operations
+# Filesystem Operations
 
-UXP provides powerful APIs for reading, writing, creating, and deleting files. This guide will walk you through the concepts, permissions, and practical examples you need to work with the file system in your plugins.
+UXP provides powerful APIs for reading, writing, creating, and deleting files. This guide will walk you through the concepts, permissions, and practical examples you need to work with the file system in your plugins
 
 ## System requirements
 
@@ -56,9 +56,9 @@ The detailed [`PermissionsDefinition` reference](../../../plugins/concepts/manif
 
 The `localFileSystem` permission accepts three values:
 
-- **`"plugin"`** (default): Provides access only to the sandbox locations
-- **`"request"`**: Allows your plugin to request user permission via file picker dialogs
-- **`"fullAccess"`**: Grants unrestricted access to the user's file system
+- **`"plugin"`** (default): provides access only to the sandbox locations. Your plugin will always be able to access the installation directory, data folder, and temporary folder.
+- **`"request"`**: allows your plugin to request user permission via file picker dialogs
+- **`"fullAccess"`**: grants unrestricted access to the user's file system
 
 Here's how to declare this permission in `manifest.json`:
 
@@ -78,7 +78,7 @@ Best practices for permissions
 
 Choose the _most accurate_ permission level for your use case. In the future, users will be asked to provide explicit consent based on the permissions you request.
 
-While `"fullAccess"` might seem like the easiest option, users may be uncomfortable granting full file system access unless it's absolutely necessary—and they might deny installation of your plugin altogether. Use `"request"` when you need access to user-specified files, and `"plugin"` when sandbox access is sufficient.
+While `"fullAccess"` might seem like the easiest option, users may be uncomfortable granting full file system access unless it's absolutely necessary—and they might deny installation of your plugin altogether. Use `"request"` when you need access to user-specified files, and `"plugin"` (or simply omit the `localFileSystem` field, which defaults to `"plugin"`) when sandbox access is sufficient.
 
 ### URL Schemes
 
@@ -166,7 +166,7 @@ Now let's explore practical examples for different permission levels.
 
 ### Example 1: Accessing the Sandbox
 
-When your plugin only needs to work with files in its own sandbox, use the `"plugin"` permission level.
+When your plugin only needs to work with files in its own sandbox, use the `"plugin"` permission level—or leave the `localFileSystem` field empty, which defaults to `"plugin"` anyway.
 
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JSON" />
 

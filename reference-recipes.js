@@ -1,6 +1,6 @@
 module.exports = [
   {
-    title: "FileSystem Operations",
+    title: "Filesystem Operations",
     path: "/resources/recipes/filesystem-operations/",
   },
   {

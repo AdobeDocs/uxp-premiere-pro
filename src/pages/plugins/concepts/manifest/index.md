@@ -516,17 +516,17 @@ Default value is `undefined` (no clipboard access).
 
 ##### `localFileSystem`
 
-| Name              | Type                                        | Required | Default     |
-| :---------------- | :------------------------------------------ | :------- | ----------- |
-| `localFileSystem` | `"plugin"` or `"request"` or `"fullAccess"` | optional | `undefined` |
+| Name              | Type                                        | Required | Default    |
+| :---------------- | :------------------------------------------ | :------- | ---------- |
+| `localFileSystem` | `"plugin"` or `"request"` or `"fullAccess"` | optional | `"plugin"` |
 
-Enables the plugin to access the file system. The [filesystem-operations recipe](../../../resources/recipes/filesystem-operations/index.md) has a detailed example.
+Enables the plugin to access the filesystem. The [Filesystem Operations recipe](../../../resources/recipes/filesystem-operations/index.md) has detailed examples.
 
-- `"plugin"`: enables the plugin to access the file system in the plugin folder.
-- `"request"`: enables the plugin to request access to the file system.
-- `"fullAccess"`: enables the plugin to access the file system without requesting access.
+- `"plugin"`: enables the plugin to access the filesystem in the plugin folders (the plugin's installation directory, data folder, and temporary folder).
+- `"request"`: enables the plugin to request access to the filesystem.
+- `"fullAccess"`: enables the plugin to access the filesystem without requesting access.
 
-Default value is `undefined` (no file system access).
+Default value is `"plugin"`.
 
 ##### `network`
 
