@@ -132,15 +132,15 @@ module.exports = {
                 path: "/plugins/tutorials/add-lifecycle-hooks/",
               },
               {
-                title: "Inter-plugin communication",
-                path: "/plugins/tutorials/inter-plugin-comm/",
-              },
-              {
                 title: "Add Multiple Panels",
                 path: "/plugins/tutorials/add-panels/",
               },
               {
-                title: "Modularizing code",
+                title: "Inter-plugin communication",
+                path: "/plugins/tutorials/inter-plugin-comm/",
+              },
+              {
+                title: "Modularize code",
                 path: "/plugins/tutorials/importing-modules/",
               },
             ],
