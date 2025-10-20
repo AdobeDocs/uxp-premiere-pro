@@ -124,16 +124,20 @@ module.exports = {
                 ],
               },
               {
-                title: "Add Commands",
-                path: "/plugins/tutorials/add-commands/",
-              },
-              {
                 title: "Add Lifecycle Hooks",
                 path: "/plugins/tutorials/add-lifecycle-hooks/",
               },
               {
+                title: "Add Commands",
+                path: "/plugins/tutorials/add-commands/",
+              },
+              {
                 title: "Add Multiple Panels",
                 path: "/plugins/tutorials/add-panels/",
+              },
+              {
+                title: "Add Modal Dialogs",
+                path: "/plugins/tutorials/add-modal-dialogs/",
               },
               {
                 title: "Inter-plugin communication",
