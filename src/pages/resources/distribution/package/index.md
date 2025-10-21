@@ -36,7 +36,13 @@ Finally, UXP doesn't support the use of `MXI` files for advanced packaging confi
 
 Before you package your plugin for distribution, make sure that the `manifest.json` file contains a valid `id` string property. The ID must be a **unique identifier for your plugin** and it is used to disambiguate plugins when installing them.
 
-If you plan to **publish to the Adobe Creative Cloud Marketplace**, you should obtain the ID string from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin-id#starting-from-adobe-developer-distribution) while creating a new UXP plugin listing. It is particularly important that the IDs in the `manifest.json` and Developer Distribution portal match, or the plugin will not pass the validation step.
+If you plan to **publish to the Adobe Creative Cloud Marketplace**, you should obtain the ID string from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin-id#starting-from-adobe-developer-distribution) while creating a new UXP plugin listing, and using that in the `manifest.json` file. It is particularly important that the IDs in the `manifest.json` and Developer Distribution portal match, or the plugin will not pass the validation step.
+
+<InlineAlert slots="text, text2" variant="info"/>
+
+See [this guide](../listing/index.md#2-create-a-new-listing) for more details on how to obtain the ID string from the Developer Distribution portal.
+
+[![Developer Distribution - plugin ID](../listing/img/listing--new-listing-created.png)](../listing/index.md#2-create-a-new-listing)
 
 ### Multi-channel distribution
 
