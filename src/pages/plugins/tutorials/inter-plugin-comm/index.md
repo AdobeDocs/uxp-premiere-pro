@@ -209,9 +209,7 @@ function communicateWithAnotherPlugin() {
   "shortname": "3pstarterplugin",
   "version": "1.0.0",
   "main": "index.html",
-  "host": [
-    { "app": "premierepro", "minVersion": "25.6.0" }
-  ],
+  "host": { "app": "premierepro", "minVersion": "25.6.0" },
   "manifestVersion": 5,
   "requiredPermissions": {
     "localFileSystem": "request",
@@ -362,12 +360,7 @@ document.getElementById("clear-btn").addEventListener("click", () => {
   "shortname": "3pstarterplugin",
   "version": "1.0.0",
   "main": "index.html",
-  "host": [
-    {
-      "app": "premierepro",
-      "minVersion": "25.6.0"
-    }
-  ],
+  "host": { "app": "premierepro", "minVersion": "25.6.0" },
   "manifestVersion": 5,
   "entrypoints": [
     {
