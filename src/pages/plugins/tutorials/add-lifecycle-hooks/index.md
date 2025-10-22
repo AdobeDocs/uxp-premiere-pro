@@ -19,7 +19,7 @@ As we have seen in the [Entrypoints concept guide](../../concepts/entrypoints/in
 
 <InlineAlert variant="info" slots="text"/>
 
-This guide is only **applicable to Plugins with at least one Panel**; there are no hooks related to Commands. Read [here](../../concepts/entrypoints/index.md#commands-and-panels) if you need a refresher on the difference between a Command and a Panel.
+This guide is only **applicable to Plugins with at least one Panel**; there are no hooks related to Commands. Read [here](../../concepts/panels-and-commands/index.md#key-differences) if you need a refresher on the difference between a Command and a Panel.
 
 ## Hook Types
 

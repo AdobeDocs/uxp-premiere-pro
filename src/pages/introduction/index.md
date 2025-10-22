@@ -39,7 +39,7 @@ It's important to note that while UXP lets you use Web technologies, it is not c
 
 ## Support and Features
 
-UXP is the current extensibility standard for Adobe Creative Cloud applications, supported by a constantly growing set of applications, including **Premiere Pro** (version 25.6), **Photoshop**, **InDesign**, and **XD**.
+UXP is the current extensibility standard for Adobe Creative Cloud applications, supported by a constantly growing set of applications, including **Premiere Pro** (version 25.6), **Photoshop**, and **InDesign**.
 
 Plugins allow you to create a **persistent User Interface that blends seamlessly** with the host application (a `panel`), or an **actionable command** that runs a predefined function (a `command`) and can be triggered by the user via menu item—depending on how you would like the users to interact with them. You will learn all about them in the next sections.
 

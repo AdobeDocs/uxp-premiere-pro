@@ -4,11 +4,11 @@ Commands allow you to add a menu item directly to the Premiere Pro user interfac
 
 ## Overview
 
-As we have seen in the [Entrypoints concept guide](../../concepts/entrypoints/index.md), commands can run any type of code, and even spin up a [modal dialog UI](../../concepts/entrypoints/index.md#modal-dialogs) if necessary.
+As we have seen in the [Panels & Commands](../../concepts/panels-and-commands/index.md) guide, commands can run any type of code, and even spin up a [modal dialog UI](../../concepts/panels-and-commands/index.md#modal-dialogs) if necessary.
 
 They belong to their respective plugin in the **Window** > **UXP Plugins** menu.
 
-![UXP Plugins menu](../../concepts/entrypoints/img/entrypoints--menu-items.png)
+![UXP Plugins menu](../../concepts/panels-and-commands/img/entrypoints--menu-items.png)
 
 Adding a new command is a multi-step process.
 

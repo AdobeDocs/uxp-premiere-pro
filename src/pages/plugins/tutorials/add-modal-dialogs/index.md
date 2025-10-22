@@ -318,7 +318,7 @@ entrypoints.setup({
 }
 ```
 
-In the example above, the `about-command` is defined in the `entrypoints` array of the `manifest.json` file and implemented via `entrypoints.setup()` in the `main.js` file—see [this guide](../../concepts/entrypoints/index.md#commands-and-panels) if you need a refresher on Commands concepts, and [this tutorial](../add-commands/index.md) for implementation examples.
+In the example above, the `about-command` is defined in the `entrypoints` array of the `manifest.json` file and implemented via `entrypoints.setup()` in the `main.js` file—see [this guide](../../concepts/panels-and-commands/index.md#commands) if you need a refresher on Commands concepts, and [this tutorial](../add-commands/index.md) for implementation examples.
 
 Also note that the entire UI is created with a mix of JavaScript methods (for the parent `<dialog>` element and the styling), and Template Literals for easier readability.
 

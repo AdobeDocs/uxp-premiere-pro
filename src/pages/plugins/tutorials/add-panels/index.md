@@ -240,6 +240,8 @@ Since both panels share the same JavaScript context, they can easily communicate
 
 You can also use **multiple HTML files, one for each panel**. This is useful when you want to keep the code for each panel separate and avoid clutter in the main `index.html` file. The key is to `fetch()` the second panel's HTML file and inject the content into the DOM, as the following example shows.
 
+![Multiple panels](./img/add-panels--panels.png)
+
 <CodeBlock slots="heading, code" repeat="4" languages="HTML, HTML, JavaScript, JSON" />
 
 #### index.html

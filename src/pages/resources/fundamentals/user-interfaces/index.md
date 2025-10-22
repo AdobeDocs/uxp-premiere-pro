@@ -29,7 +29,11 @@ UXP provides three approaches for building user interfaces:
 2. [**Spectrum UXP Widgets**](#spectrum-uxp-widgets): built-in, Adobe-styled components that work out of the box.
 3. [**Spectrum Web Components (SWC)**](#spectrum-web-components-swc): modern Web Component library with Adobe's design system.
 
-Each approach has its strengths and you can mix and match them in the same plugin—although we recommend using Spectrum Web Components going forward for the most complete feature set and future support. Let's explore each option to help you choose the right tools for your project.
+<InlineAlert variant="info" slots="header, text" />
+
+Recommended approach
+
+Each technology has its strengths and you can mix and match them in the same plugin—although **we recommend using Spectrum Web Components** going forward for the most complete feature set and future support. Please read the [Spectrum UXP Reference](../../../uxp-api/reference-spectrum/index.md) for more details.
 
 ## Understand the Options
 
@@ -52,7 +56,9 @@ These are the familiar HTML elements you've likely used before: `<div>`, `<butto
 </div>
 ```
 
-**Best for**: Developers who prefer full control over styling, or when building highly custom interfaces.
+| Best for                                                                           | Trade-offs                         |
+| ---------------------------------------------------------------------------------- | ---------------------------------- |
+| Building **highly customized interfaces** that need match different design systems | Complex and expensive to implement |
 
 <InlineAlert variant="warning" slots="header, text" />
 
@@ -72,9 +78,9 @@ Spectrum UXP Widgets are built directly into the UXP platform. They provide read
 
 These widgets are immediately available—no installation or imports required. Just use them like any other HTML tag.
 
-**Best for**: Quick prototyping, getting started with UXP, or when you want Premiere Pro's native look without extra setup.
-
-**Trade-offs**: Since these components are built into UXP, they're somewhat of a "black box." You can't easily inspect their internal structure or deeply customize their behavior beyond the provided API.
+| Best for                                                                                                          | Trade-offs                                                                                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Quick prototyping**, getting started with UXP, or when you want Premiere Pro's native look without extra setup. | **Limited number of components** available. <br/>**You can't customize their behavior** beyond the provided API or easily inspect their internal structure. |
 
 ### Spectrum Web Components (SWC)
 
@@ -86,6 +92,12 @@ To use SWCs, you need to [install each component](https://opensource.adobe.com/s
 npm install @spectrum-web-components/button@0.37.0
 npm install @spectrum-web-components/textfield@0.37.0
 ```
+
+<InlineAlert variant="info" slots="header, text" />
+
+Version Requirement
+
+For Premiere Pro plugins, **all Spectrum Web Components must be locked to version 0.37.0** for the time being. This ensures compatibility with the current UXP version.
 
 Then import and use them in your JavaScript:
 
@@ -99,15 +111,11 @@ import '@spectrum-web-components/textfield/sp-textfield.js';
 <sp-textfield placeholder="Enter your name"></sp-textfield>
 ```
 
-<InlineAlert variant="info" slots="header, text" />
+| Best for                                                                                                                               | Trade-offs                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **Production plugins** that need the **full range of Spectrum components**, or when you need to inspect and debug component internals. | Requires Node.js, a package manager (npm/yarn), and a bundler (Webpack, Rollup, etc.) to build your plugin. |
 
-Version Requirement
-
-For Premiere Pro plugins, **all Spectrum Web Components must be locked to version 0.37.0** for the time being. This ensures compatibility with the current UXP version.
-
-**Best for**: Production plugins that need the full range of Spectrum components, or when you need to inspect and debug component internals.
-
-**Trade-offs**: Requires Node.js, a package manager (npm/yarn), and a bundler (Webpack, Rollup, etc.) to build your plugin. You'll also need to enable SWC in your `manifest.json`:
+You'll also need to enable SWC in your `manifest.json`:
 
 ```json
 {

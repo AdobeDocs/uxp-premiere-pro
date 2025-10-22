@@ -1,38 +1,83 @@
 ---
-title: Reservoir of samples
-description: Links for starter, samples and helper scripts and plugins
+title: Starters and samples
+description: Sample plugins and starter templates to accelerate your UXP plugin development
 keywords:
   - samples
   - starter kits
   - templates
+  - UDT templates
+  - example plugins
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
 # Starters and samples
 
-To help you start writing <!--scripts and -->plugins to solve real-world problems, you can use the samples and starter templates available below.
+Learn from working examples and jumpstart your plugin development with sample code and starter templates.
 
-Consider 'samples' to be a working example of a specific feature. Whereas, a 'starter' is meant to assist you with the framework setup.
+## Overview
 
-## Git repo
+When building UXP plugins for Premiere Pro, you don't need to start from scratch. We provide two types of resources to help you:
 
-You can find samples and starters for Premiere Pro plugins [here](https://github.com/AdobeDocs/uxp-premiere-pro-samples).
+- **Samples**: Complete, working examples that demonstrate specific features or use cases
+- **Starters**: Minimal templates with framework setup to help you begin a new plugin project
 
-## UDT
+## GitHub repository
 
-Additionally, UDT also provides a few templates that you can choose from while creating a new plugin. <br></br>
+You can find a collection of samples and starter templates in the official repository:
+
+[UXP Premiere Pro Samples](https://github.com/AdobeDocs/uxp-premiere-pro-samples)
+
+This repository includes:
+
+- Working plugin examples for common tasks
+- Best practices for plugin architecture
+- Integration examples with Premiere Pro APIs
+- Reusable code patterns you can adapt for your projects
+
+## UDT templates
+
+When you create a new plugin with the UXP Developer Tool (UDT), you can choose from several built-in templates:
 
 ![Templates in UDT](create-plugin-template.png)
 
+These templates provide a ready-to-use project structure with:
+
+- Pre-configured `manifest.json` file
+- Basic HTML and JavaScript scaffolding
+- Example code demonstrating key concepts
+- Proper directory organization
+
+To use a template, select it when running the `create` command in UDT. Learn more about this process in the [UDT Deep Dive tutorial](../../plugins/tutorials/udt-deep-dive/).
+
+## Tutorials
+
+Looking to build something from scratch? The [Tutorials section](../../plugins/tutorials/) provides step-by-step guides that walk you through complete plugin development tasks:
+
+- [UDT Deep Dive](../../plugins/tutorials/udt-deep-dive/): Master the Adobe UXP Developer Tool
+- [Add Commands](../../plugins/tutorials/add-commands/): Create menu items in Premiere Pro
+- [Add Lifecycle Hooks](../../plugins/tutorials/add-lifecycle-hooks/): Respond to plugin and panel events
+- [Add Multiple Panels](../../plugins/tutorials/add-panels/): Work with multiple panel entrypoints
+- [Inter Plugin Communication](../../plugins/tutorials/inter-plugin-comm/): Enable plugins to communicate with each other
+- [JavaScript Modules](../../plugins/tutorials/importing-modules/): Organize your code across multiple files
+
 ## Recipes
 
-The next section of [recipes](../recipes/) also has examples of common use cases.
+For quick, focused code examples without the full tutorial treatment, check out the [Recipes section](../recipes/). Recipes provide bite-sized, ready-to-use code snippets for common use cases:
 
-<br></br> <br></br>
+- File system operations
+- Network requests
+- UI interactions
+- Clipboard access
+- And more
 
----
+## Contributing
 
-Remember, that the provided 'scripts' examples can also be used within plugins, even though Premiere Pro Beta does not yet officially support UXP scripts. After all, you can think of UXP plugins as UXP scripts + rich UI controls + manifest configuration.
+We'd love to expand this collection with more real-world examples. If you've built something useful, consider contributing:
 
-We would love to add more samples that cover relevant use cases. Please contribute to the repo and share your work with the community. Create a pull request and tag us for review.
+1. Fork the [samples repository](https://github.com/AdobeDocs/uxp-premiere-pro-samples)
+2. Add your sample with clear documentation
+3. Create a pull request and tag us for review
+
+Your contributions help the entire plugin developer community!

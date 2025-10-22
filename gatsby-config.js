@@ -88,6 +88,10 @@ module.exports = {
             path: "plugins/concepts/",
             pages: [
               {
+                title: "Panels & Commands",
+                path: "plugins/concepts/panels-and-commands/",
+              },
+              {
                 title: "Entrypoints",
                 path: "plugins/concepts/entrypoints/",
               },

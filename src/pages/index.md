@@ -23,14 +23,15 @@ A modern extensibility platform for building Custom Tools and Features that stre
 #### Resources
 
 - [What's new](./changelog/index.md)
+- [UXP Plugins](./plugins/index.md)
+- [Share & Distribute](./resources/distribution/overview/index.md)
 - [UXP APIs](./uxp-api/index.md)
 - [Premiere Pro DOM APIs](./ppro_reference/index.md)
-- [Plugins](./plugins/index.md)
-- [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/)
+- [Developer Forums](https://forums.creativeclouddeveloper.com/)
 
 ## Overview
 
-UXP (**U**nified e**X**tensibility **P**latform) is a scripting platform built into Premiere Pro and other Adobe Creative Cloud applications. It is powered by a modern JavaScript engine and offers the ability to access many Premiere Pro functions at a programmatic level. With UXP, you can build unique tools that integrate with and optimize the most precise, demanding workflows. These tools reduce repetition, maximize efficiency, and transform Premiere Pro into a bespoke application tailored to the needs of any project.
+UXP (**U**nified e**X**tensibility **P**latform) is an integration framework built into Premiere Pro and other Adobe Creative Cloud applications. It is powered by a modern JavaScript engine and offers the ability to access many Premiere Pro functions at a programmatic level. With UXP, you can build unique tools that integrate with and optimize the most precise, demanding workflows. These tools reduce repetition, maximize efficiency, and transform Premiere Pro into a bespoke application tailored to the needs of any project.
 
 Best of all, UXP Plugins run right in Premiere Pro.
 
@@ -54,7 +55,7 @@ Premiere Pro adds its own set of APIs on top of the base UXP functionality share
 
 ## Updates
 
-The Premiere Pro UXP API and this documentation website will be updated regularly as new versions are released and new features are introduced.
+The Premiere Pro UXP API and this documentation website will be updated regularly as new versions are released and new features are introduced. Check out the [Change Log](./changelog/index.md) for the latest news.
 
 ## Join the community
 

@@ -14,41 +14,15 @@ contributors:
 
 # UXP Entrypoints
 
-Learn how UXP plugins connect commands and panels to Premiere Pro
+Learn how to declare and implement plugin entrypoints for commands and panels in Premiere Pro
 
-## Commands and Panels
+## Plugin Components
 
-A UXP plugin is a self-contained application that is hosted in Premiere Pro; it can be made of two different components:
+UXP plugins are built using **Commands** (menu items that execute code) and **Panels** (persistent, dockable interfaces). A plugin can include one or both component types—and may define multiple instances of each.
 
-- **Commands**:
-  - Execute a specific piece of code when invoked via menu item.
-  - Can optionally show a modal dialog UI.
-- **Panels**:
-  - Have a persistent, non blocking User Interface and lifecycle hooks.
-  - Can optionally show an additional, modal dialog UI.
+<InlineAlert variant="info" slots="text" />
 
-<InlineAlert variant="info" slots="header, text" />
-
-#### Modal dialogs
-
-These are a special type of floating windows that **block the user** from interacting with the rest of the application **until the dialog is closed**. Modal dialogs are generally employed to get input data, confirm an action, or show a message.
-
-**Commands** are mostly used to perform a specific task and then exit; for example, applying a preset transition to the current clip (with or without an input dialog).
-
-**Panels** are mostly used to provide a persistent UI for the user to interact with throughout the work session like any other Premiere Pro built-in panels. Both have access to the host application's APIs to perform complex tasks. **To dock a panel, drag it from the title bar**—not the window frame bar—until the following overlay is shown.
-
-![Panel docking](./img/entrypoints--docking.png)
-
-A UXP plugin can **include commands, panels, or both—and may define multiple instances of each**. For example, an individual plugin can be made of:
-
-- One panel (no commands)
-- One command (no panels)
-- One panel and one command
-- Three panels and four commands, etc.
-
-Both commands and panels are entries of their respective plugin in the **Window** > **UXP Plugins** menu.
-
-![UXP Plugins menu](./img/entrypoints--menu-items.png)
+For a detailed explanation of the differences between Commands and Panels and when to use each, see the [Panels and Commands concept guide](../panels-and-commands/index.md).
 
 ## Entrypoints
 
