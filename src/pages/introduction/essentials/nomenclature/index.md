@@ -18,7 +18,7 @@ contributors:
 
 The evolution of the ways we've been calling extensibility artifacts
 
-Over the years, Adobe Creative Cloud applications have supported **Scripts**, Flash **Panels**, CEP **Extensions**, UXP **Plugins** (either regular or hybrid), and UXP **Scripts**. Uniquely, Adobe Express deals with **add-ons**, instead.
+Over the years, Adobe Creative Cloud applications have supported ExtendScript **Scripts**, Flash **Panels**, CEP **Extensions**, UXP **Plugins** (either _regular_ or _hybrid_), and UXP **Scripts**. Uniquely, Adobe Express deals with WXP **add-ons**, instead.
 
 Most desktop applications have been supporting a different kind of _compiled_ plugins, often spelled **Plug-ins**; for example, as Effects in Premiere Pro or Filters in Photoshop.
 

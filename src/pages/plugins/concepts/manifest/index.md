@@ -131,7 +131,7 @@ Check the [HostDefinition](#hostdefinition) section for more details.
 
 <InlineAlert slots="text" variant="info"/>
 
-**Only during development**, for convenience, you can assign to the `host` property an array of `HostDefinition` objects, allowing the plugin to be loaded in multiple applications simultaneously. See the [Package with the UXP Developer Tool](../../../resources/distribution/package/index.md#host-applications) section for more details.
+**Only during development**, for convenience, you can assign to the `host` property an array of `HostDefinition` objects, allowing the plugin to be loaded in multiple applications simultaneously. See the [Package with the UXP Developer Tool](../../../plugins/distribution/package/index.md#host-applications) section for more details.
 
 ### `entrypoints`
 

@@ -12,7 +12,7 @@ keywords:
 ## Documentation update (October 2025)
 
 - Overhauled the [Manifest reference](../plugins/concepts/manifest/index.md).
-- Added a new [Distribution guide](../resources/distribution/overview/index.md) that includes information on how to package, install, and distribute plugins across the Adobe Creative Cloud Marketplace, third-party channels, and Enterprise environments.
+- Added a new [Distribution guide](../plugins/distribution/overview/index.md) that includes information on how to package, install, and distribute plugins across the Adobe Creative Cloud Marketplace, third-party channels, and Enterprise environments.
 
 ## Premiere Pro v25.2.0
 

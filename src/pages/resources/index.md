@@ -47,12 +47,6 @@ Bite-size examples for common use cases.
 
 <DiscoverBlock slots="link, text"/>
 
-[Share & Distribute](./distribution/overview/index.md)
-
-How to share and distribute your plugins across Marketplaces and Enterprise environments.
-
-<DiscoverBlock slots="link, text"/>
-
 [FAQ](./faq/index.md)
 
 Frequently asked questions about UXP development.

@@ -69,15 +69,15 @@ Given that UXP does not support the entire set of HTML Elements and CSS properti
 
 #### I am unable to install a plugin.
 
-Please refer to [these troubleshooting steps](../../resources/distribution/install/index.md#troubleshooting) for more details.
+Please refer to [these troubleshooting steps](../../plugins/distribution/install/index.md#troubleshooting) for more details.
 
 #### My `.ccx` package is being rejected when submitted to the Creative Cloud Marketplace. What could be wrong?
 
-Check if the [`host`](../../plugins/concepts/manifest/index.md#host) property in your `manifest.json` is an object, not an array. If it's an array, the validation will fail. See [Host Applications](../distribution/package/index.md#host-applications) for details.
+Check if the [`host`](../../plugins/concepts/manifest/index.md#host) property in your `manifest.json` is an object, not an array. If it's an array, the validation will fail. See [Host Applications](../../plugins/distribution/package/index.md#host-applications) for details.
 
 #### Should I use an Array or an Object for the `host` property in the `manifest.json`?
 
-The `host` property must be a single [`HostDefinition`](../../plugins/concepts/manifest/index.md#hostdefinition) Object for production. Arrays are only allowed during development for convenience. See the [Package a UXP plugin](../distribution/package/index.md#host-applications) section for details.
+The `host` property must be a single [`HostDefinition`](../../plugins/concepts/manifest/index.md#hostdefinition) Object for production. Arrays are only allowed during development for convenience. See the [Package a UXP plugin](../../plugins/distribution/package/index.md#host-applications) section for details.
 
 <!-- 🇪🇺 EU Compliance & DSA Requirements -->
 

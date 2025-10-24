@@ -27,7 +27,7 @@ The UXP Developer Tool (UDT) simplifies the process of creating, loading, managi
 In addition, the UXP Developer Tool:
 
 - Includes a **Code Playground** to quickly test and explore APIs.
-- Lets you **package plugins** into a `.ccx` [installable file](../../../resources/distribution/package/index.md), ready for distribution.
+- Lets you **package plugins** into a `.ccx` [installable file](../../../plugins/distribution/package/index.md), ready for distribution.
 - Provides **Starter Templates** and Sample Projects to help you get moving faster
 
 <InlineAlert variant="info" slots="header,text"/>

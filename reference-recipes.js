@@ -16,23 +16,33 @@ module.exports = [
     path: "/resources/recipes/external-process/",
   },
   {
-    title: "CSS Styling",
-    path: "/resources/recipes/css-styling/",
-  },
-  {
-    title: "HTML Elements",
-    path: "/resources/recipes/html-elements/",
-  },
-  {
-    title: "HTML Events",
-    path: "/resources/recipes/html-events/",
-  },
-  {
-    title: "Debug",
-    path: "/resources/recipes/debug/",
-  },
-  {
     title: `Host Environment`,
     path: "/resources/recipes/host-info/",
+  },
+  {
+    title: "Language Basics",
+    path: "/resources/recipes/css-styling/",
+    pages: [
+      {
+        title: "CSS Styling",
+        path: "/resources/recipes/css-styling/",
+      },
+      {
+        title: "HTML Elements",
+        path: "/resources/recipes/html-elements/",
+      },
+      {
+        title: "HTML Events",
+        path: "/resources/recipes/html-events/",
+      },
+      {
+        title: "Debug",
+        path: "/resources/recipes/debug/",
+      },
+      {
+        title: "Modularize code",
+        path: "/resources/recipes/js-modules/",
+      },
+    ],
   },
 ];

@@ -22,7 +22,7 @@ This tutorial will walk you through building your very first UXP plugin. You wil
 Before you start, make sure you have the following software installed on your machine:
 
 - [**Premiere Pro (v25.6)**](https://creativecloud.adobe.com/apps/download/premiere-pro) or later.
-- [**UXP Developer Tool (v2.2)**](https://creativecloud.adobe.com/apps/download/.uxp-developer-tools) or later.
+- [**UXP Developer Tool (v2.2)**](https://creativecloud.adobe.com/apps/download/uxp-developer-tools) or later.
 - A **Code Editor** of your choice—for example, [Visual Studio Code](https://code.visualstudio.com/) or [Cursor](https://www.cursor.com/).
 
 <InlineAlert variant="info" slots="text"/>

@@ -93,4 +93,4 @@ This way, when your `watch` process detects a change and rebuilds the plugin, th
 
 ## Package your plugin for distribution
 
-The UDT provides a convenient way to package your plugin into a `.ccx` installer file, ready to be shared in the [Adobe Creative Cloud Marketplace](../../../resources/distribution/adobe-marketplace/index.md) or any other distribution channel of your choice. Please refer to the [Share & Distribute Guide](../../../resources/distribution/overview/index.md) for a thorough description of the subject.
+The UDT provides a convenient way to package your plugin into a `.ccx` installer file, ready to be shared in the [Adobe Creative Cloud Marketplace](../../../plugins/distribution/adobe-marketplace/index.md) or any other distribution channel of your choice. Please refer to the [Share & Distribute Guide](../../../plugins/distribution/overview/index.md) for a thorough description of the subject.

@@ -55,12 +55,12 @@ To use a template, select it when running the `create` command in UDT. Learn mor
 
 Looking to build something from scratch? The [Tutorials section](../../plugins/tutorials/) provides step-by-step guides that walk you through complete plugin development tasks:
 
-- [UDT Deep Dive](../../plugins/tutorials/udt-deep-dive/): Master the Adobe UXP Developer Tool
-- [Add Commands](../../plugins/tutorials/add-commands/): Create menu items in Premiere Pro
-- [Add Lifecycle Hooks](../../plugins/tutorials/add-lifecycle-hooks/): Respond to plugin and panel events
-- [Add Multiple Panels](../../plugins/tutorials/add-panels/): Work with multiple panel entrypoints
-- [Inter Plugin Communication](../../plugins/tutorials/inter-plugin-comm/): Enable plugins to communicate with each other
-- [JavaScript Modules](../../plugins/tutorials/importing-modules/): Organize your code across multiple files
+- [UDT Deep Dive](../../plugins/tutorials/udt-deep-dive/index.md): Master the Adobe UXP Developer Tool
+- [Add Commands](../../plugins/tutorials/add-commands/index.md): Create menu items in Premiere Pro
+- [Add Lifecycle Hooks](../../plugins/tutorials/add-lifecycle-hooks/index.md): Respond to plugin and panel events
+- [Add Multiple Panels](../../plugins/tutorials/add-panels/index.md): Work with multiple panel entrypoints
+- [Add Modal Dialogs](../../plugins/tutorials/add-modal-dialogs/index.md): Create modal dialogs as a user interface for Commands or as an additional UI for Panels
+- [Inter Plugin Communication](../../plugins/tutorials/inter-plugin-comm/index.md): Enable plugins to communicate with each other
 
 ## Recipes
 

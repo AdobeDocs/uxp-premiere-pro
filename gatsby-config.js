@@ -39,7 +39,8 @@ module.exports = {
         title: "References",
         menu: [
           {
-            title: "What's New?",
+            title: " What's New?",
+            description: "✨ APIs + Documentation Changelog",
             path: "changelog/",
           },
           {
@@ -71,6 +72,10 @@ module.exports = {
           {
             title: "Tech Stack Foundations",
             path: "/introduction/essentials/tech-stack/",
+          },
+          {
+            title: "Nomenclature",
+            path: "/introduction/essentials/nomenclature/",
           },
         ],
       },
@@ -147,16 +152,56 @@ module.exports = {
                 title: "Inter-plugin communication",
                 path: "/plugins/tutorials/inter-plugin-comm/",
               },
-              {
-                title: "Modularize code",
-                path: "/plugins/tutorials/importing-modules/",
-              },
             ],
           },
           {
-            title: "Advanced Topics",
-            path: "plugins/advanced/",
+            title: "Share & Distribute",
+            path: "plugins/distribution/overview/",
+            pages: [
+              {
+                title: "Overview",
+                path: "/plugins/distribution/overview/",
+              },
+              {
+                title: "Package a plugin",
+                path: "/plugins/distribution/package/",
+              },
+              {
+                title: "Install a plugin",
+                path: "/plugins/distribution/install/",
+              },
+              {
+                title: "Adobe Marketplace",
+                path: "/plugins/distribution/adobe-marketplace/",
+                pages: [
+                  {
+                    title: "Overview",
+                    path: "/plugins/distribution/adobe-marketplace/",
+                  },
+                  {
+                    title: "Create a Listing",
+                    path: "/plugins/distribution/listing/",
+                  },
+                  {
+                    title: "Review & Guidelines",
+                    path: "/plugins/distribution/review-guidelines/",
+                  },
+                ],
+              },
+              {
+                title: "Independent Distribution",
+                path: "/plugins/distribution/independent-distribution/",
+              },
+              {
+                title: "Enterprise Distribution",
+                path: "/plugins/distribution/enterprise-distribution/",
+              },
+            ],
           },
+          // {
+          //   title: "Advanced Topics",
+          //   path: "plugins/advanced/",
+          // },
         ],
       },
       {
@@ -189,10 +234,6 @@ module.exports = {
                 title: "User Interfaces",
                 path: "/resources/fundamentals/user-interfaces/",
               },
-              {
-                title: "Nomenclature",
-                path: "/resources/fundamentals/nomenclature/",
-              },
             ],
           },
           {
@@ -203,50 +244,6 @@ module.exports = {
             title: "Recipes",
             path: "resources/recipes/filesystem-operations/",
             pages: require("./reference-recipes.js"),
-          },
-          {
-            title: "Share & Distribute",
-            path: "resources/distribution/overview/",
-            pages: [
-              {
-                title: "Overview",
-                path: "/resources/distribution/overview/",
-              },
-              {
-                title: "Package a plugin",
-                path: "/resources/distribution/package/",
-              },
-              {
-                title: "Install a plugin",
-                path: "/resources/distribution/install/",
-              },
-              {
-                title: "Adobe Marketplace",
-                path: "/resources/distribution/adobe-marketplace/",
-                pages: [
-                  {
-                    title: "Overview",
-                    path: "/resources/distribution/adobe-marketplace/",
-                  },
-                  {
-                    title: "Create a Listing",
-                    path: "/resources/distribution/listing/",
-                  },
-                  {
-                    title: "Review & Guidelines",
-                    path: "/resources/distribution/review-guidelines/",
-                  },
-                ],
-              },
-              {
-                title: "Independent Distribution",
-                path: "/resources/distribution/independent-distribution/",
-              },
-              {
-                title: "Enterprise Distribution",
-                path: "/resources/distribution/enterprise-distribution/",
-              },
-            ],
           },
           {
             title: "FAQ",

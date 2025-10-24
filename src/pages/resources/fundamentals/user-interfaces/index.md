@@ -180,7 +180,7 @@ Creative Cloud Marketplace and Visual Language
 
 You are free to use your own visual language in UXP plugins. At the moment, products sent for approval to the Creative Cloud Marketplace don't need to implement the Adobe Spectrum Design System, although we recommend it for consistency.
 
-Best UX practices, as well as adherence to the Adobe Brand Guidelines, [will be enforced](../../distribution/review-guidelines/index.md) during the approval process.
+Best UX practices, as well as adherence to the Adobe Brand Guidelines, [will be enforced](../../../plugins/distribution/review-guidelines/index.md) during the approval process.
 
 ## Working with JavaScript Frameworks
 
