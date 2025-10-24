@@ -1,18 +1,26 @@
 ---
-title: Change Log
+title: Changelog
 description: What's New
 keywords:
   - Changelog
   - Update
   - Release Notes
+contributors:
+  - https://github.com/undavide
 ---
 
-# Change Log
+# Changelog
 
-## Documentation update (October 2025)
+## Premiere Pro v25.6.0
 
-- Overhauled the [Manifest reference](../plugins/concepts/manifest/index.md).
-- Added a new [Distribution guide](../plugins/distribution/overview/index.md) that includes information on how to package, install, and distribute plugins across the Adobe Creative Cloud Marketplace, third-party channels, and Enterprise environments.
+**Release Date:** sometime in 2025
+
+### Documentation update
+
+- **Comprehensive overhaul** across the entire documentation site.
+- **New distribution section** including 8 brand-new guides covering Adobe Marketplace submission, enterprise and independent distribution, packaging, installation, listing creation, and review guidelines.
+- **Expanded tutorials and recipes** featuring major new content on modal dialogs, panels, TypeScript support, filesystem operations, external processes, and inter-plugin communication.
+- **Content reorganization** with streamlined navigation, consolidation, and complete rewrites.
 
 ## Premiere Pro v25.2.0
 
