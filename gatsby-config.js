@@ -242,7 +242,7 @@ module.exports = {
           },
           {
             title: "Recipes",
-            path: "resources/recipes/filesystem-operations/",
+            path: "resources/recipes/",
             pages: require("./reference-recipes.js"),
           },
           {

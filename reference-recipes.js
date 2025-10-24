@@ -8,12 +8,12 @@ module.exports = [
     path: "/resources/recipes/network/",
   },
   {
-    title: "Clipboard",
-    path: "/resources/recipes/clipboard/",
-  },
-  {
     title: "External Process",
     path: "/resources/recipes/external-process/",
+  },
+  {
+    title: "Clipboard",
+    path: "/resources/recipes/clipboard/",
   },
   {
     title: `Host Environment`,
