@@ -13,12 +13,12 @@ contributors:
 
 ## Premiere Pro v25.6.0
 
-**Release Date:** sometime in 2025
+**Release Date:** November 12, 2025
 
 ### Documentation update
 
 - **Comprehensive overhaul** across the entire documentation site.
-- **New distribution section** including 8 brand-new guides covering Adobe Marketplace submission, enterprise and independent distribution, packaging, installation, listing creation, and review guidelines.
+- **New distribution section** including guides covering Adobe Marketplace submission, enterprise and independent distribution, packaging, installation, listing creation, and review guidelines.
 - **Expanded tutorials and recipes** featuring major new content on modal dialogs, panels, TypeScript support, filesystem operations, external processes, and inter-plugin communication.
 - **Content reorganization** with streamlined navigation, consolidation, and complete rewrites.
 
