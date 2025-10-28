@@ -33,29 +33,78 @@ A modern extensibility platform for building Custom Tools and Features that stre
 
 UXP (**U**nified e**X**tensibility **P**latform) is an integration framework built into Premiere Pro and other Adobe Creative Cloud applications. It is powered by a modern JavaScript engine and offers the ability to access many Premiere Pro functions at a programmatic level. With UXP, you can build unique tools that integrate with and optimize the most precise, demanding workflows. These tools reduce repetition, maximize efficiency, and transform Premiere Pro into a bespoke application tailored to the needs of any project.
 
-Best of all, UXP Plugins run right in Premiere Pro.
-
-Premiere Pro adds its own set of APIs on top of the base UXP functionality shared across the supported Adobe applications. This website provides documentation for both the Premiere Pro API and the base UXP API.
+Premiere Pro adds its own APIs on top of the base UXP functionality. This website provides documentation for both APIs.
 
 ![UDT Interface](./UDT_sample_image_01_cropped.png)
 
-<DiscoverBlock slots="heading, text"/>
+## Get Started
 
-## Features
+<DiscoverBlock slots="heading, link, text"/>
 
-**Fast and Interactive Development.** Load, run, and update panels directly without restarting Premiere Pro.
+### New to UXP?
 
-<DiscoverBlock slots="text"/>
+[Introduction & Setup](./introduction/index.md)
 
-**Built-in Debugger.** Quickly trace code using the built-in debugger that natively attaches to Premiere Pro.
+Learn the essentials, set up your development environment, and understand the technical stack.
 
-<DiscoverBlock slots="text"/>
+<DiscoverBlock slots="link, text"/>
 
-**Threaded Execution.** UXP operates concurrently with other Premiere Pro processes. You can continue working in Premiere Pro while the UXP Plugin functions are running.
+[Build Your First Plugin](./plugins/index.md)
 
-## Updates
+Step-by-step tutorials for creating panels, commands, and modal dialogs.
 
-The Premiere Pro UXP API and this documentation website will be updated regularly as new versions are released and new features are introduced. Check out the [Change Log](./changelog/index.md) for the latest news.
+<DiscoverBlock slots="heading, link, text"/>
+
+### Building Plugins
+
+[Plugin Concepts](./plugins/concepts/index.md)
+
+Understand manifests, entrypoints, panels, and how plugins work.
+
+<DiscoverBlock slots="link, text"/>
+
+[Tutorials](./plugins/tutorials/index.md)
+
+Hands-on guides for adding panels, commands, lifecycle hooks, and more.
+
+<DiscoverBlock slots="link, text"/>
+
+[Code Recipes](./resources/recipes/index.md)
+
+Practical examples for common tasks like filesystem operations, network requests, and styling.
+
+<DiscoverBlock slots="heading, link, text"/>
+
+### API References
+
+[Premiere Pro DOM API](./ppro_reference/index.md)
+
+Access sequences, tracks, clips, markers, project items, and application settings.
+
+<DiscoverBlock slots="link, text"/>
+
+[UXP JavaScript API](./uxp-api/reference-js/index.md)
+
+File system, networking, shell execution, and core UXP functionality.
+
+<DiscoverBlock slots="link, text"/>
+
+[UI Components (Spectrum)](./uxp-api/reference-spectrum/index.md)
+
+Adobe's design system components for building plugin interfaces.
+
+<DiscoverBlock slots="link, text"/>
+
+[HTML & CSS References](./uxp-api/index.md)
+
+Supported HTML elements and CSS properties in UXP.
+
+## Additional Resources
+
+- **[Share & Distribute](./plugins/distribution/overview/index.md)**: learn about packaging, Adobe Marketplace, enterprise distribution, and installation options.
+- **[FAQ](./resources/faq/index.md)**: common questions and troubleshooting
+- **[Starters & Samples](./resources/starters-samples/index.md)**: template projects to jumpstart development
+- **[What's New](./changelog/index.md)**: latest API updates and changes
 
 ## Join the community
 
@@ -66,59 +115,4 @@ Here are a few other ways to get involved:
 - Join the [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/) to meet other developers, ask questions, and offer help.
 - Subscribe to the [Adobe Creative Cloud Developer Newsletter](https://www.adobe.com/subscription/ccdevnewsletter.html).
 
-<!-- ## Discover
-
-<DiscoverBlock width="100%" slots="heading, link, text"/>
-
-### Get Started
-
-[Quickstart Guide](guides/)
-
-Get started with the Cat Analytics APIs.
-
-<DiscoverBlock slots="heading, link, text"/>
-
-### Guides
-
-[Calculated Metrics API](guides/dummy_metrics_api/)
-
-Returns information on the user's company that is necessary for making other Cat Analytics API calls.
-
-<DiscoverBlock slots="link, text"/>
-
-[Segments API](guides/dummy_oauth_client/)
-
-Provides configuration guidance and best practices for the /segments endpoint.
-
-<DiscoverBlock slots="link, text"/>
-
-[Reporting Guide API](guides/dummy_using_postman/)
-
-Provides configuration guidance and best practices for the /reports endpoint.
-
-<DiscoverBlock slots="link, text"/>
-
-[Migrating from 1.4 to 2.0](guides/migrating/)
-
-For help migrating from the 1.4 versions of the Analytics API to the newer and more capable /reports API.
-
-<DiscoverBlock width="100%" slots="heading, link, text"/>
-
-### API References
-
-[Try the API](api/)
-
-Try the Analytics API with Swagger UI. Explore, make calls, with full endpoint descriptions.
-
-## Contributing
-
-We encourage you to participate in our open documentation initiative, if you have suggestions, corrections, additions
-or deletions for this documentation, check out the source from [this github repo](https://github.com/adobe/gatsby-theme-spectrum-example), and submit a pull
-request with your contribution. For more information, refer to the [contributing page](support/contribute/).
-
-## API Requests & Rate Limits
-
-The timeout for API requests through adobe.io is currently *60 seconds*.
-
-The default rate limit for an Cat Analytics Company is *120 requests per minute*. (The limit is enforced as *12 requests every 6 seconds*).
-When rate limiting is being enforced you will get `429` HTTP response codes with the following response body: `{"error_code":"429050","message":"Too many requests"}`. -->
+<br /><br />
