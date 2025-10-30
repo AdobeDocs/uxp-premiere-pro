@@ -11,62 +11,86 @@ keywords:
   - plugin in UDT
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
 # Plugin workflows
 
-Once you've added a plugin to your developer workspace, there are several things you can do with it. All of the following features are accessed via the **•••**/**Actions** dropdown associated with each plugin.
+Learn the recommended plugin development workflow for the Adobe UXP Developer Tool (UDT).
 
-## Load plugin
+## Load and Watch a plugin
 
-Plugins added to the developer workspace do not automatically get added to their supported host application. Instead, once you launch the host application, you should tell the plugin (**••• > Load**) to launch in the host. This allows you to use the marketplace version of your plugin while you're not doing active development, but load up the development version when you need to make a new version of the plugin.
+Plugins added to the developer workspace do not automatically get added to their supported host application. Instead, when the host application is launched, you should manually tell UDT to load it. You have two options here:
 
-Plugins that load successfully will show a small green notification at the bottom of the screen indicating that the plugin was loaded.
+- **Load**: This will load the plugin in the host application.
+- **Load & Watch**: This will load the plugin in the host application _and_ will watch for changes in the plugin's source code. This is the recommended option.
 
-![Load Successful](./images/udt-load-successful.png)
+![UDT - Load Plugin](../../img/getting-started--udt-load-and-watch.png)
 
-If a plugin _fails_ to load, a small red notification will appear with a **Details** link.
+Plugins that load successfully will show a small green notification at the bottom of the UDT window.
 
-![Load Failed](./images/udt-load-failed.png)
+![Load Successful](./img/plugin-workflows--load-successful.png)
 
-Clicking the `Details` link in this message will show an error log indicating why the plugin failed to load:
+If a plugin _fails_ to load, a small red notification will appear with a **Details** link; click it to open the UDT Logs panel and inspect the error.
 
-![Failure Log](./images/udt-failure-log.png)
+![Load Failed](./img/plugin-workflows--load-failed.png)
 
-Once your plugin is loaded, you'll typically use the **Reload** action if you need to see any changes in your plugin's behavior. However, if you make changes to your plugin's `manifest.json` file, you'll want to completely **Unload** and **Load** your plugin from scratch.
+If you have selected the **Load & Watch** option, you can also reload the plugin by clicking the **Reload** button in the UDT window.
 
-## Watching and Reloading
+<InlineAlert slots="header,text" variant="info"/>
 
-Selecting the `Watch` item from the Actions menu causes the Developer Tool to watch for any changes in your code on disk.
-Whenever you make a change to a file in your project, UDT will reload your plugin automatically. This makes for a very rapid code->make mistakes->fix mistakes->reload cycle.
+Manifest changes
 
-You can also reload your plugin manually by selecting `Reload` from the Actions menu. If you have `Watch` enabled, you shouldn't have to do this. But some people are superstitious.
-
-However, for manifest changes, this action does _not_ refresh the changes. For that, you should **Unload** and **Load** the plugin again.
+Load & Watch automatically reloads the plugin when you make changes to the plugin's source code with the exception of manifest changes. If you edit the `manifest.json` file, you will need to **Unload** and **Load & Watch** (or **Load**) the plugin again.
 
 ## Debug your plugin
 
-You can also debug your plugin by choosing `Debug` from the Actions menu. This brings up a window like this:
+When your plugin doesn't work as expected, you can debug it by clicking the **`{}`** link in the UDT window. This will open the UDT Debugger panel, which is based on the [Chrome Developer Tool](../../../introduction/essentials/tech-stack/index.md#debugging) and offers most of the same features.
 
-![Debug Window](./images/udt-debugger.png)
+![UDT - Debug](./img/plugin-workflows--debug.png)
 
-In this debugger (which resembles the Chrome Developer tool) you can look at the console log, and do the usual debugger things such as setting breakpoints, stepping into and out of functions, walking through code, inspecting elements, and more.
+In this debugger, you can look at the **Elements**, **Console**, **Sources**, and **Network** tabs. and do the usual debugger things such as setting breakpoints, stepping into and out of functions, walking through code, inspecting elements, and more.
 
-You may also instruct to "break on start" when debugging your plugins. The plugin will immediately break into the debugger when it is loaded so that you can trace through the plugin's initialization routines. Select `More` from the Actions menu and check on 'Break on start'.
+![UDT - Debugger](./img/plugin-workflows--debugger.png)
 
-Once you're done with debugging, you can close the debugger window.
+It is also possible to break on start, which will cause the debugger to pause when the plugin is loaded. In UDT, open the plugin's **••• > Options...** menu, select **Advanced**, and in the next dialog, select the **Break on start** checkbox.
 
-## Package your plugins for distribution
+![UDT - Break on start](./img/plugin-workflows--break-on-start.png)
 
-Once you've got a plugin that's ready for sharing, after it's been thoroughly polished and debugged, you'll need to package it as a "ccx" file.
+Once you're done with troubleshooting, you can close the debugger window.
 
-- First, make sure you get a plugin ID from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/) website before packaging your plugin for distribution.
-- Create a ccx file by choosing the `Package` option in the Actions menu.
-- Select a folder to store the ccx file. Note that the plugin package will always be named after the plugin's ID.
+## Working with Bundlers
 
-To find more details about distributing your plugin, see [Sharing Your Plugin](.).
-<br></br><br></br>
+When working with JavaScript frameworks like React JS, Vue, Svelte, or other bundlers like Webpack and Parcel, you'll need to understand how to effectively use them in combination with the UDT. There are various options available, depending on your workflow needs.
 
----
+### Add to the UDT workspace
 
-The **Advanced** section allows you to specify the plugin's build folder, relative to its `manifest.json` file. This is particularly useful when [working with React](./working-with-react.md) or other bundlers.
+With bundlers, you'll typically have two `manifest.json` files. One will be in your plugin's source code directory, and the other will be in your plugin's distribution directory.
+
+![UDT - Manifest files](./img/plugin-workflows--manifests.png)
+
+You can load either one of these, but you need to be aware of the differences.
+
+- Adding a plugin using the **distribution** `manifest.json` means that you're loading the entire project from the distribution folder. If your plugin build steps involve removing and recreating that folder folder, or cleaning all the files it contains, your plugin _may not_ reload correctly in the UDT.
+- Adding a plugin using the **source** `manifest.json` is the preferred option, but you'll also need to edit the plugin's options as follows.
+
+In UDT, open the plugin's **••• > Options...** menu, select **Advanced**, and enter the relative path (from the selected source `manifest.json` file) to your plugin’s distribution folder. This loads the plugin the same way as in the previous step, but ensures that any build processes which remove or recreate the distribution folder won’t affect the plugin’s ability to reload in the Developer Tool.
+
+![UDT - Advanced options: distribution folder](./img/plugin-workflows--dist-folder.png)
+
+<InlineAlert slots="text" variant="info"/>
+
+When using a bundler or framework, **make sure to install its dependencies** by running `npm install` or `yarn install`. The UDT does not automatically install dependencies for you.
+
+### Watch for changes
+
+Most bundler-based projects include a dedicated build process that watches your code for changes. The UDT isn’t aware of these build steps, so if you want it to reload the plugin automatically when updates occur, you’ll need to:
+
+- Run your plugin’s `watch` build process in a terminal
+- In the Developer Tool, select **Load & Watch** for the desired plugin
+
+This way, when your `watch` process detects a change and rebuilds the plugin, the UDT will recognize the updated build and automatically reload the plugin in the host environment.
+
+## Package your plugin for distribution
+
+The UDT provides a convenient way to package your plugin into a `.ccx` installer file, ready to be shared in the [Adobe Creative Cloud Marketplace](../../../plugins/distribution/adobe-marketplace/index.md) or any other distribution channel of your choice. Please refer to the [Share & Distribute Guide](../../../plugins/distribution/overview/index.md) for a thorough description of the subject.

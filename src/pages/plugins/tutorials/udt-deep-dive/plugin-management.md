@@ -1,6 +1,6 @@
 ---
 title: Plugin Management
-description: Information on how to manage your list of plugins in the UXP Developer Tool.
+description: How to manage plugins in the UXP Developer Tool.
 keywords:
   - Create plugins
   - Remove plugins
@@ -8,32 +8,39 @@ keywords:
   - Add plugin into UDT
 contributors:
   - https://github.com/padmkris123
+  - https://github.com/undavide
 ---
 
 # Plugin management
 
-The UXP Developer Tool allows you to create plugins from templates and add existing ones to your developer workspace.
+The UXP Developer Tool allows you to create plugins from templates or add existing ones to your developer workspace
 
-You can add as many plugins as you want in the UXP Developer Tool. You can either create the plugin folder structure and files from scratch and click the `Add Plugin` button in the Tool, or you can click the `Create Plugin` button to have it created for you, wizard-style.
+The UDT allows you to scaffold and import existing plugins into its workspace. You can decide to load them in the host application or keep them listed for future use.
 
-## Creating a new plugin
+## Create a new plugin
 
-As demonstrated while writing your first plugin, "Create Plugin" lets you select a template and create a new plugin instantly. Just fill out the name and select a template. It's that simple!
+As we've seen in the [Getting Started guide](../../index.md#1-scaffold-your-plugin), you can create a new plugin from one of the available template provided by UDT by clicking the **Create Plugin** button. Please refer to [this section](../../index.md#1-scaffold-your-plugin) for more details.
 
-## Adding an existing plugin
+![UDT - Create Plugin](../../img/getting-started--udt.png)
 
-You're not limited to creating new plugins from the Developer Tool – you can add plugins that you've already started as well.
+## Add an existing plugin
 
-* Click **Add Plugin**
-* A file picker will appear. This picker expects you to pick the `manifest.json` in your plugin folder.
-* Once you close the picker, the plugin will be added to your workspace.
+If you already have a plugin project on your disk, you can add it to your workspace by clicking the **Add Plugin** button and point the file picker to the `manifest.json` file of your plugin.
+
+![UDT - Create Plugin](./img/plugin-management--add-plugin.png)
+
+Click the **Open** button to add the plugin to your workspace.
+
+![UDT - Plugin Added](./img/plugin-management--plugin-added.png)
 
 ## Removing a plugin
 
 If you're building a lot of plugins, you may find that the workspace may be getting cluttered. You can remove a plugin from the workspace by checking the plugin's associated checkbox and clicking **Remove Selected** (in the upper-right corner).
 
+![UDT - Remove Plugin](./img/plugin-management--remove-plugin.png)
+
 <InlineAlert variant="info" slots="text"/>
 
-Removing a plugin from the Developer Tool's workspace does **not** remove the plugin from your storage. You can always add the plugin back later.
+Removing a plugin from the Developer Tool's workspace **does not remove the plugin from your storage**. you can always add the plugin back later.
 
-Once you have at least one plugin added to your workspace, let's look at the actions you can perform on them in the [next section](plugin-workflows.md).
+Once you have at least one plugin added to your workspace, let's look at the recommended [plugin development workflow](plugin-workflows.md).

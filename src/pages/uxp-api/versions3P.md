@@ -13,7 +13,7 @@ index_desc: General information on UXP and its dependencies for 3rd party plugin
 | ------------ | -------- | -------- | -------- | -------- | -------- | -------- | ------- | ------- | ------- | -------- | -------- | -------- | -------- | -------- | -------- |
 |Photoshop     | 26.1     | 26.0     | 25.5     | 25.2     | 25.0     | 24.6     | 24.4    | 24.1    | 24.1    | 24.0     | 23.5     | 23.4     | 23.3     | 23.2     | 23.0     |
 |InDesign & InDesign Server | -        | 20.0     | 19.4     | 19.0     | -        | 18.5     | -       | 18.1    | -       | 18.0     | 17.4	  | -        | -        | 17.1     | 17.0     |
-|Premiere Pro |  25.2      | -      | -        | -        | -        | -        | -       | -       | -       | -       | - 	  | -        | -        | -      | -     |
+|Premiere Pro |  25.1      | -      | -        | -        | -        | -        | -       | -       | -       | -       | - 	  | -        | -        | -      | -     |
 |XD           | -       | -        | -        | -        | -        | -        | -       | -       | -       | 55       | 54	      | -        | -        | 53       | 45       |
 
 ## UXP Features Supported in Applications
@@ -22,4 +22,4 @@ index_desc: General information on UXP and its dependencies for 3rd party plugin
 | ------------- | -------------- | ---------------------- | ------------- |
 | Photoshop     | ✅	            | ✅ from 24.2           | ✅ from 24.1  |
 | InDesign      | ✅ from 18.5   | -                      | ✅ from 18.0  |
-| Premiere Pro  | ✅ from 25.2   | -                      | -             |
+| Premiere Pro  | ✅ from 25.1   | -                      | -             |

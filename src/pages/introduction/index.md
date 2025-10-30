@@ -1,39 +1,48 @@
 ---
-title: Introduction
-description: Introduction to UXP
+title: Premiere Pro and UXP
+description: Premiere Pro and UXP
 keywords:
-  - Introduction
-  - UXP Prerequisites
-  - Local set up
-  - What is UXP
+  - UXP
+  - Premiere Pro
+  - Extensibility
+  - JavaScript
+  - HTML
+  - CSS
 contributors:
   - https://github.com/padmkris123
   - https://github.com/arsridhar_adobe
+  - https://github.com/undavide
 ---
 
-# Premiere Pro and Unified Extensibility Platform (UXP)
+# Premiere Pro & the Unified Extensibility Platform
 
-Premiere Pro Beta now supports UXP.
+UXP powers a new era of Extensibility in Premiere Pro
 
-UXP is a JavaScript ES6 (ECMA2015) based extensibility platform that helps you automate, optimize and extend the capabilities of your favorite Adobe Creative Cloud products. It provides a comprehensive solution that lets you use web technologies to build controls for the desktop application.
+## Overview
 
-<InlineAlert variant="info" slots="text"/>
+UXP is a **JavaScript-based extensibility platform** (ES6/ECMAScript 2015 compliant) that helps you automate, optimize, and extend the capabilities of your favorite Adobe Creative Cloud products. It represents a comprehensive solution that lets you **use Web technologies to build new features and tools** for Desktop applications.
 
-An **IMPORTANT** thing to note is that though UXP enables you to use web technologies, it should not be mistaken as a browser. Certain concepts of the browser will never be available in the UXP world but the platform offers a plethora of capabilities that allows you to build powerful and creative solutions.
+With UXP, you can for example:
 
-With UXP you can,
+1. **Automate repetitive, time-consuming tasks** in your daily workflow.
+2. **Unlock creative effects** that are difficult—or even impossible—to achieve otherwise.
+3. **Customize Premiere Pro** to fit your unique work habits and preferred layouts.
+4. **Build intuitive User Interfaces** that enhance the user experience.
 
-1. Automate the myriad, small, annoying tasks that you face every day.
-2. Achieve creative effects that would be difficult or impossible to attain by other means.
-3. Customize Premiere Pro to match your work habits and layouts.
-4. Create a fluent user interface for users to interact with.
+Developing in UXP requires some basic knowledge of Web technologies, such as JavaScript, HTML, and CSS. In the following pages, we will cover the essentials you need to know to get started.
 
-UXP is also available in other apps such as Photoshop and InDesign. And in the future, it will be added to more applications.
+<InlineAlert variant="info" slots="header, text"/>
 
-Developing in UXP requires you to have basic knowledge of JavaScript, HTML, and CSS. But don't worry if you aren't there yet. We have suggested a few courses and materials that will help you begin and understand our APIs.
+#### UXP is not a Browser
 
-You can choose to <!--write a single JavaScript file and execute them as scripts. Or,--> create something more complex and elaborate with persistent and fluent UI in the form of plugins. Within plugins too, you can either write a 'command' or a 'panel' plugin based on how you would like the users to interact with them. We will learn about all these in the subsequent section that will help you make the right choice suiting your needs.
+It's important to note that while UXP lets you use Web technologies, it is not conceived to be a standard browser environment or replacement; not all features that a browser natively supports will be available in UXP. However, the platform provides a wide range of capabilities tailored to building powerful and creative solutions for Desktop applications.
 
-Lastly, you can share your UXP plugin and <!--scripts-->with others as well. Plugins can also be distributed in Adobe's Marketplace giving you access to millions of application users at once. Alternatively, you can distribute them via your distribution channels.
+## Support and Features
+
+UXP is the current extensibility standard for Adobe Creative Cloud applications, supported by a constantly growing set of applications, including **Premiere Pro** (version 25.6), **Photoshop**, and **InDesign**.
+
+Plugins allow you to create a **persistent User Interface that blends seamlessly** with the host application (a `panel`), or an **actionable command** that runs a predefined function (a `command`) and can be triggered by the user via menu item—depending on how you would like the users to interact with them. You will learn all about them in the next sections.
+
+Lastly, you can [easily share UXP plugins](../plugins/distribution/overview/index.md) with other users. You can distribute them in [Adobe Creative Cloud Marketplace](../plugins/distribution/adobe-marketplace/index.md) (giving you instant access to millions of Adobe users at once), via [third-party channels](../plugins/distribution/independent-distribution/index.md), or [within your own organization](../plugins/distribution/enterprise-distribution/index.md).
 
 Welcome once again to UXP! The next few sections take you one level deeper into the UXP world. Make sure to read further and set up the essential developer tools.
