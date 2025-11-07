@@ -28,7 +28,6 @@ keywords:
 | transitionAlignment | *number* | R | 25.0 | Gets the transitionAlignment of transition |
 | duration | *TickTime* | R | 25.0 | Gets the duration of transition |
 
-
 ## Instance Methods
 
 ### setApplyToStart

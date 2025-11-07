@@ -19,7 +19,6 @@ keywords:
 
 # SequenceSettings  
 
-
 ## Instance Methods
 
 ### getAudioChannelCount

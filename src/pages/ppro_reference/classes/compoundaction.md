@@ -25,7 +25,6 @@ keywords:
 | :------ | :------ | :------ | :------ | :------ |
 | empty | *boolean* | R | 25.0 | Is the compound action empty? |
 
-
 ## Instance Methods
 
 ### addAction

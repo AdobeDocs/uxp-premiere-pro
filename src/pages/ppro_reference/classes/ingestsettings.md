@@ -19,7 +19,6 @@ keywords:
 
 # IngestSettings  
 
-
 ## Instance Methods
 
 ### getIsIngestEnabled

@@ -19,7 +19,6 @@ keywords:
 
 # VideoClipTrackItem  
 
-
 ## Instance Methods
 
 ### createAddVideoTransitionAction
@@ -77,7 +76,7 @@ ___
 
 *Action*
   
-Returns an action that enables/disables the trackItem 
+Returns an action that enables/disables the trackItem
 
 #### Parameters
 

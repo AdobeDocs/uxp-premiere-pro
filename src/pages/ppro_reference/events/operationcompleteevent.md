@@ -25,12 +25,10 @@ keywords:
 | :------ | :------ | :------ | :------ | :------ |
 | state | *number* | R | 25.0 | Indicates the outcome of a completed operation: Success, Cancelled, or Failed. |
 
-
-
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ | 
+| :------ | :------ | :------ |
 | EVENT_IMPORT_MEDIA_COMPLETE | 25.0 | Event occurs when a media import operation is complete. |
 | EVENT_EXPORT_MEDIA_COMPLETE | 25.0 | Event occurs when a media export operation is complete. |
 | EVENT_EFFECT_DROP_COMPLETE | 25.0 | Event occurs when an effect is dropped on a trackitem |
