@@ -56,6 +56,50 @@ ___
 
 ## Instance Methods
 
+### encodeFile
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Encode input media file in AME
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| filePath | *string* | - |
+| outputFile | *string* | - |
+| presetFile | *string* | - |
+| inPoint | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| outPoint | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| workArea | *number* | - |
+| removeUponCompletion | *boolean* | - |
+| startQueueImmediately | *boolean* | - |
+
+___
+
+### encodeProjectItem
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Encode input clipProjectItem in AME
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| clipProjectItem | [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) | - |
+| outputFile | *string* | - |
+| presetFile | *string* | - |
+| workArea | *number* | - |
+| removeUponCompletion | *boolean* | - |
+| startQueueImmediately | *boolean* | - |
+
+___
+
 ### exportSequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -79,7 +123,7 @@ ___
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ |
+| :------ | :------ | :------ | 
 | EVENT_RENDER_COMPLETE | 25.0 | Broadcast when AME is finished rendering |
 | EVENT_RENDER_ERROR | 25.0 | Broadcast when AME gives back error message |
 | EVENT_RENDER_CANCEL | 25.0 | Broadcast when AME job is canceled |

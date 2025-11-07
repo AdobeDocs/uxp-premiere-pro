@@ -22,6 +22,7 @@ To use any constant, import the `constants` object from the premiere pro module 
 
 ## Enumerations
 
+
 ### MediaType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -44,6 +45,30 @@ ___
 | ANY | - |
 | SEQUENCE | - |
 | MEDIA | - |
+
+___
+
+### ProjectItemColorLabel
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| VIOLET | - |
+| IRIS | - |
+| LAVENDER | - |
+| CERULEAN | - |
+| FOREST | - |
+| ROSE | - |
+| MANGO | - |
+| PURPLE | - |
+| BLUE | - |
+| TEAL | - |
+| MAGENTA | - |
+| TAN | - |
+| GREEN | - |
+| BROWN | - |
+| YELLOW | - |
 
 ___
 
@@ -181,8 +206,6 @@ ___
 | Name | Description |
 | :------ | :------ |
 | CAPTURE | - |
-| AUDIO_CAPTURE | - |
-| VIDEO_CAPTURE | - |
 | AUDIO_PREVIEW | - |
 | VIDEO_PREVIEW | - |
 | AUTO_SAVE | - |
@@ -250,6 +273,7 @@ ___
 | RAZOR_MARKER | - |
 | TRACKITEM | - |
 | GUIDES | - |
+| PLAYHEAD_TRACKITEM | - |
 
 ___
 
@@ -261,6 +285,7 @@ ___
 | :------ | :------ |
 | CLIP_EXTEND_REACHED | - |
 | EFFECT_DROP_COMPLETE | - |
+| EFFECT_DRAG_OVER | - |
 | EXPORT_MEDIA_COMPLETE | - |
 | GENERATIVE_EXTEND_COMPLETE | - |
 | IMPORT_MEDIA_COMPLETE | - |
@@ -347,3 +372,20 @@ ___
 | MILLISECONDS | - |
 
 ___
+
+### MarkerColor
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+| Name | Description |
+| :------ | :------ |
+| GREEN | - |
+| RED | - |
+| MAGNETA | - |
+| ORANGE | - |
+| YELLOW | - |
+| BLUE | - |
+| CYAN | - |
+
+___
+

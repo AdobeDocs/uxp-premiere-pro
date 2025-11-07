@@ -1,7 +1,7 @@
 ---
-id: "projectutils"
-title: "ProjectUtils"
-sidebar_label: "ProjectUtils"
+id: "transcript"
+title: "Transcript"
+sidebar_label: "Transcript"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,65 +17,56 @@ keywords:
   - Premiere Pro
 ---
 
-# ProjectUtils  
+# Transcript  
 
 ## Static Methods
 
-### getProjectFromViewId
+### createImportTextSegmentsAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Project*
+*Action*
   
-Get project based on input view guid
+Create action that import external transcripts to ClipProjectItem
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| guid | [*Guid*](/ppro_reference/classes/guid/) | - |
+| textSegments | [*TextSegments*](/ppro_reference/classes/textsegments/) | - |
+| clipProjectItem | [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) | - |
 
 ___
 
-### getProjectViewIds
+### exportToJSON
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Guid[]*
+*string*
   
-Get array of project view ids
-
-___
-
-### getSelection
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*ProjectItemSelection*
-  
-Get array of selected project items in project view
+Export transcripts inside of clipProjectItem as JSON string if transcript exist
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| project | [*Project*](/ppro_reference/classes/project/) | - |
+| clipProjectItem | [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) | - |
 
 ___
 
-### getSelectionFromViewId
+### importFromJSON
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectItemSelection*
+*TextSegments*
   
-Get array of selected projectItem based on input view guid
+Returns TextSegments object initialized from jsonString
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| guid | [*Guid*](/ppro_reference/classes/guid/) | - |
+| jsonString | *string* | - |
 
 ___
 

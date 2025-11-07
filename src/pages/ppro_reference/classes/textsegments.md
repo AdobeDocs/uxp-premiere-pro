@@ -1,7 +1,7 @@
 ---
-id: "compoundaction"
-title: "CompoundAction"
-sidebar_label: "CompoundAction"
+id: "textsegments"
+title: "TextSegments"
+sidebar_label: "TextSegments"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,29 +17,24 @@ keywords:
   - Premiere Pro
 ---
 
-# CompoundAction  
+# TextSegments  
 
-## Properties
+## Static Methods
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| empty | *boolean* | R | 25.0 | Is the compound action empty? |
-
-
-## Instance Methods
-
-### addAction
+### importFromJSON
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Add an action to the compound action
+Import text segments in JSON format for handling via callback.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| action | [*Action*](/ppro_reference/classes/action/) | - |
+| json | *string* | - |
+| undefined | *( importedTranscription: TextSegments ) => void* | - |
 
 ___
+

@@ -28,6 +28,7 @@ keywords:
 | isAppBeingPreparedToQuit | *boolean* | R | 25.0 | Get whether the app is prepared to quit when open/closing a project |
 | saveWorkspace | *boolean* | R | 25.0 | Get whether your workspaces are saved when opening/closing a project |
 
+
 ## Instance Methods
 
 ### setIsAppBeingPreparedToQuit

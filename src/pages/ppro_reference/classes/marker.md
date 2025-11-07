@@ -19,7 +19,24 @@ keywords:
 
 # Marker  
 
+
 ## Instance Methods
+
+### createSetColorByIndexAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Return an action to set the color of the marker by the color index
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| colorIndex | *number* | - |
+
+___
 
 ### createSetCommentsAction
 
@@ -92,6 +109,16 @@ ___
 *Color*
   
 Get color code of the marker.
+
+___
+
+### getColorIndex
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*number*
+  
+Get color index of the marker.
 
 ___
 

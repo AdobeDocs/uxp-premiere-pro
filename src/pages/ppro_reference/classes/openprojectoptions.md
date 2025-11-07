@@ -28,6 +28,7 @@ keywords:
 | showWarningDialog | *boolean* | R | 25.0 | Get whether the warning file dialog is shown on project open/close |
 | addToMRUList | *boolean* | R | 25.0 | Get whether to add project changes to MRU list |
 
+
 ## Instance Methods
 
 ### setAddToMRUList

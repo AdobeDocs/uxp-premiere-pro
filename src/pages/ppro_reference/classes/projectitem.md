@@ -23,6 +23,7 @@ keywords:
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
+| type | *number* | R | 25.0 | Get the type of the Project Item. |
 | name | *string* | R | 25.0 | The name of this project item. |
 
 ## Static Methods
@@ -41,15 +42,25 @@ Cast FolderItem or ClipProjectItem in to ProjectItem
 | :------ | :------ | :------ |
 | item | [*FolderItem*](/ppro_reference/classes/folderitem/) or [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) | - |
 
-It may be desirable to access attributes associated with ProjectItem after a ClipProjectItem object has been retrieved.  This can be achieved by casting a ClipProjectItem to a ProjectItem.
-
-```typescript
-let myProjItem = await ppro.ProjectItem.cast(myClipProjItem);
-```
-
 ___
 
 ## Instance Methods
+
+### createSetColorLabelAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Create an action for set color label to projectItem by index
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inColorLabelIndex | *number* | - |
+
+___
 
 ### createSetNameAction
 
@@ -67,13 +78,33 @@ Returns action that renames projectItem
 
 ___
 
-### getParent
+### getColorLabelIndex
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectItem*
+*number*
   
-Get the parent project item of this project item.
+Get color label index of projectItem
+
+___
+
+### getId
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*string*
+  
+Get id of projectItem
+
+___
+
+### getParentBin
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*FolderItem*
+  
+Get parent FolderItem of projectItem
 
 ___
 

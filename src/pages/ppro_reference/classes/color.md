@@ -28,6 +28,7 @@ keywords:
 | blue | *number* | W | 25.0 | Read/Write property to get/set blue value of color object |
 | alpha | *number* | W | 25.0 | Read/Write property to get/set alpha value of color object |
 
+
 ## Instance Methods
 
 ### equals

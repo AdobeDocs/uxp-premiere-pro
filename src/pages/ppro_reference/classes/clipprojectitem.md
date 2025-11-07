@@ -23,6 +23,7 @@ keywords:
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
+| type | *number* | R | 25.0 | Get the type of the Project Item. |
 | name | *string* | R | 25.0 | The name of this project item. |
 
 ## Static Methods
@@ -40,13 +41,6 @@ Cast ProjectItem in to ClipProjectItem
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
-
-It may be desirable to access attributes associated with ClipProjectItem after a ProjectItem object has been retrieved.  This can be achieved by casting a ProjectItem to a ClipProjectItem.
-
-```typescript
-let myProjItem = await myTrackItem.getProjectItem();
-let myClipProjItem = await ppro.ClipProjectItem.cast(myProjItem);
-```
 
 ___
 
@@ -114,6 +108,22 @@ ___
 *Action*
   
 Create Clear the in or out point of the Project item action
+
+___
+
+### createSetColorLabelAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Create an action for set color label to projectItem by index
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inColorLabelIndex | *number* | - |
 
 ___
 
@@ -284,6 +294,16 @@ Returns array of project's items with media paths containing match string
 
 ___
 
+### getColorLabelIndex
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*number*
+  
+Get color label index of projectItem
+
+___
+
 ### getComponentChain
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -389,16 +409,6 @@ Get the out point of the Project item
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | mediaType | [*Constants.MediaType*](/ppro_reference/constants) | Media type can be audio, video or data/caption |
-
-___
-
-### getParent
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*ProjectItem*
-  
-Get the parent project item of this project item.
 
 ___
 

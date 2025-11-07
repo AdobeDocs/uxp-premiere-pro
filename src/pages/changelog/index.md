@@ -21,6 +21,7 @@ contributors:
 - **New distribution section** including guides covering Adobe Marketplace submission, enterprise and independent distribution, packaging, installation, listing creation, and review guidelines.
 - **Expanded tutorials and recipes** featuring major new content on modal dialogs, panels, TypeScript support, filesystem operations, external processes, and inter-plugin communication.
 - **Content reorganization** with streamlined navigation, consolidation, and complete rewrites.
+- **New Premiere API Reference** updated to v25.6.
 
 ## Premiere Pro v25.2.0
 

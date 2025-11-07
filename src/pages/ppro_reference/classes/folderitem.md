@@ -23,6 +23,7 @@ keywords:
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
+| type | *number* | R | 25.0 | Get the type of the Project Item. |
 | name | *string* | R | 25.0 | The name of this project item. |
 
 ## Static Methods
@@ -111,6 +112,22 @@ Rename the Bin and return true if it's successful
 
 ___
 
+### createSetColorLabelAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Action*
+  
+Create an action for set color label to projectItem by index
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inColorLabelIndex | *number* | - |
+
+___
+
 ### createSetNameAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -144,6 +161,16 @@ Creates a smart bin with given name and returns the Folder object
 
 ___
 
+### getColorLabelIndex
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*number*
+  
+Get color label index of projectItem
+
+___
+
 ### getItems
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
@@ -151,16 +178,6 @@ ___
 *ProjectItem[]*
   
 Collection of child items of this folder.
-
-___
-
-### getParent
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*ProjectItem*
-  
-Get the parent project item of this project item.
 
 ___
 

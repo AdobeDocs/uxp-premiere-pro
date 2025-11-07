@@ -19,8 +19,6 @@ keywords:
 
 # SequenceEditor  
 
-Used to add projectItems as trackItems to sequences, clone trackItems, or remove trackItems from sequences.
-
 ## Static Methods
 
 ### getEditor
@@ -78,7 +76,7 @@ ___
 
 *Action*
   
-Create insert ProjectItem into Sequence Action
+Create insert ProjectItem into Sequence Action. Note: If you pass a track index greater than the number of existing tracks, a new track will be created.
 
 #### Parameters
 

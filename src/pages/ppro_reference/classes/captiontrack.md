@@ -26,6 +26,7 @@ keywords:
 | name | *string* | R | 25.0 | Get the name of the track |
 | id | *number* | R | 25.0 | The ID of the track within the TrackGroup |
 
+
 ## Instance Methods
 
 ### getIndex

@@ -1,7 +1,7 @@
 ---
-id: "audiofilterfactory"
-title: "AudioFilterFactory"
-sidebar_label: "AudioFilterFactory"
+id: "uniqueserializeable"
+title: "UniqueSerializeable"
+sidebar_label: "UniqueSerializeable"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,34 +17,34 @@ keywords:
   - Premiere Pro
 ---
 
-# AudioFilterFactory  
+# UniqueSerializeable  
 
 ## Static Methods
 
-### createComponentByDisplayName
+### cast
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*AudioFilterComponent*
+*UniqueSerializeable*
   
-Creates a new audio filter component based on the input display name and trackItem for applying the audio filter
+Cast serializable object (ex. ProjectItem) into UniqueSerializeable
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| displayName | *string* | - |
-| inAudioClipTrackItem | [*AudioClipTrackItem*](/ppro_reference/classes/audiocliptrackitem/) | - |
+| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) or [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) or [*FolderItem*](/ppro_reference/classes/folderitem/) or [*Sequence*](/ppro_reference/classes/sequence/) | - |
 
 ___
 
-### getDisplayNames
+## Instance Methods
+
+### getUniqueID
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string[]*
+*Guid*
   
-Returns an array of audio filter displayNames
+Get the unique ID of the serializeable object
 
 ___
-

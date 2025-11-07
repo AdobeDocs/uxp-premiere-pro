@@ -179,6 +179,10 @@ module.exports = [{
           "path": "/ppro_reference/classes/sourcemonitor/"
         },
         {
+          "title": "TextSegments",
+          "path": "/ppro_reference/classes/textsegments/"
+        },
+        {
           "title": "TickTime",
           "path": "/ppro_reference/classes/ticktime/"
         },
@@ -193,6 +197,10 @@ module.exports = [{
         {
           "title": "TransitionFactory",
           "path": "/ppro_reference/classes/transitionfactory/"
+        },
+        {
+          "title": "UniqueSerializeable",
+          "path": "/ppro_reference/classes/uniqueserializeable/"
         },
         {
           "title": "Utils",
@@ -217,6 +225,10 @@ module.exports = [{
         {
           "title": "EventManager",
           "path": "/ppro_reference/classes/eventmanager/"
+        },
+        {
+          "title": "Transcript",
+          "path": "/ppro_reference/classes/transcript/"
         },
 	]
 },

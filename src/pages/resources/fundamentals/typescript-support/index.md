@@ -33,7 +33,7 @@ Both approaches are based on the same Type Definitions for Premiere Pro DOM APIs
 
 ### Type Definitions
 
-Complete TypeScript type definitions for all Premiere Pro DOM APIs are [available for download here](./types.d.ts). This file includes:
+Complete TypeScript type definitions for all Premiere Pro DOM APIs are [available for download here](../../../ppro_reference/types.d.ts). This file includes:
 
 - All Premiere Pro classes and their methods (`Project`, `Sequence`, `VideoTrack`, etc.)
 - Constants and enums (`MediaType`, `TrackItemType`, etc.)

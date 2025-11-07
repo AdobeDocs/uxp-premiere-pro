@@ -33,7 +33,7 @@ Returns the Markers object for Sequence Or ProjectItem
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| markerOwnerObject | [*Sequence*](/ppro_reference/classes/sequence/) or [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| markerOwnerObject | [*Sequence*](/ppro_reference/classes/sequence/) or [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) | - |
 
 ___
 
