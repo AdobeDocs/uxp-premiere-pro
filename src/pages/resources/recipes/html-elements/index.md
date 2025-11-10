@@ -22,7 +22,7 @@ UXP lets you create UI elements in two ways: **define them in HTML** or **create
 
 Before you begin, make sure your development environment uses the following versions:
 
-- **Premiere Pro v25.6** or higher
+- **Premiere v25.6** or higher
 - **UDT v2.2** or higher
 - **Manifest version v5** or higher
 

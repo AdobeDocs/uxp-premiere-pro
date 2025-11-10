@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# ScratchDiskSettings  
+# ScratchDiskSettings
 
 ## Instance Methods
 
@@ -25,31 +25,31 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Gets the scratchDisk location for specific disktype - may return symbolic paths for reserved types like 'MyDocuments'
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| ScratchDiskType | [*Constants.ScratchDiskFolderType*](/ppro_reference/constants) | - |
+| Name            | Type                                                           | Description |
+| :-------------- | :------------------------------------------------------------- | :---------- |
+| ScratchDiskType | [_Constants.ScratchDiskFolderType_](/ppro_reference/constants) | -           |
 
-___
+---
 
 ### setScratchDiskPath
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Sets project ScratchDisk Path
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| ScratchDiskType | [*Constants.ScratchDiskFolderType*](/ppro_reference/constants) | - |
-| ScratchDiskValue | [*Constants.ScratchDiskFolder*](/ppro_reference/constants) | - |
+| Name             | Type                                                           | Description |
+| :--------------- | :------------------------------------------------------------- | :---------- |
+| ScratchDiskType  | [_Constants.ScratchDiskFolderType_](/ppro_reference/constants) | -           |
+| ScratchDiskValue | [_Constants.ScratchDiskFolder_](/ppro_reference/constants)     | -           |
 
-___
+---

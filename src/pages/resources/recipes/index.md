@@ -45,7 +45,7 @@ Learn how to connect your UXP plugin to the web—fetch data, communicate with A
 
 [Launch External Processes](external-process/)
 
-Open files and launch applications from your plugin to extend workflows beyond Premiere Pro
+Open files and launch applications from your plugin to extend workflows beyond Premiere
 
 <DiscoverBlock slots="link, text"/>
 

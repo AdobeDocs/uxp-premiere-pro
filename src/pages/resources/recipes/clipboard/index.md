@@ -22,7 +22,7 @@ UXP provides clipboard APIs that let your plugin **read from** and **write to** 
 
 Please make make sure your development environment uses the following **minimum versions** to avoid compatibility issues:
 
-- **Premiere Pro v25.6**
+- **Premiere v25.6**
 - **UDT v2.2**
 - **Manifest v5**
 
@@ -75,7 +75,7 @@ async function copyToClipboard(text) {
 }
 
 // Example usage
-copyToClipboard("Welcome to UXP for Premiere Pro!");
+copyToClipboard("Welcome to UXP for Premiere!");
 ```
 
 #### manifest.json

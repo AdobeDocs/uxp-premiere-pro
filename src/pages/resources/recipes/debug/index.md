@@ -21,7 +21,7 @@ While the [UXP Developer Tool](../../../plugins/tutorials/udt-deep-dive/index.md
 
 Before you begin, make sure your development environment uses the following versions:
 
-- **Premiere Pro v25.6** or higher
+- **Premiere v25.6** or higher
 - **UDT v2.2** or higher
 - **Manifest version v5** or higher
 
@@ -52,7 +52,7 @@ For quick checks without switching to the console, use dialog methods to display
 
 <InlineAlert variant="error" slots="text"/>
 
-The `alert()`, `confirm()`, and `prompt()` methods are not fully supported in Premiere Pro; they will be fixed in a future release.
+The `alert()`, `confirm()`, and `prompt()` methods are not fully supported in Premiere; they will be fixed in a future release.
 
 <InlineAlert variant="info" slots="header, text"/>
 

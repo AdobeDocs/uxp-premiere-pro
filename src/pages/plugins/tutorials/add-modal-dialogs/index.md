@@ -17,7 +17,7 @@ Learn how to create a Modal Dialog as a user interface for Commands or as an add
 
 ## Overview
 
-Modal dialogs are temporary windows that appear on top of the main application interface, demanding user attention before they can continue working. Unlike panels, which can be docked alongside Premiere Pro's workspace, **modal dialogs block interaction with the host application until dismissed**—making them ideal for critical decisions, input forms, or alerts that require immediate user response.
+Modal dialogs are temporary windows that appear on top of the main application interface, demanding user attention before they can continue working. Unlike panels, which can be docked alongside Premiere's workspace, **modal dialogs block interaction with the host application until dismissed**—making them ideal for critical decisions, input forms, or alerts that require immediate user response.
 
 In UXP, modal dialogs serve two primary purposes:
 
@@ -33,7 +33,7 @@ You'll learn how to:
 
 ## Key Concepts
 
-Modal dialogs share the same HTML document as your plugin, similar to [multiple panels](../add-panels/index.md), but they **appear as floating windows** that must be closed before the user can interact with Premiere Pro again. This makes them perfect for workflows that require focused user attention—like configuration wizards, confirmation prompts, or data entry forms.
+Modal dialogs share the same HTML document as your plugin, similar to [multiple panels](../add-panels/index.md), but they **appear as floating windows** that must be closed before the user can interact with Premiere again. This makes them perfect for workflows that require focused user attention—like configuration wizards, confirmation prompts, or data entry forms.
 
 In their simplest form, modal dialogs are just a `<dialog>` element in the HTML document launched with a `uxpShowModal()` method.
 
@@ -495,7 +495,7 @@ From the files tree alone, you can see that we'll make use of **fragments** to k
 
 ![Modal Dialog - Singleton class](./img/add-modal-dialogs--singleton-class.png)
 
-The dialog we'll create will be a fictitious "Set sequence dimensions" tool, that allows the user to set the width and height of the sequence. It's stripped from Premiere Pro's API code, but we've kept the logic and the UI as close as possible to the real thing.
+The dialog we'll create will be a fictitious "Set sequence dimensions" tool, that allows the user to set the width and height of the sequence. It's stripped from Premiere's API code, but we've kept the logic and the UI as close as possible to the real thing.
 
 <CodeBlock slots="heading, code" repeat="6" languages="HTML, CSS, JavaScript, HTML, CSS, JSON" />
 
@@ -874,7 +874,7 @@ Note that the Enter key handler **doesn't close the dialog on invalid input**. T
 
 This method **displays the modal and handles its result**. It awaits `uxpShowModal()`, which **blocks execution until the dialog is dismissed**. The return value (`rv`) is whatever was passed to `dialog.close()` in the event handlers—either `"ok"`, `"cancel"`, or `"reasonCanceled"` (when the user closes the dialog via the title bar or Esc key).
 
-The method uses **exceptions for control flow**: if the user cancels, it throws `"cancel"` rather than returning a value. This forces the calling code to handle cancellation explicitly in a `catch` block, which is a common pattern for operations that can be aborted. If the dialog closes with OK, it calls the private `#runRoutine()` method to perform the actual work (Premiere Pro API calls, in our case).
+The method uses **exceptions for control flow**: if the user cancels, it throws `"cancel"` rather than returning a value. This forces the calling code to handle cancellation explicitly in a `catch` block, which is a common pattern for operations that can be aborted. If the dialog closes with OK, it calls the private `#runRoutine()` method to perform the actual work (Premiere API calls, in our case).
 
 ##### `#runRoutine()`
 
@@ -886,7 +886,7 @@ The final method provides **controlled access to the dialog's internal state**. 
 
 ## Summary
 
-Modal dialogs are temporary, blocking windows that demand user attention before they can continue working with Premiere Pro—ideal for critical decisions, input forms, or alerts.
+Modal dialogs are temporary, blocking windows that demand user attention before they can continue working with Premiere—ideal for critical decisions, input forms, or alerts.
 
 **Key Concepts:**
 

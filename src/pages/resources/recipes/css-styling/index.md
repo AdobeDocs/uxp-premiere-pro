@@ -21,7 +21,7 @@ UXP supports standard CSS for styling your plugin's interface. You can apply sty
 
 Before you begin, make sure your development environment uses the following versions:
 
-- **Premiere Pro v25.6** or higher
+- **Premiere v25.6** or higher
 - **UDT v2.2** or higher
 - **Manifest version v5** or higher
 
@@ -69,7 +69,7 @@ exampleDiv.style.backgroundColor = "orange";
 
 ## Theme Awareness
 
-Premiere Pro supports theme awareness, which means that your plugin's UI can adapt to the user's chosen application theme—either, **Light**, **Dark**, or **Darkest**. In Premiere Pro UXP plugins, the `document` object implements a `theme` property with a `getCurrent()` method that returns the current theme as a string.
+Premiere supports theme awareness, which means that your plugin's UI can adapt to the user's chosen application theme—either, **Light**, **Dark**, or **Darkest**. In Premiere UXP plugins, the `document` object implements a `theme` property with a `getCurrent()` method that returns the current theme as a string.
 
 Additionally, `theme` implements a `onUpdated` event listener that is triggered when the user manually changes it. Its callback can then update your plugin's UI with custom CSS classes to match the new theme.
 
@@ -209,7 +209,7 @@ sp-body {
 
 ### UXP CSS Variables
 
-Spectrum CSS variables that are [available in other Creative Cloud applications](https://developer.adobe.com/photoshop/uxp/2022/guides/theme-awareness/#built-in-theme-colors) (for example, `--uxp-host-text-color`) are **not yet supported** in Premiere Pro. They will be added in a future release.
+Spectrum CSS variables that are [available in other Creative Cloud applications](https://developer.adobe.com/photoshop/uxp/2022/guides/theme-awareness/#built-in-theme-colors) (for example, `--uxp-host-text-color`) are **not yet supported** in Premiere. They will be added in a future release.
 
 ## Important Considerations
 

@@ -53,7 +53,7 @@ See [this Admin Console documentation page](https://helpx.adobe.com/enterprise/u
 
 ## Important Considerations
 
-- **App dependency**: Plugins only install if the corresponding host app (e.g., Premiere Pro) is also present in the package or already installed.
+- **App dependency**: Plugins only install if the corresponding host app (e.g., Premiere) is also present in the package or already installed.
 - **Error handling**: A plugin installation failure does _not_ block the package installation.
 - **Activation**: If a plugin requires the host app to restart, users must restart the app before the plugin becomes active.
 - **Unique IDs**: If you plan to distribute a plugin _both_ internally and through the Creative Cloud Marketplace, create a clone of your plugin with a different ID as explained [here](../package/index.md#mind-your-plugins-id).

@@ -14,7 +14,7 @@ contributors:
 
 # UXP Entrypoints
 
-Learn how to declare and implement plugin entrypoints for commands and panels in Premiere Pro
+Learn how to declare and implement plugin entrypoints for commands and panels in Premiere
 
 ## Plugin Components
 
@@ -126,13 +126,13 @@ entrypoints.setup({
 
 <InlineAlert variant="warning" slots="text" />
 
-The `hide()` and `destroy()` hooks are **not working as expected yet** in Premiere Pro. This will be fixed in a future update.
+The `hide()` and `destroy()` hooks are **not working as expected yet** in Premiere. This will be fixed in a future update.
 
 Panel handlers receive a `rootNode` parameter; it's the HTML document root node, which can be used to programmatically append or remove an appropriate container element in a multiple panels scenario.
 
 ### Command Handlers
 
-Command handlers are functions that are invoked when a command entrypoint is invoked via click to Premiere Pro **Window** > **UXP Plugins** > **`<your plugin name>`** > **`<your command name>`**.
+Command handlers are functions that are invoked when a command entrypoint is invoked via click to Premiere **Window** > **UXP Plugins** > **`<your plugin name>`** > **`<your command name>`**.
 
 They are defined in the `commands` property of the object passed to `entrypoints.setup()`, which must include one property for each `"command"` entrypoint declared in the `manifest.json`, using the command IDs as property names.
 

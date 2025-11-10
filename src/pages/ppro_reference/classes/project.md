@@ -14,18 +14,18 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# Project  
+# Project
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| guid | *Guid* | R | 25.0 | The unique identifier of the project. |
-| name | *string* | R | 25.0 | The project name. |
-| path | *string* | R | 25.0 | The absolute file path to the project file. |
+| Name | Type     | Access | Min Version | Description                                 |
+| :--- | :------- | :----- | :---------- | :------------------------------------------ |
+| guid | _Guid_   | R      | 25.0        | The unique identifier of the project.       |
+| name | _string_ | R      | 25.0        | The project name.                           |
+| path | _string_ | R      | 25.0        | The absolute file path to the project file. |
 
 ## Static Methods
 
@@ -33,60 +33,60 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Project*
-  
+_Project_
+
 Create a new project
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| path | *string* | - |
+| Name | Type     | Description |
+| :--- | :------- | :---------- |
+| path | _string_ | -           |
 
-___
+---
 
 ### getActiveProject
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Project*
-  
+_Project_
+
 Currently active project.
 
-___
+---
 
 ### getProject
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Project*
-  
+_Project_
+
 Get project referenced by given UID
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectGuid | [*Guid*](/ppro_reference/classes/guid/) | - |
+| Name        | Type                                    | Description |
+| :---------- | :-------------------------------------- | :---------- |
+| projectGuid | [_Guid_](/ppro_reference/classes/guid/) | -           |
 
-___
+---
 
 ### open
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Project*
-  
+_Project_
+
 Open a project
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| path | *string* | - |
-| openProjectOptions | [*OpenProjectOptions*](/ppro_reference/classes/openprojectoptions/) | - |
+| Name               | Type                                                                | Description |
+| :----------------- | :------------------------------------------------------------------ | :---------- |
+| path               | _string_                                                            | -           |
+| openProjectOptions | [_OpenProjectOptions_](/ppro_reference/classes/openprojectoptions/) | -           |
 
-___
+---
 
 ## Instance Methods
 
@@ -94,303 +94,303 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Close a project
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| closeProjectOptions | [*CloseProjectOptions*](/ppro_reference/classes/closeprojectoptions/) | - |
+| Name                | Type                                                                  | Description |
+| :------------------ | :-------------------------------------------------------------------- | :---------- |
+| closeProjectOptions | [_CloseProjectOptions_](/ppro_reference/classes/closeprojectoptions/) | -           |
 
-___
+---
 
 ### createSequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence*
-  
+_Sequence_
+
 Create a new sequence with the default preset path - Parameter presetPath is deprecated, instead use createSequenceWithPresetPath()
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| name | *string* | - |
-| presetPath | *string* | - |
+| Name       | Type     | Description |
+| :--------- | :------- | :---------- |
+| name       | _string_ | -           |
+| presetPath | _string_ | -           |
 
-___
+---
 
 ### createSequenceFromMedia
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence*
-  
+_Sequence_
+
 Create a new sequence with a given name and medias
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| name | *string* | - |
-| clipProjectItems | [*ClipProjectItem[]*](/ppro_reference/classes/clipprojectitem[]/) | - |
-| targetBin | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| Name             | Type                                                              | Description |
+| :--------------- | :---------------------------------------------------------------- | :---------- |
+| name             | _string_                                                          | -           |
+| clipProjectItems | [_ClipProjectItem[]_](/ppro_reference/classes/clipprojectitem[]/) | -           |
+| targetBin        | [_ProjectItem_](/ppro_reference/classes/projectitem/)             | -           |
 
-___
+---
 
 ### deleteSequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Delete a given sequence from the project
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| sequence | [_Sequence_](/ppro_reference/classes/sequence/) | -           |
 
-___
+---
 
 ### executeTransaction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Execute undoable transaction by passing compound action
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| callback | *(compoundAction: CompoundAction) => void* | - |
-| undoString? | *string* | - |
+| Name        | Type                                       | Description |
+| :---------- | :----------------------------------------- | :---------- |
+| callback    | _(compoundAction: CompoundAction) => void_ | -           |
+| undoString? | _string_                                   | -           |
 
-___
+---
 
 ### getActiveSequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence*
-  
+_Sequence_
+
 Get the active sequence of the project
 
-___
+---
 
 ### getColorSettings
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectColorSettings*
-  
+_ProjectColorSettings_
+
 Get project color settings object
 
-___
+---
 
 ### getInsertionBin
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectItem*
-  
+_ProjectItem_
+
 Get current insertion bin
 
-___
+---
 
 ### getRootItem
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*FolderItem*
-  
+_FolderItem_
+
 The root item of the project which contains all items of the project on the lowest level.
 
-___
+---
 
 ### getSequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence*
-  
+_Sequence_
+
 Get sequence by id from the project
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| guid | [*Guid*](/ppro_reference/classes/guid/) | - |
+| Name | Type                                    | Description |
+| :--- | :-------------------------------------- | :---------- |
+| guid | [_Guid_](/ppro_reference/classes/guid/) | -           |
 
-___
+---
 
 ### getSequences
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence[]*
-  
+_Sequence[]_
+
 Get an array of all sequences in this project.
 
-___
+---
 
 ### importAEComps
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
+_boolean_
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| aepPath | *string* | - |
-| compNames | [*string[]*](/ppro_reference/classes/string[]/) | - |
-| TargetBin | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| Name      | Type                                                  | Description |
+| :-------- | :---------------------------------------------------- | :---------- |
+| aepPath   | _string_                                              | -           |
+| compNames | [_string[]_](/ppro_reference/classes/string[]/)       | -           |
+| TargetBin | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
 
-___
+---
 
 ### importAllAEComps
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
+_boolean_
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| aepPath | *string* | - |
-| TargetBin | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| Name      | Type                                                  | Description |
+| :-------- | :---------------------------------------------------- | :---------- |
+| aepPath   | _string_                                              | -           |
+| TargetBin | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
 
-___
+---
 
 ### importFiles
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Import files in root/target bin of the project
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| filePaths | [*string[]*](/ppro_reference/classes/string[]/) | - |
-| suppressUI | *boolean* | - |
-| targetBin | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
-| asNumberedStills | *boolean* | - |
+| Name             | Type                                                  | Description |
+| :--------------- | :---------------------------------------------------- | :---------- |
+| filePaths        | [_string[]_](/ppro_reference/classes/string[]/)       | -           |
+| suppressUI       | _boolean_                                             | -           |
+| targetBin        | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
+| asNumberedStills | _boolean_                                             | -           |
 
-___
+---
 
 ### importSequences
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
+_boolean_
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectPath | *string* | - |
-| sequenceIds | [*Guid[]*](/ppro_reference/classes/guid[]/) | - |
+| Name        | Type                                        | Description |
+| :---------- | :------------------------------------------ | :---------- |
+| projectPath | _string_                                    | -           |
+| sequenceIds | [_Guid[]_](/ppro_reference/classes/guid[]/) | -           |
 
-___
+---
 
 ### lockedAccess
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*void*
-  
+_void_
+
 Get a read/upgrade locked access to Project, project state will not change during the execution of callback function. Can call executeTransaction while having locked access.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| callback | *() => void* | - |
+| Name     | Type         | Description |
+| :------- | :----------- | :---------- |
+| callback | _() => void_ | -           |
 
-___
+---
 
 ### openSequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Open a sequence and return true if successful.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| sequence | [_Sequence_](/ppro_reference/classes/sequence/) | -           |
 
-___
+---
 
 ### pauseGrowing
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Pause growing of files instead swap the files
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| pause | *boolean* | - |
+| Name  | Type      | Description |
+| :---- | :-------- | :---------- |
+| pause | _boolean_ | -           |
 
-___
+---
 
 ### save
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Save the project
 
-___
+---
 
 ### saveAs
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Save the project at the provided path
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| path | *string* | - |
+| Name | Type     | Description |
+| :--- | :------- | :---------- |
+| path | _string_ | -           |
 
-___
+---
 
 ### setActiveSequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Set the active sequence of the project
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| sequence | [_Sequence_](/ppro_reference/classes/sequence/) | -           |
 
-___
+---

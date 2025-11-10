@@ -14,14 +14,14 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# RectF  
+# RectF
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| width | *number* | W | 25.0 | Get/Set the width of a rect |
-| height | *number* | W | 25.0 | Get/Set the height of a rect |
+| Name   | Type     | Access | Min Version | Description                  |
+| :----- | :------- | :----- | :---------- | :--------------------------- |
+| width  | _number_ | W      | 25.0        | Get/Set the width of a rect  |
+| height | _number_ | W      | 25.0        | Get/Set the height of a rect |

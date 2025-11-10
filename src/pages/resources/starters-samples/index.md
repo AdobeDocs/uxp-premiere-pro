@@ -18,7 +18,7 @@ Learn from working examples and jumpstart your plugin development with sample co
 
 ## Overview
 
-When building UXP plugins for Premiere Pro, you don't need to start from scratch. We provide two types of resources to help you:
+When building UXP plugins for Premiere, you don't need to start from scratch. We provide two types of resources to help you:
 
 - **Samples**: Complete, working examples that demonstrate specific features or use cases
 - **Starters**: Minimal templates with framework setup to help you begin a new plugin project
@@ -27,13 +27,13 @@ When building UXP plugins for Premiere Pro, you don't need to start from scratch
 
 You can find a collection of samples and starter templates in the official repository:
 
-[UXP Premiere Pro Samples](https://github.com/AdobeDocs/uxp-premiere-pro-samples)
+[UXP Premiere Samples](https://github.com/AdobeDocs/uxp-premiere-pro-samples)
 
 This repository includes:
 
 - Working plugin examples for common tasks
 - Best practices for plugin architecture
-- Integration examples with Premiere Pro APIs
+- Integration examples with Premiere APIs
 - Reusable code patterns you can adapt for your projects
 
 ## UDT templates
@@ -56,7 +56,7 @@ To use a template, select it when running the `create` command in UDT. Learn mor
 Looking to build something from scratch? The [Tutorials section](../../plugins/tutorials/) provides step-by-step guides that walk you through complete plugin development tasks:
 
 - [UDT Deep Dive](../../plugins/tutorials/udt-deep-dive/index.md): Master the Adobe UXP Developer Tool
-- [Add Commands](../../plugins/tutorials/add-commands/index.md): Create menu items in Premiere Pro
+- [Add Commands](../../plugins/tutorials/add-commands/index.md): Create menu items in Premiere
 - [Add Lifecycle Hooks](../../plugins/tutorials/add-lifecycle-hooks/index.md): Respond to plugin and panel events
 - [Add Multiple Panels](../../plugins/tutorials/add-panels/index.md): Work with multiple panel entrypoints
 - [Add Modal Dialogs](../../plugins/tutorials/add-modal-dialogs/index.md): Create modal dialogs as a user interface for Commands or as an additional UI for Panels

@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# IngestSettings  
+# IngestSettings
 
 ## Instance Methods
 
@@ -25,24 +25,24 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Get whether or not ingest is enabled
 
-___
+---
 
 ### setIngestEnabled
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Set whether or not ingest is enabled
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| enabled | *boolean* | - |
+| Name    | Type      | Description |
+| :------ | :-------- | :---------- |
+| enabled | _boolean_ | -           |
 
-___
+---

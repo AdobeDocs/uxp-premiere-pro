@@ -21,7 +21,7 @@ UXP supports standard HTML events for handling user interactions like clicks, in
 
 Before you begin, make sure your development environment uses the following versions:
 
-- **Premiere Pro v25.6** or higher
+- **Premiere v25.6** or higher
 - **UDT v2.2** or higher
 - **Manifest version v5** or higher
 

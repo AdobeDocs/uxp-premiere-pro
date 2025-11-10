@@ -69,4 +69,4 @@ Any additional tool that expands the capabilities of Vanilla (i.e., plain) JavaS
 
 ## System Requirements
 
-Finally, make sure your system meets the minimum requirements to run the [Premiere Pro](https://helpx.adobe.com/premiere-pro/system-requirements.html) application.
+Finally, make sure your system meets the minimum requirements to run the [Premiere](https://helpx.adobe.com/premiere-pro/system-requirements.html) application.

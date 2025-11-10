@@ -14,17 +14,17 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# FolderItem  
+# FolderItem
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| type | *number* | R | 25.0 | Get the type of the Project Item. |
-| name | *string* | R | 25.0 | The name of this project item. |
+| Name | Type     | Access | Min Version | Description                       |
+| :--- | :------- | :----- | :---------- | :-------------------------------- |
+| type | _number_ | R      | 25.0        | Get the type of the Project Item. |
+| name | _string_ | R      | 25.0        | The name of this project item.    |
 
 ## Static Methods
 
@@ -32,17 +32,17 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*FolderItem*
-  
+_FolderItem_
+
 Cast ProjectItem in to FolderItem
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| Name        | Type                                                  | Description |
+| :---------- | :---------------------------------------------------- | :---------- |
+| projectItem | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
 
-___
+---
 
 ## Instance Methods
 
@@ -50,143 +50,143 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns an action that lets users create a new bin.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| name | *string* | - |
-| makeUnique | *boolean* | - |
+| Name       | Type      | Description |
+| :--------- | :-------- | :---------- |
+| name       | _string_  | -           |
+| makeUnique | _boolean_ | -           |
 
-___
+---
 
 ### createMoveItemAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Creates an action that moves the given item to the provided folder item newParent.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
-| newParent | [*FolderItem*](/ppro_reference/classes/folderitem/) | - |
+| Name      | Type                                                  | Description |
+| :-------- | :---------------------------------------------------- | :---------- |
+| item      | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
+| newParent | [_FolderItem_](/ppro_reference/classes/folderitem/)   | -           |
 
-___
+---
 
 ### createRemoveItemAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Creates an action that removes the given item from this folder.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| Name | Type                                                  | Description |
+| :--- | :---------------------------------------------------- | :---------- |
+| item | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
 
-___
+---
 
 ### createRenameBinAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Rename the Bin and return true if it's successful
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| name | *string* | - |
+| Name | Type     | Description |
+| :--- | :------- | :---------- |
+| name | _string_ | -           |
 
-___
+---
 
 ### createSetColorLabelAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create an action for set color label to projectItem by index
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| inColorLabelIndex | *number* | - |
+| Name              | Type     | Description |
+| :---------------- | :------- | :---------- |
+| inColorLabelIndex | _number_ | -           |
 
-___
+---
 
 ### createSetNameAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns action that renames projectItem
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| inName | *string* | - |
+| Name   | Type     | Description |
+| :----- | :------- | :---------- |
+| inName | _string_ | -           |
 
-___
+---
 
 ### createSmartBinAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Creates a smart bin with given name and returns the Folder object
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| name | *string* | - |
-| searchQuery | *string* | - |
+| Name        | Type     | Description |
+| :---------- | :------- | :---------- |
+| name        | _string_ | -           |
+| searchQuery | _string_ | -           |
 
-___
+---
 
 ### getColorLabelIndex
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
-  
+_number_
+
 Get color label index of projectItem
 
-___
+---
 
 ### getItems
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectItem[]*
-  
+_ProjectItem[]_
+
 Collection of child items of this folder.
 
-___
+---
 
 ### getProject
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Project*
-  
+_Project_
+
 Get the parent Project of this projectItem.
 
-___
+---

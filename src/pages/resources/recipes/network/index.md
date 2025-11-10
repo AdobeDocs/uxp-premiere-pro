@@ -25,7 +25,7 @@ UXP provides powerful network APIs that let your plugin **fetch data**, **access
 
 Please make make sure your development environment uses the following **minimum versions** to avoid compatibility issues:
 
-- **Premiere Pro v25.6**
+- **Premiere v25.6**
 - **UDT v2.2**
 - **Manifest v5**
 
@@ -257,7 +257,7 @@ async function connectToServer() {
 
     socket.onopen = () => {
       console.log("✅ WebSocket connection established");
-      socket.send("Hello from Premiere Pro plugin!");
+      socket.send("Hello from Premiere plugin!");
     };
 
     socket.onmessage = (event) => {
@@ -333,7 +333,7 @@ async function safeFetch(url, options = {}, timeoutMs = 8000) {
 | Symptom                                  | Likely Cause                       | Solution                                                                        |
 | ---------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------- |
 | TypeError: Failed to fetch               | Domain not allow-listed            | Add the domain under `requiredPermissions.network.domains`                      |
-| Connection fails only on macOS           | HTTPS required                     | Premiere Pro disallows http:// URLs on macOS                                    |
+| Connection fails only on macOS           | HTTPS required                     | Premiere disallows http:// URLs on macOS                                        |
 | Request blocked by CORS                  | Remote server missing CORS headers | Ensure your server allows requests from UXP (check Access-Control-Allow-Origin) |
 | WebSocket connection closed unexpectedly | Server-side disconnect             | Check for idle timeout or SSL misconfiguration                                  |
 

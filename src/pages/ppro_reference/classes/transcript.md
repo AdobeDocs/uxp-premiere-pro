@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# Transcript  
+# Transcript
 
 ## Static Methods
 
@@ -25,47 +25,47 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create action that import external transcripts to ClipProjectItem
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| textSegments | [*TextSegments*](/ppro_reference/classes/textsegments/) | - |
-| clipProjectItem | [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) | - |
+| Name            | Type                                                          | Description |
+| :-------------- | :------------------------------------------------------------ | :---------- |
+| textSegments    | [_TextSegments_](/ppro_reference/classes/textsegments/)       | -           |
+| clipProjectItem | [_ClipProjectItem_](/ppro_reference/classes/clipprojectitem/) | -           |
 
-___
+---
 
 ### exportToJSON
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Export transcripts inside of clipProjectItem as JSON string if transcript exist
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| clipProjectItem | [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) | - |
+| Name            | Type                                                          | Description |
+| :-------------- | :------------------------------------------------------------ | :---------- |
+| clipProjectItem | [_ClipProjectItem_](/ppro_reference/classes/clipprojectitem/) | -           |
 
-___
+---
 
 ### importFromJSON
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TextSegments*
-  
+_TextSegments_
+
 Returns TextSegments object initialized from jsonString
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| jsonString | *string* | - |
+| Name       | Type     | Description |
+| :--------- | :------- | :---------- |
+| jsonString | _string_ | -           |
 
-___
+---

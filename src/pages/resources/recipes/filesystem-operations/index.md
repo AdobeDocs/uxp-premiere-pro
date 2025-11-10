@@ -20,7 +20,7 @@ UXP provides powerful APIs for reading, writing, creating, and deleting files. T
 
 Please make make sure your development environment uses the following **minimum versions** to avoid compatibility issues:
 
-- **Premiere Pro v25.6**
+- **Premiere v25.6**
 - **UDT v2.2**
 - **Manifest v5**
 

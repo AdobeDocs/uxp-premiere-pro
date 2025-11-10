@@ -1,6 +1,6 @@
 ---
 title: Launch External Processes
-description: Open files and folders in their default applications and launch external programs from your UXP plugin—enabling workflows that extend beyond Premiere Pro.
+description: Open files and folders in their default applications and launch external programs from your UXP plugin—enabling workflows that extend beyond Premiere.
 keywords:
   - shell
   - external process
@@ -15,7 +15,7 @@ contributors:
 
 # Launch External Processes
 
-Open files and launch applications from your plugin to extend workflows beyond Premiere Pro
+Open files and launch applications from your plugin to extend workflows beyond Premiere
 
 UXP provides the [`shell` API](../../../uxp-api/reference-js/Modules/uxp/shell/Shell.md) to let your plugin interact with the user's operating system—**opening files** in their default applications and **launching external programs** via URL schemes. This is useful for workflows that span across multiple tools.
 
@@ -23,7 +23,7 @@ UXP provides the [`shell` API](../../../uxp-api/reference-js/Modules/uxp/shell/S
 
 Please make make sure your development environment uses the following **minimum versions** to avoid compatibility issues:
 
-- **Premiere Pro v25.6**
+- **Premiere v25.6**
 - **UDT v2.2**
 - **Manifest v5**
 

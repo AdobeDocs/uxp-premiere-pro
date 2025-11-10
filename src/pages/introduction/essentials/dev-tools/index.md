@@ -20,7 +20,7 @@ A reliable Code Editor helps you stay organized and productive. Any modern edito
 
 ## UXP Developer Tool (UDT)
 
-The UXP Developer Tool (UDT) simplifies the process of creating, loading, managing, and debugging plugins for Adobe's UXP-powered applications. UXP plugins are supported in **Premiere Pro v25.6** and later since **UDT v2.2**.
+The UXP Developer Tool (UDT) simplifies the process of creating, loading, managing, and debugging plugins for Adobe's UXP-powered applications. UXP plugins are supported in **Premiere v25.6** and later since **UDT v2.2**.
 
 ![UDT](./img/dev-tools--udt.png)
 
@@ -73,5 +73,5 @@ For now, successfully installing UDT is sufficient. We will understand UDT in mo
 <!--
 TODO Add this section once details are available
 ## Type definitions
-Provide download link for UXP and Premiere Pro
+Provide download link for UXP and Premiere
 -->

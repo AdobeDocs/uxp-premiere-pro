@@ -1,9 +1,9 @@
 ---
-title: Premiere Pro and UXP
-description: Premiere Pro and UXP
+title: Premiere and UXP
+description: Premiere and UXP
 keywords:
   - UXP
-  - Premiere Pro
+  - Premiere
   - Extensibility
   - JavaScript
   - HTML
@@ -14,9 +14,9 @@ contributors:
   - https://github.com/undavide
 ---
 
-# Premiere Pro & the Unified Extensibility Platform
+# Premiere & the Unified Extensibility Platform
 
-UXP powers a new era of Extensibility in Premiere Pro
+UXP powers a new era of Extensibility in Premiere
 
 ## Overview
 
@@ -26,7 +26,7 @@ With UXP, you can for example:
 
 1. **Automate repetitive, time-consuming tasks** in your daily workflow.
 2. **Unlock creative effects** that are difficult—or even impossible—to achieve otherwise.
-3. **Customize Premiere Pro** to fit your unique work habits and preferred layouts.
+3. **Customize Premiere** to fit your unique work habits and preferred layouts.
 4. **Build intuitive User Interfaces** that enhance the user experience.
 
 Developing in UXP requires some basic knowledge of Web technologies, such as JavaScript, HTML, and CSS. In the following pages, we will cover the essentials you need to know to get started.
@@ -39,7 +39,7 @@ It's important to note that while UXP lets you use Web technologies, it is not c
 
 ## Support and Features
 
-UXP is the current extensibility standard for Adobe Creative Cloud applications, supported by a constantly growing set of applications, including **Premiere Pro** (version 25.6), **Photoshop**, and **InDesign**.
+UXP is the current extensibility standard for Adobe Creative Cloud applications, supported by a constantly growing set of applications, including **Premiere** (version 25.6), **Photoshop**, and **InDesign**.
 
 Plugins allow you to create a **persistent User Interface that blends seamlessly** with the host application (a `panel`), or an **actionable command** that runs a predefined function (a `command`) and can be triggered by the user via menu item—depending on how you would like the users to interact with them. You will learn all about them in the next sections.
 

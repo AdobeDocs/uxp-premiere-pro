@@ -1,6 +1,6 @@
 # Add a Command Entrypoint
 
-Commands allow you to add a menu item directly to the Premiere Pro user interface.
+Commands allow you to add a menu item directly to the Premiere user interface.
 
 ## Overview
 
@@ -35,7 +35,7 @@ For the [`label`](../../concepts/manifest/index.md#label) property, you can also
 
 ## 2. Associate Entrypoint and Handler
 
-In your `index.js` file, add a function to handle the command execution—i.e., when the user clicks on the command in the Premiere Pro user interface.
+In your `index.js` file, add a function to handle the command execution—i.e., when the user clicks on the command in the Premiere user interface.
 
 ```js
 // index.js

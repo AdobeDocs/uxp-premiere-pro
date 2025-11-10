@@ -19,8 +19,8 @@ module.exports = {
     versions: [],
     pages: [
       {
-        title: "UXP for Premiere Pro",
-        description: "Introduction to the Premiere Pro UXP API",
+        title: "UXP for Premiere",
+        description: "Introduction to the Premiere UXP API",
         path: "index.md",
       },
       {
@@ -45,7 +45,7 @@ module.exports = {
           },
           {
             title: "Premiere API",
-            //description: 'Premiere Pro specific UXP documentation',
+            //description: 'Premiere specific UXP documentation',
             path: "ppro_reference/",
           },
           {
@@ -252,7 +252,7 @@ module.exports = {
         ],
       },
       {
-        title: "Premiere Pro DOM API Reference",
+        title: "Premiere DOM API Reference",
         path: "/ppro_reference",
         pages: require("./reference-ppro.js"),
       },

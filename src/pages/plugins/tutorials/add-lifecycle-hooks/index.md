@@ -34,7 +34,7 @@ More details on the types of hooks can be found in the [Entrypoints concept guid
 
 Current limitations
 
-The `hide()` and `destroy()` hooks are **not working as expected yet** in Premiere Pro; this will be fixed in a future update.
+The `hide()` and `destroy()` hooks are **not working as expected yet** in Premiere; this will be fixed in a future update.
 
 For plugins with multiple panels, **lifecycle hooks currently fire for all panels** without distinguishing between them
 
@@ -121,11 +121,11 @@ entrypoints.setup({
 
 ## Summary
 
-Lifecycle hooks are callback functions that automatically execute during specific plugin and panel events, enabling setup and teardown logic for UXP plugins in Adobe Premiere Pro.
+Lifecycle hooks are callback functions that automatically execute during specific plugin and panel events, enabling setup and teardown logic for UXP plugins in Adobe Premiere.
 
 **Key Concepts:**
 
 1. **Plugin-level hooks**: `create()` and `destroy()` are triggered when the plugin container is created/destroyed.
 2. **Panel-level hooks**: `create()`, `show()`, `hide()`, and `destroy()` are triggered during panel lifecycle events.
 3. **Implementation**: Use `entrypoints.setup()` with `plugin` and `panels` objects to define hooks. Promises are allowed for most callbacks.
-4. **Known limitations**: `hide()` and `destroy()` hooks are not working as expected in Premiere Pro (will be fixed in future updates). For multi-panel plugins, lifecycle hooks currently fire for all panels without distinction.
+4. **Known limitations**: `hide()` and `destroy()` hooks are not working as expected in Premiere (will be fixed in future updates). For multi-panel plugins, lifecycle hooks currently fire for all panels without distinction.

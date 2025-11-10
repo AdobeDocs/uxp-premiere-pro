@@ -9,7 +9,7 @@ keywords:
   - Type definitions
   - JSDoc
 title: TypeScript Support
-description: Learn about the TypeScript support in UXP and Premiere Pro
+description: Learn about the TypeScript support in UXP and Premiere
 contributors:
   - https://github.com/undavide
 ---
@@ -20,22 +20,22 @@ Learn how to use TypeScript in UXP plugins
 
 ## Overview
 
-When building UXP plugins for Premiere Pro, having accurate autocomplete and type checking will significantly improve your development experience. Whether you prefer plain JavaScript or full TypeScript, you can use the same type definitions that give you IntelliSense, error detection, and inline documentation right in your code editor.
+When building UXP plugins for Premiere, having accurate autocomplete and type checking will significantly improve your development experience. Whether you prefer plain JavaScript or full TypeScript, you can use the same type definitions that give you IntelliSense, error detection, and inline documentation right in your code editor.
 
 This guide covers two approaches:
 
 1. **[JavaScript with JSDoc](#javascript-intellisense)**: get IntelliSense in existing JavaScript projects without a build step.
 2. **[TypeScript projects](#typescript-projects)**: use full TypeScript for compile-time type checking and advanced features.
 
-Both approaches are based on the same Type Definitions for Premiere Pro DOM APIs, so you get accurate autocomplete and documentation regardless of which path you choose.
+Both approaches are based on the same Type Definitions for Premiere DOM APIs, so you get accurate autocomplete and documentation regardless of which path you choose.
 
-## Premiere Pro DOM APIs
+## Premiere DOM APIs
 
 ### Type Definitions
 
-Complete TypeScript type definitions for all Premiere Pro DOM APIs are [available for download here](../../../ppro_reference/types.d.ts). This file includes:
+Complete TypeScript type definitions for all Premiere DOM APIs are [available for download here](../../../ppro_reference/types.d.ts). This file includes:
 
-- All Premiere Pro classes and their methods (`Project`, `Sequence`, `VideoTrack`, etc.)
+- All Premiere classes and their methods (`Project`, `Sequence`, `VideoTrack`, etc.)
 - Constants and enums (`MediaType`, `TrackItemType`, etc.)
 - Complete method signatures with parameter and return types
 - JSDoc comments with descriptions for every API
@@ -247,7 +247,7 @@ The recommended workflow for TypeScript projects:
 
 1. **Terminal**: run `npm run watch` mode for automatic compilation
 2. **Editor**: edit `src/main.ts` with full IntelliSense and type checking
-3. **Premiere Pro**: reload the plugin via UXP Developer Tool to test changes
+3. **Premiere**: reload the plugin via UXP Developer Tool to test changes
 
 #### Pros and Cons of TypeScript
 

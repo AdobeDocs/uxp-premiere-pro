@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# VideoClipTrackItem  
+# VideoClipTrackItem
 
 ## Instance Methods
 
@@ -25,313 +25,313 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create add transition action for sequence
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| videoTransition | [*VideoTransition*](/ppro_reference/classes/videotransition/) | - |
-| addTransitionOptionsProperties | [*AddTransitionOptions*](/ppro_reference/classes/addtransitionoptions/) | - |
+| Name                           | Type                                                                    | Description |
+| :----------------------------- | :---------------------------------------------------------------------- | :---------- |
+| videoTransition                | [_VideoTransition_](/ppro_reference/classes/videotransition/)           | -           |
+| addTransitionOptionsProperties | [_AddTransitionOptions_](/ppro_reference/classes/addtransitionoptions/) | -           |
 
-___
+---
 
 ### createMoveAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns an action that moves the inPoint of the track item to a new time, by shifting it by a number of seconds.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createRemoveVideoTransitionAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns true if trackItem has transition
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| transitionPosition | [*Constants.TransitionPosition*](/ppro_reference/constants) | Start or end position of transition |
+| Name               | Type                                                        | Description                         |
+| :----------------- | :---------------------------------------------------------- | :---------------------------------- |
+| transitionPosition | [_Constants.TransitionPosition_](/ppro_reference/constants) | Start or end position of transition |
 
-___
+---
 
 ### createSetDisabledAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns an action that enables/disables the trackItem
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| disabled | *boolean* | - |
+| Name     | Type      | Description |
+| :------- | :-------- | :---------- |
+| disabled | _boolean_ | -           |
 
-___
+---
 
 ### createSetEndAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create set end time action for sequence
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createSetInPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create SetInPointAction for setting the track item in point relative to the start time of the project item referenced by this track item
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createSetNameAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns an action that renames the trackItem
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| inName | *string* | - |
+| Name   | Type     | Description |
+| :----- | :------- | :---------- |
+| inName | _string_ | -           |
 
-___
+---
 
 ### createSetOutPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create SetOutPointAction for setting the track item out point relative to the start time of the project item referenced by this track item
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createSetStartAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create set start time action for sequence
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### getComponentChain
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*VideoComponentChain*
-  
+_VideoComponentChain_
+
 Returns VideoComponentChain
 
-___
+---
 
 ### getDuration
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Returns timecode representing the duration of this track item relative to the sequence start.
 
-___
+---
 
 ### getEndTime
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Returns a TickTime object representing the ending sequence time of this track item relative to the sequence start time.
 
-___
+---
 
 ### getInPoint
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Returns a TickTime object representing the track item in point relative to the start time of the project item referenced by this track item.
 
-___
+---
 
 ### getIsSelected
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Returns if trackItem is selected or not
 
-___
+---
 
 ### getMatchName
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Returns the value of internal matchname for this trackItem
 
-___
+---
 
 ### getMediaType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Guid*
-  
+_Guid_
+
 Returns UUID representing the underlying media type of this track item
 
-___
+---
 
 ### getName
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Returns the display name for trackItem
 
-___
+---
 
 ### getOutPoint
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Returns a TickTime object representing the track item out point relative to the start time of the project item referenced by this track item.
 
-___
+---
 
 ### getProjectItem
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectItem*
-  
+_ProjectItem_
+
 Returns the project item for this track item.
 
-___
+---
 
 ### getSpeed
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
-  
+_number_
+
 Returns the value of speed of the trackItem
 
-___
+---
 
 ### getStartTime
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Returns a TickTime object representing the starting sequence time of this track item relative to the sequence start time.
 
-___
+---
 
 ### getTrackIndex
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
-  
+_number_
+
 Index representing the track index of the track this track item belongs to
 
-___
+---
 
 ### getType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
-  
+_number_
+
 Index representing the type of this track item.
 
-___
+---
 
 ### isAdjustmentLayer
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Returns true if the trackitem is an adjustment layer
 
-___
+---
 
 ### isDisabled
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Returns true if trackitem is muted/disabled
 
-___
+---
 
 ### isSpeedReversed
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
-  
+_number_
+
 Returns true if the trackitem is reversed
 
-___
+---

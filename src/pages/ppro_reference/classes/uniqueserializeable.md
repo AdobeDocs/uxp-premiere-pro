@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# UniqueSerializeable  
+# UniqueSerializeable
 
 ## Static Methods
 
@@ -25,17 +25,17 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*UniqueSerializeable*
-  
+_UniqueSerializeable_
+
 Cast serializable object (ex. ProjectItem) into UniqueSerializeable
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| item | [*ProjectItem*](/ppro_reference/classes/projectitem/) or [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) or [*FolderItem*](/ppro_reference/classes/folderitem/) or [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| Name | Type                                                                                                                                                                                                                             | Description |
+| :--- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
+| item | [_ProjectItem_](/ppro_reference/classes/projectitem/) or [_ClipProjectItem_](/ppro_reference/classes/clipprojectitem/) or [_FolderItem_](/ppro_reference/classes/folderitem/) or [_Sequence_](/ppro_reference/classes/sequence/) | -           |
 
-___
+---
 
 ## Instance Methods
 
@@ -43,8 +43,8 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Guid*
-  
+_Guid_
+
 Get the unique ID of the serializeable object
 
-___
+---

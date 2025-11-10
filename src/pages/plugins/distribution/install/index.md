@@ -36,9 +36,9 @@ Enterprise Distribution
 
 For details on how to distribute UXP plugins in enterprise environments, please refer to the dedicated [Enterprise Distribution](../enterprise-distribution/index.md) guide.
 
-UXP Plugins in Premiere Pro are found in the **Window** > **UXP Plugins** menu.
+UXP Plugins in Premiere are found in the **Window** > **UXP Plugins** menu.
 
-![Premiere Pro UXP Plugins menu](./img/install--ppro-menu.png)
+![Premiere UXP Plugins menu](./img/install--ppro-menu.png)
 
 ## Use the Creative Cloud Marketplace
 
@@ -52,7 +52,7 @@ A confirmation dialog will appear, informing you about the permissions the plugi
 
 ![Confirm installation dialog](./img/install--creative-cloud-marketplace-confirm.png)
 
-If everything goes to plan, the plugin will be available in the "Manage Plugins" section of the Creative Cloud Desktop application, as well as in the host application. For Premiere Pro, it will be the **Window** > **UXP Plugins** menu.
+If everything goes to plan, the plugin will be available in the "Manage Plugins" section of the Creative Cloud Desktop application, as well as in the host application. For Premiere, it will be the **Window** > **UXP Plugins** menu.
 
 ![Success dialog](./img/install--creative-cloud-marketplace-success.png)
 
@@ -66,7 +66,7 @@ Depending on the specific access level the plugin requires (for example, to the 
 
 ![Installation dialog](./img/install--ccx-warning-dialog.png)
 
-Once the installation is complete, the plugin will be available in the Plugins section of the Creative Cloud Desktop application application, as well as in the host application. For Premiere Pro, it will be the **Window** > **UXP Plugins** menu.
+Once the installation is complete, the plugin will be available in the Plugins section of the Creative Cloud Desktop application application, as well as in the host application. For Premiere, it will be the **Window** > **UXP Plugins** menu.
 
 ![Installed plugin](./img/install--ccx-installed-plugin.png)
 

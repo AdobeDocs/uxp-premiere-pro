@@ -5,7 +5,7 @@ keywords:
   - FAQ
   - Frequently Asked Questions
   - UXP
-  - Premiere Pro
+  - Premiere
   - UXP Developer Tool
   - UXP Developer Tool FAQ
   - UXP Developer Tool Frequently Asked Questions
@@ -13,7 +13,7 @@ keywords:
 
 # Frequently Asked Questions
 
-This section contains frequently asked questions about UXP and Premiere Pro.
+This section contains frequently asked questions about UXP and Premiere.
 
 ## Questions
 
@@ -49,11 +49,11 @@ This section contains frequently asked questions about UXP and Premiere Pro.
 
 #### How can I enable Developer Mode?
 
-You need to enable Developer mode in both the UXP Developer Tool and the host application. Follow the instructions in the [UXP Developer Tool](../../introduction/essentials/dev-tools/index.md#first-launch) and [Premiere Pro](../../plugins/index.md#prerequisites) guides.
+You need to enable Developer mode in both the UXP Developer Tool and the host application. Follow the instructions in the [UXP Developer Tool](../../introduction/essentials/dev-tools/index.md#first-launch) and [Premiere](../../plugins/index.md#prerequisites) guides.
 
 #### In UDT, I get the error "Plugin Load Failed, Host Application specified is not available. Make sure the host application is started."
 
-Ensure that Premiere Pro is running. If it is, check that the host application's Developer Mode is enabled; follow the instructions in the [this guide](../../plugins/index.md#prerequisites).
+Ensure that Premiere is running. If it is, check that the host application's Developer Mode is enabled; follow the instructions in the [this guide](../../plugins/index.md#prerequisites).
 
 <!-- 🎨 User Interfaces -->
 

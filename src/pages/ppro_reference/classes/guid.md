@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# Guid  
+# Guid
 
 ## Static Methods
 
@@ -25,17 +25,17 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Guid*
-  
+_Guid_
+
 Create a guid from a string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| stringValue | *string* | - |
+| Name        | Type     | Description |
+| :---------- | :------- | :---------- |
+| stringValue | _string_ | -           |
 
-___
+---
 
 ## Instance Methods
 
@@ -43,8 +43,8 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Return string representation of the GUID
 
-___
+---

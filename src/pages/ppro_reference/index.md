@@ -1,14 +1,14 @@
 ---
 id: "premierepro-api"
-title: Premiere Pro API—UXP for Adobe Premiere Pro
-description: Learn about the Premiere Pro API that is exposed through UXP for developers of plugins and scripts.
+title: Premiere API—UXP for Adobe Premiere
+description: Learn about the Premiere API that is exposed through UXP for developers of plugins and scripts.
 ---
 
-# Premiere Pro API
+# Premiere API
 
 ## Overview
 
-The following line allows you access to the Premiere Pro DOM via UXP.
+The following line allows you access to the Premiere DOM via UXP.
 
 ```javascript
 const app = require('premierepro');
@@ -18,20 +18,20 @@ From here, you can open documents, modify them, run menu items, and more.
 
 ### Minimum Version
 
-You will now find minimum version information on properties and methods. This version tag corresponds to the version of Premiere Pro where the member was introduced or last updated significantly.
+You will now find minimum version information on properties and methods. This version tag corresponds to the version of Premiere where the member was introduced or last updated significantly.
 For properties, you will find a column "MIN VERSION". For methods, the version number appears as a tag to the right of the name.
 
 ## Synchronous vs Asynchronous
 
-An important difference between ExtendScript (and CEP) and UXP in Premiere Pro is that all ExtendScript calls to Premiere Pro were synchronous. This means they blocked the Premiere Pro UI while they were executing. In UXP, a method call is _asynchronous_, and does not block the UI thread.
+An important difference between ExtendScript (and CEP) and UXP in Premiere is that all ExtendScript calls to Premiere were synchronous. This means they blocked the Premiere UI while they were executing. In UXP, a method call is _asynchronous_, and does not block the UI thread.
 
 For a smooth transition between the ExtendScript DOM and the UXP DOM, all properties (get and set) in the API were designed to be _synchronous_ and do not need to be awaited. It is worth noting that they are, in the background, asynchronous in nature.
 
-## Working with Premiere Pro Objects
+## Working with Premiere Objects
 
-### Premiere Pro Application
+### Premiere Application
 
-Through the [`app`](#overview) object, you can access the rest of Premiere Pro's objects and methods.
+Through the [`app`](#overview) object, you can access the rest of Premiere's objects and methods.
 
 The currently-active project is obtained like this:
 

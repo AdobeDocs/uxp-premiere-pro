@@ -57,7 +57,7 @@ When working with multiple panels, you'll use the `show()` [lifecycle hook](../.
 
 Known Limitation
 
-The `hide()` lifecycle hook is **not currently working as expected** in Premiere Pro. This means that when a panel is hidden, the `hide()` callback won't be reliably triggered. For now, focus on using the `show()` hook to append content, and be aware that DOM cleanup in `hide()` may not execute. This will be fixed in a future update.
+The `hide()` lifecycle hook is **not currently working as expected** in Premiere. This means that when a panel is hidden, the `hide()` callback won't be reliably triggered. For now, focus on using the `show()` hook to append content, and be aware that DOM cleanup in `hide()` may not execute. This will be fixed in a future update.
 
 ## Implementation
 
@@ -212,7 +212,7 @@ Let's break down the key mechanisms:
 
 ### 1. Shared HTML Context
 
-Both panels share the same `index.html` document. When you open either panel from the **Window** menu, Premiere Pro displays the same HTML document—but which content is visible depends on the panel's lifecycle hooks.
+Both panels share the same `index.html` document. When you open either panel from the **Window** menu, Premiere displays the same HTML document—but which content is visible depends on the panel's lifecycle hooks.
 
 ### 2. Dynamic Content Appending
 
@@ -230,7 +230,7 @@ me?.showPanel("uxp-second-panel"); // Opens the panel by entrypoint ID
 ```
 
 <InlineAlert variant="info" slots="text"/>
-You can **open panels programmatically, but you cannot close them** via the API. Users must close panels manually through the Premiere Pro interface.
+You can **open panels programmatically, but you cannot close them** via the API. Users must close panels manually through the Premiere interface.
 
 ### 4. Inter-Panel Communication
 

@@ -14,17 +14,17 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# Sequence  
+# Sequence
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| guid | *Guid* | R | 25.0 | The unique identifier of the sequence. |
-| name | *string* | R | 25.0 | The sequence name. |
+| Name | Type     | Access | Min Version | Description                            |
+| :--- | :------- | :----- | :---------- | :------------------------------------- |
+| guid | _Guid_   | R      | 25.0        | The unique identifier of the sequence. |
+| name | _string_ | R      | 25.0        | The sequence name.                     |
 
 ## Instance Methods
 
@@ -32,338 +32,338 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Clears TrackItem Selection
 
-___
+---
 
 ### createCloneAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Creates an action to clone the given sequence
 
-___
+---
 
 ### createSetInPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create SetInPointAction for sequence
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createSetOutPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create SetOutPointAction for sequence
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createSetSettingsAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns action that set sequence settings
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| sequenceSettings | [*SequenceSettings*](/ppro_reference/classes/sequencesettings/) | - |
+| Name             | Type                                                            | Description |
+| :--------------- | :-------------------------------------------------------------- | :---------- |
+| sequenceSettings | [_SequenceSettings_](/ppro_reference/classes/sequencesettings/) | -           |
 
-___
+---
 
 ### createSetZeroPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create an action to set an InPoint for the sequence
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createSubsequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence*
-  
+_Sequence_
+
 Returns a new sequence, which is a sub-sequence of the existing sequence
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| ignoreTrackTargeting | *boolean* | - |
+| Name                 | Type      | Description |
+| :------------------- | :-------- | :---------- |
+| ignoreTrackTargeting | _boolean_ | -           |
 
-___
+---
 
 ### getAudioTrack
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*AudioTrack*
-  
+_AudioTrack_
+
 Get audio track from track index
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| trackIndex | *number* | - |
+| Name       | Type     | Description |
+| :--------- | :------- | :---------- |
+| trackIndex | _number_ | -           |
 
-___
+---
 
 ### getAudioTrackCount
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
-  
+_number_
+
 Get audio track count from this sequence
 
-___
+---
 
 ### getCaptionTrack
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*CaptionTrack*
-  
+_CaptionTrack_
+
 Get caption track from track index
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| trackIndex | *number* | - |
+| Name       | Type     | Description |
+| :--------- | :------- | :---------- |
+| trackIndex | _number_ | -           |
 
-___
+---
 
 ### getCaptionTrackCount
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
-  
+_number_
+
 Get caption track count from this sequence
 
-___
+---
 
 ### getEndTime
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Time representing the end of the sequence
 
-___
+---
 
 ### getFrameSize
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*RectF*
-  
+_RectF_
+
 Gets the size of the frame
 
-___
+---
 
 ### getInPoint
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Get time representing the inPoint of sequence.
 
-___
+---
 
 ### getOutPoint
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Get time representing the inPoint of sequence.
 
-___
+---
 
 ### getPlayerPosition
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Get the player's current position
 
-___
+---
 
 ### getProjectItem
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectItem*
-  
+_ProjectItem_
+
 Get the associated projectItem of the sequence.
 
-___
+---
 
 ### getSelection
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TrackItemSelection*
-  
+_TrackItemSelection_
+
 Returns the current selection group of the sequence.
 
-___
+---
 
 ### getSequenceAudioTimeDisplayFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TimeDisplay*
-  
+_TimeDisplay_
+
 Get audio time display format of this sequence
 
-___
+---
 
 ### getSequenceVideoTimeDisplayFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TimeDisplay*
-  
+_TimeDisplay_
+
 Get video time display format of this sequence
 
-___
+---
 
 ### getSettings
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*SequenceSettings*
-  
+_SequenceSettings_
+
 Get sequence settings object
 
-___
+---
 
 ### getTimebase
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Gets the time base of sequence
 
-___
+---
 
 ### getVideoTrack
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*VideoTrack*
-  
+_VideoTrack_
+
 Get video track from track index
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| trackIndex | *number* | - |
+| Name       | Type     | Description |
+| :--------- | :------- | :---------- |
+| trackIndex | _number_ | -           |
 
-___
+---
 
 ### getVideoTrackCount
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
-  
+_number_
+
 Get video track count from this sequence
 
-___
+---
 
 ### getZeroPoint
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Time representing the zero point of the sequence.
 
-___
+---
 
 ### isDoneAnalyzingForVideoEffects
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Returns whether or not the sequence is done analyzing for video effects
 
-___
+---
 
 ### setPlayerPosition
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Set the player's current position
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| positionTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name         | Type                                            | Description |
+| :----------- | :---------------------------------------------- | :---------- |
+| positionTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### setSelection
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Updates sequence selection using the given track item selection.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| trackItemSelection | [*TrackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
+| Name               | Type                                                                | Description |
+| :----------------- | :------------------------------------------------------------------ | :---------- |
+| trackItemSelection | [_TrackItemSelection_](/ppro_reference/classes/trackitemselection/) | -           |
 
-___
+---

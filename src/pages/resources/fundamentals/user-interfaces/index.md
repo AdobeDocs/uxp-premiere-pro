@@ -21,7 +21,7 @@ Learn how to create beautiful and functional user interfaces for your UXP plugin
 
 ## Overview
 
-Every UXP plugin with a visual component needs a user interface. Whether you're building a simple dialog or a complex panel, UXP gives you multiple ways to create UI that looks and feels like a native part of Premiere Pro.
+Every UXP plugin with a visual component needs a user interface. Whether you're building a simple dialog or a complex panel, UXP gives you multiple ways to create UI that looks and feels like a native part of Premiere.
 
 UXP provides three approaches for building user interfaces:
 
@@ -68,7 +68,7 @@ While UXP supports modern web technologies, it's not a full browser environment.
 
 ### Spectrum UXP Widgets
 
-Spectrum UXP Widgets are built directly into the UXP platform. They provide ready-to-use, Adobe-styled components that automatically match Premiere Pro's look and feel, including dark and light theme support.
+Spectrum UXP Widgets are built directly into the UXP platform. They provide ready-to-use, Adobe-styled components that automatically match Premiere's look and feel, including dark and light theme support.
 
 ```html
 <sp-button variant="primary">I'm a Spectrum button</sp-button>
@@ -78,9 +78,9 @@ Spectrum UXP Widgets are built directly into the UXP platform. They provide read
 
 These widgets are immediately available—no installation or imports required. Just use them like any other HTML tag.
 
-| Best for                                                                                                          | Trade-offs                                                                                                                                                  |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Quick prototyping**, getting started with UXP, or when you want Premiere Pro's native look without extra setup. | **Limited number of components** available. <br/>**You can't customize their behavior** beyond the provided API or easily inspect their internal structure. |
+| Best for                                                                                                      | Trade-offs                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Quick prototyping**, getting started with UXP, or when you want Premiere's native look without extra setup. | **Limited number of components** available. <br/>**You can't customize their behavior** beyond the provided API or easily inspect their internal structure. |
 
 ### Spectrum Web Components (SWC)
 
@@ -97,7 +97,7 @@ npm install @spectrum-web-components/textfield@0.37.0
 
 Version Requirement
 
-For Premiere Pro plugins, **all Spectrum Web Components must be locked to version 0.37.0** for the time being. This ensures compatibility with the current UXP version.
+For Premiere plugins, **all Spectrum Web Components must be locked to version 0.37.0** for the time being. This ensures compatibility with the current UXP version.
 
 Then import and use them in your JavaScript:
 

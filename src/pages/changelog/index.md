@@ -11,7 +11,7 @@ contributors:
 
 # Changelog
 
-## Premiere Pro v25.6.0
+## Premiere v25.6.0
 
 **Release Date:** November 12, 2025
 

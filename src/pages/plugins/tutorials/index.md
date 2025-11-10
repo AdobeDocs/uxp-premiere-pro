@@ -37,7 +37,7 @@ Respond to plugin and panel events with setup and teardown logic
 
 [Add Commands](add-commands/)
 
-Create menu items in Premiere Pro that execute your plugin code
+Create menu items in Premiere that execute your plugin code
 
 <DiscoverBlock slots="link, text"/>
 

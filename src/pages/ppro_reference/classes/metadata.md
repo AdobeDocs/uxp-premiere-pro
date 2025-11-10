@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# Metadata  
+# Metadata
 
 ## Static Methods
 
@@ -25,125 +25,125 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Add name and label property to project metadata schema
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| name | *string* | - |
-| label | *string* | - |
-| type | *number* | - |
+| Name  | Type     | Description |
+| :---- | :------- | :---------- |
+| name  | _string_ | -           |
+| label | _string_ | -           |
+| type  | _number_ | -           |
 
-___
+---
 
 ### createSetProjectMetadataAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Get set project metadata action
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
-| metadata | *string* | - |
-| updatedFields | [*string[]*](/ppro_reference/classes/string[]/) | - |
+| Name          | Type                                                  | Description |
+| :------------ | :---------------------------------------------------- | :---------- |
+| projectItem   | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
+| metadata      | _string_                                              | -           |
+| updatedFields | [_string[]_](/ppro_reference/classes/string[]/)       | -           |
 
-___
+---
 
 ### createSetXMPMetadataAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Get set project XMP metadata action
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
-| metadata | *string* | - |
+| Name        | Type                                                  | Description |
+| :---------- | :---------------------------------------------------- | :---------- |
+| projectItem | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
+| metadata    | _string_                                              | -           |
 
-___
+---
 
 ### getProjectColumnsMetadata
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get project column metadata from project item
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| Name        | Type                                                  | Description |
+| :---------- | :---------------------------------------------------- | :---------- |
+| projectItem | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
 
-___
+---
 
 ### getProjectMetadata
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get project metadata
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| Name        | Type                                                  | Description |
+| :---------- | :---------------------------------------------------- | :---------- |
+| projectItem | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
 
-___
+---
 
 ### getProjectPanelMetadata
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get project panel metadata
 
-___
+---
 
 ### getXMPMetadata
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get project XMP metadata
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| Name        | Type                                                  | Description |
+| :---------- | :---------------------------------------------------- | :---------- |
+| projectItem | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
 
-___
+---
 
 ### setProjectPanelMetadata
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Set project panel metadata
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| metadata | *string* | - |
+| Name     | Type     | Description |
+| :------- | :------- | :---------- |
+| metadata | _string_ | -           |
 
-___
+---

@@ -49,7 +49,7 @@ This is the plugin that will initiate the communication with the Responder. It *
 }
 ```
 
-Through the `pluginManager` module, the Requester plugin can get a list of all installed plugins in Premiere Pro and find the Responder plugin by its `id` (which must be known in advance).
+Through the `pluginManager` module, the Requester plugin can get a list of all installed plugins in Premiere and find the Responder plugin by its `id` (which must be known in advance).
 
 ```javascript
 const { pluginManager } = require("uxp");
@@ -415,11 +415,11 @@ document.getElementById("clear-btn").addEventListener("click", () => {
 - You **may not see any error if the entrypoint is not found**. We recommend using `plugin.manifest.commands` and `plugin.manifest.panels` to select from the actual list of entrypoints.
   Users may have turned off a particular plugin via the Adobe Creative Cloud Desktop App. Before invoking it, check the plugin's availability by using `plugin.enabled`.
 - You cannot pass methods in the payload object.
-- Cross-application communication is not supported (e.g., Premiere Pro to Photoshop).
+- Cross-application communication is not supported (e.g., Premiere to Photoshop).
 
 ## Summary
 
-Inter-plugin communication enables UXP plugins to invoke commands and show panels from other installed plugins within Adobe Premiere Pro.
+Inter-plugin communication enables UXP plugins to invoke commands and show panels from other installed plugins within Adobe Premiere.
 
 **Key Concepts:**
 

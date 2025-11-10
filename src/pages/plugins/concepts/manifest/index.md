@@ -89,7 +89,7 @@ Most importantly, it contains your **plugin ID**, which uniquely identifies your
 | :---------------- | :------- | :------ |
 | `manifestVersion` | `string` | -       |
 
-Indicates the version of the manifest schema. Premiere Pro supports version `"5"`.
+Indicates the version of the manifest schema. Premiere supports version `"5"`.
 
 ### `id`
 
@@ -193,7 +193,7 @@ Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that c
 
 <InlineAlert variant="warning"slots="text" />
 
-Premiere Pro **doesn't support hybrid plugins** yet.
+Premiere **doesn't support hybrid plugins** yet.
 
 ## Supporting Definitions
 
@@ -384,7 +384,7 @@ A description of the entrypoint. This description is used in tooltips and other 
 
 <InlineAlert variant="warning" slots="text" />
 
-Keyboard shortcuts are **not available in Premiere Pro** yet.
+Keyboard shortcuts are **not available in Premiere** yet.
 
 A keyboard shortcut that can be used to invoke the entrypoint. They are specified separately for Windows and macOS platforms. If the shortcut is not available in the host application, it will be ignored.
 
@@ -457,7 +457,7 @@ The host app that the plugin supports. Possible values are:
 
 - `"PS"`: Adobe Photoshop
 - `"ID"`: Adobe InDesign
-- `"premierepro"`: Adobe Premiere Pro
+- `"premierepro"`: Adobe Premiere
 - `"XD"`: Adobe XD
 
 ##### `minVersion`
