@@ -4,8 +4,6 @@ description: Communicate to another plugin
 keywords:
   - UXP ipc
   - inter plugin
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Inter Plugin Communication
@@ -31,8 +29,8 @@ Additionally, you will need
 
 Please make sure your local environment uses the following application versions before proceeding.
 
-- Premiere Pro v25.2 or higher
-- UDT v2.1.0 or higher
+- Premiere Pro v25.6 or higher
+- UDT v2.2.0 or higher
 - Manifest version v5 or higher
 
 ## Example

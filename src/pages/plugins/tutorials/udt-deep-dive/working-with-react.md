@@ -6,8 +6,6 @@ keywords:
   - React plugin
   - Vue
   - Svelte
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Working with React

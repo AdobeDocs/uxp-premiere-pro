@@ -3,8 +3,6 @@ title: CSS styling
 description: Techniques to style UI in UXP
 keywords:
   - CSS in UXP
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # CSS styling
@@ -19,8 +17,8 @@ While you are exploring importing a stylesheet or making tweaks, you should keep
 
 Please make sure your local environment uses the following application versions before proceeding.
 
-- Premiere Pro v25.2 or higher
-- UDT v2.1.0 or higher
+- Premiere Pro v25.6 or higher
+- UDT v2.2.0 or higher
 - Manifest version v5 or higher
 
 ## Example

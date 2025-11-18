@@ -9,8 +9,6 @@ keywords:
   - Watch
   - Package
   - plugin in UDT
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Plugin workflows

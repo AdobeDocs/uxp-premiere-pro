@@ -1,6 +1,6 @@
 ---
 title: Scripting in Premiere Pro
-description: An introduction into scripting in Premiere Pro
+description: An introduction to scripting in Premiere Pro
 contributors:
   - https://github.com/icaraps 
 ---

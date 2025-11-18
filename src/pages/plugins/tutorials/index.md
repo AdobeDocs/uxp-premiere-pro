@@ -3,8 +3,6 @@ title: Plugin tutorials
 description: Tutorials for UXP plugins
 keywords:
   - UXP plugin tutorials 
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Tutorials
