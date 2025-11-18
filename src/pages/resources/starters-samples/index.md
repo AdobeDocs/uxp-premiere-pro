@@ -5,8 +5,6 @@ keywords:
   - samples
   - starter kits
   - templates
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Starters and samples

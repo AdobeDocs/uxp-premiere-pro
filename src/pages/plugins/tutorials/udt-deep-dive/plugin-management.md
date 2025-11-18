@@ -6,8 +6,6 @@ keywords:
   - Remove plugins
   - Load plugin
   - Add plugin into UDT
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Plugin management

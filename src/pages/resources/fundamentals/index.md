@@ -1,8 +1,6 @@
 ---
 title: Fundamentals
 description:
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Fundamentals

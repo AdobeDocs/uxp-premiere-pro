@@ -4,8 +4,6 @@ description: Launch applications and files in UXP
 keywords:
   - shell
   - external process
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Launch process
@@ -33,8 +31,8 @@ IMPORTANT: Please read about the [manifest permissions](../../../plugins/concept
 
 Please make sure your local environment uses the following application versions before proceeding.
 
-- Premiere Pro v25.2 or higher
-- UDT v2.1.0 or higher
+- Premiere Pro v25.6 or higher
+- UDT v2.2.0 or higher
 - Manifest version v5 or higher
 
 ## Opening a file

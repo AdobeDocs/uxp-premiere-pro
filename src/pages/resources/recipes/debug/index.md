@@ -4,8 +4,6 @@ description: Simple ways to debug in UXP
 keywords:
   - console
   - alerts
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Debugging
@@ -16,8 +14,8 @@ While writing complex logic, you might be in the cycle of testing/debugging your
 
 Please make sure your local environment uses the following application versions before proceeding.
 
-- Premiere Pro v25.2 or higher
-- UDT v2.1.0 or higher
+- Premiere Pro v25.6 or higher
+- UDT v2.2.0 or higher
 - Manifest version v5 or higher
 
 ## Console logs

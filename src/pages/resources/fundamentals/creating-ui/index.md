@@ -10,8 +10,6 @@ keywords:
   - User interface
 title: Create UI in UXP Spectrum UXP Reference
 description: Describes the options available within UXP to create UI
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # User Interface (UI)

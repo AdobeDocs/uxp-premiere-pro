@@ -5,8 +5,6 @@ keywords:
   - Code Editor
   - UDT
   - UXP Developer Tool
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Developer Tools

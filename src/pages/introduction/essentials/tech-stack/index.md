@@ -7,8 +7,6 @@ keywords:
   - Programming languages
   - System requirements
   - Frameworks setup
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Programming languages

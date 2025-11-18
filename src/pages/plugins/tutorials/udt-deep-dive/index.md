@@ -6,8 +6,6 @@ keywords:
   - Debug plugins
   - UDT for plugins
   - UDT deep dive
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Adobe UXP Developer Tool

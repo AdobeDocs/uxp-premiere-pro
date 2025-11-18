@@ -5,8 +5,6 @@ keywords:
   - plugin entry points
   - UXP commands
   - UXP panels
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # UXP Entry Points

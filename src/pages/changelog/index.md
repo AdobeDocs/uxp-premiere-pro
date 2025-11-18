@@ -9,6 +9,14 @@ keywords:
 
 # Change Log
 
+## Premiere Pro v25.6.0
+
+### Official Release of UXP extensibility in Premiere Pro
+
+#### New Features
+
+Premiere Pro's UXP APIs are approaching parity with what was previously possible, via CEP and ExtendScript. While the sample plugins don't (yet) exercise every call or listen to every message, the infrastructure is in place; we will continue to expand and improve the samples.
+
 ## Premiere Pro v25.2.0
 
 ### Initial Public Beta Release for UXP in Premiere Pro

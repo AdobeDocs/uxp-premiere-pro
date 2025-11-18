@@ -5,8 +5,6 @@ keywords:
   - plugin manifest
   - UXP configuration
   - manifest.json
-contributors:
-  - https://github.com/padmkris123
 ---
 
 import './table-styles.css';
