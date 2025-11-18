@@ -6,8 +6,6 @@ keywords:
   - UXP core
   - DOM APIs
   - Premiere Pro APIs
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # APIs within UXP

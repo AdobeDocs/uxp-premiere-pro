@@ -4,8 +4,6 @@ description: Use plugin life cycle events to carry out load/unload routines
 keywords:
   - plugin hooks
   - lifecycle
-contributors:
-  - https://github.com/padmkris123
 ---
 
 

@@ -5,8 +5,6 @@ keywords:
   - fetch
   - xhr
   - websockets
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # Network I/O
@@ -52,8 +50,8 @@ As mentioned earlier, UXP has `fetch`, `XHR (XML HTTP Request)`, and `WebSocket`
 
 Please make sure your local environment uses the following application versions before proceeding.
 
-- Premiere Pro v25.2 or higher
-- UDT v2.1.0 or higher
+- Premiere Pro v25.6 or higher
+- UDT v2.2.0 or higher
 - Manifest version v5 or higher
 
 ## Examples

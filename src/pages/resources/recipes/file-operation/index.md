@@ -5,8 +5,6 @@ keywords:
   - localFileSystem
   - FS API
   - fullaccess
-contributors:
-  - https://github.com/padmkris123
 ---
 
 # File operations
@@ -17,8 +15,8 @@ To perform any file operations including read, write, create, and delete, UXP pr
 
 Please make sure your local environment uses the following application versions before proceeding.
 
-- Premiere Pro v25.2 or higher
-- UDT v2.1.0 or higher
+- Premiere Pro v25.6 or higher
+- UDT v2.2.0 or higher
 - Manifest version v5 or higher
 
 ## Concepts
