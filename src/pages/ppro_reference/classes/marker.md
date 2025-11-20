@@ -14,153 +14,179 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# Marker  
+# Marker
 
 ## Instance Methods
+
+### createSetColorByIndexAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+_Action_
+
+Return an action to set the color of the marker by the color index
+
+#### Parameters
+
+| Name       | Type     | Description |
+| :--------- | :------- | :---------- |
+| colorIndex | _number_ | -           |
+
+---
 
 ### createSetCommentsAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Return an action to set the comments of the marker.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| comments | *string* | - |
+| Name     | Type     | Description |
+| :------- | :------- | :---------- |
+| comments | _string_ | -           |
 
-___
+---
 
 ### createSetDurationAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Return an action to set the duration of the marker.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createSetNameAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Return an action to set the name of the marker.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| name | *string* | - |
+| Name | Type     | Description |
+| :--- | :------- | :---------- |
+| name | _string_ | -           |
 
-___
+---
 
 ### createSetTypeAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Return an action to set the type of the marker.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| markerType | *string* | This values can be Scale (0), AnchorToInPoint (1) or AnchorToOutPoint (2) |
+| Name       | Type     | Description                                                               |
+| :--------- | :------- | :------------------------------------------------------------------------ |
+| markerType | _string_ | This values can be Scale (0), AnchorToInPoint (1) or AnchorToOutPoint (2) |
 
-___
+---
 
 ### getColor
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Color*
-  
+_Color_
+
 Get color code of the marker.
 
-___
+---
+
+### getColorIndex
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+_number_
+
+Get color index of the marker.
+
+---
 
 ### getComments
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get comments of the marker.
 
-___
+---
 
 ### getDuration
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Get duration time of the marker.
 
-___
+---
 
 ### getName
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get name of the marker.
 
-___
+---
 
 ### getStart
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Get start time of the marker.
 
-___
+---
 
 ### getTarget
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get target of the marker. Used together with url for web targets.
 
-___
+---
 
 ### getType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get type of the marker. e.g. Cue / Track / Subclip / Cart
 
-___
+---
 
 ### getUrl
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get url of the marker.
 
-___
+---

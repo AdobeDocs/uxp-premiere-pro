@@ -1,13 +1,15 @@
 ---
-title: Change Log
+title: Changelog
 description: What's New
 keywords:
   - Changelog
   - Update
   - Release Notes
+contributors:
+  - https://github.com/undavide
 ---
 
-# Change Log
+# Changelog
 
 ## Premiere Pro v25.6.0
 
@@ -16,6 +18,14 @@ keywords:
 #### New Features
 
 Premiere Pro's UXP APIs are approaching parity with what was previously possible, via CEP and ExtendScript. While the sample plugins don't (yet) exercise every call or listen to every message, the infrastructure is in place; we will continue to expand and improve the samples.
+
+### Documentation update
+
+- **Comprehensive overhaul** across the entire documentation site.
+- **New distribution section** including guides covering Adobe Marketplace submission, enterprise and independent distribution, packaging, installation, listing creation, and review guidelines.
+- **Expanded tutorials and recipes** featuring major new content on modal dialogs, panels, TypeScript support, filesystem operations, external processes, and inter-plugin communication.
+- **Content reorganization** with streamlined navigation, consolidation, and complete rewrites.
+- **New Premiere API Reference** updated to v25.6.
 
 ## Premiere Pro v25.2.0
 
@@ -36,6 +46,6 @@ Premiere Pro's UXP APIs are approaching parity with what was previously possible
 - Command Plugins do not yet work as a standalone plugin
 - Unloading/Reloading a plugin from the UXP Developer Tool [UDT] while it's paused on a breakpoint doesn't work
 
-####  Getting Started
+#### Getting Started
 
 - **Community Support:** Join the [Creative Cloud developer forums](https://forums.creativeclouddeveloper.com/) to share feedback, ask questions, and collaborate with other developers.

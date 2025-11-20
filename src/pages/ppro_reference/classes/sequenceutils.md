@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# SequenceUtils  
+# SequenceUtils
 
 ## Static Methods
 
@@ -25,15 +25,15 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Performs cut detection on the sequence selection
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| clipOperation | *string* | - |
-| trackItemSelection | [*TrackItemSelection*](/ppro_reference/classes/trackitemselection/) | - |
+| Name               | Type                                                                | Description |
+| :----------------- | :------------------------------------------------------------------ | :---------- |
+| clipOperation      | _string_                                                            | -           |
+| trackItemSelection | [_TrackItemSelection_](/ppro_reference/classes/trackitemselection/) | -           |
 
-___
+---

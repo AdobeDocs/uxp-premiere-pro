@@ -14,14 +14,14 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# PointKeyframe  
+# PointKeyframe
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| value | *object* | W | 25.0 |  |
-| position | *TickTime* | W | 25.0 | Get/Set position of a keyframe |
+| Name     | Type       | Access | Min Version | Description                    |
+| :------- | :--------- | :----- | :---------- | :----------------------------- |
+| value    | _object_   | W      | 25.0        |                                |
+| position | _TickTime_ | W      | 25.0        | Get/Set position of a keyframe |

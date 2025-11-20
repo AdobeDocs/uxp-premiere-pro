@@ -31,9 +31,11 @@ export declare type premierepro = {
   SequenceUtils: SequenceUtilsStatic
   SnapEvent: SnapEventStatic
   SourceMonitor: SourceMonitorStatic
+  TextSegments: TextSegmentsStatic
   TickTime: TickTimeStatic
   TrackItemSelection: TrackItemSelectionStatic
   TransitionFactory: TransitionFactoryStatic
+  UniqueSerializeable: UniqueSerializeableStatic
   Utils: UtilsStatic
   VideoClipTrackItem: VideoClipTrackItemStatic
   VideoComponentChain: VideoComponentChainStatic
@@ -42,6 +44,7 @@ export declare type premierepro = {
   VideoTrack: VideoTrackStatic
   VideoTransition: VideoTransitionStatic
   EventManager: EventManagerStatic
+  Transcript: TranscriptStatic
   AddTransitionOptions: AddTransitionOptions
   Constants: typeof Constants
 }
@@ -169,13 +172,19 @@ export declare type CaptionTrack = {
 
 export declare type ClipProjectItemStatic = {
   cast(projectItem: ProjectItem): ClipProjectItem	//Cast ProjectItem in to ClipProjectItem
+  TYPE_CLIP: number	//Project item type for clips.
+  TYPE_BIN: number	//Project item type for bins/folders.
+  TYPE_ROOT: number	//Project item type for the root container.
+  TYPE_FILE: number	//Project item type for generic files.
+  TYPE_STYLE: number	//Project item type for styles.
+  TYPE_COMPOUND: number	//Project item type for compound clips.
 }
 
 export declare type ClipProjectItem = {
   getInputLUTID(): Promise<string>	//Get Guid of Input LUT overridden on media
   createSetInputLUTIDAction(stringLUTID: string): Action	//Create action for setting Guid of Input LUT on media. This applies for Video Clips only.
   isSequence(): Promise<boolean>	//Returns true if the project item is a sequence
-  canChangeMediaPath(): Promise<boolean>	//Returns true if Premiere Pro can change the path associated with this project item; otherwise, returns false
+  canChangeMediaPath(): Promise<boolean>	//Returns true if Premiere can change the path associated with this project item; otherwise, returns false
   isOffline(): Promise<boolean>	//Returns true if the media is offline
   canProxy(): Promise<boolean>	//Indicates whether it is possible to attach a proxy to this project item.
   getProxyPath(): Promise<string>	//Returns the proxy path if the project item has a proxy attached
@@ -192,7 +201,8 @@ export declare type ClipProjectItem = {
   getEmbeddedLUTID(): Promise<string>	//Get GUID of LUT embedded in media
   createSetScaleToFrameSizeAction(): Action	//Returns an action which sets the scale to frame to true
   createSetNameAction(inName: string): Action	//Returns action that renames projectItem
-  getParent(): Promise<ProjectItem>	//Get the parent project item of this project item.
+  getColorLabelIndex(): Promise<number>	//Get color label index of projectItem
+  createSetColorLabelAction(inColorLabelIndex: number): Action	//Create an action for set color label to projectItem by index
   getProject(): Promise<Project>	//Get the parent Project of this projectItem.
   getContentType(): Promise<Constants.ContentType>	//Get content type of the Project item
   getSequence(): Promise<Sequence>	//Get the sequence of the Project item
@@ -207,6 +217,7 @@ export declare type ClipProjectItem = {
   createSetInOutPointsAction(inPoint: TickTime, outPoint: TickTime): Action	//Set the in or out point of the Project item
   createClearInOutPointsAction(): Action	//Create Clear the in or out point of the Project item action
   getMedia(): Promise<Media>	//Return media associated with clipProjectItem
+  type: number	//Get the type of the Project Item.
   name: string	//The name of this project item.
 }
 
@@ -278,6 +289,8 @@ export declare type EncoderManagerStatic = {
 
 export declare type EncoderManager = {
   exportSequence(sequence: Sequence, exportType: Constants.ExportType, outputFile?: string, presetFile?: string, exportFull?: boolean): Promise<boolean>	//Export a sequence. If no output file and preset is specified, the sequence will be exported with the applied export settings or standard export rules will be applied.
+  encodeProjectItem(clipProjectItem: ClipProjectItem, outputFile: string, presetFile: string, workArea?: number, removeUponCompletion?: boolean, startQueueImmediately?: boolean): Promise<boolean>	//Encode input clipProjectItem in AME
+  encodeFile(filePath: string, outputFile: string, presetFile: string, inPoint: TickTime, outPoint: TickTime, workArea?: number, removeUponCompletion?: boolean, startQueueImmediately?: boolean): Promise<boolean>	//Encode input media file in AME
   isAMEInstalled: boolean	//Check if AME is installed.
 }
 
@@ -290,6 +303,12 @@ export declare type Exporter = {
 
 export declare type FolderItemStatic = {
   cast(projectItem: ProjectItem): FolderItem	//Cast ProjectItem in to FolderItem
+  TYPE_CLIP: number	//Project item type for clips.
+  TYPE_BIN: number	//Project item type for bins/folders.
+  TYPE_ROOT: number	//Project item type for the root container.
+  TYPE_FILE: number	//Project item type for generic files.
+  TYPE_STYLE: number	//Project item type for styles.
+  TYPE_COMPOUND: number	//Project item type for compound clips.
 }
 
 export declare type FolderItem = {
@@ -300,8 +319,10 @@ export declare type FolderItem = {
   createRemoveItemAction(item: ProjectItem): Action	//Creates an action that removes the given item from this folder.
   createMoveItemAction(item: ProjectItem, newParent: FolderItem): Action	//Creates an action that moves the given item to the provided folder item newParent.
   createSetNameAction(inName: string): Action	//Returns action that renames projectItem
-  getParent(): Promise<ProjectItem>	//Get the parent project item of this project item.
+  getColorLabelIndex(): Promise<number>	//Get color label index of projectItem
+  createSetColorLabelAction(inColorLabelIndex: number): Action	//Create an action for set color label to projectItem by index
   getProject(): Promise<Project>	//Get the parent Project of this projectItem.
+  type: number	//Get the type of the Project Item.
   name: string	//The name of this project item.
 }
 
@@ -377,7 +398,7 @@ export declare type KeyframeStatic = {
 export declare type Keyframe = {
   getTemporalInterpolationMode(): Promise<number>	//Gets temporal interpolation mode of a keyframe
   setTemporalInterpolationMode(temporalInterpolationMode: number): Promise<boolean>	//Sets temporal interpolation mode of a keyframe
-  value: {value: string | number | boolean | Color | PointF}
+  value: { value: string | number | boolean | Color | PointF }
   position: TickTime	//Get/Set position of a keyframe
 }
 
@@ -390,6 +411,7 @@ export declare type MarkerStatic = {
 
 export declare type Marker = {
   getColor(): Color	//Get color code of the marker.
+  getColorIndex(): number	//Get color index of the marker.
   getComments(): string	//Get comments of the marker.
   getDuration(): TickTime	//Get duration time of the marker.
   getName(): string	//Get name of the marker.
@@ -397,6 +419,7 @@ export declare type Marker = {
   getTarget(): string	//Get target of the marker. Used together with url for web targets.
   getType(): string	//Get type of the marker. e.g. Cue / Track / Subclip / Cart
   getStart(): TickTime	//Get start time of the marker.
+  createSetColorByIndexAction(colorIndex: number): Action	//Return an action to set the color of the marker by the color index
   createSetNameAction(name: string): Action	//Return an action to set the name of the marker.
   createSetDurationAction(tickTime: TickTime): Action	//Return an action to set the duration of the marker.
   createSetTypeAction(markerType: string): Action	//Return an action to set the type of the marker.
@@ -404,7 +427,7 @@ export declare type Marker = {
 }
 
 export declare type MarkersStatic = {
-  getMarkers(markerOwnerObject: Sequence | ProjectItem): Promise<Markers>	//Returns the Markers object for Sequence Or ProjectItem
+  getMarkers(markerOwnerObject: Sequence | ClipProjectItem): Promise<Markers>	//Returns the Markers object for Sequence Or ProjectItem
 }
 
 export declare type Markers = {
@@ -473,7 +496,7 @@ export declare type PointF = {
 }
 
 export declare type PointKeyframe = {
-  value: {value: PointF}
+  value: { value: PointF }
   position: TickTime	//Get/Set position of a keyframe
 }
 
@@ -541,12 +564,22 @@ export declare type ProjectEvent = {
 
 export declare type ProjectItemStatic = {
   cast(item: FolderItem | ClipProjectItem): ProjectItem	//Cast FolderItem or ClipProjectItem in to ProjectItem
+  TYPE_CLIP: number	//Project item type for clips.
+  TYPE_BIN: number	//Project item type for bins/folders.
+  TYPE_ROOT: number	//Project item type for the root container.
+  TYPE_FILE: number	//Project item type for generic files.
+  TYPE_STYLE: number	//Project item type for styles.
+  TYPE_COMPOUND: number	//Project item type for compound clips.
 }
 
 export declare type ProjectItem = {
   createSetNameAction(inName: string): Action	//Returns action that renames projectItem
-  getParent(): Promise<ProjectItem>	//Get the parent project item of this project item.
+  getColorLabelIndex(): Promise<number>	//Get color label index of projectItem
+  createSetColorLabelAction(inColorLabelIndex: number): Action	//Create an action for set color label to projectItem by index
   getProject(): Promise<Project>	//Get the parent Project of this projectItem.
+  getId(): string	//Get id of projectItem
+  getParentBin(): FolderItem	//Get parent FolderItem of projectItem
+  type: number	//Get the type of the Project Item.
   name: string	//The name of this project item.
 }
 
@@ -598,8 +631,6 @@ export declare type RectF = {
 
 export declare type ScratchDiskSettingsStatic = {
   FOLDERTYPE_CAPTURE: string	//Folder Type: CAPTURED
-  FOLDERTYPE_VIDEO_CAPTURE: string	//Folder Type: VIDEOCAPTURE
-  FOLDERTYPE_AUDIO_CAPTURE: string	//Folder Type: AUDIOCAPTURE
   FOLDERTYPE_VIDEO_PREVIEW: string	//Folder Type: VIDEOPREVIEW
   FOLDERTYPE_AUDIO_PREVIEW: string	//Folder Type: AUDIOPREVIEW
   FOLDERTYPE_AUTO_SAVE: string	//Folder Type: AUTOSAVE
@@ -657,7 +688,7 @@ export declare type SequenceEditorStatic = {
 
 export declare type SequenceEditor = {
   createRemoveItemsAction(trackItemSelection: TrackItemSelection, ripple: boolean, mediaType: Constants.MediaType, shiftOverLapping?: boolean): Action	//Create remove action for sequence
-  createInsertProjectItemAction(projectItem: ProjectItem, time: TickTime, videoTrackIndex: number, audioTrackIndex: number, limitShift: boolean): Action	//Create insert ProjectItem into Sequence Action
+  createInsertProjectItemAction(projectItem: ProjectItem, time: TickTime, videoTrackIndex: number, audioTrackIndex: number, limitShift: boolean): Action	//Create insert ProjectItem into Sequence Action. Note: If you pass a track index greater than the number of existing tracks, a new track will be created.
   createOverwriteItemAction(projectItem: ProjectItem, time: TickTime, videoTrackIndex: number, audioTrackIndex: number): Action	//Create overwrite Sequence with ProjectItem Action
   createCloneTrackItemAction(trackItem: VideoClipTrackItem | AudioClipTrackItem, timeOffset: TickTime, videoTrackVerticalOffset: number, audioTrackVerticalOffset: number, alignToVideo: boolean, isInsert: boolean): Action	//Duplicate trackItem using an insert or overwrite edit method to a destination track. Target track and start time of trackItem is determined using an offset value from the original trackItem position.
   insertMogrtFromPath(inMGTPath: string, inTime: TickTime, inVideoTrackIndex: number, inAudioTrackIndex: number): (VideoClipTrackItem | AudioClipTrackItem)[]	//Insert input MGT into sequence with time and index defined
@@ -738,6 +769,7 @@ export declare type SnapEventStatic = {
   EVENT_SNAP_TO_GUIDES: string	//Event occurs object is snapped to guildelines when holding the Cmd/Ctrl key.
   EVENT_SNAP_RAZOR_TO_PLAYHEAD: string	//Event occurs when the razor tool hovers over the playhead and snaps into position for a cut.
   EVENT_SNAP_RAZOR_TO_MARKER: string	//Event occurs when the razor tool hovers over the all types of markers and snaps into position for a cut.
+  EVENT_SNAP_PLAYHEAD_TO_TRACKITEM_EDGE: string	//Event occurs when the playhead snaps into track-item edges.
 }
 
 export declare type SnapEvent = {
@@ -754,6 +786,13 @@ export declare type SourceMonitorStatic = {
 }
 
 export declare type SourceMonitor = {
+}
+
+export declare type TextSegmentsStatic = {
+  importFromJSON(json: string, callback1: (importedTranscription: TextSegments) => void): boolean	//Import text segments in JSON format for handling via callback.
+}
+
+export declare type TextSegments = {
 }
 
 export declare type TickTimeStatic = {
@@ -803,6 +842,14 @@ export declare type TransitionFactoryStatic = {
 }
 
 export declare type TransitionFactory = {
+}
+
+export declare type UniqueSerializeableStatic = {
+  cast(item: ProjectItem | ClipProjectItem | FolderItem | Sequence): UniqueSerializeable	//Cast serializable object (ex. ProjectItem) into UniqueSerializeable
+}
+
+export declare type UniqueSerializeable = {
+  getUniqueID(): Guid	//Get the unique ID of the serializeable object
 }
 
 export declare type UtilsStatic = {
@@ -909,183 +956,220 @@ export declare type EventManagerStatic = {
 export declare type EventManager = {
 }
 
+export declare type TranscriptStatic = {
+  importFromJSON(jsonString: string): TextSegments	//Returns TextSegments object initialized from jsonString
+  createImportTextSegmentsAction(textSegments: TextSegments, clipProjectItem: ClipProjectItem): Action	//Create action that import external transcripts to ClipProjectItem
+  exportToJSON(clipProjectItem: ClipProjectItem): Promise<string>	//Export transcripts inside of clipProjectItem as JSON string if transcript exist
+}
+
+export declare type Transcript = {
+}
+
 
 export namespace Constants {
-	export enum MediaType {
-		ANY,
-		DATA,
-		VIDEO,
-		AUDIO
-	}
+  export enum MediaType {
+    ANY,
+    DATA,
+    VIDEO,
+    AUDIO
+  }
 
-	export enum ContentType {
-		ANY,
-		SEQUENCE,
-		MEDIA
-	}
+  export enum ContentType {
+    ANY,
+    SEQUENCE,
+    MEDIA
+  }
 
-	export enum TransitionPosition {
-		START,
-		END
-	}
+  export enum ProjectItemColorLabel {
+    VIOLET,
+    IRIS,
+    LAVENDER,
+    CERULEAN,
+    FOREST,
+    ROSE,
+    MANGO,
+    PURPLE,
+    BLUE,
+    TEAL,
+    MAGENTA,
+    TAN,
+    GREEN,
+    BROWN,
+    YELLOW
+  }
 
-	export enum TrackItemType {
-		EMPTY,
-		CLIP,
-		TRANSITION,
-		PREVIEW,
-		FEEDBACK
-	}
+  export enum TransitionPosition {
+    START,
+    END
+  }
 
-	export enum ProjectEvent {
-		OPENED,
-		CLOSED,
-		DIRTY,
-		ACTIVATED,
-		PROJECT_ITEM_SELECTION_CHANGED
-	}
+  export enum TrackItemType {
+    EMPTY,
+    CLIP,
+    TRANSITION,
+    PREVIEW,
+    FEEDBACK
+  }
 
-	export enum InterpolationMode {
-		BEZIER,
-		HOLD,
-		LINEAR,
-		TIME,
-		TIME_TRANSITION_END,
-		TIME_TRANSITION_START
-	}
+  export enum ProjectEvent {
+    OPENED,
+    CLOSED,
+    DIRTY,
+    ACTIVATED,
+    PROJECT_ITEM_SELECTION_CHANGED
+  }
 
-	export enum SequenceOperation {
-		APPLYCUT,
-		CREATEMARKER,
-		CREATESUBCLIP
-	}
+  export enum InterpolationMode {
+    BEZIER,
+    HOLD,
+    LINEAR,
+    TIME,
+    TIME_TRANSITION_END,
+    TIME_TRANSITION_START
+  }
 
-	export enum PropertyType {
-		PERSISTENT,
-		NON_PERSISTENT
-	}
+  export enum SequenceOperation {
+    APPLYCUT,
+    CREATEMARKER,
+    CREATESUBCLIP
+  }
 
-	export enum SequenceEvent {
-		ACTIVATED,
-		CLOSED,
-		SELECTION_CHANGED
-	}
+  export enum PropertyType {
+    PERSISTENT,
+    NON_PERSISTENT
+  }
 
-	export enum VideoTrackEvent {
-		TRACK_CHANGED,
-		INFO_CHANGED,
-		LOCK_CHANGED
-	}
+  export enum SequenceEvent {
+    ACTIVATED,
+    CLOSED,
+    SELECTION_CHANGED
+  }
 
-	export enum AudioTrackEvent {
-		TRACK_CHANGED,
-		INFO_CHANGED,
-		LOCK_CHANGED
-	}
+  export enum VideoTrackEvent {
+    TRACK_CHANGED,
+    INFO_CHANGED,
+    LOCK_CHANGED
+  }
 
-	export enum EncoderEvent {
-		RENDER_COMPLETE,
-		RENDER_ERROR,
-		RENDER_CANCEL,
-		RENDER_QUEUE,
-		RENDER_PROGRESS
-	}
+  export enum AudioTrackEvent {
+    TRACK_CHANGED,
+    INFO_CHANGED,
+    LOCK_CHANGED
+  }
 
-	export enum ScratchDiskFolderType {
-		CAPTURE,
-		AUDIO_CAPTURE,
-		VIDEO_CAPTURE,
-		AUDIO_PREVIEW,
-		VIDEO_PREVIEW,
-		AUTO_SAVE,
-		CCL_LIBRARIES,
-		CAPSULE_MEDIA
-	}
+  export enum EncoderEvent {
+    RENDER_COMPLETE,
+    RENDER_ERROR,
+    RENDER_CANCEL,
+    RENDER_QUEUE,
+    RENDER_PROGRESS
+  }
 
-	export enum ScratchDiskFolder {
-		SAME_AS_PROJECT,
-		MY_DOCUMENTS
-	}
+  export enum ScratchDiskFolderType {
+    CAPTURE,
+    AUDIO_PREVIEW,
+    VIDEO_PREVIEW,
+    AUTO_SAVE,
+    CCL_LIBRARIES,
+    CAPSULE_MEDIA
+  }
 
-	export enum MetadataType {
-		INTEGER,
-		REAL,
-		TEXT,
-		BOOLEAN
-	}
+  export enum ScratchDiskFolder {
+    SAME_AS_PROJECT,
+    MY_DOCUMENTS
+  }
 
-	export enum ExportType {
-		QUEUE_TO_AME,
-		QUEUE_TO_APP,
-		IMMEDIATELY
-	}
+  export enum MetadataType {
+    INTEGER,
+    REAL,
+    TEXT,
+    BOOLEAN
+  }
 
-	export enum PreferenceKey {
-		AUTO_PEAK_GENERATION,
-		IMPORT_WORKSPACE,
-		SHOW_QUICKSTART_DIALOG
-	}
+  export enum ExportType {
+    QUEUE_TO_AME,
+    QUEUE_TO_APP,
+    IMMEDIATELY
+  }
 
-	export enum SnapEvent {
-		KEYFRAME,
-		RAZOR_PLAYHEAD,
-		RAZOR_MARKER,
-		TRACKITEM,
-		GUIDES
-	}
+  export enum PreferenceKey {
+    AUTO_PEAK_GENERATION,
+    IMPORT_WORKSPACE,
+    SHOW_QUICKSTART_DIALOG
+  }
 
-	export enum OperationCompleteEvent {
-		CLIP_EXTEND_REACHED,
-		EFFECT_DROP_COMPLETE,
-		EXPORT_MEDIA_COMPLETE,
-		GENERATIVE_EXTEND_COMPLETE,
-		IMPORT_MEDIA_COMPLETE
-	}
+  export enum SnapEvent {
+    KEYFRAME,
+    RAZOR_PLAYHEAD,
+    RAZOR_MARKER,
+    TRACKITEM,
+    GUIDES,
+    PLAYHEAD_TRACKITEM
+  }
 
-	export enum OperationCompleteState {
-		SUCCESS,
-		CANCELLED,
-		FAILED
-	}
+  export enum OperationCompleteEvent {
+    CLIP_EXTEND_REACHED,
+    EFFECT_DROP_COMPLETE,
+    EFFECT_DRAG_OVER,
+    EXPORT_MEDIA_COMPLETE,
+    GENERATIVE_EXTEND_COMPLETE,
+    IMPORT_MEDIA_COMPLETE
+  }
 
-	export enum PixelAspectRatio {
-		SQUARE,
-		DVNTSC,
-		DVNTSCWide,
-		DVPAL,
-		DVPALWide,
-		Anamorphic,
-		HDAnamorphic1080,
-		DVCProHD
-	}
+  export enum OperationCompleteState {
+    SUCCESS,
+    CANCELLED,
+    FAILED
+  }
 
-	export enum VideoFieldType {
-		PROGRESSIVE,
-		UPPER_FIRST,
-		LOWER_FIRST
-	}
+  export enum PixelAspectRatio {
+    SQUARE,
+    DVNTSC,
+    DVNTSCWide,
+    DVPAL,
+    DVPALWide,
+    Anamorphic,
+    HDAnamorphic1080,
+    DVCProHD
+  }
 
-	export enum VideoDisplayFormatType {
-		FPS_23_976,
-		FPS_25,
-		FPS_29_97,
-		FPS_29_97_NON_DROP,
-		FEET_FRAME_16mm,
-		FEET_FRAME_35mm,
-		FRAMES
-	}
+  export enum VideoFieldType {
+    PROGRESSIVE,
+    UPPER_FIRST,
+    LOWER_FIRST
+  }
 
-	export enum AudioChannelType {
-		MONO,
-		STEREO,
-		SURROUND_51,
-		MULTI
-	}
+  export enum VideoDisplayFormatType {
+    FPS_23_976,
+    FPS_25,
+    FPS_29_97,
+    FPS_29_97_NON_DROP,
+    FEET_FRAME_16mm,
+    FEET_FRAME_35mm,
+    FRAMES
+  }
 
-	export enum AudioDisplayFormatType {
-		SAMPLE_RATE,
-		MILLISECONDS
-	}
+  export enum AudioChannelType {
+    MONO,
+    STEREO,
+    SURROUND_51,
+    MULTI
+  }
+
+  export enum AudioDisplayFormatType {
+    SAMPLE_RATE,
+    MILLISECONDS
+  }
+
+  export enum MarkerColor {
+    GREEN,
+    RED,
+    MAGNETA,
+    ORANGE,
+    YELLOW,
+    BLUE,
+    CYAN
+  }
 }
 
 export default premierepro

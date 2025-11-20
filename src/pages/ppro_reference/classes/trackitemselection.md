@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# TrackItemSelection  
+# TrackItemSelection
 
 ## Static Methods
 
@@ -25,17 +25,17 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Create empty selection
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| undefined | *(selection: TrackItemSelection) => void* | - |
+| Name      | Type                                      | Description |
+| :-------- | :---------------------------------------- | :---------- |
+| undefined | _(selection: TrackItemSelection) => void_ | -           |
 
-___
+---
 
 ## Instance Methods
 
@@ -43,41 +43,41 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Add a track item to this selection
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| trackItem | [*VideoClipTrackItem*](/ppro_reference/classes/videocliptrackitem/) or [*AudioClipTrackItem*](/ppro_reference/classes/audiocliptrackitem/) | trackItem to be added to selection |
-| skipDuplicateCheck | *boolean* | - |
+| Name               | Type                                                                                                                                       | Description                        |
+| :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------- |
+| trackItem          | [_VideoClipTrackItem_](/ppro_reference/classes/videocliptrackitem/) or [_AudioClipTrackItem_](/ppro_reference/classes/audiocliptrackitem/) | trackItem to be added to selection |
+| skipDuplicateCheck | _boolean_                                                                                                                                  | -                                  |
 
-___
+---
 
 ### getTrackItems
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*(VideoClipTrackItem | AudioClipTrackItem)[]*
-  
+_(VideoClipTrackItem | AudioClipTrackItem)[]_
+
 return list of trackItems inside of trackItemSelection
 
-___
+---
 
 ### removeItem
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Remove a track item from this selection
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| trackItem | [*VideoClipTrackItem*](/ppro_reference/classes/videocliptrackitem/) or [*AudioClipTrackItem*](/ppro_reference/classes/audiocliptrackitem/) | trackItem to be removed from selection |
+| Name      | Type                                                                                                                                       | Description                            |
+| :-------- | :----------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------- |
+| trackItem | [_VideoClipTrackItem_](/ppro_reference/classes/videocliptrackitem/) or [_AudioClipTrackItem_](/ppro_reference/classes/audiocliptrackitem/) | trackItem to be removed from selection |
 
-___
+---

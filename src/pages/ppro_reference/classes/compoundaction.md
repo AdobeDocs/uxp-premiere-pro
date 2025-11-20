@@ -14,16 +14,16 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# CompoundAction  
+# CompoundAction
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| empty | *boolean* | R | 25.0 | Is the compound action empty? |
+| Name  | Type      | Access | Min Version | Description                   |
+| :---- | :-------- | :----- | :---------- | :---------------------------- |
+| empty | _boolean_ | R      | 25.0        | Is the compound action empty? |
 
 ## Instance Methods
 
@@ -31,14 +31,14 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Add an action to the compound action
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| action | [*Action*](/ppro_reference/classes/action/) | - |
+| Name   | Type                                        | Description |
+| :----- | :------------------------------------------ | :---------- |
+| action | [_Action_](/ppro_reference/classes/action/) | -           |
 
-___
+---

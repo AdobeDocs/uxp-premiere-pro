@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# VideoFilterFactory  
+# VideoFilterFactory
 
 ## Static Methods
 
@@ -25,34 +25,34 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*VideoFilterComponent*
-  
+_VideoFilterComponent_
+
 Creates a new video filter component based on the input matchName
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| matchName | *string* | The match name of the component to create, example 'PR.ADBE Solarize', 'AE.ADBE Mosaic' etc.. |
+| Name      | Type     | Description                                                                                   |
+| :-------- | :------- | :-------------------------------------------------------------------------------------------- |
+| matchName | _string_ | The match name of the component to create, example 'PR.ADBE Solarize', 'AE.ADBE Mosaic' etc.. |
 
-___
+---
 
 ### getDisplayNames
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string[]*
-  
+_string[]_
+
 Returns an array of video filter display names
 
-___
+---
 
 ### getMatchNames
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string[]*
-  
+_string[]_
+
 Returns an array of video filter matchNames
 
-___
+---

@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# Exporter  
+# Exporter
 
 ## Static Methods
 
@@ -25,19 +25,19 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Exports from a sequence. Supported formats are bmp, dpx, gif, jpg, exr, png, tga and tif
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
-| time | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
-| filename | *string* | Filename to be exported , example 'C:/temp/exportedFrame.png' |
-| filepath | *string* | Directory to be exported, example 'C:/temp/' |
-| width | *number* | - |
-| height | *number* | - |
+| Name     | Type                                            | Description                                                   |
+| :------- | :---------------------------------------------- | :------------------------------------------------------------ |
+| sequence | [_Sequence_](/ppro_reference/classes/sequence/) | -                                                             |
+| time     | [_TickTime_](/ppro_reference/classes/ticktime/) | -                                                             |
+| filename | _string_                                        | Filename to be exported , example 'C:/temp/exportedFrame.png' |
+| filepath | _string_                                        | Directory to be exported, example 'C:/temp/'                  |
+| width    | _number_                                        | -                                                             |
+| height   | _number_                                        | -                                                             |
 
-___
+---

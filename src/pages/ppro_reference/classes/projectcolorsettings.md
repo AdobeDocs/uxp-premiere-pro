@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# ProjectColorSettings  
+# ProjectColorSettings
 
 ## Instance Methods
 
@@ -25,18 +25,18 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
-  
+_number_
+
 Get the graphics white luminance value
 
-___
+---
 
 ### getSupportedGraphicsWhiteLuminances
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number[]*
-  
+_number[]_
+
 Get all the graphics white luminance as array of values
 
-___
+---

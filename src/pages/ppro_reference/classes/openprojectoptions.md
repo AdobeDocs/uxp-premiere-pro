@@ -14,19 +14,19 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# OpenProjectOptions  
+# OpenProjectOptions
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| showConvertProjectDialog | *boolean* | R | 25.0 | Get whether the convert project dialog is shown on project open/close |
-| showLocateFileDialog | *boolean* | R | 25.0 | Get whether locate file dialog is shown on project open/close |
-| showWarningDialog | *boolean* | R | 25.0 | Get whether the warning file dialog is shown on project open/close |
-| addToMRUList | *boolean* | R | 25.0 | Get whether to add project changes to MRU list |
+| Name                     | Type      | Access | Min Version | Description                                                           |
+| :----------------------- | :-------- | :----- | :---------- | :-------------------------------------------------------------------- |
+| showConvertProjectDialog | _boolean_ | R      | 25.0        | Get whether the convert project dialog is shown on project open/close |
+| showLocateFileDialog     | _boolean_ | R      | 25.0        | Get whether locate file dialog is shown on project open/close         |
+| showWarningDialog        | _boolean_ | R      | 25.0        | Get whether the warning file dialog is shown on project open/close    |
+| addToMRUList             | _boolean_ | R      | 25.0        | Get whether to add project changes to MRU list                        |
 
 ## Instance Methods
 
@@ -34,62 +34,62 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*OpenProjectOptions*
-  
+_OpenProjectOptions_
+
 Set whether to add to MRU list after project changes
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| addToMRUList | *boolean* | - |
+| Name         | Type      | Description |
+| :----------- | :-------- | :---------- |
+| addToMRUList | _boolean_ | -           |
 
-___
+---
 
 ### setShowConvertProjectDialog
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*OpenProjectOptions*
-  
+_OpenProjectOptions_
+
 Set whether to show the convert project dialog on project open/close
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| showConvertProjectDialog | *boolean* | - |
+| Name                     | Type      | Description |
+| :----------------------- | :-------- | :---------- |
+| showConvertProjectDialog | _boolean_ | -           |
 
-___
+---
 
 ### setShowLocateFileDialog
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*OpenProjectOptions*
-  
+_OpenProjectOptions_
+
 Set whether to show the locate file dialog on project open/close
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| showLocateFileDialog | *boolean* | - |
+| Name                 | Type      | Description |
+| :------------------- | :-------- | :---------- |
+| showLocateFileDialog | _boolean_ | -           |
 
-___
+---
 
 ### setShowWarningDialog
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*OpenProjectOptions*
-  
+_OpenProjectOptions_
+
 Set whether to show the warning file dialog on project open/close
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| showConvertProjectDialog | *boolean* | - |
+| Name                     | Type      | Description |
+| :----------------------- | :-------- | :---------- |
+| showConvertProjectDialog | _boolean_ | -           |
 
-___
+---

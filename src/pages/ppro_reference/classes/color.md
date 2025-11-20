@@ -14,19 +14,19 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# Color  
+# Color
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| red | *number* | W | 25.0 | Read/Write property to get/set red value of color object |
-| green | *number* | W | 25.0 | Read/Write property to get/set green value of color object |
-| blue | *number* | W | 25.0 | Read/Write property to get/set blue value of color object |
-| alpha | *number* | W | 25.0 | Read/Write property to get/set alpha value of color object |
+| Name  | Type     | Access | Min Version | Description                                                |
+| :---- | :------- | :----- | :---------- | :--------------------------------------------------------- |
+| red   | _number_ | W      | 25.0        | Read/Write property to get/set red value of color object   |
+| green | _number_ | W      | 25.0        | Read/Write property to get/set green value of color object |
+| blue  | _number_ | W      | 25.0        | Read/Write property to get/set blue value of color object  |
+| alpha | _number_ | W      | 25.0        | Read/Write property to get/set alpha value of color object |
 
 ## Instance Methods
 
@@ -34,14 +34,14 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Returns true if the given ColorObject is equal to this ColorObject
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| colorObject | [*Color*](/ppro_reference/classes/color/) | - |
+| Name        | Type                                      | Description |
+| :---------- | :---------------------------------------- | :---------- |
+| colorObject | [_Color_](/ppro_reference/classes/color/) | -           |
 
-___
+---

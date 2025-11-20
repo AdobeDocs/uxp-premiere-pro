@@ -14,10 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# TransitionFactory  
+# TransitionFactory
 
 ## Static Methods
 
@@ -25,24 +25,24 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*VideoTransition*
-  
+_VideoTransition_
+
 Creates a new video filter component based on the input matchName
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| matchName | *string* | - |
+| Name      | Type     | Description |
+| :-------- | :------- | :---------- |
+| matchName | _string_ | -           |
 
-___
+---
 
 ### getVideoTransitionMatchNames
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string[]*
-  
+_string[]_
+
 Return a promise which will be fullfilled with an array of video transition matchnames
 
-___
+---

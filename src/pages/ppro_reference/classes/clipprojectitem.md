@@ -14,16 +14,17 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# ClipProjectItem  
+# ClipProjectItem
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| name | *string* | R | 25.0 | The name of this project item. |
+| Name | Type     | Access | Min Version | Description                       |
+| :--- | :------- | :----- | :---------- | :-------------------------------- |
+| type | _number_ | R      | 25.0        | Get the type of the Project Item. |
+| name | _string_ | R      | 25.0        | The name of this project item.    |
 
 ## Static Methods
 
@@ -31,24 +32,17 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ClipProjectItem*
-  
+_ClipProjectItem_
+
 Cast ProjectItem in to ClipProjectItem
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro_reference/classes/projectitem/) | - |
+| Name        | Type                                                  | Description |
+| :---------- | :---------------------------------------------------- | :---------- |
+| projectItem | [_ProjectItem_](/ppro_reference/classes/projectitem/) | -           |
 
-It may be desirable to access attributes associated with ClipProjectItem after a ProjectItem object has been retrieved.  This can be achieved by casting a ProjectItem to a ClipProjectItem.
-
-```typescript
-let myProjItem = await myTrackItem.getProjectItem();
-let myClipProjItem = await ppro.ClipProjectItem.cast(myProjItem);
-```
-
-___
+---
 
 ## Instance Methods
 
@@ -56,438 +50,454 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Attach proxy or high resolution footage to projectItem and returns true if successful. Not undoable.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| mediaPath | *string* | - |
-| isHiRes | *boolean* | - |
-| inMakeAlternateLinkInTeamProjects | *boolean* | - |
+| Name                              | Type      | Description |
+| :-------------------------------- | :-------- | :---------- |
+| mediaPath                         | _string_  | -           |
+| isHiRes                           | _boolean_ | -           |
+| inMakeAlternateLinkInTeamProjects | _boolean_ | -           |
 
-___
+---
 
 ### canChangeMediaPath
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
-Returns true if Premiere Pro can change the path associated with this project item; otherwise, returns false
+_boolean_
 
-___
+Returns true if Premiere can change the path associated with this project item; otherwise, returns false
+
+---
 
 ### canProxy
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Indicates whether it is possible to attach a proxy to this project item.
 
-___
+---
 
 ### changeMediaFilePath
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Change media file path of projectItem and returns true if successful. Not undoable.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| newPath | *string* | - |
-| overrideCompatibilityCheck | *boolean* | - |
+| Name                       | Type      | Description |
+| :------------------------- | :-------- | :---------- |
+| newPath                    | _string_  | -           |
+| overrideCompatibilityCheck | _boolean_ | -           |
 
-___
+---
 
 ### createClearInOutPointsAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create Clear the in or out point of the Project item action
 
-___
+---
+
+### createSetColorLabelAction
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+_Action_
+
+Create an action for set color label to projectItem by index
+
+#### Parameters
+
+| Name              | Type     | Description |
+| :---------------- | :------- | :---------- |
+| inColorLabelIndex | _number_ | -           |
+
+---
 
 ### createSetFootageInterpretationAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Set the footage interpretation object for project item
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| footageInterpretation | [*FootageInterpretation*](/ppro_reference/classes/footageinterpretation/) | - |
+| Name                  | Type                                                                      | Description |
+| :-------------------- | :------------------------------------------------------------------------ | :---------- |
+| footageInterpretation | [_FootageInterpretation_](/ppro_reference/classes/footageinterpretation/) | -           |
 
-___
+---
 
 ### createSetInOutPointsAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Set the in or out point of the Project item
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| inPoint | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
-| outPoint | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| inPoint  | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
+| outPoint | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createSetInPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns an action which Sets the in point of the Project item
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createSetInputLUTIDAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Create action for setting Guid of Input LUT on media. This applies for Video Clips only.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| stringLUTID | *string* | - |
+| Name        | Type     | Description |
+| :---------- | :------- | :---------- |
+| stringLUTID | _string_ | -           |
 
-___
+---
 
 ### createSetNameAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns action that renames projectItem
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| inName | *string* | - |
+| Name   | Type     | Description |
+| :----- | :------- | :---------- |
+| inName | _string_ | -           |
 
-___
+---
 
 ### createSetOfflineAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns an action which sets the media offline
 
-___
+---
 
 ### createSetOutPointAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns an action which Sets the in point of the Project item
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| :------- | :---------------------------------------------- | :---------- |
+| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
-___
+---
 
 ### createSetOverrideFrameRateAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns an action which sets the override frame rate
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| inOverriddenFrameRateValue | *number* | - |
+| Name                       | Type     | Description |
+| :------------------------- | :------- | :---------- |
+| inOverriddenFrameRateValue | _number_ | -           |
 
-___
+---
 
 ### createSetOverridePixelAspectRatioAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns an action which sets Override pixel aspect ratio
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| inNumerator | *number* | - |
-| inDenominator | *number* | - |
+| Name          | Type     | Description |
+| :------------ | :------- | :---------- |
+| inNumerator   | _number_ | -           |
+| inDenominator | _number_ | -           |
 
-___
+---
 
 ### createSetScaleToFrameSizeAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Action*
-  
+_Action_
+
 Returns an action which sets the scale to frame to true
 
-___
+---
 
 ### findItemsMatchingMediaPath
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectItem[]*
-  
+_ProjectItem[]_
+
 Returns array of project's items with media paths containing match string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| matchString | *string* | - |
-| ignoreSubclips | *boolean* | - |
+| Name           | Type      | Description |
+| :------------- | :-------- | :---------- |
+| matchString    | _string_  | -           |
+| ignoreSubclips | _boolean_ | -           |
 
-___
+---
+
+### getColorLabelIndex
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+_number_
+
+Get color label index of projectItem
+
+---
 
 ### getComponentChain
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get the media file path of the Project item.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| mediaType | [*Constants.MediaType*](/ppro_reference/constants) | Media type can be audio, video or data/caption |
+| Name      | Type                                               | Description                                    |
+| :-------- | :------------------------------------------------- | :--------------------------------------------- |
+| mediaType | [_Constants.MediaType_](/ppro_reference/constants) | Media type can be audio, video or data/caption |
 
-___
+---
 
 ### getContentType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Constants.ContentType*
-  
+_Constants.ContentType_
+
 Get content type of the Project item
 
-___
+---
 
 ### getEmbeddedLUTID
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get GUID of LUT embedded in media
 
-___
+---
 
 ### getFootageInterpretation
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*FootageInterpretation*
-  
+_FootageInterpretation_
+
 Get the footage interpretation object for project item
 
-___
+---
 
 ### getInPoint
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Get the in point of the Project item
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| mediaType | [*Constants.MediaType*](/ppro_reference/constants) | Media type can be audio, video or data/caption |
+| Name      | Type                                               | Description                                    |
+| :-------- | :------------------------------------------------- | :--------------------------------------------- |
+| mediaType | [_Constants.MediaType_](/ppro_reference/constants) | Media type can be audio, video or data/caption |
 
-___
+---
 
 ### getInputLUTID
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get Guid of Input LUT overridden on media
 
-___
+---
 
 ### getMedia
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Media*
-  
+_Media_
+
 Return media associated with clipProjectItem
 
-___
+---
 
 ### getMediaFilePath
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Get the media file path of the Project item.
 
-___
+---
 
 ### getOutPoint
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*TickTime*
-  
+_TickTime_
+
 Get the out point of the Project item
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| mediaType | [*Constants.MediaType*](/ppro_reference/constants) | Media type can be audio, video or data/caption |
+| Name      | Type                                               | Description                                    |
+| :-------- | :------------------------------------------------- | :--------------------------------------------- |
+| mediaType | [_Constants.MediaType_](/ppro_reference/constants) | Media type can be audio, video or data/caption |
 
-___
-
-### getParent
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*ProjectItem*
-  
-Get the parent project item of this project item.
-
-___
+---
 
 ### getProject
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Project*
-  
+_Project_
+
 Get the parent Project of this projectItem.
 
-___
+---
 
 ### getProxyPath
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*string*
-  
+_string_
+
 Returns the proxy path if the project item has a proxy attached
 
-___
+---
 
 ### getSequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence*
-  
+_Sequence_
+
 Get the sequence of the Project item
 
-___
+---
 
 ### hasProxy
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Indicates whether a proxy has already been attached to the project item.
 
-___
+---
 
 ### isMergedClip
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Returns true if the clip Project item is a merged clip
 
-___
+---
 
 ### isMulticamClip
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Returns true if the clip Project item is a multicam clip
 
-___
+---
 
 ### isOffline
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Returns true if the media is offline
 
-___
+---
 
 ### isSequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Returns true if the project item is a sequence
 
-___
+---
 
 ### refreshMedia
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*boolean*
-  
+_boolean_
+
 Updates representation of the media associated with the project item
 
-___
+---

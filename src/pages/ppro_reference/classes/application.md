@@ -14,13 +14,13 @@ keywords:
   - SDK
   - C++
   - Scripting
-  - Premiere Pro
+  - Premiere
 ---
 
-# Application  
+# Application
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| version | *string* | R | 25.0 |  |
+| Name    | Type     | Access | Min Version | Description |
+| :------ | :------- | :----- | :---------- | :---------- |
+| version | _string_ | R      | 25.0        |             |
