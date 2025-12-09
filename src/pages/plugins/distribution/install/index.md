@@ -17,6 +17,10 @@ contributors:
 
 # Install a UXP plugin
 
+## Important Note!
+
+Before you can connect to a UXP plugin running within Premiere Pro, you must enable 'Developer Mode', in Premiere Pro's Plugins preferences.
+
 UXP plugins are commonly installed directly by the Creative Cloud Desktop application.
 
 ## Overview
