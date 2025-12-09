@@ -32,7 +32,7 @@ Returns an action that moves the inPoint of the track item to a new time, by shi
 #### Parameters
 
 | Name     | Type                                            | Description |
-| :------- | :---------------------------------------------- | :---------- |
+| --- | --- | --- |
 | tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
 
 ---

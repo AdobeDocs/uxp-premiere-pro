@@ -120,6 +120,10 @@ Manifest changes
 
 If you make any changes to the `manifest.json` file, you must manually unload and reload the plugin. In the UXP Developer Tool, in the row for your plugin, click **Unload** and then **Load & Watch** once more.
 
+Invisible plugins
+
+By setting `"hideFromMenu"` to `true` (in your plugin manifest's `hostUIContext` section), you can create a UXP plugin that will get called at application launch (and so can register for other messages), but which will _not_ appear in the UXP Plugins menu.
+
 ### 4. Test the plugin's logic
 
 Now let's check what this UXP plugin can do. Open a sample project in Premiere; if you don't have one, go to the **Window** > **Learn** menu and download a sample from the **Tutorials** section.

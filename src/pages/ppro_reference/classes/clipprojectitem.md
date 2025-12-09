@@ -224,7 +224,7 @@ Returns an action which sets the media offline
 
 _Action_
 
-Returns an action which Sets the in point of the Project item
+Returns an action which Sets the out point of the Project item
 
 #### Parameters
 
@@ -310,7 +310,7 @@ Get color label index of projectItem
 
 _string_
 
-Get the media file path of the Project item.
+Gets the component chain associated with this project item.
 
 #### Parameters
 
