@@ -114,15 +114,17 @@ Thanks to the Watch & Reload feature, the changes will be automatically reflecte
 
 ![Premiere - Updated Plugin](./img/getting-started--edit-html.png)
 
-<InlineAlert slots="header, text" />
+<InlineAlert slots="header, text" variant="warning"/>
 
-Manifest changes
+#### Manifest changes
 
 If you make any changes to the `manifest.json` file, you must manually unload and reload the plugin. In the UXP Developer Tool, in the row for your plugin, click **Unload** and then **Load & Watch** once more.
 
-Invisible plugins
+<InlineAlert slots="header, text" variant="info"/>
 
-By setting `"hideFromMenu"` to `true` (in your plugin manifest's `hostUIContext` section), you can create a UXP plugin that will get called at application launch (and so can register for other messages), but which will _not_ appear in the UXP Plugins menu.
+#### Invisible plugins
+
+By setting `"hideFromMenu"` to `true` in your plugin manifest's `hostUIContext` section, you can create a UXP plugin that will get called at application launch (and so can register for other messages), but which will _not_ appear in the UXP Plugins menu.
 
 ### 4. Test the plugin's logic
 
