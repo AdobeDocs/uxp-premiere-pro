@@ -500,6 +500,7 @@ For example, for file operations, you may find `"fullAccess"` to be the least re
 |                     | [`allowCodeGenerationFromStrings`](#allowcodegenerationfromstrings) |
 |                     | [`enableUserInfo`](#enableUserInfo)                                 |
 |                     | [`ipc`](#ipc)                                                       |
+|                     | [`enableAddon`](#enableaddon)                                       |
 
 #### Properties
 
@@ -598,6 +599,20 @@ console.log(userId);
 Enables the plugin to communicate with other plugins.
 
 Default value is `undefined` (no IPC). See the [`IpcPermission`](#ipcpermission) section for more details.
+
+##### `enableAddon`
+
+| Name          | Type      | Required | Default |
+| :------------ | :-------- | :------- | ------- |
+| `enableAddon` | `boolean` | optional | `false` |
+
+Enables the plugin to load native C++ addons (`.uxpaddon` files). This permission is required for [Hybrid Plugins](../hybrid-plugins/index.md). Default value is `false`.
+
+```json
+"requiredPermissions": {
+  "enableAddon": true
+}
+```
 
 ##### `NetworkPermission`
 
