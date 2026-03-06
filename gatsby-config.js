@@ -104,6 +104,10 @@ module.exports = {
                 title: "Manifest",
                 path: "plugins/concepts/manifest/",
               },
+              {
+                title: "Hybrid Plugins",
+                path: "plugins/concepts/hybrid-plugins/",
+              },
             ],
           },
           {

@@ -84,6 +84,34 @@ A green toast notification will appear to confirm the success of the operation. 
 
 Before distributing your package, test the installation to confirm it works as expected.
 
+### Packaging Hybrid Plugins
+
+[Hybrid plugins](../../../plugins/concepts/hybrid-plugins/index.md) contain native C++ libraries (`.uxpaddon` files) in addition to the standard JavaScript, HTML, and CSS files. When packaging a Hybrid plugin, ensure the following:
+
+1. **Directory structure**: place the `.uxpaddon` binaries in the correct platform/architecture folder layout within your plugin bundle:
+
+```
+my-hybrid-plugin/
+├── manifest.json
+├── index.html
+├── index.js
+└── addons/
+    ├── mac/
+    │   ├── arm64/
+    │   │   └── sample-uxp-addon.uxpaddon
+    │   └── x64/
+    │       └── sample-uxp-addon.uxpaddon
+    └── win/
+        └── x64/
+            └── sample-uxp-addon.uxpaddon
+```
+
+2. **All architectures**: include binaries for macOS arm64, macOS x64, and Windows x64. Missing architectures will cause the plugin to fail on those platforms.
+3. **Code signing (macOS)**: sign and notarize the `.uxpaddon` executables with a valid Apple Developer ID certificate. Self-signed or test certificates are not accepted. The certificate must be valid for at least one year.
+4. **Admin credentials**: since Hybrid plugins include native code, users will be prompted for OS administrator credentials during installation and updates.
+
+If the directory structure is incorrect, the plugin will fail to load with a _"Plugin Manifest Validation Failed"_ error in UDT.
+
 ### Host Applications
 
 UXP plugin `.ccx` installers can target only one host application at a time; in fact, the [`host`](../../../plugins/concepts/manifest/index.md#host) property in the `manifest.json` file must be a single object of type [`HostDefinition`](../../../plugins/concepts/manifest/index.md#hostdefinition).

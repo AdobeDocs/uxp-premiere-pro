@@ -189,11 +189,13 @@ A set of feature flags that can be used to enable or disable certain features of
 | :------ | :------- | :------ |
 | `addon` | `object` | `{}`    |
 
-Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that can access the power of C++ native libraries.
+Addon definitions for [Hybrid Plugins](../hybrid-plugins/index.md). A UXP Hybrid plugin is a UXP plugin that can load dynamically-linked C++ native libraries (`.uxpaddon` files) at runtime. See the [Hybrid Plugins guide](../hybrid-plugins/index.md) for details on building and configuring addons.
 
-<InlineAlert variant="warning"slots="text" />
-
-Premiere **doesn't support hybrid plugins** yet.
+```json
+"addon": {
+  "name": "sample-uxp-addon.uxpaddon"
+}
+```
 
 ## Supporting Definitions
 
