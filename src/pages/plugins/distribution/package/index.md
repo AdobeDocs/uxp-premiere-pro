@@ -51,7 +51,6 @@ If you plan to distribute your plugin through any channels—either marketplaces
 This is particularly important for paid plugins. When a user attempts to install a plugin purchased from a third-party marketplace, the Creative Cloud Desktop application will **validate the plugin's ID against their Adobe ID**. When the plugin'sID matches only the Marketplace distribution, the installation will be rejected because the purchase cannot be verified.
 
 - ❌ **With the same ID for all distribution channels** (including the Creative Cloud Marketplace):
-
   1. A user purchases a UXP plugin from a third-party marketplace.
   2. The Creative Cloud Desktop (CCD) application is in charge of the installation process and checks whether the plugin is available in the Creative Cloud Marketplace.
   3. If the plugin is indeed listed in Adobe's Marketplace, the CCD application will check whether the current user (their Adobe ID) has purchased the plugin there.
@@ -106,7 +105,7 @@ my-hybrid-plugin/
             └── sample-uxp-addon.uxpaddon
 ```
 
-2. **All architectures**: include binaries for macOS arm64, macOS x64, and Windows x64. Missing architectures will cause the plugin to fail on those platforms.
+2. **All architectures**: include binaries for macOS arm64, macOS x64, and Windows x64. Missing architectures will cause the whole plugin to fail on those platforms.
 3. **Code signing (macOS)**: sign and notarize the `.uxpaddon` executables with a valid Apple Developer ID certificate. Self-signed or test certificates are not accepted. The certificate must be valid for at least one year.
 4. **Admin credentials**: since Hybrid plugins include native code, users will be prompted for OS administrator credentials during installation and updates.
 
