@@ -17,7 +17,7 @@ keywords:
   - Premiere
 ---
 
-# TransitionFactory
+# TransitionFactory  
 
 ## Static Methods
 
@@ -25,24 +25,25 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_VideoTransition_
-
+*VideoTransition*
+  
 Creates a new video filter component based on the input matchName
 
 #### Parameters
 
-| Name      | Type     | Description |
-| :-------- | :------- | :---------- |
-| matchName | _string_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| matchName | *string* | - |
 
----
+___
 
 ### getVideoTransitionMatchNames
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_string[]_
-
+*string[]*
+  
 Return a promise which will be fullfilled with an array of video transition matchnames
 
----
+___
+

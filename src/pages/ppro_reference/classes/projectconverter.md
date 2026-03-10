@@ -1,7 +1,7 @@
 ---
-id: "trackitemselection"
-title: "TrackItemSelection"
-sidebar_label: "TrackItemSelection"
+id: "projectconverter"
+title: "ProjectConverter"
+sidebar_label: "ProjectConverter"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,67 +17,77 @@ keywords:
   - Premiere
 ---
 
-# TrackItemSelection  
+# ProjectConverter  
 
 ## Static Methods
 
-### createEmptySelection
+### exportAsFinalCutProXML
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Create empty selection
+Export a sequence as Final Cut Pro XML to the specified output file path.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| undefined | *(selection: TrackItemSelection) => void* | - |
+| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| outputFilePath | *string* | - |
+| suppressUI | *boolean* | - |
 
 ___
 
-## Instance Methods
-
-### addItem
+### exportAsOpenTimelineIO
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Add a track item to this selection
+Export a sequence as OpenTimelineIO to the specified output file path.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItem | [*VideoClipTrackItem*](/ppro_reference/classes/videocliptrackitem/) or [*AudioClipTrackItem*](/ppro_reference/classes/audiocliptrackitem/) | trackItem to be added to selection |
-| skipDuplicateCheck | *boolean* | - |
+| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| outputFilePath | *string* | - |
+| suppressUI | *boolean* | - |
 
 ___
 
-### getTrackItems
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*(VideoClipTrackItem | AudioClipTrackItem)[]*
-  
-return list of trackItems inside of trackItemSelection
-
-___
-
-### removeItem
+### importFromFinalCutProXML
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *boolean*
   
-Remove a track item from this selection
+Import a Final Cut Pro XML file into the active project.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItem | [*VideoClipTrackItem*](/ppro_reference/classes/videocliptrackitem/) or [*AudioClipTrackItem*](/ppro_reference/classes/audiocliptrackitem/) | trackItem to be removed from selection |
+| importPath | *string* | - |
+| suppressUI | *boolean* | - |
 
 ___
+
+### importFromOpenTimelineIO
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Import an OpenTimelineIO file into the active project.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| importPath | *string* | - |
+| suppressUI | *boolean* | - |
+
+___
+

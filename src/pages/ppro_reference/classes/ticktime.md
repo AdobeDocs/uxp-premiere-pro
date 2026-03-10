@@ -17,15 +17,15 @@ keywords:
   - Premiere
 ---
 
-# TickTime
+# TickTime  
 
 ## Properties
 
-| Name        | Type     | Access | Min Version | Description                           |
-| :---------- | :------- | :----- | :---------- | :------------------------------------ |
-| seconds     | _number_ | R      | 25.0        | Get the TickTime in seconds           |
-| ticks       | _string_ | R      | 25.0        | Get the TickTime in ticks as a string |
-| ticksNumber | _number_ | R      | 25.0        | Get the TickTime in ticks as a number |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| seconds | *number* | R | 25.0 | Get the TickTime in seconds |
+| ticks | *string* | R | 25.0 | Get the TickTime in ticks as a string |
+| ticksNumber | *number* | R | 25.0 | Get the TickTime in ticks as a number |
 
 ## Static Methods
 
@@ -33,50 +33,50 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TickTime_
-
+*TickTime*
+  
 Constructs a TickTime object with a frame and a frame rate.
 
 #### Parameters
 
-| Name       | Type                                              | Description |
-| :--------- | :------------------------------------------------ | :---------- |
-| frameCount | _number_                                          | -           |
-| frameRate  | [_FrameRate_](/ppro_reference/classes/framerate/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| frameCount | *number* | - |
+| frameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
 
----
+___
 
 ### createWithSeconds
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TickTime_
-
+*TickTime*
+  
 Constructs a TickTime object with seconds.
 
 #### Parameters
 
-| Name    | Type     | Description |
-| :------ | :------- | :---------- |
-| seconds | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| seconds | *number* | - |
 
----
+___
 
 ### createWithTicks
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TickTime_
-
+*TickTime*
+  
 Constructs a TickTime object with ticks as a string.
 
 #### Parameters
 
-| Name  | Type     | Description |
-| :---- | :------- | :---------- |
-| ticks | _string_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| ticks | *string* | - |
 
----
+___
 
 ## Instance Methods
 
@@ -84,110 +84,110 @@ Constructs a TickTime object with ticks as a string.
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TickTime_
-
+*TickTime*
+  
 Add another TickTime to this one and return it. This TickTime is not modified.
 
 #### Parameters
 
-| Name     | Type                                            | Description |
-| :------- | :---------------------------------------------- | :---------- |
-| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
----
+___
 
 ### alignToFrame
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TickTime_
-
+*TickTime*
+  
 alignToFrame will return a TickTime that is aligned to the nearest frame boundary less than the given time, for a given frame rate by rounding any fractional portion.
 
 #### Parameters
 
-| Name      | Type                                              | Description |
-| :-------- | :------------------------------------------------ | :---------- |
-| frameRate | [_FrameRate_](/ppro_reference/classes/framerate/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| frameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
 
----
+___
 
 ### alignToNearestFrame
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TickTime_
-
+*TickTime*
+  
 AlignToNearestFrame will return a TickTime that is aligned to the nearest frame boundary greater than or less than the given time, for a given frame rate by rounding any fractional portion.
 
 #### Parameters
 
-| Name      | Type                                              | Description |
-| :-------- | :------------------------------------------------ | :---------- |
-| frameRate | [_FrameRate_](/ppro_reference/classes/framerate/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| frameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
 
----
+___
 
 ### divide
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TickTime_
-
+*TickTime*
+  
 Divide this TickTime by a divisor and return it. In case of a division by zero, TIME_INVALID is returned. This TickTime is not modified.
 
 #### Parameters
 
-| Name    | Type     | Description |
-| :------ | :------- | :---------- |
-| divisor | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| divisor | *number* | - |
 
----
+___
 
 ### equals
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Returns true if the given TickTime is equal to the TickTime object
 
 #### Parameters
 
-| Name     | Type                                            | Description |
-| :------- | :---------------------------------------------- | :---------- |
-| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
----
+___
 
 ### multiply
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TickTime_
-
+*TickTime*
+  
 Multiply this TickTime with a factor and return it. This TickTime is not modified.
 
 #### Parameters
 
-| Name   | Type     | Description |
-| :----- | :------- | :---------- |
-| factor | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| factor | *number* | - |
 
----
+___
 
 ### subtract
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TickTime_
-
+*TickTime*
+  
 Subtract another TickTime from this one and return it. This TickTime is not modified.
 
 #### Parameters
 
-| Name     | Type                                            | Description |
-| :------- | :---------------------------------------------- | :---------- |
-| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
----
+___

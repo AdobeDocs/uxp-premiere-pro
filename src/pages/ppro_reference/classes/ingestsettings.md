@@ -17,7 +17,8 @@ keywords:
   - Premiere
 ---
 
-# IngestSettings
+# IngestSettings  
+
 
 ## Instance Methods
 
@@ -25,24 +26,24 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Get whether or not ingest is enabled
 
----
+___
 
 ### setIngestEnabled
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set whether or not ingest is enabled
 
 #### Parameters
 
-| Name    | Type      | Description |
-| :------ | :-------- | :---------- |
-| enabled | _boolean_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| enabled | *boolean* | - |
 
----
+___

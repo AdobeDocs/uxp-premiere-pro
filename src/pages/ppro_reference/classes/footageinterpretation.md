@@ -17,20 +17,21 @@ keywords:
   - Premiere
 ---
 
-# FootageInterpretation
+# FootageInterpretation  
 
 ## Properties
 
-| Name                       | Type     | Access | Min Version | Description                 |
-| :------------------------- | :------- | :----- | :---------- | :-------------------------- |
-| ALPHACHANNEL_NONE          | _number_ | R      | 25.0        | alpha channel none          |
-| ALPHACHANNEL_STRAIGHT      | _number_ | R      | 25.0        | alpha channel straight      |
-| ALPHACHANNEL_PREMULTIPLIED | _number_ | R      | 25.0        | alpha channel premultiplied |
-| ALPHACHANNEL_IGNORE        | _number_ | R      | 25.0        | alpha channel ignore        |
-| FIELD_TYPE_DEFAULT         | _number_ | R      | 25.0        | default filed type invalid  |
-| FIELD_TYPE_PROGRESSIVE     | _number_ | R      | 25.0        | field type progressive      |
-| FIELD_TYPE_UPPERFIRST      | _number_ | R      | 25.0        | field type upperfirst       |
-| FIELD_TYPE_LOWERFIRST      | _number_ | R      | 25.0        | field type lowerfirst       |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| ALPHACHANNEL_NONE | *number* | R | 25.0 | alpha channel none |
+| ALPHACHANNEL_STRAIGHT | *number* | R | 25.0 | alpha channel straight |
+| ALPHACHANNEL_PREMULTIPLIED | *number* | R | 25.0 | alpha channel premultiplied |
+| ALPHACHANNEL_IGNORE | *number* | R | 25.0 | alpha channel ignore |
+| FIELD_TYPE_DEFAULT | *number* | R | 25.0 | default filed type invalid |
+| FIELD_TYPE_PROGRESSIVE | *number* | R | 25.0 | field type progressive |
+| FIELD_TYPE_UPPERFIRST | *number* | R | 25.0 | field type upperfirst |
+| FIELD_TYPE_LOWERFIRST | *number* | R | 25.0 | field type lowerfirst |
+
 
 ## Instance Methods
 
@@ -38,310 +39,310 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get alpha usage type property of footage
 
----
+___
 
 ### getFieldType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get field type of footage
 
----
+___
 
 ### getFrameRate
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get frame rate of footage
 
----
+___
 
 ### getIgnoreAlpha
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Get ignore alpha property of footage
 
----
+___
 
 ### getInputLUTID
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_string_
-
+*string*
+  
 Get input LUTID of footage
 
----
+___
 
 ### getInvertAlpha
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Get invert alpha property of footage
 
----
+___
 
 ### getPixelAspectRatio
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get pixel aspect ratio of footage
 
----
+___
 
 ### getRemovePullDown
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Get removePullDown property of footage
 
----
+___
 
 ### getVrConform
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get vr conform projection type of footage
 
----
+___
 
 ### getVrHorzView
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get vr horizontal view of footage
 
----
+___
 
 ### getVrLayout
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get vr layout type of footage
 
----
+___
 
 ### getVrVertView
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get vr vertical view of footage
 
----
+___
 
 ### setAlphaUsage
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set alpha usage type property of footage
 
 #### Parameters
 
-| Name       | Type     | Description |
-| :--------- | :------- | :---------- |
-| alphaUsage | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| alphaUsage | *number* | - |
 
----
+___
 
 ### setFieldType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set field type of footage
 
 #### Parameters
 
-| Name      | Type     | Description |
-| :-------- | :------- | :---------- |
-| fieldType | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| fieldType | *number* | - |
 
----
+___
 
 ### setFrameRate
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set frame rate of footage
 
 #### Parameters
 
-| Name      | Type     | Description |
-| :-------- | :------- | :---------- |
-| frameRate | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| frameRate | *number* | - |
 
----
+___
 
 ### setIgnoreAlpha
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set ignore alpha property of footage
 
 #### Parameters
 
-| Name        | Type      | Description |
-| :---------- | :-------- | :---------- |
-| ignoreAlpha | _boolean_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| ignoreAlpha | *boolean* | - |
 
----
+___
 
 ### setInputLUTID
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set input LUTID of footage
 
 #### Parameters
 
-| Name       | Type     | Description |
-| :--------- | :------- | :---------- |
-| inputLUTID | _string_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inputLUTID | *string* | - |
 
----
+___
 
 ### setInvertAlpha
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set invert alpha property of footage
 
 #### Parameters
 
-| Name        | Type      | Description |
-| :---------- | :-------- | :---------- |
-| invertAlpha | _boolean_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| invertAlpha | *boolean* | - |
 
----
+___
 
 ### setPixelAspectRatio
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set pixel aspect ratio of footage
 
 #### Parameters
 
-| Name             | Type     | Description |
-| :--------------- | :------- | :---------- |
-| pixelAspectRatio | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| pixelAspectRatio | *number* | - |
 
----
+___
 
 ### setRemovePullDown
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set removePullDown property of footage
 
 #### Parameters
 
-| Name           | Type      | Description |
-| :------------- | :-------- | :---------- |
-| removePulldown | _boolean_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| removePulldown | *boolean* | - |
 
----
+___
 
 ### setVrConform
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set vr conform projection type of footage
 
 #### Parameters
 
-| Name      | Type     | Description |
-| :-------- | :------- | :---------- |
-| vrConform | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| vrConform | *number* | - |
 
----
+___
 
 ### setVrHorzView
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set vr horizontal view of footage
 
 #### Parameters
 
-| Name       | Type     | Description |
-| :--------- | :------- | :---------- |
-| vrHorzView | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| vrHorzView | *number* | - |
 
----
+___
 
 ### setVrLayout
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set vr layout type of footage
 
 #### Parameters
 
-| Name     | Type     | Description |
-| :------- | :------- | :---------- |
-| vrLayOut | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| vrLayOut | *number* | - |
 
----
+___
 
 ### setVrVertView
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set vr horizontal view of footage
 
 #### Parameters
 
-| Name       | Type     | Description |
-| :--------- | :------- | :---------- |
-| vrVertView | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| vrVertView | *number* | - |
 
----
+___

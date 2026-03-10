@@ -17,7 +17,8 @@ keywords:
   - Premiere
 ---
 
-# AudioComponentChain
+# AudioComponentChain  
+
 
 ## Instance Methods
 
@@ -25,73 +26,73 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Action_
-
+*Action*
+  
 Creates and returns an append component action
 
 #### Parameters
 
-| Name      | Type                                                                                                                         | Description            |
-| :-------- | :--------------------------------------------------------------------------------------------------------------------------- | :--------------------- |
-| component | [_Component_](/ppro_reference/classes/component/) or [_AudioFilterComponent_](/ppro_reference/classes/audiofiltercomponent/) | Audio filter component |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| component | [*Component*](/ppro_reference/classes/component/) or [*AudioFilterComponent*](/ppro_reference/classes/audiofiltercomponent/) | Audio filter component |
 
----
+___
 
 ### createInsertComponentAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Action_
-
+*Action*
+  
 Creates and returns an insert component action
 
 #### Parameters
 
-| Name                    | Type                                                                                                                         | Description                                 |
-| :---------------------- | :--------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------ |
-| component               | [_Component_](/ppro_reference/classes/component/) or [_AudioFilterComponent_](/ppro_reference/classes/audiofiltercomponent/) | Audio filter component                      |
-| componentInsertionIndex | _number_                                                                                                                     | Index which the component shall be inserted |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| component | [*Component*](/ppro_reference/classes/component/) or [*AudioFilterComponent*](/ppro_reference/classes/audiofiltercomponent/) | Audio filter component |
+| componentInsertionIndex | *number* | Index which the component shall be inserted |
 
----
+___
 
 ### createRemoveComponentAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Action_
-
+*Action*
+  
 Creates and returns an remove component action
 
 #### Parameters
 
-| Name      | Type                                                                                                                         | Description            |
-| :-------- | :--------------------------------------------------------------------------------------------------------------------------- | :--------------------- |
-| component | [_Component_](/ppro_reference/classes/component/) or [_AudioFilterComponent_](/ppro_reference/classes/audiofiltercomponent/) | Audio filter component |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| component | [*Component*](/ppro_reference/classes/component/) or [*AudioFilterComponent*](/ppro_reference/classes/audiofiltercomponent/) | Audio filter component |
 
----
+___
 
 ### getComponentAtIndex
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Component_
-
+*Component*
+  
 Returns the component at the given index
 
 #### Parameters
 
-| Name           | Type     | Description |
-| :------------- | :------- | :---------- |
-| componentIndex | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| componentIndex | *number* | - |
 
----
+___
 
 ### getComponentCount
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Gets the number of components in the component chain
 
----
+___

@@ -17,21 +17,23 @@ keywords:
   - Premiere
 ---
 
-# ProjectEvent
+# ProjectEvent  
 
 ## Properties
 
-| Name    | Type      | Access | Min Version | Description                                 |
-| :------ | :-------- | :----- | :---------- | :------------------------------------------ |
-| name    | _string_  | R      | 25.0        | The project name.                           |
-| path    | _string_  | R      | 25.0        | The absolute file path to the project file. |
-| id      | _string_  | R      | 25.0        | The unique identifier of the project.       |
-| project | _Project_ | R      | 25.0        | The project object.                         |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| name | *string* | R | 25.0 | The project name. |
+| path | *string* | R | 25.0 | The absolute file path to the project file. |
+| id | *string* | R | 25.0 | The unique identifier of the project. |
+| project | *Project* | R | 25.0 | The project object. |
+
+
 
 ## Events
 
-| Name            | Version | Description                                        |
-| :-------------- | :------ | :------------------------------------------------- |
-| EVENT_OPENED    | 25.0    | Event occurs when project was opened.              |
-| EVENT_ACTIVATED | 25.0    | Event occurs when the active project has changed   |
-| EVENT_DIRTY     | 25.0    | Event occurs when the project dirty state changed. |
+| Name | Version | Description |
+| :------ | :------ | :------ | 
+| EVENT_OPENED | 25.0 | Event occurs when project was opened. |
+| EVENT_ACTIVATED | 25.0 | Event occurs when the active project has changed |
+| EVENT_DIRTY | 25.0 | Event occurs when the project dirty state changed. |
