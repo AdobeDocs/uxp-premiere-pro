@@ -179,10 +179,6 @@ Hybrid plugins have both a JavaScript and a C++ layer, each requiring its own de
 - **JavaScript**: use the UDT Debug tool to set breakpoints and inspect variables.
 - **C++**: attach your IDE's debugger to the running Premiere process. In most IDEs this is found under **Debug** > **Attach to Process**.
 
-<InlineAlert variant="info" slots="text" />
-
-On macOS, you may need to perform an additional setup step before you can attach a debugger. Follow [this guide](https://helpx.adobe.com/ca/photoshop/kb/debug-plugins-in-photoshop-bigsur.html) for details.
-
 ## Packaging and Distribution
 
 Package your Hybrid plugin the same way as a standard UXP plugin using the [UXP Developer Tool](../../distribution/package/index.md). Additionally:
