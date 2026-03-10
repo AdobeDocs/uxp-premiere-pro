@@ -207,7 +207,7 @@ Yes. macOS requires a Developer ID-signed certificate for notarized executables.
 
 #### How do I prepare binaries for all architectures?
 
-You need binaries for macOS arm64, macOS x64, and Windows x64. For the platform not natively available to you, consider using a virtual machine (e.g., VMware Fusion). For building universal macOS binaries, refer to [Apple's guide to building universal binaries](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary).
+You need binaries for macOS arm64, macOS x64, and Windows x64. For building universal macOS binaries, refer to [Apple's guide to building universal binaries](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary).
 
 #### Are Hybrid plugins forward-compatible?
 
