@@ -41,4 +41,3 @@ Exports from a sequence. Supported formats are bmp, dpx, gif, jpg, exr, png, tga
 | height | *number* | - |
 
 ___
-

@@ -37,4 +37,3 @@ Import text segments in JSON format for handling via callback.
 | undefined | *( importedTranscription: TextSegments ) => void* | - |
 
 ___
-

@@ -26,7 +26,6 @@ keywords:
 | name | *string* | R | 25.0 | Get the name of the track |
 | id | *number* | R | 25.0 | The ID of the track within the TrackGroup |
 
-
 ## Instance Methods
 
 ### getIndex
@@ -95,7 +94,7 @@ ___
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ | 
+| :------ | :------ | :------ |
 | EVENT_TRACK_CHANGED | 25.0 | Event Object for Track changed |
 | EVENT_TRACK_INFO_CHANGED | 25.0 | Event Object for Track Info Changed |
 | EVENT_TRACK_LOCK_CHANGED | 25.0 | Event Object for Track Lock Changed |

@@ -54,4 +54,3 @@ Set backend preference using given list of property keys. The parameters are <ke
 | persistenceFlag | [*Constants.PropertyType*](/ppro_reference/constants) | Indicates whether the preference should be persisted or not |
 
 ___
-
