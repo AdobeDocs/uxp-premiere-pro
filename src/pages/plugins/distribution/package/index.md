@@ -89,7 +89,7 @@ Before distributing your package, test the installation to confirm it works as e
 
 1. **Directory structure**: place the `.uxpaddon` binaries in the correct platform/architecture folder layout within your plugin bundle:
 
-```
+```txt
 my-hybrid-plugin/
 ├── manifest.json
 ├── index.html
