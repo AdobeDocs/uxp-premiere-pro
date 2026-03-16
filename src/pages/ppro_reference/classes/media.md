@@ -26,6 +26,7 @@ keywords:
 | start | *TickTime* | R | 25.0 | Get the media start time |
 | duration | *TickTime* | R | 25.0 | Get the media duration |
 
+
 ## Instance Methods
 
 ### createSetStartAction

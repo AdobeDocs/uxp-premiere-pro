@@ -123,7 +123,7 @@ ___
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ |
+| :------ | :------ | :------ | 
 | EVENT_RENDER_COMPLETE | 25.0 | Broadcast when AME is finished rendering |
 | EVENT_RENDER_ERROR | 25.0 | Broadcast when AME gives back error message |
 | EVENT_RENDER_CANCEL | 25.0 | Broadcast when AME job is canceled |

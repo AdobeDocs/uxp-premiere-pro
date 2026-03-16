@@ -55,3 +55,4 @@ remove global event listener
 | eventHandler | *(event?: Object) => void* | - |
 
 ___
+

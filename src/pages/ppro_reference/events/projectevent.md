@@ -28,10 +28,12 @@ keywords:
 | id | *string* | R | 25.0 | The unique identifier of the project. |
 | project | *Project* | R | 25.0 | The project object. |
 
+
+
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ |
+| :------ | :------ | :------ | 
 | EVENT_OPENED | 25.0 | Event occurs when project was opened. |
 | EVENT_ACTIVATED | 25.0 | Event occurs when the active project has changed |
 | EVENT_DIRTY | 25.0 | Event occurs when the project dirty state changed. |
