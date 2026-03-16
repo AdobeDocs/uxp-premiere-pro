@@ -17,7 +17,7 @@ keywords:
   - Premiere
 ---
 
-# EventManager
+# EventManager  
 
 ## Static Methods
 
@@ -25,33 +25,33 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_void_
-
+*void*
+  
 add global event listener
 
 #### Parameters
 
-| Name            | Type                                                                                                                                                                                                                                                 | Description |
-| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
-| eventName       | _string_ or [_Constants.SnapEvent_](/ppro_reference/constants) or [_Constants.ProjectEvent_](/ppro_reference/constants) or [_Constants.SequenceEvent_](/ppro_reference/constants) or [_Constants.OperationCompleteEvent_](/ppro_reference/constants) | -           |
-| eventHandler    | _(event?: Object) => void_                                                                                                                                                                                                                           | -           |
-| inCapturePhase? | _boolean_                                                                                                                                                                                                                                            | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| eventName | *string* or [*Constants.SnapEvent*](/ppro_reference/constants) or [*Constants.ProjectEvent*](/ppro_reference/constants) or [*Constants.SequenceEvent*](/ppro_reference/constants) or [*Constants.OperationCompleteEvent*](/ppro_reference/constants) | - |
+| eventHandler | *(event?: Object) => void* | - |
+| inCapturePhase? | *boolean* | - |
 
----
+___
 
 ### removeGlobalEventListener
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_void_
-
+*void*
+  
 remove global event listener
 
 #### Parameters
 
-| Name         | Type                                                                                                                                                                                                                                                 | Description |
-| :----------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
-| eventName    | _string_ or [_Constants.SnapEvent_](/ppro_reference/constants) or [_Constants.ProjectEvent_](/ppro_reference/constants) or [_Constants.SequenceEvent_](/ppro_reference/constants) or [_Constants.OperationCompleteEvent_](/ppro_reference/constants) | -           |
-| eventHandler | _(event?: Object) => void_                                                                                                                                                                                                                           | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| eventName | *string* or [*Constants.SnapEvent*](/ppro_reference/constants) or [*Constants.ProjectEvent*](/ppro_reference/constants) or [*Constants.SequenceEvent*](/ppro_reference/constants) or [*Constants.OperationCompleteEvent*](/ppro_reference/constants) | - |
+| eventHandler | *(event?: Object) => void* | - |
 
----
+___

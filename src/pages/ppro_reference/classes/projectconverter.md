@@ -1,7 +1,7 @@
 ---
-id: "projectutils"
-title: "ProjectUtils"
-sidebar_label: "ProjectUtils"
+id: "projectconverter"
+title: "ProjectConverter"
+sidebar_label: "ProjectConverter"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,64 +17,76 @@ keywords:
   - Premiere
 ---
 
-# ProjectUtils  
+# ProjectConverter  
 
 ## Static Methods
 
-### getProjectFromViewId
+### exportAsFinalCutProXML
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Project*
+*boolean*
   
-Get project based on input view guid
+Export a sequence as Final Cut Pro XML to the specified output file path.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| guid | [*Guid*](/ppro_reference/classes/guid/) | - |
+| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| outputFilePath | *string* | - |
+| suppressUI | *boolean* | - |
 
 ___
 
-### getProjectViewIds
+### exportAsOpenTimelineIO
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Guid[]*
+*boolean*
   
-Get array of project view ids
-
-___
-
-### getSelection
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*ProjectItemSelection*
-  
-Get array of selected project items in project view
+Export a sequence as OpenTimelineIO to the specified output file path.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| project | [*Project*](/ppro_reference/classes/project/) | - |
+| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| outputFilePath | *string* | - |
+| suppressUI | *boolean* | - |
 
 ___
 
-### getSelectionFromViewId
+### importFromFinalCutProXML
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*ProjectItemSelection*
+*boolean*
   
-Get array of selected projectItem based on input view guid
+Import a Final Cut Pro XML file into the active project.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| guid | [*Guid*](/ppro_reference/classes/guid/) | - |
+| importPath | *string* | - |
+| suppressUI | *boolean* | - |
+
+___
+
+### importFromOpenTimelineIO
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Import an OpenTimelineIO file into the active project.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| importPath | *string* | - |
+| suppressUI | *boolean* | - |
 
 ___
