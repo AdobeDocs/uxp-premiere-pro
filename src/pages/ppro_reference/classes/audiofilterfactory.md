@@ -47,4 +47,3 @@ ___
 Returns an array of audio filter displayNames
 
 ___
-

@@ -69,4 +69,3 @@ Returns TextSegments object initialized from jsonString
 | jsonString | *string* | - |
 
 ___
-

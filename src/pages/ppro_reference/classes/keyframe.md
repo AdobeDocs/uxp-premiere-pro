@@ -26,7 +26,6 @@ keywords:
 | value | *object* | W | 25.0 |  |
 | position | *TickTime* | W | 25.0 | Get/Set position of a keyframe |
 
-
 ## Instance Methods
 
 ### getTemporalInterpolationMode
