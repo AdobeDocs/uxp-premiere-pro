@@ -142,9 +142,11 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*Sequence*
-  
-Create a new sequence with the default preset path - Parameter presetPath is deprecated, instead use createSequenceWithPresetPath()
+_Sequence_
+
+Create a new sequence using the default preset path.
+
+ **Note:** The `presetPath` parameter is deprecated. Use `createSequenceWithPresetPath()` instead.
 
 #### Parameters
 
