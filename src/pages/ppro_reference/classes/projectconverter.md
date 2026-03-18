@@ -85,37 +85,3 @@ Export a sequence as OpenTimelineIO to the specified output file path.
 | suppressUI | *boolean* | - |
 
 ___
-
-### importFromFinalCutProXML
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*boolean*
-  
-Import a Final Cut Pro XML file into the active project.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| importPath | *string* | - |
-| suppressUI | *boolean* | - |
-
-___
-
-### importFromOpenTimelineIO
-
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
-
-*boolean*
-  
-Import an OpenTimelineIO file into the active project.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| importPath | *string* | - |
-| suppressUI | *boolean* | - |
-
-___

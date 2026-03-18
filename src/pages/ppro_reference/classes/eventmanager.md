@@ -34,7 +34,7 @@ add global event listener
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | eventName | *string* or [*Constants.SnapEvent*](/ppro_reference/constants) or [*Constants.ProjectEvent*](/ppro_reference/constants) or [*Constants.SequenceEvent*](/ppro_reference/constants) or [*Constants.OperationCompleteEvent*](/ppro_reference/constants) | - |
-| eventHandler | *(event?: Object) => void* | - |
+| eventHandler | *(event?: object) => void* | - |
 | inCapturePhase? | *boolean* | - |
 
 ___
@@ -52,6 +52,6 @@ remove global event listener
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | eventName | *string* or [*Constants.SnapEvent*](/ppro_reference/constants) or [*Constants.ProjectEvent*](/ppro_reference/constants) or [*Constants.SequenceEvent*](/ppro_reference/constants) or [*Constants.OperationCompleteEvent*](/ppro_reference/constants) | - |
-| eventHandler | *(event?: Object) => void* | - |
+| eventHandler | *(event?: object) => void* | - |
 
 ___
