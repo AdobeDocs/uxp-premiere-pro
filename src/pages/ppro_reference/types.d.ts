@@ -2279,60 +2279,11 @@ export declare type ProjectColorSettings = {
 }
 
 export declare type ProjectConverterStatic = {
-
-  /**
-   * Export a sequence as an AAF (Advanced Authoring Format) file to the specified output path.
-   *
-   * @param sequence
-   * @param filePath
-   * @param mixdownVideo
-   * @param explodeToMono
-   * @param sampleRate
-   * @param bitsPerSample
-   * @param embedAudio
-   * @param audioFileFormat
-   * @param trimSources
-   * @param handleFrames
-   * @param videoMixdownPresetPath
-   * @param renderAudioEffects
-   * @param interleaveWithoutEffects
-   * @param preserveParentFolder
-   */
-  exportAAF(sequence: Sequence, filePath: string, mixdownVideo: boolean, explodeToMono: boolean, sampleRate: number, bitsPerSample: number, embedAudio: boolean, audioFileFormat: number, trimSources: boolean, handleFrames: number, videoMixdownPresetPath: string, renderAudioEffects?: boolean, interleaveWithoutEffects?: boolean, preserveParentFolder?: boolean): Promise<boolean>
-
-  /**
-   * Export a sequence as Final Cut Pro XML to the specified output file path.
-   *
-   * @param sequence
-   * @param outputFilePath
-   * @param suppressUI
-   */
-  exportAsFinalCutProXML(sequence: Sequence, outputFilePath: string, suppressUI?: boolean): Promise<boolean>
-
-  /**
-   * Export a sequence as OpenTimelineIO to the specified output file path.
-   *
-   * @param sequence
-   * @param outputFilePath
-   * @param suppressUI
-   */
-  exportAsOpenTimelineIO(sequence: Sequence, outputFilePath: string, suppressUI?: boolean): Promise<boolean>
-
-  /**
-   * Import an OpenTimelineIO file into the active project.
-   *
-   * @param importPath
-   * @param suppressUI
-   */
-  importFromOpenTimelineIO(importPath: string, suppressUI?: boolean): Promise<boolean>
-
-  /**
-   * Import a Final Cut Pro XML file into the active project.
-   *
-   * @param importPath
-   * @param suppressUI
-   */
-  importFromFinalCutProXML(importPath: string, suppressUI?: boolean): Promise<boolean>
+  exportAAF(sequence: Sequence, filePath: string, mixdownVideo: boolean, explodeToMono: boolean, sampleRate: number, bitsPerSample: number, embedAudio: boolean, audioFileFormat: number, trimSources: boolean, handleFrames: number, videoMixdownPresetPath: string, renderAudioEffects?: boolean, interleaveWithoutEffects?: boolean, preserveParentFolder?: boolean): Promise<boolean>	//Export a sequence as an AAF (Advanced Authoring Format) file to the specified output path.
+  exportAsFinalCutProXML(sequence: Sequence, outputFilePath: string, suppressUI?: boolean): Promise<boolean>	//Export a sequence as Final Cut Pro XML to the specified output file path.
+  exportAsOpenTimelineIO(sequence: Sequence, outputFilePath: string, suppressUI?: boolean): Promise<boolean>	//Export a sequence as OpenTimelineIO to the specified output file path.
+  importFromOpenTimelineIO(importPath: string, suppressUI?: boolean): Promise<boolean>	//Import an OpenTimelineIO file into the active project.
+  importFromFinalCutProXML(importPath: string, suppressUI?: boolean): Promise<boolean>	//Import a Final Cut Pro XML file into the active project.
 }
 
 export declare type ProjectConverter = {
