@@ -1178,7 +1178,7 @@ export namespace Constants {
 	export enum MarkerColor {
 		GREEN,
 		RED,
-		MAGNETA,
+		MAGENTA,
 		ORANGE,
 		YELLOW,
 		BLUE,
