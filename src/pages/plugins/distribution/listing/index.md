@@ -128,7 +128,11 @@ Click on the **Listing Details** and start filling in the required fields in the
 
 ![Developer Distribution - plugin details](./img/listing--metadata.png)
 
-When you're done, click on **Save draft & add version**.
+<InlineAlert variant="info" slots="header, text" />
+
+#### Hybrid plugins support
+
+You can submit a Hybrid plugin to the marketplace even if you haven't compiled it for every architecture (macOS arm64, macOS x64, and Windows x64). Adobe Reviewers will assume and expect that the plugin will work on them all; if this is not the case, please **add a note in the Details section**, to help users understand the platform compatibility.
 
 ### 4. Add a new Version
 
