@@ -25,7 +25,7 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*PRProduction*
   
 Get an instance of the currently active production.
 
@@ -37,7 +37,7 @@ ___
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*object*
+*ScratchDiskSettings*
   
 Get the scratch disk settings instance for this production.
 
