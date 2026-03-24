@@ -33,7 +33,7 @@ Return an action to set the color of the marker by the color index
 
 | Name       | Type     | Description |
 | --- | --- | --- |
-| colorIndex | _number_ | -           |
+| colorIndex | *number* | -           |
 
 ___
 
@@ -97,7 +97,7 @@ Return an action to set the type of the marker.
 
 | Name       | Type     | Description                                                               |
 | :--------- | :------- | :------------------------------------------------------------------------ |
-| markerType | _string_ | Can be set to "Comment", "Chapter", "Segmentation", or "WebLink"; erify exact strings against the TypeScript definitions file. |
+| markerType | *string* | Can be set to "Comment", "Chapter", "Segmentation", or "WebLink"; erify exact strings against the TypeScript definitions file. |
 
 ___
 
