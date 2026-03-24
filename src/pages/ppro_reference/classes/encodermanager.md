@@ -17,13 +17,13 @@ keywords:
   - Premiere
 ---
 
-# EncoderManager
+# EncoderManager  
 
 ## Properties
 
-| Name           | Type      | Access | Min Version | Description                |
-| :------------- | :-------- | :----- | :---------- | :------------------------- |
-| isAMEInstalled | _boolean_ | R      | 25.0        | Check if AME is installed. |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| isAMEInstalled | *boolean* | R | 25.0 | Check if AME is installed. |
 
 ## Static Methods
 
@@ -31,28 +31,28 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_string_
-
+*string*
+  
 Get the Export File Extension of Input Preset file
 
 #### Parameters
 
-| Name           | Type                                            | Description |
-| :------------- | :---------------------------------------------- | :---------- |
-| sequence       | [_Sequence_](/ppro_reference/classes/sequence/) | -           |
-| presetFilePath | _string_                                        | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| presetFilePath | *string* | - |
 
----
+___
 
 ### getManager
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_EncoderManager_
-
+*EncoderManager*
+  
 Get the Encoder Manager object.
 
----
+___
 
 ## Instance Methods
 
@@ -60,72 +60,72 @@ Get the Encoder Manager object.
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Encode input media file in AME
 
 #### Parameters
 
-| Name                  | Type                                            | Description |
-| :-------------------- | :---------------------------------------------- | :---------- |
-| filePath              | _string_                                        | -           |
-| outputFile            | _string_                                        | -           |
-| presetFile            | _string_                                        | -           |
-| inPoint               | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
-| outPoint              | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
-| workArea              | _number_                                        | -           |
-| removeUponCompletion  | _boolean_                                       | -           |
-| startQueueImmediately | _boolean_                                       | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| filePath | *string* | - |
+| outputFile | *string* | - |
+| presetFile | *string* | - |
+| inPoint | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| outPoint | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| workArea | *number* | - |
+| removeUponCompletion | *boolean* | - |
+| startQueueImmediately | *boolean* | - |
 
----
+___
 
 ### encodeProjectItem
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Encode input clipProjectItem in AME
 
 #### Parameters
 
-| Name                  | Type                                                          | Description |
-| :-------------------- | :------------------------------------------------------------ | :---------- |
-| clipProjectItem       | [_ClipProjectItem_](/ppro_reference/classes/clipprojectitem/) | -           |
-| outputFile            | _string_                                                      | -           |
-| presetFile            | _string_                                                      | -           |
-| workArea              | _number_                                                      | -           |
-| removeUponCompletion  | _boolean_                                                     | -           |
-| startQueueImmediately | _boolean_                                                     | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| clipProjectItem | [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) | - |
+| outputFile | *string* | - |
+| presetFile | *string* | - |
+| workArea | *number* | - |
+| removeUponCompletion | *boolean* | - |
+| startQueueImmediately | *boolean* | - |
 
----
+___
 
 ### exportSequence
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Export a sequence. If no output file and preset is specified, the sequence will be exported with the applied export settings or standard export rules will be applied.
 
 #### Parameters
 
-| Name       | Type                                                | Description                                                               |
-| :--------- | :-------------------------------------------------- | :------------------------------------------------------------------------ |
-| sequence   | [_Sequence_](/ppro_reference/classes/sequence/)     | -                                                                         |
-| exportType | [_Constants.ExportType_](/ppro_reference/constants) | Constants.ExportType.IMMEDIATELY, Constants.ExportType.QUEUE_TO_AME etc.. |
-| outputFile | _string_                                            | -                                                                         |
-| presetFile | _string_                                            | -                                                                         |
-| exportFull | _boolean_                                           | -                                                                         |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| sequence | [*Sequence*](/ppro_reference/classes/sequence/) | - |
+| exportType | [*Constants.ExportType*](/ppro_reference/constants) | Constants.ExportType.IMMEDIATELY, Constants.ExportType.QUEUE_TO_AME etc..  |
+| outputFile | *string* | - |
+| presetFile | *string* | - |
+| exportFull | *boolean* | - |
 
----
+___
 
 ## Events
 
-| Name                  | Version | Description                                 |
-| :-------------------- | :------ | :------------------------------------------ |
-| EVENT_RENDER_COMPLETE | 25.0    | Broadcast when AME is finished rendering    |
-| EVENT_RENDER_ERROR    | 25.0    | Broadcast when AME gives back error message |
-| EVENT_RENDER_CANCEL   | 25.0    | Broadcast when AME job is canceled          |
-| EVENT_RENDER_QUEUE    | 25.0    | Broadcast when AME job is queued            |
-| EVENT_RENDER_PROGRESS | 25.0    | Broadcast when AME job is rendering the job |
+| Name | Version | Description |
+| :------ | :------ | :------ |
+| EVENT_RENDER_COMPLETE | 25.0 | Broadcast when AME is finished rendering |
+| EVENT_RENDER_ERROR | 25.0 | Broadcast when AME gives back error message |
+| EVENT_RENDER_CANCEL | 25.0 | Broadcast when AME job is canceled |
+| EVENT_RENDER_QUEUE | 25.0 | Broadcast when AME job is queued |
+| EVENT_RENDER_PROGRESS | 25.0 | Broadcast when AME job is rendering the job |

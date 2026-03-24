@@ -17,10 +17,10 @@ keywords:
   - Premiere
 ---
 
-# TimeDisplay
+# TimeDisplay  
 
 ## Properties
 
-| Name | Type     | Access | Min Version | Description                                                       |
-| :--- | :------- | :----- | :---------- | :---------------------------------------------------------------- |
-| type | _number_ | W      | 25.0        | Read/Write property to get/set the time display type numeric code |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| type | *number* | W | 25.0 | Read/Write property to get/set the time display type numeric code |

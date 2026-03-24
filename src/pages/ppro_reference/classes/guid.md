@@ -17,7 +17,7 @@ keywords:
   - Premiere
 ---
 
-# Guid
+# Guid  
 
 ## Static Methods
 
@@ -25,17 +25,17 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Guid_
-
+*Guid*
+  
 Create a guid from a string
 
 #### Parameters
 
-| Name        | Type     | Description |
-| :---------- | :------- | :---------- |
-| stringValue | _string_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| stringValue | *string* | - |
 
----
+___
 
 ## Instance Methods
 
@@ -43,8 +43,8 @@ Create a guid from a string
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_string_
-
+*string*
+  
 Return string representation of the GUID
 
----
+___

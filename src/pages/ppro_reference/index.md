@@ -23,9 +23,9 @@ For properties, you will find a column "MIN VERSION". For methods, the version n
 
 ## Synchronous vs Asynchronous
 
-An important difference between ExtendScript (and CEP) and UXP in Premiere is that all ExtendScript calls to Premiere were synchronous. This means they blocked the Premiere UI while they were executing. In UXP, a method call is _asynchronous_, and does not block the UI thread.
+An important difference between ExtendScript (and CEP) and UXP in Premiere is that all ExtendScript calls to Premiere were synchronous. This means they blocked the Premiere UI while they were executing. In UXP, a method call is *asynchronous*, and does not block the UI thread.
 
-For a smooth transition between the ExtendScript DOM and the UXP DOM, all properties (get and set) in the API were designed to be _synchronous_ and do not need to be awaited. It is worth noting that they are, in the background, asynchronous in nature.
+For a smooth transition between the ExtendScript DOM and the UXP DOM, all properties (get and set) in the API were designed to be *synchronous* and do not need to be awaited. It is worth noting that they are, in the background, asynchronous in nature.
 
 ## Working with Premiere Objects
 
@@ -44,11 +44,10 @@ And you can get the active sequence from the project like this:
 ```javascript
 const sequence = await project.getActiveSequence();
 ```
-
 <!-- ## UXP Scripting
 
 UXP is not just for plugins anymore.  Individual JavaScript files may be developed and executed as detailed in the [UXP Scripting section](./media/uxpscripting). -->
 
 ## Useful links
 
-- [Typescript Definition File](./types.d.ts)
+ - [Typescript Definition File](./types.d.ts)

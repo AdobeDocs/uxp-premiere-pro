@@ -17,14 +17,14 @@ keywords:
   - Premiere
 ---
 
-# FrameRate
+# FrameRate  
 
 ## Properties
 
-| Name          | Type     | Access | Min Version | Description                                     |
-| :------------ | :------- | :----- | :---------- | :---------------------------------------------- |
-| ticksPerFrame | _number_ | W      | 25.0        | Read/Write property to get/set ticks per frame. |
-| value         | _number_ | R      | 25.0        | Get the number of frames per second.            |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| ticksPerFrame | *number* | W | 25.0 | Read/Write property to get/set ticks per frame. |
+| value | *number* | R | 25.0 | Get the number of frames per second. |
 
 ## Static Methods
 
@@ -32,17 +32,17 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_FrameRate_
-
+*FrameRate*
+  
 Create frame rate object with a value
 
 #### Parameters
 
-| Name  | Type     | Description |
-| :---- | :------- | :---------- |
-| value | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| value | *number* | - |
 
----
+___
 
 ## Instance Methods
 
@@ -50,14 +50,14 @@ Create frame rate object with a value
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Returns true if the given FrameRate is equal to this FrameRate object
 
 #### Parameters
 
-| Name      | Type                                              | Description |
-| :-------- | :------------------------------------------------ | :---------- |
-| frameRate | [_FrameRate_](/ppro_reference/classes/framerate/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| frameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
 
----
+___

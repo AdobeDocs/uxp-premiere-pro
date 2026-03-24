@@ -17,7 +17,7 @@ keywords:
   - Premiere
 ---
 
-# Utils
+# Utils  
 
 ## Static Methods
 
@@ -25,8 +25,8 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Check if AE is installed.
 
----
+___
