@@ -17,7 +17,7 @@ keywords:
   - Premiere
 ---
 
-# SequenceSettings
+# SequenceSettings  
 
 ## Instance Methods
 
@@ -25,356 +25,382 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get number of channels in the sequence
 
----
+___
 
 ### getAudioChannelType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get Audio channel type of sequence. Could be 0 (Mono), 1 (Stereo), 2 (5.1), or 3 (multichannel)
 
----
+___
 
 ### getAudioDisplayFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TimeDisplay_
-
+*TimeDisplay*
+  
 Get Audio display format
 
----
+___
 
 ### getAudioSampleRate
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_FrameRate_
-
+*FrameRate*
+  
 Get audio sample rate
 
----
+___
 
 ### getCompositeInLinearColor
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Get if composite in linear color is checked
 
----
+___
 
 ### getEditingMode
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_string_
-
+*string*
+  
 Get editing mode of sequence
 
----
+___
 
 ### getMaximumBitDepth
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Find if maximum bit depth is set
 
----
+___
 
 ### getMaxRenderQuality
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Find if maximum render quality is set
 
----
+___
 
 ### getPreviewCodec
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_string_
-
+*string*
+  
 Get preview codec of sequence
 
----
+___
 
 ### getPreviewFileFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_string_
-
+*string*
+  
 Get preview file format of sequence
 
----
+___
 
 ### getPreviewFrameRect
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_RectF_
-
+*RectF*
+  
 Get preview video frame rect in the sequence
 
----
+___
 
 ### getVideoDisplayFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_TimeDisplay_
-
+*TimeDisplay*
+  
 Get Video display format
 
----
+___
 
 ### getVideoFieldType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get video field type in the sequence
 
----
+___
+
+### getVideoFrameRate
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*FrameRate*
+  
+Get video frame rate in the sequence
+
+___
 
 ### getVideoFrameRect
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_RectF_
-
+*RectF*
+  
 Get video frame rect in the sequence
 
----
+___
 
 ### getVideoPixelAspectRatio
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_string_
-
+*string*
+  
 Get Video display format
 
----
+___
 
 ### setAudioDisplayFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set audio display format of sequence.
 
 #### Parameters
 
-| Name         | Type                                                  | Description |
-| :----------- | :---------------------------------------------------- | :---------- |
-| audioDisplay | [_TimeDisplay_](/ppro_reference/classes/timedisplay/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| audioDisplay | [*TimeDisplay*](/ppro_reference/classes/timedisplay/) | - |
 
----
+___
 
 ### setAudioSampleRate
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set audio sample rate
 
 #### Parameters
 
-| Name   | Type                                              | Description |
-| :----- | :------------------------------------------------ | :---------- |
-| inRate | [_FrameRate_](/ppro_reference/classes/framerate/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
 
----
+___
 
 ### setCompositeInLinearColor
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set if composite in linear color is checked
 
 #### Parameters
 
-| Name                      | Type      | Description |
-| :------------------------ | :-------- | :---------- |
-| useCompositeInLinearColor | _boolean_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| useCompositeInLinearColor | *boolean* | - |
 
----
+___
 
 ### setEditingMode
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set editing mode of sequence
 
 #### Parameters
 
-| Name              | Type     | Description |
-| :---------------- | :------- | :---------- |
-| inEditingModeName | _string_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inEditingModeName | *string* | - |
 
----
+___
 
 ### setMaximumBitDepth
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set maximum bit depth to true/false
 
 #### Parameters
 
-| Name           | Type      | Description |
-| :------------- | :-------- | :---------- |
-| useMaxBitDepth | _boolean_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| useMaxBitDepth | *boolean* | - |
 
----
+___
 
 ### setMaxRenderQuality
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set maximum render quality to true/false
 
 #### Parameters
 
-| Name                | Type      | Description |
-| :------------------ | :-------- | :---------- |
-| useMaxRenderQuality | _boolean_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| useMaxRenderQuality | *boolean* | - |
 
----
+___
 
 ### setPreviewCodec
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set preview codec of sequence
 
 #### Parameters
 
-| Name           | Type     | Description |
-| :------------- | :------- | :---------- |
-| inPreviewCodec | _string_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inPreviewCodec | *string* | - |
 
----
+___
 
 ### setPreviewFileFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set preview file format of sequence
 
 #### Parameters
 
-| Name           | Type     | Description |
-| :------------- | :------- | :---------- |
-| inPreviewCodec | _string_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inPreviewCodec | *string* | - |
 
----
+___
 
 ### setPreviewFrameRect
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set preview video frame rect in sequence
 
 #### Parameters
 
-| Name               | Type                                      | Description |
-| :----------------- | :---------------------------------------- | :---------- |
-| inPreviewVideoRect | [_RectF_](/ppro_reference/classes/rectf/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inPreviewVideoRect | [*RectF*](/ppro_reference/classes/rectf/) | - |
 
----
+___
 
 ### setVideoDisplayFormat
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set video display format of sequence
 
 #### Parameters
 
-| Name         | Type                                                  | Description |
-| :----------- | :---------------------------------------------------- | :---------- |
-| audioDisplay | [_TimeDisplay_](/ppro_reference/classes/timedisplay/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| audioDisplay | [*TimeDisplay*](/ppro_reference/classes/timedisplay/) | - |
 
----
+___
 
 ### setVideoFieldType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set video field type in sequence
 
 #### Parameters
 
-| Name           | Type     | Description |
-| :------------- | :------- | :---------- |
-| videoFiledType | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| videoFiledType | *number* | - |
 
----
+___
+
+### setVideoFrameRate
+
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*boolean*
+  
+Set video frame rate in the sequence
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inVideoFrameRate | [*FrameRate*](/ppro_reference/classes/framerate/) | - |
+
+___
 
 ### setVideoFrameRect
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set video frame rect in sequence
 
 #### Parameters
 
-| Name             | Type                                      | Description |
-| :--------------- | :---------------------------------------- | :---------- |
-| inVideoFrameRect | [_RectF_](/ppro_reference/classes/rectf/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inVideoFrameRect | [*RectF*](/ppro_reference/classes/rectf/) | - |
 
----
+___
 
 ### setVideoPixelAspectRatio
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Set video display format of sequence
 
 #### Parameters
 
-| Name               | Type     | Description |
-| :----------------- | :------- | :---------- |
-| inPixelAspectRatio | _string_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inPixelAspectRatio | *string* | - |
 
----
+___

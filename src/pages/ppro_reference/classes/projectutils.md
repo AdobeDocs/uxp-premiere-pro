@@ -17,7 +17,7 @@ keywords:
   - Premiere
 ---
 
-# ProjectUtils
+# ProjectUtils  
 
 ## Static Methods
 
@@ -25,56 +25,56 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Project_
-
+*Project*
+  
 Get project based on input view guid
 
 #### Parameters
 
-| Name | Type                                    | Description |
-| :--- | :-------------------------------------- | :---------- |
-| guid | [_Guid_](/ppro_reference/classes/guid/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| guid | [*Guid*](/ppro_reference/classes/guid/) | - |
 
----
+___
 
 ### getProjectViewIds
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Guid[]_
-
+*Guid[]*
+  
 Get array of project view ids
 
----
+___
 
 ### getSelection
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_ProjectItemSelection_
-
+*ProjectItemSelection*
+  
 Get array of selected project items in project view
 
 #### Parameters
 
-| Name    | Type                                          | Description |
-| :------ | :-------------------------------------------- | :---------- |
-| project | [_Project_](/ppro_reference/classes/project/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| project | [*Project*](/ppro_reference/classes/project/) | - |
 
----
+___
 
 ### getSelectionFromViewId
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_ProjectItemSelection_
-
+*ProjectItemSelection*
+  
 Get array of selected projectItem based on input view guid
 
 #### Parameters
 
-| Name | Type                                    | Description |
-| :--- | :-------------------------------------- | :---------- |
-| guid | [_Guid_](/ppro_reference/classes/guid/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| guid | [*Guid*](/ppro_reference/classes/guid/) | - |
 
----
+___

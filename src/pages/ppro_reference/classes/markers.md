@@ -17,7 +17,7 @@ keywords:
   - Premiere
 ---
 
-# Markers
+# Markers  
 
 ## Static Methods
 
@@ -25,17 +25,17 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Markers_
-
+*Markers*
+  
 Returns the Markers object for Sequence Or ProjectItem
 
 #### Parameters
 
-| Name              | Type                                                                                                             | Description |
-| :---------------- | :--------------------------------------------------------------------------------------------------------------- | :---------- |
-| markerOwnerObject | [_Sequence_](/ppro_reference/classes/sequence/) or [_ClipProjectItem_](/ppro_reference/classes/clipprojectitem/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| markerOwnerObject | [*Sequence*](/ppro_reference/classes/sequence/) or [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) | - |
 
----
+___
 
 ## Instance Methods
 
@@ -43,67 +43,67 @@ Returns the Markers object for Sequence Or ProjectItem
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Action_
-
+*Action*
+  
 Add a new marker
 
 #### Parameters
 
-| Name       | Type                                            | Description |
-| :--------- | :---------------------------------------------- | :---------- |
-| Name       | _string_                                        | -           |
-| markerType | _string_                                        | -           |
-| startTime  | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
-| duration   | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
-| comments   | _string_                                        | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| Name | *string* | - |
+| markerType | *string* | - |
+| startTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| duration | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| comments | *string* | - |
 
----
+___
 
 ### createMoveMarkerAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Action_
-
+*Action*
+  
 Move the given marker at new time value
 
 #### Parameters
 
-| Name     | Type                                            | Description |
-| :------- | :---------------------------------------------- | :---------- |
-| marker   | [_Marker_](/ppro_reference/classes/marker/)     | -           |
-| tickTime | [_TickTime_](/ppro_reference/classes/ticktime/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| marker | [*Marker*](/ppro_reference/classes/marker/) | - |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
 
----
+___
 
 ### createRemoveMarkerAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Action_
-
+*Action*
+  
 Remove the given marker
 
 #### Parameters
 
-| Name   | Type                                        | Description |
-| :----- | :------------------------------------------ | :---------- |
-| marker | [_Marker_](/ppro_reference/classes/marker/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| marker | [*Marker*](/ppro_reference/classes/marker/) | - |
 
----
+___
 
 ### getMarkers
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Marker[]_
-
+*Marker[]*
+  
 Get all markers
 
 #### Parameters
 
-| Name    | Type                                            | Description                   |
-| :------ | :---------------------------------------------- | :---------------------------- |
-| filters | [_string[]_](/ppro_reference/classes/string[]/) | Marker Type Filter (Optional) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| filters | [*string[]*](/ppro_reference/classes/string[]/) | Marker Type Filter (Optional) |
 
----
+___

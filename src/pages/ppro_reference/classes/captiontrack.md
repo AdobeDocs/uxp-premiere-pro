@@ -17,14 +17,14 @@ keywords:
   - Premiere
 ---
 
-# CaptionTrack
+# CaptionTrack  
 
 ## Properties
 
-| Name | Type     | Access | Min Version | Description                               |
-| :--- | :------- | :----- | :---------- | :---------------------------------------- |
-| name | _string_ | R      | 25.0        | Get the name of the track                 |
-| id   | _number_ | R      | 25.0        | The ID of the track within the TrackGroup |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| name | *string* | R | 25.0 | Get the name of the track |
+| id | *number* | R | 25.0 | The ID of the track within the TrackGroup |
 
 ## Instance Methods
 
@@ -32,61 +32,61 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Index representing the track index of this track within the track group.
 
----
+___
 
 ### getMediaType
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Guid_
-
+*Guid*
+  
 UUID representing the underlying media type of this track
 
----
+___
 
 ### getTrackItems
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_[]_
-
+*[]*
+  
 Returns the track items of the specified media type from the given track
 
 #### Parameters
 
-| Name                   | Type      | Description |
-| :--------------------- | :-------- | :---------- |
-| trackItemType          | _number_  | -           |
-| includeEmptyTrackItems | _boolean_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| trackItemType | *number* | - |
+| includeEmptyTrackItems | *boolean* | - |
 
----
+___
 
 ### isMuted
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 Get mute state of the track
 
----
+___
 
 ### setMute
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_boolean_
-
+*boolean*
+  
 sets the mute state of the track to muted/unmuted
 
 #### Parameters
 
-| Name | Type      | Description |
-| :--- | :-------- | :---------- |
-| mute | _boolean_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| mute | *boolean* | - |
 
----
+___

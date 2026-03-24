@@ -17,14 +17,14 @@ keywords:
   - Premiere
 ---
 
-# ProjectItem
+# ProjectItem  
 
 ## Properties
 
-| Name | Type     | Access | Min Version | Description                       |
-| :--- | :------- | :----- | :---------- | :-------------------------------- |
-| type | _number_ | R      | 25.0        | Get the type of the Project Item. |
-| name | _string_ | R      | 25.0        | The name of this project item.    |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| type | *number* | R | 25.0 | Get the type of the Project Item. |
+| name | *string* | R | 25.0 | The name of this project item. |
 
 ## Static Methods
 
@@ -32,17 +32,17 @@ keywords:
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_ProjectItem_
-
+*ProjectItem*
+  
 Cast FolderItem or ClipProjectItem in to ProjectItem
 
 #### Parameters
 
-| Name | Type                                                                                                                 | Description |
-| :--- | :------------------------------------------------------------------------------------------------------------------- | :---------- |
-| item | [_FolderItem_](/ppro_reference/classes/folderitem/) or [_ClipProjectItem_](/ppro_reference/classes/clipprojectitem/) | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| item | [*FolderItem*](/ppro_reference/classes/folderitem/) or [*ClipProjectItem*](/ppro_reference/classes/clipprojectitem/) | - |
 
----
+___
 
 ## Instance Methods
 
@@ -50,70 +50,70 @@ Cast FolderItem or ClipProjectItem in to ProjectItem
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Action_
-
+*Action*
+  
 Create an action for set color label to projectItem by index
 
 #### Parameters
 
-| Name              | Type     | Description |
-| :---------------- | :------- | :---------- |
-| inColorLabelIndex | _number_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inColorLabelIndex | *number* | - |
 
----
+___
 
 ### createSetNameAction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Action_
-
+*Action*
+  
 Returns action that renames projectItem
 
 #### Parameters
 
-| Name   | Type     | Description |
-| :----- | :------- | :---------- |
-| inName | _string_ | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| inName | *string* | - |
 
----
+___
 
 ### getColorLabelIndex
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_number_
-
+*number*
+  
 Get color label index of projectItem
 
----
+___
 
 ### getId
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_string_
-
+*string*
+  
 Get id of projectItem
 
----
+___
 
 ### getParentBin
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_FolderItem_
-
+*FolderItem*
+  
 Get parent FolderItem of projectItem
 
----
+___
 
 ### getProject
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-_Project_
-
+*Project*
+  
 Get the parent Project of this projectItem.
 
----
+___
