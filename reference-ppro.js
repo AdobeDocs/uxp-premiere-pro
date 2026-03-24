@@ -104,6 +104,10 @@ module.exports = [{
           "path": "/ppro_reference/classes/metadata/"
         },
         {
+          "title": "PRProduction",
+          "path": "/ppro_reference/classes/prproduction/"
+        },
+        {
           "title": "PointF",
           "path": "/ppro_reference/classes/pointf/"
         },
@@ -129,6 +133,10 @@ module.exports = [{
         {
           "title": "ProjectColorSettings",
           "path": "/ppro_reference/classes/projectcolorsettings/"
+        },
+        {
+          "title": "ProjectConverter",
+          "path": "/ppro_reference/classes/projectconverter/"
         },
         {
           "title": "ProjectItem",

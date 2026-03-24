@@ -1,7 +1,7 @@
 ---
-id: "projectcolorsettings"
-title: "ProjectColorSettings"
-sidebar_label: "ProjectColorSettings"
+id: "prproduction"
+title: "PRProduction"
+sidebar_label: "PRProduction"
 repo: "uxp-premierepro"
 product: "premierepro"
 keywords:
@@ -17,26 +17,28 @@ keywords:
   - Premiere
 ---
 
-# ProjectColorSettings  
+# PRProduction  
 
-## Instance Methods
+## Static Methods
 
-### getGraphicsWhiteLuminance
+### getActiveProduction
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number*
+*PRProduction*
   
-Get the graphics white luminance value
+Get an instance of the currently active production.
 
 ___
 
-### getSupportedGraphicsWhiteLuminances
+## Instance Methods
+
+### getScratchDiskSettings
 
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
-*number[]*
+*ScratchDiskSettings*
   
-Get all the graphics white luminance as array of values
+Get the scratch disk settings instance for this production.
 
 ___
