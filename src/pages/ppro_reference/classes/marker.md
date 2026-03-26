@@ -97,7 +97,7 @@ Return an action to set the type of the marker.
 
 | Name       | Type     | Description                                                               |
 | :--------- | :------- | :------------------------------------------------------------------------ |
-| markerType | *string* | Can be set to "Comment", "Chapter", "Segmentation", or "WebLink"; erify exact strings against the TypeScript definitions file. |
+| markerType | *string* | Can be set to "Comment", "Chapter", "Segmentation", or "WebLink"; verify exact strings against the TypeScript definitions file. |
 
 ___
 
