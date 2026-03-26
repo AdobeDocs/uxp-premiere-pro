@@ -181,12 +181,50 @@ Hybrid plugins have both a JavaScript and a C++ layer, each requiring its own de
 
 ## Packaging and Distribution
 
-Package your Hybrid plugin the same way as a standard UXP plugin using the [UXP Developer Tool](../distribution/package/index.md). Additionally:
+Hybrid plugins follow the same [packaging workflow](../distribution/package/index.md) as standard UXP plugins, but with additional steps for native binaries. Work through the checklist below before distributing your plugin.
 
-1. Follow the directory structure described in [Plugin Structure](#plugin-structure) for the uxpaddon binaries.
-2. **Sign and notarize** the macOS executables with a valid Apple Developer ID certificate (self-signed/test certificates are not accepted). The certificate must be valid for at least one year.
-3. If you support them, ensure the plugin works on **all three architectures**: macOS arm64, macOS x64, and Windows x64.
+### 1. Verify the plugin structure
 
-Since Hybrid plugins include native code, users will be prompted to enter their OS administrator credentials during installation and updates.
+Make sure your `.uxpaddon` files are placed in the correct directory layout (see [Plugin Structure](#plugin-structure) above). The folder hierarchy is strict—if it doesn't match, the plugin will fail to load with a _"Plugin Manifest Validation Failed"_ error in UDT.
 
-For full distribution details, see the [Share & Distribute](../distribution/overview/index.md) section.
+### 2. Build for all required architectures
+
+Compile your uxpaddon for each platform you intend to support:
+
+- **macOS arm64** (Apple Silicon)
+- **macOS x64** (Intel)
+- **Windows x64**
+
+If you don't have access to all platforms natively, consider using a virtual machine (e.g., VMware Fusion). For creating macOS universal binaries, see [Apple's guide](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary). Missing architectures will cause the plugin to fail on those platforms.
+
+### 3. Code sign and notarize (macOS)
+
+The macOS `.uxpaddon` executables must be signed and notarized with a valid **Apple Developer ID** certificate. Requirements:
+
+- Self-signed or test certificates are **not accepted**.
+- The certificate must be valid for **at least one year**.
+- Only the `.uxpaddon` binaries need signing—the rest of the plugin bundle (JavaScript, HTML, CSS, manifest) does not.
+
+See the [FAQ](./faq.md#do-i-need-an-apple-developer-id) for more details on Apple Developer ID requirements.
+
+### 4. Set your plugin ID
+
+Before packaging, ensure the `id` in your `manifest.json` is correct. If you plan to publish to the **Creative Cloud Marketplace**, obtain the ID from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin-id#starting-from-adobe-developer-distribution) and make sure it matches. See [Mind your Plugin's ID](../distribution/package/index.md#mind-your-plugins-id) for details.
+
+### 5. Package with UDT
+
+Open the UXP Developer Tool, locate your plugin in the workspace, click the **•••** menu and select **Package**. This creates a `.ccx` installer file. See [Package with the UXP Developer Tool](../distribution/package/index.md#package-with-the-uxp-developer-tool) for a walkthrough.
+
+### 6. Test the installation
+
+Install the `.ccx` file on a clean system (or at least one without your development environment) to verify:
+
+- The plugin installs without errors.
+- The uxpaddon loads correctly on each supported platform.
+- No security warnings appear (if binaries are properly signed).
+
+<InlineAlert variant="warning" slots="text" />
+
+Since Hybrid plugins include native code, users will be prompted for **OS administrator credentials** during installation and updates. This is expected behavior.
+
+For the full distribution workflow (Marketplace submission, independent distribution, enterprise deployment), see the [Share & Distribute](../distribution/overview/index.md) section.
