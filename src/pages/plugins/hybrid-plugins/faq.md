@@ -20,7 +20,7 @@ Frequently asked questions about Hybrid Plugins.
 
 - [Do I need to code sign the entire plugin bundle?](#do-i-need-to-code-sign-the-entire-plugin-bundle)
 - [Do I need an Apple Developer ID?](#do-i-need-an-apple-developer-id)
-- [How do I prepare binaries for all architectures?](#how-do-i-prepare-binaries-for-all-architectures)
+- [How do I prepare and test binaries for all architectures?](#how-do-i-prepare-and-test-binaries-for-all-architectures)
 - [Are Hybrid plugins forward-compatible?](#are-hybrid-plugins-forward-compatible)
 - [Why can't I see the plugin in Premiere after loading it?](#why-cant-i-see-the-plugin-in-premiere-after-loading-it)
 - [The macOS binaries trigger security warnings. What should I do?](#the-macos-binaries-trigger-security-warnings-what-should-i-do)
@@ -36,9 +36,9 @@ No. Only the macOS `.uxpaddon` executables need to be signed and notarized with 
 
 Yes. macOS requires a Developer ID-signed certificate for notarized executables. See [Apple's code signing guide](https://support.apple.com/guide/security/app-code-signing-process-sec3ad8e6e53/web) for details.
 
-#### How do I prepare binaries for all architectures?
+#### How do I prepare and test binaries for all architectures?
 
-You need binaries for macOS arm64, macOS x64, and Windows x64. For the platform not natively available to you, consider using a virtual machine (e.g., VMware Fusion). For building universal macOS binaries, refer to [Apple's guide to building universal binaries](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary).
+You need to build and test binaries for macOS arm64, macOS x64, and Windows x64. For building universal macOS binaries, refer to [Apple's guide to building universal binaries](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary). For platforms not natively available to you, consider using a virtual machine (e.g., VMware Fusion or Parallels). Keep in mind that Apple Silicon Macs cannot virtualize Windows x64—only Intel Macs can. Dedicated hardware may be required to build and test on all three architectures.
 
 #### Are Hybrid plugins forward-compatible?
 
