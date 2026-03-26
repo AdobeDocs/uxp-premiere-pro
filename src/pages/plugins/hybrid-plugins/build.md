@@ -91,19 +91,17 @@ Hybrid plugins require a few specific settings in the [`manifest.json`](../conce
 The uxpaddon binaries must be placed in a specific directory layout within your plugin bundle, organized by platform and architecture:
 
 ```txt
-my-hybrid-plugin/
-├── manifest.json
-├── index.html
-├── index.js
-└── addons/
-    ├── mac/
-    │   ├── arm64/
-    │   │   └── sample-uxp-addon.uxpaddon
-    │   └── x64/
-    │       └── sample-uxp-addon.uxpaddon
-    └── win/
-        └── x64/
-            └── sample-uxp-addon.uxpaddon
+📁 root directory
+├── 📄 manifest.json
+├── 📄 main.js
+├── 📁 mac
+│   ├── 📁 x64
+│   │   └── ⚙️ sample-uxp-addon.uxpaddon (dylib)
+│   └── 📁 arm64
+│       └── ⚙️ sample-uxp-addon.uxpaddon (dylib)
+└── 📁 win
+    └── 📁 x64
+        └── ⚙️ sample-uxp-addon.uxpaddon (dll)
 ```
 
 If the directory structure is incorrect, the plugin will fail to load with a _"Plugin Manifest Validation Failed"_ error in the UDT logs.
