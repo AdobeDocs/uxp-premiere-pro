@@ -13,7 +13,7 @@ keywords:
 
 # Frequently Asked Questions
 
-This section contains frequently asked questions about UXP and Premiere.
+This section contains frequently asked questions about UXP and Premiere. Hybrid Plugins specific questions are [found here](../../plugins/hybrid-plugins/).
 
 ## Questions
 
@@ -21,7 +21,6 @@ This section contains frequently asked questions about UXP and Premiere.
 
 - [How can I enable Developer Mode?](#how-can-i-enable-developer-mode)
 - [In UDT, I get the error "Plugin Load Failed, Host Application specified is not available. Make sure the host application is started."](#in-udt-i-get-the-error-plugin-load-failed-host-application-specified-is-not-available-make-sure-the-host-application-is-started)
-- [Why do I get "Failed to load Addon" with "The specified module could not be found" with Hybrid Plugins on Windows?](#why-do-i-get-failed-to-load-addon-with-the-specified-module-could-not-be-found-with-hybrid-plugins-on-windows)
 
 ### 🎨 User Interfaces
 
@@ -54,10 +53,6 @@ You need to enable Developer mode in both the UXP Developer Tool and the host ap
 #### In UDT, I get the error "Plugin Load Failed, Host Application specified is not available. Make sure the host application is started."
 
 Ensure that Premiere is running. If it is, check that the host application's Developer Mode is enabled; follow the instructions in the [this guide](../../plugins/index.md#prerequisites).
-
-#### Why do I get "Failed to load Addon" with "The specified module could not be found" with Hybrid Plugins on Windows?
-
-This usually means your `.uxpaddon` was built in Debug mode, which depends on Visual Studio debug runtimes that are not present on end-user systems. It may work on development machines but fail on clean Windows installs. Rebuild the addon in Release mode (and ensure correct project settings, such as `.uxpaddon` output and no debug dependencies) and redistribute it.
 
 <!-- 🎨 User Interfaces -->
 

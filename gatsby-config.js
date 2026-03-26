@@ -118,6 +118,10 @@ module.exports = {
                 title: "Build Hybrid Plugins",
                 path: "/plugins/hybrid-plugins/build.md",
               },
+              {
+                title: "FAQ",
+                path: "plugins/hybrid-plugins/faq.md",
+              },
             ],
           },
           {

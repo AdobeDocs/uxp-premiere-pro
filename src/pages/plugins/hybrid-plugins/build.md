@@ -190,29 +190,3 @@ Package your Hybrid plugin the same way as a standard UXP plugin using the [UXP 
 Since Hybrid plugins include native code, users will be prompted to enter their OS administrator credentials during installation and updates.
 
 For full distribution details, see the [Share & Distribute](../distribution/overview/index.md) section.
-
-## FAQ
-
-#### Do I need to code sign the entire plugin bundle?
-
-No. Only the macOS `.uxpaddon` executables need to be signed and notarized with a valid Apple Developer ID certificate. The rest of the plugin bundle (JavaScript, HTML, CSS, manifest) does not require code signing.
-
-#### Do I need an Apple Developer ID?
-
-Yes. macOS requires a Developer ID-signed certificate for notarized executables. See [Apple's code signing guide](https://support.apple.com/guide/security/app-code-signing-process-sec3ad8e6e53/web) for details.
-
-#### How do I prepare binaries for all architectures?
-
-You need binaries for macOS arm64, macOS x64, and Windows x64. For building universal macOS binaries, refer to [Apple's guide to building universal binaries](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary).
-
-#### Are Hybrid plugins forward-compatible?
-
-Yes. A plugin built with an older version of the SDK will continue to work with newer versions of Premiere. However, updating to a new SDK version requires recompiling and republishing your plugin.
-
-#### Why can't I see the plugin in Premiere after loading it?
-
-While loading via UDT, the plugin may not appear automatically. Try unchecking and re-checking the plugin name from the **Window** > **UXP Plugins** menu. This issue is expected to be resolved in a future release.
-
-#### The macOS binaries trigger security warnings. What should I do?
-
-The binaries in the SDK's `template-plugin` are not code signed. On macOS, go to **System Settings** > **Privacy & Security** to allow them to load. For production builds, always sign and notarize your binaries with a valid Apple Developer ID.
