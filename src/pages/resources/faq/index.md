@@ -21,6 +21,7 @@ This section contains frequently asked questions about UXP and Premiere.
 
 - [How can I enable Developer Mode?](#how-can-i-enable-developer-mode)
 - [In UDT, I get the error "Plugin Load Failed, Host Application specified is not available. Make sure the host application is started."](#in-udt-i-get-the-error-plugin-load-failed-host-application-specified-is-not-available-make-sure-the-host-application-is-started)
+- [Why do I get "Failed to load Addon" with "The specified module could not be found" with Hybrid Plugins on Windows?](#why-do-i-get-failed-to-load-addon-with-the-specified-module-could-not-be-found-with-hybrid-plugins-on-windows)
 
 ### 🎨 User Interfaces
 
@@ -32,7 +33,6 @@ This section contains frequently asked questions about UXP and Premiere.
 - [I am unable to install a plugin.](#i-am-unable-to-install-a-plugin)
 - [My `.ccx` package is being rejected when submitted to the Creative Cloud Marketplace. What could be wrong?](#my-ccx-package-is-being-rejected-when-submitted-to-the-creative-cloud-marketplace-what-could-be-wrong)
 - [Should I use an Array or an Object for the `host` property in the `manifest.json`?](#should-i-use-an-array-or-an-object-for-the-host-property-in-the-manifestjson)
--
 
 ### 🇪🇺 EU Compliance & DSA Requirements
 
@@ -54,6 +54,10 @@ You need to enable Developer mode in both the UXP Developer Tool and the host ap
 #### In UDT, I get the error "Plugin Load Failed, Host Application specified is not available. Make sure the host application is started."
 
 Ensure that Premiere is running. If it is, check that the host application's Developer Mode is enabled; follow the instructions in the [this guide](../../plugins/index.md#prerequisites).
+
+#### Why do I get "Failed to load Addon" with "The specified module could not be found" with Hybrid Plugins on Windows?
+
+This usually means your `.uxpaddon` was built in Debug mode, which depends on Visual Studio debug runtimes that are not present on end-user systems. It may work on development machines but fail on clean Windows installs. Rebuild the addon in Release mode (and ensure correct project settings, such as `.uxpaddon` output and no debug dependencies) and redistribute it.
 
 <!-- 🎨 User Interfaces -->
 
