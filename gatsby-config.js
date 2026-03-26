@@ -104,19 +104,19 @@ module.exports = {
                 title: "Manifest",
                 path: "plugins/concepts/manifest/",
               },
+            ],
+          },
+          {
+            title: "Hybrid Plugins",
+            path: "plugins/hybrid-plugins/",
+            pages: [
               {
-                title: "Hybrid Plugins",
-                path: "plugins/concepts/hybrid-plugins/",
-                pages: [
-                  {
-                    title: "Overview",
-                    path: "plugins/concepts/hybrid-plugins/",
-                  },
-                  {
-                    title: "Build Hybrid Plugins",
-                    path: "/plugins/concepts/hybrid-plugins/build.md",
-                  },
-                ],
+                title: "Overview",
+                path: "plugins/hybrid-plugins/",
+              },
+              {
+                title: "Build Hybrid Plugins",
+                path: "/plugins/hybrid-plugins/build.md",
               },
             ],
           },

@@ -64,11 +64,11 @@ The addon behaves like any other JavaScript module—you can call functions, rea
 
 ## Manifest Configuration
 
-Hybrid plugins require a few specific settings in the [`manifest.json`](../manifest/index.md):
+Hybrid plugins require a few specific settings in the [`manifest.json`](../concepts/manifest/index.md):
 
 - **Manifest version** 6 or above.
-- The [`addon`](../manifest/index.md#addon) field with the name of your uxpaddon.
-- The [`enableAddon`](../manifest/index.md#enableaddon) permission.
+- The [`addon`](../concepts/manifest/index.md#addon) field with the name of your uxpaddon.
+- The [`enableAddon`](../concepts/manifest/index.md#enableaddon) permission.
 
 ```json
 {
@@ -170,7 +170,7 @@ Hybrid plugins benefit from relaxed UXP sandbox restrictions. You can access the
 let entry = '/path/to/file.txt';
 ```
 
-This is unlike standard UXP plugins, which must use `require('uxp').storage.localFileSystem` to access files outside the sandbox. See the [Filesystem Operations recipe](../../../resources/recipes/filesystem-operations/index.md) for more details on standard file system access.
+This is unlike standard UXP plugins, which must use `require('uxp').storage.localFileSystem` to access files outside the sandbox. See the [Filesystem Operations recipe](../../resources/recipes/filesystem-operations/index.md) for more details on standard file system access.
 
 ## Debugging
 
@@ -181,7 +181,7 @@ Hybrid plugins have both a JavaScript and a C++ layer, each requiring its own de
 
 ## Packaging and Distribution
 
-Package your Hybrid plugin the same way as a standard UXP plugin using the [UXP Developer Tool](../../distribution/package/index.md). Additionally:
+Package your Hybrid plugin the same way as a standard UXP plugin using the [UXP Developer Tool](../distribution/package/index.md). Additionally:
 
 1. Follow the directory structure described in [Plugin Structure](#plugin-structure) for the uxpaddon binaries.
 2. **Sign and notarize** the macOS executables with a valid Apple Developer ID certificate (self-signed/test certificates are not accepted). The certificate must be valid for at least one year.
@@ -189,7 +189,7 @@ Package your Hybrid plugin the same way as a standard UXP plugin using the [UXP 
 
 Since Hybrid plugins include native code, users will be prompted to enter their OS administrator credentials during installation and updates.
 
-For full distribution details, see the [Share & Distribute](../../distribution/overview/index.md) section.
+For full distribution details, see the [Share & Distribute](../distribution/overview/index.md) section.
 
 ## FAQ
 

@@ -69,7 +69,7 @@ Hands-on guides for adding panels, commands, lifecycle hooks, and more.
 
 <DiscoverBlock slots="link, text"/>
 
-[Hybrid Plugins](./plugins/concepts/hybrid-plugins/index.md)
+[Hybrid Plugins](./plugins/hybrid-plugins/index.md)
 
 Extend your plugins with high-performance C++ native libraries.
 

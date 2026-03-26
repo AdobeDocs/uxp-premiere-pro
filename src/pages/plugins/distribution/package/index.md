@@ -85,7 +85,7 @@ Before distributing your package, test the installation to confirm it works as e
 
 ### Packaging Hybrid Plugins
 
-[Hybrid plugins](../../../plugins/concepts/hybrid-plugins/index.md) contain native C++ libraries (`.uxpaddon` files) in addition to the standard JavaScript, HTML, and CSS files. When packaging a Hybrid plugin, ensure the following:
+[Hybrid plugins](../../../plugins/hybrid-plugins/index.md) contain native C++ libraries (`.uxpaddon` files) in addition to the standard JavaScript, HTML, and CSS files. When packaging a Hybrid plugin, ensure the following:
 
 1. **Directory structure**: place the `.uxpaddon` binaries in the correct platform/architecture folder layout within your plugin bundle:
 

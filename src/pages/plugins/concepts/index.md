@@ -28,4 +28,4 @@ Explore the following guides to learn more:
 
 - [**Entrypoints**](./entrypoints/index.md): Declaring, wiring, and handling your plugin's panels and commands.
 - [**Manifest**](./manifest/index.md): Structure and configuration of the `manifest.json` file.
-- [**Hybrid Plugins**](./hybrid-plugins/index.md): Extend your plugins with high-performance C++ native libraries.
+- [**Hybrid Plugins**](../hybrid-plugins/index.md): Extend your plugins with high-performance C++ native libraries.

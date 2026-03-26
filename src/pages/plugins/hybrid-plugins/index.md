@@ -33,7 +33,7 @@ The loaded addon exposes C++ functions and properties directly to your JavaScrip
 
 #### Advanced Topic
 
-Building Hybrid plugins requires proficiency in C++. Make sure you also have experience [writing UXP plugins](../../../plugins/index.md) and are comfortable using the [UXP Developer Tool](../../../introduction/essentials/dev-tools/index.md#uxp-developer-tool-udt) before diving in.
+Building Hybrid plugins requires proficiency in C++. Make sure you also have experience [writing UXP plugins](../../plugins/index.md) and are comfortable using the [UXP Developer Tool](../../introduction/essentials/dev-tools/index.md#uxp-developer-tool-udt) before diving in.
 
 ## Use Cases
 
@@ -46,7 +46,7 @@ Building Hybrid plugins requires proficiency in C++. Make sure you also have exp
 
 | Component                    | Minimum Version |
 | :--------------------------- | :-------------- |
-| **Premiere**                 | 25.6            |
+| **Premiere**                 | 26.2            |
 | **UXP Developer Tool (UDT)** | 2.2             |
 | **Creative Cloud Desktop**   | 5.10            |
 
@@ -69,8 +69,8 @@ The SDK provides C++ headers, utilities, and templates for building native addon
 
 ### Releases
 
-The SDK is versioned independently from the host application (it is labeled with a UXP version, since Hybrid plugins are designed to be app-independent). Announcements of new SDK releases are made in the [Changelog](../../../changelog/index.md). Updating to a new SDK version requires recompiling and republishing your plugin; however, plugins built with an older SDK remain forward-compatible with newer host application versions.
+The SDK is versioned independently from the host application (it is labeled with a UXP version, since Hybrid plugins are designed to be app-independent). Announcements of new SDK releases are made in the [Changelog](../../changelog/index.md). Updating to a new SDK version requires recompiling and republishing your plugin; however, plugins built with an older SDK remain forward-compatible with newer host application versions.
 
 ## Next Steps
 
-Ready to build? Head over to [Building Hybrid Plugins](./building.md) for the complete development guide—from compiling your first uxpaddon to packaging and distributing the finished plugin.
+Ready to build? Head over to [Building Hybrid Plugins](./build.md) for the complete development guide—from compiling your first uxpaddon to packaging and distributing the finished plugin.

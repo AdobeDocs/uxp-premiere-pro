@@ -189,7 +189,7 @@ A set of feature flags that can be used to enable or disable certain features of
 | :------ | :------- | :------ |
 | `addon` | `object` | `{}`    |
 
-Addon definitions for [Hybrid Plugins](../hybrid-plugins/index.md). A UXP Hybrid plugin is a UXP plugin that can load dynamically-linked C++ native libraries (`.uxpaddon` files) at runtime. See the [Hybrid Plugins guide](../hybrid-plugins/index.md) for details on building and configuring addons.
+Addon definitions for [Hybrid Plugins](../../hybrid-plugins/index.md). A UXP Hybrid plugin is a UXP plugin that can load dynamically-linked C++ native libraries (`.uxpaddon` files) at runtime. See the [Hybrid Plugins guide](../../hybrid-plugins/index.md) for details on building and configuring addons.
 
 ```json
 "addon": {
@@ -606,7 +606,7 @@ Default value is `undefined` (no IPC). See the [`IpcPermission`](#ipcpermission)
 | :------------ | :-------- | :------- | ------- |
 | `enableAddon` | `boolean` | optional | `false` |
 
-Enables the plugin to load native C++ addons (`.uxpaddon` files). This permission is required for [Hybrid Plugins](../hybrid-plugins/index.md). Default value is `false`.
+Enables the plugin to load native C++ addons (`.uxpaddon` files). This permission is required for [Hybrid Plugins](../../hybrid-plugins/index.md). Default value is `false`.
 
 ```json
 "requiredPermissions": {
