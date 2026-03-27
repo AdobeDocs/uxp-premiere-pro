@@ -13,7 +13,7 @@ keywords:
 
 # Frequently Asked Questions
 
-This section contains frequently asked questions about UXP and Premiere.
+This section contains frequently asked questions about UXP and Premiere. Hybrid Plugins specific questions are [found here](../../plugins/hybrid-plugins/).
 
 ## Questions
 
@@ -32,7 +32,6 @@ This section contains frequently asked questions about UXP and Premiere.
 - [I am unable to install a plugin.](#i-am-unable-to-install-a-plugin)
 - [My `.ccx` package is being rejected when submitted to the Creative Cloud Marketplace. What could be wrong?](#my-ccx-package-is-being-rejected-when-submitted-to-the-creative-cloud-marketplace-what-could-be-wrong)
 - [Should I use an Array or an Object for the `host` property in the `manifest.json`?](#should-i-use-an-array-or-an-object-for-the-host-property-in-the-manifestjson)
--
 
 ### 🇪🇺 EU Compliance & DSA Requirements
 

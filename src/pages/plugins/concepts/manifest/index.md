@@ -189,11 +189,13 @@ A set of feature flags that can be used to enable or disable certain features of
 | :------ | :------- | :------ |
 | `addon` | `object` | `{}`    |
 
-Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that can access the power of C++ native libraries.
+Addon definitions for [Hybrid Plugins](../../hybrid-plugins/index.md). A UXP Hybrid plugin is a UXP plugin that can load dynamically-linked C++ native libraries (`.uxpaddon` files) at runtime. See the [Hybrid Plugins guide](../../hybrid-plugins/index.md) for details on building and configuring addons.
 
-<InlineAlert variant="warning"slots="text" />
-
-Premiere **doesn't support hybrid plugins** yet.
+```json
+"addon": {
+  "name": "sample-uxp-addon.uxpaddon"
+}
+```
 
 ## Supporting Definitions
 
@@ -498,6 +500,7 @@ For example, for file operations, you may find `"fullAccess"` to be the least re
 |                     | [`allowCodeGenerationFromStrings`](#allowcodegenerationfromstrings) |
 |                     | [`enableUserInfo`](#enableUserInfo)                                 |
 |                     | [`ipc`](#ipc)                                                       |
+|                     | [`enableAddon`](#enableaddon)                                       |
 
 #### Properties
 
@@ -596,6 +599,20 @@ console.log(userId);
 Enables the plugin to communicate with other plugins.
 
 Default value is `undefined` (no IPC). See the [`IpcPermission`](#ipcpermission) section for more details.
+
+##### `enableAddon`
+
+| Name          | Type      | Required | Default |
+| :------------ | :-------- | :------- | ------- |
+| `enableAddon` | `boolean` | optional | `false` |
+
+Enables the plugin to load native C++ addons (`.uxpaddon` files). This permission is required for [Hybrid Plugins](../../hybrid-plugins/index.md). Default value is `false`.
+
+```json
+"requiredPermissions": {
+  "enableAddon": true
+}
+```
 
 ##### `NetworkPermission`
 

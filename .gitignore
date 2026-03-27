@@ -34,3 +34,6 @@ lerna-debug.log
 
 # tracking reports
 *.blockreport
+
+# Temporary files
+temp
