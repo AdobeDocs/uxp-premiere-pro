@@ -33,7 +33,7 @@ Create add transition action for sequence
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| videoTransition | [*VideoTransition*](/ppro_reference/classes/videotransition/) | - |
+| videoTransition | [*TransitionFactory*](/premiere-pro/uxp/ppro_reference/classes/transitionfactory/) | The transition to apply, obtained from `TransitionFactory`. |
 | addTransitionOptionsProperties | [*AddTransitionOptions*](/ppro_reference/classes/addtransitionoptions/) | - |
 
 ___
