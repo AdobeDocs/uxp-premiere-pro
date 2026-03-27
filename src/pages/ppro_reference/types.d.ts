@@ -2824,7 +2824,7 @@ export declare type Sequence = {
   getInPoint(): Promise<TickTime>
 
   /**
-   * Get time representing the inPoint of sequence.
+   * Get time representing the outPoint of sequence.
    */
   getOutPoint(): Promise<TickTime>
 

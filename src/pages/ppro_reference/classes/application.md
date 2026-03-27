@@ -21,6 +21,6 @@ keywords:
 
 ## Properties
 
-| Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| version | *string* | R | 25.0 |  |
+| Name    | Type     | Access | Min Version | Description |
+| :------ | :------- | :----- | :---------- | :---------- |
+| version | *string* | R      | 25.0        | The version string of the running Premiere Pro application.       |

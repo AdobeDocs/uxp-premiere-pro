@@ -31,9 +31,9 @@ Returns an action that moves the inPoint of the track item to a new time, by shi
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | - |
+| Name     | Type                                            | Description |
+| --- | --- | --- |
+| tickTime | [*TickTime*](/ppro_reference/classes/ticktime/) | -           |
 
 ___
 
