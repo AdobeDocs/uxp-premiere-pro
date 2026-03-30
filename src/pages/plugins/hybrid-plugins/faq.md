@@ -38,7 +38,9 @@ Yes. macOS requires a Developer ID-signed certificate for notarized executables.
 
 #### How do I prepare and test binaries for all architectures?
 
-You need to build and test binaries for macOS arm64, macOS x64, and Windows x64. For building universal macOS binaries, refer to [Apple's guide to building universal binaries](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary). For platforms not natively available to you, consider using a virtual machine (e.g., VMware Fusion or Parallels). Keep in mind that Apple Silicon Macs cannot virtualize Windows x64—only Intel Macs can. Dedicated hardware may be required to build and test on all three architectures.
+You need to build and test binaries for macOS arm64 (Apple Silicon), macOS x64 (Intel), and Windows x64. For building universal macOS binaries, refer to [Apple's guide to building universal binaries](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary). For platforms not natively available to you, consider using a virtual machine (e.g., VMware Fusion or Parallels). Keep in mind that Apple Silicon Macs cannot virtualize Windows x64—only Intel Macs can. Dedicated hardware may be required to build and test on all three architectures.
+
+You can package and install a Hybrid plugin with only a subset of architectures for local development or independent distribution (the plugin will fail to load on unsupported platforms). However, the **Creative Cloud Marketplace requires all three architectures**—the Developer Distribution portal will reject your `.ccx` if any is missing.
 
 #### Are Hybrid plugins forward-compatible?
 

@@ -132,7 +132,11 @@ Click on the **Listing Details** and start filling in the required fields in the
 
 #### Hybrid plugins support
 
-You can submit a Hybrid plugin to the marketplace even if you haven't compiled it for every architecture (macOS arm64, macOS x64, and Windows x64). Adobe Reviewers will assume and expect that the plugin will work on them all; if this is not the case, please **add a note in the Details section**, to help users understand the platform compatibility.
+[Hybrid plugins](../../hybrid-plugins/index.md) submitted to the Creative Cloud Marketplace **must include binaries for all three supported architectures**: macOS arm64 (Apple Silicon), macOS x64 (Intel), and Windows x64. The Developer Distribution portal will reject the `.ccx` package if any architecture is missing.
+
+<InlineAlert variant="info" slots="text" />
+
+It is possible to build and install a Hybrid plugin that only supports a subset of architectures for local development or [independent distribution](../independent-distribution/index.md), but Marketplace submission requires full coverage. See the [Building Hybrid Plugins](../../hybrid-plugins/build.md#2-build-for-all-required-architectures) guide for details.
 
 ### 4. Add a new Version
 

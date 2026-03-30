@@ -105,7 +105,7 @@ my-hybrid-plugin/
             └── sample-uxp-addon.uxpaddon
 ```
 
-2. **All architectures**: include binaries for macOS arm64, macOS x64, and Windows x64. Missing architectures will cause the whole plugin to fail on those platforms.
+2. **All architectures**: include binaries for macOS arm64 (Apple Silicon), macOS x64 (Intel), and Windows x64. While you can package and install a Hybrid plugin with only a subset of architectures (the plugin will simply fail to load on unsupported platforms), the **Creative Cloud Marketplace requires all three**—the Developer Distribution portal will reject your `.ccx` if any architecture is missing.
 3. **Code signing (macOS)**: sign and notarize the `.uxpaddon` executables with a valid Apple Developer ID certificate. Self-signed or test certificates are not accepted. The certificate must be valid for at least one year.
 4. **Admin credentials**: since Hybrid plugins include native code, users will be prompted for OS administrator credentials during installation and updates.
 

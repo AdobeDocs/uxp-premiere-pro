@@ -187,13 +187,17 @@ Make sure your `.uxpaddon` files are placed in the correct directory layout (see
 
 ### 2. Build for all required architectures
 
-Compile your uxpaddon for each platform you intend to support:
+Compile your uxpaddon for each supported platform:
 
 - **macOS arm64** (Apple Silicon)
 - **macOS x64** (Intel)
 - **Windows x64**
 
-If you don't have access to all platforms natively, consider using a virtual machine (e.g., VMware Fusion). For creating macOS universal binaries, see [Apple's guide](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary). Missing architectures will cause the plugin to fail on those platforms.
+If you don't have access to all platforms natively, consider using a virtual machine (e.g., VMware Fusion or Parallels). Keep in mind that Apple Silicon Macs cannot virtualize Windows x64—only Intel Macs can, so dedicated hardware may be required. For creating macOS universal binaries, see [Apple's guide](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary).
+
+<InlineAlert variant="warning" slots="text" />
+
+You can package and install a Hybrid plugin with only a subset of architectures—the plugin will simply fail to load on unsupported platforms. However, the **Creative Cloud Marketplace requires all three architectures**; the Developer Distribution portal will reject your `.ccx` package if any is missing. Partial architecture support is only viable for [independent](../distribution/independent-distribution/index.md) or [enterprise](../distribution/enterprise-distribution/index.md) distribution.
 
 ### 3. Code sign and notarize (macOS)
 
