@@ -56,6 +56,8 @@ Building Hybrid plugins requires proficiency in C++. Make sure you also have exp
 
 Download the UXP Hybrid Plugin SDK from the [Adobe Developer Console](https://developer.adobe.com/console) (if you get "Access Denied", see [this FAQ](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/faq/#what-do-i-do-when-i-get-access-denied-upon-login)). Unpack the contents and read the included `README.md` for platform-specific build instructions.
 
+![Adobe Developer Console](./img/adobe-developer-console.png)
+
 ### SDK Contents
 
 The SDK provides C++ headers, utilities, and templates for building native addons (called **uxpaddons**). Its API surface is intentionally similar to [Node-API](https://nodejs.org/api/n-api.html)—if you're familiar with Node.js native addons, you'll feel right at home.
