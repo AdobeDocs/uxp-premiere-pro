@@ -216,7 +216,7 @@ ___
 
 *TickTime*
   
-Get time representing the inPoint of sequence.
+Get time representing the outPoint of sequence.
 
 ___
 

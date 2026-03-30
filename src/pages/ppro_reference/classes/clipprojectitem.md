@@ -223,8 +223,8 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *Action*
-  
-Returns an action which Sets the in point of the Project item
+
+Returns an action which Sets the out point of the Project item
 
 #### Parameters
 
@@ -309,8 +309,8 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
 
 *string*
-  
-Get the media file path of the Project item.
+
+Gets the component chain associated with this project item.
 
 #### Parameters
 
