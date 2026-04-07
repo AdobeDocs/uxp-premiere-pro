@@ -51,7 +51,6 @@ If you plan to distribute your plugin through any channels—either marketplaces
 This is particularly important for paid plugins. When a user attempts to install a plugin purchased from a third-party marketplace, the Creative Cloud Desktop application will **validate the plugin's ID against their Adobe ID**. When the plugin'sID matches only the Marketplace distribution, the installation will be rejected because the purchase cannot be verified.
 
 - ❌ **With the same ID for all distribution channels** (including the Creative Cloud Marketplace):
-
   1. A user purchases a UXP plugin from a third-party marketplace.
   2. The Creative Cloud Desktop (CCD) application is in charge of the installation process and checks whether the plugin is available in the Creative Cloud Marketplace.
   3. If the plugin is indeed listed in Adobe's Marketplace, the CCD application will check whether the current user (their Adobe ID) has purchased the plugin there.
@@ -83,6 +82,34 @@ A green toast notification will appear to confirm the success of the operation. 
 ![Package error](./img/package--error.png)
 
 Before distributing your package, test the installation to confirm it works as expected.
+
+### Packaging Hybrid Plugins
+
+[Hybrid plugins](../../../plugins/hybrid-plugins/index.md) contain native C++ libraries (`.uxpaddon` files) in addition to the standard JavaScript, HTML, and CSS files. When packaging a Hybrid plugin, ensure the following:
+
+1. **Directory structure**: place the `.uxpaddon` binaries in the correct platform/architecture folder layout within your plugin bundle:
+
+```txt
+my-hybrid-plugin/
+├── manifest.json
+├── index.html
+├── index.js
+└── addons/
+    ├── mac/
+    │   ├── arm64/
+    │   │   └── sample-uxp-addon.uxpaddon
+    │   └── x64/
+    │       └── sample-uxp-addon.uxpaddon
+    └── win/
+        └── x64/
+            └── sample-uxp-addon.uxpaddon
+```
+
+2. **All architectures**: include binaries for macOS arm64 (Apple Silicon), macOS x64 (Intel), and Windows x64. While you can package and install a Hybrid plugin with only a subset of architectures (the plugin will simply fail to load on unsupported platforms), the **Creative Cloud Marketplace requires all three**—the Developer Distribution portal will reject your `.ccx` if any architecture is missing.
+3. **Code signing (macOS)**: sign and notarize the `.uxpaddon` executables with a valid Apple Developer ID certificate. Self-signed or test certificates are not accepted. The certificate must be valid for at least one year.
+4. **Admin credentials**: since Hybrid plugins include native code, users will be prompted for OS administrator credentials during installation and updates.
+
+If the directory structure is incorrect, the plugin will fail to load with a _"Plugin Manifest Validation Failed"_ error in UDT.
 
 ### Host Applications
 

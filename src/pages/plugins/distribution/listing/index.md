@@ -128,7 +128,15 @@ Click on the **Listing Details** and start filling in the required fields in the
 
 ![Developer Distribution - plugin details](./img/listing--metadata.png)
 
-When you're done, click on **Save draft & add version**.
+<InlineAlert variant="info" slots="header, text" />
+
+#### Hybrid plugins support
+
+[Hybrid plugins](../../hybrid-plugins/index.md) submitted to the Creative Cloud Marketplace **must include binaries for all three supported architectures**: macOS arm64 (Apple Silicon), macOS x64 (Intel), and Windows x64. The Developer Distribution portal will reject the `.ccx` package if any architecture is missing.
+
+<InlineAlert variant="info" slots="text" />
+
+It is possible to build and install a Hybrid plugin that only supports a subset of architectures for local development or [independent distribution](../independent-distribution/index.md), but Marketplace submission requires full coverage. See the [Building Hybrid Plugins](../../hybrid-plugins/build.md#2-build-for-all-required-architectures) guide for details.
 
 ### 4. Add a new Version
 

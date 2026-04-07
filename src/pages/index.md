@@ -69,6 +69,12 @@ Hands-on guides for adding panels, commands, lifecycle hooks, and more.
 
 <DiscoverBlock slots="link, text"/>
 
+[Hybrid Plugins](./plugins/hybrid-plugins/index.md)
+
+Extend your plugins with high-performance C++ native libraries.
+
+<DiscoverBlock slots="link, text"/>
+
 [Code Recipes](./resources/recipes/index.md)
 
 Practical examples for common tasks like filesystem operations, network requests, and styling.

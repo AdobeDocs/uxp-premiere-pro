@@ -11,6 +11,15 @@ contributors:
 
 # Changelog
 
+## Premiere Pro v26.2.0
+
+### UXP Hybrid Plugin Support
+
+Premiere Pro now officially supports [UXP Hybrid Plugins](../plugins/hybrid-plugins/index.md), allowing developers to extend their UXP plugins with native C++ libraries. Hybrid plugins enable performance-critical workloads—such as audio/video processing, ML inference, and integration with native SDKs—to run as compiled code alongside the JavaScript-based plugin UI and logic.
+
+- **UXP Hybrid Plugin SDK**: download from the [Adobe Developer Console](https://developer.adobe.com/console). The SDK provides C++ headers, utilities, and templates for building native addons (`.uxpaddon` files).
+- **New documentation**: [Overview](../plugins/hybrid-plugins/index.md), [Building Hybrid Plugins](../plugins/hybrid-plugins/build.md), and [FAQ](../plugins/hybrid-plugins/faq.md).
+
 ## Premiere Pro v25.6.0
 
 ### Official Release of UXP extensibility in Premiere Pro

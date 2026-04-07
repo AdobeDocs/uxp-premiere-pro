@@ -51,6 +51,16 @@ These templates provide a ready-to-use project structure with:
 
 To use a template, select it when running the `create` command in UDT. Learn more about this process in the [UDT Deep Dive tutorial](../../plugins/tutorials/udt-deep-dive/).
 
+## Hybrid Plugin SDK
+
+If you're building a [Hybrid Plugin](../../plugins/hybrid-plugins/index.md) that combines JavaScript with native C++ code, download the **UXP Hybrid Plugin SDK** from the [Adobe Developer Console](https://developer.adobe.com/console). The SDK includes:
+
+- C++ headers and API definitions for building native addons (`.uxpaddon` files)
+- A `template-dev` project with source code to use as a starting point
+- A pre-compiled `template-plugin` you can load directly into UDT
+
+See the [Hybrid Plugins guide](../../plugins/hybrid-plugins/index.md) for build instructions and configuration details.
+
 ## Tutorials
 
 Looking to build something from scratch? The [Tutorials section](../../plugins/tutorials/) provides step-by-step guides that walk you through complete plugin development tasks:

@@ -107,6 +107,24 @@ module.exports = {
             ],
           },
           {
+            title: "Hybrid Plugins",
+            path: "plugins/hybrid-plugins/",
+            pages: [
+              {
+                title: "Overview",
+                path: "plugins/hybrid-plugins/",
+              },
+              {
+                title: "Build Hybrid Plugins",
+                path: "/plugins/hybrid-plugins/build.md",
+              },
+              {
+                title: "FAQ",
+                path: "plugins/hybrid-plugins/faq.md",
+              },
+            ],
+          },
+          {
             title: "Tutorials",
             path: "plugins/tutorials/",
             pages: [
