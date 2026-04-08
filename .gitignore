@@ -37,3 +37,6 @@ lerna-debug.log
 
 # Temporary files
 temp
+
+# webpack transclusion compile (prepare-uxp)
+.uxp-webpack-cache

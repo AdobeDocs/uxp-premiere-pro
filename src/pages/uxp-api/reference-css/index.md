@@ -1,4 +1,10 @@
+# CSS Reference
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/index.md";
-
-<Content query="product=photoshop"/>
+Technical documentation regarding the kinds of CSS styles and features available in UXP.
+## Pages in this section
+* [General](general/index.md)
+* [Media Queries](Media%20Queries/index.md)
+* [Pseudo-classes](pseudo-classes/index.md)
+* [Pseudo-elements](pseudo-elements/index.md)
+* [Selectors](selectors/index.md)
+* [Styles](styles/index.md)
