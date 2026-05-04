@@ -63,7 +63,7 @@ The `hide()` lifecycle hook is **not currently working as expected** in Premiere
 
 Let's build a plugin with two panels: a main panel and a secondary panel that can be opened from the first.
 
-![Multiple panels](./img/add-panels--panels.png)
+![Multiple panels](./img/add-panels-panels.png)
 
 ### 1. Declare Multiple Entrypoints
 
@@ -240,7 +240,7 @@ Since both panels share the same JavaScript context, they can easily communicate
 
 You can also use **multiple HTML files, one for each panel**. This is useful when you want to keep the code for each panel separate and avoid clutter in the main `index.html` file. The key is to `fetch()` the second panel's HTML file and inject the content into the DOM, as the following example shows.
 
-![Multiple panels](./img/add-panels--panels.png)
+![Multiple panels](./img/add-panels-panels.png)
 
 <CodeBlock slots="heading, code" repeat="4" languages="HTML, HTML, JavaScript, JSON" />
 

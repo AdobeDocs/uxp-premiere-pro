@@ -79,7 +79,7 @@ h1 { color: #FFF; }
 
 ```
 
-![Sample dialog created with HTML markup](./img/html-elements--dialog-html.png)
+![Sample dialog created with HTML markup](./img/html-elements-dialog-html.png)
 
 ## Example: Using JavaScript Only
 
@@ -145,7 +145,7 @@ showDialogBtn.addEventListener("click", () => {
 });
 ```
 
-![Sample dialog created with JavaScript](./img/html-elements--dialog-js.png)
+![Sample dialog created with JavaScript](./img/html-elements-dialog-js.png)
 
 ## Creating Spectrum Components
 
@@ -167,4 +167,4 @@ This approach works for **Spectrum Widgets** (`sp-*` elements). For **Spectrum W
 
 - [HTMLDialogElement](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement.md): dialog-specific properties and methods.
 - [HTML Elements](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/): complete list of supported HTML elements.
-- [Spectrum Web Components](../../../uxp-api/reference-spectrum/): Adobe's UI component library.
+- [Spectrum Web Components](../../../uxp-api/reference-spectrum/index.md): Adobe's UI component library.

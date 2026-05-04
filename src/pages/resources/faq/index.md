@@ -13,7 +13,7 @@ keywords:
 
 # Frequently Asked Questions
 
-This section contains frequently asked questions about UXP and Premiere. Hybrid Plugins specific questions are [found here](../../plugins/hybrid-plugins/).
+This section contains frequently asked questions about UXP and Premiere. Hybrid Plugins specific questions are [found here](../../plugins/hybrid-plugins/index.md).
 
 ## Questions
 

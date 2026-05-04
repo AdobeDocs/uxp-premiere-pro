@@ -34,8 +34,8 @@ UXP provides three main modules for host environment detection:
 | Module                                                                         | Purpose                        | Key Properties                                                                        |
 | :----------------------------------------------------------------------------- | :----------------------------- | :------------------------------------------------------------------------------------ |
 | [`host`](../../../uxp-api/reference-js/Modules/uxp/Host%20Information/Host.md) | Application and UI information | `name`, `version`, `uiLocale`                                                         |
-| [`versions`](../../../uxp-api/reference-js/Modules/uxp/Versions/Versions.md)   | UXP runtime and plugin version | `uxp`, `plugin`                                                                       |
-| [`os`](../../../uxp-api/reference-js/Modules/os/OS.md)                         | Operating system information   | `platform()`, `release()`, `arch()`, `cpus()`, `totalmem()`, `freemem()`, `homedir()` |
+| [`versions`](../../../uxp-api/reference-js/modules/uxp/versions/versions.md)   | UXP runtime and plugin version | `uxp`, `plugin`                                                                       |
+| [`os`](../../../uxp-api/reference-js/modules/os/os.md)                         | Operating system information   | `platform()`, `release()`, `arch()`, `cpus()`, `totalmem()`, `freemem()`, `homedir()` |
 
 ### Example: Basic Host Detection
 
@@ -145,8 +145,8 @@ function initializePlugin() {
 ## Reference Material
 
 - [`host` module](../../../uxp-api/reference-js/Modules/uxp/Host%20Information/Host.md): application and UI information.
-- [`versions` module](../../../uxp-api/reference-js/Modules/uxp/Versions/Versions.md): UXP and plugin version information.
-- [`os` module](../../../uxp-api/reference-js/Modules/os/OS.md): operating system information.
+- [`versions` module](../../../uxp-api/reference-js/modules/uxp/versions/versions.md): UXP and plugin version information.
+- [`os` module](../../../uxp-api/reference-js/modules/os/os.md): operating system information.
 
 ## Summary
 

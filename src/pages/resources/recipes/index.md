@@ -31,31 +31,31 @@ For **UXP Plugins** specific content, please refer to the [Plugins >Tutorials se
 
 <DiscoverBlock slots="link, text"/>
 
-[Filesystem Operations](filesystem-operations/)
+[Filesystem Operations](filesystem-operations/index.md)
 
 Read, write, and manage files and folders in UXP plugins with proper permissions
 
 <DiscoverBlock slots="link, text"/>
 
-[Network Operations](network/)
+[Network Operations](network/index.md)
 
 Learn how to connect your UXP plugin to the web—fetch data, communicate with APIs, and establish WebSocket connections
 
 <DiscoverBlock slots="link, text"/>
 
-[Launch External Processes](external-process/)
+[Launch External Processes](external-process/index.md)
 
 Open files and launch applications from your plugin to extend workflows beyond Premiere
 
 <DiscoverBlock slots="link, text"/>
 
-[Clipboard Operations](clipboard/)
+[Clipboard Operations](clipboard/index.md)
 
 Integrate your plugin with the system clipboard to read and write text data
 
 <DiscoverBlock slots="link, text"/>
 
-[Host Environment Information](host-info/)
+[Host Environment Information](host-info/index.md)
 
 Detect the user's operating system, application version, and UXP runtime
 
@@ -63,31 +63,31 @@ Detect the user's operating system, application version, and UXP runtime
 
 <DiscoverBlock slots="link, text"/>
 
-[CSS Styling](css-styling/)
+[CSS Styling](css-styling/index.md)
 
 Style your plugin's user interface using CSS classes, inline styles, or JavaScript
 
 <DiscoverBlock slots="link, text"/>
 
-[Creating HTML Elements](html-elements/)
+[Creating HTML Elements](html-elements/index.md)
 
 Build user interfaces using HTML markup or JavaScript DOM methods
 
 <DiscoverBlock slots="link, text"/>
 
-[HTML Events and Listeners](html-events/)
+[HTML Events and Listeners](html-events/index.md)
 
 Handle user interactions using event listeners in JavaScript or inline event handlers
 
 <DiscoverBlock slots="link, text"/>
 
-[Debugging Techniques](debug/)
+[Debugging Techniques](debug/index.md)
 
 Use console logs and dialog methods to debug your plugin quickly
 
 <DiscoverBlock slots="link, text"/>
 
-[JavaScript Modules](js-modules/)
+[JavaScript Modules](js-modules/index.md)
 
 Learn how to organize your plugin code across multiple JavaScript files using modules
 

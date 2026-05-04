@@ -25,7 +25,7 @@ Think of it this way: **Commands are actions**, while **Panels are workspaces**.
 
 Commands are **menu items that execute code when clicked**. They appear in the **Window** > **UXP Plugins** menu and are designed for discrete tasks that don't require a persistent interface.
 
-![UXP Plugins menu](./img/entrypoints--menu-items.png)
+![UXP Plugins menu](./img/entrypoints-menu-items.png)
 
 ### Characteristics of Commands
 
@@ -49,7 +49,7 @@ Panels are **persistent user interfaces** that users can dock into the Premiere 
 
 To dock a panel, drag it from the title bar—not the window frame bar—until the docking overlay appears:
 
-![Panel docking](./img/entrypoints--docking.png)
+![Panel docking](./img/entrypoints-docking.png)
 
 ### Characteristics of Panels
 
@@ -101,7 +101,7 @@ Commands often use modal dialogs as their **primary interface**. Since Commands 
 - An "Export Project Summary" Command might show a dialog to select output format and destination.
 - An "About" Command displays plugin information in a modal dialog.
 
-![Commands with Modal Dialogs](../../tutorials/add-modal-dialogs/img/add-modal-dialogs--command-modal.png)
+![Commands with Modal Dialogs](../../tutorials/add-modal-dialogs/img/add-modal-dialogs-command-modal.png)
 
 ### Panels with Modal Dialogs
 
@@ -110,7 +110,7 @@ Panels use modal dialogs for **secondary interactions** that require focused att
 - A "Settings" button in a panel opens a modal dialog to configure preferences.
 - A "Confirm Delete" dialog appears when users click a destructive action in the panel.
 
-![Panels with Modal Dialogs](../../tutorials/add-modal-dialogs/img/add-modal-dialogs--simple-modal.png)
+![Panels with Modal Dialogs](../../tutorials/add-modal-dialogs/img/add-modal-dialogs-simple-modal.png)
 
 ## Combining Commands and Panels
 

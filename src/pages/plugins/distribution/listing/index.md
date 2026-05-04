@@ -84,11 +84,11 @@ Before you can submit your plugin for public distribution, you need to create a 
 
 In case you see a **Permission Required error** message when loading the Developer Distribution portal, most likely you are accessing it from an enterprise account that doesn't have the required permissions. Please contact the administrator of your company's Admin Console to grant your user the **Developer role**, or log in with your personal Adobe ID.
 
-![Developer Distribution - permission required](./img/listing--dev-role.png)
+![Developer Distribution - permission required](./img/listing-dev-role.png)
 
 In the Publisher Profile page, you'll need to provide the **Public name**, **Marketing website**, **Description**, and a **Publisher logo**. Make sure to adhere to the [branding guidelines](../review-guidelines/index.md#4-branding-guidelines) for this information.
 
-![Developer Distribution - publisher profile](./img/listing--publisher-profile.png)
+![Developer Distribution - publisher profile](./img/listing-publisher-profile.png)
 
 <InlineAlert slots="header, text1, text2" variant="info"/>
 
@@ -104,29 +104,29 @@ In the **Commerce** tab of the Publisher Profile page, you'll be asked to regist
 
 In the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/getting-started), click on **Create New Listing**.
 
-![Developer Distribution - create new listing](./img/listing--create-new.png)
+![Developer Distribution - create new listing](./img/listing-create-new.png)
 
 Among the available options, select **Creative Cloud desktop plugin** and click on Next.
 
-![Developer Distribution - Creative Cloud Desktop plugin](./img/listing--category.png)
+![Developer Distribution - Creative Cloud Desktop plugin](./img/listing-category.png)
 
 You'll be presented with Product cards for each Creative Cloud application that supports UXP. Select the one you want to submit your plugin for and click on **Next**.
 
-![Developer Distribution - Product cards](./img/listing--select-app.png)
+![Developer Distribution - Product cards](./img/listing-select-app.png)
 
 If you already have published or draft listings, you can select them from the dropdown menu and click on **Continue with existing Plugin**; otherwise, click on **Create a new listing**.
 
-![Developer Distribution - Continue with existing Plugin](./img/listing--existing.png)
+![Developer Distribution - Continue with existing Plugin](./img/listing-existing.png)
 
 The new listing is created, and the **plugin ID** is automatically generated. **Copy** and store this ID, as you'll need it to package your plugin. Click on **Continue to your listing**.
 
-![Developer Distribution - Create a new listing](./img/listing--new-listing-created.png)
+![Developer Distribution - Create a new listing](./img/listing-new-listing-created.png)
 
 ### 3. Plugin Details
 
 Click on the **Listing Details** and start filling in the required fields in the **General**, **Localizations**, **Media**, **Tags** and **Services** sections with the appropriate values that you've collected in the [Preparing for Submission](#preparing-for-submission) section.
 
-![Developer Distribution - plugin details](./img/listing--metadata.png)
+![Developer Distribution - plugin details](./img/listing-metadata.png)
 
 <InlineAlert variant="info" slots="header, text" />
 
@@ -142,7 +142,7 @@ It is possible to build and install a Hybrid plugin that only supports a subset 
 
 For every plugin version you submit (including the first one), you have to upload the `.ccx` package file prepared earlier.
 
-![Developer Distribution - Upload CCX](./img/listing--upload-ccx.png)
+![Developer Distribution - Upload CCX](./img/listing-upload-ccx.png)
 
 Fill in the required fields (Supported languages, Version details, Screenshots...) in all the tabs. For your first submission, you must submit listing details and a new version together; after publishing, you can submit an update to the listing details, or a new version, independently from each other.
 
@@ -150,6 +150,6 @@ When you're done, click on **Submit for review**. You'll be presented with a sum
 
 You have the option to have your plugin automatically published after the review process is complete, or manually publish it later.
 
-![Developer Distribution - Submit for review](./img/listing--submit-for-review.png)
+![Developer Distribution - Submit for review](./img/listing-submit-for-review.png)
 
 Click on **Submit listing** to finally submit your plugin for review. We aim to review your plugin within **10 business days** of submission and will notify you whether it has been accepted or requires changes. Check the [Review process](../review-guidelines/index.md) page for more details.

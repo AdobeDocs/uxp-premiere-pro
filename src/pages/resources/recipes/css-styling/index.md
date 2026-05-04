@@ -205,7 +205,7 @@ sp-body {
 }
 ```
 
-![Theme Awareness](./img/css-styling--class-example.png)
+![Theme Awareness](./img/css-styling-class-example.png)
 
 ### UXP CSS Variables
 
@@ -217,7 +217,7 @@ Spectrum CSS variables that are [available in other Creative Cloud applications]
 
 UXP is not a browser
 
-UXP does not support all CSS properties. For example, CSS Grid Layout is not available. Check the [CSS reference](../../../uxp-api/reference-css/) for a complete list of supported properties.
+UXP does not support all CSS properties. For example, CSS Grid Layout is not available. Check the [CSS reference](../../../uxp-api/reference-css/index.md) for a complete list of supported properties.
 
 ### CSS Preprocessors
 

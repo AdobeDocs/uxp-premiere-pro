@@ -194,10 +194,10 @@ If you're already familiar with React or plan to build a complex plugin, check o
 
 Ready to start building? Explore the complete documentation for each UI approach.
 
-- **[Spectrum Web Components](../../../uxp-api/reference-spectrum/swc/)**: full SWC component library and usage examples.
+- **[Spectrum Web Components](../../../uxp-api/reference-spectrum/swc/index.md)**: full SWC component library and usage examples.
 - **[Spectrum UXP Widgets](../../../uxp-api/reference-spectrum/Spectrum%20UXP%20Widgets/)**: built-in widget reference and API documentation.
 - **[HTML Elements](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/)**: supported HTML elements in UXP.
-- **[HTML Tags Reference](../../../uxp-api/reference-html/)**: complete HTML tag documentation.
+- **[HTML Tags Reference](../../../uxp-api/reference-html/index.md)**: complete HTML tag documentation.
 - **[Using Spectrum with React](../../../uxp-api/reference-spectrum/Spectrum%20UXP%20Widgets/Using%20with%20React.md)**: integration guide for React developers (see also the [Working with Bundlers](../../../plugins/tutorials/udt-deep-dive/plugin-workflows.md#working-with-bundlers) section of the UXP Developer Tool documentation).
 
-For practical examples and working code, explore the [CSS Styling recipe](../../recipes/css-styling/) to learn how to customize your plugin's appearance.
+For practical examples and working code, explore the [CSS Styling recipe](../../recipes/css-styling/index.md) to learn how to customize your plugin's appearance.

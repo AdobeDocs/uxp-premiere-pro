@@ -29,24 +29,24 @@ If you haven't already, we recommend you to start by reading the [Overview](../i
 
 <DiscoverBlock slots="link, text"/>
 
-[Fundamentals](./fundamentals/apis/index.md)
+[Fundamentals](fundamentals/apis/index.md)
 
 The different kinds of APIs available in UXP, how to build User Interfaces and more.
 
 <DiscoverBlock slots="link, text"/>
 
-[Starters & Samples](./starters-samples/index.md)
+[Starters & Samples](starters-samples/index.md)
 
 Links to available Templates and Sample plugins to help you get started.
 
 <DiscoverBlock slots="link, text"/>
 
-[Recipes](./recipes/index.md)
+[Recipes](recipes/index.md)
 
 Bite-size examples for common use cases.
 
 <DiscoverBlock slots="link, text"/>
 
-[FAQ](./faq/index.md)
+[FAQ](faq/index.md)
 
 Frequently asked questions about UXP development.

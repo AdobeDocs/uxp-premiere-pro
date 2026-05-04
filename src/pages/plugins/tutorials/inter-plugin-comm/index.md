@@ -118,7 +118,7 @@ In this example, the Requester plugin implements a button that will initiate thr
 
 The Responder plugin will log the requests in the panel's body.
 
-![Inter Plugin Communication](./img/ipc--requester-responder.png)
+![Inter Plugin Communication](./img/ipc-requester-responder.png)
 
 ### Requester code
 

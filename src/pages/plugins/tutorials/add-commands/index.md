@@ -8,7 +8,7 @@ As we have seen in the [Panels & Commands](../../concepts/panels-and-commands/in
 
 They belong to their respective plugin in the **Window** > **UXP Plugins** menu.
 
-![UXP Plugins menu](../../concepts/panels-and-commands/img/entrypoints--menu-items.png)
+![UXP Plugins menu](../../concepts/panels-and-commands/img/entrypoints-menu-items.png)
 
 Adding a new command is a multi-step process.
 

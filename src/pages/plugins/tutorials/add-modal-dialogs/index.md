@@ -37,7 +37,7 @@ Modal dialogs share the same HTML document as your plugin, similar to [multiple 
 
 In their simplest form, modal dialogs are just a `<dialog>` element in the HTML document launched with a `uxpShowModal()` method.
 
-![Modal Dialog](./img/add-modal-dialogs--simple-modal.png)
+![Modal Dialog](./img/add-modal-dialogs-simple-modal.png)
 
 The code below shows a simple modal dialog triggered by a button from the main panel.
 
@@ -99,7 +99,7 @@ The `uxpShowModal()` method is **asynchronous**, it returns a Promise that resol
 
 Given how modal dialogs are implemented, nothing prevents you from **adding multiple `<dialog>` elements** in your HTML document, each with its own content; you can reference them by `id` and open them independently using the `uxpShowModal()` method.
 
-![Multiple Modal Dialogs](./img/add-modal-dialogs--multiple-modals.png)
+![Multiple Modal Dialogs](./img/add-modal-dialogs-multiple-modals.png)
 
 As they're originated from the same Panel and are modal (blocking) dialogs, only one can be open at a time.
 
@@ -159,7 +159,7 @@ document.querySelector("#openSecondDialogBtn")
 
 Additionally, you can **chain modal dialogs** by opening a modal dialog from another modal dialog. Just add the relevant UI elements and event handlers to the modal dialog you want to open from. Being chained, both dialogs are open at the same time, but the first one will be blocked until the second is closed.
 
-![](./img/add-modal-dialogs--chained-modals.png)
+![](./img/add-modal-dialogs-chained-modals.png)
 
 ## Dialog Lifecycle and Event Handling
 
@@ -169,7 +169,7 @@ Modal dialogs can be programmatically closed by calling the `close()` method on 
 
 In this example, we'll create a modal dialog with two buttons: **OK** and **Cancel**. When the user clicks either button, the dialog closes and returns the corresponding value—`"ok"` or `"cancel"`.
 
-![Modal Dialog - close event](./img/add-modal-dialogs--close-event.png)
+![Modal Dialog - close event](./img/add-modal-dialogs-close-event.png)
 
 Please note that, in order to capture the returned value, you need to use the `await` keyword when calling `uxpShowModal()` and the "click" event handler on the buttons must be `async`.
 
@@ -245,7 +245,7 @@ When users close the dialog by clicking the **red dot** (Mac) or **X** button (W
 
 Modal dialogs are perfect to show a simple interface for a command, when the built-in [`alert()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [`prompt()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md) and [`confirm()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md) methods are not enough. The example below shows how to create a dialog for an About command.
 
-![Modal Dialog - About dialog](./img/add-modal-dialogs--command-modal.png)
+![Modal Dialog - About dialog](./img/add-modal-dialogs-command-modal.png)
 
 These are often very simple UIs, used to show information about the plugin or copyright data.
 
@@ -493,7 +493,7 @@ Let's see a practical example of how to use the Singleton pattern to create a mo
 
 From the files tree alone, you can see that we'll make use of **fragments** to keep the dialog UI and styles separate and avoid using Template Literals or, worse, create all the elements programmatically in the `main.js` file.
 
-![Modal Dialog - Singleton class](./img/add-modal-dialogs--singleton-class.png)
+![Modal Dialog - Singleton class](./img/add-modal-dialogs-singleton-class.png)
 
 The dialog we'll create will be a fictitious "Set sequence dimensions" tool, that allows the user to set the width and height of the sequence. It's stripped from Premiere's API code, but we've kept the logic and the UI as close as possible to the real thing.
 

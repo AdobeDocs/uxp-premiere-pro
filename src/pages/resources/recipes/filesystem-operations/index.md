@@ -563,7 +563,7 @@ async function readFromDesktop() {
 
 For complete API documentation, see:
 
-- [`fs` module](../../../uxp-api/reference-js/Modules/fs/): complete file system API reference.
+- [`fs` module](../../../uxp-api/reference-js/modules/fs/index.md): complete file system API reference.
 - [`path`](../../../uxp-api/reference-js/Global%20Members/Path.md): path manipulation utilities.
 
 ## Additional Considerations
@@ -607,7 +607,7 @@ Always handle file system errors gracefully and inform users when access is deni
 - [File](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/File.md): file-specific operations.
 - [Folder](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/Folder.md): folder-specific operations.
 - [EntryMetadata](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/EntryMetadata.md): file and folder metadata.
-- [`fs` module](../../../uxp-api/reference-js/Modules/fs/): complete file system API reference.
+- [`fs` module](../../../uxp-api/reference-js/modules/fs/index.md): complete file system API reference.
 - [Path](../../../uxp-api/reference-js/Global%20Members/Path.md): path manipulation utilities.
 - [LocalStorage](../../../uxp-api/reference-js/Global%20Members/Data%20Storage/LocalStorage.md): persistent data storage for tokens.
 - [Manifest Permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition): overview of all permissions.
