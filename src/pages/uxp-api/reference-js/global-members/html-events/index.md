@@ -1,4 +1,12 @@
-
-import Content from "uxp-documentation/src/pages/uxp-api/reference-js/Global Members/HTML Events/index.md";
-
-<Content query="product=photoshop"/>
+# HTML Events
+* [BaseUIEvent](../../global-members/html-events/base-ui-event.md)
+* [CloseEvent](../../global-members/html-events/close-event.md)
+* [DragEvent](../../global-members/html-events/drag-event.md)
+* [ErrorEvent](../../global-members/html-events/error-event.md)
+* [Event](../../global-members/html-events/event.md)
+* [EventTarget](../../global-members/html-events/event-target.md)
+* [GestureEvent](../../global-members/html-events/gesture-event.md)
+* [KeyboardEvent](../../global-members/html-events/keyboard-event.md)
+* [MessageEvent](../../global-members/html-events/message-event.md)
+* [PointerEvent](../../global-members/html-events/pointer-event.md)
+* [ProgressEvent](../../global-members/html-events/progress-event.md)

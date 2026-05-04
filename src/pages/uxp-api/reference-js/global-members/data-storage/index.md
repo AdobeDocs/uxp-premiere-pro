@@ -1,4 +1,3 @@
-
-import Content from "uxp-documentation/src/pages/uxp-api/reference-js/Global Members/Data Storage/index.md";
-
-<Content query="product=photoshop"/>
+# Data Storage
+* [LocalStorage](../../global-members/data-storage/local-storage.md)
+* [SessionStorage](../../global-members/data-storage/session-storage.md)
