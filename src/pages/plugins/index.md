@@ -114,13 +114,13 @@ Thanks to the Watch & Reload feature, the changes will be automatically reflecte
 
 ![Premiere - Updated Plugin](./img/getting-started-edit-html.png)
 
-<InlineAlert slots="header, text" variant="warning"/>
+<InlineAlert slots="heading, text" variant="warning"/>
 
 #### Manifest changes
 
 If you make any changes to the `manifest.json` file, you must manually unload and reload the plugin. In the UXP Developer Tool, in the row for your plugin, click **Unload** and then **Load & Watch** once more.
 
-<InlineAlert slots="header, text" variant="info"/>
+<InlineAlert slots="heading, text" variant="info"/>
 
 #### Invisible plugins
 

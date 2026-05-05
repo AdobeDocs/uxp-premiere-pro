@@ -103,7 +103,7 @@ These guidelines regulate, among other things, the correct usage of:
 - Social media presence
 - Public profile and website content
 
-<InlineAlert slots="header, text" variant="info"/>
+<InlineAlert slots="heading, text" variant="info"/>
 
 Do not underestimate the importance of adhering to guidelines.
 

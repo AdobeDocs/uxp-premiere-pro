@@ -235,7 +235,7 @@ document
   });
 ```
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="heading, text" />
 
 Dialog dismissal
 
@@ -322,7 +322,7 @@ In the example above, the `about-command` is defined in the `entrypoints` array 
 
 Also note that the entire UI is created with a mix of JavaScript methods (for the parent `<dialog>` element and the styling), and Template Literals for easier readability.
 
-<InlineAlert variant="info" slots="header, text" />
+<InlineAlert variant="info" slots="heading, text" />
 
 Trim Template Literals
 
@@ -405,7 +405,7 @@ Compared to the [previous example](#example-about-dialog), in this one it is sli
 
 Please note that the `"main"` property in the `manifest.json` file is still set to `"main.js"`, a JavaScript file—even if we are loading the dialog content from an external `.html` file.
 
-<InlineAlert variant="info" slots="header, text, text2" />
+<InlineAlert variant="info" slots="heading, text, text2" />
 
 Use `fetch()` and `require()` with external files
 

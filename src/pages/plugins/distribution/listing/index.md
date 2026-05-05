@@ -48,7 +48,7 @@ This guide helps you ensure your UXP plugin distribution process goes as smoothl
 
 Please ensure that all required fields are filled out with proper values and that the information is accurate.
 
-<InlineAlert slots="header, text" variant="info"/>
+<InlineAlert slots="heading, text" variant="info"/>
 
 Testing credentials
 
@@ -90,7 +90,7 @@ In the Publisher Profile page, you'll need to provide the **Public name**, **Mar
 
 ![Developer Distribution - publisher profile](./img/listing-publisher-profile.png)
 
-<InlineAlert slots="header, text1, text2" variant="info"/>
+<InlineAlert slots="heading, text1, text2" variant="info"/>
 
 EU Digital Services Act (DSA) Trader Requirements
 
@@ -128,7 +128,7 @@ Click on the **Listing Details** and start filling in the required fields in the
 
 ![Developer Distribution - plugin details](./img/listing-metadata.png)
 
-<InlineAlert variant="info" slots="header, text" />
+<InlineAlert variant="info" slots="heading, text" />
 
 #### Hybrid plugins support
 

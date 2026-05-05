@@ -34,7 +34,7 @@ The installation options are slightly different depending on the distribution ch
 |                                    | - Use the [UPIA tool](#use-the-upia-tool)                                                           |
 | **Enterprise**                     | Use the [Admin Console](../enterprise-distribution/index.md) or the [UPIA tool](#use-the-upia-tool) |
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="info" slots="heading, text"/>
 
 Enterprise Distribution
 

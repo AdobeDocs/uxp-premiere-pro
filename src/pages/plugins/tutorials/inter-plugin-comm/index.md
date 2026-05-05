@@ -66,7 +66,7 @@ responderPlugin.invokeCommand("simpleCommand");
 responderPlugin.showPanel("simplePanel");
 ```
 
-<InlineAlert variant="info" slots="header, text, text2" />
+<InlineAlert variant="info" slots="heading, text, text2" />
 
 Payloads
 

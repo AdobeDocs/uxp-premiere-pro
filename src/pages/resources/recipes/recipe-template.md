@@ -14,7 +14,7 @@ import \{ siteConfig } from '../../../../site-config';
 \<!-- Introduce the topic with concepts. --\>
 
 \<!-- Difference in behavior between scripts and plugins and prerequisites
-<InlineAlert variant="info" slots="header, text1, text2"/>
+<InlineAlert variant="info" slots="heading, text1, text2"/>
 
 Plugins and Scripts
 

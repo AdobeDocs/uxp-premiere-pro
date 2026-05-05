@@ -90,7 +90,7 @@ function handleClick(event) {
 }
 ```
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 Security consideration
 

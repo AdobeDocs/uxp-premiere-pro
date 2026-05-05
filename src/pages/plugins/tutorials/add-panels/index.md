@@ -35,7 +35,7 @@ A single plugin can expose multiple panels, each appearing as a separate menu it
 - Shares the same HTML document and JavaScript context
 - Can communicate with other panels in the same plugin
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="info" slots="heading, text"/>
 
 IPC Permission
 
@@ -53,7 +53,7 @@ To enable inter-panel communication and programmatic panel control, you need to 
 
 When working with multiple panels, you'll use the `show()` [lifecycle hook](../../concepts/entrypoints/index.md#panel-lifecycle-hooks) to append the appropriate content to the panel when it's displayed. This approach keeps your panel content organized and ensures each panel only displays its relevant UI.
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 Known Limitation
 

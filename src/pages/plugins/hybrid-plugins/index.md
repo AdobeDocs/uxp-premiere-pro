@@ -29,7 +29,7 @@ const addon = require("sample.uxpaddon");
 
 The loaded addon exposes C++ functions and properties directly to your JavaScript code, enabling seamless two-way communication between the two environments.
 
-<InlineAlert variant="info" slots="header, text" />
+<InlineAlert variant="info" slots="heading, text" />
 
 #### Advanced Topic
 

@@ -29,7 +29,7 @@ UXP provides three approaches for building user interfaces:
 2. [**Spectrum UXP Widgets**](#spectrum-uxp-widgets): built-in, Adobe-styled components that work out of the box.
 3. [**Spectrum Web Components (SWC)**](#spectrum-web-components-swc): modern Web Component library with Adobe's design system.
 
-<InlineAlert variant="info" slots="header, text" />
+<InlineAlert variant="info" slots="heading, text" />
 
 Recommended approach
 
@@ -60,7 +60,7 @@ These are the familiar HTML elements you've likely used before: `<div>`, `<butto
 | ---------------------------------------------------------------------------------- | ---------------------------------- |
 | Building **highly customized interfaces** that need match different design systems | Complex and expensive to implement |
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="heading, text" />
 
 UXP is not a browser
 
@@ -93,7 +93,7 @@ npm install @spectrum-web-components/button@0.37.0
 npm install @spectrum-web-components/textfield@0.37.0
 ```
 
-<InlineAlert variant="info" slots="header, text" />
+<InlineAlert variant="info" slots="heading, text" />
 
 Version Requirement
 
@@ -174,7 +174,7 @@ Your choice depends on your project requirements, timeline, and experience level
 
 For most projects, **we recommend starting with Spectrum Web Components**, and using standard HTML elements for very specific custom needs. UXP Widgets are still supported but may be deprecated in the future.
 
-<InlineAlert variant="info" slots="header, text, text2" />
+<InlineAlert variant="info" slots="heading, text, text2" />
 
 Creative Cloud Marketplace and Visual Language
 

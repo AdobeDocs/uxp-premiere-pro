@@ -46,7 +46,7 @@ While the sandbox is sufficient for many use cases, you may need to access other
 
 To access the file system, you must declare the `localFileSystem` permission in your plugin's `manifest.json` file.
 
-<InlineAlert variant="info" slots="header, text1, text2"/>
+<InlineAlert variant="info" slots="heading, text1, text2"/>
 
 Before you proceed
 
@@ -72,7 +72,7 @@ Here's how to declare this permission in `manifest.json`:
 }
 ```
 
-<InlineAlert variant="info" slots="header, text1, text2"/>
+<InlineAlert variant="info" slots="heading, text1, text2"/>
 
 Best practices for permissions
 
@@ -351,7 +351,7 @@ async function selectFolderForExport() {
 }
 ```
 
-<InlineAlert variant="info" slots="header,text"/>
+<InlineAlert variant="info" slots="heading,text"/>
 
 #### Domain tokens
 
@@ -418,7 +418,7 @@ async function readPreviouslySelectedFile() {
 }
 ```
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="info" slots="heading, text"/>
 
 Token Storage
 

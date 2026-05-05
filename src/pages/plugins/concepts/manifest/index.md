@@ -482,7 +482,7 @@ The maximum version of the host app that the plugin supports in the `x.y.z` form
 
 To ensure that plugins are secure, UXP requires that plugins declare the permissions they need to function. Permissions not explicitly declared will be denied by default.
 
-<InlineAlert variant="info" slots="header, text1, text2"/>
+<InlineAlert variant="info" slots="heading, text1, text2"/>
 
 Best practices
 

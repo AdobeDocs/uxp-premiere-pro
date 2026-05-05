@@ -170,7 +170,7 @@ async function postUserData(user) {
 postUserData({ name: "Jamie", role: "Editor" });
 ```
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 UXP is not a browser environment
 
@@ -293,7 +293,7 @@ async function connectToServer() {
 }
 ```
 
-<InlineAlert variant="info" slots="header,text"/>
+<InlineAlert variant="info" slots="heading,text"/>
 
 UXP supports WebSocket clients only
 

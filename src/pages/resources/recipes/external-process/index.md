@@ -47,7 +47,7 @@ By default, UXP plugins can't launch external processes; this protects users fro
 }
 ```
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 User consent is always required
 

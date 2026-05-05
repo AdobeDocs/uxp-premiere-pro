@@ -37,7 +37,7 @@ If a plugin _fails_ to load, a small red notification will appear with a **Detai
 
 If you have selected the **Load & Watch** option, you can also reload the plugin by clicking the **Reload** button in the UDT window.
 
-<InlineAlert slots="header,text" variant="info"/>
+<InlineAlert slots="heading,text" variant="info"/>
 
 Manifest changes
 

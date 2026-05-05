@@ -54,7 +54,7 @@ For quick checks without switching to the console, use dialog methods to display
 
 The `alert()`, `confirm()`, and `prompt()` methods are not fully supported in Premiere; they will be fixed in a future release.
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="info" slots="heading, text"/>
 
 Requires Manifest configuration
 

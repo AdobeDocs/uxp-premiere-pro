@@ -83,7 +83,7 @@ const app = require("premierepro");
 
 You'll learn how to access and use Premiere APIs in the [Working with Premiere APIs](../dom-apis/index.md) section and by browsing the [Premiere API reference](../../../ppro-reference/index.md).
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="heading, text" />
 
 Don't confuse the two DOMs
 
@@ -141,7 +141,7 @@ Both UXP and Premiere APIs are actively evolving, with new capabilities added in
 
 Each Premiere release integrates a specific UXP version. For example, Premiere v25.6 includes UXP v8.1.
 
-<InlineAlert variant="info" slots="header, text, text2" />
+<InlineAlert variant="info" slots="heading, text, text2" />
 
 Handling Version Mismatches
 

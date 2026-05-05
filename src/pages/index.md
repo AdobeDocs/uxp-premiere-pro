@@ -12,7 +12,7 @@ contributors:
   - https://github.com/undavide
 ---
 
-<Hero slots="heading, text" background = "rgb(200, 10, 10)"/>
+<Superhero slots="heading, text" background = "rgb(200, 10, 10)"/>
 
 # Premiere UXP API
 

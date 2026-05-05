@@ -30,7 +30,7 @@ In addition, the UXP Developer Tool:
 - Lets you **package plugins** into a `.ccx` [installable file](../../../plugins/distribution/package/index.md), ready for distribution.
 - Provides **Starter Templates** and Sample Projects to help you get moving faster
 
-<InlineAlert variant="info" slots="header,text"/>
+<InlineAlert variant="info" slots="heading,text"/>
 
 Admin privileges are required to use UDT.
 

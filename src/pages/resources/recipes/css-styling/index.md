@@ -213,7 +213,7 @@ Spectrum CSS variables that are [available in other Creative Cloud applications]
 
 ## Important Considerations
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 UXP is not a browser
 

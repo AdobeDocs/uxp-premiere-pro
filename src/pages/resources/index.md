@@ -19,7 +19,7 @@ Deep dive into UXP plugin development
 
 In this section, you will find more in-depth guides and recipes to help you build and distribute UXP plugins.
 
-<InlineAlert slots="header,text" />
+<InlineAlert slots="heading,text" />
 
 Prerequisites
 

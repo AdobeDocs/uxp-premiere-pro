@@ -37,7 +37,7 @@ Choose the most appropriate permission level:
 | `"read"`         | Read-only             | Your plugin only needs to paste or read data |
 | `"readAndWrite"` | Read and write access | Your plugin needs to copy and paste data     |
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="info" slots="heading, text"/>
 
 Pick the least-permissive option that meets your needs
 

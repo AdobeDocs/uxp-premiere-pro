@@ -90,7 +90,7 @@ const { calculate } = require("./lib/calculations.js");
 const { createButton } = require("./components/ui-elements.js");
 ```
 
-<InlineAlert variant="info" slots="header, text" />
+<InlineAlert variant="info" slots="heading, text" />
 
 Path Requirements
 

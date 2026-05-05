@@ -88,7 +88,7 @@ Both Commands and Panels can display **modal dialogs**—temporary windows that 
 - **Displaying results**: Show completion messages, errors, or summary information.
 - **Focused workflows**: Guide users through multi-step processes that require attention.
 
-<InlineAlert variant="info" slots="header, text" />
+<InlineAlert variant="info" slots="heading, text" />
 
 Modal Dialogs
 
