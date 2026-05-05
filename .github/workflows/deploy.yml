@@ -10,7 +10,7 @@ on:
         description: "Select environment to deploy to"
         type: choice
         required: true
-        default: "prod"
+        default: "stage"
         options:
           - "stage"
           - "stage & prod"
@@ -28,6 +28,6 @@ jobs:
     name: Deployment
     uses: AdobeDocs/adp-devsite-workflow/.github/workflows/deploy.yml@main
     with:
-      env: ${{ inputs.env || 'prod' }}
+      env: ${{ inputs.env || 'stage' }}
       baseSha: ${{ inputs.baseSha || '' }}
       deployAll: ${{ inputs.deployAll || false }}
