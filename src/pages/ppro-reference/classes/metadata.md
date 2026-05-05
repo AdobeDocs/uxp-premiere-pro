@@ -1,20 +1,11 @@
 ---
-id: "metadata"
-title: "Metadata"
-sidebar_label: "Metadata"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of Metadata
+id: metadata
+title: Metadata
+sidebar_label: Metadata
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # Metadata  
@@ -23,7 +14,7 @@ keywords:
 
 ### addPropertyToProjectMetadataSchema
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -41,7 +32,7 @@ ___
 
 ### createSetProjectMetadataAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -51,7 +42,7 @@ Get set project metadata action
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| projectItem | [*ProjectItem*](projectitem.md) | - |
 | metadata | *string* | - |
 | updatedFields | [*string[]*](/ppro-reference/classes/string[]/) | - |
 
@@ -59,7 +50,7 @@ ___
 
 ### createSetXMPMetadataAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -69,14 +60,14 @@ Get set project XMP metadata action
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| projectItem | [*ProjectItem*](projectitem.md) | - |
 | metadata | *string* | - |
 
 ___
 
 ### getProjectColumnsMetadata
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -86,13 +77,13 @@ Get project column metadata from project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| projectItem | [*ProjectItem*](projectitem.md) | - |
 
 ___
 
 ### getProjectMetadata
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -102,13 +93,13 @@ Get project metadata
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| projectItem | [*ProjectItem*](projectitem.md) | - |
 
 ___
 
 ### getProjectPanelMetadata
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -118,7 +109,7 @@ ___
 
 ### getXMPMetadata
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -128,13 +119,13 @@ Get project XMP metadata
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| projectItem | [*ProjectItem*](projectitem.md) | - |
 
 ___
 
 ### setProjectPanelMetadata
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   

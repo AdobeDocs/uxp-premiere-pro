@@ -1,20 +1,11 @@
 ---
-id: "projectutils"
-title: "ProjectUtils"
-sidebar_label: "ProjectUtils"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of ProjectUtils
+id: projectutils
+title: ProjectUtils
+sidebar_label: ProjectUtils
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # ProjectUtils  
@@ -23,7 +14,7 @@ keywords:
 
 ### getProjectFromViewId
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Project*
   
@@ -33,13 +24,13 @@ Get project based on input view guid
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| guid | [*Guid*](/ppro-reference/classes/guid/) | - |
+| guid | [*Guid*](guid.md) | - |
 
 ___
 
 ### getProjectViewIds
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Guid[]*
   
@@ -49,7 +40,7 @@ ___
 
 ### getSelection
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *ProjectItemSelection*
   
@@ -59,13 +50,13 @@ Get array of selected project items in project view
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| project | [*Project*](/ppro-reference/classes/project/) | - |
+| project | [*Project*](project.md) | - |
 
 ___
 
 ### getSelectionFromViewId
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *ProjectItemSelection*
   
@@ -75,6 +66,6 @@ Get array of selected projectItem based on input view guid
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| guid | [*Guid*](/ppro-reference/classes/guid/) | - |
+| guid | [*Guid*](guid.md) | - |
 
 ___

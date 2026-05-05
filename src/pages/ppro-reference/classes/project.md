@@ -1,20 +1,11 @@
 ---
-id: "project"
-title: "Project"
-sidebar_label: "Project"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of Project
+id: project
+title: Project
+sidebar_label: Project
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # Project  
@@ -31,7 +22,7 @@ keywords:
 
 ### createProject
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Project*
   
@@ -47,7 +38,7 @@ ___
 
 ### getActiveProject
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Project*
   
@@ -57,7 +48,7 @@ ___
 
 ### getProject
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Project*
   
@@ -67,13 +58,13 @@ Get project referenced by given UID
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectGuid | [*Guid*](/ppro-reference/classes/guid/) | - |
+| projectGuid | [*Guid*](guid.md) | - |
 
 ___
 
 ### isProject
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -89,7 +80,7 @@ ___
 
 ### open
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Project*
   
@@ -100,7 +91,7 @@ Open a project
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | path | *string* | - |
-| openProjectOptions | [*OpenProjectOptions*](/ppro-reference/classes/openprojectoptions/) | - |
+| openProjectOptions | [*OpenProjectOptions*](openprojectoptions.md) | - |
 
 ___
 
@@ -108,7 +99,7 @@ ___
 
 ### close
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -118,13 +109,13 @@ Close a project
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| closeProjectOptions | [*CloseProjectOptions*](/ppro-reference/classes/closeprojectoptions/) | - |
+| closeProjectOptions | [*CloseProjectOptions*](closeprojectoptions.md) | - |
 
 ___
 
 ### closeSequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -134,13 +125,13 @@ Close a sequence and return true if successful.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro-reference/classes/sequence/) | - |
+| sequence | [*Sequence*](sequence.md) | - |
 
 ___
 
 ### createSequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Sequence*
 
@@ -159,7 +150,7 @@ ___
 
 ### createSequenceFromMedia
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Sequence*
   
@@ -171,13 +162,13 @@ Create a new sequence with a given name and medias
 | :------ | :------ | :------ |
 | name | *string* | - |
 | clipProjectItems | [*ClipProjectItem[]*](/ppro-reference/classes/clipprojectitem[]/) | - |
-| targetBin | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| targetBin | [*ProjectItem*](projectitem.md) | - |
 
 ___
 
 ### deleteSequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -187,13 +178,13 @@ Delete a given sequence from the project
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro-reference/classes/sequence/) | - |
+| sequence | [*Sequence*](sequence.md) | - |
 
 ___
 
 ### executeTransaction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -210,7 +201,7 @@ ___
 
 ### getActiveSequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Sequence*
   
@@ -220,7 +211,7 @@ ___
 
 ### getColorSettings
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *ProjectColorSettings*
   
@@ -230,7 +221,7 @@ ___
 
 ### getInsertionBin
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *ProjectItem*
   
@@ -240,7 +231,7 @@ ___
 
 ### getRootItem
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *FolderItem*
   
@@ -250,7 +241,7 @@ ___
 
 ### getSequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Sequence*
   
@@ -260,13 +251,13 @@ Get sequence by id from the project
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| guid | [*Guid*](/ppro-reference/classes/guid/) | - |
+| guid | [*Guid*](guid.md) | - |
 
 ___
 
 ### getSequences
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Sequence[]*
   
@@ -276,7 +267,7 @@ ___
 
 ### importAEComps
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
 
@@ -286,13 +277,13 @@ ___
 | :------ | :------ | :------ |
 | aepPath | *string* | - |
 | compNames | [*string[]*](/ppro-reference/classes/string[]/) | - |
-| TargetBin | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| TargetBin | [*ProjectItem*](projectitem.md) | - |
 
 ___
 
 ### importAllAEComps
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
 
@@ -301,13 +292,13 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | aepPath | *string* | - |
-| TargetBin | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| TargetBin | [*ProjectItem*](projectitem.md) | - |
 
 ___
 
 ### importFiles
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -319,14 +310,14 @@ Import files in root/target bin of the project
 | :------ | :------ | :------ |
 | filePaths | [*string[]*](/ppro-reference/classes/string[]/) | - |
 | suppressUI | *boolean* | - |
-| targetBin | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| targetBin | [*ProjectItem*](projectitem.md) | - |
 | asNumberedStills | *boolean* | - |
 
 ___
 
 ### importSequences
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
 
@@ -341,7 +332,7 @@ ___
 
 ### lockedAccess
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *void*
   
@@ -357,7 +348,7 @@ ___
 
 ### openSequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -367,13 +358,13 @@ Open a sequence and return true if successful.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro-reference/classes/sequence/) | - |
+| sequence | [*Sequence*](sequence.md) | - |
 
 ___
 
 ### pauseGrowing
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -389,7 +380,7 @@ ___
 
 ### save
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -399,7 +390,7 @@ ___
 
 ### saveAs
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -415,7 +406,7 @@ ___
 
 ### setActiveSequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -425,6 +416,6 @@ Set the active sequence of the project
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro-reference/classes/sequence/) | - |
+| sequence | [*Sequence*](sequence.md) | - |
 
 ___

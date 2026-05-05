@@ -1,20 +1,11 @@
 ---
-id: "addtransitionoptions"
-title: "AddTransitionOptions"
-sidebar_label: "AddTransitionOptions"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of AddTransitionOptions
+id: addtransitionoptions
+title: AddTransitionOptions
+sidebar_label: AddTransitionOptions
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # AddTransitionOptions  
@@ -32,7 +23,7 @@ keywords:
 
 ### setApplyToStart
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AddTransitionOptions*
   
@@ -48,7 +39,7 @@ ___
 
 ### setDuration
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AddTransitionOptions*
   
@@ -58,13 +49,13 @@ Sets the duration of transition
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro-reference/classes/ticktime/) | Sets the duration of transition in TickTime |
+| tickTime | [*TickTime*](ticktime.md) | Sets the duration of transition in TickTime |
 
 ___
 
 ### setForceSingleSided
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AddTransitionOptions*
   
@@ -80,7 +71,7 @@ ___
 
 ### setTransitionAlignment
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AddTransitionOptions*
   

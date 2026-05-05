@@ -40,7 +40,7 @@ UXP Core APIs provide the fundamental building blocks for your plugin's function
 
 The way you access UXP APIs depends on the specific API itself.
 
-[**Global APIs**](../../../uxp-api/reference-js/Global%20Members/index.md) are available immediately without any import. For example:
+[**Global APIs**](../../../uxp-api/reference-js/global-members/index.md) are available immediately without any import. For example:
 
 ```javascript
 // Crypto API is globally available

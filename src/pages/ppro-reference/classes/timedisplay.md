@@ -1,20 +1,11 @@
 ---
-id: "timedisplay"
-title: "TimeDisplay"
-sidebar_label: "TimeDisplay"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of TimeDisplay
+id: timedisplay
+title: TimeDisplay
+sidebar_label: TimeDisplay
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # TimeDisplay  

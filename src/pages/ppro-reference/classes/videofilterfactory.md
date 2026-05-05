@@ -1,20 +1,11 @@
 ---
-id: "videofilterfactory"
-title: "VideoFilterFactory"
-sidebar_label: "VideoFilterFactory"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of VideoFilterFactory
+id: videofilterfactory
+title: VideoFilterFactory
+sidebar_label: VideoFilterFactory
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # VideoFilterFactory  
@@ -23,7 +14,7 @@ keywords:
 
 ### createComponent
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *VideoFilterComponent*
   
@@ -39,7 +30,7 @@ ___
 
 ### getDisplayNames
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string[]*
   
@@ -49,7 +40,7 @@ ___
 
 ### getMatchNames
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string[]*
   

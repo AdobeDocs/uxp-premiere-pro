@@ -1,20 +1,11 @@
 ---
-id: "rectf"
-title: "RectF"
-sidebar_label: "RectF"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of RectF
+id: rectf
+title: RectF
+sidebar_label: RectF
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # RectF  

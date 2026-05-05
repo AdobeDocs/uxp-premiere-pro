@@ -1,20 +1,11 @@
 ---
-id: "media"
-title: "Media"
-sidebar_label: "Media"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of Media
+id: media
+title: Media
+sidebar_label: Media
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # Media  
@@ -30,7 +21,7 @@ keywords:
 
 ### createSetStartAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -40,6 +31,6 @@ Returns action that set start of media
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| time | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| time | [*TickTime*](ticktime.md) | - |
 
 ___

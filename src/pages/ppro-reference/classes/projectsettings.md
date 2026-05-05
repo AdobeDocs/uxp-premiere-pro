@@ -1,20 +1,11 @@
 ---
-id: "projectsettings"
-title: "ProjectSettings"
-sidebar_label: "ProjectSettings"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of ProjectSettings
+id: projectsettings
+title: ProjectSettings
+sidebar_label: ProjectSettings
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # ProjectSettings  
@@ -23,7 +14,7 @@ keywords:
 
 ### createSetIngestSettingsAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -33,14 +24,14 @@ Returns an action which sets IngestSettings
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| project | [*Project*](/ppro-reference/classes/project/) | - |
-| ingestSettings | [*IngestSettings*](/ppro-reference/classes/ingestsettings/) | - |
+| project | [*Project*](project.md) | - |
+| ingestSettings | [*IngestSettings*](ingestsettings.md) | - |
 
 ___
 
 ### createSetScratchDiskSettingsAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -50,14 +41,14 @@ Returns an action which sets ScratchDiskSetting
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| project | [*Project*](/ppro-reference/classes/project/) | - |
-| scratchDiskSettings | [*ScratchDiskSettings*](/ppro-reference/classes/scratchdisksettings/) | - |
+| project | [*Project*](project.md) | - |
+| scratchDiskSettings | [*ScratchDiskSettings*](scratchdisksettings.md) | - |
 
 ___
 
 ### getIngestSettings
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *IngestSettings*
   
@@ -67,13 +58,13 @@ Returns project ingest settings
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| project | [*Project*](/ppro-reference/classes/project/) | - |
+| project | [*Project*](project.md) | - |
 
 ___
 
 ### getScratchDiskSettings
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *ScratchDiskSettings*
   
@@ -83,6 +74,6 @@ Returns project ScratchDiskSettings
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| project | [*Project*](/ppro-reference/classes/project/) | - |
+| project | [*Project*](project.md) | - |
 
 ___

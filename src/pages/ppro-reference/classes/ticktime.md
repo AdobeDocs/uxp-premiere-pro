@@ -1,20 +1,11 @@
 ---
-id: "ticktime"
-title: "TickTime"
-sidebar_label: "TickTime"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of TickTime
+id: ticktime
+title: TickTime
+sidebar_label: TickTime
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # TickTime  
@@ -31,7 +22,7 @@ keywords:
 
 ### createWithFrameAndFrameRate
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -42,13 +33,13 @@ Constructs a TickTime object with a frame and a frame rate.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | frameCount | *number* | - |
-| frameRate | [*FrameRate*](/ppro-reference/classes/framerate/) | - |
+| frameRate | [*FrameRate*](framerate.md) | - |
 
 ___
 
 ### createWithSeconds
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -64,7 +55,7 @@ ___
 
 ### createWithTicks
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -82,7 +73,7 @@ ___
 
 ### add
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -92,13 +83,13 @@ Add another TickTime to this one and return it. This TickTime is not modified.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| tickTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### alignToFrame
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -108,13 +99,13 @@ alignToFrame will return a TickTime that is aligned to the nearest frame boundar
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| frameRate | [*FrameRate*](/ppro-reference/classes/framerate/) | - |
+| frameRate | [*FrameRate*](framerate.md) | - |
 
 ___
 
 ### alignToNearestFrame
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -124,13 +115,13 @@ AlignToNearestFrame will return a TickTime that is aligned to the nearest frame 
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| frameRate | [*FrameRate*](/ppro-reference/classes/framerate/) | - |
+| frameRate | [*FrameRate*](framerate.md) | - |
 
 ___
 
 ### divide
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -146,7 +137,7 @@ ___
 
 ### equals
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -156,13 +147,13 @@ Returns true if the given TickTime is equal to the TickTime object
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| tickTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### multiply
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -178,7 +169,7 @@ ___
 
 ### subtract
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -188,6 +179,6 @@ Subtract another TickTime from this one and return it. This TickTime is not modi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| tickTime | [*TickTime*](ticktime.md) | - |
 
 ___

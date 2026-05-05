@@ -1,20 +1,11 @@
 ---
-id: "componentparam"
-title: "ComponentParam"
-sidebar_label: "ComponentParam"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of ComponentParam
+id: componentparam
+title: ComponentParam
+sidebar_label: ComponentParam
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # ComponentParam  
@@ -29,7 +20,7 @@ keywords:
 
 ### areKeyframesSupported
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -39,7 +30,7 @@ ___
 
 ### createAddKeyframeAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -49,13 +40,13 @@ Creates and returns an action object which can be used to add a keyframe compone
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inKeyFrame | [*Keyframe*](/ppro-reference/classes/keyframe/) | - |
+| inKeyFrame | [*Keyframe*](keyframe.md) | - |
 
 ___
 
 ### createKeyframe
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Keyframe*
   
@@ -65,13 +56,13 @@ Creates and returns a keyframe initialised with the ComponentParam's type and pa
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inValue | *number* or *string* or *boolean* or [*PointF*](/ppro-reference/classes/pointf/) or [*Color*](/ppro-reference/classes/color/) | Input could be number, string, boolean, PointF, or Color depend on effect param type |
+| inValue | *number* or *string* or *boolean* or [*PointF*](pointf.md) or [*Color*](color.md) | Input could be number, string, boolean, PointF, or Color depend on effect param type |
 
 ___
 
 ### createRemoveKeyframeAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -81,14 +72,14 @@ Returns an action which removes keyframe at specific time
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| inTime | [*TickTime*](ticktime.md) | - |
 | UpdateUI | *boolean* | - |
 
 ___
 
 ### createRemoveKeyframeRangeAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -98,15 +89,15 @@ Returns an action which removes keyframe at specific time range
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
-| outTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| inTime | [*TickTime*](ticktime.md) | - |
+| outTime | [*TickTime*](ticktime.md) | - |
 | UpdateUI | *boolean* | - |
 
 ___
 
 ### createSetInterpolationAtKeyframeAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -116,7 +107,7 @@ Returns an action which sets the interpolation mode of keyframe at the given tim
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| inTime | [*TickTime*](ticktime.md) | - |
 | InterpolationMode | *number* | - |
 | UpdateUI | *boolean* | - |
 
@@ -124,7 +115,7 @@ ___
 
 ### createSetTimeVaryingAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -140,7 +131,7 @@ ___
 
 ### createSetValueAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -150,14 +141,14 @@ Creates and returns an action object which can be used to set the value of a non
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inKeyFrame | [*Keyframe*](/ppro-reference/classes/keyframe/) | - |
+| inKeyFrame | [*Keyframe*](keyframe.md) | - |
 | inSafeForPlayback | *boolean* | - |
 
 ___
 
 ### findNearestKeyframe
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Keyframe*
   
@@ -167,14 +158,14 @@ Find sthe nearest key for the given time
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
-| outTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| inTime | [*TickTime*](ticktime.md) | - |
+| outTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### findNextKeyframe
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Keyframe*
   
@@ -184,13 +175,13 @@ find the next keyframe for the given time
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| inTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### findPreviousKeyframe
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Keyframe*
   
@@ -200,13 +191,13 @@ find the previous keyframe for the given time
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| inTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### getKeyframeListAsTickTimes
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime[]*
   
@@ -216,7 +207,7 @@ ___
 
 ### getKeyframePtr
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Keyframe*
   
@@ -226,13 +217,13 @@ Get the Keyframe at the given tickTime postion
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| time | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| time | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### getStartValue
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Keyframe*
   
@@ -242,7 +233,7 @@ ___
 
 ### getValueAtTime
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number | string | boolean | PointF | Color*
   
@@ -252,13 +243,13 @@ Gets the value of component Param at the given time
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| time | [*TickTime*](/ppro-reference/classes/ticktime/) | The time at which to get the value of the component param |
+| time | [*TickTime*](ticktime.md) | The time at which to get the value of the component param |
 
 ___
 
 ### isTimeVarying
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   

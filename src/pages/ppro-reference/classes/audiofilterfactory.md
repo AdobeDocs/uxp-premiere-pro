@@ -1,20 +1,11 @@
 ---
-id: "audiofilterfactory"
-title: "AudioFilterFactory"
-sidebar_label: "AudioFilterFactory"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of AudioFilterFactory
+id: audiofilterfactory
+title: AudioFilterFactory
+sidebar_label: AudioFilterFactory
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # AudioFilterFactory  
@@ -23,7 +14,7 @@ keywords:
 
 ### createComponentByDisplayName
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AudioFilterComponent*
   
@@ -34,13 +25,13 @@ Creates a new audio filter component based on the input display name and trackIt
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | displayName | *string* | - |
-| inAudioClipTrackItem | [*AudioClipTrackItem*](/ppro-reference/classes/audiocliptrackitem/) | - |
+| inAudioClipTrackItem | [*AudioClipTrackItem*](audiocliptrackitem.md) | - |
 
 ___
 
 ### getDisplayNames
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string[]*
   

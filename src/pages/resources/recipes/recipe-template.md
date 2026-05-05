@@ -1,15 +1,19 @@
-<!--
+---
+title: Topic Heading
+description: Plugins and Scripts
+---
+\<!--
 Use this doc for internal purposes. Make sure you include the following information in the recipes
 
-import { Link } from 'gatsby';
-import { siteConfig } from '../../../../site-config';
--->
+import \{ Link } from 'gatsby';
+import \{ siteConfig } from '../../../../site-config';
+--\>
 
 # Topic Heading
 
-<!-- Introduce the topic with concepts. -->
+\<!-- Introduce the topic with concepts. --\>
 
-<!-- Difference in behavior between scripts and plugins and prerequisites
+\<!-- Difference in behavior between scripts and plugins and prerequisites
 <InlineAlert variant="info" slots="header, text1, text2"/>
 
 Plugins and Scripts
@@ -17,7 +21,7 @@ Plugins and Scripts
 **In plugins**, lorem ipsum.
 
 **In scripts**, lorem ipsum.
- -->
+ --\>
 
 ## System requirements
 
@@ -29,7 +33,7 @@ Please make make sure your development environment uses the following **minimum 
 
 ## Example
 
-<!-- Provide a simple example using code snippets -->
+\<!-- Provide a simple example using code snippets --\>
 
 <CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, JSON" />
 
@@ -59,6 +63,6 @@ Screenshot illustrating the output (if applicable)
 
 ## Reference material
 
-<!-- Recipes should end with links to API docs used in the code above -->
+\<!-- Recipes should end with links to API docs used in the code above --\>
 
-- <!-- <a href={`${siteConfig.uxpApiPath}`}>API</a> -->
+- \<!-- \<a href=\{`${siteConfig.uxpApiPath}`}\>API\</a\> --\>

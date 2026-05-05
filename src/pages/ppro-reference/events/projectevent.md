@@ -1,20 +1,11 @@
 ---
-id: "projectevent"
-title: "ProjectEvent"
-sidebar_label: "ProjectEvent"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of ProjectEvent
+id: projectevent
+title: ProjectEvent
+sidebar_label: ProjectEvent
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # ProjectEvent  

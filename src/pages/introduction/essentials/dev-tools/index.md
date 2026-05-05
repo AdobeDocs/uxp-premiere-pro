@@ -63,15 +63,15 @@ If you have problems with this step, you can also configure Developer Mode manua
 3. Create a new file named `settings.json` with the following content—you'll need administrative rights to save the file:
 
    ```json
-   { "developer" : true }
+   \{ "developer" : true }
    ```
 
 4. Launch the UXP Developer Tool again.
 
 For now, successfully installing UDT is sufficient. We will understand UDT in more depth once you build your first plugin.
 
-<!--
+\<!--
 TODO Add this section once details are available
 ## Type definitions
 Provide download link for UXP and Premiere
--->
+--\>

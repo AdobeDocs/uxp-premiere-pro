@@ -1,20 +1,11 @@
 ---
-id: "projectclosedevent"
-title: "ProjectClosedEvent"
-sidebar_label: "ProjectClosedEvent"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of ProjectClosedEvent
+id: projectclosedevent
+title: ProjectClosedEvent
+sidebar_label: ProjectClosedEvent
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # ProjectClosedEvent  

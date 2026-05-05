@@ -1,4 +1,5 @@
 ---
+description: "There's a lot more to plugin development than what we've covered so far. For more advanced topics, please have a look at the resources section. Among other t..."
 title: Advanced Topics
 ---
 
@@ -6,7 +7,7 @@ title: Advanced Topics
 
 There's a lot more to plugin development than what we've covered so far. For more advanced topics, please have a look at the [resources section](../../resources/index.md). Among other things, you'll find information about:
 
-<MiniResourceCard slots="image,heading,text,link" repeat="5" theme="lightest" inRow="2"/>
+\<MiniResourceCard slots="image,heading,text,link" repeat="5" theme="lightest" inRow="2"/\>
 
 ![Folder icon](file.jpg)
 
@@ -32,7 +33,7 @@ Add UI elements to your plugin
 
 [Adding User Interfaces](../../resources/fundamentals/user-interfaces/index.md)
 
-<!--
+\<!--
 ![Complex hierarchical component structure icon](react.jpg)
 
 #### React
@@ -40,7 +41,7 @@ Add UI elements to your plugin
 Use React to build highly interactive user interfaces
 [//]: # (TODO: Add right links)
 [React in UXP](#)
--->
+--\>
 
 ![Ellipsis](more.jpg)
 

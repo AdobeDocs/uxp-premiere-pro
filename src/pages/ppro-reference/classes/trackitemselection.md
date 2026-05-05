@@ -1,20 +1,11 @@
 ---
-id: "trackitemselection"
-title: "TrackItemSelection"
-sidebar_label: "TrackItemSelection"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of TrackItemSelection
+id: trackitemselection
+title: TrackItemSelection
+sidebar_label: TrackItemSelection
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # TrackItemSelection  
@@ -23,7 +14,7 @@ keywords:
 
 ### createEmptySelection
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -41,7 +32,7 @@ ___
 
 ### addItem
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -51,14 +42,14 @@ Add a track item to this selection
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItem | [*VideoClipTrackItem*](/ppro-reference/classes/videocliptrackitem/) or [*AudioClipTrackItem*](/ppro-reference/classes/audiocliptrackitem/) | trackItem to be added to selection |
+| trackItem | [*VideoClipTrackItem*](videocliptrackitem.md) or [*AudioClipTrackItem*](audiocliptrackitem.md) | trackItem to be added to selection |
 | skipDuplicateCheck | *boolean* | - |
 
 ___
 
 ### getTrackItems
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *(VideoClipTrackItem | AudioClipTrackItem)[]*
   
@@ -68,7 +59,7 @@ ___
 
 ### removeItem
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -78,6 +69,6 @@ Remove a track item from this selection
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItem | [*VideoClipTrackItem*](/ppro-reference/classes/videocliptrackitem/) or [*AudioClipTrackItem*](/ppro-reference/classes/audiocliptrackitem/) | trackItem to be removed from selection |
+| trackItem | [*VideoClipTrackItem*](videocliptrackitem.md) or [*AudioClipTrackItem*](audiocliptrackitem.md) | trackItem to be removed from selection |
 
 ___

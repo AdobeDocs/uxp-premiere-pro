@@ -22,7 +22,7 @@ Most importantly, it contains your **plugin ID**, which uniquely identifies your
 
 ## Manifest Keys
 
-<br/><br/>
+\<br/\>\<br/\>
 
 | Required properties                   | Optional properties                           |
 | :------------------------------------ | :-------------------------------------------- |
@@ -834,4 +834,4 @@ Note that you will need to **manually install** the library (via `npm` or `yarn`
 | :------------- | :-------- | :------- | ------- |
 | `enableAlerts` | `boolean` | optional | `false` |
 
-Enable the plugin to use create simple dialogs via [`alert()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [`prompt()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md) and [`confirm()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)
+Enable the plugin to use create simple dialogs via [`alert()`](../../../uxp-api/reference-js/global-members/html-dom/alert.md), [`prompt()`](../../../uxp-api/reference-js/global-members/html-dom/prompt.md) and [`confirm()`](../../../uxp-api/reference-js/global-members/html-dom/confirm.md)

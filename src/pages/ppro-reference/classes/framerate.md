@@ -1,20 +1,11 @@
 ---
-id: "framerate"
-title: "FrameRate"
-sidebar_label: "FrameRate"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of FrameRate
+id: framerate
+title: FrameRate
+sidebar_label: FrameRate
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # FrameRate  
@@ -30,7 +21,7 @@ keywords:
 
 ### createWithValue
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *FrameRate*
   
@@ -48,7 +39,7 @@ ___
 
 ### equals
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -58,6 +49,6 @@ Returns true if the given FrameRate is equal to this FrameRate object
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| frameRate | [*FrameRate*](/ppro-reference/classes/framerate/) | - |
+| frameRate | [*FrameRate*](framerate.md) | - |
 
 ___

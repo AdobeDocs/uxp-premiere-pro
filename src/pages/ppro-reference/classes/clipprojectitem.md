@@ -1,20 +1,11 @@
 ---
-id: "clipprojectitem"
-title: "ClipProjectItem"
-sidebar_label: "ClipProjectItem"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of ClipProjectItem
+id: clipprojectitem
+title: ClipProjectItem
+sidebar_label: ClipProjectItem
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # ClipProjectItem  
@@ -30,7 +21,7 @@ keywords:
 
 ### cast
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *ClipProjectItem*
   
@@ -40,7 +31,7 @@ Cast ProjectItem in to ClipProjectItem
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| projectItem | [*ProjectItem*](projectitem.md) | - |
 
 ___
 
@@ -48,7 +39,7 @@ ___
 
 ### attachProxy
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -66,7 +57,7 @@ ___
 
 ### canChangeMediaPath
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -76,7 +67,7 @@ ___
 
 ### canProxy
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -86,7 +77,7 @@ ___
 
 ### changeMediaFilePath
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -103,7 +94,7 @@ ___
 
 ### createClearInOutPointsAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -113,7 +104,7 @@ ___
 
 ### createSetColorLabelAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -129,7 +120,7 @@ ___
 
 ### createSetFootageInterpretationAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -139,13 +130,13 @@ Set the footage interpretation object for project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| footageInterpretation | [*FootageInterpretation*](/ppro-reference/classes/footageinterpretation/) | - |
+| footageInterpretation | [*FootageInterpretation*](footageinterpretation.md) | - |
 
 ___
 
 ### createSetInOutPointsAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -155,14 +146,14 @@ Set the in or out point of the Project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inPoint | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
-| outPoint | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| inPoint | [*TickTime*](ticktime.md) | - |
+| outPoint | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### createSetInPointAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -172,13 +163,13 @@ Returns an action which Sets the in point of the Project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| tickTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### createSetInputLUTIDAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -194,7 +185,7 @@ ___
 
 ### createSetNameAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -210,7 +201,7 @@ ___
 
 ### createSetOfflineAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -220,7 +211,7 @@ ___
 
 ### createSetOutPointAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
 
@@ -230,13 +221,13 @@ Returns an action which Sets the out point of the Project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| tickTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### createSetOverrideFrameRateAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -252,7 +243,7 @@ ___
 
 ### createSetOverridePixelAspectRatioAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -269,7 +260,7 @@ ___
 
 ### createSetScaleToFrameSizeAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -279,7 +270,7 @@ ___
 
 ### findItemsMatchingMediaPath
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *ProjectItem[]*
   
@@ -296,7 +287,7 @@ ___
 
 ### getColorLabelIndex
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -306,7 +297,7 @@ ___
 
 ### getComponentChain
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
 
@@ -316,13 +307,13 @@ Gets the component chain associated with this project item.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| mediaType | [*Constants.MediaType*](/ppro-reference/constants) | Media type can be audio, video or data/caption |
+| mediaType | [*Constants.MediaType*](../constants/index.md) | Media type can be audio, video or data/caption |
 
 ___
 
 ### getContentType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Constants.ContentType*
   
@@ -332,7 +323,7 @@ ___
 
 ### getEmbeddedLUTID
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -342,7 +333,7 @@ ___
 
 ### getFootageInterpretation
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *FootageInterpretation*
   
@@ -352,7 +343,7 @@ ___
 
 ### getInPoint
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -362,13 +353,13 @@ Get the in point of the Project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| mediaType | [*Constants.MediaType*](/ppro-reference/constants) | Media type can be audio, video or data/caption |
+| mediaType | [*Constants.MediaType*](../constants/index.md) | Media type can be audio, video or data/caption |
 
 ___
 
 ### getInputLUTID
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -378,7 +369,7 @@ ___
 
 ### getMedia
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Media*
   
@@ -388,7 +379,7 @@ ___
 
 ### getMediaFilePath
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -398,7 +389,7 @@ ___
 
 ### getOriginatingProjectPath
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -408,7 +399,7 @@ ___
 
 ### getOutPoint
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -418,13 +409,13 @@ Get the out point of the Project item
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| mediaType | [*Constants.MediaType*](/ppro-reference/constants) | Media type can be audio, video or data/caption |
+| mediaType | [*Constants.MediaType*](../constants/index.md) | Media type can be audio, video or data/caption |
 
 ___
 
 ### getProject
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Project*
   
@@ -434,7 +425,7 @@ ___
 
 ### getProxyPath
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -444,7 +435,7 @@ ___
 
 ### getSequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Sequence*
   
@@ -454,7 +445,7 @@ ___
 
 ### hasProxy
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -464,7 +455,7 @@ ___
 
 ### isMergedClip
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -474,7 +465,7 @@ ___
 
 ### isMulticamClip
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -484,7 +475,7 @@ ___
 
 ### isOffline
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -494,7 +485,7 @@ ___
 
 ### isSequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -504,7 +495,7 @@ ___
 
 ### refreshMedia
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   

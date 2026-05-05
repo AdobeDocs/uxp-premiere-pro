@@ -1,20 +1,11 @@
 ---
-id: "closeprojectoptions"
-title: "CloseProjectOptions"
-sidebar_label: "CloseProjectOptions"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of CloseProjectOptions
+id: closeprojectoptions
+title: CloseProjectOptions
+sidebar_label: CloseProjectOptions
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # CloseProjectOptions  
@@ -32,7 +23,7 @@ keywords:
 
 ### setIsAppBeingPreparedToQuit
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *CloseProjectOptions*
   
@@ -48,7 +39,7 @@ ___
 
 ### setPromptIfDirty
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *CloseProjectOptions*
   
@@ -64,7 +55,7 @@ ___
 
 ### setSaveWorkspace
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *CloseProjectOptions*
   
@@ -80,7 +71,7 @@ ___
 
 ### setShowCancelButton
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *CloseProjectOptions*
   

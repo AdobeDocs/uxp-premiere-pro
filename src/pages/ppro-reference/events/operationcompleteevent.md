@@ -1,20 +1,11 @@
 ---
-id: "operationcompleteevent"
-title: "OperationCompleteEvent"
-sidebar_label: "OperationCompleteEvent"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of OperationCompleteEvent
+id: operationcompleteevent
+title: OperationCompleteEvent
+sidebar_label: OperationCompleteEvent
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # OperationCompleteEvent  

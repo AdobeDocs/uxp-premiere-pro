@@ -1,20 +1,11 @@
 ---
-id: "eventmanager"
-title: "EventManager"
-sidebar_label: "EventManager"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of EventManager
+id: eventmanager
+title: EventManager
+sidebar_label: EventManager
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # EventManager  
@@ -23,7 +14,7 @@ keywords:
 
 ### addGlobalEventListener
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *void*
   
@@ -33,7 +24,7 @@ add global event listener
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| eventName | *string* or [*Constants.SnapEvent*](/ppro-reference/constants) or [*Constants.ProjectEvent*](/ppro-reference/constants) or [*Constants.SequenceEvent*](/ppro-reference/constants) or [*Constants.OperationCompleteEvent*](/ppro-reference/constants) | - |
+| eventName | *string* or [*Constants.SnapEvent*](../constants/index.md) or [*Constants.ProjectEvent*](../constants/index.md) or [*Constants.SequenceEvent*](../constants/index.md) or [*Constants.OperationCompleteEvent*](../constants/index.md) | - |
 | eventHandler | *(event?: object) => void* | - |
 | inCapturePhase? | *boolean* | - |
 
@@ -41,7 +32,7 @@ ___
 
 ### removeGlobalEventListener
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *void*
   
@@ -51,7 +42,7 @@ remove global event listener
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| eventName | *string* or [*Constants.SnapEvent*](/ppro-reference/constants) or [*Constants.ProjectEvent*](/ppro-reference/constants) or [*Constants.SequenceEvent*](/ppro-reference/constants) or [*Constants.OperationCompleteEvent*](/ppro-reference/constants) | - |
+| eventName | *string* or [*Constants.SnapEvent*](../constants/index.md) or [*Constants.ProjectEvent*](../constants/index.md) or [*Constants.SequenceEvent*](../constants/index.md) or [*Constants.OperationCompleteEvent*](../constants/index.md) | - |
 | eventHandler | *(event?: object) => void* | - |
 
 ___

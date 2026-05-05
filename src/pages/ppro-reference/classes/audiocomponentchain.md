@@ -1,20 +1,11 @@
 ---
-id: "audiocomponentchain"
-title: "AudioComponentChain"
-sidebar_label: "AudioComponentChain"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of AudioComponentChain
+id: audiocomponentchain
+title: AudioComponentChain
+sidebar_label: AudioComponentChain
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # AudioComponentChain  
@@ -23,7 +14,7 @@ keywords:
 
 ### createAppendComponentAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -33,13 +24,13 @@ Creates and returns an append component action
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | [*Component*](/ppro-reference/classes/component/) or [*AudioFilterComponent*](/ppro-reference/classes/audiofiltercomponent/) | Audio filter component |
+| component | [*Component*](component.md) or [*AudioFilterComponent*](/ppro-reference/classes/audiofiltercomponent/index.md) | Audio filter component |
 
 ___
 
 ### createInsertComponentAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -49,14 +40,14 @@ Creates and returns an insert component action
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | [*Component*](/ppro-reference/classes/component/) or [*AudioFilterComponent*](/ppro-reference/classes/audiofiltercomponent/) | Audio filter component |
+| component | [*Component*](component.md) or [*AudioFilterComponent*](/ppro-reference/classes/audiofiltercomponent/index.md) | Audio filter component |
 | componentInsertionIndex | *number* | Index which the component shall be inserted |
 
 ___
 
 ### createRemoveComponentAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -66,13 +57,13 @@ Creates and returns an remove component action
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| component | [*Component*](/ppro-reference/classes/component/) or [*AudioFilterComponent*](/ppro-reference/classes/audiofiltercomponent/) | Audio filter component |
+| component | [*Component*](component.md) or [*AudioFilterComponent*](/ppro-reference/classes/audiofiltercomponent/index.md) | Audio filter component |
 
 ___
 
 ### getComponentAtIndex
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Component*
   
@@ -88,7 +79,7 @@ ___
 
 ### getComponentCount
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   

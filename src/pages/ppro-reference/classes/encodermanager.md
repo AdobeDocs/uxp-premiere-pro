@@ -1,20 +1,11 @@
 ---
-id: "encodermanager"
-title: "EncoderManager"
-sidebar_label: "EncoderManager"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of EncoderManager
+id: encodermanager
+title: EncoderManager
+sidebar_label: EncoderManager
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # EncoderManager  
@@ -29,7 +20,7 @@ keywords:
 
 ### getExportFileExtension
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -39,14 +30,14 @@ Get the Export File Extension of Input Preset file
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro-reference/classes/sequence/) | - |
+| sequence | [*Sequence*](sequence.md) | - |
 | presetFilePath | *string* | - |
 
 ___
 
 ### getManager
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *EncoderManager*
   
@@ -58,7 +49,7 @@ ___
 
 ### encodeFile
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -71,8 +62,8 @@ Encode input media file in AME
 | filePath | *string* | - |
 | outputFile | *string* | - |
 | presetFile | *string* | - |
-| inPoint | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
-| outPoint | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| inPoint | [*TickTime*](ticktime.md) | - |
+| outPoint | [*TickTime*](ticktime.md) | - |
 | workArea | *number* | - |
 | removeUponCompletion | *boolean* | - |
 | startQueueImmediately | *boolean* | - |
@@ -81,7 +72,7 @@ ___
 
 ### encodeProjectItem
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -91,7 +82,7 @@ Encode input clipProjectItem in AME
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| clipProjectItem | [*ClipProjectItem*](/ppro-reference/classes/clipprojectitem/) | - |
+| clipProjectItem | [*ClipProjectItem*](clipprojectitem.md) | - |
 | outputFile | *string* | - |
 | presetFile | *string* | - |
 | workArea | *number* | - |
@@ -102,7 +93,7 @@ ___
 
 ### exportSequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -112,8 +103,8 @@ Export a sequence. If no output file and preset is specified, the sequence will 
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequence | [*Sequence*](/ppro-reference/classes/sequence/) | - |
-| exportType | [*Constants.ExportType*](/ppro-reference/constants) | Constants.ExportType.IMMEDIATELY, Constants.ExportType.QUEUE_TO_AME etc..  |
+| sequence | [*Sequence*](sequence.md) | - |
+| exportType | [*Constants.ExportType*](../constants/index.md) | Constants.ExportType.IMMEDIATELY, Constants.ExportType.QUEUE_TO_AME etc..  |
 | outputFile | *string* | - |
 | presetFile | *string* | - |
 | exportFull | *boolean* | - |

@@ -1,20 +1,11 @@
 ---
-id: "uniqueserializeable"
-title: "UniqueSerializeable"
-sidebar_label: "UniqueSerializeable"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of UniqueSerializeable
+id: uniqueserializeable
+title: UniqueSerializeable
+sidebar_label: UniqueSerializeable
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # UniqueSerializeable  
@@ -23,7 +14,7 @@ keywords:
 
 ### cast
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *UniqueSerializeable*
   
@@ -33,7 +24,7 @@ Cast serializable object (ex. ProjectItem) into UniqueSerializeable
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| item | [*ProjectItem*](/ppro-reference/classes/projectitem/) or [*ClipProjectItem*](/ppro-reference/classes/clipprojectitem/) or [*FolderItem*](/ppro-reference/classes/folderitem/) or [*Sequence*](/ppro-reference/classes/sequence/) | - |
+| item | [*ProjectItem*](projectitem.md) or [*ClipProjectItem*](clipprojectitem.md) or [*FolderItem*](folderitem.md) or [*Sequence*](sequence.md) | - |
 
 ___
 
@@ -41,7 +32,7 @@ ___
 
 ### getUniqueID
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Guid*
   

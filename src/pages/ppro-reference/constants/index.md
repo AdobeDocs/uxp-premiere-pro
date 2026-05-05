@@ -1,19 +1,11 @@
 ---
-id: "constants"
-title: "Constants"
-sidebar_label: "Constants"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
+description: To use any constant, import the constants object from the premiere pro module first.
+id: constants
+title: Constants
+sidebar_label: Constants
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # Constants
@@ -24,7 +16,7 @@ To use any constant, import the `constants` object from the premiere pro module 
 
 ### MediaType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -37,7 +29,7 @@ ___
 
 ### ContentType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -49,7 +41,7 @@ ___
 
 ### ProjectItemColorLabel
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -73,7 +65,7 @@ ___
 
 ### TransitionPosition
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -84,7 +76,7 @@ ___
 
 ### TrackItemType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -98,7 +90,7 @@ ___
 
 ### ProjectEvent
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -112,7 +104,7 @@ ___
 
 ### InterpolationMode
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -127,7 +119,7 @@ ___
 
 ### SequenceOperation
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -139,7 +131,7 @@ ___
 
 ### PropertyType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -150,7 +142,7 @@ ___
 
 ### SequenceEvent
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -162,7 +154,7 @@ ___
 
 ### VideoTrackEvent
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -174,7 +166,7 @@ ___
 
 ### AudioTrackEvent
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -186,7 +178,7 @@ ___
 
 ### EncoderEvent
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -200,7 +192,7 @@ ___
 
 ### ScratchDiskFolderType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -215,7 +207,7 @@ ___
 
 ### ScratchDiskFolder
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -226,7 +218,7 @@ ___
 
 ### MetadataType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -239,7 +231,7 @@ ___
 
 ### ExportType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -251,7 +243,7 @@ ___
 
 ### PreferenceKey
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -263,7 +255,7 @@ ___
 
 ### SnapEvent
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -278,7 +270,7 @@ ___
 
 ### OperationCompleteEvent
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -293,7 +285,7 @@ ___
 
 ### OperationCompleteState
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -305,7 +297,7 @@ ___
 
 ### PixelAspectRatio
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -322,7 +314,7 @@ ___
 
 ### VideoFieldType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -334,7 +326,7 @@ ___
 
 ### VideoDisplayFormatType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -350,7 +342,7 @@ ___
 
 ### AudioChannelType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -363,7 +355,7 @@ ___
 
 ### AudioDisplayFormatType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |
@@ -374,7 +366,7 @@ ___
 
 ### MarkerColor
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 | Name | Description |
 | :------ | :------ |

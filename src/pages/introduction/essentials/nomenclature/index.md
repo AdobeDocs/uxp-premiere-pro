@@ -24,6 +24,6 @@ Most desktop applications have been supporting a different kind of _compiled_ pl
 
 While this continues to be the case, Premiere will use **plugins**[^1] as a catch-all term for _panels_, _extensions_, and, eventually, _scripts_ as well. Primarily, this is to maintain consistency with the other Adobe Creative Cloud applications that have migrated—or are about to migrate—to the new UXP standard.
 
-<br/><br/><br/>
+\<br/\>\<br/\>\<br/\>
 
 [^1]: More precisely, in the UXP ecosystem, a _plugin_ is a container of either _panel(s)_, _command(s)_, or both. This mirrors—and extends—how the CEP ecosystem has been using _extensions_ to contain _panel(s)_.

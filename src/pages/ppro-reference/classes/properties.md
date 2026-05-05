@@ -1,20 +1,11 @@
 ---
-id: "properties"
-title: "Properties"
-sidebar_label: "Properties"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of Properties
+id: properties
+title: Properties
+sidebar_label: Properties
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # Properties  
@@ -23,7 +14,7 @@ keywords:
 
 ### getProperties
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Properties*
   
@@ -33,7 +24,7 @@ Return Property Owner Object
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| propertyOwnerObject | [*Project*](/ppro-reference/classes/project/) or [*Sequence*](/ppro-reference/classes/sequence/) | This can also be object instance of Project, Sequence etc.. |
+| propertyOwnerObject | [*Project*](project.md) or [*Sequence*](sequence.md) | This can also be object instance of Project, Sequence etc.. |
 
 ___
 
@@ -41,7 +32,7 @@ ___
 
 ### createClearValueAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -57,7 +48,7 @@ ___
 
 ### createSetValueAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -69,13 +60,13 @@ Create an action to set a named value through scripting. The parameters are <nam
 | :------ | :------ | :------ |
 | name | *string* | property name |
 | value | *boolean* or *string* or *number* | Value to set for the property key |
-| persistenceFlag | [*Constants.PropertyType*](/ppro-reference/constants) | Indicates whether the property should be persisted or not |
+| persistenceFlag | [*Constants.PropertyType*](../constants/index.md) | Indicates whether the property should be persisted or not |
 
 ___
 
 ### getValue
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -91,7 +82,7 @@ ___
 
 ### getValueAsBool
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -107,7 +98,7 @@ ___
 
 ### getValueAsFloat
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -123,7 +114,7 @@ ___
 
 ### getValueAsInt
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -139,7 +130,7 @@ ___
 
 ### hasValue
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   

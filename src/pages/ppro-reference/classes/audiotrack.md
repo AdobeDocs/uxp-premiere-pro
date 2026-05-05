@@ -1,20 +1,11 @@
 ---
-id: "audiotrack"
-title: "AudioTrack"
-sidebar_label: "AudioTrack"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of AudioTrack
+id: audiotrack
+title: AudioTrack
+sidebar_label: AudioTrack
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # AudioTrack  
@@ -30,7 +21,7 @@ keywords:
 
 ### getIndex
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -40,7 +31,7 @@ ___
 
 ### getMediaType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Guid*
   
@@ -50,7 +41,7 @@ ___
 
 ### getTrackItems
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AudioClipTrackItem[]*
   
@@ -60,14 +51,14 @@ Returns array of AudioClipTrackItem from the track item type
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItemType | [*Constants.TrackItemType*](/ppro-reference/constants) | Constants.TrackItemType.CLIP, Constants.TrackItemType.TRANSITION etc..  |
+| trackItemType | [*Constants.TrackItemType*](../constants/index.md) | Constants.TrackItemType.CLIP, Constants.TrackItemType.TRANSITION etc..  |
 | includeEmptyTrackItems | *boolean* | - |
 
 ___
 
 ### isMuted
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -77,7 +68,7 @@ ___
 
 ### setMute
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   

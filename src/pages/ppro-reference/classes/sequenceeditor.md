@@ -1,20 +1,11 @@
 ---
-id: "sequenceeditor"
-title: "SequenceEditor"
-sidebar_label: "SequenceEditor"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of SequenceEditor
+id: sequenceeditor
+title: SequenceEditor
+sidebar_label: SequenceEditor
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # SequenceEditor  
@@ -23,7 +14,7 @@ keywords:
 
 ### getEditor
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *SequenceEditor*
   
@@ -33,13 +24,13 @@ Get Sequence Editor reference for editing the sequence timeline
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequenceObject | [*Sequence*](/ppro-reference/classes/sequence/) | - |
+| sequenceObject | [*Sequence*](sequence.md) | - |
 
 ___
 
 ### getInstalledMogrtPath
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *String*
   
@@ -51,7 +42,7 @@ ___
 
 ### createCloneTrackItemAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -61,8 +52,8 @@ Duplicate trackItem using an insert or overwrite edit method to a destination tr
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItem | [*VideoClipTrackItem*](/ppro-reference/classes/videocliptrackitem/) or [*AudioClipTrackItem*](/ppro-reference/classes/audiocliptrackitem/) | - |
-| timeOffset | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| trackItem | [*VideoClipTrackItem*](videocliptrackitem.md) or [*AudioClipTrackItem*](audiocliptrackitem.md) | - |
+| timeOffset | [*TickTime*](ticktime.md) | - |
 | videoTrackVerticalOffset | *number* | - |
 | audioTrackVerticalOffset | *number* | - |
 | alignToVideo | *boolean* | - |
@@ -72,7 +63,7 @@ ___
 
 ### createInsertProjectItemAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -82,17 +73,17 @@ Create insert ProjectItem into Sequence Action. Note: If you pass a track index 
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
-| time | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
-| videoTrackIndex | [*Number*](/ppro-reference/classes/number/) | - |
-| audioTrackIndex | [*Number*](/ppro-reference/classes/number/) | - |
-| limitShift | [*Boolean*](/ppro-reference/classes/boolean/) | - |
+| projectItem | [*ProjectItem*](projectitem.md) | - |
+| time | [*TickTime*](ticktime.md) | - |
+| videoTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
+| audioTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
+| limitShift | [*Boolean*](/ppro-reference/classes/boolean/index.md) | - |
 
 ___
 
 ### createOverwriteItemAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -102,16 +93,16 @@ Create overwrite Sequence with ProjectItem Action
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
-| time | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
-| videoTrackIndex | [*Number*](/ppro-reference/classes/number/) | - |
-| audioTrackIndex | [*Number*](/ppro-reference/classes/number/) | - |
+| projectItem | [*ProjectItem*](projectitem.md) | - |
+| time | [*TickTime*](ticktime.md) | - |
+| videoTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
+| audioTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
 
 ___
 
 ### createRemoveItemsAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -121,16 +112,16 @@ Create remove action for sequence
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItemSelection | [*TrackItemSelection*](/ppro-reference/classes/trackitemselection/) | - |
+| trackItemSelection | [*TrackItemSelection*](trackitemselection.md) | - |
 | ripple | *boolean* | - |
-| mediaType | [*Constants.MediaType*](/ppro-reference/constants) | - |
+| mediaType | [*Constants.MediaType*](../constants/index.md) | - |
 | shiftOverLapping | *boolean* | - |
 
 ___
 
 ### insertMogrtFromLibrary
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *(VideoClipTrackItem | AudioClipTrackItem)[]*
   
@@ -142,15 +133,15 @@ Insert input MGT into sequence with time and index defined
 | :------ | :------ | :------ |
 | inLibraryName | *string* | - |
 | inElementName | *string* | - |
-| inTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
-| inVideoTrackIndex | [*Number*](/ppro-reference/classes/number/) | - |
-| inAudioTrackIndex | [*Number*](/ppro-reference/classes/number/) | - |
+| inTime | [*TickTime*](ticktime.md) | - |
+| inVideoTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
+| inAudioTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
 
 ___
 
 ### insertMogrtFromPath
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *(VideoClipTrackItem | AudioClipTrackItem)[]*
   
@@ -161,8 +152,8 @@ Insert input MGT into sequence with time and index defined
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | inMGTPath | *string* | - |
-| inTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
-| inVideoTrackIndex | [*Number*](/ppro-reference/classes/number/) | - |
-| inAudioTrackIndex | [*Number*](/ppro-reference/classes/number/) | - |
+| inTime | [*TickTime*](ticktime.md) | - |
+| inVideoTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
+| inAudioTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
 
 ___

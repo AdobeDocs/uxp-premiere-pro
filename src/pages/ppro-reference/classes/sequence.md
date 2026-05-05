@@ -1,20 +1,11 @@
 ---
-id: "sequence"
-title: "Sequence"
-sidebar_label: "Sequence"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of Sequence
+id: sequence
+title: Sequence
+sidebar_label: Sequence
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # Sequence  
@@ -30,7 +21,7 @@ keywords:
 
 ### clearSelection
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -40,7 +31,7 @@ ___
 
 ### createCloneAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -50,7 +41,7 @@ ___
 
 ### createSetInPointAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -60,13 +51,13 @@ Create SetInPointAction for sequence
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| tickTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### createSetOutPointAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -76,13 +67,13 @@ Create SetOutPointAction for sequence
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| tickTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### createSetSettingsAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -92,13 +83,13 @@ Returns action that set sequence settings
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| sequenceSettings | [*SequenceSettings*](/ppro-reference/classes/sequencesettings/) | - |
+| sequenceSettings | [*SequenceSettings*](sequencesettings.md) | - |
 
 ___
 
 ### createSetZeroPointAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -108,13 +99,13 @@ Create an action to set an InPoint for the sequence
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| tickTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| tickTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### createSubsequence
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Sequence*
   
@@ -130,7 +121,7 @@ ___
 
 ### getAudioTrack
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AudioTrack*
   
@@ -146,7 +137,7 @@ ___
 
 ### getAudioTrackCount
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -156,7 +147,7 @@ ___
 
 ### getCaptionTrack
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *CaptionTrack*
   
@@ -172,7 +163,7 @@ ___
 
 ### getCaptionTrackCount
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -182,7 +173,7 @@ ___
 
 ### getEndTime
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -192,7 +183,7 @@ ___
 
 ### getFrameSize
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *RectF*
   
@@ -202,7 +193,7 @@ ___
 
 ### getInPoint
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -212,7 +203,7 @@ ___
 
 ### getOutPoint
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -222,7 +213,7 @@ ___
 
 ### getPlayerPosition
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -232,7 +223,7 @@ ___
 
 ### getProjectItem
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *ProjectItem*
   
@@ -242,7 +233,7 @@ ___
 
 ### getSelection
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TrackItemSelection*
   
@@ -252,7 +243,7 @@ ___
 
 ### getSequenceAudioTimeDisplayFormat
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TimeDisplay*
   
@@ -262,7 +253,7 @@ ___
 
 ### getSequenceVideoTimeDisplayFormat
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TimeDisplay*
   
@@ -272,7 +263,7 @@ ___
 
 ### getSettings
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *SequenceSettings*
   
@@ -282,7 +273,7 @@ ___
 
 ### getTimebase
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -292,7 +283,7 @@ ___
 
 ### getVideoTrack
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *VideoTrack*
   
@@ -308,7 +299,7 @@ ___
 
 ### getVideoTrackCount
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -318,7 +309,7 @@ ___
 
 ### getZeroPoint
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TickTime*
   
@@ -328,7 +319,7 @@ ___
 
 ### isDoneAnalyzingForVideoEffects
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -338,7 +329,7 @@ ___
 
 ### setPlayerPosition
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -348,13 +339,13 @@ Set the player's current position
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| positionTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| positionTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### setSelection
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -364,6 +355,6 @@ Updates sequence selection using the given track item selection.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| trackItemSelection | [*TrackItemSelection*](/ppro-reference/classes/trackitemselection/) | - |
+| trackItemSelection | [*TrackItemSelection*](trackitemselection.md) | - |
 
 ___

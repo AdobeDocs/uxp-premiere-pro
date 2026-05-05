@@ -1,20 +1,11 @@
 ---
-id: "folderitem"
-title: "FolderItem"
-sidebar_label: "FolderItem"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of FolderItem
+id: folderitem
+title: FolderItem
+sidebar_label: FolderItem
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # FolderItem  
@@ -30,7 +21,7 @@ keywords:
 
 ### cast
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *FolderItem*
   
@@ -40,7 +31,7 @@ Cast ProjectItem in to FolderItem
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| projectItem | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| projectItem | [*ProjectItem*](projectitem.md) | - |
 
 ___
 
@@ -48,7 +39,7 @@ ___
 
 ### createBinAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -65,7 +56,7 @@ ___
 
 ### createMoveItemAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -75,14 +66,14 @@ Creates an action that moves the given item to the provided folder item newParen
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| item | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
-| newParent | [*FolderItem*](/ppro-reference/classes/folderitem/) | - |
+| item | [*ProjectItem*](projectitem.md) | - |
+| newParent | [*FolderItem*](folderitem.md) | - |
 
 ___
 
 ### createRemoveItemAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -92,13 +83,13 @@ Creates an action that removes the given item from this folder.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| item | [*ProjectItem*](/ppro-reference/classes/projectitem/) | - |
+| item | [*ProjectItem*](projectitem.md) | - |
 
 ___
 
 ### createRenameBinAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -114,7 +105,7 @@ ___
 
 ### createSetColorLabelAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -130,7 +121,7 @@ ___
 
 ### createSetNameAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -146,7 +137,7 @@ ___
 
 ### createSmartBinAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -163,7 +154,7 @@ ___
 
 ### getColorLabelIndex
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -173,7 +164,7 @@ ___
 
 ### getItems
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *ProjectItem[]*
   
@@ -183,7 +174,7 @@ ___
 
 ### getProject
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Project*
   

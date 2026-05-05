@@ -68,7 +68,7 @@ Network APIs are available globally in UXP, you don't need to import them. Let's
 
 ### Using fetch()
 
-The [`fetch()`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch.md) API is the simplest and most flexible way to make network requests. It's modern, asynchronous, and built into the UXP global scope—no `require()` needed.
+The [`fetch()`](../../../uxp-api/reference-js/global-members/data-transfers/fetch.md) API is the simplest and most flexible way to make network requests. It's modern, asynchronous, and built into the UXP global scope—no `require()` needed.
 
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JSON" />
 
@@ -339,9 +339,9 @@ async function safeFetch(url, options = {}, timeoutMs = 8000) {
 
 ## Reference Material
 
-- [`fetch`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch.md) API Reference.
+- [`fetch`](../../../uxp-api/reference-js/global-members/data-transfers/fetch.md) API Reference.
 - [`XMLHttpRequest`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md) Reference.
-- [`WebSocket`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/WebSocket.md) Reference.
+- [`WebSocket`](../../../uxp-api/reference-js/global-members/data-transfers/web-socket.md) Reference.
 - [Manifest Permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition).
 - [Network Permission Details](../../../plugins/concepts/manifest/index.md#networkpermission).
 

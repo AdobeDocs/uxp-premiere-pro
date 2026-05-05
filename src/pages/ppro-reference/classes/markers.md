@@ -1,20 +1,11 @@
 ---
-id: "markers"
-title: "Markers"
-sidebar_label: "Markers"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of Markers
+id: markers
+title: Markers
+sidebar_label: Markers
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # Markers  
@@ -23,7 +14,7 @@ keywords:
 
 ### getMarkers
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Markers*
   
@@ -33,7 +24,7 @@ Returns the Markers object for Sequence Or ProjectItem
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| markerOwnerObject | [*Sequence*](/ppro-reference/classes/sequence/) or [*ClipProjectItem*](/ppro-reference/classes/clipprojectitem/) | - |
+| markerOwnerObject | [*Sequence*](sequence.md) or [*ClipProjectItem*](clipprojectitem.md) | - |
 
 ___
 
@@ -41,7 +32,7 @@ ___
 
 ### createAddMarkerAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -53,15 +44,15 @@ Add a new marker
 | :------ | :------ | :------ |
 | Name | *string* | - |
 | markerType | *string* | - |
-| startTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
-| duration | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| startTime | [*TickTime*](ticktime.md) | - |
+| duration | [*TickTime*](ticktime.md) | - |
 | comments | *string* | - |
 
 ___
 
 ### createMoveMarkerAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -71,14 +62,14 @@ Move the given marker at new time value
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| marker | [*Marker*](/ppro-reference/classes/marker/) | - |
-| tickTime | [*TickTime*](/ppro-reference/classes/ticktime/) | - |
+| marker | [*Marker*](marker.md) | - |
+| tickTime | [*TickTime*](ticktime.md) | - |
 
 ___
 
 ### createRemoveMarkerAction
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Action*
   
@@ -88,13 +79,13 @@ Remove the given marker
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| marker | [*Marker*](/ppro-reference/classes/marker/) | - |
+| marker | [*Marker*](marker.md) | - |
 
 ___
 
 ### getMarkers
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Marker[]*
   

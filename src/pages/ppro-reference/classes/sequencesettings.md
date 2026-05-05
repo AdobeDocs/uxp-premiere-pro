@@ -1,20 +1,11 @@
 ---
-id: "sequencesettings"
-title: "SequenceSettings"
-sidebar_label: "SequenceSettings"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of SequenceSettings
+id: sequencesettings
+title: SequenceSettings
+sidebar_label: SequenceSettings
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # SequenceSettings  
@@ -23,7 +14,7 @@ keywords:
 
 ### getAudioChannelCount
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -33,7 +24,7 @@ ___
 
 ### getAudioChannelType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -43,7 +34,7 @@ ___
 
 ### getAudioDisplayFormat
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TimeDisplay*
   
@@ -53,7 +44,7 @@ ___
 
 ### getAudioSampleRate
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *FrameRate*
   
@@ -63,7 +54,7 @@ ___
 
 ### getCompositeInLinearColor
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -73,7 +64,7 @@ ___
 
 ### getEditingMode
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -83,7 +74,7 @@ ___
 
 ### getMaximumBitDepth
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -93,7 +84,7 @@ ___
 
 ### getMaxRenderQuality
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -103,7 +94,7 @@ ___
 
 ### getPreviewCodec
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -113,7 +104,7 @@ ___
 
 ### getPreviewFileFormat
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -123,7 +114,7 @@ ___
 
 ### getPreviewFrameRect
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *RectF*
   
@@ -133,7 +124,7 @@ ___
 
 ### getVideoDisplayFormat
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *TimeDisplay*
   
@@ -143,7 +134,7 @@ ___
 
 ### getVideoFieldType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *number*
   
@@ -153,7 +144,7 @@ ___
 
 ### getVideoFrameRate
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *FrameRate*
   
@@ -163,7 +154,7 @@ ___
 
 ### getVideoFrameRect
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *RectF*
   
@@ -173,7 +164,7 @@ ___
 
 ### getVideoPixelAspectRatio
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *string*
   
@@ -183,7 +174,7 @@ ___
 
 ### setAudioDisplayFormat
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -193,13 +184,13 @@ Set audio display format of sequence.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| audioDisplay | [*TimeDisplay*](/ppro-reference/classes/timedisplay/) | - |
+| audioDisplay | [*TimeDisplay*](timedisplay.md) | - |
 
 ___
 
 ### setAudioSampleRate
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -209,13 +200,13 @@ Set audio sample rate
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inRate | [*FrameRate*](/ppro-reference/classes/framerate/) | - |
+| inRate | [*FrameRate*](framerate.md) | - |
 
 ___
 
 ### setCompositeInLinearColor
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -231,7 +222,7 @@ ___
 
 ### setEditingMode
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -247,7 +238,7 @@ ___
 
 ### setMaximumBitDepth
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -263,7 +254,7 @@ ___
 
 ### setMaxRenderQuality
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -279,7 +270,7 @@ ___
 
 ### setPreviewCodec
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -295,7 +286,7 @@ ___
 
 ### setPreviewFileFormat
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -311,7 +302,7 @@ ___
 
 ### setPreviewFrameRect
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -321,13 +312,13 @@ Set preview video frame rect in sequence
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inPreviewVideoRect | [*RectF*](/ppro-reference/classes/rectf/) | - |
+| inPreviewVideoRect | [*RectF*](rectf.md) | - |
 
 ___
 
 ### setVideoDisplayFormat
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -337,13 +328,13 @@ Set video display format of sequence
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| audioDisplay | [*TimeDisplay*](/ppro-reference/classes/timedisplay/) | - |
+| audioDisplay | [*TimeDisplay*](timedisplay.md) | - |
 
 ___
 
 ### setVideoFieldType
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -359,7 +350,7 @@ ___
 
 ### setVideoFrameRate
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -369,13 +360,13 @@ Set video frame rate in the sequence
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inVideoFrameRate | [*FrameRate*](/ppro-reference/classes/framerate/) | - |
+| inVideoFrameRate | [*FrameRate*](framerate.md) | - |
 
 ___
 
 ### setVideoFrameRect
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -385,13 +376,13 @@ Set video frame rect in sequence
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| inVideoFrameRect | [*RectF*](/ppro-reference/classes/rectf/) | - |
+| inVideoFrameRect | [*RectF*](rectf.md) | - |
 
 ___
 
 ### setVideoPixelAspectRatio
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   

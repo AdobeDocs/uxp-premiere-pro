@@ -1,3 +1,7 @@
+---
+title: Add a Command Entrypoint
+description: Commands allow you to add a menu item directly to the Premiere user interface.
+---
 # Add a Command Entrypoint
 
 Commands allow you to add a menu item directly to the Premiere user interface.

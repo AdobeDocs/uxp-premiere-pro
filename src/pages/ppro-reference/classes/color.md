@@ -1,20 +1,11 @@
 ---
-id: "color"
-title: "Color"
-sidebar_label: "Color"
-repo: "uxp-premierepro"
-product: "premierepro"
-keywords:
-  - Creative Cloud
-  - API Documentation
-  - UXP
-  - Plugins
-  - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
-  - Scripting
-  - Premiere
+description: Overview of Color
+id: color
+title: Color
+sidebar_label: Color
+repo: uxp-premierepro
+product: premierepro
+keywords: 
 ---
 
 # Color  
@@ -32,7 +23,7 @@ keywords:
 
 ### equals
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *boolean*
   
@@ -42,6 +33,6 @@ Returns true if the given ColorObject is equal to this ColorObject
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| colorObject | [*Color*](/ppro-reference/classes/color/) | - |
+| colorObject | [*Color*](color.md) | - |
 
 ___

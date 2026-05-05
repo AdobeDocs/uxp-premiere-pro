@@ -243,7 +243,7 @@ When users close the dialog by clicking the **red dot** (Mac) or **X** button (W
 
 ## Modal Dialogs as Command UIs
 
-Modal dialogs are perfect to show a simple interface for a command, when the built-in [`alert()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [`prompt()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md) and [`confirm()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md) methods are not enough. The example below shows how to create a dialog for an About command.
+Modal dialogs are perfect to show a simple interface for a command, when the built-in [`alert()`](../../../uxp-api/reference-js/global-members/html-dom/alert.md), [`prompt()`](../../../uxp-api/reference-js/global-members/html-dom/prompt.md) and [`confirm()`](../../../uxp-api/reference-js/global-members/html-dom/confirm.md) methods are not enough. The example below shows how to create a dialog for an About command.
 
 ![Modal Dialog - About dialog](./img/add-modal-dialogs-command-modal.png)
 
