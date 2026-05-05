@@ -30,56 +30,15 @@ To configure the Webview, you will first require the `webview` permission for yo
 
 **Note** that WebViews require manifest version v5 or above \<br\>\</br\>
 
-\<table columnWidths="20,10,50,20"\>
- \<tr\>
-     \<th\>Key\</th\>
-     \<th\>Value\</th\>
-     \<th\>Description\</th\>
-     \<th\>Mandatory/Optional\</th\>
-\</tr\>
-\<tr\>
-     \<td\>.allow\</td\>
-     \<td\>"yes"\</td\>
-     \<td\>Enables WebView access to the plugin\</td\>
-     \<td\>Mandatory\</td\>
-\</tr\>
-\<tr\>
-     \<td\>.allowLocalRendering\</td\>
-     \<td\>"yes"\</td\>
-     \<td\>Enables WebView to load local contents (supported from UXP v8.0.0❗) \</td\>
-     \<td\>Optional\</td\>
-\</tr\>
-\<tr\>
-     \<td\>.domains\</td\>
-     \<td\>string[]\</td\>
-     \<td\>Allows access to the specified domains. Wildcards (except top-level) are supported. e.g "https://*.adobe.com". \<br\>\</br\> Recommended\</td\>
-     \<td\>Mandatory\</td\>
-\</tr\>
-\<tr\>
-     \<td\>.domains\</td\>
-     \<td\>"all"\</td\>
-     \<td\>Allows access to all domains.\<br\>\</br\>Not recommended, may affect performance, security and privacy. Plugin may be blocked by enterprises.\</td\>
-     \<td\>Mandatory\</td\>
-\</tr\>
-\<tr\>
-     \<td\>.enableMessageBridge\</td\>
-     \<td\>"localAndRemote"\</td\>
-     \<td\>Allows Plugin & the content loaded on WebView to communicate regardless of where the content is loaded from **locally or remotely.**\</td\>
-     \<td\>Optional\</td\>
-\</tr\>
-\<tr\>
-     \<td\>.enableMessageBridge\</td\>
-     \<td\>"localOnly"\</td\>
-     \<td\>Allows Plugin & the content loaded on WebView to communicate if the content is loaded from **locally.** (supported from UXP v8.0.0❗)\</td\>
-     \<td\>Optional\</td\>
-\</tr\>
-\<tr\>
-     \<td\>.enableMessageBridge\</td\>
-     \<td\>"no"\</td\>
-     \<td\>Does not allow Plugin & the content loaded on WebView to communicate\</td\>
-     \<td\>Optional\</td\>
-\</tr\>
-\</table\>\<br\>\</br\>
+| Key | Value | Description | Mandatory/Optional |
+| --- | --- | --- | --- |
+| .allow | "yes" | Enables WebView access to the plugin | Mandatory |
+| .allowLocalRendering | "yes" | Enables WebView to load local contents (supported from UXP v8.0.0❗) | Optional |
+| .domains | string[] | Allows access to the specified domains. Wildcards (except top-level) are supported. e.g "https://*.adobe.com". \<br\>\</br\> Recommended | Mandatory |
+| .domains | "all" | Allows access to all domains.\<br\>\</br\>Not recommended, may affect performance, security and privacy. Plugin may be blocked by enterprises. | Mandatory |
+| .enableMessageBridge | "localAndRemote" | Allows Plugin & the content loaded on WebView to communicate regardless of where the content is loaded from **locally or remotely.** | Optional |
+| .enableMessageBridge | "localOnly" | Allows Plugin & the content loaded on WebView to communicate if the content is loaded from **locally.** (supported from UXP v8.0.0❗) | Optional |
+| .enableMessageBridge | "no" | Does not allow Plugin & the content loaded on WebView to communicate | Optional |\<br\>\</br\>
 
 **Example**  
 ```js

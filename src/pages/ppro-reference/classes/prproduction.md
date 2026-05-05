@@ -20,7 +20,7 @@ keywords:
   
 Get an instance of the currently active production.
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -32,4 +32,4 @@ ___
   
 Get the scratch disk settings instance for this production.
 
-___
+<HorizontalLine />

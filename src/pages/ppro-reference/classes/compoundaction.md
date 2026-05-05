@@ -32,4 +32,4 @@ Add an action to the compound action
 | :------ | :------ | :------ |
 | action | [*Action*](/ppro-reference/classes/action/index.md) | - |
 
-___
+<HorizontalLine />

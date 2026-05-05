@@ -20,7 +20,7 @@ keywords:
   
 Get whether or not ingest is enabled
 
-___
+<HorizontalLine />
 
 ### setIngestEnabled
 
@@ -36,4 +36,4 @@ Set whether or not ingest is enabled
 | :------ | :------ | :------ |
 | enabled | *boolean* | - |
 
-___
+<HorizontalLine />

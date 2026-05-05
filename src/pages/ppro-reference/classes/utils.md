@@ -20,4 +20,4 @@ keywords:
   
 Check if AE is installed.
 
-___
+<HorizontalLine />

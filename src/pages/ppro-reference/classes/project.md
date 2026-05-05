@@ -34,7 +34,7 @@ Create a new project
 | :------ | :------ | :------ |
 | path | *string* | - |
 
-___
+<HorizontalLine />
 
 ### getActiveProject
 
@@ -44,7 +44,7 @@ ___
   
 Currently active project.
 
-___
+<HorizontalLine />
 
 ### getProject
 
@@ -60,7 +60,7 @@ Get project referenced by given UID
 | :------ | :------ | :------ |
 | projectGuid | [*Guid*](guid.md) | - |
 
-___
+<HorizontalLine />
 
 ### isProject
 
@@ -76,7 +76,7 @@ Returns true if the file at the given path is openable as a Premiere project
 | :------ | :------ | :------ |
 | projectPath | *string* | - |
 
-___
+<HorizontalLine />
 
 ### open
 
@@ -93,7 +93,7 @@ Open a project
 | path | *string* | - |
 | openProjectOptions | [*OpenProjectOptions*](openprojectoptions.md) | - |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -111,7 +111,7 @@ Close a project
 | :------ | :------ | :------ |
 | closeProjectOptions | [*CloseProjectOptions*](closeprojectoptions.md) | - |
 
-___
+<HorizontalLine />
 
 ### closeSequence
 
@@ -127,7 +127,7 @@ Close a sequence and return true if successful.
 | :------ | :------ | :------ |
 | sequence | [*Sequence*](sequence.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSequence
 
@@ -146,7 +146,7 @@ Create a new sequence using the default preset path.
 | name | *string* | - |
 | presetPath | *string* | - |
 
-___
+<HorizontalLine />
 
 ### createSequenceFromMedia
 
@@ -164,7 +164,7 @@ Create a new sequence with a given name and medias
 | clipProjectItems | [*ClipProjectItem[]*](/ppro-reference/classes/clipprojectitem[]/) | - |
 | targetBin | [*ProjectItem*](projectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### deleteSequence
 
@@ -180,7 +180,7 @@ Delete a given sequence from the project
 | :------ | :------ | :------ |
 | sequence | [*Sequence*](sequence.md) | - |
 
-___
+<HorizontalLine />
 
 ### executeTransaction
 
@@ -197,7 +197,7 @@ Execute undoable transaction by passing compound action
 | callback | *(compoundAction: CompoundAction) => void* | - |
 | undoString? | *string* | - |
 
-___
+<HorizontalLine />
 
 ### getActiveSequence
 
@@ -207,7 +207,7 @@ ___
   
 Get the active sequence of the project
 
-___
+<HorizontalLine />
 
 ### getColorSettings
 
@@ -217,7 +217,7 @@ ___
   
 Get project color settings object
 
-___
+<HorizontalLine />
 
 ### getInsertionBin
 
@@ -227,7 +227,7 @@ ___
   
 Get current insertion bin
 
-___
+<HorizontalLine />
 
 ### getRootItem
 
@@ -237,7 +237,7 @@ ___
   
 The root item of the project which contains all items of the project on the lowest level.
 
-___
+<HorizontalLine />
 
 ### getSequence
 
@@ -253,7 +253,7 @@ Get sequence by id from the project
 | :------ | :------ | :------ |
 | guid | [*Guid*](guid.md) | - |
 
-___
+<HorizontalLine />
 
 ### getSequences
 
@@ -263,7 +263,7 @@ ___
   
 Get an array of all sequences in this project.
 
-___
+<HorizontalLine />
 
 ### importAEComps
 
@@ -279,7 +279,7 @@ ___
 | compNames | [*string[]*](/ppro-reference/classes/string[]/) | - |
 | TargetBin | [*ProjectItem*](projectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### importAllAEComps
 
@@ -294,7 +294,7 @@ ___
 | aepPath | *string* | - |
 | TargetBin | [*ProjectItem*](projectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### importFiles
 
@@ -313,7 +313,7 @@ Import files in root/target bin of the project
 | targetBin | [*ProjectItem*](projectitem.md) | - |
 | asNumberedStills | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### importSequences
 
@@ -328,7 +328,7 @@ ___
 | projectPath | *string* | - |
 | sequenceIds | [*Guid[]*](/ppro-reference/classes/guid[]/) | - |
 
-___
+<HorizontalLine />
 
 ### lockedAccess
 
@@ -344,7 +344,7 @@ Get a read/upgrade locked access to Project, project state will not change durin
 | :------ | :------ | :------ |
 | callback | *() => void* | - |
 
-___
+<HorizontalLine />
 
 ### openSequence
 
@@ -360,7 +360,7 @@ Open a sequence and return true if successful.
 | :------ | :------ | :------ |
 | sequence | [*Sequence*](sequence.md) | - |
 
-___
+<HorizontalLine />
 
 ### pauseGrowing
 
@@ -376,7 +376,7 @@ Pause growing of files instead swap the files
 | :------ | :------ | :------ |
 | pause | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### save
 
@@ -386,7 +386,7 @@ ___
   
 Save the project
 
-___
+<HorizontalLine />
 
 ### saveAs
 
@@ -402,7 +402,7 @@ Save the project at the provided path
 | :------ | :------ | :------ |
 | path | *string* | - |
 
-___
+<HorizontalLine />
 
 ### setActiveSequence
 
@@ -418,4 +418,4 @@ Set the active sequence of the project
 | :------ | :------ | :------ |
 | sequence | [*Sequence*](sequence.md) | - |
 
-___
+<HorizontalLine />

@@ -26,7 +26,7 @@ Cast serializable object (ex. ProjectItem) into UniqueSerializeable
 | :------ | :------ | :------ |
 | item | [*ProjectItem*](projectitem.md) or [*ClipProjectItem*](clipprojectitem.md) or [*FolderItem*](folderitem.md) or [*Sequence*](sequence.md) | - |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -38,4 +38,4 @@ ___
   
 Get the unique ID of the serializeable object
 
-___
+<HorizontalLine />

@@ -27,7 +27,7 @@ keywords:
   
 Index representing the track index of this track within the track group.
 
-___
+<HorizontalLine />
 
 ### getMediaType
 
@@ -37,7 +37,7 @@ ___
   
 UUID representing the underlying media type of this track
 
-___
+<HorizontalLine />
 
 ### getTrackItems
 
@@ -54,7 +54,7 @@ Returns the track items of the specified media type from the given track
 | trackItemType | *number* | - |
 | includeEmptyTrackItems | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### isMuted
 
@@ -64,7 +64,7 @@ ___
   
 Get mute state of the track
 
-___
+<HorizontalLine />
 
 ### setMute
 
@@ -80,4 +80,4 @@ sets the mute state of the track to muted/unmuted
 | :------ | :------ | :------ |
 | mute | *boolean* | - |
 
-___
+<HorizontalLine />

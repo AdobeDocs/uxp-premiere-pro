@@ -27,7 +27,7 @@ Creates a new audio filter component based on the input display name and trackIt
 | displayName | *string* | - |
 | inAudioClipTrackItem | [*AudioClipTrackItem*](audiocliptrackitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### getDisplayNames
 
@@ -37,4 +37,4 @@ ___
   
 Returns an array of audio filter displayNames
 
-___
+<HorizontalLine />

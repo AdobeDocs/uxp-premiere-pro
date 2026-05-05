@@ -26,7 +26,7 @@ Get project based on input view guid
 | :------ | :------ | :------ |
 | guid | [*Guid*](guid.md) | - |
 
-___
+<HorizontalLine />
 
 ### getProjectViewIds
 
@@ -36,7 +36,7 @@ ___
   
 Get array of project view ids
 
-___
+<HorizontalLine />
 
 ### getSelection
 
@@ -52,7 +52,7 @@ Get array of selected project items in project view
 | :------ | :------ | :------ |
 | project | [*Project*](project.md) | - |
 
-___
+<HorizontalLine />
 
 ### getSelectionFromViewId
 
@@ -68,4 +68,4 @@ Get array of selected projectItem based on input view guid
 | :------ | :------ | :------ |
 | guid | [*Guid*](guid.md) | - |
 
-___
+<HorizontalLine />

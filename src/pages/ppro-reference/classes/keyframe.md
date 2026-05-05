@@ -27,7 +27,7 @@ keywords:
   
 Gets temporal interpolation mode of a keyframe
 
-___
+<HorizontalLine />
 
 ### setTemporalInterpolationMode
 
@@ -43,4 +43,4 @@ Sets temporal interpolation mode of a keyframe
 | :------ | :------ | :------ |
 | temporalInterpolationMode | *number* | - |
 
-___
+<HorizontalLine />

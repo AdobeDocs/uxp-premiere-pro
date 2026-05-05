@@ -26,7 +26,7 @@ Create a guid from a string
 | :------ | :------ | :------ |
 | stringValue | *string* | - |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -38,4 +38,4 @@ ___
   
 Return string representation of the GUID
 
-___
+<HorizontalLine />

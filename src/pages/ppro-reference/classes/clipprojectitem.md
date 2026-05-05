@@ -33,7 +33,7 @@ Cast ProjectItem in to ClipProjectItem
 | :------ | :------ | :------ |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -53,7 +53,7 @@ Attach proxy or high resolution footage to projectItem and returns true if succe
 | isHiRes | *boolean* | - |
 | inMakeAlternateLinkInTeamProjects | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### canChangeMediaPath
 
@@ -63,7 +63,7 @@ ___
   
 Returns true if Premiere Pro can change the path associated with this project item; otherwise, returns false
 
-___
+<HorizontalLine />
 
 ### canProxy
 
@@ -73,7 +73,7 @@ ___
   
 Indicates whether it is possible to attach a proxy to this project item.
 
-___
+<HorizontalLine />
 
 ### changeMediaFilePath
 
@@ -90,7 +90,7 @@ Change media file path of projectItem and returns true if successful. Not undoab
 | newPath | *string* | - |
 | overrideCompatibilityCheck | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### createClearInOutPointsAction
 
@@ -100,7 +100,7 @@ ___
   
 Create Clear the in or out point of the Project item action
 
-___
+<HorizontalLine />
 
 ### createSetColorLabelAction
 
@@ -116,7 +116,7 @@ Create an action for set color label to projectItem by index
 | :------ | :------ | :------ |
 | inColorLabelIndex | *number* | - |
 
-___
+<HorizontalLine />
 
 ### createSetFootageInterpretationAction
 
@@ -132,7 +132,7 @@ Set the footage interpretation object for project item
 | :------ | :------ | :------ |
 | footageInterpretation | [*FootageInterpretation*](footageinterpretation.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSetInOutPointsAction
 
@@ -149,7 +149,7 @@ Set the in or out point of the Project item
 | inPoint | [*TickTime*](ticktime.md) | - |
 | outPoint | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSetInPointAction
 
@@ -165,7 +165,7 @@ Returns an action which Sets the in point of the Project item
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSetInputLUTIDAction
 
@@ -181,7 +181,7 @@ Create action for setting Guid of Input LUT on media. This applies for Video Cli
 | :------ | :------ | :------ |
 | stringLUTID | *string* | - |
 
-___
+<HorizontalLine />
 
 ### createSetNameAction
 
@@ -197,7 +197,7 @@ Returns action that renames projectItem
 | :------ | :------ | :------ |
 | inName | *string* | - |
 
-___
+<HorizontalLine />
 
 ### createSetOfflineAction
 
@@ -207,7 +207,7 @@ ___
   
 Returns an action which sets the media offline
 
-___
+<HorizontalLine />
 
 ### createSetOutPointAction
 
@@ -223,7 +223,7 @@ Returns an action which Sets the out point of the Project item
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSetOverrideFrameRateAction
 
@@ -239,7 +239,7 @@ Returns an action which sets the override frame rate
 | :------ | :------ | :------ |
 | inOverriddenFrameRateValue | *number* | - |
 
-___
+<HorizontalLine />
 
 ### createSetOverridePixelAspectRatioAction
 
@@ -256,7 +256,7 @@ Returns an action which sets Override pixel aspect ratio
 | inNumerator | *number* | - |
 | inDenominator | *number* | - |
 
-___
+<HorizontalLine />
 
 ### createSetScaleToFrameSizeAction
 
@@ -266,7 +266,7 @@ ___
   
 Returns an action which sets the scale to frame to true
 
-___
+<HorizontalLine />
 
 ### findItemsMatchingMediaPath
 
@@ -283,7 +283,7 @@ Returns array of project's items with media paths containing match string
 | matchString | *string* | - |
 | ignoreSubclips | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### getColorLabelIndex
 
@@ -293,7 +293,7 @@ ___
   
 Get color label index of projectItem
 
-___
+<HorizontalLine />
 
 ### getComponentChain
 
@@ -309,7 +309,7 @@ Gets the component chain associated with this project item.
 | :------ | :------ | :------ |
 | mediaType | [*Constants.MediaType*](../constants/index.md) | Media type can be audio, video or data/caption |
 
-___
+<HorizontalLine />
 
 ### getContentType
 
@@ -319,7 +319,7 @@ ___
   
 Get content type of the Project item
 
-___
+<HorizontalLine />
 
 ### getEmbeddedLUTID
 
@@ -329,7 +329,7 @@ ___
   
 Get GUID of LUT embedded in media
 
-___
+<HorizontalLine />
 
 ### getFootageInterpretation
 
@@ -339,7 +339,7 @@ ___
   
 Get the footage interpretation object for project item
 
-___
+<HorizontalLine />
 
 ### getInPoint
 
@@ -355,7 +355,7 @@ Get the in point of the Project item
 | :------ | :------ | :------ |
 | mediaType | [*Constants.MediaType*](../constants/index.md) | Media type can be audio, video or data/caption |
 
-___
+<HorizontalLine />
 
 ### getInputLUTID
 
@@ -365,7 +365,7 @@ ___
   
 Get Guid of Input LUT overridden on media
 
-___
+<HorizontalLine />
 
 ### getMedia
 
@@ -375,7 +375,7 @@ ___
   
 Return media associated with clipProjectItem
 
-___
+<HorizontalLine />
 
 ### getMediaFilePath
 
@@ -385,7 +385,7 @@ ___
   
 Get the media file path of the Project item.
 
-___
+<HorizontalLine />
 
 ### getOriginatingProjectPath
 
@@ -395,7 +395,7 @@ ___
   
 Return originating project path associated with clipProjectItem
 
-___
+<HorizontalLine />
 
 ### getOutPoint
 
@@ -411,7 +411,7 @@ Get the out point of the Project item
 | :------ | :------ | :------ |
 | mediaType | [*Constants.MediaType*](../constants/index.md) | Media type can be audio, video or data/caption |
 
-___
+<HorizontalLine />
 
 ### getProject
 
@@ -421,7 +421,7 @@ ___
   
 Get the parent Project of this projectItem.
 
-___
+<HorizontalLine />
 
 ### getProxyPath
 
@@ -431,7 +431,7 @@ ___
   
 Returns the proxy path if the project item has a proxy attached
 
-___
+<HorizontalLine />
 
 ### getSequence
 
@@ -441,7 +441,7 @@ ___
   
 Get the sequence of the Project item
 
-___
+<HorizontalLine />
 
 ### hasProxy
 
@@ -451,7 +451,7 @@ ___
   
 Indicates whether a proxy has already been attached to the project item.
 
-___
+<HorizontalLine />
 
 ### isMergedClip
 
@@ -461,7 +461,7 @@ ___
   
 Returns true if the clip Project item is a merged clip
 
-___
+<HorizontalLine />
 
 ### isMulticamClip
 
@@ -471,7 +471,7 @@ ___
   
 Returns true if the clip Project item is a multicam clip
 
-___
+<HorizontalLine />
 
 ### isOffline
 
@@ -481,7 +481,7 @@ ___
   
 Returns true if the media is offline
 
-___
+<HorizontalLine />
 
 ### isSequence
 
@@ -491,7 +491,7 @@ ___
   
 Returns true if the project item is a sequence
 
-___
+<HorizontalLine />
 
 ### refreshMedia
 
@@ -501,4 +501,4 @@ ___
   
 Updates representation of the media associated with the project item
 
-___
+<HorizontalLine />

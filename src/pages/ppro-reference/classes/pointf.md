@@ -33,4 +33,4 @@ Get the distance from one point to another point
 | :------ | :------ | :------ |
 | point | [*PointF*](pointf.md) | - |
 
-___
+<HorizontalLine />

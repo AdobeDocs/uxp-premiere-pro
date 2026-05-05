@@ -33,4 +33,4 @@ Returns action that set start of media
 | :------ | :------ | :------ |
 | time | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />

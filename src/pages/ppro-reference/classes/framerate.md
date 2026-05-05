@@ -33,7 +33,7 @@ Create frame rate object with a value
 | :------ | :------ | :------ |
 | value | *number* | - |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -51,4 +51,4 @@ Returns true if the given FrameRate is equal to this FrameRate object
 | :------ | :------ | :------ |
 | frameRate | [*FrameRate*](framerate.md) | - |
 
-___
+<HorizontalLine />

@@ -27,7 +27,7 @@ Create action that import external transcripts to ClipProjectItem
 | textSegments | [*TextSegments*](textsegments.md) | - |
 | clipProjectItem | [*ClipProjectItem*](clipprojectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### exportToJSON
 
@@ -43,7 +43,7 @@ Export transcripts inside of clipProjectItem as JSON string if transcript exist
 | :------ | :------ | :------ |
 | clipProjectItem | [*ClipProjectItem*](clipprojectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### importFromJSON
 
@@ -59,4 +59,4 @@ Returns TextSegments object initialized from jsonString
 | :------ | :------ | :------ |
 | jsonString | *string* | - |
 
-___
+<HorizontalLine />

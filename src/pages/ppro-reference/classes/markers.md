@@ -26,7 +26,7 @@ Returns the Markers object for Sequence Or ProjectItem
 | :------ | :------ | :------ |
 | markerOwnerObject | [*Sequence*](sequence.md) or [*ClipProjectItem*](clipprojectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -48,7 +48,7 @@ Add a new marker
 | duration | [*TickTime*](ticktime.md) | - |
 | comments | *string* | - |
 
-___
+<HorizontalLine />
 
 ### createMoveMarkerAction
 
@@ -65,7 +65,7 @@ Move the given marker at new time value
 | marker | [*Marker*](marker.md) | - |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### createRemoveMarkerAction
 
@@ -81,7 +81,7 @@ Remove the given marker
 | :------ | :------ | :------ |
 | marker | [*Marker*](marker.md) | - |
 
-___
+<HorizontalLine />
 
 ### getMarkers
 
@@ -97,4 +97,4 @@ Get all markers
 | :------ | :------ | :------ |
 | filters | [*string[]*](/ppro-reference/classes/string[]/) | Marker Type Filter (Optional) |
 
-___
+<HorizontalLine />

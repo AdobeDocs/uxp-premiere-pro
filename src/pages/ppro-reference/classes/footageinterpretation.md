@@ -33,7 +33,7 @@ keywords:
   
 Get alpha usage type property of footage
 
-___
+<HorizontalLine />
 
 ### getFieldType
 
@@ -43,7 +43,7 @@ ___
   
 Get field type of footage
 
-___
+<HorizontalLine />
 
 ### getFrameRate
 
@@ -53,7 +53,7 @@ ___
   
 Get frame rate of footage
 
-___
+<HorizontalLine />
 
 ### getIgnoreAlpha
 
@@ -63,7 +63,7 @@ ___
   
 Get ignore alpha property of footage
 
-___
+<HorizontalLine />
 
 ### getInputLUTID
 
@@ -73,7 +73,7 @@ ___
   
 Get input LUTID of footage
 
-___
+<HorizontalLine />
 
 ### getInvertAlpha
 
@@ -83,7 +83,7 @@ ___
   
 Get invert alpha property of footage
 
-___
+<HorizontalLine />
 
 ### getPixelAspectRatio
 
@@ -93,7 +93,7 @@ ___
   
 Get pixel aspect ratio of footage
 
-___
+<HorizontalLine />
 
 ### getRemovePullDown
 
@@ -103,7 +103,7 @@ ___
   
 Get removePullDown property of footage
 
-___
+<HorizontalLine />
 
 ### getVrConform
 
@@ -113,7 +113,7 @@ ___
   
 Get vr conform projection type of footage
 
-___
+<HorizontalLine />
 
 ### getVrHorzView
 
@@ -123,7 +123,7 @@ ___
   
 Get vr horizontal view of footage
 
-___
+<HorizontalLine />
 
 ### getVrLayout
 
@@ -133,7 +133,7 @@ ___
   
 Get vr layout type of footage
 
-___
+<HorizontalLine />
 
 ### getVrVertView
 
@@ -143,7 +143,7 @@ ___
   
 Get vr vertical view of footage
 
-___
+<HorizontalLine />
 
 ### setAlphaUsage
 
@@ -159,7 +159,7 @@ Set alpha usage type property of footage
 | :------ | :------ | :------ |
 | alphaUsage | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setFieldType
 
@@ -175,7 +175,7 @@ Set field type of footage
 | :------ | :------ | :------ |
 | fieldType | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setFrameRate
 
@@ -191,7 +191,7 @@ Set frame rate of footage
 | :------ | :------ | :------ |
 | frameRate | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setIgnoreAlpha
 
@@ -207,7 +207,7 @@ Set ignore alpha property of footage
 | :------ | :------ | :------ |
 | ignoreAlpha | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setInputLUTID
 
@@ -223,7 +223,7 @@ Set input LUTID of footage
 | :------ | :------ | :------ |
 | inputLUTID | *string* | - |
 
-___
+<HorizontalLine />
 
 ### setInvertAlpha
 
@@ -239,7 +239,7 @@ Set invert alpha property of footage
 | :------ | :------ | :------ |
 | invertAlpha | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setPixelAspectRatio
 
@@ -255,7 +255,7 @@ Set pixel aspect ratio of footage
 | :------ | :------ | :------ |
 | pixelAspectRatio | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setRemovePullDown
 
@@ -271,7 +271,7 @@ Set removePullDown property of footage
 | :------ | :------ | :------ |
 | removePulldown | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setVrConform
 
@@ -287,7 +287,7 @@ Set vr conform projection type of footage
 | :------ | :------ | :------ |
 | vrConform | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setVrHorzView
 
@@ -303,7 +303,7 @@ Set vr horizontal view of footage
 | :------ | :------ | :------ |
 | vrHorzView | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setVrLayout
 
@@ -319,7 +319,7 @@ Set vr layout type of footage
 | :------ | :------ | :------ |
 | vrLayOut | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setVrVertView
 
@@ -335,4 +335,4 @@ Set vr horizontal view of footage
 | :------ | :------ | :------ |
 | vrVertView | *number* | - |
 
-___
+<HorizontalLine />

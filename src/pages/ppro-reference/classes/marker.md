@@ -26,7 +26,7 @@ Return an action to set the color of the marker by the color index
 | --- | --- | --- |
 | colorIndex | *number* | -           |
 
-___
+<HorizontalLine />
 
 ### createSetCommentsAction
 
@@ -42,7 +42,7 @@ Return an action to set the comments of the marker.
 | :------ | :------ | :------ |
 | comments | *string* | - |
 
-___
+<HorizontalLine />
 
 ### createSetDurationAction
 
@@ -58,7 +58,7 @@ Return an action to set the duration of the marker.
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSetNameAction
 
@@ -74,7 +74,7 @@ Return an action to set the name of the marker.
 | :------ | :------ | :------ |
 | name | *string* | - |
 
-___
+<HorizontalLine />
 
 ### createSetTypeAction
 
@@ -90,7 +90,7 @@ Return an action to set the type of the marker.
 | :--------- | :------- | :------------------------------------------------------------------------ |
 | markerType | *string* | Can be set to "Comment", "Chapter", "Segmentation", or "WebLink"; verify exact strings against the TypeScript definitions file. |
 
-___
+<HorizontalLine />
 
 ### getColor
 
@@ -100,7 +100,7 @@ ___
   
 Get color code of the marker.
 
-___
+<HorizontalLine />
 
 ### getColorIndex
 
@@ -110,7 +110,7 @@ ___
   
 Get color index of the marker.
 
-___
+<HorizontalLine />
 
 ### getComments
 
@@ -120,7 +120,7 @@ ___
   
 Get comments of the marker.
 
-___
+<HorizontalLine />
 
 ### getDuration
 
@@ -130,7 +130,7 @@ ___
   
 Get duration time of the marker.
 
-___
+<HorizontalLine />
 
 ### getName
 
@@ -140,7 +140,7 @@ ___
   
 Get name of the marker.
 
-___
+<HorizontalLine />
 
 ### getStart
 
@@ -150,7 +150,7 @@ ___
   
 Get start time of the marker.
 
-___
+<HorizontalLine />
 
 ### getTarget
 
@@ -160,7 +160,7 @@ ___
   
 Get target of the marker. Used together with url for web targets.
 
-___
+<HorizontalLine />
 
 ### getType
 
@@ -170,7 +170,7 @@ ___
   
 Get type of the marker. e.g. Cue / Track / Subclip / Cart
 
-___
+<HorizontalLine />
 
 ### getUrl
 
@@ -180,4 +180,4 @@ ___
   
 Get url of the marker.
 
-___
+<HorizontalLine />

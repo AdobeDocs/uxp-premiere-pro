@@ -28,7 +28,7 @@ Export a sequence as Final Cut Pro XML to the specified output file path.
 | outputFilePath | *string* | - |
 | suppressUI | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### exportAsOpenTimelineIO
 
@@ -46,4 +46,4 @@ Export a sequence as OpenTimelineIO to the specified output file path.
 | outputFilePath | *string* | - |
 | suppressUI | *boolean* | - |
 
-___
+<HorizontalLine />

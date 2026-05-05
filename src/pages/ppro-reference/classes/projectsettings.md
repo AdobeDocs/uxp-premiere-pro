@@ -27,7 +27,7 @@ Returns an action which sets IngestSettings
 | project | [*Project*](project.md) | - |
 | ingestSettings | [*IngestSettings*](ingestsettings.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSetScratchDiskSettingsAction
 
@@ -44,7 +44,7 @@ Returns an action which sets ScratchDiskSetting
 | project | [*Project*](project.md) | - |
 | scratchDiskSettings | [*ScratchDiskSettings*](scratchdisksettings.md) | - |
 
-___
+<HorizontalLine />
 
 ### getIngestSettings
 
@@ -60,7 +60,7 @@ Returns project ingest settings
 | :------ | :------ | :------ |
 | project | [*Project*](project.md) | - |
 
-___
+<HorizontalLine />
 
 ### getScratchDiskSettings
 
@@ -76,4 +76,4 @@ Returns project ScratchDiskSettings
 | :------ | :------ | :------ |
 | project | [*Project*](project.md) | - |
 
-___
+<HorizontalLine />

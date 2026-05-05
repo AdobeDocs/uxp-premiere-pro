@@ -27,4 +27,4 @@ Performs cut detection on the sequence selection
 | clipOperation | *string* | - |
 | trackItemSelection | [*TrackItemSelection*](trackitemselection.md) | - |
 
-___
+<HorizontalLine />

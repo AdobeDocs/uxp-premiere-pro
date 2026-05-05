@@ -20,7 +20,7 @@ keywords:
   
 Close all clips on Source Monitor
 
-___
+<HorizontalLine />
 
 ### closeClip
 
@@ -30,7 +30,7 @@ ___
   
 Close clip on Source Monitor
 
-___
+<HorizontalLine />
 
 ### getPosition
 
@@ -40,7 +40,7 @@ ___
   
 Get position of source monitor in time
 
-___
+<HorizontalLine />
 
 ### getProjectItem
 
@@ -50,7 +50,7 @@ ___
   
 Get projectItem at source monitor
 
-___
+<HorizontalLine />
 
 ### openFilePath
 
@@ -66,7 +66,7 @@ Open the item at the specified path and send to the Source Monitor for preview
 | :------ | :------ | :------ |
 | filePath | *string* | - |
 
-___
+<HorizontalLine />
 
 ### openProjectItem
 
@@ -82,7 +82,7 @@ Open input projectItem on Source Monitor
 | :------ | :------ | :------ |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### play
 
@@ -98,4 +98,4 @@ Play clip at source monitor with input speed
 | :------ | :------ | :------ |
 | speed | *number* | - |
 
-___
+<HorizontalLine />

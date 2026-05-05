@@ -26,7 +26,7 @@ Get Sequence Editor reference for editing the sequence timeline
 | :------ | :------ | :------ |
 | sequenceObject | [*Sequence*](sequence.md) | - |
 
-___
+<HorizontalLine />
 
 ### getInstalledMogrtPath
 
@@ -36,7 +36,7 @@ ___
   
 Get local directory path to adobe mogrt files
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -59,7 +59,7 @@ Duplicate trackItem using an insert or overwrite edit method to a destination tr
 | alignToVideo | *boolean* | - |
 | isInsert | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### createInsertProjectItemAction
 
@@ -79,7 +79,7 @@ Create insert ProjectItem into Sequence Action. Note: If you pass a track index 
 | audioTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
 | limitShift | [*Boolean*](/ppro-reference/classes/boolean/index.md) | - |
 
-___
+<HorizontalLine />
 
 ### createOverwriteItemAction
 
@@ -98,7 +98,7 @@ Create overwrite Sequence with ProjectItem Action
 | videoTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
 | audioTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
 
-___
+<HorizontalLine />
 
 ### createRemoveItemsAction
 
@@ -117,7 +117,7 @@ Create remove action for sequence
 | mediaType | [*Constants.MediaType*](../constants/index.md) | - |
 | shiftOverLapping | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### insertMogrtFromLibrary
 
@@ -137,7 +137,7 @@ Insert input MGT into sequence with time and index defined
 | inVideoTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
 | inAudioTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
 
-___
+<HorizontalLine />
 
 ### insertMogrtFromPath
 
@@ -156,4 +156,4 @@ Insert input MGT into sequence with time and index defined
 | inVideoTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
 | inAudioTrackIndex | [*Number*](/ppro-reference/classes/number/index.md) | - |
 
-___
+<HorizontalLine />

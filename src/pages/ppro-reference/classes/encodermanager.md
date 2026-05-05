@@ -33,7 +33,7 @@ Get the Export File Extension of Input Preset file
 | sequence | [*Sequence*](sequence.md) | - |
 | presetFilePath | *string* | - |
 
-___
+<HorizontalLine />
 
 ### getManager
 
@@ -43,7 +43,7 @@ ___
   
 Get the Encoder Manager object.
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -68,7 +68,7 @@ Encode input media file in AME
 | removeUponCompletion | *boolean* | - |
 | startQueueImmediately | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### encodeProjectItem
 
@@ -89,7 +89,7 @@ Encode input clipProjectItem in AME
 | removeUponCompletion | *boolean* | - |
 | startQueueImmediately | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### exportSequence
 
@@ -109,7 +109,7 @@ Export a sequence. If no output file and preset is specified, the sequence will 
 | presetFile | *string* | - |
 | exportFull | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ## Events
 

@@ -35,7 +35,7 @@ Set whether to apply transition to the start or end of trackitem
 | :------ | :------ | :------ |
 | applyToStart | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setDuration
 
@@ -51,7 +51,7 @@ Sets the duration of transition
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | Sets the duration of transition in TickTime |
 
-___
+<HorizontalLine />
 
 ### setForceSingleSided
 
@@ -67,7 +67,7 @@ Set whether transition should be applied to one/both sides
 | :------ | :------ | :------ |
 | forceSingleSided | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setTransitionAlignment
 
@@ -83,4 +83,4 @@ Sets the transitionAlignment of the transition
 | :------ | :------ | :------ |
 | transitionAlignment | *number* | - |
 
-___
+<HorizontalLine />

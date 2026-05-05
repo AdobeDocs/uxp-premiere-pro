@@ -26,7 +26,7 @@ Returns an action that moves the inPoint of the track item to a new time, by shi
 | --- | --- | --- |
 | tickTime | [*TickTime*](ticktime.md) | -           |
 
-___
+<HorizontalLine />
 
 ### createSetDisabledAction
 
@@ -42,7 +42,7 @@ Returns an action that enables/disables the trackItem
 | :------ | :------ | :------ |
 | disabled | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### createSetEndAction
 
@@ -58,7 +58,7 @@ Create set end time action for sequence
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSetInPointAction
 
@@ -74,7 +74,7 @@ Create SetInPointAction for setting the track item in point relative to the star
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | Sets the In-Point in TickTime |
 
-___
+<HorizontalLine />
 
 ### createSetNameAction
 
@@ -90,7 +90,7 @@ Returns an action that renames the trackItem
 | :------ | :------ | :------ |
 | inName | *string* | - |
 
-___
+<HorizontalLine />
 
 ### createSetOutPointAction
 
@@ -106,7 +106,7 @@ Create SetOutPointAction for setting the track item out point relative to the st
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | Sets the Out-Point in TickTime |
 
-___
+<HorizontalLine />
 
 ### createSetStartAction
 
@@ -122,7 +122,7 @@ Create set start time action for sequence
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### getComponentChain
 
@@ -132,7 +132,7 @@ ___
   
 Returns AudioComponentChain
 
-___
+<HorizontalLine />
 
 ### getDuration
 
@@ -142,7 +142,7 @@ ___
   
 Returns timecode representing the duration of this track item relative to the sequence start.
 
-___
+<HorizontalLine />
 
 ### getEndTime
 
@@ -152,7 +152,7 @@ ___
   
 Returns a TickTime object representing the ending sequence time of this track item relative to the sequence start time.
 
-___
+<HorizontalLine />
 
 ### getInPoint
 
@@ -162,7 +162,7 @@ ___
   
 Returns a TickTime object representing the track item in point relative to the start time of the project item referenced by this track item.
 
-___
+<HorizontalLine />
 
 ### getIsSelected
 
@@ -172,7 +172,7 @@ ___
   
 Returns if trackItem is selected or not
 
-___
+<HorizontalLine />
 
 ### getMatchName
 
@@ -182,7 +182,7 @@ ___
   
 Returns the value of internal matchname for this trackItem
 
-___
+<HorizontalLine />
 
 ### getMediaType
 
@@ -192,7 +192,7 @@ ___
   
 Returns UUID representing the underlying media type of this track item
 
-___
+<HorizontalLine />
 
 ### getName
 
@@ -202,7 +202,7 @@ ___
   
 Returns the display name for trackItem
 
-___
+<HorizontalLine />
 
 ### getOutPoint
 
@@ -212,7 +212,7 @@ ___
   
 Returns a TickTime object representing the track item out point relative to the start time of the project item referenced by this track item.
 
-___
+<HorizontalLine />
 
 ### getProjectItem
 
@@ -222,7 +222,7 @@ ___
   
 Returns the project item for this track item.
 
-___
+<HorizontalLine />
 
 ### getSpeed
 
@@ -232,7 +232,7 @@ ___
   
 Returns the value of speed of the trackItem
 
-___
+<HorizontalLine />
 
 ### getStartTime
 
@@ -242,7 +242,7 @@ ___
   
 Returns a TickTime object representing the starting sequence time of this track item relative to the sequence start time.
 
-___
+<HorizontalLine />
 
 ### getTrackIndex
 
@@ -252,7 +252,7 @@ ___
   
 Index representing the track index of the track this track item belongs to
 
-___
+<HorizontalLine />
 
 ### getType
 
@@ -262,7 +262,7 @@ ___
   
 Index representing the type of this track item.
 
-___
+<HorizontalLine />
 
 ### isAdjustmentLayer
 
@@ -272,7 +272,7 @@ ___
   
 Returns true if the trackitem is an adjustment layer
 
-___
+<HorizontalLine />
 
 ### isDisabled
 
@@ -282,7 +282,7 @@ ___
   
 Returns true if trackitem is muted/disabled
 
-___
+<HorizontalLine />
 
 ### isSpeedReversed
 
@@ -292,4 +292,4 @@ ___
   
 Returns true if the trackitem is reversed
 
-___
+<HorizontalLine />

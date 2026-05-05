@@ -31,4 +31,4 @@ Exports from a sequence. Supported formats are bmp, dpx, gif, jpg, exr, png, tga
 | width | *number* | - |
 | height | *number* | - |
 
-___
+<HorizontalLine />

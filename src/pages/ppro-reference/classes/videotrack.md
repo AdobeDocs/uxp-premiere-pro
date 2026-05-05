@@ -27,7 +27,7 @@ keywords:
   
 Index representing the track index of this track within the track group.
 
-___
+<HorizontalLine />
 
 ### getMediaType
 
@@ -37,7 +37,7 @@ ___
   
 UUID representing the underlying media type of this track
 
-___
+<HorizontalLine />
 
 ### getTrackItems
 
@@ -54,7 +54,7 @@ Returns array of VideoClipTrackItem from the track item type
 | trackItemType | [*Constants.TrackItemType*](../constants/index.md) | This values can be Empty (0), Clip (1), Transition (2), Preview (3) or Feedback (4) |
 | includeEmptyTrackItems | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### isMuted
 
@@ -64,7 +64,7 @@ ___
   
 Get mute state of the track
 
-___
+<HorizontalLine />
 
 ### setMute
 
@@ -80,7 +80,7 @@ sets the mute state of the track to muted/unmuted
 | :------ | :------ | :------ |
 | mute | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ## Events
 

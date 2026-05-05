@@ -20,4 +20,4 @@ keywords:
   
 Get the project items that is represented by this selection.
 
-___
+<HorizontalLine />

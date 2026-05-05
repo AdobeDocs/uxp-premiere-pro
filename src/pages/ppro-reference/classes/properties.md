@@ -26,7 +26,7 @@ Return Property Owner Object
 | :------ | :------ | :------ |
 | propertyOwnerObject | [*Project*](project.md) or [*Sequence*](sequence.md) | This can also be object instance of Project, Sequence etc.. |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -44,7 +44,7 @@ Create an action to clear the value with the given name. This method can fail if
 | :------ | :------ | :------ |
 | name | *string* | - |
 
-___
+<HorizontalLine />
 
 ### createSetValueAction
 
@@ -52,7 +52,7 @@ ___
 
 *Action*
   
-Create an action to set a named value through scripting. The parameters are <name, value (number, boolean or string), persistence flag>. This method can fail if e.g. the underlying properties object does not support action based setting of properties.
+Create an action to set a named value through scripting. The parameters are \<name, value (number, boolean or string), persistence flag\>. This method can fail if e.g. the underlying properties object does not support action based setting of properties.
 
 #### Parameters
 
@@ -62,7 +62,7 @@ Create an action to set a named value through scripting. The parameters are <nam
 | value | *boolean* or *string* or *number* | Value to set for the property key |
 | persistenceFlag | [*Constants.PropertyType*](../constants/index.md) | Indicates whether the property should be persisted or not |
 
-___
+<HorizontalLine />
 
 ### getValue
 
@@ -78,7 +78,7 @@ Get named value in native string form
 | :------ | :------ | :------ |
 | name | *string* | - |
 
-___
+<HorizontalLine />
 
 ### getValueAsBool
 
@@ -94,7 +94,7 @@ Get named value as boolean
 | :------ | :------ | :------ |
 | name | *string* | - |
 
-___
+<HorizontalLine />
 
 ### getValueAsFloat
 
@@ -110,7 +110,7 @@ Get named value as float number
 | :------ | :------ | :------ |
 | name | *string* | - |
 
-___
+<HorizontalLine />
 
 ### getValueAsInt
 
@@ -126,7 +126,7 @@ Get named value as integer number
 | :------ | :------ | :------ |
 | name | *string* | - |
 
-___
+<HorizontalLine />
 
 ### hasValue
 
@@ -142,4 +142,4 @@ Check if a named value exists under this name.
 | :------ | :------ | :------ |
 | name | *string* | - |
 
-___
+<HorizontalLine />

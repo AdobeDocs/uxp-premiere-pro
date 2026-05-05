@@ -52,33 +52,12 @@ var ws = new WebSocket("wss://demos.kaazing.com/echo","wss");
 **Read only**
 Current state of the WebSocket connection.
 One of the following values:
-\<table\>
-  \<tr\>
-    \<th\>Number\</th\>
-    \<th\>Status\</th\>
-    \<th\>Description\</th\>
-  \</tr\>
-  \<tr\>
-    \<td\>0\</td\>
-    \<td\>CONNECTING\</td\>
-    \<td\>Socket has been created. The connection is not yet opened.\</td\>
-  \</tr\>
-  \<tr\>
-    \<td\>1\</td\>
-    \<td\>OPEN\</td\>
-    \<td\>Connection is open and ready to communicate.\</td\>
-  \</tr\>
-  \<tr\>
-    \<td\>2\</td\>
-    \<td\>CLOSING\</td\>
-    \<td\>Connection is in the process of closing.\</td\>
-  \</tr\>
-  \<tr\>
-    \<td\>3\</td\>
-    \<td\>CLOSED\</td\>
-    \<td\>Connection is closed or couldn't be opened.\</td\>
-  \</tr\>
-\</table\>
+| Number | Status | Description |
+| --- | --- | --- |
+| 0 | CONNECTING | Socket has been created. The connection is not yet opened. |
+| 1 | OPEN | Connection is open and ready to communicate. |
+| 2 | CLOSING | Connection is in the process of closing. |
+| 3 | CLOSED | Connection is closed or couldn't be opened. |
 
 
 
@@ -138,10 +117,9 @@ Closes the websocket connection.
 - `Error` If invalid code or reason is passed
 
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| [code] | `number` | `1000` | Integer value as per https://developer.mozilla.org/en-US/docs/Web/API/WebSocket#close(). |
-| [reason] | `string` |  | Human-readable string explaining why the connection is closing. The default value is "". |
+| Param | Type | Default | Description                                                                                                                                                    |
+| --- | --- | --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [code] | `number` | `1000` | Integer value as per [https://developer.mozilla.org/en-US/docs/Web/API/WebSocket#close()](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket#close()). |
+| [reason] | `string` |  | Human-readable string explaining why the connection is closing. The default value is "".                                                                       |
 
 
-  

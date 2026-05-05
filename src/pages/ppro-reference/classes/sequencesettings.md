@@ -20,7 +20,7 @@ keywords:
   
 Get number of channels in the sequence
 
-___
+<HorizontalLine />
 
 ### getAudioChannelType
 
@@ -30,7 +30,7 @@ ___
   
 Get Audio channel type of sequence. Could be 0 (Mono), 1 (Stereo), 2 (5.1), or 3 (multichannel)
 
-___
+<HorizontalLine />
 
 ### getAudioDisplayFormat
 
@@ -40,7 +40,7 @@ ___
   
 Get Audio display format
 
-___
+<HorizontalLine />
 
 ### getAudioSampleRate
 
@@ -50,7 +50,7 @@ ___
   
 Get audio sample rate
 
-___
+<HorizontalLine />
 
 ### getCompositeInLinearColor
 
@@ -60,7 +60,7 @@ ___
   
 Get if composite in linear color is checked
 
-___
+<HorizontalLine />
 
 ### getEditingMode
 
@@ -70,7 +70,7 @@ ___
   
 Get editing mode of sequence
 
-___
+<HorizontalLine />
 
 ### getMaximumBitDepth
 
@@ -80,7 +80,7 @@ ___
   
 Find if maximum bit depth is set
 
-___
+<HorizontalLine />
 
 ### getMaxRenderQuality
 
@@ -90,7 +90,7 @@ ___
   
 Find if maximum render quality is set
 
-___
+<HorizontalLine />
 
 ### getPreviewCodec
 
@@ -100,7 +100,7 @@ ___
   
 Get preview codec of sequence
 
-___
+<HorizontalLine />
 
 ### getPreviewFileFormat
 
@@ -110,7 +110,7 @@ ___
   
 Get preview file format of sequence
 
-___
+<HorizontalLine />
 
 ### getPreviewFrameRect
 
@@ -120,7 +120,7 @@ ___
   
 Get preview video frame rect in the sequence
 
-___
+<HorizontalLine />
 
 ### getVideoDisplayFormat
 
@@ -130,7 +130,7 @@ ___
   
 Get Video display format
 
-___
+<HorizontalLine />
 
 ### getVideoFieldType
 
@@ -140,7 +140,7 @@ ___
   
 Get video field type in the sequence
 
-___
+<HorizontalLine />
 
 ### getVideoFrameRate
 
@@ -150,7 +150,7 @@ ___
   
 Get video frame rate in the sequence
 
-___
+<HorizontalLine />
 
 ### getVideoFrameRect
 
@@ -160,7 +160,7 @@ ___
   
 Get video frame rect in the sequence
 
-___
+<HorizontalLine />
 
 ### getVideoPixelAspectRatio
 
@@ -170,7 +170,7 @@ ___
   
 Get Video display format
 
-___
+<HorizontalLine />
 
 ### setAudioDisplayFormat
 
@@ -186,7 +186,7 @@ Set audio display format of sequence.
 | :------ | :------ | :------ |
 | audioDisplay | [*TimeDisplay*](timedisplay.md) | - |
 
-___
+<HorizontalLine />
 
 ### setAudioSampleRate
 
@@ -202,7 +202,7 @@ Set audio sample rate
 | :------ | :------ | :------ |
 | inRate | [*FrameRate*](framerate.md) | - |
 
-___
+<HorizontalLine />
 
 ### setCompositeInLinearColor
 
@@ -218,7 +218,7 @@ Set if composite in linear color is checked
 | :------ | :------ | :------ |
 | useCompositeInLinearColor | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setEditingMode
 
@@ -234,7 +234,7 @@ Set editing mode of sequence
 | :------ | :------ | :------ |
 | inEditingModeName | *string* | - |
 
-___
+<HorizontalLine />
 
 ### setMaximumBitDepth
 
@@ -250,7 +250,7 @@ Set maximum bit depth to true/false
 | :------ | :------ | :------ |
 | useMaxBitDepth | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setMaxRenderQuality
 
@@ -266,7 +266,7 @@ Set maximum render quality to true/false
 | :------ | :------ | :------ |
 | useMaxRenderQuality | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setPreviewCodec
 
@@ -282,7 +282,7 @@ Set preview codec of sequence
 | :------ | :------ | :------ |
 | inPreviewCodec | *string* | - |
 
-___
+<HorizontalLine />
 
 ### setPreviewFileFormat
 
@@ -298,7 +298,7 @@ Set preview file format of sequence
 | :------ | :------ | :------ |
 | inPreviewCodec | *string* | - |
 
-___
+<HorizontalLine />
 
 ### setPreviewFrameRect
 
@@ -314,7 +314,7 @@ Set preview video frame rect in sequence
 | :------ | :------ | :------ |
 | inPreviewVideoRect | [*RectF*](rectf.md) | - |
 
-___
+<HorizontalLine />
 
 ### setVideoDisplayFormat
 
@@ -330,7 +330,7 @@ Set video display format of sequence
 | :------ | :------ | :------ |
 | audioDisplay | [*TimeDisplay*](timedisplay.md) | - |
 
-___
+<HorizontalLine />
 
 ### setVideoFieldType
 
@@ -346,7 +346,7 @@ Set video field type in sequence
 | :------ | :------ | :------ |
 | videoFiledType | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setVideoFrameRate
 
@@ -362,7 +362,7 @@ Set video frame rate in the sequence
 | :------ | :------ | :------ |
 | inVideoFrameRate | [*FrameRate*](framerate.md) | - |
 
-___
+<HorizontalLine />
 
 ### setVideoFrameRect
 
@@ -378,7 +378,7 @@ Set video frame rect in sequence
 | :------ | :------ | :------ |
 | inVideoFrameRect | [*RectF*](rectf.md) | - |
 
-___
+<HorizontalLine />
 
 ### setVideoPixelAspectRatio
 
@@ -394,4 +394,4 @@ Set video display format of sequence
 | :------ | :------ | :------ |
 | inPixelAspectRatio | *string* | - |
 
-___
+<HorizontalLine />

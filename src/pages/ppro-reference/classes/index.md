@@ -20,7 +20,7 @@ Root of the API, accessed at `require("premierepro")`
 
 The different constants and enumerations that DOM APIs expect as certain parameters.
 
-___
+<HorizontalLine />
 
 ### core
 
@@ -28,4 +28,4 @@ ___
 
 The set of lower level APIs for directly interfacing with Premiere UI and user.
 
-___
+<HorizontalLine />

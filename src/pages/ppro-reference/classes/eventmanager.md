@@ -28,7 +28,7 @@ add global event listener
 | eventHandler | *(event?: object) => void* | - |
 | inCapturePhase? | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### removeGlobalEventListener
 
@@ -45,4 +45,4 @@ remove global event listener
 | eventName | *string* or [*Constants.SnapEvent*](../constants/index.md) or [*Constants.ProjectEvent*](../constants/index.md) or [*Constants.SequenceEvent*](../constants/index.md) or [*Constants.OperationCompleteEvent*](../constants/index.md) | - |
 | eventHandler | *(event?: object) => void* | - |
 
-___
+<HorizontalLine />

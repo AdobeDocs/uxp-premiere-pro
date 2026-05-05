@@ -26,7 +26,7 @@ Creates a new video filter component based on the input matchName
 | :------ | :------ | :------ |
 | matchName | *string* | The match name of the component to create, example 'PR.ADBE Solarize', 'AE.ADBE Mosaic' etc.. |
 
-___
+<HorizontalLine />
 
 ### getDisplayNames
 
@@ -36,7 +36,7 @@ ___
   
 Returns an array of video filter display names
 
-___
+<HorizontalLine />
 
 ### getMatchNames
 
@@ -46,4 +46,4 @@ ___
   
 Returns an array of video filter matchNames
 
-___
+<HorizontalLine />

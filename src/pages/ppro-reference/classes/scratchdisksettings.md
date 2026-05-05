@@ -26,7 +26,7 @@ Gets the scratchDisk location for specific disktype - may return symbolic paths 
 | :------ | :------ | :------ |
 | ScratchDiskType | [*Constants.ScratchDiskFolderType*](../constants/index.md) | - |
 
-___
+<HorizontalLine />
 
 ### setScratchDiskPath
 
@@ -43,4 +43,4 @@ Sets project ScratchDisk Path
 | ScratchDiskType | [*Constants.ScratchDiskFolderType*](../constants/index.md) | - |
 | ScratchDiskValue | [*Constants.ScratchDiskFolder*](../constants/index.md) | - |
 
-___
+<HorizontalLine />

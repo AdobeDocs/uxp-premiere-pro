@@ -26,7 +26,7 @@ Creates and returns an append component action
 | :------ | :------ | :------ |
 | component | [*Component*](component.md) or [*AudioFilterComponent*](/ppro-reference/classes/audiofiltercomponent/index.md) | Audio filter component |
 
-___
+<HorizontalLine />
 
 ### createInsertComponentAction
 
@@ -43,7 +43,7 @@ Creates and returns an insert component action
 | component | [*Component*](component.md) or [*AudioFilterComponent*](/ppro-reference/classes/audiofiltercomponent/index.md) | Audio filter component |
 | componentInsertionIndex | *number* | Index which the component shall be inserted |
 
-___
+<HorizontalLine />
 
 ### createRemoveComponentAction
 
@@ -59,7 +59,7 @@ Creates and returns an remove component action
 | :------ | :------ | :------ |
 | component | [*Component*](component.md) or [*AudioFilterComponent*](/ppro-reference/classes/audiofiltercomponent/index.md) | Audio filter component |
 
-___
+<HorizontalLine />
 
 ### getComponentAtIndex
 
@@ -75,7 +75,7 @@ Returns the component at the given index
 | :------ | :------ | :------ |
 | componentIndex | *number* | - |
 
-___
+<HorizontalLine />
 
 ### getComponentCount
 
@@ -85,4 +85,4 @@ ___
   
 Gets the number of components in the component chain
 
-___
+<HorizontalLine />

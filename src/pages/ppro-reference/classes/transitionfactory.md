@@ -26,7 +26,7 @@ Creates a new video filter component based on the input matchName
 | :------ | :------ | :------ |
 | matchName | *string* | - |
 
-___
+<HorizontalLine />
 
 ### getVideoTransitionMatchNames
 
@@ -36,4 +36,4 @@ ___
   
 Return a promise which will be fullfilled with an array of video transition matchnames
 
-___
+<HorizontalLine />

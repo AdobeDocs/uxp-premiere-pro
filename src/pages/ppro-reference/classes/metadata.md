@@ -28,7 +28,7 @@ Add name and label property to project metadata schema
 | label | *string* | - |
 | type | *number* | - |
 
-___
+<HorizontalLine />
 
 ### createSetProjectMetadataAction
 
@@ -46,7 +46,7 @@ Get set project metadata action
 | metadata | *string* | - |
 | updatedFields | [*string[]*](/ppro-reference/classes/string[]/) | - |
 
-___
+<HorizontalLine />
 
 ### createSetXMPMetadataAction
 
@@ -63,7 +63,7 @@ Get set project XMP metadata action
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 | metadata | *string* | - |
 
-___
+<HorizontalLine />
 
 ### getProjectColumnsMetadata
 
@@ -79,7 +79,7 @@ Get project column metadata from project item
 | :------ | :------ | :------ |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### getProjectMetadata
 
@@ -95,7 +95,7 @@ Get project metadata
 | :------ | :------ | :------ |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### getProjectPanelMetadata
 
@@ -105,7 +105,7 @@ ___
   
 Get project panel metadata
 
-___
+<HorizontalLine />
 
 ### getXMPMetadata
 
@@ -121,7 +121,7 @@ Get project XMP metadata
 | :------ | :------ | :------ |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### setProjectPanelMetadata
 
@@ -137,4 +137,4 @@ Set project panel metadata
 | :------ | :------ | :------ |
 | metadata | *string* | - |
 
-___
+<HorizontalLine />

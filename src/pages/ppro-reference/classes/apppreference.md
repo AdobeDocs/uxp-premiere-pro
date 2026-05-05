@@ -26,7 +26,7 @@ Get preference value in native string form
 | :------ | :------ | :------ |
 | preferenceKey | [*Constants.PreferenceKey*](../constants/index.md) | App preference key to get |
 
-___
+<HorizontalLine />
 
 ### setValue
 
@@ -34,7 +34,7 @@ ___
 
 *boolean*
   
-Set backend preference using given list of property keys. The parameters are <key, value (number, boolean or string), persistence flag>
+Set backend preference using given list of property keys. The parameters are \<key, value (number, boolean or string), persistence flag\>
 
 #### Parameters
 
@@ -44,4 +44,4 @@ Set backend preference using given list of property keys. The parameters are <ke
 | value | *boolean* or *string* or *number* | Value to set for the preference key |
 | persistenceFlag | [*Constants.PropertyType*](../constants/index.md) | Indicates whether the preference should be persisted or not |
 
-___
+<HorizontalLine />

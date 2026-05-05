@@ -26,7 +26,7 @@ Create empty selection
 | :------ | :------ | :------ |
 | undefined | *(selection: TrackItemSelection) => void* | - |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -45,7 +45,7 @@ Add a track item to this selection
 | trackItem | [*VideoClipTrackItem*](videocliptrackitem.md) or [*AudioClipTrackItem*](audiocliptrackitem.md) | trackItem to be added to selection |
 | skipDuplicateCheck | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### getTrackItems
 
@@ -55,7 +55,7 @@ ___
   
 return list of trackItems inside of trackItemSelection
 
-___
+<HorizontalLine />
 
 ### removeItem
 
@@ -71,4 +71,4 @@ Remove a track item from this selection
 | :------ | :------ | :------ |
 | trackItem | [*VideoClipTrackItem*](videocliptrackitem.md) or [*AudioClipTrackItem*](audiocliptrackitem.md) | trackItem to be removed from selection |
 
-___
+<HorizontalLine />

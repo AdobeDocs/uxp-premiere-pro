@@ -20,7 +20,7 @@ keywords:
   
 Returned Promise will be fullfilled with the value of display name for this component
 
-___
+<HorizontalLine />
 
 ### getMatchName
 
@@ -30,7 +30,7 @@ ___
   
 Returned Promise will be fullfilled with the value of internal matchname for this component
 
-___
+<HorizontalLine />
 
 ### getParam
 
@@ -46,7 +46,7 @@ Get a parameter from the component based on the given input index. Parameter ind
 | :------ | :------ | :------ |
 | paramIndex | *number* | - |
 
-___
+<HorizontalLine />
 
 ### getParamCount
 
@@ -56,4 +56,4 @@ ___
   
 Gets the number of param in the component
 
-___
+<HorizontalLine />

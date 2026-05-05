@@ -26,7 +26,7 @@ keywords:
   
 Returns bool whether keyframes are supported for this component parameter
 
-___
+<HorizontalLine />
 
 ### createAddKeyframeAction
 
@@ -42,7 +42,7 @@ Creates and returns an action object which can be used to add a keyframe compone
 | :------ | :------ | :------ |
 | inKeyFrame | [*Keyframe*](keyframe.md) | - |
 
-___
+<HorizontalLine />
 
 ### createKeyframe
 
@@ -58,7 +58,7 @@ Creates and returns a keyframe initialised with the ComponentParam's type and pa
 | :------ | :------ | :------ |
 | inValue | *number* or *string* or *boolean* or [*PointF*](pointf.md) or [*Color*](color.md) | Input could be number, string, boolean, PointF, or Color depend on effect param type |
 
-___
+<HorizontalLine />
 
 ### createRemoveKeyframeAction
 
@@ -75,7 +75,7 @@ Returns an action which removes keyframe at specific time
 | inTime | [*TickTime*](ticktime.md) | - |
 | UpdateUI | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### createRemoveKeyframeRangeAction
 
@@ -93,7 +93,7 @@ Returns an action which removes keyframe at specific time range
 | outTime | [*TickTime*](ticktime.md) | - |
 | UpdateUI | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### createSetInterpolationAtKeyframeAction
 
@@ -111,7 +111,7 @@ Returns an action which sets the interpolation mode of keyframe at the given tim
 | InterpolationMode | *number* | - |
 | UpdateUI | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### createSetTimeVaryingAction
 
@@ -127,7 +127,7 @@ Creates and returns an action object to set the component to be time varying
 | :------ | :------ | :------ |
 | inTimeVarying | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### createSetValueAction
 
@@ -144,7 +144,7 @@ Creates and returns an action object which can be used to set the value of a non
 | inKeyFrame | [*Keyframe*](keyframe.md) | - |
 | inSafeForPlayback | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### findNearestKeyframe
 
@@ -161,7 +161,7 @@ Find sthe nearest key for the given time
 | inTime | [*TickTime*](ticktime.md) | - |
 | outTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### findNextKeyframe
 
@@ -177,7 +177,7 @@ find the next keyframe for the given time
 | :------ | :------ | :------ |
 | inTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### findPreviousKeyframe
 
@@ -193,7 +193,7 @@ find the previous keyframe for the given time
 | :------ | :------ | :------ |
 | inTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### getKeyframeListAsTickTimes
 
@@ -203,7 +203,7 @@ ___
   
 Get a list of tickTime for the keyframes of this component param
 
-___
+<HorizontalLine />
 
 ### getKeyframePtr
 
@@ -219,7 +219,7 @@ Get the Keyframe at the given tickTime postion
 | :------ | :------ | :------ |
 | time | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### getStartValue
 
@@ -229,7 +229,7 @@ ___
   
 Returned promise will be fullfilled with the start value (keyframe) of the component param
 
-___
+<HorizontalLine />
 
 ### getValueAtTime
 
@@ -245,7 +245,7 @@ Gets the value of component Param at the given time
 | :------ | :------ | :------ |
 | time | [*TickTime*](ticktime.md) | The time at which to get the value of the component param |
 
-___
+<HorizontalLine />
 
 ### isTimeVarying
 
@@ -255,4 +255,4 @@ ___
   
 Returns true if the parameter value varies over time (for the duration of the item)
 
-___
+<HorizontalLine />

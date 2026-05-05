@@ -27,4 +27,4 @@ Import text segments in JSON format for handling via callback.
 | json | *string* | - |
 | undefined | *( importedTranscription: TextSegments ) => void* | - |
 
-___
+<HorizontalLine />

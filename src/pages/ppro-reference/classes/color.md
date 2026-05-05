@@ -35,4 +35,4 @@ Returns true if the given ColorObject is equal to this ColorObject
 | :------ | :------ | :------ |
 | colorObject | [*Color*](color.md) | - |
 
-___
+<HorizontalLine />

@@ -33,7 +33,7 @@ Cast ProjectItem in to FolderItem
 | :------ | :------ | :------ |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -52,7 +52,7 @@ Returns an action that lets users create a new bin.
 | name | *string* | - |
 | makeUnique | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### createMoveItemAction
 
@@ -69,7 +69,7 @@ Creates an action that moves the given item to the provided folder item newParen
 | item | [*ProjectItem*](projectitem.md) | - |
 | newParent | [*FolderItem*](folderitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### createRemoveItemAction
 
@@ -85,7 +85,7 @@ Creates an action that removes the given item from this folder.
 | :------ | :------ | :------ |
 | item | [*ProjectItem*](projectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ### createRenameBinAction
 
@@ -101,7 +101,7 @@ Rename the Bin and return true if it's successful
 | :------ | :------ | :------ |
 | name | *string* | - |
 
-___
+<HorizontalLine />
 
 ### createSetColorLabelAction
 
@@ -117,7 +117,7 @@ Create an action for set color label to projectItem by index
 | :------ | :------ | :------ |
 | inColorLabelIndex | *number* | - |
 
-___
+<HorizontalLine />
 
 ### createSetNameAction
 
@@ -133,7 +133,7 @@ Returns action that renames projectItem
 | :------ | :------ | :------ |
 | inName | *string* | - |
 
-___
+<HorizontalLine />
 
 ### createSmartBinAction
 
@@ -150,7 +150,7 @@ Creates a smart bin with given name and returns the Folder object
 | name | *string* | - |
 | searchQuery | *string* | - |
 
-___
+<HorizontalLine />
 
 ### getColorLabelIndex
 
@@ -160,7 +160,7 @@ ___
   
 Get color label index of projectItem
 
-___
+<HorizontalLine />
 
 ### getItems
 
@@ -170,7 +170,7 @@ ___
   
 Collection of child items of this folder.
 
-___
+<HorizontalLine />
 
 ### getProject
 
@@ -180,4 +180,4 @@ ___
   
 Get the parent Project of this projectItem.
 
-___
+<HorizontalLine />

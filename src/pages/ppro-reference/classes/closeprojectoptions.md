@@ -35,7 +35,7 @@ Set whether the app should be prepared to quit when open/closing a project
 | :------ | :------ | :------ |
 | isAppBeingPreparedToQuit | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setPromptIfDirty
 
@@ -51,7 +51,7 @@ Set whether to prompt if a project is dirty on project open/close
 | :------ | :------ | :------ |
 | promptIfDirty | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setSaveWorkspace
 
@@ -67,7 +67,7 @@ Set whether to save your workspaces when opening/closing a project
 | :------ | :------ | :------ |
 | isAppBeingPreparedToQuit | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setShowCancelButton
 
@@ -83,4 +83,4 @@ Set whether to show the cancel button on project open/close
 | :------ | :------ | :------ |
 | showCancelButton | *boolean* | - |
 
-___
+<HorizontalLine />

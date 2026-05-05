@@ -33,7 +33,7 @@ Cast FolderItem or ClipProjectItem in to ProjectItem
 | :------ | :------ | :------ |
 | item | [*FolderItem*](folderitem.md) or [*ClipProjectItem*](clipprojectitem.md) | - |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -51,7 +51,7 @@ Create an action for set color label to projectItem by index
 | :------ | :------ | :------ |
 | inColorLabelIndex | *number* | - |
 
-___
+<HorizontalLine />
 
 ### createSetNameAction
 
@@ -67,7 +67,7 @@ Returns action that renames projectItem
 | :------ | :------ | :------ |
 | inName | *string* | - |
 
-___
+<HorizontalLine />
 
 ### getColorLabelIndex
 
@@ -77,7 +77,7 @@ ___
   
 Get color label index of projectItem
 
-___
+<HorizontalLine />
 
 ### getId
 
@@ -87,7 +87,7 @@ ___
   
 Get id of projectItem
 
-___
+<HorizontalLine />
 
 ### getParentBin
 
@@ -97,7 +97,7 @@ ___
   
 Get parent FolderItem of projectItem
 
-___
+<HorizontalLine />
 
 ### getProject
 
@@ -107,4 +107,4 @@ ___
   
 Get the parent Project of this projectItem.
 
-___
+<HorizontalLine />

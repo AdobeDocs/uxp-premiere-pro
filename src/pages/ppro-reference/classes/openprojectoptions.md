@@ -35,7 +35,7 @@ Set whether to add to MRU list after project changes
 | :------ | :------ | :------ |
 | addToMRUList | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setShowConvertProjectDialog
 
@@ -51,7 +51,7 @@ Set whether to show the convert project dialog on project open/close
 | :------ | :------ | :------ |
 | showConvertProjectDialog | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setShowLocateFileDialog
 
@@ -67,7 +67,7 @@ Set whether to show the locate file dialog on project open/close
 | :------ | :------ | :------ |
 | showLocateFileDialog | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setShowWarningDialog
 
@@ -83,4 +83,4 @@ Set whether to show the warning file dialog on project open/close
 | :------ | :------ | :------ |
 | showConvertProjectDialog | *boolean* | - |
 
-___
+<HorizontalLine />

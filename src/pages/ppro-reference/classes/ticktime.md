@@ -35,7 +35,7 @@ Constructs a TickTime object with a frame and a frame rate.
 | frameCount | *number* | - |
 | frameRate | [*FrameRate*](framerate.md) | - |
 
-___
+<HorizontalLine />
 
 ### createWithSeconds
 
@@ -51,7 +51,7 @@ Constructs a TickTime object with seconds.
 | :------ | :------ | :------ |
 | seconds | *number* | - |
 
-___
+<HorizontalLine />
 
 ### createWithTicks
 
@@ -67,7 +67,7 @@ Constructs a TickTime object with ticks as a string.
 | :------ | :------ | :------ |
 | ticks | *string* | - |
 
-___
+<HorizontalLine />
 
 ## Instance Methods
 
@@ -85,7 +85,7 @@ Add another TickTime to this one and return it. This TickTime is not modified.
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### alignToFrame
 
@@ -101,7 +101,7 @@ alignToFrame will return a TickTime that is aligned to the nearest frame boundar
 | :------ | :------ | :------ |
 | frameRate | [*FrameRate*](framerate.md) | - |
 
-___
+<HorizontalLine />
 
 ### alignToNearestFrame
 
@@ -117,7 +117,7 @@ AlignToNearestFrame will return a TickTime that is aligned to the nearest frame 
 | :------ | :------ | :------ |
 | frameRate | [*FrameRate*](framerate.md) | - |
 
-___
+<HorizontalLine />
 
 ### divide
 
@@ -133,7 +133,7 @@ Divide this TickTime by a divisor and return it. In case of a division by zero, 
 | :------ | :------ | :------ |
 | divisor | *number* | - |
 
-___
+<HorizontalLine />
 
 ### equals
 
@@ -149,7 +149,7 @@ Returns true if the given TickTime is equal to the TickTime object
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### multiply
 
@@ -165,7 +165,7 @@ Multiply this TickTime with a factor and return it. This TickTime is not modifie
 | :------ | :------ | :------ |
 | factor | *number* | - |
 
-___
+<HorizontalLine />
 
 ### subtract
 
@@ -181,4 +181,4 @@ Subtract another TickTime from this one and return it. This TickTime is not modi
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />

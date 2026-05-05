@@ -25,7 +25,7 @@ To use any constant, import the `constants` object from the premiere pro module 
 | VIDEO | - |
 | AUDIO | - |
 
-___
+<HorizontalLine />
 
 ### ContentType
 
@@ -37,7 +37,7 @@ ___
 | SEQUENCE | - |
 | MEDIA | - |
 
-___
+<HorizontalLine />
 
 ### ProjectItemColorLabel
 
@@ -61,7 +61,7 @@ ___
 | BROWN | - |
 | YELLOW | - |
 
-___
+<HorizontalLine />
 
 ### TransitionPosition
 
@@ -72,7 +72,7 @@ ___
 | START | - |
 | END | - |
 
-___
+<HorizontalLine />
 
 ### TrackItemType
 
@@ -86,7 +86,7 @@ ___
 | PREVIEW | - |
 | FEEDBACK | - |
 
-___
+<HorizontalLine />
 
 ### ProjectEvent
 
@@ -100,7 +100,7 @@ ___
 | ACTIVATED | - |
 | PROJECT_ITEM_SELECTION_CHANGED | - |
 
-___
+<HorizontalLine />
 
 ### InterpolationMode
 
@@ -115,7 +115,7 @@ ___
 | TIME_TRANSITION_END | - |
 | TIME_TRANSITION_START | - |
 
-___
+<HorizontalLine />
 
 ### SequenceOperation
 
@@ -127,7 +127,7 @@ ___
 | CREATEMARKER | - |
 | CREATESUBCLIP | - |
 
-___
+<HorizontalLine />
 
 ### PropertyType
 
@@ -138,7 +138,7 @@ ___
 | PERSISTENT | - |
 | NON_PERSISTENT | - |
 
-___
+<HorizontalLine />
 
 ### SequenceEvent
 
@@ -150,7 +150,7 @@ ___
 | CLOSED | - |
 | SELECTION_CHANGED | - |
 
-___
+<HorizontalLine />
 
 ### VideoTrackEvent
 
@@ -162,7 +162,7 @@ ___
 | INFO_CHANGED | - |
 | LOCK_CHANGED | - |
 
-___
+<HorizontalLine />
 
 ### AudioTrackEvent
 
@@ -174,7 +174,7 @@ ___
 | INFO_CHANGED | - |
 | LOCK_CHANGED | - |
 
-___
+<HorizontalLine />
 
 ### EncoderEvent
 
@@ -188,7 +188,7 @@ ___
 | RENDER_QUEUE | - |
 | RENDER_PROGRESS | - |
 
-___
+<HorizontalLine />
 
 ### ScratchDiskFolderType
 
@@ -203,7 +203,7 @@ ___
 | CCL_LIBRARIES | - |
 | CAPSULE_MEDIA | - |
 
-___
+<HorizontalLine />
 
 ### ScratchDiskFolder
 
@@ -214,7 +214,7 @@ ___
 | SAME_AS_PROJECT | - |
 | MY_DOCUMENTS | - |
 
-___
+<HorizontalLine />
 
 ### MetadataType
 
@@ -227,7 +227,7 @@ ___
 | TEXT | - |
 | BOOLEAN | - |
 
-___
+<HorizontalLine />
 
 ### ExportType
 
@@ -239,7 +239,7 @@ ___
 | QUEUE_TO_APP | - |
 | IMMEDIATELY | - |
 
-___
+<HorizontalLine />
 
 ### PreferenceKey
 
@@ -251,7 +251,7 @@ ___
 | IMPORT_WORKSPACE | - |
 | SHOW_QUICKSTART_DIALOG | - |
 
-___
+<HorizontalLine />
 
 ### SnapEvent
 
@@ -266,7 +266,7 @@ ___
 | GUIDES | - |
 | PLAYHEAD_TRACKITEM | - |
 
-___
+<HorizontalLine />
 
 ### OperationCompleteEvent
 
@@ -281,7 +281,7 @@ ___
 | GENERATIVE_EXTEND_COMPLETE | - |
 | IMPORT_MEDIA_COMPLETE | - |
 
-___
+<HorizontalLine />
 
 ### OperationCompleteState
 
@@ -293,7 +293,7 @@ ___
 | CANCELLED | - |
 | FAILED | - |
 
-___
+<HorizontalLine />
 
 ### PixelAspectRatio
 
@@ -310,7 +310,7 @@ ___
 | HDAnamorphic1080 | - |
 | DVCProHD | - |
 
-___
+<HorizontalLine />
 
 ### VideoFieldType
 
@@ -322,7 +322,7 @@ ___
 | UPPER_FIRST | - |
 | LOWER_FIRST | - |
 
-___
+<HorizontalLine />
 
 ### VideoDisplayFormatType
 
@@ -338,7 +338,7 @@ ___
 | FEET_FRAME_35mm | - |
 | FRAMES | - |
 
-___
+<HorizontalLine />
 
 ### AudioChannelType
 
@@ -351,7 +351,7 @@ ___
 | SURROUND_51 | - |
 | MULTI | - |
 
-___
+<HorizontalLine />
 
 ### AudioDisplayFormatType
 
@@ -362,7 +362,7 @@ ___
 | SAMPLE_RATE | - |
 | MILLISECONDS | - |
 
-___
+<HorizontalLine />
 
 ### MarkerColor
 
@@ -378,4 +378,4 @@ ___
 | BLUE | - |
 | CYAN | - |
 
-___
+<HorizontalLine />

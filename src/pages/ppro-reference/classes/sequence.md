@@ -27,7 +27,7 @@ keywords:
   
 Clears TrackItem Selection
 
-___
+<HorizontalLine />
 
 ### createCloneAction
 
@@ -37,7 +37,7 @@ ___
   
 Creates an action to clone the given sequence
 
-___
+<HorizontalLine />
 
 ### createSetInPointAction
 
@@ -53,7 +53,7 @@ Create SetInPointAction for sequence
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSetOutPointAction
 
@@ -69,7 +69,7 @@ Create SetOutPointAction for sequence
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSetSettingsAction
 
@@ -85,7 +85,7 @@ Returns action that set sequence settings
 | :------ | :------ | :------ |
 | sequenceSettings | [*SequenceSettings*](sequencesettings.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSetZeroPointAction
 
@@ -101,7 +101,7 @@ Create an action to set an InPoint for the sequence
 | :------ | :------ | :------ |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### createSubsequence
 
@@ -117,7 +117,7 @@ Returns a new sequence, which is a sub-sequence of the existing sequence
 | :------ | :------ | :------ |
 | ignoreTrackTargeting | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### getAudioTrack
 
@@ -133,7 +133,7 @@ Get audio track from track index
 | :------ | :------ | :------ |
 | trackIndex | *number* | - |
 
-___
+<HorizontalLine />
 
 ### getAudioTrackCount
 
@@ -143,7 +143,7 @@ ___
   
 Get audio track count from this sequence
 
-___
+<HorizontalLine />
 
 ### getCaptionTrack
 
@@ -159,7 +159,7 @@ Get caption track from track index
 | :------ | :------ | :------ |
 | trackIndex | *number* | - |
 
-___
+<HorizontalLine />
 
 ### getCaptionTrackCount
 
@@ -169,7 +169,7 @@ ___
   
 Get caption track count from this sequence
 
-___
+<HorizontalLine />
 
 ### getEndTime
 
@@ -179,7 +179,7 @@ ___
   
 Time representing the end of the sequence
 
-___
+<HorizontalLine />
 
 ### getFrameSize
 
@@ -189,7 +189,7 @@ ___
   
 Gets the size of the frame
 
-___
+<HorizontalLine />
 
 ### getInPoint
 
@@ -199,7 +199,7 @@ ___
   
 Get time representing the inPoint of sequence.
 
-___
+<HorizontalLine />
 
 ### getOutPoint
 
@@ -209,7 +209,7 @@ ___
   
 Get time representing the outPoint of sequence.
 
-___
+<HorizontalLine />
 
 ### getPlayerPosition
 
@@ -219,7 +219,7 @@ ___
   
 Get the player's current position
 
-___
+<HorizontalLine />
 
 ### getProjectItem
 
@@ -229,7 +229,7 @@ ___
   
 Get the associated projectItem of the sequence.
 
-___
+<HorizontalLine />
 
 ### getSelection
 
@@ -239,7 +239,7 @@ ___
   
 Returns the current selection group of the sequence.
 
-___
+<HorizontalLine />
 
 ### getSequenceAudioTimeDisplayFormat
 
@@ -249,7 +249,7 @@ ___
   
 Get audio time display format of this sequence
 
-___
+<HorizontalLine />
 
 ### getSequenceVideoTimeDisplayFormat
 
@@ -259,7 +259,7 @@ ___
   
 Get video time display format of this sequence
 
-___
+<HorizontalLine />
 
 ### getSettings
 
@@ -269,7 +269,7 @@ ___
   
 Get sequence settings object
 
-___
+<HorizontalLine />
 
 ### getTimebase
 
@@ -279,7 +279,7 @@ ___
   
 Gets the time base of sequence
 
-___
+<HorizontalLine />
 
 ### getVideoTrack
 
@@ -295,7 +295,7 @@ Get video track from track index
 | :------ | :------ | :------ |
 | trackIndex | *number* | - |
 
-___
+<HorizontalLine />
 
 ### getVideoTrackCount
 
@@ -305,7 +305,7 @@ ___
   
 Get video track count from this sequence
 
-___
+<HorizontalLine />
 
 ### getZeroPoint
 
@@ -315,7 +315,7 @@ ___
   
 Time representing the zero point of the sequence.
 
-___
+<HorizontalLine />
 
 ### isDoneAnalyzingForVideoEffects
 
@@ -325,7 +325,7 @@ ___
   
 Returns whether or not the sequence is done analyzing for video effects
 
-___
+<HorizontalLine />
 
 ### setPlayerPosition
 
@@ -341,7 +341,7 @@ Set the player's current position
 | :------ | :------ | :------ |
 | positionTime | [*TickTime*](ticktime.md) | - |
 
-___
+<HorizontalLine />
 
 ### setSelection
 
@@ -357,4 +357,4 @@ Updates sequence selection using the given track item selection.
 | :------ | :------ | :------ |
 | trackItemSelection | [*TrackItemSelection*](trackitemselection.md) | - |
 
-___
+<HorizontalLine />

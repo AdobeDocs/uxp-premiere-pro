@@ -20,7 +20,7 @@ keywords:
   
 Get the graphics white luminance value
 
-___
+<HorizontalLine />
 
 ### getSupportedGraphicsWhiteLuminances
 
@@ -30,4 +30,4 @@ ___
   
 Get all the graphics white luminance as array of values
 
-___
+<HorizontalLine />
