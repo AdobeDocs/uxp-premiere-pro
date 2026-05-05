@@ -2,12 +2,7 @@
 title: Topic Heading
 description: Plugins and Scripts
 ---
-\<!--
-Use this doc for internal purposes. Make sure you include the following information in the recipes
 
-import \{ Link } from 'gatsby';
-import \{ siteConfig } from '../../../../site-config';
---\>
 
 # Topic Heading
 
