@@ -4,7 +4,7 @@ description: "See: https://developer.mozilla.org/en-US/docs/Web/API/GestureEvent
 ---
 
 # window.GestureEvent
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/GestureEvent  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/GestureEvent](https://developer.mozilla.org/en-US/docs/Web/API/GestureEvent)  
 
 
 ## GestureEvent(type, eventInit)
@@ -220,8 +220,8 @@ Returns the event's path
 
 **See**
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath
-- https://dom.spec.whatwg.org/#dom-event-composedpath
+- [https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath](https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath)
+- [https://dom.spec.whatwg.org/#dom-event-composedpath](https://dom.spec.whatwg.org/#dom-event-composedpath)
 
 
 

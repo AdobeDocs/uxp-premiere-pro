@@ -4,7 +4,7 @@ description: "See: https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap
 ---
 
 # window.NamedNodeMap
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap](https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap)  
 
 
 ## NamedNodeMap(node)

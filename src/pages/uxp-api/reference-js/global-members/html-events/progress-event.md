@@ -6,8 +6,8 @@ description: See
 # window.ProgressEvent
 **See**
 
-- https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent
-- https://xhr.spec.whatwg.org/#progressevent
+- [https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent](https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent)
+- [https://xhr.spec.whatwg.org/#progressevent](https://xhr.spec.whatwg.org/#progressevent)
 
 
 
@@ -88,8 +88,8 @@ Returns the event's path
 
 **See**
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath
-- https://dom.spec.whatwg.org/#dom-event-composedpath
+- [https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath](https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath)
+- [https://dom.spec.whatwg.org/#dom-event-composedpath](https://dom.spec.whatwg.org/#dom-event-composedpath)
 
 
 

@@ -4,7 +4,7 @@ description: "See: https://developer.mozilla.org/en-US/docs/Web/API/NodeList"
 ---
 
 # window.NodeList
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/NodeList  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)  
 
 
 ## NodeList(staticList, updater)

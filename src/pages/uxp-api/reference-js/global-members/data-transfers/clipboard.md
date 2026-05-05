@@ -4,7 +4,7 @@ description: "See: https://developer.mozilla.org/en-US/docs/Web/API/Clipboard"
 ---
 
 # navigator.clipboard
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/Clipboard  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/Clipboard](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard)  
 
 
 ## Clipboard()
@@ -45,7 +45,7 @@ navigator.clipboard.getContent();
 Write data to clipboard. This can be used to implement cut and copy functionality.
 
 **Returns**: `Promise`  
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write)  
 **Since**: v6.0  
 
 | Param | Type | Description |
@@ -62,7 +62,7 @@ navigator.clipboard.write({"text/plain": "Hello!"});
 Write text to clipboard. This can be used to implement cut and copy text functionality.
 
 **Returns**: `Promise`  
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)  
 **Since**: v6.0  
 
 | Param | Type | Description |
@@ -79,7 +79,7 @@ navigator.clipboard.writeText("Hello!");
 Read data from clipboard.
 
 **Returns**: `Promise`  
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/read  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/read](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/read)  
 **Since**: v6.0  
 **Example**  
 ```js
@@ -91,7 +91,7 @@ navigator.clipboard.read();
 Read text from clipboard.
 
 **Returns**: `Promise`  
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText)  
 **Since**: v6.0  
 **Example**  
 ```js
@@ -110,4 +110,3 @@ Note: Nonstandard: This method is non-standard.
 navigator.clipboard.clearContent();
 ```
 
-  

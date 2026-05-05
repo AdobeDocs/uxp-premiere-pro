@@ -4,7 +4,7 @@ description: "See: https://developer.mozilla.org/en-US/docs/Web/API/Node"
 ---
 
 # window.Node
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/Node  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/Node](https://developer.mozilla.org/en-US/docs/Web/API/Node)  
 
 
 ## contentEditable

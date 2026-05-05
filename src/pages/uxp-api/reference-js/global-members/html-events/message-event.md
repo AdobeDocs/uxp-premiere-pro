@@ -4,7 +4,7 @@ description: "See: https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent
 ---
 
 # window.MessageEvent
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent](https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent)  
 
 
 ## MessageEvent(data, origin, source, eventInit)
@@ -86,8 +86,8 @@ Returns the event's path
 
 **See**
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath
-- https://dom.spec.whatwg.org/#dom-event-composedpath
+- [https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath](https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath)
+- [https://dom.spec.whatwg.org/#dom-event-composedpath](https://dom.spec.whatwg.org/#dom-event-composedpath)
 
 
 

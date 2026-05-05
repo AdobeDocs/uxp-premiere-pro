@@ -4,7 +4,7 @@ description: "See: https://developer.mozilla.org/en-US/docs/Web/API/Comment"
 ---
 
 # window.Comment
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/Comment  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/Comment](https://developer.mozilla.org/en-US/docs/Web/API/Comment)  
 
 
 ## Comment(document, comment)

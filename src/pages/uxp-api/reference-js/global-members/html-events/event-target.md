@@ -4,7 +4,7 @@ description: "See: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget"
 ---
 
 # window.EventTarget
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)  
 
 
 ## addEventListener(eventName, callback, options)

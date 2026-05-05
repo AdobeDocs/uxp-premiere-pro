@@ -4,7 +4,7 @@ description: "See: https://developer.mozilla.org/en-US/docs/Web/API/UIEvent"
 ---
 
 # window.BaseUIEvent
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/UIEvent  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/UIEvent](https://developer.mozilla.org/en-US/docs/Web/API/UIEvent)  
 
 
 ## BaseUIEvent(type, eventInit)
@@ -184,8 +184,8 @@ Returns the event's path
 
 **See**
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath
-- https://dom.spec.whatwg.org/#dom-event-composedpath
+- [https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath](https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath)
+- [https://dom.spec.whatwg.org/#dom-event-composedpath](https://dom.spec.whatwg.org/#dom-event-composedpath)
 
 
 

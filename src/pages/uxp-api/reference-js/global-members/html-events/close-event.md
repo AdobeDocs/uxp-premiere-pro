@@ -4,7 +4,7 @@ description: "See: https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent"
 ---
 
 # window.CloseEvent
-**See**: https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent](https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent)  
 
 
 ## CloseEvent(code, reason, wasClean)
@@ -85,8 +85,8 @@ Returns the event's path
 
 **See**
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath
-- https://dom.spec.whatwg.org/#dom-event-composedpath
+- [https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath](https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath)
+- [https://dom.spec.whatwg.org/#dom-event-composedpath](https://dom.spec.whatwg.org/#dom-event-composedpath)
 
 
 
