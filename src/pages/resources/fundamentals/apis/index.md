@@ -40,7 +40,7 @@ UXP Core APIs provide the fundamental building blocks for your plugin's function
 
 The way you access UXP APIs depends on the specific API itself.
 
-[**Global APIs**](../../../uxp-api/reference-js/Global%20Members/index.md) are available immediately without any import. For example:
+[**Global APIs**](../../../uxp-api/reference-js/global-members/index.md) are available immediately without any import. For example:
 
 ```javascript
 // Crypto API is globally available
@@ -50,7 +50,7 @@ const hash = crypto.randomUUID();
 const button = document.createElement("sp-button");
 ```
 
-[**Module-based APIs**](../../../uxp-api/reference-js/Modules/index.md) require importing with `require()`. For example:
+[**Module-based APIs**](../../../uxp-api/reference-js/modules/index.md) require importing with `require()`. For example:
 
 ```javascript
 // Parent UXP module
@@ -81,9 +81,9 @@ The entry point to Premiere APIs is the `app` object, that you `require()` from 
 const app = require("premierepro");
 ```
 
-You'll learn how to access and use Premiere APIs in the [Working with Premiere APIs](../dom-apis/index.md) section and by browsing the [Premiere API reference](../../../ppro_reference/index.md).
+You'll learn how to access and use Premiere APIs in the [Working with Premiere APIs](../dom-apis/index.md) section and by browsing the [Premiere API reference](../../../ppro-reference/index.md).
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="heading, text" />
 
 Don't confuse the two DOMs
 
@@ -141,7 +141,7 @@ Both UXP and Premiere APIs are actively evolving, with new capabilities added in
 
 Each Premiere release integrates a specific UXP version. For example, Premiere v25.6 includes UXP v8.1.
 
-<InlineAlert variant="info" slots="header, text, text2" />
+<InlineAlert variant="info" slots="heading, text, text2" />
 
 Handling Version Mismatches
 
@@ -157,7 +157,7 @@ You can determine the UXP version in several ways:
 
 Once Premiere is running and appears under "Connected apps", you'll see both the Premiere version and UXP version displayed.
 
-![UXP version in the UXP Developer Tool](./img/apis--udt.png)
+![UXP version in the UXP Developer Tool](./img/apis-udt.png)
 
 If you only see the host application version (as in the case of Photoshop in the screenshot above), please click the arrow next to the product icon to expand the details.
 
@@ -179,6 +179,6 @@ The [What's new](../../../changelog/index.md) section lists the UXP version for 
 
 Now that you understand the two types of APIs available, you're ready to:
 
-- Explore practical [code recipes](../../recipes/) that demonstrate common tasks
+- Explore practical [code recipes](../../recipes/index.md) that demonstrate common tasks
 - Learn how to [work with Premiere APIs](../dom-apis/index.md) in depth
-- Browse the complete [UXP API reference](../../../uxp-api/) and [Premiere API reference](../../../ppro_reference/)
+- Browse the complete [UXP API reference](../../../uxp-api/index.md) and [Premiere API reference](../../../ppro-reference/index.md)

@@ -103,7 +103,7 @@ These guidelines regulate, among other things, the correct usage of:
 - Social media presence
 - Public profile and website content
 
-<InlineAlert slots="header, text" variant="info"/>
+<InlineAlert slots="heading, text" variant="info"/>
 
 Do not underestimate the importance of adhering to guidelines.
 
@@ -113,7 +113,7 @@ Any violation may result in an immediate rejection of your submission. If you wa
 
 Ensure your plugin works correctly across all supported platforms and architectures:
 
-- **Multi-architecture support**: [UXP Hybrid plugins](../../../plugins/hybrid-plugins/index.md) submitted to the Marketplace must include binaries for all three architectures (macOS arm64, macOS x64, Windows x64)—submissions with missing architectures will be rejected
+- **Multi-architecture support**: [UXP Hybrid plugins](../../hybrid-plugins/index.md) submitted to the Marketplace must include binaries for all three architectures (macOS arm64, macOS x64, Windows x64)—submissions with missing architectures will be rejected
 - **Code signing**: macOS `.uxpaddon` executables in Hybrid plugins must be code signed and notarized with a valid Apple Developer ID certificate (minimum 1 year validity). See the [Hybrid Plugins packaging guide](../package/index.md#packaging-hybrid-plugins) for details.
 - **Installation**: avoid OS-level warning prompts during installation; ensure no crashes during install or use
 - **Host application compatibility**: test that your plugin does not crash or negatively impact host applications
@@ -184,7 +184,7 @@ The following table lists frequent reasons for plugin submission rejections, alo
 | **Poor input field handling**: text fields fail with special characters, numbers, or localized keyboard input.                                                                                    | Test input fields with various character sets, including special characters and non-English keyboards. Implement proper validation and error messages.            |
 | **Inadequate error messaging**: the plugin fails silently or shows generic errors without guidance on how to resolve issues.                                                                      | Provide specific, actionable error messages that guide users toward solutions. Handle edge cases like network failures gracefully.                                |
 | **Code signing issues**: macOS plugins are not properly code signed or notarized, triggering security warnings.                                                                                   | Ensure plugins are signed with a valid Developer ID certificate and notarized through Apple. Certificate must be valid for at least 1 year.                       |
-| **Multi-architecture failures**: [UXP Hybrid plugins](../../../plugins/hybrid-plugins/index.md) crash or fail on specific architectures (macOS arm64, macOS x64, Windows x64).                    | All three architectures are required for Marketplace submission. Test on each platform and build separate binaries for each architecture.                         |
+| **Multi-architecture failures**: [UXP Hybrid plugins](../../hybrid-plugins/index.md) crash or fail on specific architectures (macOS arm64, macOS x64, Windows x64).                    | All three architectures are required for Marketplace submission. Test on each platform and build separate binaries for each architecture.                         |
 | **Exposed developer tools**: debug consoles, developer menus, or testing features are accessible in the production build.                                                                         | Remove all development and debugging interfaces before submission. Ensure production builds do not include dev dependencies.                                      |
 | **Poor responsive design**: plugin requires manual resizing to access controls or content; scrollbars don't appear when needed.                                                                   | Implement responsive layouts that adapt to panel sizes. Ensure scrollbars appear automatically when content exceeds visible area.                                 |
 | **Companion app integration issues**: the plugin cannot communicate with its companion application, or the companion app causes excessive resource usage.                                         | Test companion app integration thoroughly. Optimize resource usage and ensure reliable communication between plugin and companion app.                            |

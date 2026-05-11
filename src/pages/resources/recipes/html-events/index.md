@@ -90,7 +90,7 @@ function handleClick(event) {
 }
 ```
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 Security consideration
 
@@ -131,5 +131,5 @@ slider.addEventListener("input", (event) => {
 
 ## Reference Material
 
-- [HTML Events](../../../uxp-api/reference-js/Global%20Members/HTML%20Events/): complete list of supported events.
+- [HTML Events](../../../uxp-api/reference-js/global-members/html-events/index.md): complete list of supported events.
 - [Manifest Permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition): overview of all permissions.

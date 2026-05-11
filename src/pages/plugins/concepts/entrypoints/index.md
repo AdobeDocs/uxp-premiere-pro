@@ -78,7 +78,7 @@ Although the implementation of the `entrypoints.setup()` method is optional, you
 3. Allow the creation of **flyout menus** and hook up the respective handlers for each Panel entrypoint.
 4. Define **handlers for each Command** entrypoint.
 
-<InlineAlert variant="info" slots="header, text, text2" />
+<InlineAlert variant="info" slots="heading, text, text2" />
 
 Lifecycle hooks
 

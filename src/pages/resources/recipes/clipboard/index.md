@@ -16,7 +16,7 @@ contributors:
 
 Integrate your plugin with the system clipboard to read and write text data
 
-UXP provides clipboard APIs that let your plugin **read from** and **write to** the system clipboard—enabling users to copy, paste, and share content between your plugin and other applications. This guide covers how to use the [`Clipboard` API](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md), declare the necessary permissions, and handle common use cases.
+UXP provides clipboard APIs that let your plugin **read from** and **write to** the system clipboard—enabling users to copy, paste, and share content between your plugin and other applications. This guide covers how to use the [`Clipboard` API](../../../uxp-api/reference-js/global-members/data-transfers/clipboard.md), declare the necessary permissions, and handle common use cases.
 
 ## System requirements
 
@@ -37,7 +37,7 @@ Choose the most appropriate permission level:
 | `"read"`         | Read-only             | Your plugin only needs to paste or read data |
 | `"readAndWrite"` | Read and write access | Your plugin needs to copy and paste data     |
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="info" slots="heading, text"/>
 
 Pick the least-permissive option that meets your needs
 
@@ -175,7 +175,7 @@ For this use case, your manifest would need `"readAndWrite"` permission.
 
 ## Reference Material
 
-- [`Clipboard`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md) API Reference.
+- [`Clipboard`](../../../uxp-api/reference-js/global-members/data-transfers/clipboard.md) API Reference.
 - [Manifest Permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition).
 
 ## Summary

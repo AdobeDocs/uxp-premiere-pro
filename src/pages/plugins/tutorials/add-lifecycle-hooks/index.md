@@ -30,7 +30,7 @@ UXP provides two kinds of lifecycle hooks:
 
 More details on the types of hooks can be found in the [Entrypoints concept guide](../../concepts/entrypoints/index.md#plugin-lifecycle-hooks).
 
-<InlineAlert variant="error" slots="header, text, text2" />
+<InlineAlert variant="error" slots="heading, text, text2" />
 
 Current limitations
 

@@ -22,7 +22,7 @@ A reliable Code Editor helps you stay organized and productive. Any modern edito
 
 The UXP Developer Tool (UDT) simplifies the process of creating, loading, managing, and debugging plugins for Adobe's UXP-powered applications. UXP plugins are supported in **Premiere v25.6** and later since **UDT v2.2**.
 
-![UDT](./img/dev-tools--udt.png)
+![UDT](./img/dev-tools-udt.png)
 
 In addition, the UXP Developer Tool:
 
@@ -30,7 +30,7 @@ In addition, the UXP Developer Tool:
 - Lets you **package plugins** into a `.ccx` [installable file](../../../plugins/distribution/package/index.md), ready for distribution.
 - Provides **Starter Templates** and Sample Projects to help you get moving faster
 
-<InlineAlert variant="info" slots="header,text"/>
+<InlineAlert variant="info" slots="heading,text"/>
 
 Admin privileges are required to use UDT.
 
@@ -44,7 +44,7 @@ You can install UDT directly [from Creative Cloud](https://creativecloud.adobe.c
 2. Sign in with your Adobe ID if you haven't already.
 3. Go to the **All apps** section, where you'll find "UXP Developer Tools" listed; type "UXP Developer Tools" in the search bar for easier access.
 4. Click **Install** on the UXP Developer Tools card to begin installation.
-   ![Creative cloud](./img/dev-tools--ccd-udt.png)
+   ![Creative cloud](./img/dev-tools-ccd-udt.png)
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -54,7 +54,7 @@ The UXP Developer Tool is not yet available as a Package in the Adobe **Admin Co
 
 When you launch the Developer Tool for the first time, you'll be prompted to enable Developer Mode. This is required for you to load plugins in development into the application. Once you click **Enable**, elevated permissions will be requested, and you may be required to enter your password or approve an action from the Developer Tool.
 
-![Enable Developer Mode](./img/dev-tools--enable-developer-mode2.png)
+![Enable Developer Mode](./img/dev-tools-enable-developer-mode2.png)
 
 If you have problems with this step, you can also configure Developer Mode manually, although you must have Administrative privileges to do so.
 
@@ -63,15 +63,15 @@ If you have problems with this step, you can also configure Developer Mode manua
 3. Create a new file named `settings.json` with the following content—you'll need administrative rights to save the file:
 
    ```json
-   { "developer" : true }
+   \{ "developer" : true }
    ```
 
 4. Launch the UXP Developer Tool again.
 
 For now, successfully installing UDT is sufficient. We will understand UDT in more depth once you build your first plugin.
 
-<!--
+\<!--
 TODO Add this section once details are available
 ## Type definitions
 Provide download link for UXP and Premiere
--->
+--\>

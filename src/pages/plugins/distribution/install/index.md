@@ -34,7 +34,7 @@ The installation options are slightly different depending on the distribution ch
 |                                    | - Use the [UPIA tool](#use-the-upia-tool)                                                           |
 | **Enterprise**                     | Use the [Admin Console](../enterprise-distribution/index.md) or the [UPIA tool](#use-the-upia-tool) |
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="info" slots="heading, text"/>
 
 Enterprise Distribution
 
@@ -42,7 +42,7 @@ For details on how to distribute UXP plugins in enterprise environments, please 
 
 UXP Plugins in Premiere are found in the **Window** > **UXP Plugins** menu.
 
-![Premiere UXP Plugins menu](./img/install--ppro-menu.png)
+![Premiere UXP Plugins menu](./img/install-ppro-menu.png)
 
 ## Use the Creative Cloud Marketplace
 
@@ -50,29 +50,29 @@ UXP plugins belong to the **Stock & Marketplace** category (left-hand sidebar) i
 
 To install a plugin of your choice, click the **Get** button on the plugin card.
 
-![Creative Cloud Marketplace](./img/install--creative-cloud-marketplace.png)
+![Creative Cloud Marketplace](./img/install-creative-cloud-marketplace.png)
 
-A confirmation dialog will appear, informing you about the permissions the plugin needs (the ones that developers have declared in the [plugin's manifest](../../../plugins/concepts/manifest/index.md#permissionsdefinition)); click **OK** to confirm the installation.
+A confirmation dialog will appear, informing you about the permissions the plugin needs (the ones that developers have declared in the [plugin's manifest](../../concepts/manifest/index.md#permissionsdefinition)); click **OK** to confirm the installation.
 
-![Confirm installation dialog](./img/install--creative-cloud-marketplace-confirm.png)
+![Confirm installation dialog](./img/install-creative-cloud-marketplace-confirm.png)
 
 If everything goes to plan, the plugin will be available in the "Manage Plugins" section of the Creative Cloud Desktop application, as well as in the host application. For Premiere, it will be the **Window** > **UXP Plugins** menu.
 
-![Success dialog](./img/install--creative-cloud-marketplace-success.png)
+![Success dialog](./img/install-creative-cloud-marketplace-success.png)
 
 ## Use a `.ccx` installer file
 
 If you have developed or acquired a UXP plugin from a third-party, you can install it by **double-clicking on the `.ccx` file**. If not already open, the Creative Cloud Desktop application will launch. You will be prompted with an additional warning dialog since the plugin doesn't come from the Creative Cloud Marketplace; click on the **Install** button to continue.
 
-![Installation dialog](./img/install--ccx-installation-dialog.png)
+![Installation dialog](./img/install-ccx-installation-dialog.png)
 
-Depending on the specific access level the plugin requires (for example, to the Network or the Local FileSystem—see [this section](../../../plugins/concepts/manifest/index.md#requiredpermissions) of the Manifest reference for more details), users may need to grant administrative privileges to the plugin.
+Depending on the specific access level the plugin requires (for example, to the Network or the Local FileSystem—see [this section](../../concepts/manifest/index.md#requiredpermissions) of the Manifest reference for more details), users may need to grant administrative privileges to the plugin.
 
-![Installation dialog](./img/install--ccx-warning-dialog.png)
+![Installation dialog](./img/install-ccx-warning-dialog.png)
 
 Once the installation is complete, the plugin will be available in the Plugins section of the Creative Cloud Desktop application application, as well as in the host application. For Premiere, it will be the **Window** > **UXP Plugins** menu.
 
-![Installed plugin](./img/install--ccx-installed-plugin.png)
+![Installed plugin](./img/install-ccx-installed-plugin.png)
 
 If the installation fails, click the Details link on the red toast to open the Logs and check the error message. See [Troubleshooting](#troubleshooting) for more details.
 
@@ -80,7 +80,7 @@ If the installation fails, click the Details link on the red toast to open the L
 
 In the Creative Cloud Desktop application, "Manage Plugins" tab, right-click on the **•••** icon within a plugin card and select **Uninstall** to delete it. There's also the option to **Disable** the plugin, which will remove it from the host application but keep it installed in the Creative Cloud Desktop application. Both actions will pop a confirmation dialog.
 
-![Uninstall plugin](./img/install--uninstall.png)
+![Uninstall plugin](./img/install-uninstall.png)
 
 <InlineAlert variant="info" slots="text, text2"/>
 

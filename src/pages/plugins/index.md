@@ -29,7 +29,7 @@ Before you start, make sure you have the following software installed on your ma
 
 Premiere's Developer Mode should be enabled. Open the **Settings** menu, select the **Plugins** tab and select the **Enable developer mode** checkbox. You will need to restart Premiere for the changes to take effect.
 
-![Enable Developer Mode](./img/getting-started--dev-mode.png)
+![Enable Developer Mode](./img/getting-started-dev-mode.png)
 
 ## Development Workflow
 
@@ -37,11 +37,11 @@ Premiere's Developer Mode should be enabled. Open the **Settings** menu, select 
 
 The [UXP Developer Tool](../introduction/essentials/dev-tools/index.md#uxp-developer-tool-udt) (UDT) provides a quick way to scaffold your plugin project from a set of starter templates. Open the UDT and click **Create Plugin**.
 
-![UXP Developer Tool - Create Plugin](./img/getting-started--udt.png)
+![UXP Developer Tool - Create Plugin](./img/getting-started-udt.png)
 
 A dialog appears, allowing you to set the project details:
 
-![UXP Developer Tool - Create Plugin Dialog](./img/getting-started--udt-create-plugin.png)
+![UXP Developer Tool - Create Plugin Dialog](./img/getting-started-udt-create-plugin.png)
 
 Please enter the following information:
 
@@ -69,11 +69,11 @@ Now that you have scaffolded your plugin, you can load it in Premiere. Make sure
 
 In UDT, click **Load & Watch** in your plugin's row:
 
-![UXP Developer Tool - Load & Watch](./img/getting-started--udt-load-and-watch.png)
+![UXP Developer Tool - Load & Watch](./img/getting-started-udt-load-and-watch.png)
 
 This shortcut is for the **Load** and **Watch** actions, which you can perform separately. The result will be the same; the plugin will be loaded in Premiere, and UDT will watch for changes in the plugin's source code and reload it automatically.
 
-![Premiere - Loaded Plugin](./img/getting-started--premiere-pro.png)
+![Premiere - Loaded Plugin](./img/getting-started-premiere-pro.png)
 
 <InlineAlert slots="text" />
 
@@ -112,15 +112,15 @@ Let's change the heading to something slightly different:
 
 Thanks to the Watch & Reload feature, the changes will be automatically reflected in the host application—see the new heading in the plugin's panel below.
 
-![Premiere - Updated Plugin](./img/getting-started--edit-html.png)
+![Premiere - Updated Plugin](./img/getting-started-edit-html.png)
 
-<InlineAlert slots="header, text" variant="warning"/>
+<InlineAlert slots="heading, text" variant="warning"/>
 
 #### Manifest changes
 
 If you make any changes to the `manifest.json` file, you must manually unload and reload the plugin. In the UXP Developer Tool, in the row for your plugin, click **Unload** and then **Load & Watch** once more.
 
-<InlineAlert slots="header, text" variant="info"/>
+<InlineAlert slots="heading, text" variant="info"/>
 
 #### Invisible plugins
 
@@ -132,9 +132,9 @@ Now let's check what this UXP plugin can do. Open a sample project in Premiere; 
 
 Now click the **Populate Application Info** button in the plugin's panel.
 
-![Premiere - Populate Application Info](./img/getting-started--get-app-info.png)
+![Premiere - Populate Application Info](./img/getting-started-get-app-info.png)
 
-The plugin will fetch the active project and sequence information and display it in the panel. The implementation lives in the `index.js` file, and it uses the [Premiere APIs](../ppro_reference/index.md) to fetch the information. You can open the file and explore the code to see how it works.
+The plugin will fetch the active project and sequence information and display it in the panel. The implementation lives in the `index.js` file, and it uses the [Premiere APIs](../ppro-reference/index.md) to fetch the information. You can open the file and explore the code to see how it works.
 
 ## Next steps
 

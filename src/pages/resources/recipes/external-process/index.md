@@ -17,7 +17,7 @@ contributors:
 
 Open files and launch applications from your plugin to extend workflows beyond Premiere
 
-UXP provides the [`shell` API](../../../uxp-api/reference-js/Modules/uxp/shell/Shell.md) to let your plugin interact with the user's operating system—**opening files** in their default applications and **launching external programs** via URL schemes. This is useful for workflows that span across multiple tools.
+UXP provides the [`shell` API](../../../uxp-api/reference-js/modules/uxp/shell/shell.md) to let your plugin interact with the user's operating system—**opening files** in their default applications and **launching external programs** via URL schemes. This is useful for workflows that span across multiple tools.
 
 ## System requirements
 
@@ -47,7 +47,7 @@ By default, UXP plugins can't launch external processes; this protects users fro
 }
 ```
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 User consent is always required
 
@@ -55,7 +55,7 @@ Whenever your plugin attempts to launch an external process, **the user must pro
 
 ## Using the Shell API
 
-The [`shell`](../../../uxp-api/reference-js/Modules/uxp/shell/Shell.md) module provides two main methods:
+The [`shell`](../../../uxp-api/reference-js/modules/uxp/shell/shell.md) module provides two main methods:
 
 - **`openPath()`**: Opens a file or folder in the system's default application.
 - **`openExternal()`**: Launches an application using a URL scheme.
@@ -139,7 +139,7 @@ async function openProjectFolder() {
 
 A confirmation dialog will be displayed to the user, asking for permission to open the file. The choice can be remembered to avoid future requests.
 
-![User consent dialog for openPath](./img/external-process--request-permission.png)
+![User consent dialog for openPath](./img/external-process-request-permission.png)
 
 <InlineAlert variant="info" slots="text, text2"/>
 
@@ -240,7 +240,7 @@ async function openLocationInMaps() {
 
 `openExternal()` and `openPath()` both require the same user consent via permission confirmation dialog
 
-![User consent dialog for openExternal](./img/external-process--request-permission-scheme.png)
+![User consent dialog for openExternal](./img/external-process-request-permission-scheme.png)
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -337,7 +337,7 @@ const url = `mailto:user@example.com?subject=${subject}`;
 
 ## Reference Material
 
-- [`shell` module](../../../uxp-api/reference-js/Modules/uxp/shell/Shell.md): complete Shell API reference.
+- [`shell` module](../../../uxp-api/reference-js/modules/uxp/shell/shell.md): complete Shell API reference.
 - [Manifest Permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition): overview of all permissions.
 - [`launchProcess` Permission](../../../plugins/concepts/manifest/index.md#launchprocesspermission): detailed permission documentation.
 

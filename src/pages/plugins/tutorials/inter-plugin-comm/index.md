@@ -66,7 +66,7 @@ responderPlugin.invokeCommand("simpleCommand");
 responderPlugin.showPanel("simplePanel");
 ```
 
-<InlineAlert variant="info" slots="header, text, text2" />
+<InlineAlert variant="info" slots="heading, text, text2" />
 
 Payloads
 
@@ -118,7 +118,7 @@ In this example, the Requester plugin implements a button that will initiate thr
 
 The Responder plugin will log the requests in the panel's body.
 
-![Inter Plugin Communication](./img/ipc--requester-responder.png)
+![Inter Plugin Communication](./img/ipc-requester-responder.png)
 
 ### Requester code
 

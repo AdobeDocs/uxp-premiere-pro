@@ -27,7 +27,7 @@ We will assume that you have already [installed](../../../introduction/essential
 
 The left panel shows the currently opened Creative Cloud desktop applications that support UXP and are _"connected"_ to UDT. Plugins can only be loaded when the application is running; as soon as you launch it, the **Connected Apps** section will populate.
 
-![UDT side panel](./img/overview--udt.png)
+![UDT side panel](./img/overview-udt.png)
 
 If UDT is unable to connect, please ensure that the application version actually supports UXP extensibility. If you can't see the side panel altogether, click the dots grid icon in the top-right corner to open it.
 
@@ -35,13 +35,13 @@ If UDT is unable to connect, please ensure that the application version actually
 
 Click the gear icon to open the preferences panel and update the UDT **Theme** (Dark or Light), toggle **Auto Scroll Logs**, or change the **Service Port** that UDT uses to communicate with host applications.
 
-![UDT preferences](./img/overview--preferences.png)
+![UDT preferences](./img/overview-preferences.png)
 
 ### Logs
 
 Click the document icon 📄 in the top-left corner to open the Logs panel. You can inspect the **UDT Logs**, where, among the rest, connection events and plugin loading status are listed, or the **App Logs**, to check for any issues in the host application.
 
-![UDT logs](./img/overview--logs.png)
+![UDT logs](./img/overview-logs.png)
 
 ## Read more
 

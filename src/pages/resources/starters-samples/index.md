@@ -49,7 +49,7 @@ These templates provide a ready-to-use project structure with:
 - Example code demonstrating key concepts
 - Proper directory organization
 
-To use a template, select it when running the `create` command in UDT. Learn more about this process in the [UDT Deep Dive tutorial](../../plugins/tutorials/udt-deep-dive/).
+To use a template, select it when running the `create` command in UDT. Learn more about this process in the [UDT Deep Dive tutorial](../../plugins/tutorials/udt-deep-dive/index.md).
 
 ## Hybrid Plugin SDK
 
@@ -63,7 +63,7 @@ See the [Hybrid Plugins guide](../../plugins/hybrid-plugins/index.md) for build 
 
 ## Tutorials
 
-Looking to build something from scratch? The [Tutorials section](../../plugins/tutorials/) provides step-by-step guides that walk you through complete plugin development tasks:
+Looking to build something from scratch? The [Tutorials section](../../plugins/tutorials/index.md) provides step-by-step guides that walk you through complete plugin development tasks:
 
 - [UDT Deep Dive](../../plugins/tutorials/udt-deep-dive/index.md): Master the Adobe UXP Developer Tool
 - [Add Commands](../../plugins/tutorials/add-commands/index.md): Create menu items in Premiere
@@ -74,7 +74,7 @@ Looking to build something from scratch? The [Tutorials section](../../plugins/t
 
 ## Recipes
 
-For quick, focused code examples without the full tutorial treatment, check out the [Recipes section](../recipes/). Recipes provide bite-sized, ready-to-use code snippets for common use cases:
+For quick, focused code examples without the full tutorial treatment, check out the [Recipes section](../recipes/index.md). Recipes provide bite-sized, ready-to-use code snippets for common use cases:
 
 - File system operations
 - Network requests

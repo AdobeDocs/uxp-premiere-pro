@@ -23,37 +23,37 @@ Step-by-step guides for common UXP plugin development tasks
 
 <DiscoverBlock slots="link, text"/>
 
-[UDT Deep Dive](udt-deep-dive/)
+[UDT Deep Dive](udt-deep-dive/index.md)
 
 Master the Adobe UXP Developer Tool for plugin development and testing
 
 <DiscoverBlock slots="link, text"/>
 
-[Add Lifecycle Hooks](add-lifecycle-hooks/)
+[Add Lifecycle Hooks](add-lifecycle-hooks/index.md)
 
 Respond to plugin and panel events with setup and teardown logic
 
 <DiscoverBlock slots="link, text"/>
 
-[Add Commands](add-commands/)
+[Add Commands](add-commands/index.md)
 
 Create menu items in Premiere that execute your plugin code
 
 <DiscoverBlock slots="link, text"/>
 
-[Add Multiple Panels](add-panels/)
+[Add Multiple Panels](add-panels/index.md)
 
 Create plugins with multiple panel entrypoints and control their display programmatically
 
 <DiscoverBlock slots="link, text"/>
 
-[Add Modal Dialogs](add-modal-dialogs/)
+[Add Modal Dialogs](add-modal-dialogs/index.md)
 
 Create modal dialogs as a user interface for Commands or as an additional UI for Panels
 
 <DiscoverBlock slots="link, text"/>
 
-[Inter Plugin Communication](inter-plugin-comm/)
+[Inter Plugin Communication](inter-plugin-comm/index.md)
 
 Enable your plugin to communicate with other installed plugins
 

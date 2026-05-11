@@ -24,17 +24,17 @@ The Playground provides a low-barrier entry point for plugin prototyping, allowi
 
 Make sure you have already [connected](index.md#connected-applications) a supported application to UDT. In the top toolbar, click the **Playground** tab to open the Playground panel. It will show you a code editor; click on the languages dropdown to switch between HTML, CSS, JavaScript, and Manifest editors.
 
-![Playground - HTML editor](./img/playground--html.png)
+![Playground - HTML editor](./img/playground-html.png)
 
 If you have multiple Creative Cloud applications running at the same time and UDT has hooked the Playground to the "wrong" one, you can always change it. In the top-right corner, click the blue **Change** link to select a different one and then **OK** to confirm.
 
-![Playground - Select host application](./img/playground--select-host-app2.png)
+![Playground - Select host application](./img/playground-select-host-app2.png)
 
 ### Launch the plugin
 
 The Playground will not automatically launch the plugin in the host application. In the top-right corner, click the blue **Play** ▶️ button to load it.
 
-![Playground - Launch plugin](./img/playground--play.png)
+![Playground - Launch plugin](./img/playground-play.png)
 
 This will launch the plugin in the host application, show a green **Plugin Load Successful** message. In case of errors, a red **Plugin Load Failed** message will appear; click the **Details** link to see the error log.
 
@@ -48,7 +48,7 @@ Whenever you edit the code in any of the tabs (HTML, CSS, and JavaScript), **the
 
 You can **troubleshoot the plugin** by clicking the **`{}`** button to open the UDT debugger. This tool is based on the [Chrome Developer Tool](../../../introduction/essentials/tech-stack/index.md#debugging) and offers most of the same features.
 
-![Playground - Debugger](./img/playground--debug.png)
+![Playground - Debugger](./img/playground-debug.png)
 
 ### Export the code
 
@@ -56,4 +56,4 @@ The Playground is intended to be a prototyping tool to test APIs and iterate ide
 
 In the top-right corner, click the blue **Download** ⬇️ button to open the system folder picker; select where to store the exported code and you'll get a "UXP Playground" project folder with all the files you've been working on.
 
-![Playground - Download code](./img/playground--export.png)
+![Playground - Download code](./img/playground-export.png)

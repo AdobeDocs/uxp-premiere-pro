@@ -1,0 +1,46 @@
+---
+description: Overview of Keyframe
+id: keyframe
+title: Keyframe
+sidebar_label: Keyframe
+repo: uxp-premierepro
+product: premierepro
+keywords: 
+---
+
+# Keyframe  
+
+## Properties
+
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| value | *object* | W | 25.0 |  |
+| position | *TickTime* | W | 25.0 | Get/Set position of a keyframe |
+
+## Instance Methods
+
+### getTemporalInterpolationMode
+
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
+
+*number*
+  
+Gets temporal interpolation mode of a keyframe
+
+<HorizontalLine />
+
+### setTemporalInterpolationMode
+
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
+
+*boolean*
+  
+Sets temporal interpolation mode of a keyframe
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| temporalInterpolationMode | *number* | - |
+
+<HorizontalLine />

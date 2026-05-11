@@ -22,7 +22,7 @@ Most importantly, it contains your **plugin ID**, which uniquely identifies your
 
 ## Manifest Keys
 
-<br/><br/>
+\<br/\>\<br/\>
 
 | Required properties                   | Optional properties                           |
 | :------------------------------------ | :-------------------------------------------- |
@@ -131,7 +131,7 @@ Check the [HostDefinition](#hostdefinition) section for more details.
 
 <InlineAlert slots="text" variant="info"/>
 
-**Only during development**, for convenience, you can assign to the `host` property an array of `HostDefinition` objects, allowing the plugin to be loaded in multiple applications simultaneously. See the [Package with the UXP Developer Tool](../../../plugins/distribution/package/index.md#host-applications) section for more details.
+**Only during development**, for convenience, you can assign to the `host` property an array of `HostDefinition` objects, allowing the plugin to be loaded in multiple applications simultaneously. See the [Package with the UXP Developer Tool](../../distribution/package/index.md#host-applications) section for more details.
 
 ### `entrypoints`
 
@@ -482,7 +482,7 @@ The maximum version of the host app that the plugin supports in the `x.y.z` form
 
 To ensure that plugins are secure, UXP requires that plugins declare the permissions they need to function. Permissions not explicitly declared will be denied by default.
 
-<InlineAlert variant="info" slots="header, text1, text2"/>
+<InlineAlert variant="info" slots="heading, text1, text2"/>
 
 Best practices
 
@@ -766,7 +766,7 @@ Specifies the IPC channels that the plugin can use.
 | :-------------------------- | :-------- | :------- |
 | `enablePluginCommunication` | `boolean` | required |
 
-Enables the plugin to communicate with other plugins. The [inter plugin communication tutorial](../../../plugins/tutorials/inter-plugin-comm/index.md) has more details.
+Enables the plugin to communicate with other plugins. The [inter plugin communication tutorial](../../tutorials/inter-plugin-comm/index.md) has more details.
 
 ### `FeatureFlags`
 
@@ -834,4 +834,4 @@ Note that you will need to **manually install** the library (via `npm` or `yarn`
 | :------------- | :-------- | :------- | ------- |
 | `enableAlerts` | `boolean` | optional | `false` |
 
-Enable the plugin to use create simple dialogs via [`alert()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [`prompt()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md) and [`confirm()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)
+Enable the plugin to use create simple dialogs via [`alert()`](../../../uxp-api/reference-js/global-members/html-dom/alert.md), [`prompt()`](../../../uxp-api/reference-js/global-members/html-dom/prompt.md) and [`confirm()`](../../../uxp-api/reference-js/global-members/html-dom/confirm.md)

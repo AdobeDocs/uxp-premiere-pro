@@ -22,7 +22,7 @@ The Adobe Creative Cloud Marketplace is the easiest way to distribute and moneti
 
 While the UXP ecosystem allows you to share your plugin independently, you can have direct access to millions of users by distributing your products through Adobe's official Creative Cloud Marketplace.
 
-![Adobe Creative Cloud Marketplace](./img/marketplace--ccd.png)
+![Adobe Creative Cloud Marketplace](./img/marketplace-ccd.png)
 
 ## Features
 

@@ -31,7 +31,7 @@ With UXP, you can for example:
 
 Developing in UXP requires some basic knowledge of Web technologies, such as JavaScript, HTML, and CSS. In the following pages, we will cover the essentials you need to know to get started.
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="info" slots="heading, text"/>
 
 #### UXP is not a Browser
 

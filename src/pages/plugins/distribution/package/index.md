@@ -42,7 +42,7 @@ If you plan to **publish to the Adobe Creative Cloud Marketplace**, you should o
 
 See [this guide](../listing/index.md#2-create-a-new-listing) for more details on how to obtain the ID string from the Developer Distribution portal.
 
-[![Developer Distribution - plugin ID](../listing/img/listing--new-listing-created.png)](../listing/index.md#2-create-a-new-listing)
+[![Developer Distribution - plugin ID](../listing/img/listing-new-listing-created.png)](../listing/index.md#2-create-a-new-listing)
 
 ### Multi-channel distribution
 
@@ -67,25 +67,25 @@ Open the UXP Developer Tool and make sure the plugin you intend to package is li
 
 Click on the **•••** icon to open the flyout menu and select **Package**.
 
-![Package with the UXP Developer Tool](./img/package--package-menu.png)
+![Package with the UXP Developer Tool](./img/package-package-menu.png)
 
 This will open a dialog where you can select the folder where the package will be stored.
 
-![Destination folder](./img/package--destination-folder.png)
+![Destination folder](./img/package-destination-folder.png)
 
 If everything goes to plan, the package will be created and named after the plugin's ID, e.g., `Test-xjluvc_premierepro.ccx`.
 
-![Package created](./img/package--success.png)
+![Package created](./img/package-success.png)
 
 A green toast notification will appear to confirm the success of the operation. If this is not the case, click the Details link on the red toast to open the Logs and check the error message
 
-![Package error](./img/package--error.png)
+![Package error](./img/package-error.png)
 
 Before distributing your package, test the installation to confirm it works as expected.
 
 ### Packaging Hybrid Plugins
 
-[Hybrid plugins](../../../plugins/hybrid-plugins/index.md) contain native C++ libraries (`.uxpaddon` files) in addition to the standard JavaScript, HTML, and CSS files. When packaging a Hybrid plugin, ensure the following:
+[Hybrid plugins](../../hybrid-plugins/index.md) contain native C++ libraries (`.uxpaddon` files) in addition to the standard JavaScript, HTML, and CSS files. When packaging a Hybrid plugin, ensure the following:
 
 1. **Directory structure**: place the `.uxpaddon` binaries in the correct platform/architecture folder layout within your plugin bundle:
 
@@ -113,7 +113,7 @@ If the directory structure is incorrect, the plugin will fail to load with a _"P
 
 ### Host Applications
 
-UXP plugin `.ccx` installers can target only one host application at a time; in fact, the [`host`](../../../plugins/concepts/manifest/index.md#host) property in the `manifest.json` file must be a single object of type [`HostDefinition`](../../../plugins/concepts/manifest/index.md#hostdefinition).
+UXP plugin `.ccx` installers can target only one host application at a time; in fact, the [`host`](../../concepts/manifest/index.md#host) property in the `manifest.json` file must be a single object of type [`HostDefinition`](../../concepts/manifest/index.md#hostdefinition).
 
 **Only during development**, for convenience, you can assign to the `host` property an array of `HostDefinition` objects, allowing the plugin to be loaded in multiple applications simultaneously.
 

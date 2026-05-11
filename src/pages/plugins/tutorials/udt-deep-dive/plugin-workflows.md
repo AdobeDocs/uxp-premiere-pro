@@ -25,19 +25,19 @@ Plugins added to the developer workspace do not automatically get added to their
 - **Load**: This will load the plugin in the host application.
 - **Load & Watch**: This will load the plugin in the host application _and_ will watch for changes in the plugin's source code. This is the recommended option.
 
-![UDT - Load Plugin](../../img/getting-started--udt-load-and-watch.png)
+![UDT - Load Plugin](../../img/getting-started-udt-load-and-watch.png)
 
 Plugins that load successfully will show a small green notification at the bottom of the UDT window.
 
-![Load Successful](./img/plugin-workflows--load-successful.png)
+![Load Successful](./img/plugin-workflows-load-successful.png)
 
 If a plugin _fails_ to load, a small red notification will appear with a **Details** link; click it to open the UDT Logs panel and inspect the error.
 
-![Load Failed](./img/plugin-workflows--load-failed.png)
+![Load Failed](./img/plugin-workflows-load-failed.png)
 
 If you have selected the **Load & Watch** option, you can also reload the plugin by clicking the **Reload** button in the UDT window.
 
-<InlineAlert slots="header,text" variant="info"/>
+<InlineAlert slots="heading,text" variant="info"/>
 
 Manifest changes
 
@@ -47,15 +47,15 @@ Load & Watch automatically reloads the plugin when you make changes to the plugi
 
 When your plugin doesn't work as expected, you can debug it by clicking the **`{}`** link in the UDT window. This will open the UDT Debugger panel, which is based on the [Chrome Developer Tool](../../../introduction/essentials/tech-stack/index.md#debugging) and offers most of the same features.
 
-![UDT - Debug](./img/plugin-workflows--debug.png)
+![UDT - Debug](./img/plugin-workflows-debug.png)
 
 In this debugger, you can look at the **Elements**, **Console**, **Sources**, and **Network** tabs. and do the usual debugger things such as setting breakpoints, stepping into and out of functions, walking through code, inspecting elements, and more.
 
-![UDT - Debugger](./img/plugin-workflows--debugger.png)
+![UDT - Debugger](./img/plugin-workflows-debugger.png)
 
 It is also possible to break on start, which will cause the debugger to pause when the plugin is loaded. In UDT, open the plugin's **••• > Options...** menu, select **Advanced**, and in the next dialog, select the **Break on start** checkbox.
 
-![UDT - Break on start](./img/plugin-workflows--break-on-start.png)
+![UDT - Break on start](./img/plugin-workflows-break-on-start.png)
 
 Once you're done with troubleshooting, you can close the debugger window.
 
@@ -67,7 +67,7 @@ When working with JavaScript frameworks like React JS, Vue, Svelte, or other bun
 
 With bundlers, you'll typically have two `manifest.json` files. One will be in your plugin's source code directory, and the other will be in your plugin's distribution directory.
 
-![UDT - Manifest files](./img/plugin-workflows--manifests.png)
+![UDT - Manifest files](./img/plugin-workflows-manifests.png)
 
 You can load either one of these, but you need to be aware of the differences.
 
@@ -76,7 +76,7 @@ You can load either one of these, but you need to be aware of the differences.
 
 In UDT, open the plugin's **••• > Options...** menu, select **Advanced**, and enter the relative path (from the selected source `manifest.json` file) to your plugin’s distribution folder. This loads the plugin the same way as in the previous step, but ensures that any build processes which remove or recreate the distribution folder won’t affect the plugin’s ability to reload in the Developer Tool.
 
-![UDT - Advanced options: distribution folder](./img/plugin-workflows--dist-folder.png)
+![UDT - Advanced options: distribution folder](./img/plugin-workflows-dist-folder.png)
 
 <InlineAlert slots="text" variant="info"/>
 
@@ -93,4 +93,4 @@ This way, when your `watch` process detects a change and rebuilds the plugin, th
 
 ## Package your plugin for distribution
 
-The UDT provides a convenient way to package your plugin into a `.ccx` installer file, ready to be shared in the [Adobe Creative Cloud Marketplace](../../../plugins/distribution/adobe-marketplace/index.md) or any other distribution channel of your choice. Please refer to the [Share & Distribute Guide](../../../plugins/distribution/overview/index.md) for a thorough description of the subject.
+The UDT provides a convenient way to package your plugin into a `.ccx` installer file, ready to be shared in the [Adobe Creative Cloud Marketplace](../../distribution/adobe-marketplace/index.md) or any other distribution channel of your choice. Please refer to the [Share & Distribute Guide](../../distribution/overview/index.md) for a thorough description of the subject.

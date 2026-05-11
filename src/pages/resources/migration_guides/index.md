@@ -1,3 +1,0 @@
-# Migration Guides
-
-Stuff goes here...

@@ -35,7 +35,7 @@ A single plugin can expose multiple panels, each appearing as a separate menu it
 - Shares the same HTML document and JavaScript context
 - Can communicate with other panels in the same plugin
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="info" slots="heading, text"/>
 
 IPC Permission
 
@@ -53,7 +53,7 @@ To enable inter-panel communication and programmatic panel control, you need to 
 
 When working with multiple panels, you'll use the `show()` [lifecycle hook](../../concepts/entrypoints/index.md#panel-lifecycle-hooks) to append the appropriate content to the panel when it's displayed. This approach keeps your panel content organized and ensures each panel only displays its relevant UI.
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 Known Limitation
 
@@ -63,7 +63,7 @@ The `hide()` lifecycle hook is **not currently working as expected** in Premiere
 
 Let's build a plugin with two panels: a main panel and a secondary panel that can be opened from the first.
 
-![Multiple panels](./img/add-panels--panels.png)
+![Multiple panels](./img/add-panels-panels.png)
 
 ### 1. Declare Multiple Entrypoints
 
@@ -240,7 +240,7 @@ Since both panels share the same JavaScript context, they can easily communicate
 
 You can also use **multiple HTML files, one for each panel**. This is useful when you want to keep the code for each panel separate and avoid clutter in the main `index.html` file. The key is to `fetch()` the second panel's HTML file and inject the content into the DOM, as the following example shows.
 
-![Multiple panels](./img/add-panels--panels.png)
+![Multiple panels](./img/add-panels-panels.png)
 
 <CodeBlock slots="heading, code" repeat="4" languages="HTML, HTML, JavaScript, JSON" />
 

@@ -54,11 +54,11 @@ For quick checks without switching to the console, use dialog methods to display
 
 The `alert()`, `confirm()`, and `prompt()` methods are not fully supported in Premiere; they will be fixed in a future release.
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="info" slots="heading, text"/>
 
 Requires Manifest configuration
 
-To use [`alert()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [`confirm()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md), and [`prompt()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md), you must enable the `enableAlerts` feature flag in your [`manifest.json`](../../../plugins/concepts/manifest/index.md#enablealerts).
+To use [`alert()`](../../../uxp-api/reference-js/global-members/html-dom/alert.md), [`confirm()`](../../../uxp-api/reference-js/global-members/html-dom/confirm.md), and [`prompt()`](../../../uxp-api/reference-js/global-members/html-dom/prompt.md), you must enable the `enableAlerts` feature flag in your [`manifest.json`](../../../plugins/concepts/manifest/index.md#enablealerts).
 
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JSON" />
 
@@ -100,6 +100,6 @@ For comprehensive debugging using the UXP Developer Tool, please refer to the [P
 
 ## Reference Material
 
-- [`alert()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md): display simple alert dialogs.
-- [`confirm()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md): display confirmation dialogs.
-- [`prompt()`](../../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md): prompt users for input.
+- [`alert()`](../../../uxp-api/reference-js/global-members/html-dom/alert.md): display simple alert dialogs.
+- [`confirm()`](../../../uxp-api/reference-js/global-members/html-dom/confirm.md): display confirmation dialogs.
+- [`prompt()`](../../../uxp-api/reference-js/global-members/html-dom/prompt.md): prompt users for input.

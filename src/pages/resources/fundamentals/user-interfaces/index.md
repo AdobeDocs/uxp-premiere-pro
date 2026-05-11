@@ -29,7 +29,7 @@ UXP provides three approaches for building user interfaces:
 2. [**Spectrum UXP Widgets**](#spectrum-uxp-widgets): built-in, Adobe-styled components that work out of the box.
 3. [**Spectrum Web Components (SWC)**](#spectrum-web-components-swc): modern Web Component library with Adobe's design system.
 
-<InlineAlert variant="info" slots="header, text" />
+<InlineAlert variant="info" slots="heading, text" />
 
 Recommended approach
 
@@ -60,11 +60,11 @@ These are the familiar HTML elements you've likely used before: `<div>`, `<butto
 | ---------------------------------------------------------------------------------- | ---------------------------------- |
 | Building **highly customized interfaces** that need match different design systems | Complex and expensive to implement |
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="heading, text" />
 
 UXP is not a browser
 
-While UXP supports modern web technologies, it's not a full browser environment. Not all HTML elements, CSS properties, or JavaScript APIs available in browsers will work in UXP. Check the list of [unsupported HTML elements](../../../uxp-api/reference-html/General/Unsupported%20Elements.md) and [unsupported attributes](../../../uxp-api/reference-html/General/Unsupported%20Attributes.md) for details.
+While UXP supports modern web technologies, it's not a full browser environment. Not all HTML elements, CSS properties, or JavaScript APIs available in browsers will work in UXP. Check the list of [unsupported HTML elements](../../../uxp-api/reference-html/General/unsupported-elements.md) and [unsupported attributes](../../../uxp-api/reference-html/General/unsupported-attributes.md) for details.
 
 ### Spectrum UXP Widgets
 
@@ -80,7 +80,7 @@ These widgets are immediately available—no installation or imports required. J
 
 | Best for                                                                                                      | Trade-offs                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Quick prototyping**, getting started with UXP, or when you want Premiere's native look without extra setup. | **Limited number of components** available. <br/>**You can't customize their behavior** beyond the provided API or easily inspect their internal structure. |
+| **Quick prototyping**, getting started with UXP, or when you want Premiere's native look without extra setup. | **Limited number of components** available. \<br/\>**You can't customize their behavior** beyond the provided API or easily inspect their internal structure. |
 
 ### Spectrum Web Components (SWC)
 
@@ -93,7 +93,7 @@ npm install @spectrum-web-components/button@0.37.0
 npm install @spectrum-web-components/textfield@0.37.0
 ```
 
-<InlineAlert variant="info" slots="header, text" />
+<InlineAlert variant="info" slots="heading, text" />
 
 Version Requirement
 
@@ -174,7 +174,7 @@ Your choice depends on your project requirements, timeline, and experience level
 
 For most projects, **we recommend starting with Spectrum Web Components**, and using standard HTML elements for very specific custom needs. UXP Widgets are still supported but may be deprecated in the future.
 
-<InlineAlert variant="info" slots="header, text, text2" />
+<InlineAlert variant="info" slots="heading, text, text2" />
 
 Creative Cloud Marketplace and Visual Language
 
@@ -188,16 +188,16 @@ While vanilla JavaScript, HTML, and CSS are sufficient for many plugins, complex
 
 These frameworks help you manage complex state, create reusable components, and build more maintainable code. However, they require additional setup including Node.js, package managers, and build tools.
 
-If you're already familiar with React or plan to build a complex plugin, check out the [Using Spectrum with React](../../../uxp-api/reference-spectrum/Spectrum%20UXP%20Widgets/Using%20with%20React.md) guide for tips on integrating Spectrum components with React. The most popular approach is to use [React Wrappers for Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/using-swc-react/).
+If you're already familiar with React or plan to build a complex plugin, check out the [Using Spectrum with React](../../../uxp-api/reference-spectrum/spectrum-uxp-widgets/using-with-react.md) guide for tips on integrating Spectrum components with React. The most popular approach is to use [React Wrappers for Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/using-swc-react/).
 
 ## Reference Documentation
 
 Ready to start building? Explore the complete documentation for each UI approach.
 
-- **[Spectrum Web Components](../../../uxp-api/reference-spectrum/swc/)**: full SWC component library and usage examples.
-- **[Spectrum UXP Widgets](../../../uxp-api/reference-spectrum/Spectrum%20UXP%20Widgets/)**: built-in widget reference and API documentation.
-- **[HTML Elements](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/)**: supported HTML elements in UXP.
-- **[HTML Tags Reference](../../../uxp-api/reference-html/)**: complete HTML tag documentation.
-- **[Using Spectrum with React](../../../uxp-api/reference-spectrum/Spectrum%20UXP%20Widgets/Using%20with%20React.md)**: integration guide for React developers (see also the [Working with Bundlers](../../../plugins/tutorials/udt-deep-dive/plugin-workflows.md#working-with-bundlers) section of the UXP Developer Tool documentation).
+- **[Spectrum Web Components](../../../uxp-api/reference-spectrum/swc/index.md)**: full SWC component library and usage examples.
+- **[Spectrum UXP Widgets](../../../uxp-api/reference-spectrum/spectrum-uxp-widgets/index.md)**: built-in widget reference and API documentation.
+- **[HTML Elements](../../../uxp-api/reference-js/global-members/html-elements/index.md)**: supported HTML elements in UXP.
+- **[HTML Tags Reference](../../../uxp-api/reference-html/index.md)**: complete HTML tag documentation.
+- **[Using Spectrum with React](../../../uxp-api/reference-spectrum/spectrum-uxp-widgets/using-with-react.md)**: integration guide for React developers (see also the [Working with Bundlers](../../../plugins/tutorials/udt-deep-dive/plugin-workflows.md#working-with-bundlers) section of the UXP Developer Tool documentation).
 
-For practical examples and working code, explore the [CSS Styling recipe](../../recipes/css-styling/) to learn how to customize your plugin's appearance.
+For practical examples and working code, explore the [CSS Styling recipe](../../recipes/css-styling/index.md) to learn how to customize your plugin's appearance.

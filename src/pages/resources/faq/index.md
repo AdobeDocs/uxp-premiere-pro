@@ -13,7 +13,7 @@ keywords:
 
 # Frequently Asked Questions
 
-This section contains frequently asked questions about UXP and Premiere. Hybrid Plugins specific questions are [found here](../../plugins/hybrid-plugins/).
+This section contains frequently asked questions about UXP and Premiere. Hybrid Plugins specific questions are [found here](../../plugins/hybrid-plugins/index.md).
 
 ## Questions
 
@@ -42,9 +42,9 @@ This section contains frequently asked questions about UXP and Premiere. Hybrid 
 
 ## Answers
 
-<!-- Let's keep the answers in the same order as the questions! -->
+\<!-- Let's keep the answers in the same order as the questions! --\>
 
-<!-- ### 🛠️ Development Environment & Tooling -->
+\<!-- ### 🛠️ Development Environment & Tooling --\>
 
 #### How can I enable Developer Mode?
 
@@ -54,7 +54,7 @@ You need to enable Developer mode in both the UXP Developer Tool and the host ap
 
 Ensure that Premiere is running. If it is, check that the host application's Developer Mode is enabled; follow the instructions in the [this guide](../../plugins/index.md#prerequisites).
 
-<!-- 🎨 User Interfaces -->
+\<!-- 🎨 User Interfaces --\>
 
 #### How can I use Spectrum Web Components in my plugin?
 
@@ -64,7 +64,7 @@ You can use Spectrum Web Components in your plugin by following the instructions
 
 Given that UXP does not support the entire set of HTML Elements and CSS properties, [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) components may not work as expected. For this reason, we recommend using [React Wrappers for Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/using-swc-react/) instead. Make sure you have enabled the `enableSWCSupport` feature flag in your `manifest.json` file and installed the right version of the components.
 
-<!-- 📦 Installers and Packages -->
+\<!-- 📦 Installers and Packages --\>
 
 #### I am unable to install a plugin.
 
@@ -78,7 +78,7 @@ Check if the [`host`](../../plugins/concepts/manifest/index.md#host) property in
 
 The `host` property must be a single [`HostDefinition`](../../plugins/concepts/manifest/index.md#hostdefinition) Object for production. Arrays are only allowed during development for convenience. See the [Package a UXP plugin](../../plugins/distribution/package/index.md#host-applications) section for details.
 
-<!-- 🇪🇺 EU Compliance & DSA Requirements -->
+\<!-- 🇪🇺 EU Compliance & DSA Requirements --\>
 
 #### Why is my plugin not visible in the EU region?
 

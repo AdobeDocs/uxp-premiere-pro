@@ -207,7 +207,7 @@ The macOS `.uxpaddon` executables must be signed and notarized with a valid **Ap
 - The certificate must be valid for **at least one year**.
 - Only the `.uxpaddon` binaries need signing—the rest of the plugin bundle (JavaScript, HTML, CSS, manifest) does not.
 
-See the [FAQ](./faq.md#do-i-need-an-apple-developer-id) for more details on Apple Developer ID requirements.
+See the [FAQ](faq.md#do-i-need-an-apple-developer-id) for more details on Apple Developer ID requirements.
 
 ### 4. Set your plugin ID
 
