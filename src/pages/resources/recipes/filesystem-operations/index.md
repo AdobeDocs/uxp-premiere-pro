@@ -355,7 +355,7 @@ async function selectFolderForExport() {
 
 #### Domain tokens
 
-In the example above, we use the `domains.userDesktop` token to get the user's Desktop folder. You can use other domains tokens, such as `domains.userDocuments`, `domains.userDownloads`, etc. Check the [Domain Tokens](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/domains.md) reference for the full list.
+In the example above, we use the `domains.userDesktop` token to get the user's Desktop folder. You can use other domains tokens, such as `domains.userDocuments`, `domains.userDownloads`, etc. Check the [Domain Tokens](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/domains.md) reference for the full list.
 
 ### Example 4: Remembering User Selections with Tokens
 
@@ -363,8 +363,8 @@ When users grant access to files or folders, you can create tokens to remember t
 
 UXP provides two types of tokens:
 
-- [**Session tokens**](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/file-system-provider.md): Last until the plugin is unloaded or the application closes
-- [**Persistent tokens**](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/file-system-provider.md): Survive across sessions until the plugin is uninstalled
+- [**Session tokens**](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/file-system-provider.md): Last until the plugin is unloaded or the application closes
+- [**Persistent tokens**](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/file-system-provider.md): Survive across sessions until the plugin is uninstalled
 
 ```javascript
 const { localFileSystem, domains, fileTypes } = require('uxp').storage;
@@ -428,11 +428,11 @@ Store tokens in [`localStorage`](../../../uxp-api/reference-js/global-members/da
 
 For complete API documentation, see:
 
-- [FileSystemProvider](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/file-system-provider.md): main interface for file system operations.
-- [Entry](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/entry.md): base class for files and folders.
-- [File](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/file.md): file-specific operations.
-- [Folder](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/folder.md): folder-specific operations.
-- [EntryMetadata](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/entry-metadata.md): file and folder metadata.
+- [FileSystemProvider](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/file-system-provider.md): main interface for file system operations.
+- [Entry](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/entry.md): base class for files and folders.
+- [File](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/file.md): file-specific operations.
+- [Folder](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/folder.md): folder-specific operations.
+- [EntryMetadata](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/entry-metadata.md): file and folder metadata.
 - [Path](../../../uxp-api/reference-js/global-members/path/index.md): path manipulation utilities.
 
 ## Working with the `fs` module
@@ -602,11 +602,11 @@ Always handle file system errors gracefully and inform users when access is deni
 
 ## Reference Material
 
-- [FileSystemProvider](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/file-system-provider.md): main interface for file system operations.
-- [Entry](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/entry.md): base class for files and folders.
-- [File](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/file.md): file-specific operations.
-- [Folder](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/folder.md): folder-specific operations.
-- [EntryMetadata](../../../uxp-api/reference-js/Modules/uxp/persistent-file-storage/entry-metadata.md): file and folder metadata.
+- [FileSystemProvider](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/file-system-provider.md): main interface for file system operations.
+- [Entry](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/entry.md): base class for files and folders.
+- [File](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/file.md): file-specific operations.
+- [Folder](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/folder.md): folder-specific operations.
+- [EntryMetadata](../../../uxp-api/reference-js/modules/uxp/persistent-file-storage/entry-metadata.md): file and folder metadata.
 - [`fs` module](../../../uxp-api/reference-js/modules/fs/index.md): complete file system API reference.
 - [Path](../../../uxp-api/reference-js/global-members/path/index.md): path manipulation utilities.
 - [LocalStorage](../../../uxp-api/reference-js/global-members/data-storage/local-storage.md): persistent data storage for tokens.

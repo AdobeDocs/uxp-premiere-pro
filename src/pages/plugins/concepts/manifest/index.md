@@ -714,7 +714,7 @@ The domains that the plugin can access. Can be a list of domains, or the string 
 
 Specifies whether the plugin can communicate with the webview using the message API.
 
-Find the detailed [WebView API reference](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md) or use the `webview-starter` template plugin in UDT.
+Find the detailed [WebView API reference](../../../uxp-api/reference-js/global-members/html-elements/html-web-view-element.md) or use the `webview-starter` template plugin in UDT.
 
 ##### `LaunchProcessPermission`
 
