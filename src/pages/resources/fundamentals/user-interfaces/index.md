@@ -64,7 +64,7 @@ These are the familiar HTML elements you've likely used before: `<div>`, `<butto
 
 UXP is not a browser
 
-While UXP supports modern web technologies, it's not a full browser environment. Not all HTML elements, CSS properties, or JavaScript APIs available in browsers will work in UXP. Check the list of [unsupported HTML elements](../../../uxp-api/reference-html/General/unsupported-elements.md) and [unsupported attributes](../../../uxp-api/reference-html/General/unsupported-attributes.md) for details.
+While UXP supports modern web technologies, it's not a full browser environment. Not all HTML elements, CSS properties, or JavaScript APIs available in browsers will work in UXP. Check the list of [unsupported HTML elements](../../../uxp-api/reference-html/general/unsupported-elements.md) and [unsupported attributes](../../../uxp-api/reference-html/general/unsupported-attributes.md) for details.
 
 ### Spectrum UXP Widgets
 

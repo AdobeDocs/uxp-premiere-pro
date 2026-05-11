@@ -165,6 +165,6 @@ This approach works for **Spectrum Widgets** (`sp-*` elements). For **Spectrum W
 
 ## Reference Material
 
-- [HTMLDialogElement](../../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement.md): dialog-specific properties and methods.
+- [HTMLDialogElement](../../../uxp-api/reference-js/global-members/html-elements/html-dialog-element.md): dialog-specific properties and methods.
 - [HTML Elements](../../../uxp-api/reference-js/global-members/html-elements/index.md): complete list of supported HTML elements.
 - [Spectrum Web Components](../../../uxp-api/reference-spectrum/index.md): Adobe's UI component library.

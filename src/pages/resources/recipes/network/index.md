@@ -340,7 +340,7 @@ async function safeFetch(url, options = {}, timeoutMs = 8000) {
 ## Reference Material
 
 - [`fetch`](../../../uxp-api/reference-js/global-members/data-transfers/fetch.md) API Reference.
-- [`XMLHttpRequest`](../../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md) Reference.
+- [`XMLHttpRequest`](../../../uxp-api/reference-js/global-members/data-transfers/xml-http-request.md) Reference.
 - [`WebSocket`](../../../uxp-api/reference-js/global-members/data-transfers/web-socket.md) Reference.
 - [Manifest Permissions](../../../plugins/concepts/manifest/index.md#permissionsdefinition).
 - [Network Permission Details](../../../plugins/concepts/manifest/index.md#networkpermission).
