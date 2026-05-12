@@ -10,12 +10,31 @@ The slack channel #adobeio-onsite-onboarding is our main point of contact for he
 
 ## How to develop
 
-For local development, simply use :
+Additional details on EDS-required server setup can be found on the [`adp-devsite-utils`](https://github.com/AdobeDocs/adp-devsite-utils) repo. All three of these servers must be running simultaneously in order for the documentation to be accessible locally.
 
-```shell
-$ yarn install
-$ yarn dev
-```
+1. Clone, install, and run the **Content** server (you are here):
+    ```sh
+    $ git clone https://github.com/AdobeDocs/uxp-premiere-pro
+    $ cd uxp-premiere-pro
+    $ yarn install
+    $ yarn dev
+    ```
+
+1. Clone, install, and run the **Code** server ([adp-devsite](https://github.com/AdobeDocs/adp-devsite)):
+    ```sh
+    $ git clone https://github.com/AdobeDocs/adp-devsite
+    $ cd adp-devsite
+    $ npm install
+    $ npm run dev
+    ```
+
+1. Clone, install, and run the **Runtime** connector server ([devsite-runtime-connector](https://github.com/aemsites/devsite-runtime-connector)):
+    ```sh
+    $ git clone https://github.com/aemsites/devsite-runtime-connector
+    $ cd devsite-runtime-connector
+    $ npm install
+    $ npm run dev
+    ```
 
 ## How to make changes to UXP API reference
 
