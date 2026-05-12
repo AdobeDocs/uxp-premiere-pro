@@ -60,6 +60,7 @@ description: Overview of Config
       - [APIs](resources/fundamentals/apis/index.md)
       - [DOM APIs](resources/fundamentals/dom-apis/index.md)
       - [TypeScript Support](resources/fundamentals/typescript-support/index.md)
+      - [ESLint Support](resources/fundamentals/eslint-support/index.md)
       - [User Interfaces](resources/fundamentals/user-interfaces/index.md)
     - [Starters & Samples](resources/starters-samples/index.md)
     - [Recipes](resources/recipes/index.md)
