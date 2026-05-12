@@ -33,14 +33,23 @@ Both approaches are based on the same Type Definitions for Premiere DOM APIs, so
 
 ### Type Definitions
 
-Complete TypeScript type definitions for all Premiere DOM APIs are [available for download here](../../../ppro-reference/types.d.ts). This file includes:
+Complete TypeScript type definitions for all Premiere DOM APIs are available as an NPM package [`@adobe/premierepro`](https://www.npmjs.com/package/@adobe/premierepro). This package includes:
 
 - All Premiere classes and their methods (`Project`, `Sequence`, `VideoTrack`, etc.)
 - Constants and enums (`MediaType`, `TrackItemType`, etc.)
 - Complete method signatures with parameter and return types
 - JSDoc comments with descriptions for every API
 
-Once downloaded, place the `types.d.ts` file in your plugin's root directory, alongside your `manifest.json`.
+You can install this package through `npm` or your preferred package manager of choice, for example:
+```sh
+$ npm install -D @adobe/premierepro
+
+# Using yarn
+$ yarn add -D @adobe/premierepro
+
+# Using pnpm
+$ pnpm add -D @adobe/premierepro
+```
 
 ### JavaScript Intellisense
 
@@ -50,7 +59,7 @@ You can get full IntelliSense[^1] in plain JavaScript files **without TypeScript
 
 #### Quick Setup
 
-1. **Add `types.d.ts` to your plugin folder** (see [download link](#type-definitions) above)
+1. **Install the `@adobe/premierepro` package**
 2. **Create a `jsconfig.json`[^2] file** in your plugin's root directory:
 
 [^2]: `jsconfig.json` is a configuration file for JavaScript projects.
@@ -70,7 +79,7 @@ You can get full IntelliSense[^1] in plain JavaScript files **without TypeScript
 3. **Add JSDoc type hints** to your JavaScript code:
 
 ```javascript
-/** @type {import('./types').premierepro} */
+/** @type {import('@adobe/premierepro').premierepro} */
 const ppro = require("premierepro");
 
 // Now you get full IntelliSense!
@@ -86,7 +95,7 @@ Here are common patterns for adding type hints to your JavaScript code. The key 
 **Type hint for the main API:**
 
 ```javascript
-/** @type {import('./types').premierepro} */
+/** @type {import('@adobe/premierepro').premierepro} */
 const ppro = require("premierepro");
 
 async function example() {
@@ -103,7 +112,7 @@ async function example() {
 ```javascript
 /**
  * Analyze all video tracks in a sequence
- * @param {import('./types').Sequence} sequence - The sequence to analyze
+ * @param {import('@adobe/premierepro').Sequence} sequence - The sequence to analyze
  * @returns {Promise<void>}
  */
 async function analyzeTracks(sequence) {
@@ -121,7 +130,7 @@ async function analyzeTracks(sequence) {
 ```javascript
 /**
  * Process multiple track items
- * @param {import('./types').VideoClipTrackItem[]} trackItems
+ * @param {import('@adobe/premierepro').VideoClipTrackItem[]} trackItems
  */
 async function processTrackItems(trackItems) {
   for (const item of trackItems) {
@@ -146,7 +155,7 @@ For larger codebases and development teams, TypeScript has become a standard. It
 
 #### Quick Setup
 
-1. **Add `types.d.ts` to your plugin folder** (see [download link](#type-definitions) above)
+1. **Install the `@adobe/premierepro` package**
 2. **Install TypeScript** and create your source folder:
 
 ```bash
@@ -168,7 +177,7 @@ mkdir src
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*", "types.d.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
 ```
@@ -179,7 +188,6 @@ Your project structure should now look like this:
 
 ```text
 your-plugin/
-    ├── types.d.ts         # Type definitions (in root)
     ├── tsconfig.json      # TypeScript config
     ├── package.json
     ├── manifest.json
@@ -218,8 +226,7 @@ npm run build
 With TypeScript, you get cleaner syntax and better type inference:
 
 ```typescript
-// Import types from types.d.ts in the root directory
-import type { premierepro, Sequence, VideoTrack } from '../types';
+import type { premierepro, VideoTrack } from '@adobe/premierepro';
 
 const ppro = require("premierepro") as premierepro;
 
