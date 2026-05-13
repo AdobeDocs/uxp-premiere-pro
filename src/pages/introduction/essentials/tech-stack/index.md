@@ -67,6 +67,12 @@ Any additional tool that expands the capabilities of Vanilla (i.e., plain) JavaS
   npm install yarn --global
   ```
 
+## Static Analysis Tooling
+
+To assist with writing UXP plugins, **static analysis tools** such as [ESLint](https://eslint.org/) allow you to check for common problems with writing JavaScript. ESLint integrates nicely with continuous integration (CI) tools and many popular [code editors](../dev-tools/index.md#code-editor) to let you catch these problems and fix them earlier in the development process.
+
+In addition to a set of recommended rules for analyzing code, ESLint also supports a wide variety of plugins and configurations that you can easily add into your project. This becomes especially helpful when using other web frameworks to make sure your plugin adheres to best practices with those frameworks.
+
 ## System Requirements
 
 Finally, make sure your system meets the minimum requirements to run the [Premiere](https://helpx.adobe.com/premiere-pro/system-requirements.html) application.

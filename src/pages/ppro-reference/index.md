@@ -50,4 +50,4 @@ UXP is not just for plugins anymore.  Individual JavaScript files may be develop
 
 ## Useful links
 
- - [Typescript Definition File](types.d.ts)
+ - [Typescript Declaration NPM package](https://github.com/adobe/premierepro-types)
