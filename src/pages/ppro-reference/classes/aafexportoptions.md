@@ -32,7 +32,7 @@ keywords:
 
 ### setAudioFileFormat
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -42,13 +42,13 @@ Set the audio file format (0 for AIFF, 1 for WAV)
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| audioFileFormat | [*Constants.AAFExportAudioFormat*](/ppro_reference/constants) | - |
+| audioFileFormat | [*Constants.AAFExportAudioFormat*](../constants/index.md) | - |
 
-___
+<HorizontalLine />
 
 ### setBitsPerSample
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -60,11 +60,11 @@ Set the audio bits per sample
 | :------ | :------ | :------ |
 | bitsPerSample | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setEmbedAudio
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -76,11 +76,11 @@ Set whether to embed audio in the AAF file
 | :------ | :------ | :------ |
 | embedAudio | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setExplodeToMono
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -92,11 +92,11 @@ When true, exports multichannel audio as separate mono media files (one file per
 | :------ | :------ | :------ |
 | explodeToMono | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setHandleFrames
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -108,11 +108,11 @@ Set the number of handle frames
 | :------ | :------ | :------ |
 | handleFrames | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setInterleaveWithoutEffects
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -124,11 +124,11 @@ Set whether to interleave without effects
 | :------ | :------ | :------ |
 | interleaveWithoutEffects | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setMixdownVideo
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -140,11 +140,11 @@ When true, renders the sequence video to a single media file for AAF export (vid
 | :------ | :------ | :------ |
 | mixdownVideo | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setPreserveParentFolder
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -156,11 +156,11 @@ When true, exploded mono audio is written under a subdirectory named after the f
 | :------ | :------ | :------ |
 | preserveParentFolder | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setRenderAudioEffects
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -172,11 +172,11 @@ Set whether to render audio effects
 | :------ | :------ | :------ |
 | renderAudioEffects | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setSampleRate
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -188,11 +188,11 @@ Set the audio sample rate
 | :------ | :------ | :------ |
 | sampleRate | *number* | - |
 
-___
+<HorizontalLine />
 
 ### setTrimSources
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -204,11 +204,11 @@ Set whether to trim sources
 | :------ | :------ | :------ |
 | trimSources | *boolean* | - |
 
-___
+<HorizontalLine />
 
 ### setVideoMixdownPresetPath
 
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *AAFExportOptions*
   
@@ -220,4 +220,4 @@ Path to the encoder preset file (.epr) used when mixdown video is enabled
 | :------ | :------ | :------ |
 | videoMixdownPresetPath | *string* | - |
 
-___
+<HorizontalLine />
