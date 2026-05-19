@@ -4,6 +4,10 @@ module.exports = [{
 	"header": true,
 	"pages": [
         {
+          "title": "AAFExportOptions",
+          "path": "/ppro_reference/classes/aafexportoptions/"
+        },
+        {
           "title": "AddTransitionOptions",
           "path": "/ppro_reference/classes/addtransitionoptions/"
         },
@@ -100,8 +104,16 @@ module.exports = [{
           "path": "/ppro_reference/classes/media/"
         },
         {
+          "title": "MediaManager",
+          "path": "/ppro_reference/classes/mediamanager/"
+        },
+        {
           "title": "Metadata",
           "path": "/ppro_reference/classes/metadata/"
+        },
+        {
+          "title": "ObjectMaskUtils",
+          "path": "/ppro_reference/classes/objectmaskutils/"
         },
         {
           "title": "PRProduction",
