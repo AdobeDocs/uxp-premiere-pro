@@ -8,22 +8,24 @@ product: premierepro
 keywords: 
 ---
 
-# ProjectSettings  
+# ProjectSettings
+
+Since: **25.6**
 
 ## Static Methods
 
 ### createSetIngestSettingsAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Returns an action which sets IngestSettings
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | project | [*Project*](project.md) | - |
 | ingestSettings | [*IngestSettings*](ingestsettings.md) | - |
 
@@ -31,16 +33,16 @@ Returns an action which sets IngestSettings
 
 ### createSetScratchDiskSettingsAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Returns an action which sets ScratchDiskSetting
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | project | [*Project*](project.md) | - |
 | scratchDiskSettings | [*ScratchDiskSettings*](scratchdisksettings.md) | - |
 
@@ -48,32 +50,32 @@ Returns an action which sets ScratchDiskSetting
 
 ### getIngestSettings
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*IngestSettings*
-  
 Returns project ingest settings
+
+Since: **25.6**
+
+Returns: Promise\<[*IngestSettings*](ingestsettings.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | project | [*Project*](project.md) | - |
 
 <HorizontalLine />
 
 ### getScratchDiskSettings
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*ScratchDiskSettings*
-  
 Returns project ScratchDiskSettings
+
+Since: **25.6**
+
+Returns: Promise\<[*ScratchDiskSettings*](scratchdisksettings.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | project | [*Project*](project.md) | - |
 
 <HorizontalLine />

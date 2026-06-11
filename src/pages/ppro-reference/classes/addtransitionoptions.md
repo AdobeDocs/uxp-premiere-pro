@@ -8,79 +8,81 @@ product: premierepro
 keywords: 
 ---
 
-# AddTransitionOptions  
+# AddTransitionOptions
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| applyToStart | *boolean* | R | 25.0 | Get whether to apply transition to the start or end of trackitem |
-| forceSingleSided | *boolean* | R | 25.0 | Get whether transition should be applied to one/both sides |
-| transitionAlignment | *number* | R | 25.0 | Gets the transitionAlignment of transition |
-| duration | *TickTime* | R | 25.0 | Gets the duration of transition |
+| :--- | :--- | :----- | :---------- | :---------- |
+| applyToStart | *boolean* | R | 25.6 | Get whether to apply transition to the start or end of trackitem |
+| forceSingleSided | *boolean* | R | 25.6 | Get whether transition should be applied to one/both sides |
+| transitionAlignment | *number* | R | 25.6 | Gets the transitionAlignment of transition |
+| duration | [*TickTime*](ticktime.md) | R | 25.6 | Gets the duration of transition |
 
 ## Instance Methods
 
 ### setApplyToStart
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*AddTransitionOptions*
-  
 Set whether to apply transition to the start or end of trackitem
+
+Since: **25.6**
+
+Returns: [*AddTransitionOptions*](addtransitionoptions.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | applyToStart | *boolean* | - |
 
 <HorizontalLine />
 
 ### setDuration
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*AddTransitionOptions*
-  
 Sets the duration of transition
+
+Since: **25.6**
+
+Returns: [*AddTransitionOptions*](addtransitionoptions.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | tickTime | [*TickTime*](ticktime.md) | Sets the duration of transition in TickTime |
 
 <HorizontalLine />
 
 ### setForceSingleSided
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*AddTransitionOptions*
-  
 Set whether transition should be applied to one/both sides
+
+Since: **25.6**
+
+Returns: [*AddTransitionOptions*](addtransitionoptions.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | forceSingleSided | *boolean* | - |
 
 <HorizontalLine />
 
 ### setTransitionAlignment
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*AddTransitionOptions*
-  
 Sets the transitionAlignment of the transition
+
+Since: **25.6**
+
+Returns: [*AddTransitionOptions*](addtransitionoptions.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | transitionAlignment | *number* | - |
 
 <HorizontalLine />

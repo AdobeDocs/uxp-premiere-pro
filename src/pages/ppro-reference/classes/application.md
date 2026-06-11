@@ -8,10 +8,12 @@ product: premierepro
 keywords: 
 ---
 
-# Application  
+# Application
+
+Since: **25.6**
 
 ## Properties
 
-| Name    | Type     | Access | Min Version | Description |
-| :------ | :------- | :----- | :---------- | :---------- |
-| version | *string* | R      | 25.0        | The version string of the running Premiere Pro application.       |
+| Name | Type | Access | Min Version | Description |
+| :--- | :--- | :----- | :---------- | :---------- |
+| version | Promise\<*string*\> | R | 25.6 |  |

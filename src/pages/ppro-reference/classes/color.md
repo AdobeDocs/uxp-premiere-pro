@@ -8,31 +8,33 @@ product: premierepro
 keywords: 
 ---
 
-# Color  
+# Color
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| red | *number* | W | 25.0 | Read/Write property to get/set red value of color object |
-| green | *number* | W | 25.0 | Read/Write property to get/set green value of color object |
-| blue | *number* | W | 25.0 | Read/Write property to get/set blue value of color object |
-| alpha | *number* | W | 25.0 | Read/Write property to get/set alpha value of color object |
+| :--- | :--- | :----- | :---------- | :---------- |
+| red | *number* | W | 25.6 | Read/Write property to get/set red value of color object |
+| green | *number* | W | 25.6 | Read/Write property to get/set green value of color object |
+| blue | *number* | W | 25.6 | Read/Write property to get/set blue value of color object |
+| alpha | *number* | W | 25.6 | Read/Write property to get/set alpha value of color object |
 
 ## Instance Methods
 
 ### equals
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Returns true if the given ColorObject is equal to this ColorObject
+
+Since: **25.6**
+
+Returns: *boolean*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | colorObject | [*Color*](color.md) | - |
 
 <HorizontalLine />

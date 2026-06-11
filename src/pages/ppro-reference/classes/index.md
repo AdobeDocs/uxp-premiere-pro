@@ -5,7 +5,7 @@ title: Objects
 sidebar_label: Objects
 repo: PPro-UXP
 product: premierepro
-keywords: 
+keywords:
 ---
 
 # Objects

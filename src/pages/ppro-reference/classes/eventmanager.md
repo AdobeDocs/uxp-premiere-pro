@@ -8,41 +8,43 @@ product: premierepro
 keywords: 
 ---
 
-# EventManager  
+# EventManager
+
+Since: **25.6**
 
 ## Static Methods
 
 ### addGlobalEventListener
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*void*
-  
 add global event listener
+
+Since: **25.6**
+
+Returns: *void*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
-| eventName | *string* or [*Constants.SnapEvent*](../constants/index.md) or [*Constants.ProjectEvent*](../constants/index.md) or [*Constants.SequenceEvent*](../constants/index.md) or [*Constants.OperationCompleteEvent*](../constants/index.md) | - |
-| eventHandler | *(event?: object) => void* | - |
-| inCapturePhase? | *boolean* | - |
+| :----| :--- | :---------- |
+| eventName | *string* or [*Constants.SnapEvent*](../constants/index.md#snapevent) or [*Constants.ProjectEvent*](../constants/index.md#projectevent) or [*Constants.SequenceEvent*](../constants/index.md#sequenceevent) or [*Constants.OperationCompleteEvent*](../constants/index.md#operationcompleteevent) | - |
+| eventHandler | *(event?: object) =\> void* | - |
+| inCapturePhase | *boolean* | - |
 
 <HorizontalLine />
 
 ### removeGlobalEventListener
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*void*
-  
 remove global event listener
+
+Since: **25.6**
+
+Returns: *void*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
-| eventName | *string* or [*Constants.SnapEvent*](../constants/index.md) or [*Constants.ProjectEvent*](../constants/index.md) or [*Constants.SequenceEvent*](../constants/index.md) or [*Constants.OperationCompleteEvent*](../constants/index.md) | - |
-| eventHandler | *(event?: object) => void* | - |
+| :----| :--- | :---------- |
+| eventName | *string* or [*Constants.SnapEvent*](../constants/index.md#snapevent) or [*Constants.ProjectEvent*](../constants/index.md#projectevent) or [*Constants.SequenceEvent*](../constants/index.md#sequenceevent) or [*Constants.OperationCompleteEvent*](../constants/index.md#operationcompleteevent) | - |
+| eventHandler | *(event?: object) =\> void* | - |
 
 <HorizontalLine />

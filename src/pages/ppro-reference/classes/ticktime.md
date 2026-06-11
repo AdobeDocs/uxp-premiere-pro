@@ -8,30 +8,32 @@ product: premierepro
 keywords: 
 ---
 
-# TickTime  
+# TickTime
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| seconds | *number* | R | 25.0 | Get the TickTime in seconds |
-| ticks | *string* | R | 25.0 | Get the TickTime in ticks as a string |
-| ticksNumber | *number* | R | 25.0 | Get the TickTime in ticks as a number |
+| :--- | :--- | :----- | :---------- | :---------- |
+| seconds | *number* | R | 25.6 | Get the TickTime in seconds |
+| ticks | *string* | R | 25.6 | Get the TickTime in ticks as a string |
+| ticksNumber | *number* | R | 25.6 | Get the TickTime in ticks as a number |
 
 ## Static Methods
 
 ### createWithFrameAndFrameRate
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Constructs a TickTime object with a frame and a frame rate.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | frameCount | *number* | - |
 | frameRate | [*FrameRate*](framerate.md) | - |
 
@@ -39,32 +41,32 @@ Constructs a TickTime object with a frame and a frame rate.
 
 ### createWithSeconds
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Constructs a TickTime object with seconds.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | seconds | *number* | - |
 
 <HorizontalLine />
 
 ### createWithTicks
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Constructs a TickTime object with ticks as a string.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | ticks | *string* | - |
 
 <HorizontalLine />
@@ -73,112 +75,112 @@ Constructs a TickTime object with ticks as a string.
 
 ### add
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Add another TickTime to this one and return it. This TickTime is not modified.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
 
 ### alignToFrame
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 alignToFrame will return a TickTime that is aligned to the nearest frame boundary less than the given time, for a given frame rate by rounding any fractional portion.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | frameRate | [*FrameRate*](framerate.md) | - |
 
 <HorizontalLine />
 
 ### alignToNearestFrame
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 AlignToNearestFrame will return a TickTime that is aligned to the nearest frame boundary greater than or less than the given time, for a given frame rate by rounding any fractional portion.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | frameRate | [*FrameRate*](framerate.md) | - |
 
 <HorizontalLine />
 
 ### divide
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Divide this TickTime by a divisor and return it. In case of a division by zero, TIME_INVALID is returned. This TickTime is not modified.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | divisor | *number* | - |
 
 <HorizontalLine />
 
 ### equals
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Returns true if the given TickTime is equal to the TickTime object
+
+Since: **25.6**
+
+Returns: *boolean*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
 
 ### multiply
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Multiply this TickTime with a factor and return it. This TickTime is not modified.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | factor | *number* | - |
 
 <HorizontalLine />
 
 ### subtract
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Subtract another TickTime from this one and return it. This TickTime is not modified.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />

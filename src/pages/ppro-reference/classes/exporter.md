@@ -8,22 +8,24 @@ product: premierepro
 keywords: 
 ---
 
-# Exporter  
+# Exporter
+
+Since: **25.6**
 
 ## Static Methods
 
 ### exportSequenceFrame
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Exports from a sequence. Supported formats are bmp, dpx, gif, jpg, exr, png, tga and tif
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | sequence | [*Sequence*](sequence.md) | - |
 | time | [*TickTime*](ticktime.md) | - |
 | filename | *string* | Filename to be exported , example 'C:/temp/exportedFrame.png' |

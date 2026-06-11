@@ -8,10 +8,12 @@ product: premierepro
 keywords: 
 ---
 
-# TimeDisplay  
+# TimeDisplay
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| type | *number* | W | 25.0 | Read/Write property to get/set the time display type numeric code |
+| :--- | :--- | :----- | :---------- | :---------- |
+| type | *number* | W | 25.6 | Read/Write property to get/set the time display type numeric code |

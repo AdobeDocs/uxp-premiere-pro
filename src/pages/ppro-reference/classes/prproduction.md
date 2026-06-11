@@ -8,17 +8,19 @@ product: premierepro
 keywords: 
 ---
 
-# PRProduction  
+# PRProduction
+
+Since: **26.2**
 
 ## Static Methods
 
 ### getActiveProduction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*PRProduction*
-  
 Get an instance of the currently active production.
+
+Since: **26.2**
+
+Returns: [*PRProduction*](prproduction.md)
 
 <HorizontalLine />
 
@@ -26,10 +28,10 @@ Get an instance of the currently active production.
 
 ### getScratchDiskSettings
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*ScratchDiskSettings*
-  
 Get the scratch disk settings instance for this production.
+
+Since: **26.2**
+
+Returns: Promise\<[*ScratchDiskSettings*](scratchdisksettings.md)\>
 
 <HorizontalLine />

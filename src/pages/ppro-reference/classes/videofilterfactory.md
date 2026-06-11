@@ -8,42 +8,44 @@ product: premierepro
 keywords: 
 ---
 
-# VideoFilterFactory  
+# VideoFilterFactory
+
+Since: **25.6**
 
 ## Static Methods
 
 ### createComponent
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*VideoFilterComponent*
-  
 Creates a new video filter component based on the input matchName
+
+Since: **25.6**
+
+Returns: Promise\<[*VideoFilterComponent*](videofiltercomponent.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | matchName | *string* | The match name of the component to create, example 'PR.ADBE Solarize', 'AE.ADBE Mosaic' etc.. |
 
 <HorizontalLine />
 
 ### getDisplayNames
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string[]*
-  
 Returns an array of video filter display names
+
+Since: **25.6**
+
+Returns: Promise\<*string[]*\>
 
 <HorizontalLine />
 
 ### getMatchNames
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string[]*
-  
 Returns an array of video filter matchNames
+
+Since: **25.6**
+
+Returns: Promise\<*string[]*\>
 
 <HorizontalLine />

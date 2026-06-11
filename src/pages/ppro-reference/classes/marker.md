@@ -8,176 +8,184 @@ product: premierepro
 keywords: 
 ---
 
-# Marker  
+# Marker
+
+Since: **25.6**
+
+## Properties
+
+| Name | Type | Access | Min Version | Description |
+| :--- | :--- | :----- | :---------- | :---------- |
+| guid | [*Guid*](guid.md) | R | 26.3 | The unique identifier of the marker. |
 
 ## Instance Methods
 
 ### createSetColorByIndexAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Return an action to set the color of the marker by the color index
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
-| Name       | Type     | Description |
-| --- | --- | --- |
-| colorIndex | *number* | -           |
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| colorIndex | *number* | - |
 
 <HorizontalLine />
 
 ### createSetCommentsAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Return an action to set the comments of the marker.
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | comments | *string* | - |
 
 <HorizontalLine />
 
 ### createSetDurationAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Return an action to set the duration of the marker.
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
 
 ### createSetNameAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Return an action to set the name of the marker.
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | name | *string* | - |
 
 <HorizontalLine />
 
 ### createSetTypeAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Return an action to set the type of the marker.
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
-| Name       | Type     | Description                                                               |
-| :--------- | :------- | :------------------------------------------------------------------------ |
-| markerType | *string* | Can be set to "Comment", "Chapter", "Segmentation", or "WebLink"; verify exact strings against the TypeScript definitions file. |
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| markerType | *string* | This values can be Scale (0), AnchorToInPoint (1) or AnchorToOutPoint (2) |
 
 <HorizontalLine />
 
 ### getColor
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Color*
-  
 Get color code of the marker.
+
+Since: **25.6**
+
+Returns: [*Color*](color.md)
 
 <HorizontalLine />
 
 ### getColorIndex
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Get color index of the marker.
+
+Since: **25.6**
+
+Returns: *number*
 
 <HorizontalLine />
 
 ### getComments
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get comments of the marker.
+
+Since: **25.6**
+
+Returns: *string*
 
 <HorizontalLine />
 
 ### getDuration
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Get duration time of the marker.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 <HorizontalLine />
 
 ### getName
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get name of the marker.
+
+Since: **25.6**
+
+Returns: *string*
 
 <HorizontalLine />
 
 ### getStart
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Get start time of the marker.
+
+Since: **25.6**
+
+Returns: [*TickTime*](ticktime.md)
 
 <HorizontalLine />
 
 ### getTarget
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get target of the marker. Used together with url for web targets.
+
+Since: **25.6**
+
+Returns: *string*
 
 <HorizontalLine />
 
 ### getType
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get type of the marker. e.g. Cue / Track / Subclip / Cart
+
+Since: **25.6**
+
+Returns: *string*
 
 <HorizontalLine />
 
 ### getUrl
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get url of the marker.
+
+Since: **25.6**
+
+Returns: *string*
 
 <HorizontalLine />

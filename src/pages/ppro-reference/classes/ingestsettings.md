@@ -8,32 +8,34 @@ product: premierepro
 keywords: 
 ---
 
-# IngestSettings  
+# IngestSettings
+
+Since: **25.6**
 
 ## Instance Methods
 
 ### getIsIngestEnabled
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Get whether or not ingest is enabled
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 <HorizontalLine />
 
 ### setIngestEnabled
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set whether or not ingest is enabled
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | enabled | *boolean* | - |
 
 <HorizontalLine />

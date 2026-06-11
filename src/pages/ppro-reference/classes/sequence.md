@@ -8,353 +8,357 @@ product: premierepro
 keywords: 
 ---
 
-# Sequence  
+# Sequence
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| guid | *Guid* | R | 25.0 | The unique identifier of the sequence. |
-| name | *string* | R | 25.0 | The sequence name. |
+| :--- | :--- | :----- | :---------- | :---------- |
+| guid | [*Guid*](guid.md) | R | 25.6 | The unique identifier of the sequence. |
+| name | *string* | R | 25.6 | The sequence name. |
 
 ## Instance Methods
 
 ### clearSelection
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Clears TrackItem Selection
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 <HorizontalLine />
 
 ### createCloneAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Creates an action to clone the given sequence
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 <HorizontalLine />
 
 ### createSetInPointAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Create SetInPointAction for sequence
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
 
 ### createSetOutPointAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Create SetOutPointAction for sequence
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
 
 ### createSetSettingsAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Returns action that set sequence settings
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | sequenceSettings | [*SequenceSettings*](sequencesettings.md) | - |
 
 <HorizontalLine />
 
 ### createSetZeroPointAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Create an action to set an InPoint for the sequence
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
 
 ### createSubsequence
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Sequence*
-  
 Returns a new sequence, which is a sub-sequence of the existing sequence
+
+Since: **25.6**
+
+Returns: Promise\<[*Sequence*](sequence.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | ignoreTrackTargeting | *boolean* | - |
 
 <HorizontalLine />
 
 ### getAudioTrack
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*AudioTrack*
-  
 Get audio track from track index
+
+Since: **25.6**
+
+Returns: Promise\<[*AudioTrack*](audiotrack.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | trackIndex | *number* | - |
 
 <HorizontalLine />
 
 ### getAudioTrackCount
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Get audio track count from this sequence
+
+Since: **25.6**
+
+Returns: Promise\<*number*\>
 
 <HorizontalLine />
 
 ### getCaptionTrack
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*CaptionTrack*
-  
 Get caption track from track index
+
+Since: **25.6**
+
+Returns: Promise\<[*CaptionTrack*](captiontrack.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | trackIndex | *number* | - |
 
 <HorizontalLine />
 
 ### getCaptionTrackCount
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Get caption track count from this sequence
+
+Since: **25.6**
+
+Returns: Promise\<*number*\>
 
 <HorizontalLine />
 
 ### getEndTime
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Time representing the end of the sequence
+
+Since: **25.6**
+
+Returns: Promise\<[*TickTime*](ticktime.md)\>
 
 <HorizontalLine />
 
 ### getFrameSize
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*RectF*
-  
 Gets the size of the frame
+
+Since: **25.6**
+
+Returns: Promise\<[*RectF*](rectf.md)\>
 
 <HorizontalLine />
 
 ### getInPoint
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Get time representing the inPoint of sequence.
+
+Since: **25.6**
+
+Returns: Promise\<[*TickTime*](ticktime.md)\>
 
 <HorizontalLine />
 
 ### getOutPoint
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
+Get time representing the inPoint of sequence.
 
-*TickTime*
-  
-Get time representing the outPoint of sequence.
+Since: **25.6**
+
+Returns: Promise\<[*TickTime*](ticktime.md)\>
 
 <HorizontalLine />
 
 ### getPlayerPosition
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Get the player's current position
+
+Since: **25.6**
+
+Returns: Promise\<[*TickTime*](ticktime.md)\>
 
 <HorizontalLine />
 
 ### getProjectItem
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*ProjectItem*
-  
 Get the associated projectItem of the sequence.
+
+Since: **25.6**
+
+Returns: Promise\<[*ProjectItem*](projectitem.md)\>
 
 <HorizontalLine />
 
 ### getSelection
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TrackItemSelection*
-  
 Returns the current selection group of the sequence.
+
+Since: **25.6**
+
+Returns: Promise\<[*TrackItemSelection*](trackitemselection.md)\>
 
 <HorizontalLine />
 
 ### getSequenceAudioTimeDisplayFormat
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TimeDisplay*
-  
 Get audio time display format of this sequence
+
+Since: **25.6**
+
+Returns: Promise\<[*TimeDisplay*](timedisplay.md)\>
 
 <HorizontalLine />
 
 ### getSequenceVideoTimeDisplayFormat
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TimeDisplay*
-  
 Get video time display format of this sequence
+
+Since: **25.6**
+
+Returns: Promise\<[*TimeDisplay*](timedisplay.md)\>
 
 <HorizontalLine />
 
 ### getSettings
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*SequenceSettings*
-  
 Get sequence settings object
+
+Since: **25.6**
+
+Returns: Promise\<[*SequenceSettings*](sequencesettings.md)\>
 
 <HorizontalLine />
 
 ### getTimebase
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Gets the time base of sequence
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 <HorizontalLine />
 
 ### getVideoTrack
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*VideoTrack*
-  
 Get video track from track index
+
+Since: **25.6**
+
+Returns: Promise\<[*VideoTrack*](videotrack.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | trackIndex | *number* | - |
 
 <HorizontalLine />
 
 ### getVideoTrackCount
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Get video track count from this sequence
+
+Since: **25.6**
+
+Returns: Promise\<*number*\>
 
 <HorizontalLine />
 
 ### getZeroPoint
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Time representing the zero point of the sequence.
+
+Since: **25.6**
+
+Returns: Promise\<[*TickTime*](ticktime.md)\>
 
 <HorizontalLine />
 
 ### isDoneAnalyzingForVideoEffects
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Returns whether or not the sequence is done analyzing for video effects
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 <HorizontalLine />
 
 ### setPlayerPosition
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set the player's current position
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | positionTime | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
 
 ### setSelection
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Updates sequence selection using the given track item selection.
+
+Since: **25.6**
+
+Since: **26.3**: This function is now synchronous and returns a *boolean* instead of a Promise\<*boolean*\>.
+
+Returns: *boolean*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | trackItemSelection | [*TrackItemSelection*](trackitemselection.md) | - |
 
 <HorizontalLine />

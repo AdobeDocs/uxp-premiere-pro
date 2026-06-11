@@ -8,64 +8,66 @@ product: premierepro
 keywords: 
 ---
 
-# ProjectUtils  
+# ProjectUtils
+
+Since: **25.6**
 
 ## Static Methods
 
 ### getProjectFromViewId
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Project*
-  
 Get project based on input view guid
+
+Since: **25.6**
+
+Returns: Promise\<[*Project*](project.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | guid | [*Guid*](guid.md) | - |
 
 <HorizontalLine />
 
 ### getProjectViewIds
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Guid[]*
-  
 Get array of project view ids
+
+Since: **25.6**
+
+Returns: Promise\<[*Guid[]*](guid.md)\>
 
 <HorizontalLine />
 
 ### getSelection
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*ProjectItemSelection*
-  
 Get array of selected project items in project view
+
+Since: **25.6**
+
+Returns: Promise\<[*ProjectItemSelection*](projectitemselection.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | project | [*Project*](project.md) | - |
 
 <HorizontalLine />
 
 ### getSelectionFromViewId
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*ProjectItemSelection*
-  
 Get array of selected projectItem based on input view guid
+
+Since: **25.6**
+
+Returns: Promise\<[*ProjectItemSelection*](projectitemselection.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | guid | [*Guid*](guid.md) | - |
 
 <HorizontalLine />

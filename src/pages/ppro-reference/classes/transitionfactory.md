@@ -8,32 +8,34 @@ product: premierepro
 keywords: 
 ---
 
-# TransitionFactory  
+# TransitionFactory
+
+Since: **25.6**
 
 ## Static Methods
 
 ### createVideoTransition
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*VideoTransition*
-  
 Creates a new video filter component based on the input matchName
+
+Since: **25.6**
+
+Returns: [*VideoTransition*](videotransition.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | matchName | *string* | - |
 
 <HorizontalLine />
 
 ### getVideoTransitionMatchNames
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string[]*
-  
 Return a promise which will be fullfilled with an array of video transition matchnames
+
+Since: **25.6**
+
+Returns: Promise\<*string[]*\>
 
 <HorizontalLine />

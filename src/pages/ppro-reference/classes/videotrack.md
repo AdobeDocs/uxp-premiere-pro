@@ -8,76 +8,94 @@ product: premierepro
 keywords: 
 ---
 
-# VideoTrack  
+# VideoTrack
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| name | *string* | R | 25.0 | Get the name of the track |
-| id | *number* | R | 25.0 | The ID of the track within the TrackGroup |
+| :--- | :--- | :----- | :---------- | :---------- |
+| name | *string* | R | 25.6 | Get the name of the track |
+| id | *number* | R | 25.6 | The ID of the track within the TrackGroup |
 
 ## Instance Methods
 
+### createSetNameAction
+
+Action to change the name of the track
+
+Since: **26.3**
+
+Returns: *object*
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| name | *string* | - |
+
+<HorizontalLine />
+
 ### getIndex
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Index representing the track index of this track within the track group.
+
+Since: **25.6**
+
+Returns: Promise\<*number*\>
 
 <HorizontalLine />
 
 ### getMediaType
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Guid*
-  
 UUID representing the underlying media type of this track
+
+Since: **25.6**
+
+Returns: Promise\<[*Guid*](guid.md)\>
 
 <HorizontalLine />
 
 ### getTrackItems
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*VideoClipTrackItem[]*
-  
 Returns array of VideoClipTrackItem from the track item type
+
+Since: **25.6**
+
+Returns: [*VideoClipTrackItem[]*](videocliptrackitem.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
-| trackItemType | [*Constants.TrackItemType*](../constants/index.md) | This values can be Empty (0), Clip (1), Transition (2), Preview (3) or Feedback (4) |
+| :----| :--- | :---------- |
+| trackItemType | [*Constants.TrackItemType*](../constants/index.md#trackitemtype) | This values can be Empty (0), Clip (1), Transition (2), Preview (3) or Feedback (4) |
 | includeEmptyTrackItems | *boolean* | - |
 
 <HorizontalLine />
 
 ### isMuted
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Get mute state of the track
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 <HorizontalLine />
 
 ### setMute
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 sets the mute state of the track to muted/unmuted
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | mute | *boolean* | - |
 
 <HorizontalLine />
@@ -85,7 +103,7 @@ sets the mute state of the track to muted/unmuted
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ |
-| EVENT_TRACK_CHANGED | 25.0 | Event Object for Track changed |
-| EVENT_TRACK_INFO_CHANGED | 25.0 | Event Object for Track Info Changed |
-| EVENT_TRACK_LOCK_CHANGED | 25.0 | Event Object for Track Lock Changed |
+| :--- | :------ | :---------- |
+| EVENT_TRACK_CHANGED | 25.6 | Event Object for Track changed |
+| EVENT_TRACK_INFO_CHANGED | 25.6 | Event Object for Track Info Changed |
+| EVENT_TRACK_LOCK_CHANGED | 25.6 | Event Object for Track Lock Changed |

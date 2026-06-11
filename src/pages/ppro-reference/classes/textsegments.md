@@ -8,23 +8,25 @@ product: premierepro
 keywords: 
 ---
 
-# TextSegments  
+# TextSegments
+
+Since: **25.6**
 
 ## Static Methods
 
 ### importFromJSON
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Import text segments in JSON format for handling via callback.
+
+Since: **25.6**
+
+Returns: *boolean*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | json | *string* | - |
-| undefined | *( importedTranscription: TextSegments ) => void* | - |
+| undefined | *( importedTranscription: TextSegments ) =\> void* | - |
 
 <HorizontalLine />

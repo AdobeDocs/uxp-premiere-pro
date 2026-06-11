@@ -8,22 +8,42 @@ product: premierepro
 keywords: 
 ---
 
-# ProjectConverter  
+# ProjectConverter
+
+Since: **26.2**
 
 ## Static Methods
 
-### exportAsFinalCutProXML
+### exportAAF
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
+Export a sequence as an AAF (Advanced Authoring Format) file to the specified output path.
 
-*boolean*
-  
-Export a sequence as Final Cut Pro XML to the specified output file path.
+Since: **26.3**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
+| sequence | [*Sequence*](sequence.md) | - |
+| filePath | *string* | - |
+| aafExportOptions | [*AAFExportOptions*](aafexportoptions.md) | - |
+
+<HorizontalLine />
+
+### exportAsFinalCutProXML
+
+Export a sequence as Final Cut Pro XML to the specified output file path.
+
+Since: **26.2**
+
+Returns: Promise\<*boolean*\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
 | sequence | [*Sequence*](sequence.md) | - |
 | outputFilePath | *string* | - |
 | suppressUI | *boolean* | - |
@@ -32,16 +52,16 @@ Export a sequence as Final Cut Pro XML to the specified output file path.
 
 ### exportAsOpenTimelineIO
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Export a sequence as OpenTimelineIO to the specified output file path.
+
+Since: **26.2**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | sequence | [*Sequence*](sequence.md) | - |
 | outputFilePath | *string* | - |
 | suppressUI | *boolean* | - |
