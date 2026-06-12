@@ -16,7 +16,7 @@ Since: **25.6**
 
 | Name | Type | Access | Min Version | Description |
 | :--- | :--- | :----- | :---------- | :---------- |
-| value | *object* | W | 25.6 |  |
+| value | *\{value: string | number | boolean | Color | PointF}* | W | 25.6 |  |
 | position | [*TickTime*](ticktime.md) | W | 25.6 | Get/Set position of a keyframe |
 
 ## Instance Methods
