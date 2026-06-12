@@ -140,7 +140,7 @@ Get video field type in the sequence
 
 Since: **25.6**
 
-Returns: Promise\<[*Constants.VideoFieldType*](../constants/index.md#videofieldtype)\>
+Returns: Promise\<*number*\>
 
 <HorizontalLine />
 
