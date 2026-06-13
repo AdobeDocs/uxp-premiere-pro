@@ -1,28 +1,34 @@
 ---
 title: require('uxp').storage.fileTypes
-description: Overview of require('uxp').storage.fileTypes
+description: Ready-made file-extension groups for the types option of open and save pickers.
 ---
 
 # require('uxp').storage.fileTypes
 
+`fileTypes` provides ready-made groups of file extensions for picker methods.
+Pass one as the `types` option to
+[getFileForOpening](../../../modules/uxp/persistent-file-storage/file-system-provider.md#getfileforopeningoptions)
+to limit what the user can select.
+
+**Example**
+
+```js
+const { fileTypes } = require('uxp').storage;
+const files = await fs.getFileForOpening({ allowMultiple: true, types: fileTypes.images });
+```
 
 ## fileTypes()
-This namespace describes the various file type extensions that can used be used in some FS file open methods.
 
-
+The namespace of file-extension groups.
 
 ## text : `Array<string>`
-Text file extensions
 
-
+Common text file extensions.
 
 ## images : `Array<string>`
-Image file extensions
 
-
+Common image file extensions.
 
 ## all : `Array<string>`
-All file types
 
-
-  
+All file types. This is the default when no `types` option is given.
