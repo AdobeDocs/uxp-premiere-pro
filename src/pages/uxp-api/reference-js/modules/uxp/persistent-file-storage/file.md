@@ -80,10 +80,11 @@ option; without it, the file is read as UTF-8 text.
 
 **Returns**: `Promise<string | ArrayBuffer>` - the contents of the file.
 
-| Param | Type | Default | Description |
+**Parameters**
+
+| Parameter | Type | Default | Description |
 | --- | --- | --- | --- |
-| options | `any` |  |  |
-| [options.format] | `Symbol` | `formats.utf8` | the format of the file; see [utf8](../../../modules/uxp/persistent-file-storage/formats.md#utf8--symbol) and [binary](../../../modules/uxp/persistent-file-storage/formats.md#binary--symbol). |
+| `options.format` | `Symbol` | `formats.utf8` | The encoding to read. See [utf8](../../../modules/uxp/persistent-file-storage/formats.md#utf8--symbol) and [binary](../../../modules/uxp/persistent-file-storage/formats.md#binary--symbol). |
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -116,12 +117,19 @@ the encoding and defaults to UTF-8.
 - `FileIsReadOnly` if writing to a read-only file
 - `OutOfSpace` if the write would exceed the available space (or quota)
 
-| Param | Type | Default | Description |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `data` | `string` \| `ArrayBuffer` | **Required.** The data to write to the file. |
+| `options` | `object` | Optional settings (see below). |
+
+**`options` properties**
+
+| Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| data | `string` \| `ArrayBuffer` |  | the data to write to the file |
-| options | `any` |  |  |
-| [options.format] | `Symbol` | `formats.utf8` | the format of the file; see [utf8](../../../modules/uxp/persistent-file-storage/formats.md#utf8--symbol) and [binary](../../../modules/uxp/persistent-file-storage/formats.md#binary--symbol). |
-| [options.append] | `boolean` | `false` | if `true`, the data is appended to the end of the file |
+| `format` | `Symbol` | `formats.utf8` | The encoding to write. See [utf8](../../../modules/uxp/persistent-file-storage/formats.md#utf8--symbol) and [binary](../../../modules/uxp/persistent-file-storage/formats.md#binary--symbol). |
+| `append` | `boolean` | `false` | If `true`, append the data to the end of the file. |
 
 **Example**
 
@@ -145,9 +153,11 @@ even if `entry` is `null` or `undefined`.
 
 **Returns**: `boolean` - if `true`, the entry is a file.
 
-| Param | Type | Description |
+**Parameters**
+
+| Parameter | Type | Description |
 | --- | --- | --- |
-| entry | `any` | the entry to check |
+| `entry` | `any` | **Required.** The entry to check. |
 
 <InlineAlert variant="info" slots="text"/>
 
