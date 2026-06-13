@@ -117,11 +117,9 @@ console.log(anEntry.url);
 
 <InlineAlert variant="warning" slots="text"/>
 
-`nativePath` is not safe to compare or concatenate across platforms. macOS and
-Windows differ in slash direction (`/` vs `\`) and in whether a trailing slash
-is present, and the result can even differ between `getFolder`, `createFolder`,
-and `getEntry` on the same OS. Normalize paths before comparing, and prefer the
-`Entry` APIs over string path manipulation.
+Treat `nativePath` as opaque. Slash direction and trailing slashes are not
+guaranteed to be consistent across platforms, so normalize a path before you
+compare or join it, and prefer the `Entry` APIs over manual string path math.
 
 **Example**
 
