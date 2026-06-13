@@ -73,12 +73,19 @@ file. Pass `types.folder` to create a folder instead.
 
 **Returns**: `Promise<File | Folder>` - the created entry.
 
-| Param | Type | Default | Description |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `name` | `string` | **Required.** The name of the entry to create. |
+| `options` | `object` | Optional settings (see below). |
+
+**`options` properties**
+
+| Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| name | `string` |  | the name of the entry to create |
-| options | `any` |  |  |
-| [options.type] | `Symbol` | `types.file` | the kind of entry to create. Pass `types.folder` to create a folder. |
-| [options.overwrite] | `boolean` | `false` | if `true`, overwrite an existing entry of the same name |
+| `type` | `Symbol` | `types.file` | The kind of entry. Pass `types.folder` to create a folder. |
+| `overwrite` | `boolean` | `false` | If `true`, overwrite an existing entry of the same name. |
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -107,11 +114,18 @@ entry object, not the file on disk; the file is created when you first call
 
 **Returns**: `Promise<File>` - the created file entry.
 
-| Param | Type | Default | Description |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `name` | `string` | **Required.** The name of the file to create. |
+| `options` | `object` | Optional settings (see below). |
+
+**`options` properties**
+
+| Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| name | `string` |  | the name of the file to create |
-| options | `any` |  |  |
-| [options.overwrite] | `boolean` | `false` | if `true`, overwrite an existing file |
+| `overwrite` | `boolean` | `false` | If `true`, overwrite an existing file. |
 
 **Example**
 
@@ -126,9 +140,11 @@ Creates a folder within this folder and returns it.
 
 **Returns**: `Promise<Folder>` - the created folder entry.
 
-| Param | Type | Description |
+**Parameters**
+
+| Parameter | Type | Description |
 | --- | --- | --- |
-| name | `string` | the name of the folder to create |
+| `name` | `string` | **Required.** The name of the folder to create. |
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -149,9 +165,11 @@ to disambiguate.
 
 **Returns**: `Promise<File | Folder>` - the fetched entry.
 
-| Param | Type | Description |
+**Parameters**
+
+| Parameter | Type | Description |
 | --- | --- | --- |
-| filePath | `string` | the name or relative path of the entry to fetch |
+| `filePath` | `string` | **Required.** The name or relative path of the entry to fetch. |
 
 **Example**
 
@@ -168,12 +186,19 @@ Renames an entry within this folder to a new name.
 
 **Returns**: `Promise<void>`
 
-| Param | Type | Default | Description |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `entry` | `Entry` | **Required.** The entry to rename. |
+| `newName` | `string` | **Required.** The new name to assign. |
+| `options` | `object` | Optional settings (see below). |
+
+**`options` properties**
+
+| Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| entry | `Entry` |  | the entry to rename |
-| newName | `string` |  | the new name to assign |
-| options | `any` |  |  |
-| [options.overwrite] | `boolean` | `false` | if `true`, renaming can overwrite an existing entry at `newName` |
+| `overwrite` | `boolean` | `false` | If `true`, renaming can overwrite an existing entry at `newName`. |
 
 **Example**
 
@@ -189,9 +214,11 @@ when the value might be `null` or `undefined`. Useful for type checking.
 
 **Returns**: `boolean` - if `true`, the entry is a folder.
 
-| Param | Type | Description |
+**Parameters**
+
+| Parameter | Type | Description |
 | --- | --- | --- |
-| entry | `any` | the entry to check |
+| `entry` | `any` | **Required.** The entry to check. |
 
 **Example**
 
