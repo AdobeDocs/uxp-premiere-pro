@@ -1,83 +1,84 @@
 ---
 title: require('uxp').storage.errors
-description: Overview of require('uxp').storage.errors
+description: The error types thrown by file system operations, and what each one means.
 ---
 
 # require('uxp').storage.errors
 
+`errors` lists the error types that file system operations can throw. Wrap file
+calls in `try/catch` and check the error to recover or to show the user a clear
+message. The most common ones in day-to-day plugin code are
+`PermissionDeniedError`, `EntryExistsError`, `FileIsReadOnlyError`, and
+`OutOfSpaceError`.
+
+**Example**
+
+```js
+const { errors } = require('uxp').storage;
+try {
+    await folder.createFile("report.txt");
+} catch (err) {
+    if (err instanceof errors.EntryExistsError) {
+        // file already exists; retry with overwrite or pick a new name
+    } else {
+        throw err;
+    }
+}
+```
 
 ## AbstractMethodInvocationError
-Attempted to invoke an abstract method.
 
-
+An abstract method was invoked.
 
 ## ProviderMismatchError
-Attempted to execute a command that required the providers of all
-entries to match.
 
-
+An operation required every entry to belong to the same provider, but they did
+not.
 
 ## EntryIsNotAnEntryError
-The object passed as an entry is not actually an `Entry`.
 
-
+The value passed as an entry is not an `Entry`.
 
 ## EntryIsNotAFolderError
-The entry is not a folder, but was expected to be a folder.
 
-
+The entry was expected to be a folder, but is not.
 
 ## EntryIsNotAFileError
-The entry is not a file, but was expected to be.
 
-
+The entry was expected to be a file, but is not.
 
 ## NotAFileSystemError
-The instance was expected to be a file system, but wasn't.
 
-
+The value was expected to be a file system, but is not.
 
 ## OutOfSpaceError
-The file system is out of space (or quota has been exceeded)
 
-
+The file system is out of space, or the quota has been exceeded.
 
 ## PermissionDeniedError
-The file system revoked permission to complete the requested
-action.
 
-
+The file system denied permission to complete the action.
 
 ## EntryExistsError
-An attempt was made to overwrite an entry without indicating
-that it was safe to do so via `overwrite: true`.
 
-
+An entry would be overwritten, but `overwrite: true` was not set.
 
 ## FileIsReadOnlyError
-An attempt was made to write to a file that was opened as
-read-only.
 
-
+An attempt was made to write to a file that was opened read-only.
 
 ## DomainNotSupportedError
-Domain is not supported by the current FileSystemProvider
-instance.
 
-
+The domain is not supported by the current provider.
 
 ## InvalidFileNameError
-The file name contains invalid characters
 
-
+The file name contains invalid characters.
 
 ## InvalidFileFormatError
-Unsupported format type
 
-
+The format type is not supported.
 
 ## DataFileFormatMismatchError
-Data and Format mismatch
 
-
-  
+The data does not match the requested format.
