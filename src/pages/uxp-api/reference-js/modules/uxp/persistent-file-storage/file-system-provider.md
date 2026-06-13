@@ -61,13 +61,14 @@ way are read-only. Set `allowMultiple` to `true` to return an array.
 **Returns**: `Promise<File | Array<File>>` - the selected file, or an array when
 `allowMultiple` is `true`. Resolves empty when the user selects nothing.
 
-| Param | Type | Default | Description |
+**Parameters**
+
+| Parameter | Type | Default | Description |
 | --- | --- | --- | --- |
-| options | `*` |  |  |
-| [options.initialDomain] | `Symbol` |  | the preferred starting location of the picker. Defaults to the most recently used domain. |
-| [options.types] | `Array<string>` | `['.*']` | the file types the picker shows. |
-| [options.initialLocation] | `File` \| `Folder` |  | a file or folder to start the picker at. A file starts the picker in its parent folder. Overrides `initialDomain`. |
-| [options.allowMultiple] | `boolean` | `false` | if `true`, the user can select multiple files. |
+| `options.initialDomain` | `Symbol` |  | The preferred starting location of the picker. Defaults to the most recently used domain. |
+| `options.types` | `Array<string>` | `['.*']` | The file types the picker shows. |
+| `options.initialLocation` | `File` \| `Folder` |  | A file or folder to start the picker at. A file starts the picker in its parent folder. Overrides `initialDomain`. |
+| `options.allowMultiple` | `boolean` | `false` | If `true`, the user can select multiple files. |
 
 **Example**
 
@@ -99,12 +100,19 @@ before returning.
 
 **Returns**: `Promise<File>` - the selected file, or `null` if the user cancels.
 
-| Param | Type | Description |
+**Parameters**
+
+| Parameter | Type | Description |
 | --- | --- | --- |
-| suggestedName | `string` | the default file name. Required when `options.types` is not set. |
-| options | `Object` |  |
-| [options.initialDomain] | `Symbol` | the preferred starting location of the picker. Defaults to the most recently used domain. |
-| [options.types] | `Array<string>` | allowed file extensions, with no leading dot. |
+| `suggestedName` | `string` | The default file name shown in the picker. Required unless `options.types` is set. |
+| `options` | `object` | Optional settings (see below). |
+
+**`options` properties**
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `initialDomain` | `Symbol` | The preferred starting location of the picker. Defaults to the most recently used domain. |
+| `types` | `Array<string>` | Allowed file extensions, with no leading dot. |
 
 **Example**
 
@@ -124,10 +132,11 @@ Returns `null` if the user dismisses the picker.
 
 **Returns**: `Promise<Folder | null>` - the selected folder, or `null`.
 
-| Param | Type | Description |
+**Parameters**
+
+| Parameter | Type | Description |
 | --- | --- | --- |
-| options | `any` |  |
-| [options.initialDomain] | `Symbol` | the preferred starting location of the picker. Defaults to the most recently used domain. |
+| `options.initialDomain` | `Symbol` | The preferred starting location of the picker. Defaults to the most recently used domain. |
 
 **Example**
 
@@ -197,12 +206,19 @@ Creates an entry at the given URL and returns it. Use a `plugin-temp:`,
 - `Error` if a file exists at the URL and a folder was requested
 - `Error` if a file exists at the URL and `overwrite` is not `true`
 
-| Param | Type | Default | Description |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `url` | `string` | **Required.** The URL to create an entry for. The `file:` scheme has limited support on Windows (UWP) due to strict [file access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions). |
+| `options` | `object` | Optional settings (see below). |
+
+**`options` properties**
+
+| Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| url | `string` |  | the URL to create an entry for. The `file:` scheme has limited support on Windows (UWP) due to strict [file access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions). |
-| options | `*` |  |  |
-| [options.type] | `Symbol` | `types.file` | the kind of entry to create. Pass `types.folder` to create a folder. A file entry is not written to disk until you call `write` on it. |
-| [options.overwrite] | `Boolean` | `false` | if `true`, the create attempt can overwrite an existing file. |
+| `type` | `Symbol` | `types.file` | The kind of entry. Pass `types.folder` to create a folder. A file entry is not written to disk until you call `write` on it. |
+| `overwrite` | `boolean` | `false` | If `true`, the create attempt can overwrite an existing file. |
 
 **Example**
 
@@ -228,9 +244,11 @@ Resolves an existing entry at the given URL and returns it.
 - `Error` if the URL format or value is invalid
 - `Error` if no file or folder exists at the URL
 
-| Param | Type | Description |
+**Parameters**
+
+| Parameter | Type | Description |
 | --- | --- | --- |
-| url | `string` | the URL to resolve. The `file:` scheme has limited support on Windows (UWP) due to strict [file access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions). |
+| `url` | `string` | **Required.** The URL to resolve. The `file:` scheme has limited support on Windows (UWP) due to strict [file access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions). |
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -250,9 +268,11 @@ Returns the file system URL for an entry.
 
 **Returns**: `string` - the `fs` URL of the entry.
 
-| Param | Type |
-| --- | --- |
-| entry | `Entry` |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `entry` | `Entry` | **Required.** The entry to get a URL for. |
 
 ## getNativePath(entry)
 
@@ -260,9 +280,11 @@ Returns the platform-native file system path for an entry.
 
 **Returns**: `string` - the native path of the entry.
 
-| Param | Type |
-| --- | --- |
-| entry | `Entry` |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `entry` | `Entry` | **Required.** The entry to get a native path for. |
 
 ## createSessionToken(entry)
 
@@ -272,9 +294,11 @@ session, so do not store it. A stored session token is useless on the next run.
 
 **Returns**: `string` - the session token for the entry.
 
-| Param | Type |
-| --- | --- |
-| entry | `Entry` |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `entry` | `Entry` | **Required.** The entry to create a session token for. |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -303,9 +327,11 @@ Returns the entry for a session token created with `createSessionToken`. Throws 
 
 **Returns**: `Entry` - the entry for the token.
 
-| Param | Type |
-| --- | --- |
-| token | `string` |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `token` | `string` | **Required.** A session token from `createSessionToken`. |
 
 ## createPersistentToken(entry)
 
@@ -316,9 +342,11 @@ OS-specific limits can invalidate it, and you find out when you try to use it.
 
 **Returns**: `Promise<string>` - the persistent token for the entry.
 
-| Param | Type |
-| --- | --- |
-| entry | `Entry` |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `entry` | `Entry` | **Required.** The entry to create a persistent token for. |
 
 **Example**
 
@@ -336,9 +364,11 @@ Throws a `ReferenceError` if no entry matches the token.
 
 **Returns**: `Promise<Entry>` - the entry for the token.
 
-| Param | Type |
-| --- | --- |
-| token | `string` |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `token` | `string` | **Required.** A persistent token from `createPersistentToken`. |
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -375,6 +405,8 @@ even if the value is `null` or `undefined`. Useful for type checking.
 
 **Returns**: `boolean` - if `true`, the value is a file system provider.
 
-| Param | Type | Description |
+**Parameters**
+
+| Parameter | Type | Description |
 | --- | --- | --- |
-| fs | `any` | the value to check |
+| `fs` | `any` | **Required.** The value to check. |
