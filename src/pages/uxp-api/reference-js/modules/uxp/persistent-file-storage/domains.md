@@ -9,18 +9,23 @@ description: Well-known starting locations for file and folder pickers, such as 
 `initialDomain` option to [getFileForOpening](../../../modules/uxp/persistent-file-storage/file-system-provider.md#getfileforopeningoptions),
 [getFileForSaving](../../../modules/uxp/persistent-file-storage/file-system-provider.md#getfileforsavingsuggestedname-options),
 or [getFolder](../../../modules/uxp/persistent-file-storage/file-system-provider.md#getfolderoptions).
-Not every provider supports every domain; check
+`initialDomain` sets the preferred starting location. When you omit it, the
+picker opens at the most recently used domain. Not every provider supports every
+domain, so check
 [supportedDomains](../../../modules/uxp/persistent-file-storage/file-system-provider.md#supporteddomains--arraysymbol)
 before relying on one.
 
 **Example**
 
 ```js
-const { domains } = require('uxp').storage;
+const { localFileSystem: fs, domains } = require('uxp').storage;
 const folder = await fs.getFolder({ initialDomain: domains.userDocuments });
+if (!folder) {
+    return; // picker was cancelled
+}
 ```
 
-## domains()
+## domains
 
 The namespace of common picker locations.
 
@@ -46,28 +51,30 @@ The user's music folder or library.
 
 ## appLocalData : `Symbol`
 
-Local application data.
+The application's local data folder.
 
 ## appLocalLibrary : `Symbol`
 
-Local application library.
+The application's local library folder.
 
 ## appLocalCache : `Symbol`
 
-Local application cache directory. Persistence is not guaranteed.
+The application's local cache folder.
+
+Persistence is not guaranteed.
 
 ## appLocalShared : `Symbol`
 
-Local application shared data folder.
+The application's local shared-data folder.
 
 ## appLocalTemporary : `Symbol`
 
-Local temporary directory.
+The application's local temporary folder.
 
 ## appRoamingData : `Symbol`
 
-Roaming application data.
+The application's roaming data folder.
 
 ## appRoamingLibrary : `Symbol`
 
-Roaming application library data.
+The application's roaming library folder.
