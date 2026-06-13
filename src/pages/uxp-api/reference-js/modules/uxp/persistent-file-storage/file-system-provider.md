@@ -1,15 +1,15 @@
 ---
-title: require('uxp').storage.localFileSystem
+title: FileSystemProvider
 description: The entry point to the file system. Open pickers, reach plugin storage, and turn entries into tokens for host APIs.
 ---
 
-# require('uxp').storage.localFileSystem
+# FileSystemProvider
 
-`localFileSystem` is the single `FileSystemProvider` that UXP gives every plugin.
-It is how you reach the file system: show open and save pickers, get the plugin's
-own data and temporary folders, resolve URLs to entries, and create tokens that
-host applications understand. You do not construct it. Require it and use the
-instance UXP already created for you.
+`FileSystemProvider` is UXP's entry point to the file system, reached through
+`require('uxp').storage.localFileSystem`. You do not construct it. UXP creates
+one shared instance for every plugin. Use it to show open and save pickers, get
+the plugin's own data and temporary folders, resolve URLs to entries, and create
+tokens that host applications understand.
 
 These APIs require UXP Manifest version v5 or later.
 
