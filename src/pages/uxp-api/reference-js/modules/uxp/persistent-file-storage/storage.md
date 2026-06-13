@@ -39,26 +39,26 @@ if (something.isEntry) {
 
 ## isFile : `Boolean`
 **Read only**
-Indicates that this instance is **not** a `File`. Useful for type-
+Indicates that this instance is a `File`. Useful for type-
 checking.
 
 **Example**  
 ```js
-if (!anEntry.isFile) {
-    return "This entry is not a file.";
+if (anEntry.isFile) {
+    await anEntry.read();
 }
 ```
 
 
 ## isFolder : `Boolean`
 **Read only**
-Indicates that this instance is **not** a folder. Useful for type-
+Indicates that this instance is a folder. Useful for type-
 checking.
 
 **Example**  
 ```js
-if (!anEntry.isFolder) {
-    return "This entry is not a folder.";
+if (anEntry.isFolder) {
+    const entries = await anEntry.getEntries();
 }
 ```
 
@@ -173,7 +173,7 @@ await someFile.moveTo(someFolder, {newName: 'masterpiece.txt'})
 ```
 **Example**  
 ```js
-await someFile.moveTo(someFolder, {newName: 'novel.txt', {overwrite: true})
+await someFile.moveTo(someFolder, { newName: 'novel.txt', overwrite: true });
 ```
 
 
@@ -351,7 +351,7 @@ open a file picker to the user's `documents` folder, for example, then [userDocu
 
 **Example**  
 ```js
-if (fs.supportedDomains.contains(domains.userDocuments)) {
+if (fs.supportedDomains.includes(domains.userDocuments)) {
     console.log("We can open a picker to the user's documents.")
 }
 ```
@@ -695,7 +695,7 @@ Renames an entry to a new name.
 
 **Example**  
 ```js
-await myNovels.rename(myNovel, "myFantasticNovel.txt");
+await aFolder.renameEntry(myNovel, "myFantasticNovel.txt");
 ```
 
 
