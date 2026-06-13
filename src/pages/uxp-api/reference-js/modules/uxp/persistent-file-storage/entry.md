@@ -151,12 +151,19 @@ Copies this entry to the specified `folder`.
 - `PermissionDenied` if the underlying file system rejects the attempt
 - `OutOfSpace` if the file system is out of storage space
 
-| Param | Type | Default | Description |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `folder` | `Folder` | **Required.** The folder to copy this entry into. |
+| `options` | `object` | Optional settings (see below). |
+
+**`options` properties**
+
+| Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| folder | `Folder` |  | the folder to which to copy this entry |
-| options | `*` |  |  |
-| [options.overwrite] | `boolean` | `false` | if `true`, allows overwriting existing entries |
-| [options.allowFolderCopy] | `boolean` | `false` | if `true`, allows copying a folder (and its contents) |
+| `overwrite` | `boolean` | `false` | If `true`, allow overwriting existing entries. |
+| `allowFolderCopy` | `boolean` | `false` | If `true`, allow copying a folder and its contents. |
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -187,12 +194,19 @@ Moves this entry to the target folder, optionally renaming it.
 
 **Returns**: `Promise<void>`
 
-| Param | Type | Default | Description |
+**Parameters**
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `folder` | `Folder` | **Required.** The folder to move this entry into. |
+| `options` | `object` | Optional settings (see below). |
+
+**`options` properties**
+
+| Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| folder | `Folder` |  | the folder to which to move this entry |
-| options | `*` |  |  |
-| [options.overwrite] | `boolean` | `false` | if `true`, allows the move to overwrite existing entries |
-| [options.newName] | `string` |  | if specified, the entry is renamed to this name |
+| `overwrite` | `boolean` | `false` | If `true`, allow the move to overwrite existing entries. |
+| `newName` | `string` |  | If set, the entry is renamed to this name. |
 
 **Example**
 
