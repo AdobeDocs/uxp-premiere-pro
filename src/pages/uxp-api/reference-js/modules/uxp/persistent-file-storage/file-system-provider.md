@@ -1,289 +1,353 @@
 ---
 title: require('uxp').storage.localFileSystem
-description: Provides access to files and folders on a file system. You'll typically not
+description: The entry point to the file system. Open pickers, reach plugin storage, and turn entries into tokens for host APIs.
 ---
 
 # require('uxp').storage.localFileSystem
-Provides access to files and folders on a file system. You'll typically not
-instantiate this directly; instead you'll use an instance of one that has
-already been created for you by UXP.
 
-These APIs work with UXP Manifest version v5 and above.
+`localFileSystem` is the single `FileSystemProvider` that UXP gives every plugin.
+It is how you reach the file system: show open and save pickers, get the plugin's
+own data and temporary folders, resolve URLs to entries, and create tokens that
+host applications understand. You do not construct it. Require it and use the
+instance UXP already created for you.
 
+These APIs require UXP Manifest version v5 or later.
 
-
-## isFileSystemProvider : `boolean`
-Indicates that this is a `FileSystemProvider`. Useful for type-checking.
-
-
-
-## supportedDomains : `Array<Symbol>`
-An array of the domains this file system supports. If the file system can
-open a file picker to the user's `documents` folder, for example, then [userDocuments](../../../modules/uxp/persistent-file-storage/domains.md#module-storage-domains-userdocuments) will be in this list.
-
-**Example**  
 ```js
-if (fs.supportedDomains.contains(domains.userDocuments)) {
-    console.log("We can open a picker to the user's documents.")
+const fs = require('uxp').storage.localFileSystem;
+```
+
+## Permissions
+
+File system access requires the `localFileSystem` permission in your plugin's
+`manifest.json`. Use `"request"` to open pickers, `"plugin"` to reach only the
+plugin's own storage, or `"fullAccess"` for broad access that the user consents
+to at install time.
+
+```json
+{
+  "requiredPermissions": {
+    "localFileSystem": "request"
+  }
 }
 ```
 
+## isFileSystemProvider : `boolean`
+
+Indicates that this object is a `FileSystemProvider`. Always `true` on
+`localFileSystem`. Useful for type checking.
+
+## supportedDomains : `Array<Symbol>`
+
+The [domains](../../../modules/uxp/persistent-file-storage/domains.md) this
+provider can open a picker to. For example, if the provider can show a picker in
+the user's documents folder, [userDocuments](../../../modules/uxp/persistent-file-storage/domains.md#module-storage-domains-userdocuments)
+appears in this list.
+
+**Example**
+
+```js
+const { domains } = require('uxp').storage;
+if (fs.supportedDomains.includes(domains.userDocuments)) {
+    console.log("We can open a picker to the user's documents.");
+}
+```
 
 ## getFileForOpening(options)
-Gets a file (or files) from the file system provider for the purpose of
-opening them. Files are read-only.
 
-Multiple files can be returned if the `allowMultiple` option` is `true`.
+Shows an open picker and returns the selected file or files. Files returned this
+way are read-only. Set `allowMultiple` to `true` to return an array.
 
-**Returns**: `Promise<File|Array<File>>` based on `allowMultiple`. Return empty if no file was selected.  
+**Returns**: `Promise<File | Array<File>>` - the selected file, or an array when
+`allowMultiple` is `true`. Resolves empty when the user selects nothing.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | options | `*` |  |  |
-| [options.initialDomain] | `Symbol` |  | the preferred initial location of the file picker. If not defined, the most recently used domain from a file picker is used instead. |
-| [options.types] | `Array<string>` | `[&#x27;.*&#x27;]` | array of file types that the file open picker displays. |
-| [options.initialLocation] | `File` \| `Folder` |  | the initial location of the file picker. You can pass an existing file or folder entry to suggest the picker to start at this location. If this is a file entry then the method will pick its parent folder as initial location. This will override initialDomain option. |
-| [options.allowMultiple] | `boolean` | `false` | if true, multiple files can be selected |
+| [options.initialDomain] | `Symbol` |  | the preferred starting location of the picker. Defaults to the most recently used domain. |
+| [options.types] | `Array<string>` | `['.*']` | the file types the picker shows. |
+| [options.initialLocation] | `File` \| `Folder` |  | a file or folder to start the picker at. A file starts the picker in its parent folder. Overrides `initialDomain`. |
+| [options.allowMultiple] | `boolean` | `false` | if `true`, the user can select multiple files. |
 
-**Example**  
+**Example**
+
 ```js
-const folder = await fs.getFolder({initialDomain: domains.userDocuments});
-const file = await fs.getFileForOpening({initialLocation: folder});
+const { domains } = require('uxp').storage;
+const folder = await fs.getFolder({ initialDomain: domains.userDocuments });
+const file = await fs.getFileForOpening({ initialLocation: folder });
 if (!file) {
-    // no file selected
-    return;
+    return; // no file selected
 }
 const text = await file.read();
 ```
-**Example**  
+
+**Example**
+
 ```js
-const files = await fs.getFileForOpening({allowMultiple: true, types: fileTypes.images});
+const { fileTypes } = require('uxp').storage;
+const files = await fs.getFileForOpening({ allowMultiple: true, types: fileTypes.images });
 if (files.length === 0) {
-    // no files selected
+    return; // no files selected
 }
 ```
 
-
 ## getFileForSaving(suggestedName, options)
-Gets a file reference suitable for read-write. Displays a file picker to select a location to "Save" the file.
 
-If the act of writing to the file would overwrite it, the file picker
-will prompt the user to confirm before returning a result to you.
+Shows a save picker and returns a read-write file at the chosen location. If
+saving would overwrite an existing file, the picker asks the user to confirm
+before returning.
 
-**Returns**: `Promise<File>` - returns the selected file, or `null` if no file were selected.  
+**Returns**: `Promise<File>` - the selected file, or `null` if the user cancels.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| suggestedName | `string` | Required when `options.types` is not defined. |
+| suggestedName | `string` | the default file name. Required when `options.types` is not set. |
 | options | `Object` |  |
-| [options.initialDomain] | `Symbol` | The preferred initial location of the file picker. If not defined, the most recently used domain from a file picker is used instead. |
-| [options.types] | `Array<string>` | Allowed file extensions, with no "." prefix. |
+| [options.initialDomain] | `Symbol` | the preferred starting location of the picker. Defaults to the most recently used domain. |
+| [options.types] | `Array<string>` | allowed file extensions, with no leading dot. |
 
-**Example**  
+**Example**
+
 ```js
-const file = await fs.getFileForSaving("output.txt", { types: [ "txt" ]});
+const file = await fs.getFileForSaving("output.txt", { types: ["txt"] });
 if (!file) {
-    // file picker was cancelled
-    return;
+    return; // picker was cancelled
 }
-await file.write("It was a dark and stormy night");
+await file.write("It was a dark and stormy night.");
 ```
 
-
 ## getFolder(options)
-Gets a folder from the file system via a folder picker dialog. The files
-and folders within can be accessed via [Folder#getEntries](../../../modules/uxp/persistent-file-storage/folder.md#getentries). Any
-files within are read-write.
 
-If the user dismisses the picker, `null` is returned instead.
+Shows a folder picker and returns the chosen folder. Its contents are read-write
+and can be listed with [Folder.getEntries](../../../modules/uxp/persistent-file-storage/folder.md#getentries).
+Returns `null` if the user dismisses the picker.
 
-**Returns**: `Promise<Folder | null>` - the selected folder or `null` if no folder is selected.  
+**Returns**: `Promise<Folder | null>` - the selected folder, or `null`.
 
 | Param | Type | Description |
 | --- | --- | --- |
 | options | `any` |  |
-| [options.initialDomain] | `Symbol` | the preferred initial location of the file picker. If not defined, the most recently used domain from a file picker is used instead. |
+| [options.initialDomain] | `Symbol` | the preferred starting location of the picker. Defaults to the most recently used domain. |
 
-**Example**  
+**Example**
+
 ```js
 const folder = await fs.getFolder();
-const myNovel = (await folder.getEntries()).filter(entry => entry.name.indexOf('novel') > 0);
+if (!folder) {
+    return; // picker was cancelled
+}
+const entries = await folder.getEntries();
+const myNovel = entries.find(entry => entry.name.includes("novel"));
 const text = await myNovel.read();
 ```
 
-
 ## getTemporaryFolder()
-Returns a temporary folder. The contents of the folder will be removed when
-the extension is disposed.
 
-**Returns**: `Promise<Folder>`  
-**Example**  
+Returns a temporary folder for the plugin. UXP clears its contents when the
+plugin is disposed, so do not use it for anything you need to keep.
+
+**Returns**: `Promise<Folder>`
+
+**Example**
+
 ```js
 const temp = await fs.getTemporaryFolder();
 ```
 
-
 ## getDataFolder()
-Returns a folder that can be used for extension's data storage without user interaction.
-It is persistent across host-app version upgrades.
 
-**Returns**: `Promise<Folder>`  
+Returns the plugin's persistent data folder. No user interaction is needed, and
+the folder survives host-app version upgrades. This is the right place for
+settings and other data the plugin owns.
 
+**Returns**: `Promise<Folder>`
+
+**Example**
+
+```js
+const dataFolder = await fs.getDataFolder();
+```
 
 ## getPluginFolder()
-Returns an plugin's folder – this folder and everything within it are read only.
-This contains all the Plugin related packaged assets.
 
-**Returns**: `Promise<Folder>`  
+Returns the plugin's own packaged folder. This folder and everything in it are
+read-only, and contain the assets you shipped with the plugin.
 
+**Returns**: `Promise<Folder>`
+
+**Example**
+
+```js
+const pluginFolder = await fs.getPluginFolder();
+```
 
 ## createEntryWithUrl(url, options)
-Creates an entry for the given url and returns the appropriate instance.
 
-**Returns**: `Promise<File|Folder>` the File or Folder object which is created for the given url  
+Creates an entry at the given URL and returns it. Use a `plugin-temp:`,
+`plugin-data:`, or `file:` URL. By default it creates a file. Pass
+`types.folder` to create a folder.
+
+**Returns**: `Promise<File | Folder>` - the created file or folder.
+
 **Throws**:
 
-- `Error` if invalid file url format or value is passed.
-if the parent folder of the file/folder to be created does not exist.
-if a folder already exists at the url.
-if a file already exists at the url and it is requested to create a folder.
-if a file already exists at the url and the overwrite option is not set to true to create a file.
-
+- `Error` if the URL format or value is invalid
+- `Error` if the parent folder does not exist
+- `Error` if a folder already exists at the URL
+- `Error` if a file exists at the URL and a folder was requested
+- `Error` if a file exists at the URL and `overwrite` is not `true`
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| url | `string` |  | the url to create an Entry object. Note that file: scheme has limited support in UWP due to the strict [File access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions) |
+| url | `string` |  | the URL to create an entry for. The `file:` scheme has limited support on Windows (UWP) due to strict [file access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions). |
 | options | `*` |  |  |
-| [options.type] | `Symbol` | `types.file` | indicates which kind of entry to create. Pass types.folder to create a new folder. Note that if the type is file then this method just create"s" a file entry object and not the actual file on the disk. File on the storage is created when data is written into the file. eg: call write method on the file entry object. |
-| [options.overwrite] | `Boolean` | `false` | if true, the create attempt can overwrite an existing file |
+| [options.type] | `Symbol` | `types.file` | the kind of entry to create. Pass `types.folder` to create a folder. A file entry is not written to disk until you call `write` on it. |
+| [options.overwrite] | `Boolean` | `false` | if `true`, the create attempt can overwrite an existing file. |
 
-**Example**  
+**Example**
+
 ```js
+const { types } = require('uxp').storage;
 const newImgFolder = await fs.createEntryWithUrl("plugin-temp:/img", { type: types.folder });
-const newTmpFolder = await fs.createEntryWithUrl("file:/Users/user/Documents/tmp", { type: types.folder });
 ```
-**Example**  
+
+**Example**
+
 ```js
 const newDatFile = await fs.createEntryWithUrl("plugin-temp:/tmp/test.dat", { overwrite: true });
-const newTxtFile = await fs.createEntryWithUrl("file:/Users/user/Documents/test.txt", { overwrite: true });
 ```
 
-
 ## getEntryWithUrl(url)
-Gets an entry of the given url and returns the appropriate instance.
 
-**Returns**: `Promise<File|Folder>` the File or Folder object for the given url  
+Resolves an existing entry at the given URL and returns it.
+
+**Returns**: `Promise<File | Folder>` - the file or folder at the URL.
+
 **Throws**:
 
-- `Error` if invalid file url format or value is passed.
-if the file/folder does not exist at the url.
-
+- `Error` if the URL format or value is invalid
+- `Error` if no file or folder exists at the URL
 
 | Param | Type | Description |
 | --- | --- | --- |
-| url | `string` | the url to get an Entry object Note that file: scheme has limited support in UWP due to the strict [File access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions) |
+| url | `string` | the URL to resolve. The `file:` scheme has limited support on Windows (UWP) due to strict [file access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions). |
 
-**Example**  
+<InlineAlert variant="warning" slots="text"/>
+
+On Windows, resolving a path that ends with a trailing backslash can fail. Strip
+the trailing `\` from a path before you build the URL.
+
+**Example**
+
 ```js
 const tmpFolder = await fs.getEntryWithUrl("plugin-temp:/tmp");
-const docFolder = await fs.getEntryWithUrl("file:/Users/user/Documents");
-```
-**Example**  
-```js
 const tmpFile = await fs.getEntryWithUrl("plugin-temp:/tmp/test.dat");
-const docFile = await fs.getEntryWithUrl("file:/Users/user/Documents/test.txt");
 ```
-
 
 ## getFsUrl(entry)
-Returns the fs url of given entry.
 
-**Returns**: `string`  
+Returns the file system URL for an entry.
+
+**Returns**: `string` - the `fs` URL of the entry.
 
 | Param | Type |
 | --- | --- |
-| entry | `Entry` | 
-
-
+| entry | `Entry` |
 
 ## getNativePath(entry)
-Returns the platform native file system path of given entry.
 
-**Returns**: `string`  
+Returns the platform-native file system path for an entry.
+
+**Returns**: `string` - the native path of the entry.
 
 | Param | Type |
 | --- | --- |
-| entry | `Entry` | 
-
-
+| entry | `Entry` |
 
 ## createSessionToken(entry)
-Returns a token suitable for use with certain host-specific APIs (such as Photoshop). This token is valid only for the current plugin session. As such, it is of no use if you serialize the token to persistent storage, as the token will be invalid in the future.
 
-Note: When using the Photoshop DOM API, pass the instance of the file instead of a session token -- Photoshop will convert the entry into a session token automatically on your behalf.
+Returns a token for an entry that some host APIs accept in place of a path, such
+as Photoshop's `batchPlay`. The token is valid only for the current plugin
+session, so do not store it. A stored session token is useless on the next run.
 
-**Returns**: `string` - the session token for the given entry  
+**Returns**: `string` - the session token for the entry.
 
 | Param | Type |
 | --- | --- |
-| entry | `Entry` | 
+| entry | `Entry` |
 
-**Example**  
+<InlineAlert variant="info" slots="text"/>
+
+When you call the Photoshop DOM API, pass the file entry itself, not a session
+token. Photoshop converts the entry to a token for you.
+
+**Example (Photoshop host)**
+
 ```js
 const fs = require('uxp').storage.localFileSystem;
-let entry = await fs.getFileForOpening();
-let token = fs.createSessionToken(entry);
-let result = await require('photoshop').action.batchPlay([{
+const entry = await fs.getFileForOpening();
+const token = fs.createSessionToken(entry);
+await require('photoshop').action.batchPlay([{
     _obj: "open",
-    "target": {
-       _path: token, // Rather than a system path, this expects a session token
+    target: {
+        _path: token, // a session token, not a system path
         _kind: "local",
-    }
+    },
 }], {});
 ```
 
-
 ## getEntryForSessionToken(token)
-Returns the file system Entry that corresponds to the session token obtained from `createSessionToken`. If an entry cannot be found that matches the token, then a `Reference Error: token is not defined` error is thrown.
 
-**Returns**: `Entry` - the corresponding entry for the session token  
+Returns the entry for a session token created with `createSessionToken`. Throws a
+`ReferenceError` if no entry matches the token.
+
+**Returns**: `Entry` - the entry for the token.
 
 | Param | Type |
 | --- | --- |
-| token | `string` | 
-
-
+| token | `string` |
 
 ## createPersistentToken(entry)
-Returns a token suitable for use with host-specific APIs (such as Photoshop), or for storing a persistent reference to an entry (useful if you want to only ask for permission to access a file or folder once). A persistent token is not guaranteed to last forever -- certain scenarios can cause the token to longer work (including moving files, changing permissions, or OS-specific limitations). If a persistent token cannot be reused, you'll get an error at the time of use.
 
-**Returns**: `Promise<string>` - the persistent token for the given entry  
+Returns a token you can store to keep access to an entry across sessions. This
+lets you ask for permission once and reuse the entry later. A persistent token is
+not guaranteed to last forever. Moving the file, changing permissions, or
+OS-specific limits can invalidate it, and you find out when you try to use it.
+
+**Returns**: `Promise<string>` - the persistent token for the entry.
 
 | Param | Type |
 | --- | --- |
-| entry | `Entry` | 
+| entry | `Entry` |
 
-**Example**  
+**Example**
+
 ```js
 const fs = require('uxp').storage.localFileSystem;
-let entry = await fs.getFileForOpening();
-let token = await fs.createPersistentToken(entry);
+const entry = await fs.getFileForOpening();
+const token = await fs.createPersistentToken(entry);
 localStorage.setItem("persistent-file", token);
 ```
 
-
 ## getEntryForPersistentToken(token)
-Returns the file system Entry that corresponds to the persistent token obtained from `createPersistentToken`. If an entry cannot be found that matches the token, then a `Reference Error: token is not defined` error is thrown.
 
-Note: retrieving an entry for a persistent token does _not_ guarantee that the entry is valid for use. You'll need to properly handle the case where the entry no longer exists on the disk, or the permissions have changed by catching the appropriate errors. If that occurs, the suggested practice is to prompt the user for the entry again and store the new token.
+Returns the entry for a persistent token created with `createPersistentToken`.
+Throws a `ReferenceError` if no entry matches the token.
 
-**Returns**: `Promise<Entry>` - the corresponding entry for the persistent token  
+**Returns**: `Promise<Entry>` - the entry for the token.
 
 | Param | Type |
 | --- | --- |
-| token | `string` | 
+| token | `string` |
 
-**Example**  
+<InlineAlert variant="warning" slots="text"/>
+
+A persistent token can resolve to an entry that no longer works. The file may be
+gone, or its permissions may have changed. Handle the error, then ask the user to
+pick the entry again and store the new token.
+
+**Example**
+
 ```js
 const fs = require('uxp').storage.localFileSystem;
 let entry, contents, tries = 3, success = false;
@@ -295,25 +359,22 @@ while (tries > 0) {
         success = true;
     } catch (err) {
         entry = await fs.getFileForOpening();
-        localStorage.setItem("persistent-token", await fs.createPersistentToken(entry));
+        localStorage.setItem("persistent-file", await fs.createPersistentToken(entry));
         tries--;
     }
 }
 if (!success) {
-    // fail gracefully somehow
+    // fail gracefully
 }
 ```
 
-
 ## isFileSystemProvider(fs)
-Checks if the supplied object is a `FileSystemProvider`. It's safe to use even
-if the object is `null` or `undefined`. Useful for type checking.
 
-**Returns**: `boolean` - If `true`, the object is a file system provider  
+Static helper that checks whether a value is a `FileSystemProvider`. Safe to call
+even if the value is `null` or `undefined`. Useful for type checking.
+
+**Returns**: `boolean` - if `true`, the value is a file system provider.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| fs | `any` | the object to check |
-
-
-  
+| fs | `any` | the value to check |
