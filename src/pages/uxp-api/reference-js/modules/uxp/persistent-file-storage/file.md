@@ -61,8 +61,7 @@ A file opened through `getFileForOpening` is read-only; one from
 <InlineAlert variant="info" slots="text"/>
 
 Only `File` exposes a `mode`. [Folder](../../../modules/uxp/persistent-file-storage/folder.md)
-has no equivalent, so you cannot tell in advance whether a folder is writable.
-The first write throws if it is not.
+has no equivalent.
 
 **Example**
 
@@ -88,9 +87,8 @@ option; without it, the file is read as UTF-8 text.
 
 <InlineAlert variant="warning" slots="text"/>
 
-Always wrap `read` and `write` in `try/catch`. In some async flows UXP can stop
-on an internal file-system error without rejecting the returned `Promise`, so
-relying on rejection alone can hide failures.
+Wrap `read` and `write` in `try/catch`. They can reject with errors such as
+`FileIsReadOnly` (writing to a read-only file) or `OutOfSpace`.
 
 **Example**
 
@@ -110,7 +108,7 @@ const data = await myNovel.read({ format: formats.binary });
 Writes data to the file, appending if requested. The `format` option controls
 the encoding and defaults to UTF-8.
 
-**Returns**: `Promise<number>` - the number of bytes written.
+**Returns**: `Promise<number>` - the length of the contents written to the file.
 
 **Throws**:
 

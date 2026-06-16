@@ -250,11 +250,6 @@ Resolves an existing entry at the given URL and returns it.
 | --- | --- | --- |
 | `url` | `string` | **Required.** The URL to resolve. The `file:` scheme has limited support on Windows (UWP) due to strict [file access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions). |
 
-<InlineAlert variant="warning" slots="text"/>
-
-On Windows, resolving a path that ends with a trailing backslash can fail. Strip
-the trailing `\` from a path before you build the URL.
-
 **Example**
 
 ```js

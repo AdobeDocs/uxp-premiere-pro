@@ -85,7 +85,7 @@ file. Pass `types.folder` to create a folder instead.
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
 | `type` | `Symbol` | `types.file` | The kind of entry. Pass `types.folder` to create a folder. |
-| `overwrite` | `boolean` | `false` | If `true`, overwrite an existing entry of the same name. |
+| `overwrite` | `boolean` | `false` | If `true`, overwrite an existing file of the same name. Has no effect when an entry of that name is a folder; that case always fails. |
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -237,14 +237,6 @@ easy to trip over. `createFile` does not write to disk. `createFolder` does, and
 has no `overwrite`. `createEntry` does one or the other depending on `type`.
 `getEntry` only reads. The behavior is stable, so design around it.
 
-<InlineAlert variant="warning" slots="text"/>
-
-On Windows, `getEntry` can fail when the base folder path ends with a trailing
-backslash. Strip the trailing `\` from constructed paths before calling.
-
 <InlineAlert variant="info" slots="text"/>
 
-A `Folder` has no `mode` property, so you cannot detect a read-only folder before
-writing. `getFolder` can return a read-only folder without any error, and the
-write throws later. Wrap the first write in `try/catch` and surface a permission
-error to the user.
+A `Folder` has no `mode` property, unlike `File`.
