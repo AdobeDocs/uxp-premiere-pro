@@ -342,30 +342,6 @@ Since: **25.6**
 
 <HorizontalLine />
 
-### TranscriptionDiarisation
-
-Since: **25.6**
-
-| Name | Min Version | Description |
-| :--- | :---------- | :---------- |
-| CHANNEL | 25.6 | - |
-| NONE | 25.6 | - |
-| SPEAKER | 25.6 | - |
-| SPEAKER_CHANGE | 25.6 | - |
-
-<HorizontalLine />
-
-### TranscriptionAutoDetect
-
-Since: **25.6**
-
-| Name | Min Version | Description |
-| :--- | :---------- | :---------- |
-| AUTO_DETECT | 25.6 | - |
-| DO_NOT_AUTO_DETECT | 25.6 | - |
-
-<HorizontalLine />
-
 ### TransitionPosition
 
 Since: **25.6**
