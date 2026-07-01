@@ -44,7 +44,7 @@ Returns: [*Action*](action.md)
 
 | Name | Type | Description |
 | :----| :--- | :---------- |
-| Name | *string* | - |
+| name | *string* | - |
 | markerType | *string* | - |
 | startTime | [*TickTime*](ticktime.md) | - |
 | duration | [*TickTime*](ticktime.md) | - |

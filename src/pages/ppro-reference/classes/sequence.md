@@ -75,7 +75,7 @@ Returns: [*Action*](action.md)
 
 ### createSetSettingsAction
 
-Returns action that set sequence settings
+Returns an action that updates the settings for the sequence.
 
 Since: **25.6**
 
@@ -91,7 +91,7 @@ Returns: [*Action*](action.md)
 
 ### createSetZeroPointAction
 
-Create an action to set an InPoint for the sequence
+Create an action to set the zero point for the sequence.
 
 Since: **25.6**
 
@@ -195,7 +195,7 @@ Returns: Promise\<[*RectF*](rectf.md)\>
 
 ### getInPoint
 
-Get time representing the inPoint of sequence.
+Get time representing the in point of the sequence.
 
 Since: **25.6**
 
@@ -205,7 +205,7 @@ Returns: Promise\<[*TickTime*](ticktime.md)\>
 
 ### getOutPoint
 
-Get time representing the inPoint of sequence.
+Get time representing the out point of the sequence.
 
 Since: **25.6**
 

@@ -10,7 +10,13 @@ keywords:
 
 # Constants
 
-To use any constant, import the `constants` object from the premiere pro module first.
+Constants are available on the `Constants` namespace of the `premierepro` module:
+
+```
+const app = require('premierepro');
+
+const myFavoriteColor = app.Constants.ProjectItemColorLabel.BLUE;
+```
 
 ## Enumerations
 

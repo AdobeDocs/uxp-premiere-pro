@@ -96,7 +96,7 @@ Returns: [*Action*](action.md)
 
 | Name | Type | Description |
 | :----| :--- | :---------- |
-| markerType | *string* | This values can be Scale (0), AnchorToInPoint (1) or AnchorToOutPoint (2) |
+| markerType | *string* | Can be set to "Comment", "Chapter", "Segmentation", or "WebLink" |
 
 <HorizontalLine />
 

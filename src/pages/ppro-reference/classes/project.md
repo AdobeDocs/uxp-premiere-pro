@@ -150,7 +150,7 @@ Returns: Promise\<[*Sequence*](sequence.md)\>
 
 ### createSequenceFromMedia
 
-Create a new sequence with a given name and medias
+Create a new sequence with a given name and media
 
 Since: **25.6**
 
@@ -294,7 +294,7 @@ Returns: Promise\<*boolean*\>
 | :----| :--- | :---------- |
 | aepPath | *string* | - |
 | compNames | *string[]* | - |
-| TargetBin | [*ProjectItem*](projectitem.md) | - |
+| targetBin | [*ProjectItem*](projectitem.md) | - |
 
 <HorizontalLine />
 
@@ -309,7 +309,7 @@ Returns: Promise\<*boolean*\>
 | Name | Type | Description |
 | :----| :--- | :---------- |
 | aepPath | *string* | - |
-| TargetBin | [*ProjectItem*](projectitem.md) | - |
+| targetBin | [*ProjectItem*](projectitem.md) | - |
 
 <HorizontalLine />
 
@@ -381,7 +381,7 @@ Returns: Promise\<*boolean*\>
 
 ### pauseGrowing
 
-Pause growing of files instead swap the files
+Pauses or resumes monitoring of actively-captured (growing) media files in the project. When paused, Premiere stops refreshing clips whose source files are still being written to disk, allowing stable playback at the current captured duration. Pass true to pause, false to resume.
 
 Since: **25.6**
 

@@ -239,7 +239,7 @@ Returns: [*Action*](action.md)
 
 | Name | Type | Description |
 | :----| :--- | :---------- |
-| inOverriddenFrameRateValue | *number* | - |
+| overriddenFrameRateValue | *number* | - |
 
 <HorizontalLine />
 
@@ -255,8 +255,8 @@ Returns: [*Action*](action.md)
 
 | Name | Type | Description |
 | :----| :--- | :---------- |
-| inNumerator | *number* | - |
-| inDenominator | *number* | - |
+| numerator | *number* | - |
+| denominator | *number* | - |
 
 <HorizontalLine />
 
@@ -319,7 +319,7 @@ Returns: Promise\<*number*\>
 
 ### getComponentChain
 
-Get the media file path of the Project item.
+Get the component chain of the Project item for the given media type.
 
 Since: **25.6**
 
@@ -329,7 +329,7 @@ Returns: Promise\<*string*\>
 
 | Name | Type | Description |
 | :----| :--- | :---------- |
-| mediaType | [*Constants.MediaType*](../constants/index.md#mediatype) | Media type can be audio, video or data/caption |
+| mediaType | [*Constants.MediaType*](../constants/index.md#mediatype) | Media type can be audio or video |
 
 <HorizontalLine />
 
