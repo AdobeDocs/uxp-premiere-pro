@@ -239,7 +239,7 @@ Gets the value of component Param at the given time
 
 Since: **25.6**
 
-Returns: Promise\<[*number | string | boolean | PointF | Color*](number | string | boolean | pointf | color.md)\>
+Returns: Promise\<*number | string | boolean | [PointF](pointf.md) | [Color*](color.md)\>
 
 #### Parameters
 
