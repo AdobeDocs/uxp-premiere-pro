@@ -212,7 +212,7 @@ Returns: *boolean*
 | Name | Type | Description |
 | :----| :--- | :---------- |
 | callback | *(compoundAction: CompoundAction) =\> void* | - |
-| undoString | *string* | - |
+| undoString? | *string* | - |
 
 <HorizontalLine />
 
