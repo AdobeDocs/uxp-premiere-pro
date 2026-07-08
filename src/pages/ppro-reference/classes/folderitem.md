@@ -8,29 +8,31 @@ product: premierepro
 keywords: 
 ---
 
-# FolderItem  
+# FolderItem
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| type | *number* | R | 25.0 | Get the type of the Project Item. |
-| name | *string* | R | 25.0 | The name of this project item. |
+| :--- | :--- | :----- | :---------- | :---------- |
+| type | *number* | R | 25.6 | Get the type of the Project Item. |
+| name | *string* | R | 25.6 | The name of this project item. |
 
 ## Static Methods
 
 ### cast
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*FolderItem*
-  
 Cast ProjectItem in to FolderItem
+
+Since: **25.6**
+
+Returns: [*FolderItem*](folderitem.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
 <HorizontalLine />
@@ -39,16 +41,16 @@ Cast ProjectItem in to FolderItem
 
 ### createBinAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Returns an action that lets users create a new bin.
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | name | *string* | - |
 | makeUnique | *boolean* | - |
 
@@ -56,16 +58,16 @@ Returns an action that lets users create a new bin.
 
 ### createMoveItemAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Creates an action that moves the given item to the provided folder item newParent.
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | item | [*ProjectItem*](projectitem.md) | - |
 | newParent | [*FolderItem*](folderitem.md) | - |
 
@@ -73,80 +75,80 @@ Creates an action that moves the given item to the provided folder item newParen
 
 ### createRemoveItemAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Creates an action that removes the given item from this folder.
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | item | [*ProjectItem*](projectitem.md) | - |
 
 <HorizontalLine />
 
 ### createRenameBinAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Rename the Bin and return true if it's successful
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | name | *string* | - |
 
 <HorizontalLine />
 
 ### createSetColorLabelAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Create an action for set color label to projectItem by index
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inColorLabelIndex | *number* | - |
 
 <HorizontalLine />
 
 ### createSetNameAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Returns action that renames projectItem
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inName | *string* | - |
 
 <HorizontalLine />
 
 ### createSmartBinAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Creates a smart bin with given name and returns the Folder object
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | name | *string* | - |
 | searchQuery | *string* | - |
 
@@ -154,30 +156,30 @@ Creates a smart bin with given name and returns the Folder object
 
 ### getColorLabelIndex
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Get color label index of projectItem
+
+Since: **25.6**
+
+Returns: Promise\<*number*\>
 
 <HorizontalLine />
 
 ### getItems
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*ProjectItem[]*
-  
 Collection of child items of this folder.
+
+Since: **25.6**
+
+Returns: Promise\<[*ProjectItem[]*](projectitem.md)\>
 
 <HorizontalLine />
 
 ### getProject
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Project*
-  
 Get the parent Project of this projectItem.
+
+Since: **25.6**
+
+Returns: Promise\<[*Project*](project.md)\>
 
 <HorizontalLine />

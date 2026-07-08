@@ -8,28 +8,30 @@ product: premierepro
 keywords: 
 ---
 
-# EncoderManager  
+# EncoderManager
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| isAMEInstalled | *boolean* | R | 25.0 | Check if AME is installed. |
+| :--- | :--- | :----- | :---------- | :---------- |
+| isAMEInstalled | *boolean* | R | 25.6 | Check if AME is installed. |
 
 ## Static Methods
 
 ### getExportFileExtension
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get the Export File Extension of Input Preset file
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | sequence | [*Sequence*](sequence.md) | - |
 | presetFilePath | *string* | - |
 
@@ -37,11 +39,11 @@ Get the Export File Extension of Input Preset file
 
 ### getManager
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*EncoderManager*
-  
 Get the Encoder Manager object.
+
+Since: **25.6**
+
+Returns: [*EncoderManager*](encodermanager.md)
 
 <HorizontalLine />
 
@@ -49,16 +51,16 @@ Get the Encoder Manager object.
 
 ### encodeFile
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Encode input media file in AME
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | filePath | *string* | - |
 | outputFile | *string* | - |
 | presetFile | *string* | - |
@@ -72,16 +74,16 @@ Encode input media file in AME
 
 ### encodeProjectItem
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Encode input clipProjectItem in AME
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | clipProjectItem | [*ClipProjectItem*](clipprojectitem.md) | - |
 | outputFile | *string* | - |
 | presetFile | *string* | - |
@@ -93,30 +95,82 @@ Encode input clipProjectItem in AME
 
 ### exportSequence
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Export a sequence. If no output file and preset is specified, the sequence will be exported with the applied export settings or standard export rules will be applied.
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | sequence | [*Sequence*](sequence.md) | - |
-| exportType | [*Constants.ExportType*](../constants/index.md) | Constants.ExportType.IMMEDIATELY, Constants.ExportType.QUEUE_TO_AME etc..  |
+| exportType | [*Constants.ExportType*](../constants/index.md#exporttype) | Constants.ExportType.IMMEDIATELY, Constants.ExportType.QUEUE_TO_AME etc..  |
 | outputFile | *string* | - |
 | presetFile | *string* | - |
 | exportFull | *boolean* | - |
 
 <HorizontalLine />
 
+### launchEncoder
+
+Launch AME asynchronously if not already running.
+
+Since: **26.3**
+
+Returns: Promise\<*boolean*\>
+
+<HorizontalLine />
+
+### setEmbeddedXMPEnabled
+
+Set whether to enable embedded XMP when exporting a sequence.
+
+Since: **26.3**
+
+Returns: Promise\<*boolean*\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| enabled | *boolean* | - |
+
+<HorizontalLine />
+
+### setSidecarXMPEnabled
+
+Set whether to enable sidecar XMP when exporting a sequence.
+
+Since: **26.3**
+
+Returns: Promise\<*boolean*\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| enabled | *boolean* | - |
+
+<HorizontalLine />
+
+### startBatchEncode
+
+Start encoding the AME batch queue.
+
+Since: **26.3**
+
+Returns: Promise\<*boolean*\>
+
+<HorizontalLine />
+
 ## Events
 
 | Name | Version | Description |
-| :------ | :------ | :------ |
-| EVENT_RENDER_COMPLETE | 25.0 | Broadcast when AME is finished rendering |
-| EVENT_RENDER_ERROR | 25.0 | Broadcast when AME gives back error message |
-| EVENT_RENDER_CANCEL | 25.0 | Broadcast when AME job is canceled |
-| EVENT_RENDER_QUEUE | 25.0 | Broadcast when AME job is queued |
-| EVENT_RENDER_PROGRESS | 25.0 | Broadcast when AME job is rendering the job |
+| :--- | :------ | :---------- |
+| EVENT_RENDER_COMPLETE | 25.6 | Broadcast when AME is finished rendering |
+| EVENT_RENDER_ERROR | 25.6 | Broadcast when AME gives back error message |
+| EVENT_RENDER_CANCEL | 25.6 | Broadcast when AME job is canceled |
+| EVENT_RENDER_QUEUE | 25.6 | Broadcast when AME job is queued |
+| EVENT_RENDER_PROGRESS | 25.6 | Broadcast when AME job is rendering the job |

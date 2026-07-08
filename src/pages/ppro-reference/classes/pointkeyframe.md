@@ -8,11 +8,13 @@ product: premierepro
 keywords: 
 ---
 
-# PointKeyframe  
+# PointKeyframe
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| value | *object* | W | 25.0 |  |
-| position | *TickTime* | W | 25.0 | Get/Set position of a keyframe |
+| :--- | :--- | :----- | :---------- | :---------- |
+| value | *\{value: PointF}* | W | 25.6 |  |
+| position | [*TickTime*](ticktime.md) | W | 25.6 | Get/Set position of a keyframe |

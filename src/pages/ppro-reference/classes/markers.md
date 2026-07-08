@@ -8,22 +8,24 @@ product: premierepro
 keywords: 
 ---
 
-# Markers  
+# Markers
+
+Since: **25.6**
 
 ## Static Methods
 
 ### getMarkers
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Markers*
-  
 Returns the Markers object for Sequence Or ProjectItem
+
+Since: **25.6**
+
+Returns: Promise\<[*Markers*](markers.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | markerOwnerObject | [*Sequence*](sequence.md) or [*ClipProjectItem*](clipprojectitem.md) | - |
 
 <HorizontalLine />
@@ -32,17 +34,17 @@ Returns the Markers object for Sequence Or ProjectItem
 
 ### createAddMarkerAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Add a new marker
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
-| Name | *string* | - |
+| :----| :--- | :---------- |
+| name | *string* | - |
 | markerType | *string* | - |
 | startTime | [*TickTime*](ticktime.md) | - |
 | duration | [*TickTime*](ticktime.md) | - |
@@ -52,16 +54,16 @@ Add a new marker
 
 ### createMoveMarkerAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Move the given marker at new time value
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | marker | [*Marker*](marker.md) | - |
 | tickTime | [*TickTime*](ticktime.md) | - |
 
@@ -69,32 +71,32 @@ Move the given marker at new time value
 
 ### createRemoveMarkerAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Remove the given marker
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | marker | [*Marker*](marker.md) | - |
 
 <HorizontalLine />
 
 ### getMarkers
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Marker[]*
-  
 Get all markers
+
+Since: **25.6**
+
+Returns: [*Marker[]*](marker.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
-| filters | [*string[]*](/ppro-reference/classes/string[]/) | Marker Type Filter (Optional) |
+| :----| :--- | :---------- |
+| filters | *string[]* | Marker Type Filter (Optional) |
 
 <HorizontalLine />

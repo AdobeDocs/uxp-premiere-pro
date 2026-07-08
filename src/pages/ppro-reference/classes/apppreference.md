@@ -8,40 +8,42 @@ product: premierepro
 keywords: 
 ---
 
-# AppPreference  
+# AppPreference
+
+Since: **25.6**
 
 ## Static Methods
 
 ### getValue
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get preference value in native string form
+
+Since: **25.6**
+
+Returns: *string*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
-| preferenceKey | [*Constants.PreferenceKey*](../constants/index.md) | App preference key to get |
+| :----| :--- | :---------- |
+| preferenceKey | [*Constants.PreferenceKey*](../constants/index.md#preferencekey) | App preference key to get |
 
 <HorizontalLine />
 
 ### setValue
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
+Set backend preference using one of the available property keys
 
-*boolean*
-  
-Set backend preference using given list of property keys. The parameters are \<key, value (number, boolean or string), persistence flag\>
+Since: **25.6**
+
+Returns: *boolean*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
-| key | [*Constants.PreferenceKey*](../constants/index.md) | App preference key to set |
+| :----| :--- | :---------- |
+| key | [*Constants.PreferenceKey*](../constants/index.md#preferencekey) | App preference key to set |
 | value | *boolean* or *string* or *number* | Value to set for the preference key |
-| persistenceFlag | [*Constants.PropertyType*](../constants/index.md) | Indicates whether the preference should be persisted or not |
+| persistenceFlag | [*Constants.PropertyType*](../constants/index.md#propertytype) | Indicates whether the preference should be persisted or not |
 
 <HorizontalLine />

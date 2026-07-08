@@ -8,22 +8,24 @@ product: premierepro
 keywords: 
 ---
 
-# Transcript  
+# Transcript
+
+Since: **25.6**
 
 ## Static Methods
 
 ### createImportTextSegmentsAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Create action that import external transcripts to ClipProjectItem
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | textSegments | [*TextSegments*](textsegments.md) | - |
 | clipProjectItem | [*ClipProjectItem*](clipprojectitem.md) | - |
 
@@ -31,32 +33,58 @@ Create action that import external transcripts to ClipProjectItem
 
 ### exportToJSON
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Export transcripts inside of clipProjectItem as JSON string if transcript exist
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
+| clipProjectItem | [*ClipProjectItem*](clipprojectitem.md) | - |
+
+<HorizontalLine />
+
+### hasTranscript
+
+Returns true if the ClipProjectItem has an existing transcript
+
+Since: **26.3**
+
+Returns: *boolean*
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
 | clipProjectItem | [*ClipProjectItem*](clipprojectitem.md) | - |
 
 <HorizontalLine />
 
 ### importFromJSON
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TextSegments*
-  
 Returns TextSegments object initialized from jsonString
+
+Since: **25.6**
+
+Returns: [*TextSegments*](textsegments.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | jsonString | *string* | - |
+
+<HorizontalLine />
+
+### querySupportedLanguages
+
+Returns the list of language services available for transcription
+
+Since: **26.3**
+
+Returns: *Array\<\{displayString: string, languageCode: string, locale: string}\>*
 
 <HorizontalLine />

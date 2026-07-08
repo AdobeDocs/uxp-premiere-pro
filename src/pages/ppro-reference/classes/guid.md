@@ -8,22 +8,24 @@ product: premierepro
 keywords: 
 ---
 
-# Guid  
+# Guid
+
+Since: **25.6**
 
 ## Static Methods
 
 ### fromString
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Guid*
-  
 Create a guid from a string
+
+Since: **25.6**
+
+Returns: [*Guid*](guid.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | stringValue | *string* | - |
 
 <HorizontalLine />
@@ -32,10 +34,10 @@ Create a guid from a string
 
 ### toString
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Return string representation of the GUID
+
+Since: **25.6**
+
+Returns: *string*
 
 <HorizontalLine />

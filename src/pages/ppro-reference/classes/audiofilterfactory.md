@@ -8,22 +8,24 @@ product: premierepro
 keywords: 
 ---
 
-# AudioFilterFactory  
+# AudioFilterFactory
+
+Since: **25.6**
 
 ## Static Methods
 
 ### createComponentByDisplayName
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*AudioFilterComponent*
-  
 Creates a new audio filter component based on the input display name and trackItem for applying the audio filter
+
+Since: **25.6**
+
+Returns: Promise\<[*AudioFilterComponent*](audiofiltercomponent.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | displayName | *string* | - |
 | inAudioClipTrackItem | [*AudioClipTrackItem*](audiocliptrackitem.md) | - |
 
@@ -31,10 +33,10 @@ Creates a new audio filter component based on the input display name and trackIt
 
 ### getDisplayNames
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string[]*
-  
 Returns an array of audio filter displayNames
+
+Since: **25.6**
+
+Returns: Promise\<*string[]*\>
 
 <HorizontalLine />

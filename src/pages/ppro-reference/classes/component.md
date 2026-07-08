@@ -8,52 +8,54 @@ product: premierepro
 keywords: 
 ---
 
-# Component  
+# Component
+
+Since: **25.6**
 
 ## Instance Methods
 
 ### getDisplayName
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Returned Promise will be fullfilled with the value of display name for this component
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 <HorizontalLine />
 
 ### getMatchName
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Returned Promise will be fullfilled with the value of internal matchname for this component
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 <HorizontalLine />
 
 ### getParam
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*ComponentParam*
-  
 Get a parameter from the component based on the given input index. Parameter indexes are zero-based, and the actual is defined exclusively by the component itself.
+
+Since: **25.6**
+
+Returns: [*ComponentParam*](componentparam.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | paramIndex | *number* | - |
 
 <HorizontalLine />
 
 ### getParamCount
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Gets the number of param in the component
+
+Since: **25.6**
+
+Returns: *number*
 
 <HorizontalLine />

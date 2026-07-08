@@ -8,22 +8,24 @@ product: premierepro
 keywords: 
 ---
 
-# UniqueSerializeable  
+# UniqueSerializeable
+
+Since: **25.6**
 
 ## Static Methods
 
 ### cast
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*UniqueSerializeable*
-  
 Cast serializable object (ex. ProjectItem) into UniqueSerializeable
+
+Since: **25.6**
+
+Returns: [*UniqueSerializeable*](uniqueserializeable.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | item | [*ProjectItem*](projectitem.md) or [*ClipProjectItem*](clipprojectitem.md) or [*FolderItem*](folderitem.md) or [*Sequence*](sequence.md) | - |
 
 <HorizontalLine />
@@ -32,10 +34,10 @@ Cast serializable object (ex. ProjectItem) into UniqueSerializeable
 
 ### getUniqueID
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Guid*
-  
 Get the unique ID of the serializeable object
+
+Since: **25.6**
+
+Returns: [*Guid*](guid.md)
 
 <HorizontalLine />

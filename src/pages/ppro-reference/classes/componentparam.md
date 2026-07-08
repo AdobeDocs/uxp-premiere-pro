@@ -8,70 +8,72 @@ product: premierepro
 keywords: 
 ---
 
-# ComponentParam  
+# ComponentParam
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| displayName | *string* | R | 25.0 | Returns the display name of the component param |
+| :--- | :--- | :----- | :---------- | :---------- |
+| displayName | *string* | R | 25.6 | Returns the display name of the component param |
 
 ## Instance Methods
 
 ### areKeyframesSupported
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Returns bool whether keyframes are supported for this component parameter
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 <HorizontalLine />
 
 ### createAddKeyframeAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Creates and returns an action object which can be used to add a keyframe component
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inKeyFrame | [*Keyframe*](keyframe.md) | - |
 
 <HorizontalLine />
 
 ### createKeyframe
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Keyframe*
-  
 Creates and returns a keyframe initialised with the ComponentParam's type and passed in value. This throws if the passed in value is not compatible with the component param type
+
+Since: **25.6**
+
+Returns: [*Keyframe*](keyframe.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inValue | *number* or *string* or *boolean* or [*PointF*](pointf.md) or [*Color*](color.md) | Input could be number, string, boolean, PointF, or Color depend on effect param type |
 
 <HorizontalLine />
 
 ### createRemoveKeyframeAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Returns an action which removes keyframe at specific time
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inTime | [*TickTime*](ticktime.md) | - |
 | UpdateUI | *boolean* | - |
 
@@ -79,16 +81,16 @@ Returns an action which removes keyframe at specific time
 
 ### createRemoveKeyframeRangeAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Returns an action which removes keyframe at specific time range
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inTime | [*TickTime*](ticktime.md) | - |
 | outTime | [*TickTime*](ticktime.md) | - |
 | UpdateUI | *boolean* | - |
@@ -97,16 +99,16 @@ Returns an action which removes keyframe at specific time range
 
 ### createSetInterpolationAtKeyframeAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Returns an action which sets the interpolation mode of keyframe at the given time
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inTime | [*TickTime*](ticktime.md) | - |
 | InterpolationMode | *number* | - |
 | UpdateUI | *boolean* | - |
@@ -115,32 +117,32 @@ Returns an action which sets the interpolation mode of keyframe at the given tim
 
 ### createSetTimeVaryingAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Creates and returns an action object to set the component to be time varying
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inTimeVarying | *boolean* | - |
 
 <HorizontalLine />
 
 ### createSetValueAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Creates and returns an action object which can be used to set the value of a non-time varying component
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inKeyFrame | [*Keyframe*](keyframe.md) | - |
 | inSafeForPlayback | *boolean* | - |
 
@@ -148,16 +150,16 @@ Creates and returns an action object which can be used to set the value of a non
 
 ### findNearestKeyframe
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Keyframe*
-  
 Find sthe nearest key for the given time
+
+Since: **25.6**
+
+Returns: [*Keyframe*](keyframe.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inTime | [*TickTime*](ticktime.md) | - |
 | outTime | [*TickTime*](ticktime.md) | - |
 
@@ -165,94 +167,94 @@ Find sthe nearest key for the given time
 
 ### findNextKeyframe
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Keyframe*
-  
 find the next keyframe for the given time
+
+Since: **25.6**
+
+Returns: [*Keyframe*](keyframe.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inTime | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
 
 ### findPreviousKeyframe
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Keyframe*
-  
 find the previous keyframe for the given time
+
+Since: **25.6**
+
+Returns: [*Keyframe*](keyframe.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inTime | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
 
 ### getKeyframeListAsTickTimes
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime[]*
-  
 Get a list of tickTime for the keyframes of this component param
+
+Since: **25.6**
+
+Returns: [*TickTime[]*](ticktime.md)
 
 <HorizontalLine />
 
 ### getKeyframePtr
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Keyframe*
-  
 Get the Keyframe at the given tickTime postion
+
+Since: **25.6**
+
+Returns: [*Keyframe*](keyframe.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | time | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
 
 ### getStartValue
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Keyframe*
-  
 Returned promise will be fullfilled with the start value (keyframe) of the component param
+
+Since: **25.6**
+
+Returns: Promise\<[*Keyframe*](keyframe.md)\>
 
 <HorizontalLine />
 
 ### getValueAtTime
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number | string | boolean | PointF | Color*
-  
 Gets the value of component Param at the given time
+
+Since: **25.6**
+
+Returns: Promise\<*number | string | boolean | [PointF](pointf.md) | [Color*](color.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | time | [*TickTime*](ticktime.md) | The time at which to get the value of the component param |
 
 <HorizontalLine />
 
 ### isTimeVarying
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Returns true if the parameter value varies over time (for the duration of the item)
+
+Since: **25.6**
+
+Returns: *boolean*
 
 <HorizontalLine />

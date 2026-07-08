@@ -8,16 +8,18 @@ product: premierepro
 keywords: 
 ---
 
-# ProjectItemSelection  
+# ProjectItemSelection
+
+Since: **25.6**
 
 ## Instance Methods
 
 ### getItems
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*ProjectItem[]*
-  
 Get the project items that is represented by this selection.
+
+Since: **25.6**
+
+Returns: Promise\<[*ProjectItem[]*](projectitem.md)\>
 
 <HorizontalLine />

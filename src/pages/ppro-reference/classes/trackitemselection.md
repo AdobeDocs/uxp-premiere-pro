@@ -8,23 +8,25 @@ product: premierepro
 keywords: 
 ---
 
-# TrackItemSelection  
+# TrackItemSelection
+
+Since: **25.6**
 
 ## Static Methods
 
 ### createEmptySelection
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Create empty selection
+
+Since: **25.6**
+
+Returns: *boolean*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
-| undefined | *(selection: TrackItemSelection) => void* | - |
+| :----| :--- | :---------- |
+| undefined | *(selection: TrackItemSelection) =\> void* | - |
 
 <HorizontalLine />
 
@@ -32,16 +34,16 @@ Create empty selection
 
 ### addItem
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Add a track item to this selection
+
+Since: **25.6**
+
+Returns: *boolean*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | trackItem | [*VideoClipTrackItem*](videocliptrackitem.md) or [*AudioClipTrackItem*](audiocliptrackitem.md) | trackItem to be added to selection |
 | skipDuplicateCheck | *boolean* | - |
 
@@ -49,26 +51,26 @@ Add a track item to this selection
 
 ### getTrackItems
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*(VideoClipTrackItem | AudioClipTrackItem)[]*
-  
 return list of trackItems inside of trackItemSelection
+
+Since: **25.6**
+
+Returns: Promise\<*Array\<[VideoClipTrackItem](videocliptrackitem.md) | [AudioClipTrackItem](audiocliptrackitem.md)\>*\>
 
 <HorizontalLine />
 
 ### removeItem
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Remove a track item from this selection
+
+Since: **25.6**
+
+Returns: *boolean*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | trackItem | [*VideoClipTrackItem*](videocliptrackitem.md) or [*AudioClipTrackItem*](audiocliptrackitem.md) | trackItem to be removed from selection |
 
 <HorizontalLine />

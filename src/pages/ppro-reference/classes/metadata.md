@@ -8,22 +8,24 @@ product: premierepro
 keywords: 
 ---
 
-# Metadata  
+# Metadata
+
+Since: **25.6**
 
 ## Static Methods
 
 ### addPropertyToProjectMetadataSchema
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Add name and label property to project metadata schema
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | name | *string* | - |
 | label | *string* | - |
 | type | *number* | - |
@@ -32,34 +34,34 @@ Add name and label property to project metadata schema
 
 ### createSetProjectMetadataAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Get set project metadata action
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 | metadata | *string* | - |
-| updatedFields | [*string[]*](/ppro-reference/classes/string[]/) | - |
+| updatedFields | *string[]* | - |
 
 <HorizontalLine />
 
 ### createSetXMPMetadataAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Get set project XMP metadata action
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 | metadata | *string* | - |
 
@@ -67,74 +69,74 @@ Get set project XMP metadata action
 
 ### getProjectColumnsMetadata
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get project column metadata from project item
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
 <HorizontalLine />
 
 ### getProjectMetadata
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get project metadata
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
 <HorizontalLine />
 
 ### getProjectPanelMetadata
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get project panel metadata
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 <HorizontalLine />
 
 ### getXMPMetadata
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get project XMP metadata
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
 <HorizontalLine />
 
 ### setProjectPanelMetadata
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set project panel metadata
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | metadata | *string* | - |
 
 <HorizontalLine />

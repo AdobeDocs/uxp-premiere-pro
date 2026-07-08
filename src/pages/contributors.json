@@ -1,7 +1,7 @@
 {
-  "total": 444,
+  "total": 451,
   "offset": 0,
-  "limit": 444,
+  "limit": 451,
   "data": [
     {
       "page": "/",
@@ -29,7 +29,7 @@
         "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/introduction/",
@@ -302,455 +302,568 @@
         "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/ppro-reference/classes/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
+    },
+    {
+      "page": "/ppro-reference/classes/aafexportoptions",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4"
+      ],
+      "lastUpdated": "6/11/2026"
+    },
+    {
+      "page": "/ppro-reference/classes/action",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4"
+      ],
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/addtransitionoptions",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/application",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/apppreference",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/audiocliptrackitem",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/audiocomponentchain",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
+    },
+    {
+      "page": "/ppro-reference/classes/audiofiltercomponent",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4"
+      ],
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/audiofilterfactory",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/audiotrack",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/captiontrack",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/clipprojectitem",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/ppro-reference/classes/closeprojectoptions",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/color",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/component",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/componentparam",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/compoundaction",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/encodermanager",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/eventmanager",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/12/2026"
     },
     {
       "page": "/ppro-reference/classes/exporter",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/folderitem",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/footageinterpretation",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/framerate",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/guid",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/ingestsettings",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/keyframe",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/12/2026"
     },
     {
       "page": "/ppro-reference/classes/marker",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/ppro-reference/classes/markers",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/ppro-reference/classes/media",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/metadata",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
+    },
+    {
+      "page": "/ppro-reference/classes/objectmaskutils",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4"
+      ],
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/openprojectoptions",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/pointf",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/pointkeyframe",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/12/2026"
     },
     {
       "page": "/ppro-reference/classes/project",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/ppro-reference/classes/projectcolorsettings",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/projectconverter",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/projectitem",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/projectitemselection",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/projectsettings",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/projectutils",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/properties",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/prproduction",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/rectf",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/scratchdisksettings",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/sequence",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/ppro-reference/classes/sequenceeditor",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/sequencesettings",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/12/2026"
     },
     {
       "page": "/ppro-reference/classes/sequenceutils",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/sourcemonitor",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/textsegments",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/ticktime",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/timedisplay",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/trackitemselection",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/transcript",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/transitionfactory",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/uniqueserializeable",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/utils",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/videocliptrackitem",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/videocomponentchain",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
+    },
+    {
+      "page": "/ppro-reference/classes/videofiltercomponent",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4"
+      ],
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/videofilterfactory",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/classes/videotrack",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
+    },
+    {
+      "page": "/ppro-reference/classes/videotransition",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4"
+      ],
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/constants/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/ppro-reference/events/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/events/operationcompleteevent",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/events/projectclosedevent",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/ppro-reference/events/projectevent",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "6/11/2026"
+    },
+    {
+      "page": "/ppro-reference/events/snapevent",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/296673?v=4"
+      ],
+      "lastUpdated": "6/11/2026"
     },
     {
       "page": "/resources/",

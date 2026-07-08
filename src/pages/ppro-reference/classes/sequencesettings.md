@@ -8,390 +8,392 @@ product: premierepro
 keywords: 
 ---
 
-# SequenceSettings  
+# SequenceSettings
+
+Since: **25.6**
 
 ## Instance Methods
 
 ### getAudioChannelCount
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Get number of channels in the sequence
+
+Since: **25.6**
+
+Returns: Promise\<*number*\>
 
 <HorizontalLine />
 
 ### getAudioChannelType
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Get Audio channel type of sequence. Could be 0 (Mono), 1 (Stereo), 2 (5.1), or 3 (multichannel)
+
+Since: **25.6**
+
+Returns: Promise\<*number*\>
 
 <HorizontalLine />
 
 ### getAudioDisplayFormat
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TimeDisplay*
-  
 Get Audio display format
+
+Since: **25.6**
+
+Returns: Promise\<[*TimeDisplay*](timedisplay.md)\>
 
 <HorizontalLine />
 
 ### getAudioSampleRate
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*FrameRate*
-  
 Get audio sample rate
+
+Since: **25.6**
+
+Returns: Promise\<[*FrameRate*](framerate.md)\>
 
 <HorizontalLine />
 
 ### getCompositeInLinearColor
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Get if composite in linear color is checked
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 <HorizontalLine />
 
 ### getEditingMode
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get editing mode of sequence
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 <HorizontalLine />
 
 ### getMaximumBitDepth
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Find if maximum bit depth is set
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 <HorizontalLine />
 
 ### getMaxRenderQuality
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Find if maximum render quality is set
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 <HorizontalLine />
 
 ### getPreviewCodec
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get preview codec of sequence
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 <HorizontalLine />
 
 ### getPreviewFileFormat
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get preview file format of sequence
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 <HorizontalLine />
 
 ### getPreviewFrameRect
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*RectF*
-  
 Get preview video frame rect in the sequence
+
+Since: **25.6**
+
+Returns: Promise\<[*RectF*](rectf.md)\>
 
 <HorizontalLine />
 
 ### getVideoDisplayFormat
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TimeDisplay*
-  
 Get Video display format
+
+Since: **25.6**
+
+Returns: Promise\<[*TimeDisplay*](timedisplay.md)\>
 
 <HorizontalLine />
 
 ### getVideoFieldType
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Get video field type in the sequence
+
+Since: **25.6**
+
+Returns: Promise\<*number*\>
 
 <HorizontalLine />
 
 ### getVideoFrameRate
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*FrameRate*
-  
 Get video frame rate in the sequence
+
+Since: **26.2**
+
+Returns: [*FrameRate*](framerate.md)
 
 <HorizontalLine />
 
 ### getVideoFrameRect
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*RectF*
-  
 Get video frame rect in the sequence
+
+Since: **25.6**
+
+Returns: Promise\<[*RectF*](rectf.md)\>
 
 <HorizontalLine />
 
 ### getVideoPixelAspectRatio
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get Video display format
+
+Since: **25.6**
+
+Returns: Promise\<*string*\>
 
 <HorizontalLine />
 
 ### setAudioDisplayFormat
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set audio display format of sequence.
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | audioDisplay | [*TimeDisplay*](timedisplay.md) | - |
 
 <HorizontalLine />
 
 ### setAudioSampleRate
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set audio sample rate
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inRate | [*FrameRate*](framerate.md) | - |
 
 <HorizontalLine />
 
 ### setCompositeInLinearColor
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set if composite in linear color is checked
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | useCompositeInLinearColor | *boolean* | - |
 
 <HorizontalLine />
 
 ### setEditingMode
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set editing mode of sequence
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inEditingModeName | *string* | - |
 
 <HorizontalLine />
 
 ### setMaximumBitDepth
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set maximum bit depth to true/false
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | useMaxBitDepth | *boolean* | - |
 
 <HorizontalLine />
 
 ### setMaxRenderQuality
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set maximum render quality to true/false
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | useMaxRenderQuality | *boolean* | - |
 
 <HorizontalLine />
 
 ### setPreviewCodec
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set preview codec of sequence
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inPreviewCodec | *string* | - |
 
 <HorizontalLine />
 
 ### setPreviewFileFormat
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set preview file format of sequence
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inPreviewCodec | *string* | - |
 
 <HorizontalLine />
 
 ### setPreviewFrameRect
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set preview video frame rect in sequence
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inPreviewVideoRect | [*RectF*](rectf.md) | - |
 
 <HorizontalLine />
 
 ### setVideoDisplayFormat
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set video display format of sequence
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | audioDisplay | [*TimeDisplay*](timedisplay.md) | - |
 
 <HorizontalLine />
 
 ### setVideoFieldType
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set video field type in sequence
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | videoFiledType | *number* | - |
 
 <HorizontalLine />
 
 ### setVideoFrameRate
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set video frame rate in the sequence
+
+Since: **26.2**
+
+Returns: *boolean*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inVideoFrameRate | [*FrameRate*](framerate.md) | - |
 
 <HorizontalLine />
 
 ### setVideoFrameRect
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set video frame rect in sequence
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inVideoFrameRect | [*RectF*](rectf.md) | - |
 
 <HorizontalLine />
 
 ### setVideoPixelAspectRatio
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Set video display format of sequence
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inPixelAspectRatio | *string* | - |
 
 <HorizontalLine />

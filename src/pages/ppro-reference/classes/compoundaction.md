@@ -8,28 +8,30 @@ product: premierepro
 keywords: 
 ---
 
-# CompoundAction  
+# CompoundAction
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| empty | *boolean* | R | 25.0 | Is the compound action empty? |
+| :--- | :--- | :----- | :---------- | :---------- |
+| empty | *boolean* | R | 25.6 | Is the compound action empty? |
 
 ## Instance Methods
 
 ### addAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Add an action to the compound action
+
+Since: **25.6**
+
+Returns: *boolean*
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
-| action | [*Action*](/ppro-reference/classes/action/index.md) | - |
+| :----| :--- | :---------- |
+| action | [*Action*](action.md) | - |
 
 <HorizontalLine />

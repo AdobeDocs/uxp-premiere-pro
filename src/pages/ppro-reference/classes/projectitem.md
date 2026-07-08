@@ -8,29 +8,31 @@ product: premierepro
 keywords: 
 ---
 
-# ProjectItem  
+# ProjectItem
+
+Since: **25.6**
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| type | *number* | R | 25.0 | Get the type of the Project Item. |
-| name | *string* | R | 25.0 | The name of this project item. |
+| :--- | :--- | :----- | :---------- | :---------- |
+| type | *number* | R | 25.6 | Get the type of the Project Item. |
+| name | *string* | R | 25.6 | The name of this project item. |
 
 ## Static Methods
 
 ### cast
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*ProjectItem*
-  
 Cast FolderItem or ClipProjectItem in to ProjectItem
+
+Since: **25.6**
+
+Returns: [*ProjectItem*](projectitem.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | item | [*FolderItem*](folderitem.md) or [*ClipProjectItem*](clipprojectitem.md) | - |
 
 <HorizontalLine />
@@ -39,72 +41,72 @@ Cast FolderItem or ClipProjectItem in to ProjectItem
 
 ### createSetColorLabelAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Create an action for set color label to projectItem by index
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inColorLabelIndex | *number* | - |
 
 <HorizontalLine />
 
 ### createSetNameAction
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Action*
-  
 Returns action that renames projectItem
+
+Since: **25.6**
+
+Returns: [*Action*](action.md)
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | inName | *string* | - |
 
 <HorizontalLine />
 
 ### getColorLabelIndex
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*number*
-  
 Get color label index of projectItem
+
+Since: **25.6**
+
+Returns: Promise\<*number*\>
 
 <HorizontalLine />
 
 ### getId
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*string*
-  
 Get id of projectItem
+
+Since: **25.6**
+
+Returns: *string*
 
 <HorizontalLine />
 
 ### getParentBin
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*FolderItem*
-  
 Get parent FolderItem of projectItem
+
+Since: **25.6**
+
+Returns: [*FolderItem*](folderitem.md)
 
 <HorizontalLine />
 
 ### getProject
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*Project*
-  
 Get the parent Project of this projectItem.
+
+Since: **25.6**
+
+Returns: Promise\<[*Project*](project.md)\>
 
 <HorizontalLine />

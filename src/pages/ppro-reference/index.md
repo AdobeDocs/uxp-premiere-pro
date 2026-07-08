@@ -19,7 +19,7 @@ From here, you can open documents, modify them, run menu items, and more.
 ### Minimum Version
 
 You will now find minimum version information on properties and methods. This version tag corresponds to the version of Premiere where the member was introduced or last updated significantly.
-For properties, you will find a column "MIN VERSION". For methods, the version number appears as a tag to the right of the name.
+For properties, you will find a column "MIN VERSION". For methods, the version number appears alongside the documentation for the method.
 
 ## Synchronous vs Asynchronous
 
@@ -31,7 +31,7 @@ For a smooth transition between the ExtendScript DOM and the UXP DOM, all proper
 
 ### Premiere Application
 
-Through the [`app`](#overview) object, you can access the rest of Premiere's objects and methods.
+Through the `app` object, you can access the rest of Premiere's objects and methods.
 
 The currently-active project is obtained like this:
 
@@ -44,10 +44,9 @@ And you can get the active sequence from the project like this:
 ```javascript
 const sequence = await project.getActiveSequence();
 ```
-\<!-- ## UXP Scripting
 
-UXP is not just for plugins anymore.  Individual JavaScript files may be developed and executed as detailed in the UXP Scripting section. --\>
+You can find more details about the available [classes](classes/index.md) and [constants](constants/index.md) of the `app` object, as well as the various [events](events/index.md) that can be listened for, at their respective subpages.
 
 ## Useful links
 
- - [Typescript Declaration NPM package](https://github.com/adobe/premierepro-types)
+ - [TypeScript Declarations](https://github.com/adobe/premierepro-types)

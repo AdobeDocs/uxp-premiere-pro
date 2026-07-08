@@ -8,94 +8,112 @@ product: premierepro
 keywords: 
 ---
 
-# SourceMonitor  
+# SourceMonitor
+
+Since: **25.6**
 
 ## Static Methods
 
 ### closeAllClips
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Close all clips on Source Monitor
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 <HorizontalLine />
 
 ### closeClip
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Close clip on Source Monitor
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 <HorizontalLine />
 
 ### getPosition
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*TickTime*
-  
 Get position of source monitor in time
+
+Since: **25.6**
+
+Returns: Promise\<[*TickTime*](ticktime.md)\>
 
 <HorizontalLine />
 
 ### getProjectItem
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*ProjectItem*
-  
 Get projectItem at source monitor
+
+Since: **25.6**
+
+Returns: Promise\<[*ProjectItem*](projectitem.md)\>
 
 <HorizontalLine />
 
 ### openFilePath
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Open the item at the specified path and send to the Source Monitor for preview
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | filePath | *string* | - |
 
 <HorizontalLine />
 
 ### openProjectItem
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Open input projectItem on Source Monitor
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | projectItem | [*ProjectItem*](projectitem.md) | - |
 
 <HorizontalLine />
 
 ### play
 
-\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
-
-*boolean*
-  
 Play clip at source monitor with input speed
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
 
 #### Parameters
 
 | Name | Type | Description |
-| :------ | :------ | :------ |
+| :----| :--- | :---------- |
 | speed | *number* | - |
+
+<HorizontalLine />
+
+### setPosition
+
+Set position of source monitor to the given TickTime
+
+Since: **26.3**
+
+Returns: Promise\<*boolean*\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| position | [*TickTime*](ticktime.md) | - |
 
 <HorizontalLine />
