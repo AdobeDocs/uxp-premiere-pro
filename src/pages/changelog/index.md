@@ -7,9 +7,87 @@ keywords:
   - Release Notes
 contributors:
   - https://github.com/undavide
+  - https://github.com/camlegleiter
 ---
 
 # Changelog
+
+## Premiere Pro v26.3.0
+
+This release of Premiere comes with a few breaking changes we want to call out, as well as a swath of new APIs worth looking through.
+
+### Breaking Changes
+
+#### Sequence.setSelection
+
+The `Sequence.setSelection` method is now **synchronous**: calling this will immediately return a `boolean` value instead of a `Promise<boolean>`.
+
+If you are using this API with `async`/`await`, simply remove the use of `await`:
+
+```diff
+  const project = await ppro.Project.getActiveProject();
+  const sequence = await project.getActiveSequence();
+
+  const selection = await sequence.getSelection();
+
+- const success = await sequence.setSelection(selection);
++ const success = sequence.setSelection(selection);
+```
+
+If you are using this API with `Promise.then` method chaining, you'll need a bit more updating to avoid runtime issues, e.g.:
+
+```diff
+- sequence.setSelection(selection).then((success) => {
+-   if (success) { ... }
+- });
++ const success = sequence.setSelection(selection);
++ if (success) { ... }
+```
+
+#### Action creation in locks
+
+Creating `Action` instances through the various `create*Action` functions must now be done so while behind a `project.lockedAccess(() => { ... })` call. Previously this wasn't consistently enforced across `create*Action` calls.
+
+```ts
+const audioTrack: AudioTrack = ...
+
+project.lockedAccess(() => {
+  // Create the action here...
+  const action = audioTrack.createSetNameAction("MyAudioTrack");
+
+  project.executeTransasction((compoundAction: CompoundAction) => {
+    // ...and use it here
+    compoundAction.addAction(action);
+  }, "Rename AudioTrack");
+});
+```
+
+Creating `Action`s within a `lockedAccess` call is important: many `Action`s contain data that can quickly become stale or inconsistent with other actions that might take place in Premiere (e.g., an editor is making changes that might conflict with a UXP plugin operating at the same time). Using the `lockedAccess` makes sure these actions are sequenced and properly applied to the Undo history.
+
+The new `@adobe/eslint-plugin-premierepro` ESLint plugin offers several rules which help catch these cases to help make sure `Action` creation and usage in your plugin follows best practices. For more information see the documentation pages for:
+- The [ESLint Support](../resources/fundamentals/eslint-support/index.md) fundamentals page
+- The [`adobe/eslint-plugin-premierepro`](https://github.com/adobe/eslint-plugin-premierepro) Github repo which includes setup and configuration details as well as docs for individual rules.
+
+### New APIs
+
+A number of new APIs have been added in this release. More details on each can be seen in each class's documentation page. If you'd like to see more examples of using all of these new APIs in action, check out the `premiere-api` sample panel in the [UXP Premiere Pro Samples](https://github.com/AdobeDocs/uxp-premiere-pro-samples) repository.
+
+- [`AudioTrack`s](../ppro-reference/classes/audiotrack.md#createsetnameaction), [`CaptionTrack`s](../ppro-reference/classes/captiontrack.md#createsetnameaction), and [`VideoTrack`s](../ppro-reference/classes/videotrack.md#createsetnameaction) can now be renamed via a `createSetNameAction` function added to each class.
+- [`ClipProjectItem.createSubClipAction`](../ppro-reference/classes/clipprojectitem.md#createsubclipaction) lets you create sub clips from the `ClipProjectItem`.
+- [`EncoderManager`](../ppro-reference/classes/encodermanager.md) has a few new functions added for helping with exporting and using AME:
+  - [`launchEncoder`](../ppro-reference/classes/encodermanager.md#launchencoder) to launch your local AME instance.
+  - [`setEmbeddedXMPEnabled`](../ppro-reference/classes/encodermanager.md#setembeddedxmpenabled) to toggle embedding XMP metadata
+  - [`setSidecarXMPEnabled`](../ppro-reference/classes/encodermanager.md#setsidecarxmpenabled) to toggle adding XMP metadata in a sidecar file
+  - [`startBatchEncode`](../ppro-reference/classes/encodermanager.md#startbatchencode) to start any queued encodes in AME
+- [`Marker`s](../ppro-reference/classes/marker.md) now have a unique `guid` property.
+- A new [`ObjectMaskUtils`](../ppro-reference/classes/objectmaskutils.md) class has been added.
+- [`Project.createSequenceWithPresetPath`](../ppro-reference/classes/project.md#createsequencewithpresetpath) has been added to compliment [`Project.createSequence`](../ppro-reference/classes/project.md#createsequence) when using a Sequence Preset.
+- A new [`ProjectConverter.exportAAF`](../ppro-reference/classes/projectconverter.md#exportaaf) export function has been added for AAF support. You can see what options are available when exporting AAF project files via the separate [`AAFExportOptions`](../ppro-reference/classes/aafexportoptions.md) class.
+- You can set the [`SourceMonitor`'s](../ppro-reference/classes/sourcemonitor.md) current position using [`setPosition`](../ppro-reference/classes/sourcemonitor.md#setposition).
+- [`Transcript`](../ppro-reference/classes/transcript.md) has added functions for working with transcriptions.
+  - [`querySupportedLanguages`](../ppro-reference/classes/transcript.md#querysupportedlanguages) to see what language packs are currently available
+  - [`hasTranscript`](../ppro-reference/classes/transcript.md#hastranscript) to check if a `ClipProjectItem` has already been transcribed
+
 
 ## Premiere Pro v26.2.0
 
