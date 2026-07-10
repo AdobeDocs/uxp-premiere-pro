@@ -14,6 +14,8 @@ contributors:
 
 ## Premiere Pro v26.3.0
 
+This release of Premiere comes with a few breaking changes we want to call out, as well as a swath of new APIs worth looking through.
+
 ### Breaking Changes
 
 #### Sequence.setSelection
@@ -68,7 +70,7 @@ The new `@adobe/eslint-plugin-premierepro` ESLint plugin offers several rules wh
 
 ### New APIs
 
-A number of new APIs have been added in this release. More details on each can be seen in each class's documentation page.
+A number of new APIs have been added in this release. More details on each can be seen in each class's documentation page. If you'd like to see more examples of using all of these new APIs in action, check out the `premiere-api` sample panel in the [UXP Premiere Pro Samples](https://github.com/AdobeDocs/uxp-premiere-pro-samples) repository.
 
 - [`AudioTrack`s](../ppro-reference/classes/audiotrack.md#createsetnameaction), [`CaptionTrack`s](../ppro-reference/classes/captiontrack.md#createsetnameaction), and [`VideoTrack`s](../ppro-reference/classes/videotrack.md#createsetnameaction) can now be renamed via a `createSetNameAction` function added to each class.
 - [`ClipProjectItem.createSubClipAction`](../ppro-reference/classes/clipprojectitem.md#createsubclipaction) lets you create sub clips from the `ClipProjectItem`.
@@ -81,7 +83,7 @@ A number of new APIs have been added in this release. More details on each can b
 - A new [`ObjectMaskUtils`](../ppro-reference/classes/objectmaskutils.md) class has been added.
 - [`Project.createSequenceWithPresetPath`](../ppro-reference/classes/project.md#createsequencewithpresetpath) has been added to compliment [`Project.createSequence`](../ppro-reference/classes/project.md#createsequence) when using a Sequence Preset.
 - A new [`ProjectConverter.exportAAF`](../ppro-reference/classes/projectconverter.md#exportaaf) export function has been added for AAF support. You can see what options are available when exporting AAF project files via the separate [`AAFExportOptions`](../ppro-reference/classes/aafexportoptions.md) class.
-- You can set the [`SourceMonitor`s](../ppro-reference/classes/sourcemonitor.md) current position using [`setPosition`](../ppro-reference/classes/sourcemonitor.md#setposition).
+- You can set the [`SourceMonitor`'s](../ppro-reference/classes/sourcemonitor.md) current position using [`setPosition`](../ppro-reference/classes/sourcemonitor.md#setposition).
 - [`Transcript`](../ppro-reference/classes/transcript.md) has added functions for working with transcriptions.
   - [`querySupportedLanguages`](../ppro-reference/classes/transcript.md#querysupportedlanguages) to see what language packs are currently available
   - [`hasTranscript`](../ppro-reference/classes/transcript.md#hastranscript) to check if a `ClipProjectItem` has already been transcribed
