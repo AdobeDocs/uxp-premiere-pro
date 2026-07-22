@@ -407,7 +407,7 @@ Returns: Promise\<*boolean*\>
 
 ### saveAs
 
-Save the project at the provided path
+Saves a copy of the project at the provided path, mirroring the 'File > Save As' behavior in Premiere Pro: the newly saved copy becomes the active project, just as it would after using 'Save As' in the application. Separately, and perhaps unexpectedly, the `Project` object `saveAs()` was called on is itself updated in place to represent that new copy. It does not stay pinned to the original project file. This also affects chained calls, meaning calling `saveAs()` again on the same object saves a copy of that new file, not the original. To continue working with the original project--for example, to derive several independent copies from the same source--reopen it explicitly via `Project.open()` before each subsequent `saveAs()` call, rather than assuming the existing handle still refers to it.
 
 Since: **25.6**
 
