@@ -4,7 +4,7 @@
   "limit": 1,
   "data": [
     {
-      "bgColor": "info",
+      "bgColor": "light",
       "icon": "info",
       "text": ["Code. Connect. Build What's Next. Adobe Developers Live 2026"],
       "button": "Get your free ticket",
