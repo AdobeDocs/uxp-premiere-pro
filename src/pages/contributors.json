@@ -1,7 +1,7 @@
 {
-  "total": 451,
+  "total": 448,
   "offset": 0,
-  "limit": 451,
+  "limit": 448,
   "data": [
     {
       "page": "/",
@@ -2541,9 +2541,10 @@
     {
       "page": "/uxp-api/reference-js/global-members/html-elements/html-web-view-element",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/31863114?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/11/2026"
+      "lastUpdated": "8/11/2026"
     },
     {
       "page": "/uxp-api/reference-js/global-members/html-events/",
@@ -2757,13 +2758,6 @@
     },
     {
       "page": "/uxp-api/reference-js/modules/os/os",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4"
-      ],
-      "lastUpdated": "5/11/2026"
-    },
-    {
-      "page": "/uxp-api/reference-js/modules/os/OS",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
@@ -3001,13 +2995,6 @@
       "lastUpdated": "5/11/2026"
     },
     {
-      "page": "/uxp-api/reference-js/modules/uxp/shell/Shell",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4"
-      ],
-      "lastUpdated": "5/11/2026"
-    },
-    {
       "page": "/uxp-api/reference-js/modules/uxp/user-information/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
@@ -3030,13 +3017,6 @@
     },
     {
       "page": "/uxp-api/reference-js/modules/uxp/versions/versions",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4"
-      ],
-      "lastUpdated": "5/11/2026"
-    },
-    {
-      "page": "/uxp-api/reference-js/modules/uxp/versions/Versions",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
