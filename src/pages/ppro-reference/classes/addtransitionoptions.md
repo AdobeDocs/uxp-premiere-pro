@@ -12,14 +12,22 @@ keywords:
 
 Since: **25.6**
 
+## Constructor
+
+Construct an object that contains properties for applying transition.
+
+Since: **25.6**
+
+<HorizontalLine />
+
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :--- | :--- | :----- | :---------- | :---------- |
 | applyToStart | *boolean* | R | 25.6 | Get whether to apply transition to the start or end of trackitem |
+| duration | [*TickTime*](ticktime.md) | R | 25.6 | Gets the duration of transition |
 | forceSingleSided | *boolean* | R | 25.6 | Get whether transition should be applied to one/both sides |
 | transitionAlignment | *number* | R | 25.6 | Gets the transitionAlignment of transition |
-| duration | [*TickTime*](ticktime.md) | R | 25.6 | Gets the duration of transition |
 
 ## Instance Methods
 

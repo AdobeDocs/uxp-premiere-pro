@@ -12,22 +12,30 @@ keywords:
 
 Since: **26.3**
 
+## Constructor
+
+Construct an object that contains properties for AAF export.
+
+Since: **26.3**
+
+<HorizontalLine />
+
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :--- | :--- | :----- | :---------- | :---------- |
-| mixdownVideo | *boolean* | R | 26.3 | True if the exporter will render a single mixed-down video file |
-| explodeToMono | *boolean* | R | 26.3 | True if multichannel audio is exported as separate mono files per channel |
-| sampleRate | *number* | R | 26.3 | Get the audio sample rate |
+| audioFileFormat | *number* | R | 26.3 | Get the audio file format (0 for AIFF, 1 for WAV) |
 | bitsPerSample | *number* | R | 26.3 | Get the audio bits per sample |
 | embedAudio | *boolean* | R | 26.3 | Get whether to embed audio in the AAF file |
-| audioFileFormat | *number* | R | 26.3 | Get the audio file format (0 for AIFF, 1 for WAV) |
-| trimSources | *boolean* | R | 26.3 | Get whether to trim sources |
+| explodeToMono | *boolean* | R | 26.3 | True if multichannel audio is exported as separate mono files per channel |
 | handleFrames | *number* | R | 26.3 | Get the number of handle frames |
-| videoMixdownPresetPath | *string* | R | 26.3 | Get the video mixdown preset path |
-| renderAudioEffects | *boolean* | R | 26.3 | Get whether to render audio effects |
 | interleaveWithoutEffects | *boolean* | R | 26.3 | Get whether to interleave without effects |
+| mixdownVideo | *boolean* | R | 26.3 | True if the exporter will render a single mixed-down video file |
 | preserveParentFolder | *boolean* | R | 26.3 | Get whether to preserve parent folder |
+| renderAudioEffects | *boolean* | R | 26.3 | Get whether to render audio effects |
+| sampleRate | *number* | R | 26.3 | Get the audio sample rate |
+| trimSources | *boolean* | R | 26.3 | Get whether to trim sources |
+| videoMixdownPresetPath | *string* | R | 26.3 | Get the video mixdown preset path |
 
 ## Instance Methods
 

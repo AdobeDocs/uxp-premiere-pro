@@ -12,9 +12,17 @@ keywords:
 
 Since: **25.6**
 
+## Constructor
+
+Constructs a new instance of the RectF class.
+
+Since: **25.6**
+
+<HorizontalLine />
+
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :--- | :--- | :----- | :---------- | :---------- |
-| width | *number* | W | 25.6 | Get/Set the width of a rect |
 | height | *number* | W | 25.6 | Get/Set the height of a rect |
+| width | *number* | W | 25.6 | Get/Set the width of a rect |

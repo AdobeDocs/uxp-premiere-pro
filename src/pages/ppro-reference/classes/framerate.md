@@ -12,6 +12,14 @@ keywords:
 
 Since: **25.6**
 
+## Constructor
+
+Constructs a FrameRate object
+
+Since: **25.6**
+
+<HorizontalLine />
+
 ## Properties
 
 | Name | Type | Access | Min Version | Description |

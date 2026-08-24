@@ -69,6 +69,19 @@ Since: **25.6**
 
 <HorizontalLine />
 
+### C2PAManifestLocation
+
+Since: **26.5**
+
+| Name | Min Version | Description |
+| :--- | :---------- | :---------- |
+| CLOUD | 26.5 | - |
+| EMBEDDED | 26.5 | - |
+| NONE | 26.5 | - |
+| SIDE_CAR | 26.5 | - |
+
+<HorizontalLine />
+
 ### ContentType
 
 Since: **25.6**
@@ -130,7 +143,8 @@ Since: **25.6**
 | :--- | :---------- | :---------- |
 | GREEN | 25.6 | - |
 | RED | 25.6 | - |
-| MAGNETA | 25.6 | - |
+| MAGNETA | 25.6 | Use MAGENTA instead. |
+| MAGENTA | 26.5 | - |
 | ORANGE | 25.6 | - |
 | YELLOW | 25.6 | - |
 | BLUE | 25.6 | - |
