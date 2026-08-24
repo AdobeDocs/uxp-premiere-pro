@@ -19,7 +19,7 @@ Since: **25.6**
 | id | *string* | R | 25.6 | The unique identifier of the project. |
 | name | *string* | R | 25.6 | The project name. |
 | path | *string* | R | 25.6 | The absolute file path to the project file. |
-| project | [*Project*](project.md) | R | 25.6 | The project object. |
+| project | [*Project*](../classes/project.md) | R | 25.6 | The project object. |
 
 ## Events
 

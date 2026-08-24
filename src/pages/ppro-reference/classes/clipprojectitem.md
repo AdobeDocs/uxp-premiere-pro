@@ -323,7 +323,7 @@ Get the component chain of the Project item for the given media type.
 
 Since: **25.6**
 
-Returns: Promise\<[*AudioComponentChain*](audiocomponentchain.md) | [*VideoComponentChain*](videocomponentchain.md) | null*\>
+Returns: Promise\<[*AudioComponentChain*](audiocomponentchain.md) | [*VideoComponentChain*](videocomponentchain.md) | null\>
 
 #### Parameters
 
