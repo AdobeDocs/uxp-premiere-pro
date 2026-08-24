@@ -33,7 +33,7 @@ UXP provides three main modules for host environment detection:
 
 | Module                                                                         | Purpose                        | Key Properties                                                                        |
 | :----------------------------------------------------------------------------- | :----------------------------- | :------------------------------------------------------------------------------------ |
-| [`host`](../../../uxp-api/reference-js/modules/uxp/host-information/host.md) | Application and UI information | `name`, `version`, `uiLocale`                                                         |
+| [`host`](../../../uxp-api/reference-js/modules/uxp/host-information/host.md)   | Application and UI information | `name`, `version`, `uiLocale`, `applicationPath`, `getBackgroundColor()`              |
 | [`versions`](../../../uxp-api/reference-js/modules/uxp/versions/versions.md)   | UXP runtime and plugin version | `uxp`, `plugin`                                                                       |
 | [`os`](../../../uxp-api/reference-js/modules/os/os.md)                         | Operating system information   | `platform()`, `release()`, `arch()`, `cpus()`, `totalmem()`, `freemem()`, `homedir()` |
 
