@@ -18,5 +18,3 @@ Returns the version of UXP. For example, uxp-6.0.0
 Returns the version of the plugin. This matches the version as specified in your plugin's manifest.
 
 **Returns**: `string`  
-
-  

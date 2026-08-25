@@ -53,5 +53,3 @@ shell.openExternal("https://www.adobe.com/", "develop message for the user conse
 shell.openExternal("maps://?address=345+Park+Ave+San+Jose"); // for MacOS
 shell.openExternal("bingmaps:?q=345+Park+Ave+San+Jose, +95110"); // for Windows
 ```
-
-  
