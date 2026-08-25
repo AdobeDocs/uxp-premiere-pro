@@ -51,5 +51,3 @@ Gets the total amount of free system memory in bytes
 Gets the home directory path of the user
 
 **Returns**: `string` - the home directory path of the user  
-
-  
