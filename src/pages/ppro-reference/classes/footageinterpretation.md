@@ -16,14 +16,14 @@ Since: **25.6**
 
 | Name | Type | Access | Min Version | Description |
 | :--- | :--- | :----- | :---------- | :---------- |
-| ALPHACHANNEL_NONE | *number* | R | 25.6 | alpha channel none |
-| ALPHACHANNEL_STRAIGHT | *number* | R | 25.6 | alpha channel straight |
-| ALPHACHANNEL_PREMULTIPLIED | *number* | R | 25.6 | alpha channel premultiplied |
 | ALPHACHANNEL_IGNORE | *number* | R | 25.6 | alpha channel ignore |
+| ALPHACHANNEL_NONE | *number* | R | 25.6 | alpha channel none |
+| ALPHACHANNEL_PREMULTIPLIED | *number* | R | 25.6 | alpha channel premultiplied |
+| ALPHACHANNEL_STRAIGHT | *number* | R | 25.6 | alpha channel straight |
 | FIELD_TYPE_DEFAULT | *number* | R | 25.6 | default filed type invalid |
+| FIELD_TYPE_LOWERFIRST | *number* | R | 25.6 | field type lowerfirst |
 | FIELD_TYPE_PROGRESSIVE | *number* | R | 25.6 | field type progressive |
 | FIELD_TYPE_UPPERFIRST | *number* | R | 25.6 | field type upperfirst |
-| FIELD_TYPE_LOWERFIRST | *number* | R | 25.6 | field type lowerfirst |
 
 ## Instance Methods
 

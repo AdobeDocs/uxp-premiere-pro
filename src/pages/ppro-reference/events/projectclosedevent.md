@@ -16,9 +16,9 @@ Since: **25.6**
 
 | Name | Type | Access | Min Version | Description |
 | :--- | :--- | :----- | :---------- | :---------- |
+| id | *string* | R | 25.6 | The unique identifier of the project. |
 | name | *string* | R | 25.6 | The project name. |
 | path | *string* | R | 25.6 | The absolute file path to the project file. |
-| id | *string* | R | 25.6 | The unique identifier of the project. |
 
 ## Events
 

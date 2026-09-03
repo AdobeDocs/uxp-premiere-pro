@@ -79,6 +79,22 @@ Returns: [*TextSegments*](textsegments.md)
 
 <HorizontalLine />
 
+### isLanguagePackAvailable
+
+Returns true if the language pack for the given language code is available ex:isLanguagePackAvailable('en-US')
+
+Since: **25.6**
+
+Returns: *boolean*
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| language | *string* | - |
+
+<HorizontalLine />
+
 ### querySupportedLanguages
 
 Returns the list of language services available for transcription
@@ -86,5 +102,22 @@ Returns the list of language services available for transcription
 Since: **26.3**
 
 Returns: *Array\<\{displayString: string, languageCode: string, locale: string}\>*
+
+<HorizontalLine />
+
+### transcribeClipProjectItem
+
+Transcribes the clip audio associated with the given ClipProjectItem
+
+Since: **25.6**
+
+Returns: Promise\<*boolean*\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| clipProjectItem | [*ClipProjectItem*](clipprojectitem.md) | - |
+| options | *\{languageCode?: string}* | - |
 
 <HorizontalLine />

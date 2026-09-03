@@ -12,6 +12,21 @@ keywords:
 
 Since: **25.6**
 
+## Constructor
+
+Construct a PointFloat Object.
+
+Since: **25.6**
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| x | *number* | - |
+| y | *number* | - |
+
+<HorizontalLine />
+
 ## Properties
 
 | Name | Type | Access | Min Version | Description |

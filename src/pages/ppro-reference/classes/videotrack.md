@@ -16,8 +16,8 @@ Since: **25.6**
 
 | Name | Type | Access | Min Version | Description |
 | :--- | :--- | :----- | :---------- | :---------- |
-| name | *string* | R | 25.6 | Get the name of the track |
 | id | *number* | R | 25.6 | The ID of the track within the TrackGroup |
+| name | *string* | R | 25.6 | Get the name of the track |
 
 ## Instance Methods
 
@@ -27,7 +27,7 @@ Action to change the name of the track
 
 Since: **26.3**
 
-Returns: *object*
+Returns: [*Action*](action.md)
 
 #### Parameters
 

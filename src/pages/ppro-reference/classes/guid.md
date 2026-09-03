@@ -12,6 +12,14 @@ keywords:
 
 Since: **25.6**
 
+## Constructor
+
+Constructs an empty Guid object
+
+Since: **25.6**
+
+<HorizontalLine />
+
 ## Static Methods
 
 ### fromString
