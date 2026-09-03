@@ -21,8 +21,7 @@ This release of Premiere comes with a number of added features, bug fixes, and a
 A number of new APIs have been added in this release. More details on each can be seen in each class's documentation page. If you'd like to see more examples of using all of these new APIs in action, check out the `premiere-api` sample panel in the [UXP Premiere Pro Samples](https://github.com/AdobeDocs/uxp-premiere-pro-samples) repository.
 
 - A new [`C2PAService`](../ppro-reference/classes/c2paservice.md) class has been added to help with returning CAI-related information associated with a file. Additional constants [`Constants.C2PAManifestLocation`](../ppro-reference/constants/index.md#c2pamanifestlocation) have been added, associated with the manifest location return value from [`C2PAService.getManifest`](../ppro-reference/classes/c2paservice.md#getmanifest)
-- [`Media`](../ppro-reference/classes/media.md)
-  - [`getDuration`](../ppro-reference/classes/media.md#getduration) and [`getStart`](../ppro-reference/classes/media.md#getstart) _synchronous_ functions have been added. See more about this in the [deprecations](#deprecations) section below.
+- [`Media.getDuration`](../ppro-reference/classes/media.md#getduration) and [`Media.getStart`](../ppro-reference/classes/media.md#getstart) _synchronous_ functions have been added. See more about this in the [deprecations](#deprecations) section below.
 - A new [`MediaManager`](../ppro-reference/classes/mediamanager.md) class has been added. Currently this supports the ability to purge the media cache.
 - The [`Transcript`](../ppro-reference/classes/transcript.md) class continues to get new functionality:
   - [`isLanguagePackAvailable`](../ppro-reference/classes/transcript.md#islanguagepackavailable) can help check if a particular language pack is available for a given language code.
