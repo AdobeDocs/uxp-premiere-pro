@@ -100,7 +100,7 @@ It turns out we also had an incorrectly spelled constant for `MarkerColor` calle
 + const myFavoriteColor = ppro.Constants.MarkerColor.MAGENTA;
 ```
 
-### Miscellaneous Updates
+### Documentation Updates
 
 Outside of the above core changes, we've also updated our documentation and TypeScript declarations to address some inconsistencies. We'll continue reviewing these and working to make sure these are as accurate as possible.
 
