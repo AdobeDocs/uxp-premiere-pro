@@ -12,6 +12,109 @@ contributors:
 
 # Changelog
 
+## Premiere v26.5.0
+
+This release of Premiere comes with a number of added features, bug fixes, and a few deprecations.
+
+### New APIs
+
+A number of new APIs have been added in this release. More details on each can be seen in each class's documentation page. If you'd like to see more examples of using all of these new APIs in action, check out the `premiere-api` sample panel in the [UXP Premiere Pro Samples](https://github.com/AdobeDocs/uxp-premiere-pro-samples) repository.
+
+- A new [`C2PAService`](../ppro-reference/classes/c2paservice.md) class has been added to help with returning CAI-related information associated with a file. Additional constants [`Constants.C2PAManifestLocation`](../ppro-reference/constants/index.md#c2pamanifestlocation) have been added, associated with the manifest location return value from [`C2PAService.getManifest`](../ppro-reference/classes/c2paservice.md#getmanifest)
+- [`Media.getDuration`](../ppro-reference/classes/media.md#getduration) and [`Media.getStart`](../ppro-reference/classes/media.md#getstart) _synchronous_ functions have been added. See more about this in the [deprecations](#deprecations) section below.
+- A new [`MediaManager`](../ppro-reference/classes/mediamanager.md) class has been added. Currently this supports the ability to purge the media cache.
+- The [`Transcript`](../ppro-reference/classes/transcript.md) class continues to get new functionality:
+  - [`isLanguagePackAvailable`](../ppro-reference/classes/transcript.md#islanguagepackavailable) can help check if a particular language pack is available for a given language code.
+  - [`transcribeClipProjectItem`](../ppro-reference/classes/transcript.md#transcribeclipprojectitem) generates a transcription for a given `ClipProjectItem`, and settles when the transcription completes.
+- A new [`WorkAreaUtils`](../ppro-reference/classes/workareautils.md) class includes several functions for setting or clearing in/out points for the current work area.
+
+#### UXP Host Additions
+
+We've also added some new functionality to the [UXP `host` object](../uxp-api/reference-js/modules/uxp/host-information/host.md).
+
+- `applicationPath: string` is a readonly string property which contains the absolute path to the currently running Premiere application.
+    ```ts
+    const uxp = require("uxp");
+    console.log(uxp.host.applicationPath);
+    // e.g., "/Applications/Adobe Premiere Pro (Beta)/Adobe Premiere Pro (Beta).app" on macOS
+    //       "C:\\Program Files\\Adobe\\Adobe Premiere Pro (Beta)\\Adobe Premiere Pro (Beta).exe" on Windows
+    ```
+- `getBackgroundColor(): Promise<string>` provides information on the current background color of the Premiere application.
+    ```ts
+    const uxp = require("uxp");
+    const backgroundColor = JSON.parse(await uxp.host.getBackgroundColor());
+    backgroundColor.type; // "rgb"
+    backgroundColor.value.alpha; // 1
+    // RGB colors are a value between 0 and 1
+    backgroundColor.value.blue;
+    backgroundColor.value.green;
+    backgroundColor.value.red;
+    ```
+
+
+### Bug Fixes
+
+- `ClipProjectItem`'s [`createSetInPointAction`](../ppro-reference/classes/clipprojectitem.md#createsetinpointaction) and [`createSetOutPointAction`](../ppro-reference/classes/clipprojectitem.md#createsetoutpointaction) no longer error when called.
+- Calling [`ComponentParam.getValueAtTime`](../ppro-reference/classes/componentparam.md#getvalueattime) without any argument would result in the function returning a `Promise` which would never settle. Now the `Promise` will reject with an error when called this way.
+- Calling [`Markers.getMarkers`](../ppro-reference/classes/markers.md#getmarkers-1) with any `filters` argument applied would typically throw an error. This has been fixed and should allow for correctly filtering down to the desired set of Marker types.
+    ```ts
+    const sequence: Sequence = ...
+    const mySquenceMarkers: Markers = await Markers.getMarkers(sequence);
+    // Returns any Comment or WebLink markers on the above sequence.
+    // Other filter types include "Chapter" and "FLVCuePoint"
+    const myMarkers: Marker[] = mySequenceMarkers.getMarkers(["Comment", "WebLink"]);
+    ```
+- Calling [`Project.importAEComps`](../ppro-reference/classes/project.md#importaecomps) or [`Project.importAllAEComps`](../ppro-reference/classes/project.md#importallaecomps) without a target bin defaults to adding the imported compositions to the root bin of the Project, but this was sometimes inconsistent and would resolve `true` while not actually adding anything to the project. We've fixed this to correctly handle this default and add the imported compositions to the project.
+
+### Deprecations
+
+#### `Media.start` and `Media.duration` properties
+
+Instances of the `Media` class contain two _async_ properties which, in comparison to the rest of the available classes and properties, are a bit unusual and awkward to work with:
+
+```ts
+const media: Media = ...
+// These properties return Promises and must either be `await`ed or
+// require using `.then()` Promise chaining syntax to use correctly
+const start = await media.start;
+const duration = await media.duration;
+```
+
+We've opted to deprecate these properties in favor of newly-added `getStart()`/`getDuration()` _synchronous_ functions. This was chosen primarily for backwards compatibility instead of changing the properties insitu from asynchronous to synchronous:
+
+```ts
+const media: Media = ...
+// No `async` usage required!
+const start = media.getStart();
+const duration = media.getDuration();
+```
+
+The asynchronous `start` and `duration` properties will be removed in a future version of Premiere.
+
+#### `Constants.MarkerColor.MAGNETA`
+
+It turns out we also had an incorrectly spelled constant for `MarkerColor` called `MAGNETA`. While the value of this constant is correct for API usage, the slight mispelling of `MAGNETA` instead of `MAGENTA` just didn't sit right. We've gone ahead and deprecated the previous `MAGNETA` color in favor of a properly spelled `MAGENTA`, and will plan on removing the mispelled constant in a future version of Premiere.
+
+```diff
+- const myFavoriteColor = ppro.Constants.MarkerColor.MAGNETA;
++ const myFavoriteColor = ppro.Constants.MarkerColor.MAGENTA;
+```
+
+### Documentation Updates
+
+Outside of the above core changes, we've also updated our documentation and TypeScript declarations to address some inconsistencies. We'll continue reviewing these and working to make sure these are as accurate as possible.
+
+- [`ClipProjectItem.getComponentChain`](../ppro-reference/classes/clipprojectitem.md#getcomponentchain) now correctly documents a `Promise<AudioComponentChain | VideoComponentChain | null>` return type versus the originally mistyped `Promise<string>`
+- The return type documented for [`AudioTrack.createSetNameAction`](../ppro-reference/classes/audiotrack.md#createsetnameaction), [`CaptionTrack.createSetNameAction`](../ppro-reference/classes/captiontrack.md#createsetnameaction), and [`VideoTrack.createSetNameAction`](../ppro-reference/classes/videotrack.md#createsetnameaction) have been corrected to an `Action` type instead of `object`.
+- [`Project.saveAs`](../ppro-reference/classes/project.md#saveas) documentation is more specific about its behavior: calling this will result in creating a copy of of the project, and the `project` instance itself will refer to the _copy_, not the original project. This is in line with the same behavior you would see when clicking "File > Save As" in the application menu.
+    ```ts
+    const project = await Project.open("path/to/MyProject.prproj")
+    await project.saveAs("path/to/MyCopiedProject.prproj");
+    
+    // `project` now refers to "MyCopiedProject" instead of "MyProject"
+    ```
+- Several classes which can be directly constructed (e.g., via `new`) now have a "Constructor" section on their respective documentation pages. These classes include: `AAFExportOptions`, `AddTransitionOptions`, `CloseProjectOptions`, `Color`, `FrameRate`, `Guid`, `OpenProjectOptions`, `PointF`, `RectF`, and `TickTime`. Additional details on available parameters can also be seen with their constructor section. We'll continue improving the documentation for descriptions and usage soon!
+
 ## Premiere Pro v26.3.0
 
 This release of Premiere comes with a few breaking changes we want to call out, as well as a swath of new APIs worth looking through.
@@ -55,7 +158,7 @@ project.lockedAccess(() => {
   // Create the action here...
   const action = audioTrack.createSetNameAction("MyAudioTrack");
 
-  project.executeTransasction((compoundAction: CompoundAction) => {
+  project.executeTransaction((compoundAction: CompoundAction) => {
     // ...and use it here
     compoundAction.addAction(action);
   }, "Rename AudioTrack");
