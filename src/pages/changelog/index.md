@@ -30,7 +30,7 @@ A number of new APIs have been added in this release. More details on each can b
 
 #### UXP Host Additions
 
-We've also added some new functionality to the [UXP `host` object](../uxp-api/reference-js/Modules/uxp/host-information/host.md).
+We've also added some new functionality to the [UXP `host` object](../uxp-api/reference-js/modules/uxp/host-information/host.md).
 
 - `applicationPath: string` is a readonly string property which contains the absolute path to the currently running Premiere application.
     ```ts
