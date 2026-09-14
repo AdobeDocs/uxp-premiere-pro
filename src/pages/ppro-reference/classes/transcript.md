@@ -118,6 +118,6 @@ Returns: Promise\<*boolean*\>
 | Name | Type | Description |
 | :----| :--- | :---------- |
 | clipProjectItem | [*ClipProjectItem*](clipprojectitem.md) | - |
-| options | *\{languageCode?: string}* | - |
+| options? | *\{language?: string}* | optional transcription options. `language` is a language code (ISO 639-1 language + ISO 3166-1 region, e.g. "en-US") and must be one of the languageCode values returned by `querySupportedLanguages()`; an unsupported code throws. If language is omitted, the default language from the user's transcription preferences is used. Note: if the "auto-detect language" transcription preference is enabled, the spoken language is detected automatically and overrides the language provided here. |
 
 <HorizontalLine />
