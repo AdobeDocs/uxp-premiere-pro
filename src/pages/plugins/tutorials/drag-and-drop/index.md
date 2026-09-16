@@ -164,7 +164,7 @@ The payload is a JSON object serialized to a string.
 
 - **Video:** `video/mp4`, `video/quicktime`, `video/x-quicktime`, `video/x-ms-wmv`, `video/x-ms-asf`, `video/mpeg`
 - **Audio:** `audio/wav`, `audio/x-wav`, `audio/vnd.wav`, `audio/wave`, `audio/mpeg`, `audio/x-mpeg`, `audio/mp3`, `audio/mpeg3`, `audio/x-mpeg-3`, `audio/m4a`, `audio/aac`, `audio/aacp`, `audio/aif`, `audio/x-aiff`
-- **Image:** `image/jpeg`, `image/jpg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`, `image/webp`, `image/svg+xml`
+- **Image:** `image/jpeg`, `image/jpg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`, `image/webp`
 
 Items with any other `content_type` are silently skipped; the rest of the drag still imports.
 
