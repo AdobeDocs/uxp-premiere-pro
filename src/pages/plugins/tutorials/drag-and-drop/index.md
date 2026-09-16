@@ -78,7 +78,7 @@ const MIME_BY_EXT = {
   '.mp4': 'video/mp4', '.mov': 'video/quicktime', '.wmv': 'video/x-ms-wmv', '.mpg': 'video/mpeg',
   '.wav': 'audio/wav',  '.mp3': 'audio/mpeg',      '.aac': 'audio/aac',      '.m4a': 'audio/m4a', '.aif': 'audio/aif',
   '.png': 'image/png',  '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif',
-  '.bmp': 'image/bmp',  '.tiff': 'image/tiff', '.webp': 'image/webp', '.svg': 'image/svg+xml',
+  '.bmp': 'image/bmp',  '.tiff': 'image/tiff', '.webp': 'image/webp',
 };
 
 function extname(name) { const i = name.lastIndexOf('.'); return i < 0 ? '' : name.slice(i).toLowerCase(); }
