@@ -71,53 +71,6 @@ element.addEventListener('dragstart', (e) => {
 });
 ```
 
-### 3. Minimal, complete example
-
-```js
-const fs = require('uxp').storage.localFileSystem;
-
-// Map file extensions to content types Premiere Pro accepts for import.
-const MIME_BY_EXT = {
-  '.mp4': 'video/mp4', '.mov': 'video/quicktime', '.wmv': 'video/x-ms-wmv', '.mpg': 'video/mpeg',
-  '.wav': 'audio/wav',  '.mp3': 'audio/mpeg',      '.aac': 'audio/aac',      '.m4a': 'audio/m4a', '.aif': 'audio/aif',
-  '.png': 'image/png',  '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif',
-  '.bmp': 'image/bmp',  '.tiff': 'image/tiff', '.webp': 'image/webp',
-};
-
-function extname(name) { const i = name.lastIndexOf('.'); return i < 0 ? '' : name.slice(i).toLowerCase(); }
-function mimeFor(name) { return MIME_BY_EXT[extname(name)]; }
-
-// Convert a local filesystem path to a file:// URI.
-function pathToFileUri(path) {
-  let p = path;
-  if (/^[A-Za-z]:\\/.test(path)) p = '/' + path.replace(/\\/g, '/'); // Windows: C:\… -> /C:/…
-  return 'file://' + encodeURI(p);                                   // percent-encodes spaces & unicode
-}
-
-function toDragItem(file) {
-  return {
-    name: file.name,
-    content_type: mimeFor(file.name),
-    uri: pathToFileUri(file.nativePath),
-  };
-}
-
-function buildPayload(files) {
-  return JSON.stringify({
-    version: '1.0.0',
-    items: files.map(toDragItem),
-  });
-}
-
-// Pick local files with the UXP file picker (requires localFileSystem: "fullAccess").
-async function pickFiles() {
-  const picked = await fs.getFileForOpening({ allowMultiple: true });
-  return (Array.isArray(picked) ? picked : [picked]).filter(Boolean);
-}
-```
-
-Wire `buildPayload(...)` into the `dragstart` handler from step 2.
-
 ## Payload reference
 
 The payload is a JSON object serialized to a string.
