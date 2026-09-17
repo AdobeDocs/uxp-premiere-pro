@@ -1,5 +1,12 @@
 ---
 title: Drag and Drop Media into Premiere Pro
+description: Drag and Drop media into Premiere Pro. 
+keywords:
+  - drag and drop
+  - drag and drop paylod
+  - multiple items
+contributors:
+  - https://github.com/Mberikerajan
 ---
 
 # Drag and Drop Media into Premiere Pro
