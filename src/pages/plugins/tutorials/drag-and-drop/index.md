@@ -1,10 +1,11 @@
 ---
 title: Drag and Drop Media into Premiere Pro
-description: Drag and Drop media into Premiere Pro. 
+description: Drag and Drop media into Premiere Pro project panel or timeline. 
 keywords:
   - drag and drop
-  - drag and drop paylod
+  - payload
   - multiple items
+  - local files drop
 contributors:
   - https://github.com/Mberikerajan
 ---
