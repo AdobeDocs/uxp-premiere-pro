@@ -1,17 +1,16 @@
 ---
 title: Drag and Drop Media into Premiere Pro
-description: Let users drag local media from your UXP panel into the Premiere Pro Project panel or Timeline.
 ---
 
 # Drag and Drop Media into Premiere Pro
 
-Let users drag media from your UXP panel and drop it directly into the Premiere Pro **Project panel** or **Timeline**. Premiere Pro imports the files and adds them to the project. You can drag a single item or multiple items at once.
+Let users drag media from UXP panel and drop it directly into the Premiere Pro **Project panel** or **Timeline**. Premiere Pro imports the files and adds them to the project. You can drag a single item or multiple items at once.
 
 **Scope:** third-party panels can drag **local files only**.
 
 ## What you can do
 
-- Drag one or more local media files from your panel into Premiere Pro.
+- Drag one or more local media files from uxp panel into Premiere Pro.
 - Drop onto the **Project panel** (Icon, List, or Freeform view, including onto a bin) or onto the **Timeline**.
 - Support common video, audio, and image formats (see [Accepted content types](#accepted-content-types)).
 
@@ -25,10 +24,10 @@ Let users drag media from your UXP panel and drop it directly into the Premiere 
 
 ## How it works, at a glance
 
-![Drag local media from your UXP panel; on dragstart a JSON payload is attached; dropping onto Premiere Pro's Project panel or Timeline imports the files.](img/drag-and-drop-flow.svg)
+![Drag local media from your UXP panel; on dragstart a JSON payload is attached; dropping onto Premiere Pro's Project panel or Timeline imports the files.]
 
-1. You mark an element in your panel as draggable.
-2. On `dragstart`, you attach a small JSON payload describing the items — as plain text on the drag's `dataTransfer`.
+1. Mark an element in your panel as draggable.
+2. On `dragstart`, attach a small JSON payload describing the items — as plain text on the drag's `dataTransfer`.
 3. When the user drops onto a supported target, Premiere Pro reads the payload and imports the referenced local files.
 
 There is no custom UXP drag API and no manifest entry for drag-and-drop — it is standard HTML5 drag-and-drop plus the JSON payload.
@@ -50,19 +49,15 @@ Set `draggable="true"` on the element the user grabs, and give its children `poi
 </li>
 ```
 
-```css
-.file-item { -webkit-user-drag: element; user-select: none; -webkit-user-select: none; }
-```
 
 ### 2. Build the payload and set it on `dragstart`
 
-Attach the JSON as text. Set it on both `text/plain` and `text` (some hosts read `text`), and set the drag effects:
+Attach the JSON as text. Set it on both `text/plain`, and set the drag effects:
 
 ```js
 element.addEventListener('dragstart', (e) => {
   const payload = buildPayload(getSelectedFiles());   // one or many items
   e.dataTransfer.setData('text/plain', payload);
-  e.dataTransfer.setData('text', payload);
   e.dataTransfer.effectAllowed = 'copyMove';
   e.dataTransfer.dropEffect = 'copy';
 });
