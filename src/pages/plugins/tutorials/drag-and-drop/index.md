@@ -19,7 +19,7 @@ Let users drag media from your UXP panel and drop it directly into the Premiere 
 
 | Requirement | Value |
 | :--- | :--- |
-| Premiere Pro | 25.4.0 or later |
+| Premiere Pro | 27.0.0 or later |
 | UXP manifest | `manifestVersion` 6, with a panel entrypoint |
 | Permission | `"requiredPermissions": { "localFileSystem": "fullAccess" }` — needed to read the OS path of picked files |
 
