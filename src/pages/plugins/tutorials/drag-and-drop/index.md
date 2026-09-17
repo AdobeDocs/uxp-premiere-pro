@@ -24,7 +24,7 @@ Let users drag media from UXP panel and drop it directly into the Premiere Pro *
 
 ## How it works, at a glance
 
-![Drag local media from your UXP panel; on dragstart a JSON payload is attached; dropping onto Premiere Pro's Project panel or Timeline imports the files.]
+Drag local media from your UXP panel; on dragstart a JSON payload is attached; dropping onto Premiere Pro's Project panel or Timeline imports the files.
 
 1. Mark an element in your panel as draggable.
 2. On `dragstart`, attach a small JSON payload describing the items — as plain text on the drag's `dataTransfer`.
