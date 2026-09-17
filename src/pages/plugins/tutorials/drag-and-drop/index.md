@@ -180,5 +180,5 @@ To drag several items, put multiple objects in `items`. All items must be local 
 - `content_type` must match one of the accepted values, or the item is skipped.
 - **Nothing happens on drop?**
   - Confirm the dragged element has `draggable="true"` and its children use `pointer-events: none`.
-  - Confirm the payload is set on both `text/plain` and `text`.
+  - Confirm the payload is set on both `text/plain`.
   - Confirm each `uri` is a valid, percent-encoded `file://` URI pointing at an existing file.
