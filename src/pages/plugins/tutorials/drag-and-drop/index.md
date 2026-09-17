@@ -102,7 +102,6 @@ function toDragItem(file) {
 function buildPayload(files) {
   return JSON.stringify({
     version: '1.0.0',
-    source: 'com.example.panel',   // your plugin id
     items: files.map(toDragItem),
   });
 }
@@ -125,7 +124,6 @@ The payload is a JSON object serialized to a string.
 | Field | Type | Required | Notes |
 | :--- | :--- | :--- | :--- |
 | `version` | string | yes | Must be exactly `"1.0.0"`. Any other value rejects the whole drag. |
-| `source` | string | yes | Non-empty identifier for your panel (use your plugin id). |
 | `items` | array | yes | One or more item objects. |
 
 ### Item object
@@ -142,7 +140,6 @@ The payload is a JSON object serialized to a string.
 ```json
 {
   "version": "1.0.0",
-  "source": "com.example.panel",
   "items": [
     {
       "name": "clip.mov",
@@ -175,7 +172,6 @@ To drag several items, put multiple objects in `items`. All items must be local 
 ```json
 {
   "version": "1.0.0",
-  "source": "com.example.panel",
   "items": [
     { "name": "a.mov", "content_type": "video/quicktime", "uri": "file:///Users/.../a.mov" },
     { "name": "b.wav", "content_type": "audio/wav",       "uri": "file:///Users/.../b.wav" }
