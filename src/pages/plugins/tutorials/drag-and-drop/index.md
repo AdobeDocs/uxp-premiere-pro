@@ -1,122 +1,134 @@
 ---
 title: Drag and Drop Media into Premiere Pro
-description: Drag and Drop media into Premiere Pro project panel or timeline. 
+description: Drag and drop media into the Premiere Pro Project panel or Timeline.
 keywords:
   - drag and drop
   - payload
   - multiple items
-  - local files drop
+  - local files
 contributors:
   - https://github.com/Mberikerajan
 ---
 
 # Drag and Drop Media into Premiere Pro
 
-Let users drag media from UXP panel and drop it directly into the Premiere Pro **Project panel** or **Timeline**. Premiere Pro imports the files and adds them to the project. You can drag a single item or multiple items at once.
-
-**Scope:** third-party panels can drag **local files only**.
+UXP plugins can use web-based drag-and-drop capabilities to add local media files directly to the Premiere Pro **Project panel** or **Timeline**.
 
 ## What you can do
 
-- Drag one or more local media files from uxp panel into Premiere Pro.
-- Drop onto the **Project panel** (Icon, List, or Freeform view, including onto a bin) or onto the **Timeline**.
-- Support common video, audio, and image formats (see [Accepted content types](#accepted-content-types)).
+- Drag one or more local media files from a UXP panel into Premiere Pro. Third-party panels support local files only.
+- Drop the files onto the **Project panel**—in Icon, List, or Freeform view, including onto a bin—or onto an open sequence in the **Timeline**.
+- Use common video, audio, and image formats (see [Accepted content types](#accepted-content-types)).
 
 ## Requirements
 
 | Requirement | Value |
 | :--- | :--- |
 | Premiere Pro | 27.0.0 or later |
-| UXP manifest | `manifestVersion` 6, with a panel entrypoint |
-| Permission | `"requiredPermissions": { "localFileSystem": "fullAccess" }` — needed to read the OS path of picked files |
+| UXP manifest | `manifestVersion` 5 or later, with a panel entrypoint |
+| Permission | `"requiredPermissions": { "localFileSystem": "request" }` to allow users to select local files |
 
-## How it works, at a glance
-
-Drag local media from your UXP panel; on dragstart a JSON payload is attached; dropping onto Premiere Pro's Project panel or Timeline imports the files.
+## How it works
 
 1. Mark an element in your panel as draggable.
-2. On `dragstart`, attach a small JSON payload describing the items — as plain text on the drag's `dataTransfer`.
-3. When the user drops onto a supported target, Premiere Pro reads the payload and imports the referenced local files.
+2. On `dragstart`, serialize information about the selected files as a JSON payload.
+3. Add the payload to the drag's `dataTransfer` as `text/plain`.
+4. When the user drops the files onto a supported target, Premiere Pro reads the payload and imports the referenced local files.
 
-There is no custom UXP drag API and no manifest entry for drag-and-drop — it is standard HTML5 drag-and-drop plus the JSON payload.
+There is no custom UXP drag API or drag-and-drop manifest entry. The implementation uses standard HTML drag-and-drop with a JSON payload recognized by Premiere Pro.
 
-## Supported drop targets
+## Add drag and drop to your panel
 
-- **Project panel** — all three views (Icon, List, Freeform), including dropping onto a bin.
-- **Timeline** — drop onto an open sequence.
+The following example lets the user select one or more local files and then drag them from the panel into Premiere Pro.
 
-## Add drag-and-drop to your panel
-
-### 1. Make the element draggable
-
-Set `draggable="true"` on the element the user grabs, and give its children `pointer-events: none` so the drag events fire on the element itself:
+Add elements for selecting and dragging the files:
 
 ```html
-<li class="file-item" draggable="true">
-  <span style="pointer-events:none;">clip.mov</span>
-</li>
+<button id="select-files">Select files</button>
+<div id="file-item" draggable="false">No files selected</div>
 ```
 
+Declare the filesystem permission in `manifest.json`:
 
-### 2. Build the payload and set it on `dragstart`
-
-Attach the JSON as text. Set it on both `text/plain`, and set the drag effects:
-
-```js
-element.addEventListener('dragstart', (e) => {
-  const payload = buildPayload(getSelectedFiles());   // one or many items
-  e.dataTransfer.setData('text/plain', payload);
-  e.dataTransfer.effectAllowed = 'copyMove';
-  e.dataTransfer.dropEffect = 'copy';
-});
+```json
+{
+  "manifestVersion": 5,
+  "requiredPermissions": {
+    "localFileSystem": "request"
+  }
+}
 ```
 
-### 3. Minimal, complete example
+Add the file-selection and drag-start logic:
 
 ```js
 const fs = require('uxp').storage.localFileSystem;
 
-// Map file extensions to content types Premiere Pro accepts for import.
+const selectButton = document.querySelector('#select-files');
+const fileItem = document.querySelector('#file-item');
+
 const MIME_BY_EXT = {
-  '.mp4': 'video/mp4', '.mov': 'video/quicktime', '.wmv': 'video/x-ms-wmv', '.mpg': 'video/mpeg',
-  '.wav': 'audio/wav',  '.mp3': 'audio/mpeg',      '.aac': 'audio/aac',      '.m4a': 'audio/m4a', '.aif': 'audio/aif',
-  '.png': 'image/png',  '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif',
-  '.bmp': 'image/bmp',  '.tiff': 'image/tiff', '.webp': 'image/webp',
+  '.mp4': 'video/mp4',
+   // Add mappings for the other content types your plugin supports.
 };
 
-function extname(name) { const i = name.lastIndexOf('.'); return i < 0 ? '' : name.slice(i).toLowerCase(); }
-function mimeFor(name) { return MIME_BY_EXT[extname(name)]; }
+let selectedFiles = [];
 
-// Convert a local filesystem path to a file:// URI.
-function pathToFileUri(path) {
-  let p = path;
-  if (/^[A-Za-z]:\\/.test(path)) p = '/' + path.replace(/\\/g, '/'); // Windows: C:\… -> /C:/…
-  return 'file://' + encodeURI(p);                                   // percent-encodes spaces & unicode
-}
-
-function toDragItem(file) {
-  return {
-    name: file.name,
-    content_type: mimeFor(file.name),
-    uri: pathToFileUri(file.nativePath),
-  };
-}
-
-function buildPayload(files) {
-  return JSON.stringify({
-    version: '1.0.0',
-    items: files.map(toDragItem),
-  });
-}
-
-// Pick local files with the UXP file picker (requires localFileSystem: "fullAccess").
-async function pickFiles() {
+selectButton.addEventListener('click', async () => {
   const picked = await fs.getFileForOpening({ allowMultiple: true });
-  return (Array.isArray(picked) ? picked : [picked]).filter(Boolean);
-}
+
+  selectedFiles = (Array.isArray(picked) ? picked : [picked]).filter(Boolean);
+
+  if (selectedFiles.length === 0) {
+    fileItem.textContent = 'No files selected';
+    fileItem.draggable = false;
+    return;
+  }
+
+  fileItem.textContent =
+    selectedFiles.length === 1
+      ? selectedFiles[0].name
+      : `${selectedFiles.length} files selected`;
+
+  fileItem.draggable = true;
+});
+
+fileItem.addEventListener('dragstart', (event) => {
+  const items = selectedFiles.map((file) => {
+    const dotIndex = file.name.lastIndexOf('.');
+    const extension =
+      dotIndex >= 0 ? file.name.slice(dotIndex).toLowerCase() : '';
+    const contentType = MIME_BY_EXT[extension];
+
+    if (!contentType) {
+      throw new Error(`Unsupported file type: ${file.name}`);
+    }
+
+    let path = file.nativePath;
+
+    if (/^[A-Za-z]:\\/.test(path)) {
+      path = `/${path.replace(/\\/g, '/')}`;
+    }
+
+    return {
+      name: file.name,
+      content_type: contentType,
+      uri: `file://${encodeURI(path)}`,
+    };
+  });
+
+  const payload = JSON.stringify({
+    version: '1.0.0',
+    items,
+  });
+
+  event.dataTransfer.setData('text/plain', payload);
+  event.dataTransfer.effectAllowed = 'copyMove';
+  event.dataTransfer.dropEffect = 'copy';
+});
 ```
 
-Wire `buildPayload(...)` into the `dragstart` handler from step 2.
+Add mappings to `MIME_BY_EXT` for any additional content types your plugin supports.
 
 ## Payload reference
 
@@ -126,17 +138,17 @@ The payload is a JSON object serialized to a string.
 
 | Field | Type | Required | Notes |
 | :--- | :--- | :--- | :--- |
-| `version` | string | yes | Must be exactly `"1.0.0"`. Any other value rejects the whole drag. |
-| `items` | array | yes | One or more item objects. |
+| `version` | string | Yes | Must be exactly `"1.0.0"`. Any other value rejects the entire drag. |
+| `items` | array | Yes | Contains one or more item objects. |
 
 ### Item object
 
 | Field | Type | Required | Notes |
 | :--- | :--- | :--- | :--- |
-| `name` | string | yes | File name; used as the imported clip's name. |
-| `display_name` | string | no | Overrides the name shown in Premiere Pro for the imported item. |
-| `content_type` | string | yes | MIME type — must be one of the accepted values, otherwise the item is skipped. |
-| `uri` | string | yes | `file://` URI to a local file (see [URI rules](#uri-rules)). |
+| `name` | string | Yes | File name used as the imported clip's name. |
+| `display_name` | string | No | Overrides the name displayed for the imported item in Premiere Pro. |
+| `content_type` | string | Yes | MIME type. The item is skipped if the value is not supported. |
+| `uri` | string | Yes | `file://` URI for a local file. See [URI rules](#uri-rules). |
 
 ### Example payload
 
@@ -148,7 +160,7 @@ The payload is a JSON object serialized to a string.
       "name": "clip.mov",
       "display_name": "My Clip",
       "content_type": "video/quicktime",
-      "uri": "file:///Users/.../clip.mov"
+      "uri": "file:///Users/example/Videos/clip.mov"
     }
   ]
 }
@@ -156,9 +168,9 @@ The payload is a JSON object serialized to a string.
 
 ## URI rules
 
-- Third-party panels may reference **local files only** — always the `file://` scheme.
-- Percent-encode the path (`encodeURI`) so spaces and unicode characters produce a valid URI.
-- Windows: convert `C:\path\clip.mov` to `file:///C:/path/clip.mov`.
+- Third-party panels may reference local files only. Always use the `file://` scheme.
+- Percent-encode the path with `encodeURI()` so that spaces and Unicode characters produce a valid URI.
+- On Windows, convert a path such as `C:\path\clip.mov` to `file:///C:/path/clip.mov`.
 
 ## Accepted content types
 
@@ -166,27 +178,43 @@ The payload is a JSON object serialized to a string.
 - **Audio:** `audio/wav`, `audio/x-wav`, `audio/vnd.wav`, `audio/wave`, `audio/mpeg`, `audio/x-mpeg`, `audio/mp3`, `audio/mpeg3`, `audio/x-mpeg-3`, `audio/m4a`, `audio/aac`, `audio/aacp`, `audio/aif`, `audio/x-aiff`
 - **Image:** `image/jpeg`, `image/jpg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`, `image/webp`
 
-Items with any other `content_type` are silently skipped; the rest of the drag still imports.
+Premiere Pro silently skips items whose `content_type` is not supported. Other valid items in the same payload are still imported.
 
 ## Dragging multiple items
 
-To drag several items, put multiple objects in `items`. All items must be local files. A common pattern: let the user select items in your panel, and on `dragstart` include every selected item (or just the grabbed one if it isn't part of the selection).
+To drag multiple files, add an item object for each file to the `items` array. All items must reference local files.
 
 ```json
 {
   "version": "1.0.0",
   "items": [
-    { "name": "a.mov", "content_type": "video/quicktime", "uri": "file:///Users/.../a.mov" },
-    { "name": "b.wav", "content_type": "audio/wav",       "uri": "file:///Users/.../b.wav" }
+    {
+      "name": "a.mov",
+      "content_type": "video/quicktime",
+      "uri": "file:///Users/example/Videos/a.mov"
+    },
+    {
+      "name": "b.wav",
+      "content_type": "audio/wav",
+      "uri": "file:///Users/example/Audio/b.wav"
+    }
   ]
 }
 ```
 
-## Limitations & troubleshooting
+A common implementation is to include all selected files when the dragged file is part of the current selection. Otherwise, include only the file being dragged.
 
-- **Local files only.**
-- `content_type` must match one of the accepted values, or the item is skipped.
-- **Nothing happens on drop?**
-  - Confirm the dragged element has `draggable="true"` and its children use `pointer-events: none`.
-  - Confirm the payload is set on both `text/plain`.
-  - Confirm each `uri` is a valid, percent-encoded `file://` URI pointing at an existing file.
+## Limitations and troubleshooting
+
+- Third-party panels can drag local files only.
+- An item is skipped if its `content_type` is not supported.
+- If nothing happens when you drop the files:
+  - Confirm that the dragged element has `draggable="true"`.
+  - Confirm that the payload is set as `text/plain`.
+  - Confirm that the payload uses version `"1.0.0"`.
+  - Confirm that each item uses a supported `content_type`.
+  - Confirm that each `uri` is a valid, percent-encoded `file://` URI for an existing file.
+
+## References
+
+- [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
