@@ -16,7 +16,7 @@ Since: **25.6**
 
 ### createEmptySelection
 
-Create empty selection
+Create an empty TrackItemSelection to add track items to through a callback function. The selection object is valid for the lifetime and scope of the callback; it's not recommended to extract or use the selection object from outside the callback, nor use asynchronous code within the callback, to avoid any lifetime issues with the selection.
 
 Since: **25.6**
 
