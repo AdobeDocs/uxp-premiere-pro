@@ -170,6 +170,10 @@ module.exports = {
                 title: "Inter-plugin communication",
                 path: "/plugins/tutorials/inter-plugin-comm/",
               },
+              {
+                title: "Drag and Drop",
+                path: "/plugins/tutorials/drag-and-drop/",
+              },
             ],
           },
           {

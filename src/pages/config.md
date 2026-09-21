@@ -44,6 +44,7 @@ description: Overview of Config
         - [Add Multiple Panels](plugins/tutorials/add-panels/index.md)
         - [Add Modal Dialogs](plugins/tutorials/add-modal-dialogs/index.md)
         - [Inter-plugin communication](plugins/tutorials/inter-plugin-comm/index.md)
+        - [Drag and Drop Media](plugins/tutorials/drag-and-drop/index.md)
     - [Share & Distribute](plugins/distribution/overview/index.md)
         - [Overview](plugins/distribution/overview/index.md)
         - [Package a plugin](plugins/distribution/package/index.md)
