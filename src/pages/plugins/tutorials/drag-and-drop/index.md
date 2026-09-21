@@ -69,7 +69,7 @@ const fileItem = document.querySelector('#file-item');
 
 const MIME_BY_EXT = {
   '.mp4': 'video/mp4',
-   // Add mappings for the other content types your plugin supports.
+  // Add mappings for the other content types your plugin supports.
 };
 
 let selectedFiles = [];
@@ -77,11 +77,13 @@ let selectedFiles = [];
 selectButton.addEventListener('click', async () => {
   const picked = await fs.getFileForOpening({ allowMultiple: true });
 
-  selectedFiles = (Array.isArray(picked) ? picked : [picked]).filter(Boolean);
+  selectedFiles = (
+    Array.isArray(picked) ? picked : picked ? [picked] : []
+  );
 
   if (selectedFiles.length === 0) {
     fileItem.textContent = 'No files selected';
-    fileItem.draggable = false;
+    fileItem.setAttribute('draggable', 'false');
     return;
   }
 
@@ -90,7 +92,7 @@ selectButton.addEventListener('click', async () => {
       ? selectedFiles[0].name
       : `${selectedFiles.length} files selected`;
 
-  fileItem.draggable = true;
+  fileItem.setAttribute('draggable', 'true');
 });
 
 fileItem.addEventListener('dragstart', (event) => {
