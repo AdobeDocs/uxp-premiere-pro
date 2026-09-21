@@ -99,7 +99,7 @@ fileItem.addEventListener('dragstart', (event) => {
   const items = selectedFiles.map((file) => {
     const dotIndex = file.name.lastIndexOf('.');
     const extension =
-      dotIndex >= 0 ? file.name.slice(dotIndex).toLowerCase() : '';
+      dotIndex >= 0 ? path.extname(file.name).slice(1).toLowerCase() : '';
     const contentType = MIME_BY_EXT[extension];
 
     if (!contentType) {
@@ -179,8 +179,6 @@ The payload is a JSON object serialized to a string.
 - **Video:** `video/mp4`, `video/quicktime`, `video/x-quicktime`, `video/x-ms-wmv`, `video/x-ms-asf`, `video/mpeg`
 - **Audio:** `audio/wav`, `audio/x-wav`, `audio/vnd.wav`, `audio/wave`, `audio/mpeg`, `audio/x-mpeg`, `audio/mp3`, `audio/mpeg3`, `audio/x-mpeg-3`, `audio/m4a`, `audio/aac`, `audio/aacp`, `audio/aif`, `audio/x-aiff`
 - **Image:** `image/jpeg`, `image/jpg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`, `image/webp`
-
-Premiere Pro silently skips items whose `content_type` is not supported. Other valid items in the same payload are still imported.
 
 ## Dragging multiple items
 
