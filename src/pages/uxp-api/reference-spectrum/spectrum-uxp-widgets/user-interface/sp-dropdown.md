@@ -13,7 +13,7 @@ Renders a dropdown with menu items. The dropdown must contain a [sp-menu](sp-men
 
 **See**:
 - [https://spectrum.adobe.com/page/picker/](https://spectrum.adobe.com/page/picker/)
-- [https://opensource.adobe.com/spectrum-web-components/components/dropdown](https://opensource.adobe.com/spectrum-web-components/components/dropdown)
+- [https://opensource.adobe.com/spectrum-web-components/components/dropdown](https://opensource.adobe.com/spectrum-web-components/components/picker)
 
 **Example**
 

@@ -45,7 +45,7 @@ Gets the root margin applied to the intersection calculation.
 ## thresholds : `Array<number>`
 Gets the list of thresholds used for triggering the observer's callback.
 
-**See**: [IntersectionObserver - threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/threshold)  
+**See**: [IntersectionObserver - threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds)  
 **Since**: v8.1  
 
 
