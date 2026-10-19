@@ -17,4 +17,4 @@ Since: **25.6**
 | Name | Type | Access | Min Version | Description |
 | :--- | :--- | :----- | :---------- | :---------- |
 | position | [*TickTime*](ticktime.md) | W | 25.6 | Get/Set position of a keyframe |
-| value | *\{value: PointF}* | W | 25.6 |  |
+| value | *\{value: [x: number, y: number]}* | W | 25.6 |  |

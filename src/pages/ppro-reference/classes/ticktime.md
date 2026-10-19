@@ -79,6 +79,42 @@ Returns: [*TickTime*](ticktime.md)
 
 <HorizontalLine />
 
+### timecodeToTime
+
+Convert a timecode string to a TickTime using the current display format
+
+Since: **27.0**
+
+Returns: [*TickTime*](ticktime.md)
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| timecode | *string* | - |
+| frameRate | [*FrameRate*](framerate.md) | - |
+| timeDisplay | [*TimeDisplay*](timedisplay.md) | - |
+
+<HorizontalLine />
+
+### timeToTimecode
+
+Convert a TickTime to a string using the current display format
+
+Since: **27.0**
+
+Returns: *string*
+
+#### Parameters
+
+| Name | Type | Description |
+| :----| :--- | :---------- |
+| tickTime | [*TickTime*](ticktime.md) | - |
+| frameRate | [*FrameRate*](framerate.md) | - |
+| timeDisplay | [*TimeDisplay*](timedisplay.md) | - |
+
+<HorizontalLine />
+
 ## Instance Methods
 
 ### add

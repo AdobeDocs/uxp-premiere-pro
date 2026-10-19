@@ -12,6 +12,14 @@ keywords:
 
 Since: **25.6**
 
+## Constructor
+
+Constructs a TimeDisplay object
+
+Since: **27.0**
+
+<HorizontalLine />
+
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
