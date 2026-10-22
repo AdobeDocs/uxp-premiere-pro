@@ -12,6 +12,107 @@ contributors:
 
 # Changelog
 
+## Premiere v27.0.0
+
+This major version release of Premiere comes with added features, bug fixes, and general documentation updates.
+
+As part of this release Premiere now supports UXP 9.4. For more details on what this includes check out the [UXP 9.4 Changelog](https://developer.adobe.com/uxp/uxp-api/changelog#uxp-v94) at the [UXP Developer Hub](https://developer.adobe.com/uxp/).
+
+### Breaking Changes
+
+#### The `Application` class
+
+We've decided to remove the `Application` class from the exposed set of classes available from the `premierepro` module, and the `version` _asynchronous_ instance property it had documented. Attempting to access the `Application` class directly from the module will give `undefined`:
+
+```ts
+const ppro = require("premierepro");
+console.log(typeof ppro.Application);  // "undefined"
+```
+
+The `version` property didn't have a great way to be accessed at runtime; since there isn't a way to properly instantiate an `Application` object to even access the `version` property, this didn't make sense to have available in the first place. Current version information is better served through the [UXP `host` object](../uxp-api/reference-js/modules/uxp/host-information/host.md) which includes _synchronous_ properties about the current Premiere version details instead, and is more consistent with accessing common data across Adobe applications. 
+
+The documented `Application` class and its TypeScript declaration in `@adobe/premierepro` still remains, however, as the class is used with some `EventManager` event listener functions.
+
+### New APIs
+
+A number of new APIs have been added in this release. More details on each can be seen in each class's documentation page. If you'd like to see more examples of using all of these new APIs in action, check out the `premiere-api` sample panel in the [UXP Premiere Pro Samples](https://github.com/AdobeDocs/uxp-premiere-pro-samples) repository.
+
+- The [`Constants`](../ppro-reference/constants/index.md) module has a few updates to available enumerations:
+  - A missing `CARIBBEAN` value has been found and added for the [`ProjectItemColorLabel`](../ppro-reference/constants/index.md#projectitemcolorlabel) enumeration.
+  - A new enumeration for [`ProjectItemType`](../ppro-reference/constants/index.md#projectitemtype) has been added to help make identifying `ProjectItem`s easier.
+
+- Two new classes have been added to introduce some initial support for After Effects-authored MoGRTs when working with [`ComponentParam`](../ppro-reference/classes/componentparam.md)s:
+  - [`MogrtComment`](../ppro-reference/classes/mogrtcomment.md) allows for reading comment text assocatiated with a component parameter.
+  - [`MogrtText`](../ppro-reference/classes/mogrttext.md) allows for reading and editing Source Text content, fonts, sizes, and styles. `MogrtText` instances respect author-defined editing restrictions. Currently these only work with single-run text.
+
+  We'll continue adding more support for MoGRT capabilities in the future!
+
+- [`TickTime`](../ppro-reference/classes/ticktime.md) now has utility functions [`timeToTimecode`](../ppro-reference/classes/ticktime.md#timetotimecode) and [`timecodeToTime`](../ppro-reference/classes/ticktime.md#timecodetotime) for converting to and from timecode strings.
+    ```ts
+    const ppro = require("premierepro");
+    const project = await ppro.Project.getActiveProject();
+    const sequence = await project.getActiveSequence();
+
+    const tickTime = await sequence.getPlayerPosition();
+    const frameRate = (await sequence.getSettings()).getVideoFrameRate();
+    const timeDisplay = await sequence.getSequenceVideoTimeDisplayFormat();
+
+    const timecode = ppro.TickTime.timeToTimecode(tickTime, frameRate, timeDisplay);
+
+    // Converting back into a TickTime
+    const originalTickTime = ppro.TickTime.timecodeToTime(timecode, frameRate, timeDisplay);
+    ```
+
+- [`TimeDisplay`](../ppro-reference/classes/timedisplay.md) now has a proper constructor to help when using with the above-added timecode utility functions. You can use the available [`Constants.AudioDisplayFormatType`](../ppro-reference/constants/index.md#audiodisplayformattype) and [`Constants.VideoDisplayFormatType`](../ppro-reference/constants/index.md#videodisplayformattype) with a `TimeDisplay`'s [`type`](../ppro-reference/classes/timedisplay.md#properties) property.
+    ```ts
+    const format = new ppro.TimeDisplay();
+    format.type = ppro.Constants.VideoDisplayFormatType.FPS_29_97;
+    ```
+
+#### UXP Host Additions
+
+A new property `buildNumber` has been added to the [UXP `host` object](../uxp-api/reference-js/modules/uxp/host-information/host.md). This can be particularly useful for helping report any issues as of a particular version + build of Premiere.
+
+```ts
+const uxp = require("uxp");
+console.log(uxp.host.version);      // "27.0.0"
+console.log(uxp.host.buildNumber);  // "42"
+```
+
+### API Updates
+
+- [`EventManager`](../ppro-reference/classes/eventmanager.md)'s [`removeEventListener`](../ppro-reference/classes/eventmanager.md#removeeventlistener) and [`removeGlobalEventListener`](../ppro-reference/classes/eventmanager.md#removeglobaleventlistener) functions now accept a third (optional) parameter `useCapture` matching the equivalent parameter for [`addEventListener`](../ppro-reference/classes/eventmanager.md#addeventlistener) and [`addGlobalEventListener`](../ppro-reference/classes/eventmanager.md#addglobaleventlistener). This helps make sure that adding an event listener on the capture phase can be correctly removed from the capture phase to avoid event listeners staying beyond their welcome.
+- `ComponentParam`'s [`createKeyframe()`](../ppro-reference/classes/componentparam.md#createkeyframe) and [`getStartValue()`](../ppro-reference/classes/componentparam.md#createkeyframe) functions have been updated to work with the newly added `MogrtComment` and `MogrtText` classes.
+
+### Bug Fixes
+
+- Calling [`Exporter.exportSequenceFrame`](../ppro-reference/classes/exporter.md#exportsequenceframe) will now correctly queue calls internally. This previously caused issues when calling `exportSequenceFrame` back-to-back for multiple frames.
+- [`ComponentParam.getStartValue`](../ppro-reference/classes/componentparam.md#getstartvalue) for `Color`-based `ComponentParam` should no longer be lossy. Previously there were issues maintaining the blue channel that have been resolved.
+- [`SourceMonitor.openFilePath`](../ppro-reference/classes/sourcemonitor.md#openfilepath) will correctly resolve with `false` if the given file cannot be previewed in the Source Monitor.
+
+### Documentation Updates
+
+Outside of the above core changes, we've also updated our documentation and `@adobe/premierepro` TypeScript declarations package to address some inconsistencies or improve and clarify how to use various classes and APIs. We'll continue reviewing these and working to make sure these are as accurate as possible.
+
+- [`ComponentParam.getValueAtTime()`](../ppro-reference/classes/componentparam.md#getvalueattime)'s return value has been better clarified as to its actual runtime values/types. In particular Point (`PointF`)-related values are actually returned as an `[x, y]` array "tuple". Other supported values are returned as scalars (number, boolean, string).
+- [`Keyframe`](../ppro-reference/classes/keyframe.md)'s and [`PointKeyframe`](../ppro-reference/classes/pointkeyframe.md)'s `value` property has been better qualified in terms of its expected values/types. In particular the TypeScript declaration has been further split into getter and setter accessor declarations to highlight the difference in getting values from each Keyframe class and setting values. You can see this most clearly with `PointKeyframe`.
+    ```ts
+    const point = new ppro.PointF(0.5, 0.5);
+    const pointKeyframe = component.createKeyframe(point);
+
+    // Getting the keyframe's value returns an object containing a tuple
+    console.log(pointKeyframe.value);  // { value: [0.5, 0.5] }
+
+    // Setting the keyframe's value uses a PointF
+    pointKeyframe.value = new ppro.PointF(0.75, 0.75);
+    ```
+
+- [`Project.getSequence()`](../ppro-reference/classes/project.md#getsequence) is now correctly documented as being an _asynchronous_ function, returning `Promise<Sequence | null>` rather than suggesting it always _synchronously_ returns a `Sequence` instance.
+- [`ProjectItem.type`](../ppro-reference/classes/projectitem.md#properties), [`ClipProjectItem.type`](../ppro-reference/classes/clipprojectitem.md#properties), and [`FolderItem.type`](../ppro-reference/classes/folderitem.md#properties) more specifically use the newly added `Constants.ProjectItemType` enumeration to help identify what type values are present for each class rather than using `number` more generically.
+- [`TrackItemSelection.createEmptySelection()`](../ppro-reference/classes/trackitemselection.md#createemptyselection) better documents lifetime and scope limitations with the empty `TrackItemSelection` object provided to the callback function. We've similarly added a new ESLint rule to the `@adobe/eslint-plugin-premierepro` plugin to help identify incorrect usage through static analysis checks.
+- [`Transcript.transcribeClipProjectItem()`](../ppro-reference/classes/transcript.md#transcribeclipprojectitem)'s options have been corrected to accept an optional `language` property rather than `languageCode`. How this works between transcription default settings and language auto-detection has been further clarified in the method's description.
+
+
 ## Premiere v26.5.0
 
 This release of Premiere comes with a number of added features, bug fixes, and a few deprecations.
