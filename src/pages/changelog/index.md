@@ -98,9 +98,10 @@ Outside of the above core changes, we've also updated our documentation and `@ad
 - [`Keyframe`](../ppro-reference/classes/keyframe.md)'s and [`PointKeyframe`](../ppro-reference/classes/pointkeyframe.md)'s `value` property has been better qualified in terms of its expected values/types. In particular the TypeScript declaration has been further split into getter and setter accessor declarations to highlight the difference in getting values from each Keyframe class and setting values. You can see this most clearly with `PointKeyframe`.
     ```ts
     const point = new ppro.PointF(0.5, 0.5);
-    const pointKeyframe = component.createKeyframe(point);
+    const pointKeyframe = componentParam.createKeyframe(point);
 
     // Getting the keyframe's value returns an object containing a tuple
+    // of the PointF's [x, y] coordinates.
     console.log(pointKeyframe.value);  // { value: [0.5, 0.5] }
 
     // Setting the keyframe's value uses a PointF
