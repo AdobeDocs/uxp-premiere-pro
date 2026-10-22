@@ -256,6 +256,7 @@ Since: **25.6**
 | :--- | :---------- | :---------- |
 | VIOLET | 25.6 | - |
 | IRIS | 25.6 | - |
+| CARIBBEAN | 27.0 | - |
 | LAVENDER | 25.6 | - |
 | CERULEAN | 25.6 | - |
 | FOREST | 25.6 | - |
@@ -269,6 +270,21 @@ Since: **25.6**
 | GREEN | 25.6 | - |
 | BROWN | 25.6 | - |
 | YELLOW | 25.6 | - |
+
+<HorizontalLine />
+
+### ProjectItemType
+
+Since: **27.0**
+
+| Name | Min Version | Description |
+| :--- | :---------- | :---------- |
+| BIN | 27.0 | - |
+| CLIP | 27.0 | - |
+| COMPOUND | 27.0 | - |
+| FILE | 27.0 | - |
+| ROOT | 27.0 | - |
+| STYLE | 27.0 | - |
 
 <HorizontalLine />
 

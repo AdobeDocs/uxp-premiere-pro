@@ -58,7 +58,7 @@ Returns: [*Keyframe*](keyframe.md)
 
 | Name | Type | Description |
 | :----| :--- | :---------- |
-| inValue | *number* or *string* or *boolean* or [*PointF*](pointf.md) or [*Color*](color.md) | Input could be number, string, boolean, PointF, or Color depend on effect param type |
+| value | *number* or *string* or *boolean* or [*PointF*](pointf.md) or [*Color*](color.md) or [*MogrtText*](mogrttext.md) or [*MogrtComment*](mogrtcomment.md) | Input could be number, string, boolean, PointF, Color, MogrtText, or MogrtComment depending on effect param type |
 
 <HorizontalLine />
 
@@ -229,7 +229,7 @@ Returned promise will be fullfilled with the start value (keyframe) of the compo
 
 Since: **25.6**
 
-Returns: Promise\<[*Keyframe*](keyframe.md)\>
+Returns: Promise\<[*Keyframe*](keyframe.md) | [*PointKeyframe*](pointkeyframe.md) | [*Color*](color.md) | [*MogrtText*](mogrttext.md) | [*MogrtComment*](mogrtcomment.md)\>
 
 <HorizontalLine />
 
@@ -239,7 +239,7 @@ Gets the value of component Param at the given time
 
 Since: **25.6**
 
-Returns: Promise\<*number | string | boolean | [PointF](pointf.md) | [Color*](color.md)\>
+Returns: Promise\<*\{value: number | string | boolean | [x: number, y: number]}*\>
 
 #### Parameters
 

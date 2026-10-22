@@ -12,8 +12,4 @@ keywords:
 
 Since: **25.6**
 
-## Properties
-
-| Name | Type | Access | Min Version | Description |
-| :--- | :--- | :----- | :---------- | :---------- |
-| version | Promise\<*string*\> | R | 25.6 |  |
+This class does not have any methods or properties available.

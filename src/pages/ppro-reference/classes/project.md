@@ -262,7 +262,7 @@ Get sequence by id from the project
 
 Since: **25.6**
 
-Returns: [*Sequence*](sequence.md)
+Returns: Promise\<[*Sequence*](sequence.md) | null\>
 
 #### Parameters
 

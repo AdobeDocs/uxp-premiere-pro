@@ -17,7 +17,7 @@ Since: **25.6**
 | Name | Type | Access | Min Version | Description |
 | :--- | :--- | :----- | :---------- | :---------- |
 | name | *string* | R | 25.6 | The name of this project item. |
-| type | *number* | R | 25.6 | Get the type of the Project Item. |
+| type | [*Constants.ProjectItemType*](../constants/index.md#projectitemtype) | R | 25.6 | Get the type of the Project Item. |
 
 ## Static Methods
 

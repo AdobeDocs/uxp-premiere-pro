@@ -108,6 +108,8 @@ description: Overview of Config
             - [Media](ppro-reference/classes/media.md)
             - [MediaManager](ppro-reference/classes/mediamanager.md)
             - [Metadata](ppro-reference/classes/metadata.md)
+            - [MogrtComment](ppro-reference/classes/mogrtcomment.md)
+            - [MogrtText](ppro-reference/classes/mogrttext.md)
             - [ObjectMaskUtils](ppro-reference/classes/objectmaskutils.md)
             - [PRProduction](ppro-reference/classes/prproduction.md)
             - [PointF](ppro-reference/classes/pointf.md)
