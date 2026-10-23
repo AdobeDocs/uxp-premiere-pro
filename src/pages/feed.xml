@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Changelog</title>
+    <link>https://developer.adobe.com/premiere-pro/uxp/changelog/</link>
+    <atom:link href="https://developer.adobe.com/premiere-pro/uxp/feed.xml" rel="self" type="application/rss+xml" />
+    <description>What's New</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Premiere v26.5.0</title>
+      <link>https://developer.adobe.com/premiere-pro/uxp/changelog/#premiere-v2650</link>
+      <guid isPermaLink="false">premiere-v2650</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<p>This release of Premiere comes with a number of added features, bug fixes, and a few deprecations.\&lt;br&gt;\&lt;br&gt;\&lt;a href=&quot;https://raw.githubusercontent.com/AdobeDocs/uxp-premiere-pro/refs/heads/main/src/pages/feed.xml&quot; style=&quot;display: inline-flex; align-items: center; gap: 6px;&quot;&gt;\&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;\&lt;circle cx=&quot;6.18&quot; cy=&quot;17.82&quot; r=&quot;2.18&quot; fill=&quot;#eb1000&quot;/&gt;\&lt;path d=&quot;M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z&quot; fill=&quot;#eb1000&quot;/&gt;\&lt;/svg&gt;\&lt;span&gt;Subscribe via RSS\&lt;/span&gt;\&lt;/a&gt;</p>
+<h3>New APIs</h3>
+<p>A number of new APIs have been added in this release. More details on each can be seen in each class's documentation page. If you'd like to see more examples of using all of these new APIs in action, check out the <code>premiere-api</code> sample panel in the <a href="https://github.com/AdobeDocs/uxp-premiere-pro-samples">UXP Premiere Pro Samples</a> repository.</p>
+<ul>
+<li>A new <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/c2paservice/"><code>C2PAService</code></a> class has been added to help with returning CAI-related information associated with a file. Additional constants <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/constants/#c2pamanifestlocation"><code>Constants.C2PAManifestLocation</code></a> have been added, associated with the manifest location return value from <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/c2paservice/#getmanifest"><code>C2PAService.getManifest</code></a></li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/media/#getduration"><code>Media.getDuration</code></a> and <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/media/#getstart"><code>Media.getStart</code></a> _synchronous_ functions have been added. See more about this in the <a href="#deprecations">deprecations</a> section below.</li>
+<li>A new <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/mediamanager/"><code>MediaManager</code></a> class has been added. Currently this supports the ability to purge the media cache.</li>
+<li>The <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/transcript/"><code>Transcript</code></a> class continues to get new functionality:</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/transcript/#islanguagepackavailable"><code>isLanguagePackAvailable</code></a> can help check if a particular language pack is available for a given language code.</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/transcript/#transcribeclipprojectitem"><code>transcribeClipProjectItem</code></a> generates a transcription for a given <code>ClipProjectItem</code>, and settles when the transcription completes.</li>
+<li>A new <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/workareautils/"><code>WorkAreaUtils</code></a> class includes several functions for setting or clearing in/out points for the current work area.</li>
+</ul>
+<h3>UXP Host Additions</h3>
+<p>We've also added some new functionality to the <a href="https://developer.adobe.com/premiere-pro/uxp/../uxp-api/reference-js/modules/uxp/host-information/host/">UXP <code>host</code> object</a>.</p>
+<ul>
+<li><code>applicationPath: string</code> is a readonly string property which contains the absolute path to the currently running Premiere application.</li>
+</ul>
+<pre><code>    const uxp = require(&quot;uxp&quot;);
+    console.log(uxp.host.applicationPath);
+    // e.g., &quot;/Applications/Adobe Premiere Pro (Beta)/Adobe Premiere Pro (Beta).app&quot; on macOS
+    //       &quot;C:\\Program Files\\Adobe\\Adobe Premiere Pro (Beta)\\Adobe Premiere Pro (Beta).exe&quot; on Windows</code></pre>
+<ul>
+<li><code>getBackgroundColor(): Promise&lt;string&gt;</code> provides information on the current background color of the Premiere application.</li>
+</ul>
+<pre><code>    const uxp = require(&quot;uxp&quot;);
+    const backgroundColor = JSON.parse(await uxp.host.getBackgroundColor());
+    backgroundColor.type; // &quot;rgb&quot;
+    backgroundColor.value.alpha; // 1
+    // RGB colors are a value between 0 and 1
+    backgroundColor.value.blue;
+    backgroundColor.value.green;
+    backgroundColor.value.red;</code></pre>
+<h3>Bug Fixes</h3>
+<ul>
+<li><code>ClipProjectItem</code>'s <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/clipprojectitem/#createsetinpointaction"><code>createSetInPointAction</code></a> and <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/clipprojectitem/#createsetoutpointaction"><code>createSetOutPointAction</code></a> no longer error when called.</li>
+<li>Calling <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/componentparam/#getvalueattime"><code>ComponentParam.getValueAtTime</code></a> without any argument would result in the function returning a <code>Promise</code> which would never settle. Now the <code>Promise</code> will reject with an error when called this way.</li>
+<li>Calling <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/markers/#getmarkers-1"><code>Markers.getMarkers</code></a> with any <code>filters</code> argument applied would typically throw an error. This has been fixed and should allow for correctly filtering down to the desired set of Marker types.</li>
+</ul>
+<pre><code>    const sequence: Sequence = ...
+    const mySquenceMarkers: Markers = await Markers.getMarkers(sequence);
+    // Returns any Comment or WebLink markers on the above sequence.
+    // Other filter types include &quot;Chapter&quot; and &quot;FLVCuePoint&quot;
+    const myMarkers: Marker[] = mySequenceMarkers.getMarkers([&quot;Comment&quot;, &quot;WebLink&quot;]);</code></pre>
+<ul>
+<li>Calling <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/project/#importaecomps"><code>Project.importAEComps</code></a> or <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/project/#importallaecomps"><code>Project.importAllAEComps</code></a> without a target bin defaults to adding the imported compositions to the root bin of the Project, but this was sometimes inconsistent and would resolve <code>true</code> while not actually adding anything to the project. We've fixed this to correctly handle this default and add the imported compositions to the project.</li>
+</ul>
+<h3>Deprecations</h3>
+<h3><code>Media.start</code> and <code>Media.duration</code> properties</h3>
+<p>Instances of the <code>Media</code> class contain two _async_ properties which, in comparison to the rest of the available classes and properties, are a bit unusual and awkward to work with:</p>
+<pre><code>const media: Media = ...
+// These properties return Promises and must either be `await`ed or
+// require using `.then()` Promise chaining syntax to use correctly
+const start = await media.start;
+const duration = await media.duration;</code></pre>
+<p>We've opted to deprecate these properties in favor of newly-added <code>getStart()</code>/<code>getDuration()</code> _synchronous_ functions. This was chosen primarily for backwards compatibility instead of changing the properties insitu from asynchronous to synchronous:</p>
+<pre><code>const media: Media = ...
+// No `async` usage required!
+const start = media.getStart();
+const duration = media.getDuration();</code></pre>
+<p>The asynchronous <code>start</code> and <code>duration</code> properties will be removed in a future version of Premiere.</p>
+<h3><code>Constants.MarkerColor.MAGNETA</code></h3>
+<p>It turns out we also had an incorrectly spelled constant for <code>MarkerColor</code> called <code>MAGNETA</code>. While the value of this constant is correct for API usage, the slight mispelling of <code>MAGNETA</code> instead of <code>MAGENTA</code> just didn't sit right. We've gone ahead and deprecated the previous <code>MAGNETA</code> color in favor of a properly spelled <code>MAGENTA</code>, and will plan on removing the mispelled constant in a future version of Premiere.</p>
+<pre><code>- const myFavoriteColor = ppro.Constants.MarkerColor.MAGNETA;
++ const myFavoriteColor = ppro.Constants.MarkerColor.MAGENTA;</code></pre>
+<h3>Documentation Updates</h3>
+<p>Outside of the above core changes, we've also updated our documentation and TypeScript declarations to address some inconsistencies. We'll continue reviewing these and working to make sure these are as accurate as possible.</p>
+<ul>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/clipprojectitem/#getcomponentchain"><code>ClipProjectItem.getComponentChain</code></a> now correctly documents a <code>Promise&lt;AudioComponentChain | VideoComponentChain | null&gt;</code> return type versus the originally mistyped <code>Promise&lt;string&gt;</code></li>
+<li>The return type documented for <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/audiotrack/#createsetnameaction"><code>AudioTrack.createSetNameAction</code></a>, <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/captiontrack/#createsetnameaction"><code>CaptionTrack.createSetNameAction</code></a>, and <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/videotrack/#createsetnameaction"><code>VideoTrack.createSetNameAction</code></a> have been corrected to an <code>Action</code> type instead of <code>object</code>.</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/project/#saveas"><code>Project.saveAs</code></a> documentation is more specific about its behavior: calling this will result in creating a copy of of the project, and the <code>project</code> instance itself will refer to the _copy_, not the original project. This is in line with the same behavior you would see when clicking &quot;File &gt; Save As&quot; in the application menu.</li>
+</ul>
+<pre><code>    const project = await Project.open(&quot;path/to/MyProject.prproj&quot;)
+    await project.saveAs(&quot;path/to/MyCopiedProject.prproj&quot;);
+    
+    // `project` now refers to &quot;MyCopiedProject&quot; instead of &quot;MyProject&quot;</code></pre>
+<ul>
+<li>Several classes which can be directly constructed (e.g., via <code>new</code>) now have a &quot;Constructor&quot; section on their respective documentation pages. These classes include: <code>AAFExportOptions</code>, <code>AddTransitionOptions</code>, <code>CloseProjectOptions</code>, <code>Color</code>, <code>FrameRate</code>, <code>Guid</code>, <code>OpenProjectOptions</code>, <code>PointF</code>, <code>RectF</code>, and <code>TickTime</code>. Additional details on available parameters can also be seen with their constructor section. We'll continue improving the documentation for descriptions and usage soon!</li>
+</ul>]]></description>
+    </item>
+    <item>
+      <title>Premiere Pro v26.3.0</title>
+      <link>https://developer.adobe.com/premiere-pro/uxp/changelog/#premiere-pro-v2630</link>
+      <guid isPermaLink="false">premiere-pro-v2630</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<p>This release of Premiere comes with a few breaking changes we want to call out, as well as a swath of new APIs worth looking through.</p>
+<h3>Breaking Changes</h3>
+<h3>Sequence.setSelection</h3>
+<p>The <code>Sequence.setSelection</code> method is now <strong>synchronous</strong>: calling this will immediately return a <code>boolean</code> value instead of a <code>Promise&lt;boolean&gt;</code>.</p>
+<p>If you are using this API with <code>async</code>/<code>await</code>, simply remove the use of <code>await</code>:</p>
+<pre><code>  const project = await ppro.Project.getActiveProject();
+  const sequence = await project.getActiveSequence();
+
+  const selection = await sequence.getSelection();
+
+- const success = await sequence.setSelection(selection);
++ const success = sequence.setSelection(selection);</code></pre>
+<p>If you are using this API with <code>Promise.then</code> method chaining, you'll need a bit more updating to avoid runtime issues, e.g.:</p>
+<pre><code>- sequence.setSelection(selection).then((success) =&gt; {
+-   if (success) { ... }
+- });
++ const success = sequence.setSelection(selection);
++ if (success) { ... }</code></pre>
+<h3>Action creation in locks</h3>
+<p>Creating <code>Action</code> instances through the various <code>create*Action</code> functions must now be done so while behind a <code>project.lockedAccess(() =&gt; { ... })</code> call. Previously this wasn't consistently enforced across <code>create*Action</code> calls.</p>
+<pre><code>const audioTrack: AudioTrack = ...
+
+project.lockedAccess(() =&gt; {
+  // Create the action here...
+  const action = audioTrack.createSetNameAction(&quot;MyAudioTrack&quot;);
+
+  project.executeTransaction((compoundAction: CompoundAction) =&gt; {
+    // ...and use it here
+    compoundAction.addAction(action);
+  }, &quot;Rename AudioTrack&quot;);
+});</code></pre>
+<p>Creating <code>Action</code>s within a <code>lockedAccess</code> call is important: many <code>Action</code>s contain data that can quickly become stale or inconsistent with other actions that might take place in Premiere (e.g., an editor is making changes that might conflict with a UXP plugin operating at the same time). Using the <code>lockedAccess</code> makes sure these actions are sequenced and properly applied to the Undo history.</p>
+<p>The new <code>@adobe/eslint-plugin-premierepro</code> ESLint plugin offers several rules which help catch these cases to help make sure <code>Action</code> creation and usage in your plugin follows best practices. For more information see the documentation pages for:</p>
+<ul>
+<li>The <a href="https://developer.adobe.com/premiere-pro/uxp/../resources/fundamentals/eslint-support/">ESLint Support</a> fundamentals page</li>
+<li>The <a href="https://github.com/adobe/eslint-plugin-premierepro"><code>adobe/eslint-plugin-premierepro</code></a> Github repo which includes setup and configuration details as well as docs for individual rules.</li>
+</ul>
+<h3>New APIs</h3>
+<p>A number of new APIs have been added in this release. More details on each can be seen in each class's documentation page. If you'd like to see more examples of using all of these new APIs in action, check out the <code>premiere-api</code> sample panel in the <a href="https://github.com/AdobeDocs/uxp-premiere-pro-samples">UXP Premiere Pro Samples</a> repository.</p>
+<ul>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/audiotrack/#createsetnameaction"><code>AudioTrack</code>s</a>, <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/captiontrack/#createsetnameaction"><code>CaptionTrack</code>s</a>, and <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/videotrack/#createsetnameaction"><code>VideoTrack</code>s</a> can now be renamed via a <code>createSetNameAction</code> function added to each class.</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/clipprojectitem/#createsubclipaction"><code>ClipProjectItem.createSubClipAction</code></a> lets you create sub clips from the <code>ClipProjectItem</code>.</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/encodermanager/"><code>EncoderManager</code></a> has a few new functions added for helping with exporting and using AME:</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/encodermanager/#launchencoder"><code>launchEncoder</code></a> to launch your local AME instance.</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/encodermanager/#setembeddedxmpenabled"><code>setEmbeddedXMPEnabled</code></a> to toggle embedding XMP metadata</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/encodermanager/#setsidecarxmpenabled"><code>setSidecarXMPEnabled</code></a> to toggle adding XMP metadata in a sidecar file</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/encodermanager/#startbatchencode"><code>startBatchEncode</code></a> to start any queued encodes in AME</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/marker/"><code>Marker</code>s</a> now have a unique <code>guid</code> property.</li>
+<li>A new <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/objectmaskutils/"><code>ObjectMaskUtils</code></a> class has been added.</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/project/#createsequencewithpresetpath"><code>Project.createSequenceWithPresetPath</code></a> has been added to compliment <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/project/#createsequence"><code>Project.createSequence</code></a> when using a Sequence Preset.</li>
+<li>A new <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/projectconverter/#exportaaf"><code>ProjectConverter.exportAAF</code></a> export function has been added for AAF support. You can see what options are available when exporting AAF project files via the separate <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/aafexportoptions/"><code>AAFExportOptions</code></a> class.</li>
+<li>You can set the <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/sourcemonitor/"><code>SourceMonitor</code>'s</a> current position using <a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/sourcemonitor/#setposition"><code>setPosition</code></a>.</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/transcript/"><code>Transcript</code></a> has added functions for working with transcriptions.</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/transcript/#querysupportedlanguages"><code>querySupportedLanguages</code></a> to see what language packs are currently available</li>
+<li><a href="https://developer.adobe.com/premiere-pro/uxp/../ppro-reference/classes/transcript/#hastranscript"><code>hasTranscript</code></a> to check if a <code>ClipProjectItem</code> has already been transcribed</li>
+</ul>]]></description>
+    </item>
+    <item>
+      <title>Premiere Pro v26.2.0</title>
+      <link>https://developer.adobe.com/premiere-pro/uxp/changelog/#premiere-pro-v2620</link>
+      <guid isPermaLink="false">premiere-pro-v2620</guid>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>UXP Hybrid Plugin Support</h3>
+<p>Premiere Pro now officially supports <a href="https://developer.adobe.com/premiere-pro/uxp/../plugins/hybrid-plugins/">UXP Hybrid Plugins</a>, allowing developers to extend their UXP plugins with native C++ libraries. Hybrid plugins enable performance-critical workloads—such as audio/video processing, ML inference, and integration with native SDKs—to run as compiled code alongside the JavaScript-based plugin UI and logic.</p>
+<ul>
+<li><strong>UXP Hybrid Plugin SDK</strong>: download from the <a href="https://developer.adobe.com/console">Adobe Developer Console</a>. The SDK provides C++ headers, utilities, and templates for building native addons (<code>.uxpaddon</code> files).</li>
+<li><strong>New documentation</strong>: <a href="https://developer.adobe.com/premiere-pro/uxp/../plugins/hybrid-plugins/">Overview</a>, <a href="https://developer.adobe.com/premiere-pro/uxp/../plugins/hybrid-plugins/build/">Building Hybrid Plugins</a>, and <a href="https://developer.adobe.com/premiere-pro/uxp/../plugins/hybrid-plugins/faq/">FAQ</a>.</li>
+</ul>]]></description>
+    </item>
+    <item>
+      <title>Premiere Pro v25.6.0</title>
+      <link>https://developer.adobe.com/premiere-pro/uxp/changelog/#premiere-pro-v2560</link>
+      <guid isPermaLink="false">premiere-pro-v2560</guid>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Official Release of UXP extensibility in Premiere Pro</h3>
+<h3>New Features</h3>
+<p>Premiere Pro's UXP APIs are approaching parity with what was previously possible, via CEP and ExtendScript. While the sample plugins don't (yet) exercise every call or listen to every message, the infrastructure is in place; we will continue to expand and improve the samples.</p>
+<h3>Documentation update</h3>
+<ul>
+<li><strong>Comprehensive overhaul</strong> across the entire documentation site.</li>
+<li><strong>New distribution section</strong> including guides covering Adobe Marketplace submission, enterprise and independent distribution, packaging, installation, listing creation, and review guidelines.</li>
+<li><strong>Expanded tutorials and recipes</strong> featuring major new content on modal dialogs, panels, TypeScript support, filesystem operations, external processes, and inter-plugin communication.</li>
+<li><strong>Content reorganization</strong> with streamlined navigation, consolidation, and complete rewrites.</li>
+<li><strong>New Premiere API Reference</strong> updated to v25.6.</li>
+</ul>]]></description>
+    </item>
+    <item>
+      <title>Premiere Pro v25.2.0</title>
+      <link>https://developer.adobe.com/premiere-pro/uxp/changelog/#premiere-pro-v2520</link>
+      <guid isPermaLink="false">premiere-pro-v2520</guid>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Initial Public Beta Release for UXP in Premiere Pro</h3>
+<p><strong>Release Date:</strong> December 4, 2024</p>
+<h3>New Features</h3>
+<ul>
+<li><strong>Unified Extensibility Platform (UXP) Integration:</strong> Premiere Pro Beta now supports UXP, providing a modern and streamlined approach to developing plugins.</li>
+<li><strong>Enhanced Performance:</strong> UXP integration aims to improve the performance and responsiveness of plugins within Premiere Pro.</li>
+<li><strong>Developer Tools:</strong> APIs are available for developers to create and manage UXP-based plugins.</li>
+</ul>
+<h3>Known Issues</h3>
+<ul>
+<li><strong>Limited Third-Party Support:</strong> Initial beta release may have limited support for specific third-party development workflows. Full support is expected in future updates.</li>
+<li>Spectrum Web Component support in UXP is not yet fully supported for Premiere Pro</li>
+<li>Command Plugins do not yet work as a standalone plugin</li>
+<li>Unloading/Reloading a plugin from the UXP Developer Tool [UDT] while it's paused on a breakpoint doesn't work</li>
+</ul>
+<h3>Getting Started</h3>
+<ul>
+<li><strong>Community Support:</strong> Join the <a href="https://forums.creativeclouddeveloper.com/">Creative Cloud developer forums</a> to share feedback, ask questions, and collaborate with other developers.</li>
+</ul>]]></description>
+    </item>
+  </channel>
+</rss>
