@@ -22,16 +22,16 @@ As part of this release Premiere now supports UXP 9.4. For more details on what 
 
 #### The `Application` class
 
-We've decided to remove the `Application` class from the exposed set of classes available from the `premierepro` module, and the `version` _asynchronous_ instance property it had documented. Attempting to access the `Application` class directly from the module will give `undefined`:
+We've decided to remove the `Application` class from the exposed set of classes available from the `premierepro` module, and the `version` _asynchronous_ instance property it had documented.
 
 ```ts
 const ppro = require("premierepro");
 console.log(typeof ppro.Application);  // "undefined"
 ```
 
-The `version` property didn't have a great way to be accessed at runtime; since there isn't a way to properly instantiate an `Application` object to even access the `version` property, this didn't make sense to have available in the first place. Current version information is better served through the [UXP `host` object](../uxp-api/reference-js/modules/uxp/host-information/host.md) which includes _synchronous_ properties about the current Premiere version details instead, and is more consistent with accessing common data across Adobe applications. 
+The `version` property didn't have a great way to be accessed at runtime: since there isn't a way to properly instantiate an `Application` object to even access the `version` property, this didn't make sense to have available in the first place. Current version information is better served through the [UXP `host` object](../uxp-api/reference-js/modules/uxp/host-information/host.md) which includes _synchronous_ properties about the current Premiere version details instead, and is more consistent with other Adobe applications which support UXP plugins. 
 
-The documented `Application` class and its TypeScript declaration in `@adobe/premierepro` still remains, however, as the class is used with some `EventManager` event listener functions.
+The documented `Application` class and its TypeScript declaration in `@adobe/premierepro` still remains, however, as the class is used with some `EventManager` event listener functions. We're planning on improving our documentation generally around events and where the `Application` class does fit in here. Stay tuned!
 
 ### New APIs
 
